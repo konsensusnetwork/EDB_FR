@@ -58,6 +58,7 @@ book:
     site: "@konsensusn"
   chapters:
     - index.qmd
+    - chapters/preface-de-jacques-favier.md
     - chapters/remerciements.md
     - chapters/avant-propos.md
     - chapters/les-debuts-de-bitcoin.md
