@@ -58,11 +58,28 @@ book:
     site: "@konsensusn"
   chapters:
     - index.qmd
-    - chapters/CH01.qmd
+    - chapters/remerciements.md
+    - chapters/avant-propos.md
+    - chapters/les-debuts-de-bitcoin.md
+    - chapters/une-croissance-conflictuelle.md
+    - chapters/des-racines-monetaires.md
+    - chapters/la-necessite-de-decentralisation.md
+    - chapters/un-mouvement-technologique.md
+    - chapters/la-cybermonnaie-avant-nakamoto.md
+    - chapters/la-valeur-de-l-information.md
+    - chapters/le-consensus-par-le-minage.md
+    - chapters/la-resistance-a-la-censure.md
+    - chapters/le-changement-de-la-monnaie.md
+    - chapters/la-determination-du-protocole.md
+    - chapters/les-rouages-de-la-machine.md
+    - chapters/les-contrats-autonomes.md
+    - chapters/le-passage-a-l-echelle.md
+    - chapters/l-avenir-de-bitcoin.md
+    - chapters/ordinals.md
 
 format:
   html:
-    lang: nl
+    lang: fr
     theme:
       light: [flatly, theme.scss, theme-light.scss]
     number-depth: 2
