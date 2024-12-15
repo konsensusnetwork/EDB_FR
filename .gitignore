@@ -9,7 +9,7 @@
 *.log
 *.out
 *.brf
-*.blg 
+*.blg
 *.bbl
 *.nav
 *.snm
@@ -17,3 +17,8 @@
 *.bcf
 *.xml
 *.ent
+/.quarto/
+.venv
+.quarto
+_book
+build
