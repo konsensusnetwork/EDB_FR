@@ -1,0 +1,39 @@
+body {
+    text-align: left;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li {
+	padding-bottom: 0.5em;
+}
+
+.header-section-number {
+
+}
+.toc a {
+	color: inherit;
+}
+
+.titlepage {
+	padding-top: 2em;
+	text-align: center;
+}
+
+.titlepage .subtitle {
+	font-style: italic;
+}
+
+.titlepage .author {
+	padding-top: 2em;
+}
+
+.titlepage .date {
+	visibility: hidden;
+}

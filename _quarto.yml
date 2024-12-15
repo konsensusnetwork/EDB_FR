@@ -1,0 +1,98 @@
+project:
+  type: book
+  preview:
+    port: 4200
+    browser: false
+
+book:
+  title: "Book Title"
+  output-file: main
+  author: "Book Author"
+  date: "01/01/0000"
+  image: cover.png
+  image-alt: "Book Cover"
+  isbn: "978-XXX"
+  license: CC-BY-4.0
+  language: nl
+  publisher: Konsensus Network
+  favicon: /figures/freestarfish.png
+  search:
+    location: sidebar
+    type: overlay
+  sidebar:
+    style: floating
+    border: true
+  navbar:
+    left:
+      - icon: book
+        text: "Read online"
+        href: index.qmd
+        aria-label: Book
+      - icon: shop
+        text: "Buy this book!"
+        href: https://bitcoinbook.shop/products/
+        aria-label: Shop
+  page-footer:
+    left:
+      - text: "© 2024 Konsensus Network"
+    center:
+      - text: "License"
+        href: index.qmd
+      - text: "Presale"
+        href: presale.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/konsensusn
+        aria-label: Twitter
+      - icon: github
+        href: https://github.com/konsensusnetwork
+        aria-label: Github
+      - icon: linkedin
+        href: https://www.linkedin.com/konsensusnetwork
+        aria-label: LinkedIn
+      - icon: youtube
+        href: https://www.youtube.com/konsensusnetwork
+        aria-label: YouTube
+  open-graph: true
+  twitter-card:
+    site: "@konsensusn"
+  chapters:
+    - index.qmd
+    - chapters/CH01.qmd
+
+format:
+  html:
+    lang: nl
+    theme:
+      light: [flatly, theme.scss, theme-light.scss]
+    number-depth: 2
+    grid:
+      sidebar-width: 500px
+      body-width: 900px
+      margin-width: 350px
+      gutter-width: 1em
+    toc: true
+    toc-location: left
+    reference-location: margin
+  pdf:
+    lang: nl
+    documentclass: memoir
+    classoption: smalldemyvopaper,10pt,twoside,onecolumn,openright,extrafontsizes,hidelinks
+    papersize: a5
+    toc-depth: 1
+    toc-title: Inhoudsopgave
+    keep-tex: true
+    colorlinks: false
+    include-in-header:
+      - preamble.tex
+  epub:
+    cover-image: cover.png
+    cover-image-alt: |
+      Book Cover
+    creator: Konsensus Network
+    toc: true
+    toc-depth: 1
+    toc-title: Inhoudsopgave
+    lang: "nl-NL"
+    css: epub.css
+    number-depth: 2

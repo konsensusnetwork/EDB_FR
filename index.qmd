@@ -1,0 +1,51 @@
+---
+about:
+  template: trestles
+  image: cover.png
+  links:
+    - icon: book
+      href: /chapters/CH01.html
+      text: "Book"
+      aria-label: "Book"
+    - icon: shop
+      href: https://bitcoinbook.shop/products/
+      text: "Presale" 
+      aria-label: "Online bookstore"
+    - icon: amazon
+      href: https://amazon.com
+      text: "Amazon"
+      aria-label: "Amazon"              
+navbar: true
+sidebar: false
+page-layout: full
+format:
+  html:
+    grid:
+      margin-width: 0px
+      sidebar-width: 0px
+      body-width: 1400px
+      gutter-width: 25px
+    toc: false
+listing:
+  id: custom-toc
+  contents: chapters
+  sort: false
+  type: table
+  fields:
+    - title
+    - reading-time
+  sort-ui: false
+  filter-ui: false
+---
+::: {.content-hidden when-format="pdf"}
+## Over dit boek {.unnumbered}
+
+
+## Reviews {.unnumbered}
+
+
+
+## Content
+::: {#sample-listings}
+:::
+:::

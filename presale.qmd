@@ -1,0 +1,3 @@
+# Buy {.unnumbered .content-visible when-format="html"}
+
+{{< include buy-button.qmd >}}
