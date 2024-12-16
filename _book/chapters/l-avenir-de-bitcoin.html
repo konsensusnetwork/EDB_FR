@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>15&nbsp; L’avenir de Bitcoin – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/ordinals.html" rel="next">
+<link href="../chapters/le-passage-a-l-echelle.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="15&nbsp; L’avenir de Bitcoin – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="15&nbsp; L’avenir de Bitcoin – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/l-avenir-de-bitcoin.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#lélégance-de-bitcoin" id="toc-lélégance-de-bitcoin" class="nav-link active" data-scroll-target="#lélégance-de-bitcoin">L’élégance de Bitcoin</a></li>
+  <li><a href="#les-quatre-menaces-qui-planent-sur-bitcoin" id="toc-les-quatre-menaces-qui-planent-sur-bitcoin" class="nav-link" data-scroll-target="#les-quatre-menaces-qui-planent-sur-bitcoin">Les quatre menaces qui planent sur Bitcoin</a></li>
+  <li><a href="#les-deux-adoptions-de-la-cryptomonnaie" id="toc-les-deux-adoptions-de-la-cryptomonnaie" class="nav-link" data-scroll-target="#les-deux-adoptions-de-la-cryptomonnaie">Les deux adoptions de la cryptomonnaie</a></li>
+  <li><a href="#une-culture-en-gestation" id="toc-une-culture-en-gestation" class="nav-link" data-scroll-target="#une-culture-en-gestation">Une culture en gestation</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:avenir" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:15" label="enotezch:15"></span></p>
+<p><span class="lettrine">L</span><span class="smallcaps">a</span> découverte de Bitcoin par Satoshi Nakamoto constitue une révolution conceptuelle profonde dans le domaine monétaire. C’est ce qui explique pourquoi, depuis 2008, il a suscité les plus grandes passions tant au sein de ses partisans que parmi ses détracteurs. Certains ont voulu y voir la solution à tous les problèmes de ce monde, une monnaie universelle qui devait remplacer l’or et toutes les monnaies fiat, sans résistance de la part de l’adversaire. D’autres ont tenté de le présenter sous les traits d’un système nuisible et pollueur d’escroquerie organisée, dans un rejet épidermique propre aux institutions pour lesquelles ils travaillaient.</p>
+<p>Dans cet ouvrage, nous avons tenté de faire la part des choses, en décrivant précisément d’où vient Bitcoin, à quels enjeux il fait face et quels sont les principes qui le soutiennent. Par sa conception, il constitue un outil d’une rare élégance dont les mécanismes méritent d’être détaillés, ce qui a été fait ici. En guise de conclusion, résumons ce que nous avons développé avant de nous concentrer sur l’avenir de Bitcoin en tant que tel.</p>
+<section id="lélégance-de-bitcoin" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="lélégance-de-bitcoin">L’élégance de Bitcoin</h2>
+<p>D’abord, rappelons que Bitcoin n’est pas sorti de nulle part. Il est un produit de l’évolution technique qui a eu lieu durant la seconde moitié du <span class="smallcaps">xx</span>&nbsp;siècle, en reposant largement sur l’ordinateur personnel, sur la cryptographie asymétrique et sur le réseau Internet. Du côté idéologique, il provient de mouvements divers, comme l’agorisme, le librisme ou l’extropianisme, dont la particularité commune était d’appeler à la pratique, de recommander d’agir dans le réel au lieu de se contenter de le théoriser. En particulier, il est issu du mouvement des cypherpunks qui, dès le début des années 90, préconisaient d’utiliser la cryptographie de manière proactive en vue de protéger la confidentialité et les droits des personnes dans le cyberespace naissant. La valeur principale derrière Bitcoin est donc la liberté.</p>
+<p>En outre, il est le résultat d’une longue quête pour la cybermonnaie, qui avait notamment été entreprise par les cypherpunks. Bitcoin doit son existence au système chaumien d’eCash, qui a eu son heure de gloire au milieu des années 90 avant de disparaître. Il s’inspire des tentatives de monnaies numériques privées comme le Liberty Dollar, e-gold et Liberty Reserve, qui ont toutes été arrêtées par l’État à l’aube du <span class="smallcaps">xxi</span>&nbsp;siècle. Il s’inscrit dans la lignée des concepts de monnaie décentralisée qu’étaient b-money, bit gold, RPOW et, dans une certaine mesure, Ripple.</p>
+<p>Bitcoin a été découvert par Satoshi Nakamoto en 2007, qui en a publié le livre blanc descriptif le 31 octobre 2008, avant de finaliser le prototype et de lancer le réseau en janvier 2009. Après des débuts difficiles, la cryptomonnaie a timidement émergé du néant en attirant à elle les personnes intéressées par son potentiel. Ces personnes ont contribué à construire Bitcoin en participant à son développement informatique, au minage et au commerce. Une fois le projet définitivement lancé en 2010, Satoshi a disparu progressivement et a laissé la main à ses collaborateurs de confiance. Son anonymat demeure complet à ce jour.</p>
+<p>Après le départ du fondateur, la communauté a dû s’organiser. C’était l’époque des premières conférences, des premières discussions autour de l’avenir du protocole et du développement des premiers portefeuilles légers. Cependant, la décentralisation du développement de Bitcoin a fait qu’il n’y avait plus un seul point de vue dominant à son sujet, ce qui a créé de multiples conflits, à commencer par la querelle de P2SH en 2011–2012. Quatre clivages majeurs ont émergé&nbsp;: le premier concernait la financiarisation, c’est-à-dire la réintroduction partielle de tiers de confiance&nbsp;; le deuxième se concentrait sur le passage à l’échelle, et le choix de savoir s’il fallait augmenter la capacité transactionnelle de la chaîne ou utiliser des solutions de surcouche&nbsp;; le troisième gravitait autour du développement des cryptomonnaies alternatives, vivement décrié d’un côté et applaudi de l’autre&nbsp;; le quatrième se basait sur l’intégration institutionnelle, c’est-à-dire la question de la coopération ou du rejet vis-à-vis de l’autorité. Ces conflits ont fait de Bitcoin ce qu’il est aujourd’hui.</p>
+<p>Bitcoin constitue une nouvelle forme de monnaie. Il s’agit d’un intermédiaire d’échange dont la gestion est distribuée, c’est-à-dire qu’elle ne repose pas sur une autorité centrale. Même si sa résistance au changement le rapproche des biens tangibles, le bitcoin n’est pas une monnaie-marchandise, car ses propriétés ne proviennent pas de caractéristiques intrinsèques du monde physique. Même s’il reprend le caractère numérique du système bancaire, ce n’est pas une monnaie scripturale, car les entrées sur son registre ne correspondent pas à des créances. Même s’il n’a pas d’utilisation non monétaire significative, ce n’est pas une monnaie fiduciaire centralisée, car il ne repose pas sur la confiance placée dans un acteur unique. En définitive, le bitcoin appartient à une nouvelle catégorie et peut être décrit comme une monnaie réticulaire (en référence à son réseau) ou une monnaie fiduciaire distribuée, dans le sens où il répartit la confiance sur le réseau de nœuds utilisés par les commerçants plutôt que de la concentrer entre les mains d’une entité unique.</p>
+<p>Bitcoin est un «&nbsp;système d’argent liquide électronique pair à pair&nbsp;» qui permet «&nbsp;aux paiements en ligne d’être envoyés directement d’une partie à l’autre sans passer par une institution financière&nbsp;». Il constitue un concept de monnaie numérique résistante à la censure et à l’inflation, qui rend difficile l’entrave des transactions et la création d’unités supplémentaires. Bitcoin est un outil dont le domaine d’application naturel se situe à la marge, à la limite de la légalité, voire dans l’illégalité. Il est une monnaie de désobéissance utilisée par les activistes politiques, par les lanceurs d’alerte et par les organisations qui s’opposent à l’autorité. Il est une monnaie de la liberté utilisée par les personnes censurées comme celles dont les professions sont jugées déviantes, celles qui font l’erreur d’exprimer une opinion discordante ou celles qui ont eu la malchance de naître dans le mauvais pays. Il est une monnaie du marché noir utilisée par l’économie souterraine, notamment dans le cadre de la résistance fiscale.</p>
+<p>Ce statut de monnaie de la liberté fait qu’il s’inscrit dans un rapport antagoniste avec l’État, dont la nature est de chercher à s’étendre toujours plus, notamment par l’affermissement de son contrôle sur la monnaie. Par sa supervision de la banque, l’État a altéré le support de la monnaie en la faisant reposer sur des pièces et des billets fiduciaires plutôt que sur des métaux précieux, et il pourrait recommencer demain en transformant la monnaie physique en une monnaie numérique de banque centrale accessible à tous, sujette à la surveillance et à la censure généralisées. Ce comportement prédateur de l’État est la raison derrière le fonctionnement distribué de Bitcoin, qui partage les risques entre les différents acteurs du système et confère à ce dernier une robustesse sans précédent.</p>
+<p>Bitcoin utilise un certain nombre de briques techniques pour fonctionner correctement. La première est la signature numérique qui permet d’assurer la propriété au sein du système. L’utilisateur peut posséder pleinement ses bitcoins par le contrôle exclusif qu’il exerce sur ses clés privées. Ce mécanisme offre la liberté unique de pouvoir gérer des fonds numériques de manière souveraine, mais demande aussi une certaine responsabilité vis-à-vis de la perte et du vol, qui n’existe pas dans le cadre d’une relation avec un tiers de confiance.</p>
+<p>Pour lutter contre la double dépense, Bitcoin repose sur un algorithme de consensus novateur, qui met à jour une chaîne de blocs horodatés de transactions, au moyen d’un procédé de preuve de travail. Son fonctionnement ouvert et robuste le distingue des algorithmes de consensus classiques qui avaient jusqu’alors été mis en œuvre au sein des systèmes distribués. Le génie de Nakamoto est d’avoir sacrifié une partie de la sécurité de l’algorithme (en la rendant probabiliste plutôt qu’absolue) pour garantir la tolérance aux pannes byzantines. Ce modèle se fonde sur les incitations économiques des mineurs, qui estiment que miner la chaîne dans les règles est plus rentable que de l’attaquer.</p>
+<p>Toutefois, le génie de la conception de Bitcoin ne s’arrête pas là. Celle-ci ne décourage pas seulement la double dépense, mais aussi la censure financière, qui constitue l’un des fléaux du transfert numérique aujourd’hui. La censure de Bitcoin consiste à miner une chaîne plus longue ne contenant pas les transactions indésirables. Grâce au paiement intégré de frais de transactions et au caractère externe de la preuve de travail, une telle suppression peut être combattue efficacement, conformément à la propriété de résistance à la censure du modèle.</p>
+<p>Bitcoin est un concept de monnaie ouvert et libre, de sorte qu’il est par nature changeant et multiple. Il existe ainsi une diversité de mises en œuvre de Bitcoin, qui est affectée par deux effets contraires&nbsp;: l’effet de réseau et l’effet de substitution. Ainsi, la nature monétaire de Bitcoin fait qu’il ne peut que subsister qu’un petit nombre de ces mises en œuvres, tandis que son absence de scalabilité invite à penser qu’il en subsistera plusieurs.</p>
+<p>La détermination du protocole, ou des protocoles, se fait de manière économique, par le biais de l’acceptation de la monnaie par les commerçants. Ces derniers ont le rôle le plus important en ayant le dernier mot sur les règles de consensus grâce à leur activité économique vérifiée par leurs nœuds. Plus généralement, le modèle de gouvernance est en réalité bien plus complexe sociologiquement, les commerçants étant influencés par d’autres personnes participant au système, comme leurs clients, les détenteurs, les développeurs ou les mineurs, et d’une manière plus diffuse, par des acteurs externes, tels que les relais d’opinion, les puissances financières ou encore l’État.</p>
+<p>La résistance à l’inflation, ou la difficulté à créer plus de bitcoins, émerge ainsi de la dynamique économique opposée à l’altération de la politique monétaire. Elle ne provient pas de l’absence d’unanimité de la communauté ou de l’établissement originel de la politique monétaire par Satoshi Nakamoto. La limite des 21&nbsp;millions, en dépit de son caractère emblématique, n’est ainsi pas absolue et dépend à chaque instant de la décision des commerçants.</p>
+<p>Le fonctionnement technique de Bitcoin est optimisé pour la monnaie, comme en témoigne son modèle de représentation des unités qui se base sur des pièces, et non sur des comptes comme Ethereum. Bien qu’aucune technique avancée n’ait été intégrée dans le prototype, Bitcoin est également conçu pour être confidentiel, la préservation de la vie privée étant nécessaire pour la fongibilité de la monnaie et sa résistance à la censure.</p>
+<p>De plus, Bitcoin est programmable, de sorte qu’il est possible d’imposer des conditions de dépense à différentes pièces. Cet aspect modulable des transactions donne la possibilité à des inconnus d’échanger de la valeur de manière la plus confidentielle et sûre possible. Il est aussi à la base des protocoles de surcouche, comme le réseau Lightning, qui augmentent la capacité de traitement des échanges sans compromettre la sécurité du système de base.</p>
+<p>Toutes ces propriétés font que Bitcoin forme un ensemble cohérent d’une rare élégance. Bitcoin constitue la pièce manquante du puzzle de liberté sur Internet. Bitcoin représente l’espoir d’une génération face à l’autorité étatique grandissante. Bitcoin incarne le projet d’un système monétaire alternatif robuste et durable. Et c’est ce qui explique le formidable élan qui l’a accompagné dans les premières années.</p>
+</section>
+<section id="les-quatre-menaces-qui-planent-sur-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-quatre-menaces-qui-planent-sur-bitcoin">Les quatre menaces qui planent sur Bitcoin</h2>
+<p>Comme nous l’avons évoqué tout au long de cet ouvrage, Bitcoin n’est pas entièrement à l’abri des assauts de l’adversaire. Dans cette section, nous évoquerons les principales menaces qui planent sur Bitcoin aujourd’hui. Nous ne parlerons pas des risques techniques, que des personnes mieux informées ont déjà traités<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>&nbsp;; nous décrirons uniquement les dangers liés au comportement humain, qui émanent de l’action des acteurs économiques du système. Ces derniers sont en effet pour nous bien plus importants.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;«&nbsp;Nous ne parlerons pas des risques techniques, que des personnes mieux informées ont déjà traités&nbsp;»&nbsp;: Voir par exemple Sjors Provoost, <em>Bitcoin: A Work in Progress</em>, 2022.</p></div></div><p>Les menaces humaines sont subtiles, car les attaques qu’elles facilitent surviennent généralement de manière soudaine. L’accroissement de ces menaces est similaire à une sorte de jeu de chaises musicales, où les participants tournent naïvement autour des chaises sans les surveiller. Tant que la musique retentit dans la pièce, tout va bien&nbsp;: l’adversaire enlève les chaises une par une, calmement, mais la ronde continue. C’est au moment où la musique s’arrête que les problèmes se manifestent.</p>
+<p>Nous distinguons quatre menaces de ce type susceptibles de nuire à Bitcoin&nbsp;: la centralisation de l’activité économique, la centralisation de l’activité minière, la généralisation de la garde de fonds et l’effacement de la confidentialité. Celles-ci ne sont pas entièrement indépendantes, mais elles correspondent chacune à un comportement différent des acteurs.</p>
+<p>La première menace est la centralisation de l’activité économique, qui émerge par l’intermédiaire du commerce important réalisé auprès des plateformes de change réglementées et par le recours quasi systématique à des processeurs de paiement externes et à des fournisseurs de portefeuille tiers. Celle-ci peut mener, comme nous l’avons décrit dans le chapitre&nbsp;<a href="la-determination-du-protocole.html" data-reference-type="ref" data-reference="ch:determination">11</a>, à une attaque d’altération du protocole, sous la forme d’un hard fork d’inflation, d’un soft fork taxatoire ou d’un soft fork de censure. Il est probable que cette attaque crée une scission d’une façon ou d’une autre. Elle est spécialement dommageable dans le cas où la chaîne altérée est majoritaire en raison de l’effet de réseau. L’attaque n’est néanmoins pas fatale pour le système car l’économie peut se reconstruire progressivement à partir de la chaîne libre.</p>
+<p>La deuxième menace est la centralisation de l’activité minière, qui se manifeste notamment par le rapprochement géographique du matériel de minage, par le regroupement des hacheurs en coopératives et par l’utilisation collective de relais centralisés par les mineurs. Ce risque peut mener, comme vu dans le chapitre&nbsp;<a href="la-resistance-a-la-censure.html" data-reference-type="ref" data-reference="ch:censure">9</a>, à une attaque de censure des transactions par la majorité de la puissance de calcul du réseau. Cette attaque a logiquement des chances de se produire après la tentative d’altération du protocole, sur la chaîne libre ayant refusé les modifications. Elle a pour effet de paralyser une partie de l’activité en empêchant sa confirmation sur la chaîne. Elle bénéficie de l’analyse de chaîne qui lui permet d’isoler les transactions problématiques plutôt que de supprimer l’intégralité de l’activité. Elle n’est cependant pas mortelle pour le système, car du matériel de minage supplémentaire peut être déployé, suite à l’accroissement des frais des transactions censurées, afin de restaurer la situation initiale.</p>
+<p>La troisième menace, apparentée à la centralisation de l’activité économique, est la généralisation de la garde de fonds par des dépositaires qui suivent les réglementations légales. Non seulement cette pratique n’est pas pertinente du point de vue individuel (un dépositaire peut censurer les transactions, saisir les fonds et gonfler la quantité de bitcoins-papiers qu’il distribue), mais sa propagation dans l’écosystème crée aussi un risque systémique. Cette menace se manifeste aujourd’hui par le développement de dépositaires institutionnels comme Coinbase Custody qui détiennent un pourcentage non négligeable des bitcoins en circulation<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> et par l’accroissement des services adressés aux petits porteurs. Elle est plus dangereuse que la centralisation de l’économie, car l’économie «&nbsp;hébergée&nbsp;» ne peut pas se reformer s’il y a une attaque contre le protocole&nbsp;: ce sont les dépositaires réglementés qui sont les réels propriétaires des bitcoins, pas leurs clients. Il s’agit donc d’une dégénérescence persistante du système, qui se résorbe plus difficilement qu’une simple centralisation minière ou commerciale.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;«&nbsp;dépositaires institutionnels comme Coinbase Custody qui détiennent un pourcentage non négligeable des bitcoins en circulation&nbsp;»&nbsp;: <a href="https://platform.arkhamintelligence.com/explorer/entity/coinbase" class="uri">https://platform.arkhamintelligence.com/explorer/entity/coinbase</a>, <a href="https://twitter.com/brian_armstrong/status/1595126425371414528" class="uri">https://twitter.com/brian_armstrong/status/1595126425371414528</a>.</p></div></div><p>La quatrième menace, plus insidieuse, est l’effacement de la confidentialité, qui se matérialise par la surveillance généralisée (connaissance du client, preuve de propriété d’adresse) et, accessoirement, par l’analyse de chaîne qui l’accompagne. À l’instar de la garde de fonds par une entité réglementée, la complète transparence vis-à-vis de l’État constitue non seulement un errement individuel (la personne n’est protégée ni de la censure, ni de la saisie), mais aussi un risque systémique dans le cas où elle se généralise. En effet, une surveillance plus grande crée une économie davantage contrôlable, et rend par conséquent le protocole plus vulnérable. En outre, l’identification des acteurs a pour conséquence de réduire l’ensemble d’anonymat qui profite à tout le monde, et de diminuer la possibilité d’exercer une activité secrète. L’effacement de la confidentialité forme ainsi une dégénérescence subtile du système, qui ne peut être guérie que par la lutte contre les liens d’identification <em>via</em> l’application de bonnes pratiques, comme le mélange des pièces.</p>
+<p>Ces menaces dépendent des actions des acteurs économiques de Bitcoin, et notamment de ses utilisateurs. Pour combattre ces menaces, il convient donc de pousser les utilisateurs à retirer leurs bitcoins sur un portefeuille, à arrêter de se soumettre à la connaisance du client, à rendre leurs bitcoins intraçables et à utiliser leurs propres nœuds, individuels ou communautaires. Cela concerne en particulier les nouveaux utilisateurs, ce qui nous amène au thème de l’adoption.</p>
+</section>
+<section id="les-deux-adoptions-de-la-cryptomonnaie" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-deux-adoptions-de-la-cryptomonnaie">Les deux adoptions de la cryptomonnaie</h2>
+<p>Bitcoin est un système fondé sur des incitations économiques, dans lequel les personnes qui le font vivre sont récompensées. D’une part, les mineurs sont incités à confirmer les transactions pour toucher les frais de transactions. D’autre part, les commerçants sont incités à vérifier les règles de consensus pour bénéficier en toute quiétude de la proposition de valeur de Bitcoin. En outre, les détenteurs sont incités à promouvoir Bitcoin pour agrandir l’économie et profiter de la hausse résultante du pouvoir d’achat (ou du prix en dollars) de l’unité de compte. Cet agrandissement de l’économie, aussi appelé l’adoption, constitue donc logiquement l’un des objectifs naturels de ceux qui possèdent du bitcoin.</p>
+<p>L’adoption de Bitcoin peut avoir lieu de multiples manières, mais deux modèles principaux se distinguent. Le premier est l’adoption par les individus et par les petites entreprises, qui correspond à un apport financier modeste à la valeur agrégée du bitcoin. Le second est l’adoption par les grandes entreprises, par les sociétés de courtage et par les institutions financières, qui représente un plus gros gain pour les détenteurs. Dans les premiers temps, il était impossible de convaincre cette dernière catégorie du bienfondé du bitcoin, mais avec le développement économique et grâce à une certaine conformité de la communication, il est devenu aujourd’hui bien plus aisé de la persuader d’y participer. Puisque cette adoption était beaucoup plus rentable pour les détenteurs, beaucoup d’entre eux ont choisi la voie de la facilité en remplissant leur discours d’éléments de langage destinés aux acteurs réglementés.</p>
+<p>Mais cette seconde adoption du bitcoin, bien qu’elle soit certainement rentable sur le moment et qu’elle possède des mérites propres, a pour particularité de devenir stérile à long terme. En effet, elle crée une économie centralisée, surveillée voire entièrement dépositaire, c’est-à-dire une économie fragile à la merci des décisions étatiques. C’est pourquoi on peut la qualifier de «&nbsp;mauvaise adoption&nbsp;».</p>
+<p>Ainsi, la seule adoption à laquelle il vaut la peine de s’intéresser est celle de l’économie libre et indépendante, pour laquelle Bitcoin est adapté en premier lieu. Cette économie possède en effet les caractéristiques qui permettent à Bitcoin de perdurer. Elle est décentralisée et répartit les risques entre tous ses membres, pour bénéficier au maximum de la proposition de valeur de Bitcoin. Elle est désobéissante, dans le sens où elle refuse toute modification du protocole qui altérerait les propriétés fondamentales de Bitcoin. Elle protège sa propre confidentialité, car elle sait qu’elle a quelque chose à craindre de ceux qui la surveillent, quand bien même elle ne ferait rien d’illégal sur le moment. Elle est circulaire, au sens où elle évite le plus possible le recours à la monnaie étatique, surtout sous sa forme numérique, car elle sent que cette dernière est de plus en plus contrôlée. Enfin, elle est exigeante, en demandant de l’individu un certain discernement et une certaine responsabilité, des qualités trop souvent négligées à notre époque moderne.</p>
+<p>Toutefois, les contraintes de cette «&nbsp;bonne adoption&nbsp;» font qu’elle n’est pas accessible à tous. Non seulement l’utilisation souveraine de Bitcoin demande d’être un minimum responsable, mais elle présente aussi des inconvénients majeurs, qui sont (à l’heure actuelle) la volatilité du pouvoir d’achat, le coût de transaction, le manque de scalabilité et la réglementation dissuasive. De ce fait, il est difficile d’envisager que tout le monde fera du bitcoin sa monnaie de prédilection à court ou moyen terme. Pour le dire autrement&nbsp;: l’adoption de masse n’aura pas lieu de sitôt, et l’utilisation de Bitcoin restera dans un premier temps confinée à la portion de la population qui cherche à s’extraire du système étatico-bancaire et à résister aux puissances de ce monde.</p>
+<p>Il est donc illusoire de s’attendre à une «&nbsp;hyperbitcoinisation<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>&nbsp;», c’est-à-dire à un remplacement rapide des monnaies fiat par le bitcoin. Tant qu’il y existe une masse de gens qui continuera d’obéir aveuglément au pouvoir, la monnaie étatique subsistera. Seule la nécessité pourra pousser cette masse à faire un usage opportuniste et temporaire de Bitcoin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;«&nbsp;hyperbitcoinisation&nbsp;»&nbsp;: Daniel Krawisz, <em>Hyperbitcoinization</em>, 29 mars 2014&nbsp;: <a href="https://nakamotoinstitute.org/mempool/hyperbitcoinization/" class="uri">https://nakamotoinstitute.org/mempool/hyperbitcoinization/</a>&nbsp;; Pierre Rochard, <em>Speculative Attack</em>, 4 juillet 2014&nbsp;: <a href="https://nakamotoinstitute.org/mempool/speculative-attack/" class="uri">https://nakamotoinstitute.org/mempool/speculative-attack/</a>.</p></div></div></section>
+<section id="une-culture-en-gestation" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="une-culture-en-gestation">Une culture en gestation</h2>
+<p>La culture est l’ensemble des aspects matériels, intellectuels, affectifs et spirituels, qui caractérisent des sociétés ou des groupes sociaux<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Chaque association humaine durable a tendance à développer une culture propre. La communauté de Bitcoin, bien que vaguement délimitée, n’échappe pas à ce phénomène. Des éléments culturels ont émergé dans Bitcoin dès ses débuts et se sont multipliés à mesure que le réseau grandissait, pour finir par donner naissance à une véritable <em>subculture</em>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;«&nbsp;La culture est l’ensemble des aspects matériels, intellectuels, affectifs et spirituels, qui caractérisent une société ou un groupe social&nbsp;»&nbsp;: UNESCO, «&nbsp;<em>Déclaration de Mexico sur les politiques culturelles</em>&nbsp;», <em>Conférence mondiale sur les politiques culturelles</em>, 26 juillet – 6 août 1982&nbsp;: <a href="https://www.culture.gouv.fr/Media/Thematiques/Egalite-et-diversite/College-de-la-Diversite/Declaration-de-Mexico" class="uri">https://www.culture.gouv.fr/Media/Thematiques/Egalite-et-diversite/College-de-la-Diversite/Declaration-de-Mexico</a>&nbsp;: «&nbsp;Dans son sens le plus large, la culture peut aujourd’hui être considérée comme l’ensemble des traits distinctifs, spirituels et matériels, intellectuels et affectifs, qui caractérisent une société ou un groupe social. Elle englobe, outre les arts et les lettres, les modes de vie, les droits fondamentaux de l’être humain, les systèmes de valeurs, les traditions et les croyances.&nbsp;»</p></div></div><p>Cette culture est logiquement pétrie de politique, entre l’animosité à l’égard des représentants de l’autorité et les références multiples aux cypherpunks et aux économistes autrichiens. Elle est aussi constituée de pratiques monétaires ritualisées, de recommandations hygiéniques (notamment à l’encontre des crypto-actifs douteux), d’œuvres d’art futuristes, de livres et de podcasts en tous genres, de regroupements (rencontres mensuelles, conférences) et de commémorations régulières d’évènements qui ont marqué l’histoire de la cryptomonnaie. La culture de Bitcoin, la monnaie d’Internet, repose également beaucoup sur des formules courtes répétées à foison et sur des mèmes humoristiques, particulièrement adaptés pour la propagation sur les médias sociaux.</p>
+<p>La culture, et plus précisément la part de la culture que l’on pourrait qualifier de religieuse<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, a pour conséquence d’orienter les actions des individus. Puisque Bitcoin est un outil dont la sécurité dépend de l’utilisation qui en est faite, cet aspect culturel est fondamental. Par exemple la phrase «&nbsp;<em>not your keys, not your bitcoins</em>&nbsp;» inventée par Andreas Antonopoulos est bien plus convaincante pour pousser les gens à placer leurs fonds dans des portefeuilles que n’importe quel exposé historique des faillites et des gels de compte associés aux plateformes dépositaires. Mais la culture peut aussi, par une mauvaise orientation, induire de mauvais comportements et finalement nuire au système.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;la part de la culture que l’on pourrait qualifier de religieuse&nbsp;»&nbsp;: Émile Durkheim, <em>Les formes élémentaires de la vie religieuse</em>, 1912&nbsp;: «&nbsp;Une religion est un système solidaire de croyances et de pratiques relatives à des choses sacrées, c’est-à-dire séparées, interdites, croyances et pratiques qui unissent en une même communauté morale, appelée Église, tous ceux qui y adhèrent.&nbsp;»</p></div></div><p>En tant qu’objet spéculatif dont le prix a été multiplié par 30&nbsp;millions en l’espace de 14 ans, le bitcoin a attiré les personnes avides de gains financiers. Celui-ci bénéficiait d’une rareté absolue par conception, ce qui ne s’était jamais vu dans l’histoire, et il était normal qu’il en soit ainsi. C’était là l’un des choix essentiels de Satoshi Nakamoto, car cet attrait spéculatif a permis en partie d’amorcer le processus de monétisation et de faire découvrir Bitcoin à des personnes qui s’en seraient sinon détournées.</p>
+<p>Cependant, la culture de Bitcoin en a été profondément influencée dans le même temps. Il s’est ainsi créé une réelle tendance à l’avarice au sein de la communauté, qui s’est réflétée par des mèmes et des formules en tous genres. En particulier, il existe cette présupposition que le nombre, c’est-à-dire le prix en dollars, doit monter (<em>number go up</em>), qu’il doit être propulsé «&nbsp;jusqu’à la lune&nbsp;» (<em>to the moon</em>) en vertu du fait que la richesse du monde est infinie et qu’il n’y a que 21 millions de bitcoins (<span class="math inline">\(\infty / 21\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>). En conséquence, l’individu doit accumuler des satoshis (<em>stack sats</em>) et les thésauriser («&nbsp;HODL<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>&nbsp;») dans le but de profiter d’une vie meilleure. Cet aspect se retrouve dans les représentations de Bitcoin et des bitcoineurs, comme le taureau du marché haussier<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> ou bien les yeux laser (#LaserRayUntil100K).</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;«&nbsp;infini sur 21&nbsp;»&nbsp;: Knut Svanholm, <em>Bitcoin: Everything divided by 21 million</em>, 2022.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;«&nbsp;HODL&nbsp;»&nbsp;: GameKyuubi, <em>I AM HODLING</em>, /12/2013 10:03:03 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=375643.msg4022997#msg4022997" class="uri">https://bitcointalk.org/index.php?topic=375643.msg4022997#msg4022997</a>&nbsp;; Coindesk, <em>Maybe Don’t HODL Bitcoin... – Hodl Guy</em>, 11 janvier 2019&nbsp;: <a href="https://www.youtube.com/watch?v=6lAPU2yP6rw" class="uri">https://www.youtube.com/watch?v=6lAPU2yP6rw</a>.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;«&nbsp;le taureau du marché haussier&nbsp;»&nbsp;: Vijay Boyapati, <em>The Bullish Case for Bitcoin</em>, 2021.</p></div></div><p>Cette volonté d’obtenir un niveau de prix toujours plus haut repose sur la délusion de l’adoption de masse que nous avons évoqué ci-dessus. Pour que le prix atteigne les sommets, il faut en effet que tout le monde finisse par posséder du bitcoin d’une manière ou d’une autre. Comme la plupart des gens ne sont pas prêts à utiliser Bitcoin de manière souveraine, cette adoption a été réalisée au moyen de dépositaires. De ce fait, la culture basée sur le gain financier a conduit l’affaiblissement subtil de Bitcoin par l’acception de l’installation généralisée d’intermédiaires financiers, par le consentement à l’identification de masse et par la promotion auprès des institutions et des États.</p>
+<p>L’adoption de masse n’est pas un objectif réaliste ni à court, ni à moyen terme. Lorsque nous vantons les avantages de Bitcoin, nous ne nous adressons pas à la masse proprement dite&nbsp;; nous nous adressons au reste, aux quelques-uns qui comprennent les tenants et aboutissants des problèmes qu’il permet de résoudre et qui sont susceptibles d’être intéressés<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. C’est pourquoi il est essentiel de ne pas aseptiser le discours&nbsp;: pour ne pas perdre ces personnes, il faut dire la vérité&nbsp;; et si cette vérité peut être voilée, elle ne doit jamais être déformée.</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;«&nbsp;nous nous adressons au reste&nbsp;»&nbsp;: Albert Jay Nock, <em>Isaiah’s Job</em>, 1936&nbsp;: <a href="https://www.theatlantic.com/magazine/archive/1936/06/isaiahs-job/652293/" class="uri">https://www.theatlantic.com/magazine/archive/1936/06/isaiahs-job/652293/</a>.</p></div><div id="fn10"><p><sup>10</sup>&nbsp;«&nbsp;travaillant pour l’adversaire&nbsp;»&nbsp;: Upton Sinclair, <em>I, Candidate for Governor, and How I Got Licked</em>, 1934&nbsp;: «&nbsp;Il est difficile de faire comprendre quelque chose à un homme lorsque son salaire dépend précisément du fait qu’il ne la comprenne pas.&nbsp;»</p></div></div><p>Bitcoin vit de la tension qui existe entre l’économie officielle, qui approuve le pouvoir sur la monnaie, et la contre-économie, qui s’y oppose. Du fait de cette tension, la culture cryptomonétaire est également constamment attaquée, notamment par les médias de masse, par les banquiers centraux et par les représentants de l’État. Il existe ainsi un nombre stupéfiant de détracteurs qui, travaillant pour l’adversaire<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>, répètent à l’envi leur argumentaire de mauvaise foi. S’il est utile de se confronter à eux pour rétablir la vérité devant un public qui doute, il est vain de croire qu’ils disparaîtront ou perdront en visibilité. C’est pourquoi Bitcoin a besoin d’une tradition, d’une transmission culturelle d’individu à individu, qui permettrait d’expliquer ses principes de manière saine et organique au nouveau venu.</p>
+<p>En particulier, le message de Bitcoin devrait toujours être un appel à la pratique, conformément aux mouvements idéologiques qui l’ont précédé, à commencer par les cypherpunks. Chacun devrait se sentir poussé à écrire (et à lire) du code, à déployer des fermes de minage dans la mesure du possible, à participer à l’économie circulaire, à conserver du bitcoin et à éduquer les autres sur le sujet, quand bien même cela n’apporterait pas un gain financier direct. Car c’est aussi de cette manière que Bitcoin prospère.</p>
+<p>Quoi qu’il en soit, Bitcoin ne peut pas être oublié. La découverte de Satoshi Nakamoto est là pour rester. Elle a déjà joué un rôle dans le combat pour la liberté humaine et devra probablement jouer un rôle encore plus grand à l’avenir. Son succès dépendra de l’action des personnes qui le soutiennent. La révolution ne sera pas centralisée.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/le-passage-a-l-echelle.html" class="pagination-link" aria-label="Le passage à l'échelle">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/ordinals.html" class="pagination-link" aria-label="Ordinals">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Des racines monétaires – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/la-necessite-de-decentralisation.html" rel="next">
+<link href="../chapters/une-croissance-conflictuelle.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+<meta property="og:title" content="3&nbsp; Des racines monétaires – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="3&nbsp; Des racines monétaires – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/des-racines-monetaires.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#quest-ce-que-la-monnaie" id="toc-quest-ce-que-la-monnaie" class="nav-link active" data-scroll-target="#quest-ce-que-la-monnaie">Qu’est-ce que la monnaie&nbsp;?</a></li>
+  <li><a href="#les-différentes-monnaies" id="toc-les-différentes-monnaies" class="nav-link" data-scroll-target="#les-différentes-monnaies">Les différentes monnaies</a></li>
+  <li><a href="#lécole-autrichienne-et-la-valeur-de-la-monnaie" id="toc-lécole-autrichienne-et-la-valeur-de-la-monnaie" class="nav-link" data-scroll-target="#lécole-autrichienne-et-la-valeur-de-la-monnaie">L’école autrichienne et la valeur de la monnaie</a></li>
+  <li><a href="#une-nouvelle-forme-de-monnaie" id="toc-une-nouvelle-forme-de-monnaie" class="nav-link" data-scroll-target="#une-nouvelle-forme-de-monnaie">Une nouvelle forme de monnaie</a></li>
+  <li><a href="#bitcoin-et-le-théorème-de-régression" id="toc-bitcoin-et-le-théorème-de-régression" class="nav-link" data-scroll-target="#bitcoin-et-le-théorème-de-régression">Bitcoin et le théorème de régression</a></li>
+  <li><a href="#lémergence-de-la-valeur-du-bitcoin" id="toc-lémergence-de-la-valeur-du-bitcoin" class="nav-link" data-scroll-target="#lémergence-de-la-valeur-du-bitcoin">L’émergence de la valeur du bitcoin</a></li>
+  <li><a href="#la-monnaie-de-la-désobéissance" id="toc-la-monnaie-de-la-désobéissance" class="nav-link" data-scroll-target="#la-monnaie-de-la-désobéissance">La monnaie de la désobéissance</a></li>
+  <li><a href="#la-monnaie-du-marché-noir" id="toc-la-monnaie-du-marché-noir" class="nav-link" data-scroll-target="#la-monnaie-du-marché-noir">La monnaie du marché noir</a></li>
+  <li><a href="#la-proposition-de-valeur-de-bitcoin" id="toc-la-proposition-de-valeur-de-bitcoin" class="nav-link" data-scroll-target="#la-proposition-de-valeur-de-bitcoin">La proposition de valeur de Bitcoin</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:monnaie" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:3" label="enotezch:3"></span></p>
+<p><span class="lettrine">B</span><span class="smallcaps">i</span>tcoin constitue un protocole de transfert de valeur qui gère l’émission et les échanges d’une unité de compte numérique du même nom, le bitcoin. Comme son nom l’indique (bitcoin est la fusion de <em>bit</em>, chiffre binaire, et de <em>coin</em>, pièce de monnaie), le bitcoin a vocation à être une monnaie. Il a ainsi été présenté comme tel dès ses débuts, comme l’atteste le titre du livre blanc qui en faisait «&nbsp;un système d’argent liquide électronique pair à pair&nbsp;». C’est pourquoi il est nécessaire de comprendre l’économie et la monnaie afin de saisir correctement Bitcoin.</p>
+<p>En particulier, le bitcoin est un nouvelle forme de monnaie. Il s’agit en effet d’une monnaie entièrement numérique qui se base sur un réseau décentralisé et qui ne nécessite pas d’autorité centrale pour fonctionner, ce qui constitue un véritable tour de force technique. Ce modèle original permet au bitcoin d’être résistant à la censure, dans le sens où il est difficile d’empêcher une transaction d’avoir lieu, et résistant à l’inflation, dans le sens où il est dur de créer de nouvelles unités. Grâce à cette proposition de valeur double, il représente une alternative viable au système monétaire et bancaire moderne.</p>
+<p>Dans ce chapitre, nous nous proposons d’explorer les racines monétaires de Bitcoin, en expliquant d’abord ce qu’est la monnaie, en décrivant ensuite la conception qu’en a l’école autrichienne d’économie, avant de montrer en quoi le modèle du bitcoin est unique et où réside son utilité.</p>
+<section id="quest-ce-que-la-monnaie" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="quest-ce-que-la-monnaie">Qu’est-ce que la monnaie&nbsp;?</h2>
+<p>La monnaie est un sujet ardu à appréhender et la conception que s’en font les gens est souvent floue et inexacte. Pourtant, il s’agit d’un instrument utilisé massivement dans nos sociétés modernes, caractérisées par la marchandisation et par la division du travail. Il est donc crucial d’appréhender cet objet de manière fine et pertinente.</p>
+<p>L’importance concrète de la monnaie se retrouve dans la diversité des termes qui existent pour la désigner en français. D’abord, l’appelation la plus répandue pour parler de la monnaie est l’argent, si bien qu’on doit aujourd’hui préciser quand on veut parler du métal précieux. Ensuite, l’argot regorge de termes variés&nbsp;: le blé, en référence à la céréale&nbsp;; l’oseille, désignant originellement une plante potagère&nbsp;; le flouze, venant d’un mot arabe signifiant pièce de cuivre&nbsp;; le pèze, qui viendrait peut-être du breton&nbsp;; le pognon, qu’on échange de main à main&nbsp;; la maille et le sou, qui sont les noms d’anciennes pièces de monnaie. Puis, pour sa forme liquide, on parle de numéraire ou d’espèces, ou bien de <em>cash</em>, un anglicisme venant de l’ancien français <em>casse</em>, qui a donné caisse. Enfin, il y a le mot «&nbsp;monnaie&nbsp;» lui-même, qui provient du latin <em>moneta</em>, issu du nom de temple de Juno Moneta («&nbsp;Junon la Prévenante&nbsp;») où se frappait la monnaie de Rome.</p>
+<p>Une monnaie est un intermédiaire d’échange généralement accepté au sein d’un groupe de personnes donné. Il s’agit d’un outil utilisé dans l’échange indirect de biens et de services&nbsp;: une personne <em>vend</em> des biens et des services contre de la monnaie, qui lui sert ensuite à <em>acheter</em> d’autres biens et services.</p>
+<p>La monnaie résout en cela le problème de la double coïncidence des besoins, qui se poserait dans une économie de troc où deux personnes doivent simultanément désirer le bien de l’autre dans la proportion souhaitée pour que l’échange puisse se faire d’une manière directe. Par exemple, si un boulanger souhaitait acquérir une pièce de viande contre quelques-unes de ses baguettes de pain, il devrait trouver un boucher désirant obtenir ces baguettes à cet endroit-là, à ce moment-là et pour ce montant-là. La monnaie est donc un bien intermédiaire que les gens acquièrent en vue de le céder contre autre chose, et qui fluidifie grandement leurs échanges.</p>
+<p>Ce qui fait qu’un bien est utilisé comme monnaie plutôt qu’un autre, c’est ce qu’on appelle sa cessibilité<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, c’est-à-dire la facilité avec laquelle ce bien peut être échangé sur le marché dès que son détenteur le désire et en encourant le moins de perte de valeur possible. Le bien servant de monnaie doit pouvoir être obtenu facilement sans que cela ne provoque une pénurie de monnaie. Cette propriété est similaire à la liquidité d’un marché, qui représente la capacité à acheter ou à vendre rapidement les biens qui y sont cotés sans que l’opération n’ait d’effet majeur sur les prix. C’est en ce sens qu’on décrit parfois la monnaie comme <em>le bien le plus liquide</em> au sein d’une économie donnée, et qu’on emploie le terme d’<em>argent liquide</em> en français pour parler de la monnaie physique composée des pièces et des billets, échangeables facilement et sans contrainte.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Le concept de cessibilité a été décrit en 1892 par l’économiste autrichien Carl Menger dans son essai <em>On the Origin of Money</em>. Le terme en allemand est <em>Absatzfähigkeit</em>, qui désigne, pour une marchandise, la capacité à s’écouler facilement, à bien se vendre. Il a été traduit en anglais par <em>saleability</em> et <em>marketability</em>. Il peut aussi être traduit par vendabilité ou échangeabilité en français.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;L’économiste Fritz Machlup parlait de «&nbsp;degrés de monétarité&nbsp;» à propos des créances en dollar dans le système bancaire européen (Fritz Machlup, «&nbsp;<em>Euro-dollar creation: a mystery story</em>&nbsp;», in <em>Banca Nazionale del Lavoro Quarterly Review</em>, vol.&nbsp;23, no.&nbsp;94, 1970, p.&nbsp;225). De même, Hayek écrivait dans <em>Pour une vraie concurrence des monnaies</em> en 1976 (p.&nbsp;93)&nbsp;: «&nbsp;Ceci signifie aussi que, bien que nous supposions habituellement qu’il existe une distinction claire entre ce qui est une monnaie et ce qui n’en est pas – et la législation s’efforce généralement de poser une telle démarcation –, cette dichotomie n’existe pas dès lors qu’on considère les propriétés qui confèrent à un bien la qualité de monnaie. Ce que nous observons est bien davantage un continuum dans lequel des biens dotés de différents degrés de liquidité, ou dont les valeurs fluctuent indépendamment les unes des autres, se confondent partiellement par le degré auquel ils peuvent être utilisés en tant que monnaie.&nbsp;»</p></div></div><p>La monnaie n’est pas un concept dont les contours sont fixes et rigides. Un bien peut être plus ou moins une monnaie selon son niveau de cessibilité dans le groupe humain où il est échangé, de sorte qu’on peut parler de degré de monétarité ou de liquidité<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. L’or et le bitcoin disposent ainsi d’un degré de monétarité moindre que les devises étatiques en général, mais cela ne les empêche pas d’être considérés comme des monnaies au sens large. L’or est même mondialement perçu comme la réserve de valeur par excellence et comme le fondement historique de la monnaie, ce qui se retrouve dans la culture et en particulier dans les jeux vidéos.</p>
+<p>De plus, la cessibilité d’un bien peut varier selon la situation. Le dollar n’est pas forcément utile en Europe où l’euro est bien plus cessible. L’or est un piètre instrument pour les paiements quotidiens, mais constitue une bonne manière de déplacer de la valeur dans le temps. Le bitcoin est peu utilisé dans le commerce physique, mais l’est beaucoup plus sur Internet. Les cigarettes ne servent pas de monnaie dans la population générale mais ont pu l’être dans certaines prisons. Le statut de monnaie dépend aussi du contexte.</p>
+<p>La cessibilité élevée nécessaire pour que le bien soit sélectionné comme monnaie se retrouve dans les trois fonctions monétaires classiques, souvent citées par les économistes et dont l’origine est attribuée au philosophe Aristote<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Ces fonctions de la monnaie sont les suivantes&nbsp;: premièrement, c’est un moyen de paiement, permettant de régler des échanges de manière directe ou différée (dette)&nbsp;; deuxièmement, c’est une réserve de valeur, permettant d’épargner de la richesse pour l’utiliser plus tard&nbsp;; troisièmement, c’est une unité de compte, servant de moyen standard d’exprimer la valeur des autres biens, sous la forme de prix. Autrement dit, la monnaie doit posséder une cessibilité qui s’adapte à la fois à l’espace, au temps et à l’échelle.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;«&nbsp;les trois fonctions monétaires classiques, souvent citées par les économistes et dont l’origine est attribuée au philosophe Aristote&nbsp;»&nbsp;: Dans l’<em>Éthique à Nicomaque</em>, Aristote énonce ce qui sert de base à ces fameuses trois fonctions. Il fait d’abord de la monnaie une unité de compte permettant d’évaluer la valeur des choses&nbsp;:</p></div></div><p>De ces trois <em>fonctions</em> fondamentales, on dérive usuellement les <em>qualités</em> essentielles de la monnaie, qui sont&nbsp;:</p>
+<ul>
+<li><p>La portabilité&nbsp;: la monnaie doit être facilement transportable pour être transmise d’une personne à une autre, ou pour le dire autrement, le coût pour la déplacer doit être minimal&nbsp;;</p></li>
+<li><p>La durabilité&nbsp;: elle doit se conserver dans le temps, ne pas s’altérer, ne pas pourrir&nbsp;;</p></li>
+<li><p>La rareté&nbsp;: sa disponibilité doit être restreinte et ne pas être modifiée&nbsp;;</p></li>
+<li><p>La divisibilité&nbsp;: elle doit pouvoir être scindée en sous-parties plus petites&nbsp;;</p></li>
+<li><p>La fongibilité&nbsp;: chaque unité doit être interchangeable avec une autre&nbsp;;</p></li>
+<li><p>La vérifiabilité&nbsp;: la conformité de la monnaie doit pouvoir être vérifiée aisément et rapidement (les espèces doivent être «&nbsp;sonnantes et trébuchantes&nbsp;»)&nbsp;;</p></li>
+<li><p>La résistance à la censure&nbsp;: il doit être difficile d’empêcher une transaction de se faire (ce qui peut être remis en cause dans les solutions numériques)&nbsp;;</p></li>
+<li><p>L’historicité&nbsp;: la monnaie doit présenter une utilisation ancienne (et donc bénéficier de l’effet Lindy<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>).</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;L’effet Lindy est le fait que l’espérance de vie future d’une chose non périssable, telle qu’une technique ou une idée, est proportionnelle à son âge actuel.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;l’effet Lindy&nbsp;»&nbsp;: Le nom de l’effet Lindy a été créé par l’auteur américain Albert Goldman, en référence aux restaurants Lindy’s à New York où il se disait que «&nbsp;l’espérance de vie d’un comédien de télévision est [inversement] proportionnelle au montant total de son exposition sur les ondes&nbsp;» (Albert Goldman, «&nbsp;<em>Lindy’s Law</em>&nbsp;», <em>The New Republic</em>, pp.&nbsp;34–35, 13 juin 1964&nbsp;: <a href="https://gwern.net/doc/statistics/probability/1964-goldman.pdf" class="uri">https://gwern.net/doc/statistics/probability/1964-goldman.pdf</a>). Son sens actuel lui a été donné par Benoît Mandelbrot dans son livre <em>The Fractal Geometry of Nature</em> publié en 1982.</p></div></div><p>Ces qualités se sont retrouvées, de manière partielle ou totale, dans les différentes monnaies qui ont émergé et se sont imposées au cours de l’histoire.</p>
+</section>
+<section id="les-différentes-monnaies" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-différentes-monnaies">Les différentes monnaies</h2>
+<p>On peut regrouper les monnaies qui ont existé en différentes catégories. Cinq formes plus ou moins distinctes se dégagent ainsi&nbsp;: la monnaie-marchandise, la monnaie représentative, le papier-monnaie, la monnaie-crédit et la monnaie numérique. Ces formes ont toutes des qualités singulières, qui sont le résultat de l’évolution monétaire mondiale.</p>
+<p>Une monnaie-marchandise est, comme son nom l’indique, une marchandise qui est amenée à servir d’intermédiaire d’échange au sein d’un groupe donné. Une marchandise, dans le sens où nous l’entendons ici<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, est un produit standardisé, essentiel et courant, dont les qualités sont parfaitement définies et connues des acheteurs, comme une matière minérale, un produit agricole ou un produit manufacturé. De ce fait, le bien utilisé possède originellement une utilité intrinsèque autre que monétaire&nbsp;: industrielle, alimentaire ou esthétique.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;C’est le sens qu’on porte au mot <em>commodity</em> en anglais.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;Le mot salaire vient du latin <em>salarium</em>, qui désignait la «&nbsp;ration de sel&nbsp;», puis la «&nbsp;solde pour acheter du sel&nbsp;» versés aux soldats romains dans l’Antiquité&nbsp;: <a href="https://www.lexilogos.com/latin/gaffiot.php?q=salarium" class="uri">https://www.lexilogos.com/latin/gaffiot.php?q=salarium</a>.</p></div></div><p>Les marchandises utilisées comme intermédiaire d’échange ont été nombreuses au cours de l’histoire de l’humanité. On a pu utiliser des restes d’animaux comme les coquillages et les ossements, des produits artisanaux comme les pagnes ou les couteaux, des denrées alimentaires comme le blé, les épices, les graines de cacao ou le sel<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, des produits de l’élevage dont notamment le gros bétail, ou des matières naturelles comme les pierres ou les métaux.</p>
+<p>Toutes ces marchandises possédaient de plus ou moins bonnes qualités monétaires, mais certaines souffraient de gros défauts, ce qui les rendaient moins adéquates à l’utilisation comme intermédiaire d’échange que d’autres. Le bétail avait une très mauvaise portabilité et n’était pas divisible. Les céréales comme le blé ou le riz étaient peu durables. La rareté des coquillages pouvait être élevée dans les terres, mais l’était peu près des côtes. Les produits artisanaux et les bijoux différaient légèrement les uns des autres ce qui nuisait à leur fongilibilité.</p>
+<p>De manière générale, ce sont les métaux précieux, et tout particulièrement l’or, l’argent et le cuivre (sous forme de bronze), qui ont été sélectionnés au fil du temps pour finir par devenir la base monétaire mondiale. Cette convergence peut s’expliquer par le fait que ces trois métaux (de symboles chimiques respectifs Au, Ag et Cu) appartiennent tous les trois au groupe 11 de la classification périodique des éléments et qu’ils possèdent par conséquent des propriétés chimiques similaires, dont notamment une grande résistance à la corrosion et à l’oxydation, et une malléabilité élevée. L’utilisation de métaux multiples s’explique par leur portabilité imparfaite&nbsp;: l’or permet de déplacer beaucoup de valeur, mais n’est pas adapté aux petits paiements quotidiens, contrairement à l’argent et au cuivre.</p>
+<p>Les métaux précieux ont pu être utilisés à l’état brut, sous la forme de lingots plus ou moins gros. Cependant, ils ont surtout été frappés sous la forme de pièces de monnaie, sur lesquelles une institution de confiance (généralement un État) inscrivait sa marque et certifiait le poids et la teneur en métal. Cette inscription constituait entre autres choses un certificat, intégré à la monnaie, qui avait pour but de faciliter l’échange par la non-nécessité de procéder à une vérification à chaque paiement.</p>
+<p>Cette certification peut également être déconnectée de la monnaie, auquel cas on parle de monnaie représentative. Une monnaie représentative est une monnaie constituée de certificats, imprimés ou numériques, qui sont convertibles à vue contre une marchandise de base, comme de l’or ou de l’argent, auprès d’un tiers de confiance. L’aspect central d’une telle monnaie est qu’elle est théoriquement adossée à une réserve intégrale de monnaie de base, détenue par une ou plusieurs institutions. Les certificats sont par essence des substituts monétaires, c’est-à-dire des créances juridiquement exécutoires sur un débiteur pour un montant de monnaie de base déterminé.</p>
+<p>L’archétype de la monnaie représentative est le système de l’étalon-or classique, qui était en vigueur durant la Belle Époque dans le monde occidental, où la monnaie était constituée de pièces d’or et de billets de banque convertibles en or. Cependant, avec le temps, la convertibilité a été progressivement abandonnée et les billets ont été transformés en une simple monnaie fiduciaire papier.</p>
+<p>Une monnaie fiduciaire est une monnaie dont la valeur d’usage est négligeable par rapport à sa valeur nominale. La valeur initiale de la monnaie fiduciaire provient de la confiance (<em>fiducia</em> en latin) accordée à d’autres acteurs plutôt que de ses propriétés intrinsèques, comme c’est le cas des monnaies-marchandises. Cette confiance peut être placée dans un État, dans une firme ou bien dans une communauté. Elle se fonde non seulement sur la conviction que le dépositaire n’en dégradera pas les propriétés (dont notamment la rareté), mais aussi, dans le cas de l’État, sur l’assurance qu’il fera usage de la violence pour en contraindre l’utilisation, auquel cas on parle de monnaie fiat (du latin <em>fiat</em>, «&nbsp;qu’il soit fait&nbsp;», qui véhicule l’idée de décret). Contrairement à la monnaie représentative, la monnaie fiduciaire ne représente pas une marchandise ou une autre monnaie de base&nbsp;: <em>c’est</em> la monnaie de base.</p>
+<p>L’exemple type de monnaie fiduciaire est le papier-monnaie, qui est une monnaie basée sur un support physique, dont la valeur d’usage est largement inférieure à la valeur nominale ou faciale indiquée sur le support. Le support peut être fabriqué à partir de papier, de tissu ou de plastique (billets) ou bien d’alliages de métaux composés par exemple de cuivre, de zinc et de nickel (pièces). Le maintien de sa valeur est garanti par la limitation de la production et la répression du faux-monnayage&nbsp;: sans cela, la monnaie deviendrait une monnaie-marchandise et la valeur d’échange des supports tendrait rapidement vers leur coût de production, généralement inférieur à leur valeur nominale.</p>
+<p>Cette forme de monnaie a été expérimentée par les États à de multiples reprises au cours de l’histoire conduisant la plupart du temps à des inflations dramatiques, comme l’illustrent la tentative d’instauration d’une monnaie fiat par la dynastie Song entre le <span class="smallcaps">xi</span> et le <span class="smallcaps">xii</span>&nbsp;siècle en Chine<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> ou l’épisode des assignats durant la Révolution française. Ce n’est que depuis le <span class="smallcaps">xx</span>&nbsp;siècle et l’abandon de l’étalon-or que ce modèle s’est généralisé.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;«&nbsp;la tentative d’instauration d’une monnaie fiat par la dynastie Song entre le XIe et le XIIe en Chine&nbsp;»&nbsp;: Peter St-Onge, <em>How Paper Money Led to the Mongol Conquest: Money and the Collapse of Song China</em>, 2017.</p></div></div><p>Une monnaie-crédit, aussi appelée monnaie scripturale, est une monnaie qui se rapporte à l’écriture (<em>scriptura</em> en latin) d’une dette dans un registre bancaire. Elle se distingue de la monnaie représentative par le fait qu’elle n’oblige pas le dépositaire à conserver le bien représenté en réserve. Les banques sont en effet des organismes de crédit, et pas des entrepôts de monnaie&nbsp;: lorsqu’une personne «&nbsp;dépose&nbsp;» des fonds sur un compte en banque, elle prêtent en réalité son argent à la banque qui «&nbsp;crédite&nbsp;» son compte en conséquence (d’où l’adage «&nbsp;les dépôts font les crédits&nbsp;»).</p>
+<p>Tout comme la monnaie représentative, la monnaie-crédit est un substitut monétaire. La monnaie-crédit doit se fonder sur une unité de compte de base, issue d’une monnaie-marchandise (comme l’or) ou d’une monnaie fiduciaire (comme le dollar), qui sert à régler la dette lorsqu’elle arrive à échéance.</p>
+<p>Aujourd’hui, le crédit est largement monétisé dans les sociétés occidentales, comme l’illustrent les moyens de paiement modernes que sont les chèques, les virements et les cartes bancaires. La monnaie scripturale compose plus de 90&nbsp;% de la quantité en circulation de la monnaie au sens large.</p>
+<p>Une monnaie numérique est une forme particulière de monnaie fiduciaire dont l’existence repose sur un registre géré informatiquement. Elle se distingue de la monnaie scripturale par le fait que l’entrée dans le registre n’est pas une créance en monnaie sur un tiers, mais <em>est la monnaie</em>. La monnaie est ainsi stockée sur une mémoire électronique, d’où le fait qu’on parle parfois de monnaie électronique<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. Une conséquence de la nature particulière de cette forme de monnaie est qu’elle est généralement programmable, dans le sens où on peut inscrire les conditions de dépense dans le système informatique qui la soutient.</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;D’un point de vue légal, la monnaie électronique désigne un type spécifique de monnaie scripturale. L’article L315-1 du <em>Code monétaire et financier</em> la définit comme «&nbsp;une valeur monétaire qui est stockée sous une forme électronique, y compris magnétique, représentant une créance sur l’émetteur, qui est émise contre la remise de fonds aux fins d’opérations de paiement définies à l’article L. 133-3 et qui est acceptée par une personne physique ou morale autre que l’émetteur&nbsp;». C’est pouquoi nous préférons ici employer le terme de monnaie numérique.</p></div></div><p>Le premier exemple de monnaie numérique est celle qui est gérée de manière centralisée par une banque centrale. Elle constitue, avec les pièces et les billets, la base monétaire, qui est aussi appelée «&nbsp;monnaie de banque centrale&nbsp;» ou «&nbsp;monnaie centrale&nbsp;». Plus précisément, il s’agit des avoirs monétaires détenus par les titulaires de comptes auprès de la banque centrale (c’est-à-dire des banques commerciales). Ce type de monnaie a permis de ne plus reposer uniquement sur des supports physiques, qui rendaient le règlement difficile et risqué. À l’avenir, la monnaie numérique étatique devrait être étendue à une monnaie numérique de banque centrale (MNBC) disponible pour les organismes financiers et, probablement, pour les particuliers.</p>
+<p>Le second exemple de monnaie numérique est la cryptomonnaie, gérée de manière décentralisée par un réseau pair à pair, dont l’archétype est le bitcoin. Il s’agit d’une monnaie numérique de marché dans le sens où son existence n’est pas dépendante de l’intervention (ou de l’absence d’intervention) de l’État. C’est la monnaie sur laquelle se focalise cet ouvrage.</p>
+</section>
+<section id="lécole-autrichienne-et-la-valeur-de-la-monnaie" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="lécole-autrichienne-et-la-valeur-de-la-monnaie">L’école autrichienne et la valeur de la monnaie</h2>
+<p>Puisque Bitcoin est un système monétaire, la compréhension de son fonctionnement et de ses enjeux passe par la connaissance de l’économie. Il existe de multiples manières d’aborder le sujet mais nous adoptons ici la perspective du courant économique dit «&nbsp;autrichien&nbsp;», qui est probablement la plus pertinente pour décrire Bitcoin, car elle a inspiré, au moins indirectement, sa création et son développement.</p>
+<p>L’école autrichienne d’économie, parfois aussi appelée école de Vienne, est une école de pensée économique créée en Autriche au <span class="smallcaps">xix</span>&nbsp;siècle autour de la figure de Carl Menger. Elle s’est initialement développée dans ce pays d’Europe centrale avec des penseurs comme Eugen von Böhm-Bawerk et Friedrich von Wieser. Après la Première Guerre mondiale et le démantèlement de l’Autriche-Hongrie en 1918, elle s’est exportée à l’étranger, dont notamment aux États-Unis, avec des économistes d’origine autrichienne comme Ludwig von Mises et Friedrich Hayek (ce dernier ayant reçu le prix «&nbsp;Nobel&nbsp;» d’économie en 1974). Par la suite, elle s’est étendue à des penseurs de toutes origines, dont les principales figures sont Murray Rothbard, Jesús Huerta de Soto et Hans-Hermann Hoppe.</p>
+<p>L’école autrichienne se caractérise par son approche méthodologique – l’individualisme méthodologique – qui se fonde sur la praxéologie, c’est-à-dire l’étude rationnelle de l’action humaine. Cette méthode est aprioriste (ou axiomatique) dans le sens où elle repose sur un certain nombre d’axiomes qui ont trait au comportement humain. Elle part donc de la partie (l’individu) pour en déduire des conséquences logiques sur le tout (l’économie). L’école autrichienne s’oppose de ce fait aux écoles de pensée économiques qui se basent essentiellement sur l’observation et qui cherchent à modéliser «&nbsp;mathématiquement&nbsp;» l’économie, comme le néokeynésianisme, aujourd’hui majoritaire.</p>
+<p>L’école autrichienne a en particulier une analyse fine de la valeur, c’est-à-dire l’intérêt ou l’importance qu’une personne porte à une chose.</p>
+<p>Plusieurs conceptions de l’origine de la valeur existent. Certains considèrent que la valeur provient de la terre et de l’activité s’y rapportant, une thèse défendue par les économistes physiocrates du <span class="smallcaps">xviii</span>&nbsp;siècle. D’autres postulent que la valeur tire son origine du travail, à l’instar d’Adam Smith, de David Ricardo, et surtout de Karl Marx, dont les partisans soutiennent cette théorie depuis le <span class="smallcaps">xix</span>&nbsp;siècle.</p>
+<p>L’école autrichienne d’économie diffère de ces conceptions en prônant une conception subjective de la valeur. Pour les autrichiens en effet, la valeur n’est pas un phénomène objectif et dépend du point de vue individuel. Selon Carl Menger&nbsp;:</p>
+<p>«&nbsp;La valeur n’est pas inhérente aux biens, elle n’en est pas une propriété, elle n’est pas une chose qui existe en soi. C’est un jugement que les sujets économiques portent sur l’importance des biens dont ils peuvent disposer pour maintenir leur vie et leur bien-être. Il en résulte que la valeur n’existe pas en dehors de la conscience des hommes<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;Carl Menger, <em>Principles of Economics</em>, Ludwig von Mises Institute, 2007, pp.&nbsp;120–121&nbsp;: <a href="https://cdn.mises.org/principles_of_economics.pdf" class="uri">https://cdn.mises.org/principles_of_economics.pdf</a>.</p></div></div><p>Ainsi, un individu peut accorder une immense grande valeur à un bien (un tableau par exemple) tandis qu’un autre ne lui en accordera aucune. De même, la valeur prodiguée peut varier selon le contexte&nbsp;: une personne vivant dans le désert ne portera pas le même intérêt à un litre d’eau que quelqu’un résidant dans une région humide.</p>
+<p>La valeur d’un même bien peut être différente aux yeux d’un individu selon sa consommation antérieure. S’il est affamé, il accordera une grande valeur à une pomme&nbsp;; mais à mesure qu’il se sustentera, la valeur qu’il donnera aux pommes suivantes décroîtra. C’est ce qu’on appelle l’utilité marginale.</p>
+<p>La valeur que l’individu tire d’un bien est appelée la «&nbsp;valeur d’usage&nbsp;» par les économistes. Le sens porté à ce terme est différent selon les personnes qui l’utilisent. Ainsi, il renvoie souvent à la valeur d’usage objective, qui est la relation entre une chose et l’effet qu’elle a la capacité d’entraîner, comme par exemple le pouvoir de chauffage du bois. Mais le terme peut également, dans le contexte autrichien, faire référence à la valeur d’usage subjective, qui n’est pas toujours fondée sur un critère objectif d’évaluation.</p>
+<p>L’estimation de la valeur des biens et des services permet à l’individu de savoir comment orienter sa production et sa consommation. Mais cette appréciation intervient également dans le commerce&nbsp;: un échange a lieu seulement si les deux parties de cet échange donnent <em>plus de valeur</em> au bien économique possédé par autrui. De ce fait, si un bien appartenant à autrui vaut pour moi plus que quatre pièces d’argent et que cette autre personne accorde plus de valeur à deux pièces d’argent qu’à ce bien, alors un échange à un prix de trois pièces d’argent sera bénéfique pour nous deux. C’est pour cette raison qu’à long terme le marché libre <em>crée</em> de la richesse. Le prix ainsi obtenu dans le commerce est parfois appelé «&nbsp;valeur d’échange&nbsp;».</p>
+<p>Même si la valeur est subjective, cela n’empêche pas les êtres humains d’accorder de la valeur aux mêmes choses. D’abord, en tant qu’ils sont semblables, ils valorisent naturellement les biens qui leur permettent de satisfaire leurs besoins physiologiques primaires (eau potable, nourriture, vêtements, abris, etc.). Ensuite, ils ont tendance à copier le désir d’autrui pour des choses non nécessaires, conformément à la nature mimétique du désir<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>, ce qui a pour effet de créer les engouements et les effets de mode autour d’objets communs. Enfin, ils accordent de la valeur aux biens d’ordre supérieur, que ce soient des outils (capital) ou des matières premières, qui permettent de fabriquer les biens de consommation désirés.</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;«&nbsp;la nature mimétique du désir&nbsp;»&nbsp;: René Girard, <em>Mensonge romantique et vérité romanesque</em>, 1961.</p></div></div><p>La monnaie est un cas particulier dans l’analyse de la valeur. Elle repose sur un phénomène intersubjectif&nbsp;: une construction psychologique qui se fait au sein de chaque personne et qui se renforce à mesure qu’elle s’enracine dans l’esprit des autres. Chacun acquiert de la monnaie parce qu’il pense qu’il pourra l’échanger contre un autre bien plus tard, ce qui affermit la conviction des autres que la monnaie peut effectivement être utilisée. C’est un cercle vertueux conforme à l’effet de réseau.</p>
+<p>De ce fait, même si la valeur est évaluée subjectivement, la valeur de la monnaie converge nécessairement vers une valeur d’échange objective commune à tous, qu’on appelle le pouvoir d’achat. Ce pouvoir d’achat peut varier selon la période et selon la localité, au gré des variations naturelles du marché et des distorsions causées par l’État. Lorsqu’il baisse durablement (ce qui se manifeste par une augmentation généralisée des prix), on parle d’inflation. Lorsqu’il augmente durablement (ce qui se traduit par une baisse généralisée des prix), on parle de déflation.</p>
+<p>Au sein de la valorisation du bien utilisé comme monnaie, il est donc possible de distinguer deux valeurs mutuellement exclusives&nbsp;: sa valeur non monétaire, c’est-à-dire l’utilité alimentaire, industrielle, esthétique,&nbsp;etc. que la personne en retire&nbsp;; et sa valeur strictement monétaire, qui découle de l’avantage provenant de l’utilisation du bien comme intermédiaire d’échange. Pour les monnaies-marchandises par exemple, on peut distinguer la demande dite «&nbsp;intrinsèque&nbsp;» de la demande monétaire&nbsp;: l’or ne tire pas sa valeur uniquement de sa demande esthétique (bijoux) et industrielle (microprocesseurs), mais aussi, et surtout, de sa demande en tant qu’intermédiaire d’échange, qui provient notamment des banques centrales.</p>
+<p>Les économistes autrichiens minimisent le rôle de l’État dans la création de la monnaie, postulant qu’elle a largement émergé de l’échange économique, du moins en ce qui concerne sa forme la plus primitive. Ils s’opposent en cela aux chartalistes et aux partisans de la théorie monétaire moderne, qui affirment que la monnaie est née de l’intervention étatique et que sa valeur provient de son emploi pour le paiement l’impôt<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. Tel que l’écrivait Carl Menger&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;Le chartalisme (du latin <em>charta</em>, «&nbsp;papier&nbsp;», «&nbsp;lettre&nbsp;») est une théorie de la monnaie qui a été développée par l’économiste allemand Georg Friedrich Knapp en 1905 dans son ouvrage <em>Staatliche Theorie des Geldes</em>. La théorie monétaire moderne (<em>Modern Monetary Theory</em>) forme un néochartalisme.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;Carl Menger, <em>Principles of Economics</em>, Ludwig von Mises Institute, 2007, pp.&nbsp;261–262.</p></div></div><p>«&nbsp;L’origine de la monnaie (qu’il faut distinguer des pièces de monnaie, qui n’en sont qu’une variété) est [...] tout à fait naturelle, et elle n’est donc qu’en de très rares circonstances le résultat d’une influence de la législation. La monnaie n’est ni une invention de l’État, ni le produit d’un acte législatif, et la sanction d’un tel acte par l’autorité de l’État est donc étrangère à la notion même de monnaie<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>.&nbsp;»</p>
+<p>Dans cette perspective, la monnaie tire son origine de l’échange entre les groupes d’individus qui ne se faisaient pas confiance, mais qui étaient désireux de coopérer. Ainsi les protomonnaies (ou paléomonnaies) ont émergé, non pas au sein des tribus humaines, dont le fonctionnement interne reposait largement sur le don et le crédit, mais <em>entre</em> ces tribus. Cela pouvait concerner l’échange simple de marchandises, la résolution de conflits, le règlement de mariages et le paiement de tributs<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;Nick Szabo, <em>Shelling Out: The Origins of Money</em>, 2002&nbsp;; George Selgin, <em>The Myth of the Myth of Barter</em>, 2016&nbsp;: <a href="https://www.alt-m.org/2016/03/15/myth-myth-barter/" class="uri">https://www.alt-m.org/2016/03/15/myth-myth-barter/</a>.</p></div><div id="fn15"><p><sup>15</sup>&nbsp;«&nbsp;Les premières pièces frappées sont vraisemblablement apparues au VIIe siècle avant Jésus-Christ en Asie Mineure sous l’impulsion des Lydiens&nbsp;»&nbsp;: John H. Kroll, <em>The Coins of Sardis</em>, 2010&nbsp;: <a href="https://sardisexpedition.org/en/essays/latw-kroll-coins-of-sardis" class="uri">https://sardisexpedition.org/en/essays/latw-kroll-coins-of-sardis</a>.</p></div></div><p>Avec la mondialisation progressive de la planète, les protomonnaies ont subi une sélection&nbsp;: beaucoup d’entre elles ont disparu au profit de celles qui satisfaisaient les propriétés d’une bonne monnaie. En particulier, le bien sélectionné devait être facile à cacher (résistance à la censure), difficile à produire (rareté) et sa valeur devait pouvoir être aisément approximée (vérifiabilité). La monnaie a convergé vers les pièces de métal précieux, le plus souvent d’or et d’argent, de préférence frappées par une autorité reconnue. Les premières pièces frappées sont vraisemblablement apparues au <span class="smallcaps">vii</span>&nbsp;siècle avant Jésus-Christ en Asie Mineure sous l’impulsion des Lydiens<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>, et étaient constituées d’électrum, un alliage naturel d’or et d’argent. Par la suite, de nombreuses pièces différentes se sont succédées&nbsp;: la darique perse, la drachme grecque, le denarius romain, le solidus byzantin (besant), etc.</p>
+<p>L’utilisation de pièces s’est faite pendant des siècles et s’est généralisée à la planète entière. Néanmoins, cet usage a progressivement reculé à partir de la Renaissance avec l’émergence des billets de banque, qui se sont généralisés au cours du <span class="smallcaps">xix</span>&nbsp;siècle grâce à l’action des États. Le passage au papier-monnaie fiduciaire a eu lieu durant le <span class="smallcaps">xx</span>&nbsp;siècle avec l’abandon total de toute référence aux métaux précieux dans le système monétaire en 1971. Nous avons assisté à une véritable corruption de la monnaie, qui a apporté quelques bénéfices mais qui a surtout permis aux autorités de davantage profiter de la création monétaire par le biais de la fameuse «&nbsp;planche à billets&nbsp;».</p>
+<p>Pour les partisans de la liberté, il est crucial de procéder à une rédemption de la monnaie<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>, en revenant à ce que les économistes autrichiens appellent une monnaie saine. Une monnaie saine est une monnaie librement choisie par le marché qui reste à l’abri des ingérences coercitives. Tel que l’écrivait Ludwig von Mises dans sa <em>Théorie de la monnaie et du crédit</em> en 1912&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;Bitcoin and Bible Group, <em>Thank God for Bitcoin: The Creation, Corruption and Redemption of Money</em>, Whispering Candle, 2020.</p></div><div id="fn17"><p><sup>17</sup>&nbsp;Ludwig von Mises, <em>The Theory of Money and Credit</em>, Yale University Press, 1953, p.&nbsp;414&nbsp;: <a href="https://cdn.mises.org/Theory%20of%20Money%20and%20Credit.pdf" class="uri">https://cdn.mises.org/Theory%20of%20Money%20and%20Credit.pdf</a>.</p></div></div><p>«&nbsp;Le principe de la monnaie saine comporte deux aspects. Il est positif en ce qu’il approuve le choix par le marché d’un intermédiaire d’échange couramment utilisé. Il est négatif en ce qu’il fait obstacle à la propension du gouvernement à s’immiscer dans le système monétaire<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>.&nbsp;»</p>
+<p>Plusieurs projets politiques ont émergé dans le but de rétablir un système monétaire mondial basé sur une monnaie saine. Le premier était celui de Mises (et de Rothbard) visant à restaurer l’étalon-or. En effet, pour Mises, «&nbsp;une monnaie saine signifie un étalon métallique&nbsp;» et l’étalon-or «&nbsp;rend la détermination du pouvoir d’achat de l’unité monétaire indépendante des États et des partis politiques&nbsp;».</p>
+<p>Le second projet était celui de Friedrich Hayek, développé plus tard, qui prônait une concurrence de monnaies (représentatives ou fiduciaires) qui seraient émises par des banques privées<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>. Cela a inspiré le modèle de la banque libre, dans lequel les organismes financiers pourraient agir librement sans intervention d’une banque centrale ou d’une autre instance, un modèle notamment soutenu par les économistes Lawrence White, George Selgin et Kevin Dowd.</p>
+<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;Friedrich Hayek, <em>Pour une vraie concurrence des monnaies</em>, Presses Universitaires de France, 2015.</p></div></div><p>Aucun de ces deux projets politiques n’a jamais abouti, malgré des décennies d’évènements démontrant la validité des thèses autrichiennes. Comme l’a montré l’histoire, le contrôle étatique sur la monnaie s’est progressivement étendu jusqu’à devenir ce qu’il est aujourd’hui, un contrôle tendant vers le totalitarisme. Cependant, il existe une alternative, une solution non pas politique, mais économique&nbsp;: Bitcoin.</p>
+</section>
+<section id="une-nouvelle-forme-de-monnaie" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="une-nouvelle-forme-de-monnaie">Une nouvelle forme de monnaie</h2>
+<p>Si l’on parle autant de Bitcoin, c’est qu’il apporte quelque chose de nouveau, non seulement d’un point de vue technique, mais aussi et surtout dans une perspective économique. La découverte de ce système par Satoshi Nakamoto en 2008 représente en effet un véritable bouleversement dans le domaine monétaire. Le bitcoin constitue une forme de monnaie inédite&nbsp;: une monnaie <em>sui generis</em> (pour reprendre l’expression de Jacques Favier), de son propre genre, qu’il est difficile de placer dans les cases existantes.</p>
+<p>Premièrement, il s’agit comme on l’a évoqué d’une monnaie entièrement numérique. Le bitcoin se base sur un registre de propriété public (la chaîne de blocs) qui définit la monnaie&nbsp;: les entrées de ce registre ne correspondent pas à des créances, comme c’est le cas pour la monnaie-crédit, mais à la monnaie elle-même.</p>
+<p>Deuxièmement, cette monnaie numérique innove par le fait qu’elle ne nécessite pas de tiers de confiance pour fonctionner. Le contenu du registre ne dépend pas d’une institution financière comme une banque centrale, mais d’un ensemble d’acteurs agissant par le biais d’un réseau distribué d’ordinateurs.</p>
+<p>Troisièmement, sa sécurité est assurée de manière économique&nbsp;: elle ne repose pas sur un bénévolat altruiste (même s’il joue évidemment un rôle), mais sur les incitations économiques des différents acteurs impliqués. Cela donne au système une stabilité à long terme dont n’ont jamais disposé les différentes monnaies privées qui l’ont précédé.</p>
+<p>Ces propriétés permettent au bitcoin de constituer une monnaie fiduciaire distribuée, dans le sens où il ne possède pas d’utilisation non monétaire significative et où sa valeur provient de la confiance accordée à une économie de commerçants plutôt qu’à un tiers. On peut également le qualifier de monnaie réticulaire (du latin <em>reticulum</em>, «&nbsp;filet à petites mailles&nbsp;», «&nbsp;réseau&nbsp;») dans la mesure où la confiance est répartie sur le réseau des nœuds des commerçants plutôt qu’être concentrée sur un serveur central.</p>
+<p>Bien que le bitcoin semble se rapprocher par ses caractéristiques des monnaies-marchandises<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, il ne s’agit aucunement d’une marchandise. Les propriétés de Bitcoin émergent d’un accord atteint par l’ensemble de ses utilisateurs, pas de caractéristiques intrinsèques du monde physique comme c’est le cas pour l’or ou l’argent. Il est ainsi possible de modifier les règles de consensus du système, même si un tel changement est très difficile.</p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;«&nbsp;Il n’y a personne pour agir en tant que banque centrale ou réserve fédérale afin d’ajuster l’offre monétaire au fur et à mesure que le nombre d’utilisateurs augmente. [...] En ce sens, il a plus les caractéristiques d’un métal précieux.&nbsp;» – Satoshi Nakamoto, <em>Re: Bitcoin open source implementation of P2P currency</em>, 18 février 2009, <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562</a>.</p></div></div><p>En réalité, une monnaie est toujours un accord concernant un intermédiaire mutuellement acceptable dans le commerce. Dans le cas de la monnaie-marchandise, cet accord converge naturellement vers une denrée qui est déjà échangée au sein de la société. Dans le cas de la monnaie fiat, l’agrément est maintenu par un décret étatique disposant du respect de la population. Dans le cas de Bitcoin, la coordination est réalisée de manière volontaire autour de règles de consensus spécifiques.</p>
+<p>C’est l’étendue de cet accord qui donne sa force à la monnaie, par effet de réseau&nbsp;: son utilité augmente en effet de manière superlinéaire par rapport à la taille de l’économie l’utilisant. C’est ce qui fait qu’une monnaie peut difficilement être remplacée par une autre, et c’est aussi ce qui rend difficile l’altération des règles de consensus du système, comme nous le verrons dans le chapitre&nbsp;<a href="la-determination-du-protocole.html" data-reference-type="ref" data-reference="ch:determination">11</a> sur la détermination du protocole.</p>
+<p>L’avantage premier de la monnaie-marchandise n’est pas de disposer d’une valeur intrinsèque, mais d’exiger un coût infalsifiable pour sa production<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>, de façon à éviter qu’une création monétaire excessive ne détruise son pouvoir d’achat. En effet, dans le cas d’une monnaie fiduciaire étatique ou privée, la détermination de la monnaie se trouve entièrement entre les mains de l’émetteur, qui peut bénéficier de la situation en créant plus d’unités à son avantage, surtout s’il jouit d’un privilège légal.</p>
+<div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;«&nbsp;exiger un coût infalsifiable pour sa production&nbsp;»&nbsp;: Nick Szabo, <em>Antiques, time, gold, and bit gold</em>, 28 août 2008&nbsp;: <a href="https://unenumerated.blogspot.com/2005/10/antiques-time-gold-and-bit-gold.html" class="uri">https://unenumerated.blogspot.com/2005/10/antiques-time-gold-and-bit-gold.html</a>.</p></div></div><p>Bitcoin est différent et n’est pas soumis à un tel risque&nbsp;: son fonctionnement distribué répartit sa détermination dans l’économie et l’empêche d’être soumis à l’arbitraire d’un tiers. Cette particularité lui permet de disposer d’une caractéristique inédite&nbsp;: une rareté absolue, découlant d’une quantité fixe d’unités émises selon un programme prédéfini. C’est d’ailleurs l’un des facteurs qui ont construit sa renommée&nbsp;: le fait que l’offre monétaire soit limitée à 21 millions de bitcoins.</p>
+<p>La «&nbsp;valeur intrinsèque&nbsp;» n’est donc pas un élément essentiel à la qualité de la monnaie. Le bitcoin, qui est une forme pure de monnaie, valorisée quasi exclusivement pour son rôle de monnaie, en est la preuve. Avec les monnaies-marchandises, les propriétés physiques de la monnaie constituaient un garde-fou contre les interventions privées et étatiques&nbsp;; dans Bitcoin, c’est le réseau qui possède cette fonction.</p>
+</section>
+<section id="bitcoin-et-le-théorème-de-régression" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="bitcoin-et-le-théorème-de-régression">Bitcoin et le théorème de régression</h2>
+<p>Certains économistes autrichiens refusent d’admettre que le bitcoin ait pu émerger sans avoir de valeur d’usage objective. Ils font pour cela référence au théorème de régression de Ludwig von Mises, qui stipule que la valeur d’échange de la monnaie est calculée par rapport à sa valeur précédente et doit, par régression, être ramenée à sa valeur en tant que marchandise.</p>
+<p>L’essentiel de ce théorème se trouve dans la <em>Théorie de la monnaie et du crédit</em>, un ouvrage publié en 1912, où Mises écrit&nbsp;:</p>
+<p>«&nbsp;La théorie de la valeur de la monnaie en tant que telle peut faire remonter la valeur d’échange objective seulement jusqu’au point où elle cesse d’être la valeur de la monnaie et devient uniquement la valeur d’une marchandise. À ce point, la théorie doit laisser cours pour toute investigation ultérieure à la théorie générale de la valeur, qui n’a alors plus aucune difficulté à résoudre le problème. Il est vrai que l’évaluation subjective de la monnaie présuppose une valeur d’échange objective existante, mais la valeur qui a besoin d’être présupposée n’est pas la même que la valeur qu’il faut expliquer. Ce qui est présupposé est la valeur d’échange d’<em>hier</em> et il est parfaitement légitime de l’utiliser pour expliquer celle d’aujourd’hui. La valeur d’échange objective de la monnaie qui s’établit sur le marché d’aujourd’hui découle de celle d’hier sous l’influence des évaluations subjectives des individus fréquentant le marché, tout comme celle d’hier découlait à son tour, sous l’influence des évaluations subjectives, de la valeur d’échange objective de la monnaie d’avant-hier. Si de cette façon nous retournons de façon continuelle en arrière, nous devons arriver à un point où nous ne trouvons plus aucune composante dans la valeur d’échange objective qui provienne des évaluations basées sur la fonction de la monnaie comme moyen d’échange commun&nbsp;; un point où la valeur de la monnaie n’est rien d’autre que la valeur de l’objet qui est utile d’une autre façon que comme monnaie<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;Ludwig von Mises, <em>The Theory of Money and Credit</em>, Yale University Press, 1953, pp.&nbsp;120–121.</p></div></div><p>Le théorème comporte deux éléments&nbsp;: la régression et la première valorisation.</p>
+<p>Concernant la régression, le raisonnement se tient&nbsp;: la valeur attribuée à la monnaie se base sur sa valeur précédente, de sorte qu’on peut remonter à une valeur entièrement non monétaire. Il n’y a pas besoin que cette première valeur se maintienne&nbsp;: une fois que la monnaie a été établie, sa valorisation peut reposer uniquement sur la mémoire des prix précédents.</p>
+<p>Cette régression se vérifie historiquement. La valeur de nos billets fiduciaires actuels en Occident peut être retracée de proche en proche jusqu’à la valeur des billets en tant certificats or, qui est issue de la valeur des pièces de monnaies, qui provient elle-même de la valeur de l’or sous forme brute. Cet or a été valorisé premièrement pour des motifs ornementaux et religieux avant de commencer à servir d’intermédiaire d’échange.</p>
+<p>Concernant la première valorisation, ce qu’affirme Ludwig von Mises est plus inexact. Il parle d’une «&nbsp;marchandise&nbsp;» (<em>commodity</em> en anglais, <em>Ware</em> en allemand) qui est initialement valorisée pour son utilité «&nbsp;industrielle<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>&nbsp;» (<em>industrial</em> en anglais, <em>industriell</em> en allemand), donc d’un produit standardisé et courant dont les qualités sont définies et connues. À un autre endroit, il s’oppose explicitement à la théorie lockéenne de l’origine de la monnaie<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> qui, selon ses termes, fait «&nbsp;découler l’origine de la monnaie d’un accord général qui aurait attribué des valeurs fictives à des choses intrinsèquement sans valeur<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>&nbsp;». Il semble ainsi que Mises exclut qu’un bien intangible sans valeur d’usage objective puisse devenir un intermédiaire d’échange sans être adossé à une monnaie précédente.</p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;Ludwig von Mises, <em>The Theory of Money and Credit</em>, Yale University Press, 1953, p.&nbsp;110. Voir aussi Ludwig von Mises, <em>Human Action</em>, Ludwig von Mises Institute, 1998, p.&nbsp;405&nbsp;: <a href="https://cdn.mises.org/Human%20Action_3.pdf" class="uri">https://cdn.mises.org/Human%20Action_3.pdf</a>.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;«&nbsp;la théorie lockéenne de l’origine de la monnaie&nbsp;»&nbsp;: John Locke, <em>Some Considerations of the Consequences of the Lowering of Interest and the Raising the Value of Money</em>, 1691&nbsp;: «&nbsp;Car l’humanité, ayant consenti à mettre une valeur imaginaire à l’or et à l’argent à cause de leur durabilité, de leur rareté et du fait qu’ils ne sont pas très susceptibles d’être contrefaits, en a fait par consentement général les gages communs, par lesquels les hommes sont assurés, en échange d’eux, de recevoir des choses de même valeur que celles qu’ils ont données pour toute quantité de ces métaux. C’est ainsi que la valeur intrinsèque de ces métaux, qui font l’objet d’un troc commun, n’est rien d’autre que la quantité que les hommes en donnent ou en reçoivent.&nbsp;»</p></div><div id="fn24"><p><sup>24</sup>&nbsp;Ludwig von Mises, <em>The Theory of Money and Credit</em>, Yale University Press, 1953, p.&nbsp;110.</p></div></div><p>Pourtant c’est exactement ce qui s’est passé avec le bitcoin, dont le succès constitue un contre-exemple limpide au théorème de régression dans son acception la plus stricte. L’erreur de Mises semble venir de son biais en faveur des métaux précieux lié à la période durant laquelle il écrivait, c’est-à-dire le début du <span class="smallcaps">xx</span>&nbsp;siècle. Il était en effet difficile d’imaginer un système monétaire aussi fantaisiste que Bitcoin, des décennies avant la révolution technique de l’ordinateur personnel et d’Internet. Comme l’expliquait Satoshi Nakamoto en août 2010&nbsp;:</p>
+<p>«&nbsp;Je pense que les critères traditionnels de la monnaie ont été décrits en partant du principe qu’il y avait tellement d’objets rares en concurrence dans le monde, qu’un objet bénéficiant de l’amorce automatique d’une valeur intrinsèque l’emporterait sûrement sur ceux sans valeur intrinsèque. Mais s’il n’y avait dans le monde rien qui ait de valeur intrinsèque et qui puisse être utilisé comme monnaie, s’il y avait seulement des objets rares mais sans valeur intrinsèque, je pense que les gens opteraient quand même pour quelque chose<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn25"><p><sup>25</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin does NOT violate Mises’ Regression Theorem</em>, /08/2010 17:32:07 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=583.msg11405#msg11405" class="uri">https://bitcointalk.org/index.php?topic=583.msg11405#msg11405</a>.</p></div><div id="fn26"><p><sup>26</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin does NOT violate Mises’ Regression Theorem</em>, /08/2010 17:32:07 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=583.msg11405#msg11405" class="uri">https://bitcointalk.org/index.php?topic=583.msg11405#msg11405</a>.</p></div></div><p>Toutefois, malgré cette conception erronée, le théorème de régression reste valide dans une acception plus large. Pour pouvoir servir d’intermédiaire d’échange, toute monnaie a dû <em>nécessairement</em> posséder en premier lieu une valeur d’usage non monétaire. Il a par conséquent fallu que quelqu’un donne une valeur au bitcoin «&nbsp;pour une raison ou pour une autre<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>&nbsp;» avant qu’une utilisation monétaire, comme par exemple «&nbsp;transférer de la richesse sur une longue distance&nbsp;», devienne possible.</p>
+<p>Il existait donc un problème d’amorçage. Le cryptographe Hal Finney, qui avait expérimenté les systèmes d’argent liquide numérique au début des années 1990, en était notamment conscient. Dès les débuts de Bitcoin en janvier 2009, il écrivait&nbsp;:</p>
+<p>«&nbsp;Un des problèmes immédiats avec n’importe quelle nouvelle monnaie est de savoir comment la valoriser. Même en ignorant le problème pratique lié au fait que quasiment personne ne l’acceptera au début, il est toujours difficile de trouver un argument raisonnable en faveur d’une valeur particulière non nulle pour les pièces<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;Hal Finney, <em>Re: Bitcoin v0.1 released</em>, /01/2009 01:22:01 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html</a>.</p></div></div><p>Mais cet amorçage a fini par avoir lieu.</p>
+</section>
+<section id="lémergence-de-la-valeur-du-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="lémergence-de-la-valeur-du-bitcoin">L’émergence de la valeur du bitcoin</h2>
+<p>Selon le théorème de régression, le bitcoin a dû posséder une valeur d’usage non monétaire (objective ou subjective) avant d’être valorisé en tant qu’intermédiaire d’échange. Au cours des années, différentes hypothèses de première valorisation ont été proposées pour expliquer l’émergence de la valeur du bitcoin sur le marché. Examinons-en les principales, en commençant par les moins plausibles pour finir par les plus vraisemblables.</p>
+<p>Tout d’abord, une hypothèse malheureusement trop souvent citée est la valeur qui découlerait de l’énergie utilisée pour sa production. Cette hypothèse provient notamment sur l’estimation de NewLibertyStandard, qui, à partir d’octobre 2009, vendait et achetait des bitcoins à un taux basé sur le coût énergétique de sa production personnelle. Il s’agit essentiellement d’une version revisitée de la théorie de la valeur-travail des marxistes. Cette explication était déjà critiquée par Satoshi Nakamoto en février 2010, qui écrivait que le coût de production était une conséquence du prix, et non pas une cause&nbsp;:</p>
+<p>«&nbsp;En l’absence d’un marché pour établir le prix, l’estimation de NewLibertyStandard basée sur le coût de production est une bonne estimation et un service utile (merci). Le prix de toute marchandise tend à graviter vers le coût de production. Si le prix est inférieur au coût, alors la production ralentit. Si le prix est supérieur au coût, il est possible de réaliser des bénéfices en produisant et en vendant davantage. Dans le même temps, l’augmentation de la production accroîtrait la difficulté, poussant le coût de production vers le prix<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;Satoshi Nakamoto, <em>Re: Current Bitcoin economic model is unsustainable</em>, /02/2010 05:44:24 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=57.msg415#msg415" class="uri">https://bitcointalk.org/index.php?topic=57.msg415#msg415</a>. – Il a réitéré cette objection en juillet 2010&nbsp;: «&nbsp;[La monnaie] n’est pas stable par rapport à l’énergie. Ce sujet a fait l’objet d’une discussion. Elle n’est pas liée au coût de l’énergie. L’estimation de NLS basée sur l’énergie était un bon point de départ, mais les forces du marché domineront de plus en plus.&nbsp;» (Satoshi Nakamoto, <em>Re: Slashdot Submission for 1.0</em>, /07/2010 21:31:14 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=234.msg1976#msg1976" class="uri">https://bitcointalk.org/index.php?topic=234.msg1976#msg1976</a>)</p></div><div id="fn29"><p><sup>29</sup>&nbsp;«&nbsp;la valeur proviendrait du fait que le bitcoin a été échangé contre du dollar, avançant l’idée que la régression se transmettrait avec cette conversion&nbsp;»&nbsp;: xc, <em>Bitcoin does NOT violate Mises’ Regression Theorem</em>, /07/2010, 02:09:27 AM&nbsp;: <a href="https://bitcointalk.org/index.php?topic=583.msg5984#msg5984" class="uri">https://bitcointalk.org/index.php?topic=583.msg5984#msg5984</a>&nbsp;; AristippusofCyrene, <em>Bitcoin and the Regression Theorem of Money</em>, 7 décembre 2012&nbsp;: <a href="https://voluntaryistreader.wordpress.com/2012/12/07/bitcoin-and-the-regression-theorem-of-money/" class="uri">https://voluntaryistreader.wordpress.com/2012/12/07/bitcoin-and-the-regression-theorem-of-money/</a>.</p></div></div><p>Certaines personnes ont également suggéré que la valeur proviendrait du fait que le bitcoin a été échangé contre du dollar, avançant l’idée que la régression se transmettrait avec cette conversion<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>. Cependant, le change avec le dollar a toujours été réalisé à taux variable, selon l’offre et la demande, sans aucune entité pour garantir un taux fixe. De ce fait, cette hypothèse ne peut pas être valide.</p>
+<p>Une autre hypothèse de première valorisation évoquée est celle qui ferait résider la valeur initiale du bitcoin dans sa capacité à être un système de paiement<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>. Mais cet argument doit être écarté car il est circulaire&nbsp;: nul ne peut payer en bitcoins si ce dernier n’a de valeur pour personne. De plus, même si le réseau avait permis de traiter des transferts en dollars ou en euros, les paiements réalisés n’auraient pas été sécurisés du tout, en raison du caractère économique de la sécurité minière de Bitcoin, que nous décrirons dans le chapitre&nbsp;<a href="le-consensus-par-le-minage.html" data-reference-type="ref" data-reference="ch:confirmation">8</a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;«&nbsp;celle qui ferait résider la valeur initiale du bitcoin dans sa capacité à être un système de paiement&nbsp;»&nbsp;: Brice Rothschild, <em>Théorème de régression et Bitcoin</em>, 6 novembre 2013&nbsp;: <a href="https://www.contrepoints.org/2013/11/06/145305-theoreme-de-regression-et-bitcoin" class="uri">https://www.contrepoints.org/2013/11/06/145305-theoreme-de-regression-et-bitcoin</a>&nbsp;; Jeffrey Tucker, <em>What Gave Bitcoin Its Value?</em>, 27 août 2014&nbsp;: <a href="https://fee.org/articles/what-gave-bitcoin-its-value/" class="uri">https://fee.org/articles/what-gave-bitcoin-its-value/</a>.</p></div><div id="fn31"><p><sup>31</sup>&nbsp;«&nbsp;des individus auraient attribué de la valeur au bitcoin pour sa capacité à servir pour l’horodatage&nbsp;»&nbsp;: Simon Gaines, <em>Bitcoin: Intrinsically Worthless?</em>, 24 avril 2019&nbsp;: <a href="https://medium.com/@ahuroad/bitcoin-intrinsically-worthless-5d626645e1c6" class="uri">https://medium.com/@ahuroad/bitcoin-intrinsically-worthless-5d626645e1c6</a>.</p></div></div><p>Une hypothèse apparentée est que des individus auraient attribué de la valeur au bitcoin pour sa capacité à servir pour l’horodatage, c’est-à-dire l’association d’une date et d’une heure à une information spécifique<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>. Bitcoin permet en effet d’écrire des données arbitraires sur sa chaîne de blocs, ce qui garantit leur authenticité notariale, et on peut par exemple publier l’empreinte d’un document dans une transaction pour montrer que ce document existait antérieurement à la date de confirmation de la transaction. Néanmoins, pour que cet ancrage sur la chaîne possède une quelconque utilité, il faut qu’il soit difficile de modifier le registre. Puisque la sécurité de Bitcoin est essentiellement économique, cet usage ne peut donc pas avoir permis de première valorisation. De plus, cela ne s’est pas passé d’une telle manière&nbsp;: si on met de côté le message contenu dans le premier bloc (ayant pour but d’empêcher l’antidatage du lancement), aucune donnée arbitraire n’a été inscrite sur la chaîne avant 2011.</p>
+<p>S’il faut chercher des raisons à la première valorisation du bitcoin, on doit les trouver dans les préférences strictement subjectives de l’individu, non pas dans une hypothétique valeur d’usage objective. Au vu de l’histoire de Bitcoin durant ses premières années d’existence, on peut observer qu’il a existé deux raisons principales derrière une telle valorisation&nbsp;: la dimension culturelle et l’aspect spéculatif.</p>
+<p>La première raison derrière la valorisation initiale est la motivation culturelle. Selon cette hypothèse, le bitcoin a été un collectionnable, représentant les principes en lesquels croyaient les individus qui lui ont porté de l’intérêt. C’est ce qui a poussé les gens à s’en procurer alors même qu’ils n’en avaient aucun avantage matériel à en retirer. Cela rejoint en un sens l’idée de valorisation en tant que système de paiement, à une nuance près&nbsp;: l’individu ne donne de la valeur au bitcoin parce que le système est un bon système de paiement à un instant précis, mais parce qu’il souhaite que ce projet réussisse.</p>
+<p>Dans cette logique, l’économiste autrichien Konrad S. Graf parlait en 2013 de «&nbsp;composantes de la valeur de consommation directe&nbsp;» qui seraient «&nbsp;psychologiques ou sociologiques dans le sens où elles se rapportent à des facteurs tels que l’attrait inhérent pour les geeks, le défi professionnel lancé aux spécialistes, la curiosité et le signal d’appartenance<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>&nbsp;». Dans le même ordre d’idées, Ross Ulbricht, le créateur de la place de marché Silk Road, expliquait dans un essai rédigé en 2019&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn32"><p><sup>32</sup>&nbsp;Konrad S. Graf, <em>Bitcoins, the regression theorem, and that curious but unthreatening empirical world</em>, 27 février 2013&nbsp;: <a href="https://www.konradsgraf.com/blog1/2013/2/27/in-depth-bitcoins-the-regression-theorem-and-that-curious-bu.html" class="uri">https://www.konradsgraf.com/blog1/2013/2/27/in-depth-bitcoins-the-regression-theorem-and-that-curious-bu.html</a>.</p></div></div><p>«&nbsp;C’est comme par magie que le bitcoin a pu en quelque sorte provenir de rien et, sans valeur préalable ni décret autoritaire, devenir une monnaie. Mais Bitcoin n’a pas émergé du vide. C’était la solution d’un problème sur lequel les cryptographes buttaient depuis de nombreuses années&nbsp;: Comment créer une monnaie numérique sans autorité centrale qui ne puisse pas être contrefaite et qui soit digne de confiance.</p>
+<p>Ce problème a persisté si longtemps que certains ont laissé sa résolution aux autres et ont rêvé à la place de ce que serait notre avenir si la monnaie numérique décentralisée devenait réalité d’une manière ou d’une autre. Ils rêvaient d’un avenir où le pouvoir économique du monde serait accessible à tous, où la valeur pourrait être transférée n’importe où en appuyant sur un bouton. Ils rêvaient de prospérité et de liberté, qui ne dépendraient uniquement que des mathématiques du chiffrement fort<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn33"><p><sup>33</sup>&nbsp;Ross Ulbricht, <em>Bitcoin Equals Freedom</em>, 25 septembre 2019&nbsp;: <a href="https://rossulbricht.medium.com/bitcoin-equals-freedom-6c33986b4852" class="uri">https://rossulbricht.medium.com/bitcoin-equals-freedom-6c33986b4852</a>.</p></div></div><p>C’est donc le rêve d’une monnaie numérique libre qui a en partie motivé la valorisation initiale du bitcoin. L’objectif était, dès le début, de créer une monnaie, et le bitcoin a été valorisé pour cette propension.</p>
+<p>Bitcoin était notamment conforme à l’idéal libertarien étasunien, représenté à l’époque par l’homme politique Ron Paul, qui proposait notamment d’«&nbsp;abolir la Fed<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>&nbsp;» et qui a brigué l’investiture républicaine pour l’élection présidentielle de 2008 puis celle de 2012. Les cypherpunks, majoritairement originaires des États-Unis, se rapprochaient largement de cette idéologie. Satoshi lui-même était conscient de cette proximité, déclarant dès novembre 2008 que le concept de Bitcoin était «&nbsp;très attrayant du point de vue libertarien<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>&nbsp;». C’est donc tout naturellement que les premières personnes à apporter de la valeur au bitcoin ont été ces libertariens, à l’instar de Martti Malmi, de NewLibertyStandard ou, plus tard, de Ross Ulbricht.</p>
+<div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;«&nbsp;Ron Paul [...] proposait notamment d’"abolir la Fed"&nbsp;»&nbsp;: Ron Paul, <em>End The Fed</em>, 2009.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 18:55:35 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html</a>.</p></div></div><p>La deuxième raison derrière la première valorisation du bitcoin est la valeur spéculative qui provenait de sa potentielle utilisation en tant que monnaie. La promesse de Bitcoin faisait qu’il pouvait être intelligent de parier là-dessus. En particulier, le bitcoin devait devenir au fil du temps une monnaie à quantité fixe (21 millions), dont la rareté était absolue.</p>
+<p>Cette caractéristique unique a bouleversé l’imagination des gens. S’il y avait un nombre limité de bitcoins et que l’utilité monétaire du réseau augmentait, alors leur prix unitaire subirait théoriquement une forte hausse. C’est sur quoi se sont basées les engouements spéculatifs successifs qui ont jalonné l’histoire de la cryptomonnaie.</p>
+<p>Cette idée est apparue en janvier 2009, lorsque Hal Finney a estimé dans un courriel que le prix unitaire du bitcoin pourrait atteindre la coquette somme de 10&nbsp;millions de dollars&nbsp;:</p>
+<p>«&nbsp;Comme expérience de pensée amusante, imaginez que Bitcoin réussisse et devienne le système de paiement dominant utilisé dans le monde entier. Alors, la valeur totale de la devise devrait être égale à la valeur totale de toutes les richesses du monde. Les estimations actuelles que j’ai trouvées de la richesse totale des ménages dans le monde varient de 100 à 300 milliards de dollars. Avec 20 millions de pièces, cela donne à chaque pièce une valeur d’environ 10 millions<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn36"><p><sup>36</sup>&nbsp;Hal Finney, <em>Re: Bitcoin v0.1 released</em>, /01/2009 01:22:01 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html</a>.</p></div></div><p>Cette estimation était plus que contestable (la monnaie n’est pas censée représenter toute la richesse du monde), mais elle portait en elle la notion que chacun pouvait profiter de la hausse du cours.</p>
+<p>Par la suite, Satoshi a lui-même utilisé cette logique pour attirer les utilisateurs potentiels. Il déclarait ainsi le 16 janvier qu’«&nbsp;il pourrait être judicieux d’en avoir au cas où cela prendrait&nbsp;» et que «&nbsp;si suffisamment de gens [pensaient] la même chose, cela [deviendrait] une prophétie autoréalisatrice<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>&nbsp;». Le 18 février, il écrivait qu’«&nbsp;à mesure que le nombre d’utilisateurs [croissait], la valeur par pièce [augmenterait]&nbsp;» ce qui constituerait une «&nbsp;boucle de rétroaction positive<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>&nbsp;» pour le système.</p>
+<div class="no-row-height column-margin column-container"><div id="fn37"><p><sup>37</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin v0.1 released</em>, /01/2009 16:03:14 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015014.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015014.html</a>.</p></div><div id="fn38"><p><sup>38</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin open source implementation of P2P currency</em>, 18 février 2009&nbsp;: <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562</a></p></div><div id="fn39"><p><sup>39</sup>&nbsp;Hal Finney, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 15:24:18 UTC, <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014848.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014848.html</a>.</p></div><div id="fn40"><p><sup>40</sup>&nbsp;«&nbsp;J’ai vu le message [de Hal] et c’est l’une des raisons pour lesquelles j’ai démarré un nœud si rapidement. Mes systèmes ne font pas grand chose d’autre lorsqu’ils sont inactifs, alors pourquoi ne pas créer des BitCoins&nbsp;? Et s’ils valent quelque chose un jour...&nbsp;? Bonus&nbsp;!&nbsp;» – Dustin Trammell, <em>Re: Bitcoin v0.1 released</em>, /01/2009 01:14:27 UTC.</p></div><div id="fn41"><p><sup>41</sup>&nbsp;Capture du site web de NewLibertyStandard, décembre 2009&nbsp;: <a href="https://web.archive.org/web/20091229132559/http://newlibertystandard.wetpaint.com/" class="uri">https://web.archive.org/web/20091229132559/http://newlibertystandard.wetpaint.com/</a>.</p></div></div><p>Ainsi, ce sont ces deux raisons – culturelle et spéculative – qui ont principalement contribué à la première valorisation du bitcoin. Si les premiers mineurs ont daigné utiliser leur ordinateur et dépenser de l’énergie, c’est parce que l’idée de Bitcoin correspondait à leurs valeurs morales et qu’ils avaient «&nbsp;le sentiment d’apporter une contribution bénéfique au monde<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>&nbsp;» ou bien parce qu’ils entrevoyaient le potentiel profit<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>. Les personnes prêtes à accepter du bitcoin contre quelque chose d’autre l’ont fait pour les mêmes raisons. NewLibertyStandard, qui été le premier individu à accepter d’échanger des dollars contre des bitcoins en octobre 2009, était notamment convaincu que Bitcoin était «&nbsp;une révolution économique&nbsp;» et «&nbsp;la référence de la monnaie numérique<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>&nbsp;».</p>
+<p>Comme l’a écrit un internaute anonyme en 2012, «&nbsp;les premiers adeptes de Bitcoin étaient le genre de personnes (du fait de leur intérêt pour les crypto-monnaies) à considérer Bitcoin comme quelque chose de beau<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>&nbsp;». Et c’est cette beauté qui a été à l’origine de la réalité monétaire qu’on connaît aujourd’hui.</p>
+<div class="no-row-height column-margin column-container"><div id="fn42"><p><sup>42</sup>&nbsp;qbg, <em>Comment: Bitcoin and the Regression Theorem of Money</em>, 8 décembre 2012&nbsp;: <a href="https://voluntaryistreader.wordpress.com/2012/12/07/bitcoin-and-the-regression-theorem-of-money/#comment-135" class="uri">https://voluntaryistreader.wordpress.com/2012/12/07/bitcoin-and-the-regression-theorem-of-money/#comment-135</a>.</p></div></div></section>
+<section id="la-monnaie-de-la-désobéissance" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-monnaie-de-la-désobéissance">La monnaie de la désobéissance</h2>
+<p>Quand on présente Bitcoin, la question de sa proposition de valeur se pose immédiatement. Pourquoi Bitcoin&nbsp;? Qu’est-ce qui le démarque des monnaies étatiques qui sont ses principales concurrentes&nbsp;? Quel est l’intérêt d’utiliser le bitcoin comme monnaie, et pas le dollar ou l’euro&nbsp;?</p>
+<p>Car le bitcoin est, de par son aspect décentralisé et libre, une moins bonne monnaie que le dollar ou l’euro dans de nombreux cas&nbsp;: il est largement moins accepté, son utilisation est plus difficile, il implique de payer des frais de transaction, son pouvoir d’achat fluctue davantage et il pose plus de risques légaux. Toutes ces raisons font que les monnaies fiat et les solutions centralisées sont (et resteront) plus efficaces que Bitcoin dans la grande majorité des situations.</p>
+<p>Cela ne veut pas dire que Bitcoin est inutile, mais seulement qu’il doit être appréhendé d’un point de vue particulier. Bitcoin est un système de monnaie «&nbsp;sans permission&nbsp;», <em>permissionless</em>, qui peut être utilisé sans avoir à demander l’autorisation de qui que ce soit. C’est un argent liquide électronique permettant l’échange direct et confidentiel entre particuliers, sans avoir recours à un intermédiaire. Il offre la possibilité d’exercer un contrôle total sur ses unités et de réaliser des transferts sans crainte d’être observé ou censuré, vers n’importe quel destinataire, n’importe où dans le monde et à n’importe quel moment.</p>
+<p>Sa proposition de valeur découle de ces simples caractéristiques. En étant pour ainsi dire incontrôlable, Bitcoin constitue un instrument de <em>désobéissance</em> aux normes sociales et, surtout, au pouvoir politique. En particulier, il retire aux banques et aux États le pouvoir de contrôle et de sélection des transactions, qui leur permet de superviser l’activité économique, ainsi que celui sur l’émission monétaire, qui leur permet de tirer un revenu de seigneuriage. Bitcoin constitue donc un concept de monnaie résistante à la censure, dans le sens où il est difficile d’empêcher une transaction, et résistante à l’inflation, dans le sens où il est difficile de créer plus d’unités qu’initialement prévues.</p>
+<p>Bitcoin se construit en opposition aux autorités en charge, et s’inscrit dans la lutte ancienne contre l’asservissement des hommes. Par son existence, il affirme la primauté du droit naturel sur la loi positive, la supériorité de la propriété individuelle par rapport à la collectivité. Il s’intègre par là dans la tradition libérale du droit de résistance (<em>jus resistendi</em>), justifiant la sécession d’un individu ou d’un groupe d’individus face aux lois injustes, droit reconnu par deux grandes révolutions du <span class="smallcaps">xviii</span>&nbsp;siècle, qu’ont été la révolution américaine<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a> et la révolution française<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn43"><p><sup>43</sup>&nbsp;«&nbsp;droit de résistance [...] reconnu par [...] la révolution américaine&nbsp;»&nbsp;: Thomas Jefferson, <em>Déclaration unanime des treize États unis d’Amérique</em>, 4 juillet 1776&nbsp;: «&nbsp;Lorsqu’une longue suite d’abus et d’usurpations, tendant invariablement au même but, marque le dessein de soumettre [les hommes] au despotisme absolu, il est de leur droit, il est de leur devoir de rejeter un tel gouvernement et de pourvoir, par de nouvelles sauvegardes, à leur sécurité future.&nbsp;»</p></div><div id="fn44"><p><sup>44</sup>&nbsp;«&nbsp;et la révolution française&nbsp;»&nbsp;: <em>Déclaration des Droits de l’Homme et du Citoyen</em>, 26 août 1789&nbsp;: «&nbsp;Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l’Homme. Ces droits sont la liberté, la propriété, la sûreté et la résistance à l’oppression.&nbsp;»</p></div><div id="fn45"><p><sup>45</sup>&nbsp;«&nbsp;désobéissance civile, conception ébauchée par Étienne de La Boétie au XVIe siècle&nbsp;»&nbsp;: Étienne de La Boétie, <em>Discours de la servitude volontaire</em>, 1574.</p></div><div id="fn46"><p><sup>46</sup>&nbsp;«&nbsp;théorisée par Henry David Thoreau en 1849&nbsp;»&nbsp;: Henry David Thoreau, <em>La Désobéissance civile</em>, 1849.</p></div></div><p>Il est un outil de désobéissance civile, conception ébauchée par Étienne de La Boétie au <span class="smallcaps">xvi</span>&nbsp;siècle<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>, théorisée par Henry David Thoreau en 1849<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a> et mise en pratique par Gandhi dans sa démarche du <em>satyāgraha</em> en Inde et par Martin Luther King dans le cadre du mouvement des droits civiques contre la ségrégation raciale aux États-Unis. Il est un message envoyé au souverain terrestre, refusant ses décrets et affirmant&nbsp;: «&nbsp;Je n’utiliserai plus votre monnaie.&nbsp;»</p>
+<p>Bitcoin a été créé en vue de gagner en indépendance individuelle. Bitcoin est issu du mouvement cypherpunk, un mouvement de désobéissance technique prônant l’utilisation proactive de la cryptographie sur Internet afin de protéger la confidentialité et la liberté. Lorsque Satoshi Nakamoto a lancé le réseau, il l’a fait sans demander l’autorisation aux autorités en charge, dans le but explicite d’accroître la liberté. Le 6 novembre 2008, en réponse à une personne qui lui disait qu’il ne «&nbsp;[trouverait] pas de solution aux problèmes politiques dans la cryptographie&nbsp;», il déclarait ainsi&nbsp;:</p>
+<p>«&nbsp;Oui, mais nous pouvons remporter une bataille majeure dans la course aux armements et conquérir un nouveau territoire de liberté pour plusieurs années<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn47"><p><sup>47</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 20:15:40 UTC, <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014823.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014823.html</a>.</p></div></div><p>De ce fait, il est naturel que le noyau dur de l’activité construite sur Bitcoin se situe à la marge de ce qui est généralement approuvé par le grand public. Bitcoin implique de reprendre sa souveraineté individuelle contre l’autorité, une démarche qui peut être impopulaire quand les lois émanent d’une acceptation majoritaire. Il sert donc à combler une niche de marché plus ou moins grande, dont la taille évolue selon la proportion de la population qui est prête à désobéir.</p>
+<p>Parmi les utilisations centrales de Bitcoin, il y a notamment l’opposition politique. En effet, ce dernier peut constituer un moyen alternatif de financement (réception) et de paiement (envoi) pour les organisations politiques, souvent classifiées à l’extrême-droite ou à l’extrême-gauche, dont l’intégrité financière est mise à mal par le pouvoir en place.</p>
+<p>L’exemple de Julian Assange et de WikiLeaks est particulièrement illustratif. En effet, suite aux révélations publiées en 2010 sur les pratiques de l’armée étasunienne en Afghanistan et en Irak, l’organisation a subi un blocus financier de la part de Mastercard, Visa, Western Union, Bank of America et d’autres, qui a fait disparaître 95&nbsp;% de ses revenus<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>. Cet épisode l’a poussé à accepter les donations en bitcoins en juin 2011 qui, à défaut d’être subtantielles sur le moment, le sont devenues avec la hausse du cours quelques années plus tard<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn48"><p><sup>48</sup>&nbsp;WikiLeaks, <em>Banking Blockade</em>, /10/2011 13:00 UTC, <a href="https://wikileaks.org/Banking-Blockade.html" class="uri">https://wikileaks.org/Banking-Blockade.html</a>.</p></div><div id="fn49"><p><sup>49</sup>&nbsp;«&nbsp;donations en bitcoins [...] qui, à défaut d’être subtantielles sur le moment, le sont devenues avec la hausse du cours quelques années plus tard&nbsp;»&nbsp;: <a href="https://bitinfocharts.com/bitcoin/address/1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v" class="uri">https://bitinfocharts.com/bitcoin/address/1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v</a></p></div><div id="fn50"><p><sup>50</sup>&nbsp;Jamie Crawley, «&nbsp;<em>Edward Snowden says use crypto, don’t invest in it: ‘Bitcoin is what I used to pay for the servers pseudonymously’</em>&nbsp;», <em>Fortune</em>, 11 juin 2022&nbsp;:<a href="https://fortune.com/2022/06/11/edward-snowden-says-use-crypto-dont-invest-in-it-bitcoin-is-what-i-used-to-pay-for-the-servers-pseudonymously/" class="uri">https://fortune.com/2022/06/11/edward-snowden-says-use-crypto-dont-invest-in-it-bitcoin-is-what-i-used-to-pay-for-the-servers-pseudonymously/</a>.</p></div><div id="fn51"><p><sup>51</sup>&nbsp;«&nbsp;il a participé à la cérémonie d’initialisation [de ZCash] en 2016&nbsp;»&nbsp;: Zcash Media, <em>Edward Snowden: I participated in the Zcash ceremony under the pseudonym of John Dobbertin</em> (vidéo), 28 avril 2022&nbsp;:<a href="https://www.youtube.com/watch?v=8qSA29vWWds" class="uri">https://www.youtube.com/watch?v=8qSA29vWWds</a>.</p></div></div><p>On peut également citer le cas du lanceur d’alerte Edward Snowden, l’ancien employé de la CIA et de la NSA, qui a révélé en 2013 l’existence d’une surveillance de masse par la NSA d’Internet et du réseau téléphonique aux États-Unis. Celui-ci est depuis poursuivi par les États-Unis pour «&nbsp;espionnage, vol et utilisation illégale de biens gouvernementaux&nbsp;» et s’est exilé en Russie, dont il a acquis la nationalité en 2022. Snowden est un soutien solide de Bitcoin, en ayant fait usage en 2013 pour payer les serveurs qui ont servi à partager les informations de manière anonyme<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>. Il a également fait la promotion de la cryptomonnaie ZCash pour son modèle de confidentialité, dont il a participé à la cérémonie d’initialisation en 2016<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>.</p>
+<p>Un troisième exemple est celui d’Alexeï Navalny, le principal opposant à Vladimir Poutine en Russie, fondateur de la Fondation anti-corruption (FBK) dont les comptes en banques se sont faits geler en 2019 avant qu’elle soit liquidée en 2021. L’activiste a notamment utilisé Bitcoin pour se financer depuis 2017 et l’équivalent de plusieurs millions de dollars ont transité par son adresse<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a><a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>. Selon son bras droit, Leonid Volkov, cet apport en bitcoin aurait représenté 10&nbsp;% de leur financement total<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>. Navalny a été incarcéré en Russie en janvier 2021 et l’était toujours en novembre 2023.</p>
+<div class="no-row-height column-margin column-container"><div id="fn52"><p><sup>52</sup>&nbsp;L’adresse principale d’Alexeï Navalny était ``.</p></div><div id="fn53"><p><sup>53</sup>&nbsp;«&nbsp;l’équivalent de plusieurs millions de dollars ont transité par son adresse&nbsp;»&nbsp;: <a href="https://bitinfocharts.com/bitcoin/address/3QzYvaRFY6bakFBW4YBRrzmwzTnfZcaA6E" class="uri">https://bitinfocharts.com/bitcoin/address/3QzYvaRFY6bakFBW4YBRrzmwzTnfZcaA6E</a>.</p></div><div id="fn54"><p><sup>54</sup>&nbsp;«&nbsp;cet apport en bitcoin aurait représenté 10&nbsp;% de leur financement total&nbsp;»&nbsp;: Anton Zverev et Catherine Belton, <em>Bitcoin donations surge to jailed Kremlin critic Navalny’s cause: data</em>, 11 février 2021&nbsp;: <a href="https://www.reuters.com/article/us-russia-politics-navalny-crypto-curren-idUSKBN2AB2GR" class="uri">https://www.reuters.com/article/us-russia-politics-navalny-crypto-curren-idUSKBN2AB2GR</a>.</p></div><div id="fn55"><p><sup>55</sup>&nbsp;La page de donation se situe à l’adresse <a href="https://sci-hub.se/donate" class="uri">https://sci-hub.se/donate</a>. L’ancienne adresse <code>(d'après une capture antérieure du site&nbsp;: &lt;https://web.archive.org/web/20160202212649/http://sci-hub.la/&gt;) a reçu 94,42594975&nbsp;BTC entre le 03/07/2015 et le 14/11/2020. Les autres adresses liées à Sci-Hub sont</code> et ``.</p></div></div><p>Une autre utilisation de Bitcoin si situant aussi dans la démarche de désobéissance est le financement de la plateforme de partage d’articles scientifiques Sci-Hub, fondée en 2011 par Alexandra Elbakyan, une jeune femme kazakhe inspirée par les idéaux communistes. Le but du site (toujours en ligne) est de fournir un libre accès au savoir, par la partage gratuit d’articles et d’œuvres en tous genre, au mépris des lois sur le droit d’auteur. En raison de son caractère illégal, la plateforme a accepté les donations en bitcoins dès ses débuts et a reçu des centaines de milliers de dollars par ce moyen<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a>. Elle a également eu des soucis récurrents avec PayPal, sa seule autre source de revenu, qui a clôturé définitivement son compte en 2020.</p>
+<p>De manière plus large, Bitcoin est utile dans le contexte géopolitique. Le système n’est pas lié à une juridiction particulière et n’est pas concerné par la notion de frontière. Il permet par conséquent d’envoyer des fonds à l’étranger en échappant aux diverses contraintes et réglementations en vigueur.</p>
+<p>C’est pourquoi il peut servir aux personnes émigrées pour envoyer de l’argent à leurs proches restés dans leur pays d’origine. Ces transferts monétaires, appelés <em>remittances</em> en anglais, reposent en effet généralement sur des solutions centralisées comme Western Union et MoneyGram, qui facturent souvent des frais élevés pour leurs services.</p>
+<p>Dans le même ordre d’idées, Bitcoin peut aussi être utilisé pour contourner les sanctions économiques qu’imposent les différents États à leurs populations respectives dans le contexte de leurs rapports de force. Toute l’utilité de la cryptomonnaie a par exemple pu être constatée suite au début du conflit russo-ukrainien en 2022, lorsque le bloc occidental a décidé d’instaurer des sanctions financières lourdes à l’encontre de la Russie. Bitcoin a ainsi pu servir tant du côté des citoyens russes, qui ne pouvaient plus recevoir de fonds de l’étranger, que des ressortissants ukrainiens habitant dans les régions occupées.</p>
+<p>Ainsi, toute personne vivant sous un régime autoritaire et désireuse de contourner ses lois ou de se révolter contre l’ordre établi trouvera un intérêt à Bitcoin. C’est là où se situe le cœur de l’utilisation de Bitcoin&nbsp;: dans ce qui est interdit et dans ce qui peut facilement le devenir.</p>
+</section>
+<section id="la-monnaie-du-marché-noir" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-monnaie-du-marché-noir">La monnaie du marché noir</h2>
+<p>Bitcoin est un système d’argent liquide électronique qui peut être utilisé de manière confidentielle, sans requérir d’autorisation, avec peu de risques de censure. Il est par conséquent particulièrement adapté pour l’activité économique qui échappe à la supervision de l’État et à ses prélèvements, c’est-à-dire ce que nous appelons communément le marché noir.</p>
+<p>Le terme «&nbsp;marché noir&nbsp;» est apparu dans la langue française au cours de la Seconde Guerre mondiale sous l’occupation allemande. Il s’agit d’une traduction littérale du mot allemand du même sens, <em>Schwarzmarkt</em>, qui daterait de la Première Guerre. Dès l’origine, le terme désignait un marché clandestin où la réglementation du commerce était contournée.</p>
+<p>L’expression n’était pas employée auparavant car la réglementation n’était pas assez présente pour donner un nom à ce concept&nbsp;: l’échange de marchandises se faisait sur le marché tout court. Seul existait le terme «&nbsp;au noir&nbsp;» qui servait à qualifier l’activité réalisée de façon non déclarée, cachée au souverain. Mais avec le développement d’une société de plus en plus policée et réglementée reposant sur des lois explicites plutôt que des normes sociales implicites, la nécessité de distinguer le marché réglementé du marché libre s’est fait ressentir, d’où l’émergence de l’appellation.</p>
+<p>La notion de marché noir est floue&nbsp;: elle peut recouvrir à la fois l’activité commerciale exercée par des particuliers et celle des trafiquants de grande envergure, la vente de biens et services légitimes comme celle de produits issus de l’exploitation criminelle. C’est pourquoi il est nécessaire de la clarifier. Ici, nous entendons par marché noir l’économie libre où s’échangent, de manière non réglementée et non taxée, des biens et des services, légaux et illégaux, qui ne sont pas des produits directs de l’agression. Cette définition du marché noir inclut le «&nbsp;marché gris&nbsp;» où s’échangent des biens et services légaux par ailleurs (comme le travail au noir) et exclut le «&nbsp;marché rouge&nbsp;» où se monnaie le crime (comme le meurtre, l’extorsion ou l’esclavage).</p>
+<p>Pour désigner l’ensemble des activités marchandes qui échappent au contrôle de l’État et à l’impôt, il arrive aussi que les gens parlent d’économie souterraine, d’économie clandestine ou d’économie parallèle. Cette économie rentre dans le cadre plus large de l’économie informelle, qui n’est pas nécessairement marchande et qui comprend des activités comme le travail domestique<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a>. Cette dernière représente une part énorme de l’économie dans les pays en voie de développement.</p>
+<div class="no-row-height column-margin column-container"><div id="fn56"><p><sup>56</sup>&nbsp;Le travail domestique (cuisine, ménage, linge, éducation des enfants, etc.) était auparavant principalement assuré par les femmes, avant qu’elles n’abandonnent le foyer et que ce travail ne devienne un travail taxé comme un autre. La société promue par l’État moderne est avant tout une société mercantile, où tout se vend et où tout peut être taxé de la naissance à la mort de l’individu.</p></div><div id="fn57"><p><sup>57</sup>&nbsp;Joël Drogland, «&nbsp;La France du marché noir&nbsp;», <em>La Cliothèque</em>, 2 mai 2008&nbsp;: <a href="https://clio-cr.clionautes.org/la-france-du-marche-noir-1940-1949.html" class="uri">https://clio-cr.clionautes.org/la-france-du-marche-noir-1940-1949.html</a>.</p></div><div id="fn58"><p><sup>58</sup>&nbsp;Le nom est tiré de l’article «&nbsp;<em>The Second Economy of the USSR</em>&nbsp;» écrit par Gregory Grossman en 1977.</p></div></div><p>Le marché noir profite toujours des circonstances restrictives qui pèsent sur l’économie. Durant la Seconde Guerre<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>, son succès provenait des grandes pénuries créées par la guerre, par le contrôle des prix et par les conditions sévères imposées par l’occupant allemand. La population française était en effet soumise à des rationnements drastiques (la ration alimentaire officielle d’un adulte représentait 1100 calories par jour en 1942) et à des prélèvements outranciers, sous forme de pillages, de taxes ou de réquisitions. Le recours au marché noir est alors devenu une question de nécessité. L’économie souterraine a également prospéré au sein des régimes les plus répressifs&nbsp;: c’était notamment le cas du marché noir en Union Soviétique qui représentait une «&nbsp;seconde économie<a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>&nbsp;» sur laquelle reposait la survie du pays.</p>
+<p>Mais le marché noir n’est pas qu’un phénomène controversé&nbsp;; c’est aussi la pierre angulaire d’une véritable doctrine, appelée l’agorisme. L’agorisme (terme dérivé du grec ancien <span lang="el">ágorá</span>, <em>agora</em> signifiant «&nbsp;place de marché&nbsp;») est une philosophie politique dérivée du libertarianisme, qui préconise la pratique de l’économie souterraine comme moyen pacifique de réduire l’influence de l’État. Cette doctrine a été théorisée dans les années 1970 par Samuel Edward Konkin <span class="smallcaps">iii</span><a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a>, un canadien vivant aux États-Unis, grand lecteur de Mises et Rothbard, qui cherchait à radicaliser la vision développée par l’école autrichienne d’économie. Après avoir pratiqué lui-même sa philosophie, il l’a mise sur papier en 1980 dans un long essai, le <em>Manifeste néo-libertarien</em>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn59"><p><sup>59</sup>&nbsp;Le terme «&nbsp;<em>agorism</em>&nbsp;» a été forgé par Konkin pour sa présentation au <em>Free Enterprise Forum</em> de février 1974.</p></div><div id="fn60"><p><sup>60</sup>&nbsp;Le libertarianisme se base sur l’axiome de non-agression formulé par l’économiste autrichien Murray Rothbard dans <em>For a New Liberty: The Libertarian Manifesto</em> en 1973&nbsp;: «&nbsp;Aucun individu ni groupe d’individus n’a le droit d’agresser quelqu’un en portant atteinte à sa personne ou à sa propriété [...], “agression” étant défini comme le fait de prendre l’initiative d’utiliser la violence physique (ou de menacer de l’utiliser) à l’encontre d’une autre personne ou de sa propriété.&nbsp;»</p></div><div id="fn61"><p><sup>61</sup>&nbsp;Le terme contre-économie est calqué sur le mot contre-culture, faisant référence à la culture alternative des années 60, à laquelle Konkin avait participé.</p></div></div><p>L’idée derrière l’agorisme était de joindre le geste à la parole, en unifiant la théorie libertarienne, fondée sur le principe de non-agression<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>, et la pratique du marché noir (que Konkin appelait la «&nbsp;contre-économie<a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a>&nbsp;»), fondée sur la recherche du profit. Il s’agissait d’une stratégie visant à éradiquer l’agression (dont celle de l’État) de manière progressive et à créer une société libre («&nbsp;l’agora&nbsp;») par le biais d’actions individuelles intéressées.</p>
+<p>L’idée de Konkin était d’appliquer les analyses de Mises et Rothbard à l’économie souterraine. Il suivait une démarche raisonnée qui consistait notamment à prendre en compte le risque lié à l’activité illégale (se manifestant par les amendes, l’emprisonnement et les dommages physiques) comme un risque entrepreneurial. Il écrivait&nbsp;:</p>
+<p>«&nbsp;Pourquoi les gens s’engagent-ils dans la contre-économie sans protection&nbsp;? parce que le gain par rapport au risque qu’ils prennent est plus grand que la perte attendue. Cette affirmation est vraie au sujet de toute activité économique, bien sûr, mais concernant la contre-économie, elle mérite une attention particulière&nbsp;:</p>
+<p>Le principe fondamental de la contre-économie est d’échanger du risque contre du profit<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn62"><p><sup>62</sup>&nbsp;Samuel Edward Konkin <span class="smallcaps">iii</span>, <em>New Libertarian Manifesto</em>, KoPubCo, 2006.</p></div></div><p>Ainsi, l’agorisme consistait bien plus à passer entre les mailles du filet étatique pour améliorer sa vie qu’à jouer les barons de la drogue. Si les activités les plus controversées et moralement sensibles du marché noir sont utiles pour illustrer le mécanisme, elles n’en sont pas moins inenvisageable pour la plupart des gens, qui ont une aversion au risque élevée. Il ne s’agit pas non plus d’un appel à violer la loi sans aucune restriction&nbsp;: le jeu n’en vaut souvent pas la chandelle.</p>
+<p>Contrairement aux autres théories politiques qui ne font qu’énoncer des principes, l’agorisme fournissaient à la fois une fin à viser – l’<em>agora</em>, la société sans État – et un moyen permettant d’y parvenir. La cohérence du processus reposait sur les incitations économiques des individus&nbsp;: les actions clandestines amélioraient directement leur vie à court terme, et contribuaient à réduire la place de l’État à long terme en le privant de son revenu fiscal.</p>
+<p>Mais quel rapport avec la monnaie et avec Bitcoin&nbsp;? La monnaie a toujours été une préoccupation de Samuel Konkin. L’idée agoriste a été développée dans les années 1970 aux États-Unis soit précisément au moment de l’abandon définitif de l’étalon-or et de l’inflation qui s’est ensuivie. Konkin imaginait alors résoudre le problème par l’utilisation d’une banque illégale permettant d’échanger de l’or de manière pratique<a href="#fn63" class="footnote-ref" id="fnref63" role="doc-noteref"><sup>63</sup></a>, mais cette idée comportait des risques trop élevés, comme nous le verrons dans le chapitre&nbsp;<a href="la-necessite-de-decentralisation.html" data-reference-type="ref" data-reference="ch:adversaire">4</a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn63"><p><sup>63</sup>&nbsp;«&nbsp;Konkin imaginait alors résoudre le problème par l’utilisation d’une banque illégale&nbsp;»&nbsp;: Samuel Edward Konkin <span class="smallcaps">iii</span>, <em>Counter-Economics: From the Back Alleys... To the Stars</em>, KoPubCo, 2018.</p></div></div><p>Le marché noir a ainsi manqué d’une monnaie endogène vraiment efficace. Depuis les années 70, l’essentiel de l’économie souterraine a fonctionné grâce aux monnaies fiat disponibles sous forme liquide, et en particulier aux billets verts américains répandus aux quatre coins du monde. L’utilisation des espèces est très pratique, car elles sont acceptées quasi partout, mais elle a pour effet de permettre aux autorités de bénéficier indirectement des activités illégales grâce au prélèvement caché du seigneuriage, issu du privilège de création monétaire. De plus, au vu des récentes évolutions, le contrôle sur la monnaie a tendance à s’accroître et l’argent liquide étatique est voué à devenir de plus en plus anecdotique, ce qui représente une menace existentielle pour le marché noir et la liberté en général.</p>
+<p>Les métaux précieux comme l’or et l’argent semblent être des candidats acceptables. Cependant, ils possèdent deux défauts majeurs&nbsp;: leur coût de vérification élevé, ce qui explique le succès de la certification étatique au moyen des pièces frappées&nbsp;; et leur portabilité réduite, ce qui explique le développement du crédit et l’apparition subséquente des monnaies fiat.</p>
+<p>Bitcoin corrige ces insuffisances. Le coût de vérification est celui de l’entretien d’un nœud, qui peut être réparti entre plusieurs personnes, et sa portabilité est supérieure, notamment en ce qui concerne les paiements à distance.</p>
+<p>Bitcoin constitue un concept de monnaie numérique particulièrement bien adapté pour le marché noir grâce à sa résistance à la censure et à l’absence de seigneuriage. Bitcoin est une manière pour les agoristes de littéralement «&nbsp;rendre à César ce qui est à César, et à Dieu ce qui est à Dieu<a href="#fn64" class="footnote-ref" id="fnref64" role="doc-noteref"><sup>64</sup></a>&nbsp;» par l’abandon de la monnaie fiat, étroitement liée au prélèvement de richesse de l’État, et par l’utilisation exclusive d’une monnaie libre, neutre et décentralisée par essence.</p>
+<div class="no-row-height column-margin column-container"><div id="fn64"><p><sup>64</sup>&nbsp;«&nbsp;rendre à César ce qui est à César, et à Dieu ce qui est à Dieu&nbsp;»&nbsp;: Mt :15-22.</p></div></div><p>C’est tout naturellement que les premiers contributeurs à Bitcoin s’inscrivaient dans cette démarche, voire y souscrivaient complètement. Martti Malmi, le jeune développeur finlandais qui a aidé Satoshi Nakamoto au début, avait typiquement ce genre de motivation. En avril 2009, dans une courte introduction présentant Bitcoin sur le forum anarcho-capitaliste de Freedomain Radio, il écrivait&nbsp;:</p>
+<p>«&nbsp;Le système est anonyme, et aucun État ne pourrait possiblement taxer ou empêcher les transactions. Il n’y a pas de banque centrale qui puisse déprécier la devise avec la création illimitée de nouvelle monnaie. L’adoption généralisée d’un tel système ressemblerait à quelque chose qui pourrait avoir un effet dévastateur sur la capacité de l’État à se nourrir à partir de son bétail<a href="#fn65" class="footnote-ref" id="fnref65" role="doc-noteref"><sup>65</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn65"><p><sup>65</sup>&nbsp;Martti Malmi, <em>P2P Currency could make the government extinct?</em>, 9 avril 2009&nbsp;: <a href="https://web.archive.org/web/20150927195115/https://board.freedomainradio.com/topic/17233-p2p-currency-could-make-the-government-extinct/" class="uri">https://web.archive.org/web/20150927195115/https://board.freedomainradio.com/topic/17233-p2p-currency-could-make-the-government-extinct/</a>.</p></div></div><p>Cette capacité a été illustrée par l’émergence de la place de marché Silk Road en 2011, qui utilisait le bitcoin comme unique intermédiaire d’échange. Les vendeurs y postaient des annonces, les acheteurs payaient et les produits étaient envoyés par voie postale. La plateforme garantissait la confidentialité des deux parties par l’utilisation du réseau Tor, et protégeait les acheteurs en intégrant un système de réputation pour la sélection des vendeurs et un procédé de dépôt fiduciaire pour arbitrer les échanges. Les produits disponibles sur la plateforme étaient divers mais il s’agissait essentiellement de drogue illicite, et notamment de cannabis. Cet «&nbsp;Amazon de la drogue&nbsp;» générait plus d’un million de dollars de volume mensuel en bitcoins à partir de 2012.</p>
+<p>Silk Road a été créée par Ross Ulbricht qui a ouvertement admis avoir été influencé par l’école autrichienne d’économie et par la philosophie agoriste<a href="#fn66" class="footnote-ref" id="fnref66" role="doc-noteref"><sup>66</sup></a><a href="#fn67" class="footnote-ref" id="fnref67" role="doc-noteref"><sup>67</sup></a>. Sa place de marché en ligne était dans son esprit un moyen de détruire les structures agressives, et en particulier les cartels de la drogue dont l’influence nuisait aux trafiquants individuels. De manière générale, les initiatives comme Silk Road devaient mettre à bas l’État tel que nous le connaissons. Comme Ross le déclarait dans son entrevue avec Adrien Chen publiée le 1 juin 2011&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn66"><p><sup>66</sup>&nbsp;Dread Pirate Roberts, <em>chat</em>, 20 mars 2012&nbsp;: <a href="https://antilop.cc/sr/users/dpr/threads/20120320-1103-chat.html" class="uri">https://antilop.cc/sr/users/dpr/threads/20120320-1103-chat.html</a>.</p></div><div id="fn67"><p><sup>67</sup>&nbsp;«&nbsp;Ross Ulbricht qui a ouvertement admis avoir été influencé par l’école autrichienne d’économie et par la philosophie agoriste&nbsp;»&nbsp;: En mars 2012, Ross Ulbricht a témoigné de son état d’esprit sur le forum de Silk Road sous le pseudonyme de Dread Pirate Roberts. Il écrivait&nbsp;:</p></div><div id="fn68"><p><sup>68</sup>&nbsp;Adrian Chen, «&nbsp;<em>The Underground Website Where You Can Buy Any Drug Imaginable</em>&nbsp;», <em>Gawker</em>, 1 juin 2011&nbsp;: <a href="https://www.gawker.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160" class="uri">https://www.gawker.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160</a>.</p></div></div><p>«&nbsp;L’État est la principale source de violence, d’oppression, de vol et de toute forme de coercition. Arrêtez de financer l’État avec l’argent de vos impôts et dirigez votre énergie productive vers le marché noir<a href="#fn68" class="footnote-ref" id="fnref68" role="doc-noteref"><sup>68</sup></a>.&nbsp;»</p>
+<p>Néanmoins, son orgueil et les risques inconsidérés qu’il a pris l’ont mené là où on finit généralement lorsqu’on défie frontalement l’État&nbsp;: en prison. Il a été arrêté en 2013 et condamné à l’emprisonnement à perpétuité sans possibilité de libération conditionnelle en 2015.</p>
+<p>Silk Road a été un élément essentiel du développement de Bitcoin, le premier cas d’utilisation majeur de la cryptomonnaie, et son héritage est toujours présent. De nombreux utilisateurs ont ainsi découvert Bitcoin soit en recherchant une mise en application des idées libertariennes (à l’instar de Roger Ver ou de Vitalik Buterin<a href="#fn69" class="footnote-ref" id="fnref69" role="doc-noteref"><sup>69</sup></a>), soit en cherchant à se procurer de la drogue sur Silk Road (comme Peter McCormack<a href="#fn70" class="footnote-ref" id="fnref70" role="doc-noteref"><sup>70</sup></a>). Cette particularité est une incarnation de la vision de Konkin, qui voulait réconcilier les «&nbsp;libertariens de bibliothèque&nbsp;» et les «&nbsp;contre-économistes&nbsp;» de l’économie souterraine.</p>
+<div class="no-row-height column-margin column-container"><div id="fn69"><p><sup>69</sup>&nbsp;«&nbsp;Ce sont les médias en ligne agoristes qui m’ont fait découvrir Bitcoin. L’agorisme ne nécessite peut-être pas d’ordinateurs, mais la technique est l’arme la plus puissante que la liberté ait à sa disposition.&nbsp;» – Vitalik Buterin, <em>Re: Bitcoin on AgoristRadio.com</em>, /05/2011 18:36:45 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=9177.msg133853#msg133853" class="uri">https://bitcointalk.org/index.php?topic=9177.msg133853#msg133853</a>.</p></div><div id="fn70"><p><sup>70</sup>&nbsp;Nugget’s News, <em>Peter McCormack – Bitcoin, Addiction &amp; Podcasts</em> (vidéo), 19 juillet 2019&nbsp;: <a href="https://www.youtube.com/watch?v=3aDMnE6dnHk" class="uri">https://www.youtube.com/watch?v=3aDMnE6dnHk</a>.</p></div></div></section>
+<section id="la-proposition-de-valeur-de-bitcoin" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="la-proposition-de-valeur-de-bitcoin">La proposition de valeur de Bitcoin</h2>
+<p>Bitcoin est un concept de monnaie numérique fonctionnant sur Internet, résistante à la censure et résistante à l’inflation. Il diffère de ses alternatives que sont le dollar (et les monnaies fiat en général) et l’or (et les métaux précieux en général), par ses propriétés nouvelles, liées à son absence de tiers de confiance.</p>
+<p>Bitcoin est par essence un outil qui donne à l’individu le pouvoir de préserver sa liberté et sa richesse. Grâce à la résistance à la censure, il vise à permettre à quiconque de décider comment il veut dépenser son argent et, par conséquent, de choisir s’il veut le céder à autrui ou non. Grâce à la résistance à l’inflation, il permet à ses utilisateurs de ne pas subir le seigneuriage de l’État, en disposant d’une monnaie dont l’émission est prédéterminée et dont la quantité maximale est limitée.</p>
+<p>De ce fait, le cœur de l’utilisation de Bitcoin se situe aux confins de ce qui est autorisé par les puissances de ce monde. Il est principalement, et restera, une monnaie de désobéissance, utilisée dans l’économie parallèle, pour acheter des biens et des services et pour conserver de la valeur à long terme. Avec l’inéluctable numérisation de la monnaie, il pourrait devenir un «&nbsp;territoire de liberté&nbsp;» équivalant à ce qui est aujourd’hui offert par l’argent liquide physique. Il a, après tout, été présenté au monde comme un «&nbsp;argent liquide électronique&nbsp;».</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/une-croissance-conflictuelle.html" class="pagination-link" aria-label="Une croissance conflictuelle">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/la-necessite-de-decentralisation.html" class="pagination-link" aria-label="La nécessité de décentralisation">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

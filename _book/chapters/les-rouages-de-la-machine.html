@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Les rouages de la machine – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/les-contrats-autonomes.html" rel="next">
+<link href="../chapters/la-determination-du-protocole.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="12&nbsp; Les rouages de la machine – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="12&nbsp; Les rouages de la machine – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/les-rouages-de-la-machine.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#les-transactions-et-les-pièces" id="toc-les-transactions-et-les-pièces" class="nav-link active" data-scroll-target="#les-transactions-et-les-pièces">Les transactions et les pièces</a></li>
+  <li><a href="#la-machine-virtuelle" id="toc-la-machine-virtuelle" class="nav-link" data-scroll-target="#la-machine-virtuelle">La machine virtuelle</a></li>
+  <li><a href="#les-schémas-classiques" id="toc-les-schémas-classiques" class="nav-link" data-scroll-target="#les-schémas-classiques">Les schémas classiques</a>
+  <ul class="collapse">
+  <li><a href="#p2pk-pay-to-public-key" id="toc-p2pk-pay-to-public-key" class="nav-link" data-scroll-target="#p2pk-pay-to-public-key">P2PK&nbsp;: Pay to Public Key</a></li>
+  <li><a href="#p2pkh-pay-to-public-key-hash" id="toc-p2pkh-pay-to-public-key-hash" class="nav-link" data-scroll-target="#p2pkh-pay-to-public-key-hash">P2PKH&nbsp;: Pay to Public Key Hash</a></li>
+  <li><a href="#p2ms-pay-to-multisig" id="toc-p2ms-pay-to-multisig" class="nav-link" data-scroll-target="#p2ms-pay-to-multisig">P2MS&nbsp;: Pay To MultiSig</a></li>
+  <li><a href="#p2sh-pay-to-script-hash" id="toc-p2sh-pay-to-script-hash" class="nav-link" data-scroll-target="#p2sh-pay-to-script-hash">P2SH : Pay to Script Hash</a></li>
+  <li><a href="#nulldata" id="toc-nulldata" class="nav-link" data-scroll-target="#nulldata">NULLDATA</a></li>
+  </ul></li>
+  <li><a href="#les-types-de-signatures" id="toc-les-types-de-signatures" class="nav-link" data-scroll-target="#les-types-de-signatures">Les types de signatures</a></li>
+  <li><a href="#segwit-le-témoin-séparé" id="toc-segwit-le-témoin-séparé" class="nav-link" data-scroll-target="#segwit-le-témoin-séparé">SegWit&nbsp;: le témoin séparé</a>
+  <ul class="collapse">
+  <li><a href="#la-malléabilité" id="toc-la-malléabilité" class="nav-link" data-scroll-target="#la-malléabilité">La malléabilité</a></li>
+  <li><a href="#laugmentation-de-la-capacité-transactionnelle" id="toc-laugmentation-de-la-capacité-transactionnelle" class="nav-link" data-scroll-target="#laugmentation-de-la-capacité-transactionnelle">L’augmentation de la capacité transactionnelle</a></li>
+  <li><a href="#le-versionnage-des-scripts" id="toc-le-versionnage-des-scripts" class="nav-link" data-scroll-target="#le-versionnage-des-scripts">Le versionnage des scripts</a></li>
+  <li><a href="#p2wpkh-pay-to-witness-public-key-hash" id="toc-p2wpkh-pay-to-witness-public-key-hash" class="nav-link" data-scroll-target="#p2wpkh-pay-to-witness-public-key-hash">P2WPKH&nbsp;: Pay to Witness Public Key Hash</a></li>
+  <li><a href="#p2wsh-pay-to-witness-script-hash" id="toc-p2wsh-pay-to-witness-script-hash" class="nav-link" data-scroll-target="#p2wsh-pay-to-witness-script-hash">P2WSH&nbsp;: Pay to Witness Script Hash</a></li>
+  <li><a href="#les-types-imbriqués-p2sh-p2wpkh-p2sh-p2wsh" id="toc-les-types-imbriqués-p2sh-p2wpkh-p2sh-p2wsh" class="nav-link" data-scroll-target="#les-types-imbriqués-p2sh-p2wpkh-p2sh-p2wsh">Les types imbriqués (P2SH-P2WPKH, P2SH-P2WSH)</a></li>
+  <li><a href="#p2tr-pay-to-taproot" id="toc-p2tr-pay-to-taproot" class="nav-link" data-scroll-target="#p2tr-pay-to-taproot">P2TR&nbsp;: Pay to Taproot</a></li>
+  </ul></li>
+  <li><a href="#le-mélange-de-pièces" id="toc-le-mélange-de-pièces" class="nav-link" data-scroll-target="#le-mélange-de-pièces">Le mélange de pièces</a></li>
+  <li><a href="#dautres-techniques-de-confidentialité" id="toc-dautres-techniques-de-confidentialité" class="nav-link" data-scroll-target="#dautres-techniques-de-confidentialité">D’autres techniques de confidentialité</a></li>
+  <li><a href="#une-machine-complexe" id="toc-une-machine-complexe" class="nav-link" data-scroll-target="#une-machine-complexe">Une machine complexe</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:rouages" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:12" label="enotezch:12"></span></p>
+<p><span class="lettrine">B</span><span class="smallcaps">i</span>tcoin est une étrange machine. Né dans un rapport antagoniste vis-à-vis de l’autorité, il possède des propriétés qui ne se retrouvent pas dans les systèmes informatiques communs. En particulier, il ne peut pas être modifié n’importe comment, ce qui explique sa conception originelle et son évolution ultérieure.</p>
+<p>D’une part, la représentation des unités de base, les satoshis, ne se fait pas sous la forme de comptes où les soldes des utilisateurs seraient mis à jour, mais par le biais de pièces de cryptomonnaies pouvant être combinées et séparées dans les transactions. Ce fonctionnement favorise la confidentialité et la scalabilité de la chaîne, et s’adapte ainsi l’utilisation monétaire.</p>
+<p>D’autre part, Bitcoin intègre un système de programmation interne permettant d’intégrer des conditions de dépense dans les pièces, ce qu’on appelle parfois des contrats autonomes ou <em>smart contracts</em>. Il a été amélioré au cours des années, parfois au prix d’une plus grande complexité, notamment <em>via</em> l’ajout de SegWit et de Taproot.</p>
+<p>Dans ce chapitre, nous examinerons les rouages de cette machine transactionnelle, avant de décrire comment elle peut être exploitée et améliorée à des fins de confidentialité. Le prochain chapitre sera consacré aux contrats en tant que tels.</p>
+<section id="les-transactions-et-les-pièces" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-transactions-et-les-pièces">Les transactions et les pièces</h2>
+<p>Dans Bitcoin, les transactions possèdent un rôle central. Le protocole est fait pour échanger de la valeur conformément à son rôle monétaire, donc de traiter les transferts de propriété. Tout le fonctionnement du système a été pensé pour faciliter la construction, la signature et la diffusion des transactions, leur conservation en mémoire dans la <em>mempool</em>, et leur ajout au registre par leur inclusion dans un bloc.</p>
+<p>Chaque transaction est constituée d’une ou plusieurs entrées et d’une ou plusieurs sorties. Une sortie transactionnelle se compose simplement d’une indication de destination et d’un montant en unités (satoshis). Une entrée fait généralement référence à une sortie transactionnelle précédente, sauf dans le cas de la transaction de récompense où elle représente une «&nbsp;base de pièce&nbsp;» créant de nouvelles unités issues de l’émission monétaire et des frais de transaction.</p>
+<p>L’identifiant d’une transaction (<em>transaction identifier</em> ou <code>) est l'empreinte des données brutes qu'elle contient, obtenue *via* le hachage par double SHA-256. Chaque sortie transactionnelle est caractérisée par l'identifiant de la transaction dont elle est issue et par sa position dans cette transaction, qu'on appelle l'indice. Ce point de sortie (*outpoint*) sert d'indication de provenance. Un exemple de point de sortie est</code>.</p>
+<p>Contrairement à ce que la description de la propriété dans le chapitre&nbsp;<a href="la-valeur-de-l-information.html" data-reference-type="ref" data-reference="ch:propriete">7</a> suggère, la destination et la provenance des unités ne sont pas à proprement parler des adresses, mais des scripts de verrouillage, c’est-à-dire des petits programmes qui déterminent leurs conditions de dépense. Chaque sortie crée ainsi un script qui bloque les fonds d’une façon spécifique. Le plus souvent, ce script contient une clé publique ou une empreinte de clé publique, qui peut être interprétée comme une adresse par le portefeuille.</p>
+<p>Pour être valide, une entrée doit contenir un script de déverrouillage dont l’exécution, combinée à celle du script de verrouillage, réussisse. En général, ce script de déblocage des fonds contient une signature numérique qui correspond à la clé publique liée au script de verrouillage précédent&nbsp;: la vérification de la signature permet de s’assurer que la personne qui dépense les unités en est le propriétaire.</p>
+<p>Ce fonctionnement fait que le modèle de représentation des unités est contre-intuitif. Le protocole ne voit pas de comptes dont les soldes seraient actualisés par les transactions, comme c’est le cas dans Ethereum par exemple. Il voit simplement des sorties transactionnelles détenues par des propriétaires, de manière similaire aux pièces de monnaies dans le monde physique.</p>
+<p>Ainsi, Bitcoin met en œuvre le concept de pièce de monnaie numérique qui était discuté au sein de la communauté cypherpunk dans les années 1990. Dans le <em>Cyphernomicon</em> par exemple, Tim May estimait que la chose était impossible, en raison du problème de la double dépense<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Satoshi Nakamoto, en découvrant une manière de résoudre ce problème, a pu rendre le concept viable et l’a intégré dans Bitcoin. Dans le livre blanc, il décrivait la notion de pièce numérique comme suit&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;«&nbsp;Tim May estimait que la chose était impossible&nbsp;»&nbsp;: Timothy C. May, <em>Cyphernomicon</em>, 12.3.8.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>«&nbsp;Nous définissons une pièce de monnaie électronique comme une chaîne de signatures numériques. Chaque propriétaire transfère la pièce au suivant en signant numériquement l’empreinte de la transaction précédente et la clé publique du propriétaire suivant, et en les ajoutant à la fin de la pièce. Un bénéficiaire peut vérifier les signatures pour vérifier la chaîne de propriété<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.&nbsp;»</p>
+<p>Dans Bitcoin, les pièces existantes sont donc les sorties transactionnelles non dépensées, nommées usuellement UTXO par abréviation de l’anglais <em>Unspent Transaction Outputs</em>, à savoir les sorties transactionnelles qui n’ont pas été utilisées comme entrée dans une autre transaction. L’ensemble de ces pièces, l’<em>UTXO set</em>, constitue le registre de propriété. C’est l’état du système, qui peut être récupéré à partir de son historique, la chaîne de blocs.</p>
+<p>Chaque pièce est constituée d’un montant en unités (satoshis) et d’un script de verrouillage. Il peut ainsi exister des pièces d’un milliard de satoshis (10 bitcoins) tout comme on peut avoir des pièces de 546&nbsp;satoshis (0,00000546 bitcoin).</p>
+<p>Le script de verrouillage d’une pièce contient le plus souvent une clé publique ou une empreinte déterminée, de sorte que la pièce peut être vue comme étant détenue par l’adresse correspondante. De ce fait, deux pièces partageant le même script de verrouillage sont détenues par la même adresse. Un compte dans Bitcoin correspond à l’ensemble des adresses contrôlées par un utilisateur. Le solde est récupéré en balayant l’ensemble des UTXO de façon à retrouver les pièces détenues par ces adresses.</p>
+<div id="fig:coins-utxos" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/coins-utxos-account.eps" class="img-fluid"></p>
+<figcaption>Exemples de pièces détenues par un même compte.</figcaption>
+</figure>
+</div>
+<p>Ce modèle de représentation par des pièces fait qu’on peut voir le mécanisme de transaction comme une fonderie de pièces de monnaie. Chaque transaction consiste à fondre ensemble une ou plusieurs pièces de bitcoin en entrée et à frapper une ou plusieurs pièces en sortie. C’est en ceci que le serveur d’horodatage distribué de Bitcoin vient remplacer la monnaierie numérique centralisée permettant le remplacement systématique des pièces, qui est présente dans eCash et RPOW par exemple.</p>
+<p>La construction d’une transaction implique de rassembler des pièces de valeur suffisante en entrée pour les fondre et en frapper de nouvelles. En général, deux pièces sont créées&nbsp;: la première est créée sur l’adresse fournie par le destinataire pour effectuer le paiement (sortie principale) et la seconde est créée sur l’une des adresses de l’expéditeur afin qu’il se «&nbsp;rende la monnaie&nbsp;» (sortie complémentaire). La différence entre le montant en entrée et le montant en sortie est prise en compte dans la récompense du mineur en tant que frais de transaction.</p>
+<p>Considérons quelques exemples en ignorant ces frais et supposons qu’Alice veuille procéder à un paiement. Si Alice possède une pièce de 12 mBTC (0,012 BTC) et veut donner 7 mBTC à Bob, alors elle doit construire et signer une transaction ayant pour entrée cette pièce de 12 mBTC et pour sorties une pièce de 7 mBTC vers l’adresse de Bob et une pièce restante de 5 mBTC vers sa propre adresse. Cette transaction est représentée par la figure&nbsp;<a href="#fig:transaction-1i-2o" data-reference-type="ref" data-reference="fig:transaction-1i-2o">12.2</a>.</p>
+<div id="fig:transaction-1i-2o" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/transaction-1i-2o.eps" class="img-fluid"></p>
+<figcaption>Schéma d’une transaction à 1 entrée et 2 sorties.</figcaption>
+</figure>
+</div>
+<p>Si Alice ne possède pas une pièce ayant une valeur faciale supérieure à 7 mBTC, alors elle doit regrouper des pièces pour réunir un montant suffisant en entrée, par exemple une pièce de 6 mBTC et une pièce de 2 mBTC. Comme précédemment, elle doit créer une sortie complémentaire vers elle-même dans le but de se rendre la monnaie. Dans ce cas, illustré sur la figure&nbsp;<a href="#fig:transaction-2i-2o" data-reference-type="ref" data-reference="fig:transaction-2i-2o">12.3</a>, on peut deviner en observant la transaction que la pièce de 7 mBTC est le résultat du paiement, car il serait économiquement irrationnel de fusionner plusieurs pièces pour envoyer 1 mBTC.</p>
+<div id="fig:transaction-2i-2o" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/transaction-2i-2o.eps" class="img-fluid"></p>
+<figcaption>Schéma d’une transaction à 2 entrées et 2 sorties.</figcaption>
+</figure>
+</div>
+<p>Si Alice désire transférer l’intégralité des fonds vers un autre compte, alors elle rassemble l’ensemble de ses pièces (6 mBTC, 4 mBTC, 2 mBTC) pour les envoyer vers une adresse unique, comme montré sur la figure&nbsp;<a href="#fig:transaction-3i-1o" data-reference-type="ref" data-reference="fig:transaction-3i-1o">12.4</a>. C’est ce qu’on appelle une consolidation de portefeuille, qui peut être identifiée par un observateur extérieur en raison de l’unicité de la sortie.</p>
+<div id="fig:transaction-3i-1o" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/transaction-3i-1o.eps" class="img-fluid"></p>
+<figcaption>Schéma d’une transaction à 3 entrées et 1 sortie.</figcaption>
+</figure>
+</div>
+<p>Nous voyons ainsi que les transactions ne sont pas des transferts bruts d’une adresse vers une autre, mais des combinaisons-séparations de pièces de monnaies numériques. Ce fonctionnement est quelque peu contre-intuitif, mais se révèle utile pour la scalabilité du système, en permettant le traitement indépendant des pièces, et pour la confidentialité des utilisateurs, en n’incitant pas au rassemblement sur une même adresse et en facilitant l’implémentation de techniques d’anonymisation comme le mélange des pièces. Ce modèle est donc particulièrement adapté à l’utilisation monétaire<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;«&nbsp;Ce modèle est donc particulièrement adapté à l’utilisation monétaire&nbsp;»&nbsp;: Ludovic Lars, <em>Pièces et comptes&nbsp;: deux modèles de représentation</em>, 20 juillet 2019&nbsp;: <a href="https://viresinnumeris.fr/pieces-comptes-modeles-representation/" class="uri">https://viresinnumeris.fr/pieces-comptes-modeles-representation/</a>.</p></div></div></section>
+<section id="la-machine-virtuelle" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-machine-virtuelle">La machine virtuelle</h2>
+<p>Les scripts présents au sein des transactions font de Bitcoin un système de monnaie programmable. Ces scripts permettent en effet la mise en place d’une variété de conditions de dépense, aussi appelées clauses, qui vont au-delà de l’exigence d’une signature simple, comme la connaissance d’un secret, l’attente d’une période de temps ou la production de signatures multiples.</p>
+<p>La mise en œuvre de Bitcoin crée une machine abstraite dont le fonctionnement est répliqué sur tous les nœuds du réseau grâce à l’algorithme de consensus. Elle est simulée par l’intermédiaire de l’implémentation logicielle, de sorte qu’on parle de machine virtuelle. Plus précisément, il s’agit d’une machine à états, dont l’état courant est l’ensemble des pièces existantes, c’est-à-dire l’ensemble des sorties transactionnelles non dépensées (UTXO), et dont les transitions sont les transactions, qui détruisent des pièces pour en créer de nouvelles. Ces transactions sont assemblées dans des blocs qui sont validés à intervalles réguliers par les mineurs. La diffusion d’un bloc sur le réseau permet d’actualiser l’état de la machine virtuelle, qui est (sauf dans le cas d’un embranchement) partagé par tous les nœuds.</p>
+<p>Au sein d’une transaction, le déverrouillage des pièces se fait par l’exécution de scripts. Les scripts sont des prédicats au sens mathématique, c’est-à-dire des expressions incomplètes qui deviennent des propositions pouvant être évaluées si elles sont complétées par un ou plusieurs éléments. De ce fait, la dépense consiste à réunir le script de verrouillage de la sortie précédente et le script de déverrouillage, et à les exécuter l’un après l’autre&nbsp;: le script de déverrouillage d’abord, le script de verrouillage ensuite. L’utilisation de la pièce comme entrée de transaction n’est approuvée que si l’exécution réussit.</p>
+<p>Les scripts sont écrits dans le langage de programmation interne de Bitcoin, conçu par Satoshi Nakamoto dès 2008 et baptisé de façon peu originale «&nbsp;Script&nbsp;». Ce langage de programmation fonctionne de manière similaire à Forth, un langage utilisé dans les années 1970 et 1980. Il se base en particulier sur deux piles de données, qui sont des structures de données fondées sur le principe du «&nbsp;dernier arrivé, premier sorti&nbsp;» (<em>last in, first out</em>, ou LIFO). Le langage agit essentiellement sur la pile primaire, de sorte que celle-ci est la plus importante&nbsp;; la pile secondaire permet seulement de mettre des données de côté pendant l’exécution d’un script.</p>
+<p>Satoshi Nakamoto a inclus ce système de scripts dans Bitcoin pour lui permettre de gérer une grande variété de cas d’utilisation. En juin 2010, en réponse à Gavin Andresen, il écrivait la chose suivante sur le forum&nbsp;:</p>
+<p>«&nbsp;La nature de Bitcoin est telle que, dès la version 0.1 lancée, son fonctionnement de base était gravé dans le marbre pour le reste de son existence. C’est pour cette raison que je voulais concevoir Bitcoin pour qu’il supporte tous les types de transaction auxquels je pouvais penser. Le problème était que chaque élément requérait un code de prise en charge et des champs de données spéciaux, qu’il soit utilisé ou non, et ne pouvait couvrir qu’un cas particulier à la fois. Ç’aurait été une explosion de cas particuliers. La solution était script, qui généralisait le problème de façon à ce que les parties contractantes puissent décrire leurs transactions comme des prédicats que les nœuds du réseau évaluaient. Les nœuds ont seulement besoin de comprendre la transaction dans la mesure où ils évaluent si les conditions de l’expéditeur sont remplies ou non<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Satoshi Nakamoto, <em>Re: Transactions and Scripts: DUP HASH160 ... EQUALVERIFY CHECKSIG</em>, /06/2010 18:46:08&nbsp;: <a href="https://bitcointalk.org/index.php?topic=195.msg1611#msg1611" class="uri">https://bitcointalk.org/index.php?topic=195.msg1611#msg1611</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;Le langage est constitué de plus d’une centaine d’opérateurs&nbsp;»&nbsp;: La liste des opérateurs et de leurs actions est disponible sur la page de Bitcoin Wiki consacrée à Script&nbsp;: <a href="https://en.bitcoin.it/wiki/Script" class="uri">https://en.bitcoin.it/wiki/Script</a>.</p></div></div><p>Le langage est constitué de plus d’une centaine d’opérateurs, aussi appelés codes opération (<em>opcodes</em>), qui agissent sur la pile primaire d’une manière ou d’une autre<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Les opérateurs sont des nombres codés sur 1 octet (allant de 0 à 255), mais sont usuellement désignés par un nom décrivant leur fonction, dans le but de rendre la lecture plus compréhensible par l’être humain. Ils sont notés en majuscules et sont souvent précédés du préfixe <code>OP_</code> même s’il peut être omis en l’absence d’ambiguïté. Par exemple, l’opérateur permettant de vérifier une signature (<code>0xac</code>) est noté <code>OP_CHECKSIG</code> ou <code>CHECKSIG</code>.</p>
+<p>Les opérateurs allant de 1 à 75, parfois notés <code>, ont pour action d'empiler des données ayant une taille allant de 1 à 75 octets. L'utilisation d'opérateurs supplémentaires spécifiques (notés</code>) permet cependant de placer une information plus grande sur la pile. Bien qu’on puisse utiliser cette notation, il est généralement plus simple de placer un élément entre chevrons pour indiquer qu’il est placé au sommet de la pile. Par exemple, le fait d’écrire `` au sein d’un script signifie que la signature est empilée.</p>
+<p>La valeur retournée à la fin de l’exécution des scripts est un booléen, de sorte que le script peut être valide, auquel cas la dépense de la pièce est approuvée, ou bien invalide, auquel cas la transaction est rejetée dans son ensemble. Le script est valide si et seulement si la valeur <code>TRUE</code> («&nbsp;vrai&nbsp;») est présente en haut de la pile à la fin de l’exécution. Il est invalide si ce n’est pas le cas ou si son exécution s’est arrêtée avant la fin.</p>
+<p>Le langage Script est cependant limité. Rien dans sa conception de base ne permet de faire de boucles, ni d’accéder à des données extérieures à celles de la transaction, contrairement au langage d’Ethereum qui est quasi Turing-complet. Cette particularité fait qu’il est moins flexible, mais qu’il a l’avantage d’être plus simple à appréhender et donc plus sûr.</p>
+<p>L’exemple typique de script, présenté par Andreas Antonopoulos<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, est celui qui consiste à résoudre une équation simple impliquant une addition. Si on considère l’équation <span class="math inline">\(17 + x = 38\)</span>, alors le script de verrouillage qui correspond est&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Andreas M. Antonopoulos, «&nbsp;<em>Transactions</em>&nbsp;», in <em>Mastering Bitcoin: Programming the Open Blockchain</em>, 2 édition, 2017, pp.&nbsp;117-148.</p></div></div><pre data-fontsize="\footnotesize"><code>&lt;17&gt; ADD &lt;38&gt; EQUAL</code></pre>
+<p>Toute personne disposant de la réponse peut dépenser la pièce, ce qui on en convient n’est pas très sécurisé. La dépense requiert ici de fournir le script de déverrouillage composé uniquement de la solution de l’équation, à savoir 21&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;21&gt;</code></pre>
+<p>L’exécution successive de ces deux scripts (voir figure&nbsp;<a href="#fig:bitcoin-stack" data-reference-type="ref" data-reference="fig:bitcoin-stack">12.5</a>) a lieu comme suit&nbsp;: 1)&nbsp;la valeur 21 est placée sur la pile&nbsp;; 2)&nbsp;la valeur 17 est placée au-dessus&nbsp;; 3)&nbsp;l’opérateur <code>OP_ADD</code> additionne les deux valeurs en haut de la pile et les remplace par leur somme, ici 38&nbsp;; 4)&nbsp;la valeur 38 est placée au sommet de la pile&nbsp;; 5)&nbsp;l’opérateur <code>OP_EQUAL</code> compare les deux valeurs en haut de la pile et les remplace par le booléen d’égalité, ici <code>TRUE</code>. L’exécution du script est donc un succès.</p>
+<div id="fig:bitcoin-stack" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/bitcoin-stack-example.eps" class="img-fluid"></p>
+<figcaption>Exécution d’un script d’addition sur la pile de données.</figcaption>
+</figure>
+</div>
+<p>Si la valeur avait été différente, de 22 par exemple, alors la dernière opération aurait retourné le booléen <code>FALSE</code> («&nbsp;faux&nbsp;») et la transaction de dépense aurait été invalidée.</p>
+<p>Beaucoup de conditions de dépense différentes peuvent être implémentées par ce système. Certaines de ces conditions sont simples comme la connaissance d’un secret spécifique ou la production d’une signature valide correspondant à une clé publique particulière. La connaissance d’un secret (dont l’empreinte est spécifiée dans l’UTXO) est vérifiée par les scripts suivants qui placent le secret au sommet de la pile, le hachent par SHA-256 et comparent le résultat à l’empreinte&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;secret&gt; || SHA256 &lt;empreinte&gt; EQUAL</code></pre>
+<p>De même, la vérification de la validité d’une signature est réalisée par les scripts suivants qui empilent d’abord la signature, puis la clé publique avant de contrôler leur correspondance&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;signature&gt; || &lt;clé publique&gt; CHECKSIG</code></pre>
+<p>En outre, il existe des conditions plus avancées comme les verrous temporels. Ceux-ci permettent de bloquer les fonds de la pièce pour un temps précis, que ce soit jusqu’à une date donnée, auquel cas on parle de temps de verrouillage absolu, ou bien pendant une période donnée, auquel cas on parle de temps de verrouillage relatif. Le premier est le fait de l’opérateur <code>dont les spécificités techniques sont décrites dans le BIP-65. Le second est appliqué par le code opération</code> décrit dans le BIP-112.</p>
+</section>
+<section id="les-schémas-classiques" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-schémas-classiques">Les schémas classiques</h2>
+<p>Le langage Script permet de faire des choses diverses et variées. Pendant les premiers temps de Bitcoin, le système était relativement libre et autorisait les gens à écrire ce qu’ils voulaient dans les scripts sans discrimination. Toutefois, cette situation était considérablement risquée. La raison principale était que le fonctionnement des codes opération n’était pas encore vérifié et testé, comme l’avait montré la découverte en juillet 2010 d’une vulnérabilité rendue possible par certains opérateurs binaires (CVE-2010-5137<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>). C’est pourquoi il a été décidé à la fin de l’année 2010, sous l’impulsion de Gavin Andresen, de restreindre la facilité de programmation du système<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;«&nbsp;CVE-2010-5137&nbsp;»&nbsp;: NIST, <em>CVE-2010-5137</em>, 8 juin 2012&nbsp;: <a href="https://nvd.nist.gov/vuln/detail/CVE-2010-5137" class="uri">https://nvd.nist.gov/vuln/detail/CVE-2010-5137</a>.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Gavin Andresen, <em>svn r197: IsStandard check for transactions</em>, /12/2010 13:58:33 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=2129.msg27744#msg27744" class="uri">https://bitcointalk.org/index.php?topic=2129.msg27744#msg27744</a>.</p></div><div id="fn9"><p><sup>9</sup>&nbsp;«&nbsp;P2PK, P2PKH, P2MS, P2SH, NULLDATA, P2WPKH, P2WSH et P2TR&nbsp;»&nbsp;: <a href="https://github.com/bitcoin/bitcoin/blob/22.x/src/script/standard.h#L59-L71" class="uri">https://github.com/bitcoin/bitcoin/blob/22.x/src/script/standard.h#L59-L71</a>.</p></div></div><p>Cette restriction a été appliquée en imposant des schémas standards de scripts, qui faisaient que les nœuds configurés par défaut ne relayaient plus les transactions contenant des scripts qui ne respectaient pas ce standard. Il ne s’agissait pas ainsi d’une restriction des règles globales de consensus, mais des règles locales de mempool qui s’appliquent à la transmission des transactions. Des schémas standards rendant les choses plus simples et plus sûres ont ainsi été développés au cours des années. Les schémas standards de sortie transactionnelle étaient en 2023 au nombre de huit&nbsp;: P2PK, P2PKH, P2MS, P2SH, NULLDATA, P2WPKH, P2WSH et P2TR<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
+<section id="p2pk-pay-to-public-key" class="level3">
+<h3 class="anchored" data-anchor-id="p2pk-pay-to-public-key">P2PK&nbsp;: Pay to Public Key</h3>
+<p>Le premier schéma s’appelle Pay to Public Key (P2PK), qu’on peut traduire littéralement en français par «&nbsp;payer à la clé publique&nbsp;». Il s’agit de créer une pièce liée à la clé publique d’un destinataire, que lui seul peut dépenser en signant avec sa clé privée. Le script de verrouillage permettant ce type d’envoi est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;clé publique&gt; CHECKSIG</code></pre>
+<p>La présence de la clé publique explique qu’on parle parfois de «&nbsp;scriptPubKey&nbsp;» pour désigner le script de verrouillage en général, indépendemment de ce qu’il contient.</p>
+<p>Au moment de la dépense, le destinataire doit utiliser un script de déverrouillage contenant simplement sa signature&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;signature&gt;</code></pre>
+<p>La présence de la signature dans ce script explique qu’on parle parfois de «&nbsp;scriptSig&nbsp;» pour désigner le script de déverrouillage en général, indépendamment de ce qu’il contient. L’exécution successive de ces deux scripts permet, comme on l’a vu, de vérifier que la signature fournie par l’utilisateur correspond à sa clé publique, auquel cas elle est valide.</p>
+<p>Le schéma P2PK était utilisé dans les débuts de Bitcoin pour recevoir les paiements par IP (P2IP) et pour récupérer la récompense de minage. Il est aujourd’hui tombé en désuétude au profit d’un schéma rival&nbsp;: P2PKH.</p>
+</section>
+<section id="p2pkh-pay-to-public-key-hash" class="level3">
+<h3 class="anchored" data-anchor-id="p2pkh-pay-to-public-key-hash">P2PKH&nbsp;: Pay to Public Key Hash</h3>
+<p>Le schéma Pay to Public Key Hash (P2PKH), qui est traduit littéralement par «&nbsp;payer à l’empreinte de la clé publique&nbsp;», est le deuxième type de format de réception apparu dans Bitcoin dès le début du fait de la conception de Satoshi Nakamoto. Ce schéma permet non pas de réaliser un paiement vers une clé publique, mais vers l’empreinte d’une clé publique, tout en faisant en sorte que l’interpréteur vérifie quand même la validité de la signature vis-à-vis de la clé publique lors de la dépense des fonds. L’empreinte de la clé publique est alors considérée comme la donnée essentielle («&nbsp;charge utile&nbsp;») de l’adresse, qui dans ce cas commence toujours par un 1, comme par exemple ``. Le script de verrouillage ici est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>DUP HASH160 &lt;empreinte de la clé publique&gt; EQUALVERIFY CHECKSIG</code></pre>
+<p>Et le script de déverrouillage est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;signature&gt; &lt;clé publique&gt;</code></pre>
+<p>L’exécution des deux scripts permet de&nbsp;: 1) vérifier que le passage de la clé publique par la fonction de hachage HASH-160 est égale à l’empreinte qui est spécifiée dans le script ; 2) vérifier que la signature correspond à la clé publique.</p>
+<p>L’avantage de ce schéma est qu’il permet d’avoir des adresses plus courtes (l’information à encoder n’est que de 20&nbsp;octets au lieu de 33 ou 65 octets pour une clé publique), raison pour laquelle Satoshi Nakamoto l’a implémenté. De plus, en ne révélant la clé publique qu’au moment de la dépense, ce schéma accroît aussi la sécurité contre la menace (très hypothétique) de l’ordinateur quantique.</p>
+</section>
+<section id="p2ms-pay-to-multisig" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="p2ms-pay-to-multisig">P2MS&nbsp;: Pay To MultiSig</h3>
+<p>Le schéma Pay To MultiSig (P2SH), qui signifie littéralement «&nbsp;payer à la multisignature&nbsp;», est un schéma de signature multipartite exigeant la signature de M personnes parmi N participants prédéterminés («&nbsp;M-parmi-N&nbsp;», ou «&nbsp;M-of-N&nbsp;» en anglais). Il a été rendu standard sous une forme limitée à 3 participants en mars 2012 avec la sortie de la version 0.6.0 du logiciel<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>. Le script de verrouillage est le suivant&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;«&nbsp;la sortie de la version 0.6.0 du logiciel&nbsp;»&nbsp;: Gavin Andresen, <em>Version 0.6.0 released</em>, 30 mars 2012&nbsp;: <a href="https://bitcointalk.org/index.php?topic=74737.msg827484#msg827484" class="uri">https://bitcointalk.org/index.php?topic=74737.msg827484#msg827484</a>.</p></div></div><pre data-fontsize="\footnotesize"><code>M &lt;clé publique 1&gt; ... &lt;clé publique N&gt; N CHECKMULTISIG</code></pre>
+<p>Le script de déverrouillage correspondant est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;leurre (0)&gt; &lt;signature 1&gt; ... &lt;signature M&gt;</code></pre>
+<p>La présence du leurre (généralement 0) est dû à un défaut dans l’implémentation de l’exécution de l’opérateur `` par Satoshi, qui requiert un élément de trop. Les développeurs n’ont pas jugé opportun de corriger ce défaut, car cette correction constituait un hard fork.</p>
+<p>C’est ce schéma, particulièrement exigeant au niveau de la mise en place, qui a motivé la création du schéma P2SH.</p>
+</section>
+<section id="p2sh-pay-to-script-hash" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="p2sh-pay-to-script-hash">P2SH : Pay to Script Hash</h3>
+<p>Le schéma Pay to Script Hash (P2SH), pouvant être traduit littéralement par «&nbsp;payer à l’empreinte du script&nbsp;», reprend l’idée derrière P2PKH, à la seule différence que la donnée hachée n’est pas une clé publique, mais le script lui-même&nbsp;! Le script en question est alors appelé script de récupération (<em>redeem script</em>) pour le différencier du script de déverrouillage. Son empreinte est la donnée constituante de l’adresse, cette dernière commençant toujours par un 3 à l’instar de ``.</p>
+<p>Ce schéma donne à l’utilisateur la possibilité d’y inclure n’importe quel script, sans discrimination sur son format, à condition qu’il respecte bien sûr certaines limites. Il permet aussi de recevoir des fonds depuis la quasi-totalité des portefeuilles existants, le fardeau de la construction et du déverrouillage du script revenant uniquement au destinataire, et n’est pas partagé à l’expéditeur comme dans le cas de l’utilisation de scripts bruts.</p>
+<p>Le script de verrouillage pour le schéma P2SH est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>HASH160 &lt;empreinte du script de récupération&gt; EQUAL</code></pre>
+<p>Et le script de déverrouillage est un script de la forme&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>[éléments de déverrouillage] &lt;script de récupération&gt;</code></pre>
+<p>L’exécution de P2SH est plus complexe que pour les précédents schémas, ce qui peut s’expliquer par le contexte dans lequel il a été développé. L’idée d’implémenter un schéma de script qui utilise l’empreinte d’un autre script comme l’empreinte de clé publique dans le schéma P2PKH est née en 2011 par l’intermédiaire de plusieurs propositions<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>. Elle a été rendue plus concrète avec la proposition de l’opérateur <code>OP_EVAL</code> par Nicolas van Saberhagen le 2 octobre, un code opération qui permettait l’exécution récursive d’un script à l’intérieur d’un autre script<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. Gavin Andresen a expliqué comment en faire un soft fork par le remplacement de l’instruction sans effet <code>OP_NOP1</code><a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;«&nbsp;par l’intermédiaire de plusieurs propositions&nbsp;»&nbsp;: Mike Caldwell (casascius), <em>Proposal to modify OP_CHECKSIG</em>, /09/2011 02:21:17 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=45211.msg538756#msg538756" class="uri">https://bitcointalk.org/index.php?topic=45211.msg538756#msg538756</a>&nbsp;; jimrandomh, <em>Proposed extensions to the transaction protocol: Receiver scripts, OP_TIME, more</em>, /10/2011 16:56:47 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=46429.msg553217#msg553217" class="uri">https://bitcointalk.org/index.php?topic=46429.msg553217#msg553217</a>&nbsp;; Gavin Andresen, <em>Re: Proposal to modify OP_CHECKSIG</em>, /10/2011 00:26:42 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=45211.msg553668#msg553668" class="uri">https://bitcointalk.org/index.php?topic=45211.msg553668#msg553668</a>.</p></div><div id="fn12"><p><sup>12</sup>&nbsp;Nicolas van Saberhagen (ByteCoin), <em>OP_EVAL proposal</em>, /10/2011 00:49:19 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=46538.msg553689#msg553689" class="uri">https://bitcointalk.org/index.php?topic=46538.msg553689#msg553689</a>.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;Gavin Andresen, <em>Re: OP_EVAL proposal</em>, /10/2011 20:42:32 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=46538.msg554620#msg554620" class="uri">https://bitcointalk.org/index.php?topic=46538.msg554620#msg554620</a>.</p></div></div><p>L’opérateur <code>OP_EVAL</code> devait permettre de former un nouveau schéma standard. Le script de verrouillage aurait été&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>DUP HASH160 &lt;empreinte du script de récupération&gt; EQUALVERIFY EVAL</code></pre>
+<p>tandis que le script de déverrouillage aurait été le même que pour P2SH. L’exécution successive de ces deux scripts aurait permis dans un premier temps de vérifier la conformité du hachage du script de récupération avec l’empreinte&nbsp;; puis dans un second temps d’exécuter le script de récupération et de lui combiner les éléments de déverrouillage. Néanmoins cette solution n’a pas été acceptée, celle-ci ayant été jugée trop dangereuse à cause de son pouvoir de récursion. Il lui a été préféré le modèle, plus restrictif, de P2SH.</p>
+<p>L’exécution de P2SH fonctionne exactement comme le schéma lié à <code>OP_EVAL</code>, à l’exception qu’une partie du script n’est pas explicitement indiquée. D’un côté, la vérification de la correspondance entre l’empreinte indiquée et le script de récupération est bien réalisée par le script de verrouillage. De l’autre côté, l’évaluation du script de récupération est effectuée implicitement grâce à une exception ajoutée au code source qui fait que les nœuds du réseau qui reconnaissent le schéma l’interprètent différemment. Dans Bitcoin Core, on peut observer cette condition au sein de la fonction `` de l’interpréteur<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;«&nbsp;fonction VerifyScript de l’interpréteur&nbsp;»&nbsp;: <a href="https://github.com/bitcoin/bitcoin/blob/25.x/src/script/interpreter.cpp#L2005-L2062" class="uri">https://github.com/bitcoin/bitcoin/blob/25.x/src/script/interpreter.cpp#L2005-L2062</a>.</p></div></div><p>La proposition a été codifiée dans le BIP-16. Si cette solution est pratique, elle crée de la complexité et n’est pas très élégante. Comme le disait Gavin Andresen dans l’explication introductive de ce BIP&nbsp;:</p>
+<p>«&nbsp;Reconnaître une forme “spéciale” de scriptPubKey et réaliser une validation supplémentaire quand elle est détectée, c’est laid. Cependant, l’avis général est que les alternatives sont soit encore plus laides, soit plus complexes à implémenter, et/ou étendent le pouvoir du langage d’expression de manière dangereuse<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Gavin Andresen, <em>BIP-16: Pay to Script Hash</em>, 3 janvier 2012&nbsp;: <a href="https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki#rationale" class="uri">https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki#rationale</a>.</p></div><div id="fn16"><p><sup>16</sup>&nbsp;«&nbsp;l’opposition notable de luke-jr&nbsp;»&nbsp;: Amir Taaki, <em>The Truth behind BIP 16 and 17</em>, 29 janvier 2012&nbsp;: <a href="http://bitcoinmedia.com/the-truth-behind-bip-16-and-17/" class="uri">http://bitcoinmedia.com/the-truth-behind-bip-16-and-17/</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20120202032835/http://bitcoinmedia.com/the-truth-behind-bip-16-and-17/" class="uri">https://web.archive.org/web/20120202032835/http://bitcoinmedia.com/the-truth-behind-bip-16-and-17/</a>.</p></div></div><p>Le schéma P2SH a fini par être activé le 1 avril 2012 sous la forme d’un soft fork, en dépit de l’opposition notable de luke-jr qui proposait un opérateur alternatif, ``, décrit dans le BIP-17<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>.</p>
+</section>
+<section id="nulldata" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="nulldata">NULLDATA</h3>
+<p>Le schéma NULLDATA, signifiant littéralement «&nbsp;données insignifiantes&nbsp;», est un schéma d’inscription de données arbitraires sur la chaîne. Il est le quatrième schéma classique et a été rendu standard avec l’arrivée de la version 0.9.0 de Bitcoin Core en mars 2014<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>. Il se base sur l’instruction <code>OP_RETURN</code> dont l’effet est de mettre fin à l’exécution du script et de rendre indépensable la pièce correspondante<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>. Le script de verrouillage du schéma commence toujours par <code>OP_RETURN</code> et est suivi des données empilées&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;«&nbsp;l’arrivée de la version 0.9.0 de Bitcoin Core en mars 2014&nbsp;»&nbsp;: Bitcoin Core, <em>Bitcoin Core version 0.9.0 released</em>, 19 mars 2014&nbsp;: <a href="https://bitcoin.org/en/release/v0.9.0#opreturn-and-data-in-the-block-chain" class="uri">https://bitcoin.org/en/release/v0.9.0#opreturn-and-data-in-the-block-chain</a>.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;L’instruction <code>OP_RETURN</code> servait initialement à retourner la valeur au sommet de la pile, d’où son nom. Cependant, en juillet 2010, la découverte du «&nbsp;<em>1 RETURN bug</em>&nbsp;», qui permettait de dépenser toute sortie transactionnelle <em>via</em> le script de déverrouillage `<code>, a poussé Satoshi Nakamoto à désactiver cette fonctionnalité en lui faisant renvoyer</code>FALSE` systématiquement. Voir Satoshi Nakamoto, <em>reverted makefile.unix wx-config – version 0.3.6 (git commit)</em>, /07/2010 18:27:12 UTC&nbsp;: <a href="https://sourceforge.net/p/bitcoin/code/119/" class="uri">https://sourceforge.net/p/bitcoin/code/119/</a>.</p></div></div><pre data-fontsize="\footnotesize"><code>RETURN [données arbitraires]</code></pre>
+<p>La sortie contenant ce script est exempt de la limite standarde de poussière, qui est actuellement de 546 satoshis pour les sorties P2PKH, de sorte qu’elle peut être de 0 satoshi. La taille maximale des données pouvant être inscrites est de 80 octets par transaction sur BTC. De plus, en raison de leur caractère assurément indépensable, les sorties peuvent être retranchées de l’ensemble des UTXO des nœuds. Tout ceci fait de ce schéma le moyen normal d’inscrire des informations sur le registre.</p>
+</section>
+</section>
+<section id="les-types-de-signatures" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-types-de-signatures">Les types de signatures</h2>
+<p>La programmabilité de Bitcoin n’est pas seulement issue de son langage de programmation mais aussi du système de signature qui permet de sélectionner quelle partie de la transaction est signée. Ce facteur de programmabilité est mis en œuvre par l’existence d’un indicateur, appelé type de hachage de la signature ou <em>signature hash type</em>, qui est ajouté à la transaction non signée, puis à la signature elle-même. Celui-ci indique quelle partie de la transaction doit être hachée avant d’être soumise à l’algorithme de signature, d’où son nom.</p>
+<p>Le type de signature est construit à partir de plusieurs signaux de signature qui peuvent être combinés. Les quatre signaux de signature qui existent sont&nbsp;:</p>
+<ul>
+<li><p>`<code>(</code>0x01`) qui indique que toutes les sorties sont signées&nbsp;;</p></li>
+<li><p>`<code>(</code>0x03`) qui permet de ne signer qu’une seule sortie&nbsp;;</p></li>
+<li><p>`<code>(</code>0x02`) qui indique qu’aucune sortie n’est signée&nbsp;;</p></li>
+<li><p>`<code>(</code>0x80`) qui permet de ne signer qu’une seule entrée.</p></li>
+</ul>
+<p>Les trois signaux concernant les sorties peuvent être associés à <code>, ce qui permet de former finalement six types de signatures différents, représentés sur la figure&nbsp;[12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment</code> même si certains autres types peuvent parfois trouver une utilité. C’est notamment le cas de `` qui permet de construire des transactions de type <em>anyone-can-pay</em>, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.</p>
+<div id="fig:signature-hash-types" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/signature-hash-types.eps" class="img-fluid"></p>
+<figcaption>Les différents types de signatures dans Bitcoin.</figcaption>
+</figure>
+</div>
+<p>Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile&nbsp;: celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu’il pouvait avoir une utilité. C’est dans cet esprit que le signal de signature `` a été proposé en février 2016 par Joseph Poon<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;Joseph Poon, <em>[bitcoin-dev] SIGHASH_NOINPUT in Segregated Witness</em>, /02/2016 01:07:46 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-February/012460.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-February/012460.html</a>.</p></div><div id="fn20"><p><sup>20</sup>&nbsp;«&nbsp;BIP-118&nbsp;»&nbsp;: Christian Decker, Anthony Towns, <em>BIP-118: SIGHASH_ANYPREVOUT for Taproot Scripts</em>, 28 février 2017&nbsp;: <a href="https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki" class="uri">https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki</a>.</p></div></div><p>Ce type de signal pourrait être implémenté de manière partielle dans BTC par l’intermédiaire du BIP-118, qui prévoit l’intégration de deux nouveaux signaux au sein des scripts de Taproot&nbsp;: <code>et</code><a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>. Il permettrait d’améliorer le fonctionnement du réseau Lightning par la mise en œuvre du protocole Eltoo reposant sur la construction de transactions flottantes.</p>
+</section>
+<section id="segwit-le-témoin-séparé" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="segwit-le-témoin-séparé">SegWit&nbsp;: le témoin séparé</h2>
+<p>SegWit, abréviation de <em>Segregated Witness</em>, qu’on peut traduire littéralement par «&nbsp;témoin séparé&nbsp;», est une mise à niveau du protocole ayant lieu sur Litecoin-LTC et sur Bitcoin-BTC en 2017. Elle a consisté à faire en sorte que les données de déverrouillage des entrées transactionnelles, telles que les signatures, se retrouvent dans une structure de données séparée (<em>segregated</em>) appelée le témoin (<em>witness</em>) afin de supprimer la malléabilité des transactions. SegWit constituait ainsi une restructuration profonde des transactions.</p>
+<p>Outre la correction de la malléabilité, SegWit a apporté une augmentation de capacité transactionnelle et un versionnage des scripts pour faciliter les mises à niveau ultérieures. Elle a également amélioré l’algorithme de signature pour éviter les hachages redondants durant la vérification et pour rendre plus sûre la signature hors-ligne<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;«&nbsp;Elle a également amélioré l’algorithme de signature pour éviter les hachages redondants durant la vérification et pour rendre plus sûre la signature hors-ligne&nbsp;»&nbsp;: <a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki" class="uri">https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki</a>.</p></div></div><section id="la-malléabilité" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="la-malléabilité">La malléabilité</h3>
+<p>SegWit tire son origine du problème de la malléabilité des transactions, un problème identifié depuis janvier 2012<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>. Dans Bitcoin, les transactions sont malléables dans le sens où elles peuvent être modifiées légèrement après leur diffusion sans devenir invalides aux yeux du réseau. Cette propriété vient du fait qu’une signature ne peut pas se prendre en compte elle-même et que, par conséquent, le script de déverrouillage n’est pas signé avec le reste de la transaction. La malléabilité peut ainsi prendre deux formes&nbsp;: la malléabilité intrinsèque à l’algorithme ECDSA, qui se base sur un nombre aléatoire pour produire une signature (malléabilité par le signataire)&nbsp;; la malléabilité provenant de la forme des signatures et des scripts de déverrouillage des entrées (malléabilité par un tiers).</p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;«&nbsp;problème identifié depuis janvier 2012&nbsp;»&nbsp;: Gavin Andresen, <em>[Bitcoin-development] Extending IsStandard() to transaction scriptSigs</em>, /1/2012 16:29:29, <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2012-January/001066.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2012-January/001066.html</a>.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;Sur l’attaque de méalléabilité contre Mt. Gox, voir Ken Shirriff, <em>The Bitcoin malleability attack graphed hour by hour</em>, 15 février 2014&nbsp;: <a href="https://www.righto.com/2014/02/the-bitcoin-malleability-attack-hour-by.html" class="uri">https://www.righto.com/2014/02/the-bitcoin-malleability-attack-hour-by.html</a>. Voir aussi Christian Decker, Roger Wattenhofer, <em>Bitcoin Transaction Malleability and MtGox</em>, 26 mars 2014&nbsp;: <a href="https://arxiv.org/pdf/1403.6676.pdf" class="uri">https://arxiv.org/pdf/1403.6676.pdf</a>.</p></div></div><p>La malléabilité n’est pas rédhibitoire pour la sécurité des fonds, mais elle permet de modifier l’identifiant de la transaction après sa publication, ce qui peut se révéler problématique dans certaines situations. Ainsi, entre le 9 et le 11 février 2014, Mt. Gox et d’autres plateformes de change ont subi des attaques exploitant cette malléabilité des transactions. Les transactions de retrait ont été modifiées par les attaquants, faisant croire aux plateformes, dont l’infrastructure logicielle était mal configurée, que ces transactions n’avaient pas été confirmées. Les pirates ont vu leurs comptes être recrédités tout en conservant dans le même temps les bitcoins retirés. Ces attaques ont mené à une perte totale de 64&nbsp;564 bitcoins<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>.</p>
+<p>Des propositions ont tenté de corriger la malléabilité par un tiers en contraignant au maximum la forme des transactions. C’est dans cet esprit qu’a été créé le BIP-62 en mars 2014, dont l’une des exigences (l’encodage standard des signatures décrit dans le BIP-66) a été incluse dans les règles de consensus le 4 juillet 2015. Toutefois, ces changements ne s’appliquaient pas à la malléabilité par le signataire, ce qui créait une demande pour une correction généralisée.</p>
+<p>Cette malléabilité signifiait que tout acteur participant à un contrat de signature multipartite pouvait modifier la transaction et donc son identifiant à tout moment. Cela altérait significativement la possibilité d’implémentation du réseau Lightning, dont les canaux de paiements, comme on le verra plus bas, se basent sur des transactions non publiées auxquelles il faut faire référence et font intervenir des signatures multiples.</p>
+<p>La solution était de mettre de côté les scripts de déverrouillage dans le processus de hachage de la transaction, pour qu’un changement de ces scripts n’influence pas l’identifiant. Cette idée a été proposée initialement par Gregory Maxwell en août 2013 sur IRC<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>, avant d’être mise en œuvre au sein de la version alpha du modèle de sidechain Elements, annoncée le 8 juin 2015 par Blockstream<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>. Le même jour, Gregory Maxwell présentait cette version d’Elements incluant <em>Segregated Witness</em> dans un séminaire de développeurs à San Francisco&nbsp;: il décrivait alors le témoin comme «&nbsp;une valeur spécifique qui constitue une preuve concrète d’affirmation existentielle<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn24"><p><sup>24</sup>&nbsp;«&nbsp;proposée initialement par Gregory Maxwell en août 2013 sur IRC&nbsp;»&nbsp;: Gregory Maxwell, IRC, /08/2013 20:21 UTC&nbsp;: <a href="https://download.wpsoftware.net/bitcoin/wizards/2013/08/13-08-29.log" class="uri">https://download.wpsoftware.net/bitcoin/wizards/2013/08/13-08-29.log</a>&nbsp;: «&nbsp;Je suggère de ne jamais hacher cette valeur dans le protocole. En gros, je dis que les scriptsigs pour une [transaction] seraient un arbre de hachage séparé. Il est toujours engagé dans la chaîne de blocs mais ce serait une branche séparée.&nbsp;»</p></div><div id="fn25"><p><sup>25</sup>&nbsp;«&nbsp;version alpha du modèle de sidechain Elements, annoncée le 8 juin 2015&nbsp;»&nbsp;: Adam Back, <em>Announcing Sidechain Elements: Open-Source Code and Developer Sidechains for Advancing Bitcoin</em>, 8 juin 2015&nbsp;: <a href="https://blog.blockstream.com/en-714/" class="uri">https://blog.blockstream.com/en-714/</a>.</p></div><div id="fn26"><p><sup>26</sup>&nbsp;SF Bitcoin Developers, <em>Sidechains: Bringing New Elements to Bitcoin</em> (vidéo), 8 juin 2015&nbsp;: <a href="https://www.youtube.com/watch?v=Twynh6xIKUc" class="uri">https://www.youtube.com/watch?v=Twynh6xIKUc</a>.</p></div></div><p>Cette solution a été adaptée pour Bitcoin au cours de l’automne 2015, pour être appliquée comme un soft fork. La mise à niveau SegWit a été officiellement introduite à la communauté par le développeur Pieter Wuille le 7 décembre 2015, lors de la conférence Scaling Bitcoin <span class="smallcaps">II</span> à Hong Kong. En substance, elle consistait à déplacer les scripts de déverrouillage dans le témoin de la transaction. Deux identifiants étaient alors calculés&nbsp;: l’identifiant classique (<code>txid</code>), qui ne prend pas en compte ce témoin, et l’identifiant complet (noté <code>wtxid</code> pour <em>witness transaction identifier</em>), qui recouvre l’intégralité de la transaction. Les identifiants complets étaient regroupés dans un second arbre de Merkle, l’arbre témoin, dont la racine était placée dans la transaction de récompense du bloc, ce qui faisait que toutes les données étaient engagées dans le calcul de la preuve de travail. De l’autre côté, les transactions et les blocs restaient valides pour les nœuds n’ayant pas été mis à niveau.</p>
+<p>SegWit est active depuis le 24 août 2017. L’absence de script de déverrouillage dans le calcul de l’identifiant classique permet de ne plus avoir de malléabilité du tout, ni des signataires, ni d’un tiers extérieur.</p>
+</section>
+<section id="laugmentation-de-la-capacité-transactionnelle" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="laugmentation-de-la-capacité-transactionnelle">L’augmentation de la capacité transactionnelle</h3>
+<p>SegWit a aussi eu pour effet indirect de créer un bloc d’extension et d’augmenter la capacité transactionnelle. En effet, les nœuds suivant les anciennes règles ne voyaient pas le témoin, de sorte qu’ils ne le comptabilisaient pas dans la taille du bloc. La question était alors de savoir quelle limite mettre sur le témoin.</p>
+<p>La réponse a été d’inventer une nouvelle métrique pour mesurer l’impact des transactions et des blocs sur le réseau&nbsp;: le poids (<em>weight</em>), qui est une moyenne pondérée de la taille de base et de la taille du témoin. Exprimé en unités de poids (<em>weight unit</em>), il est défini comme la somme du quadruple de la taille de base (<span class="math inline">\(s_b\)</span>) et de la taille du témoin (<span class="math inline">\(s_w\)</span>)&nbsp;:</p>
+<p><span class="math display">\[w = 4 ~ s_b + s_w\]</span></p>
+<p>Il en découle une taille virtuelle (<span class="math inline">\(s_v\)</span>) qui est définie comme la somme de la taille de base et du quart de la taille du témoin, c’est-à-dire&nbsp;: <span class="math inline">\(s_v = s_b + \frac{s_w}{4}\)</span>. La taille limite des blocs est devenue un poids limite des blocs, qui était de 4 millions d’unités au moment de la mise à niveau et qui était toujours le même en novembre 2023.</p>
+<p>De ce fait, les frais qui étaient initialement calculés en satoshis par octet (sat/o), sont, depuis SegWit, mesurés en satoshis par octet virtuel (sat/ov). Les mineurs sélectionnent les transactions en fonction de ce taux afin d’être les plus rentables possibles par rapport à cette limite. Cet effet n’est valable que si la limite est atteinte.</p>
+<p>Avec SegWit, il s’agit donc de pondérer l’impact des entrées par rapport à celui des sorties sur le calcul des frais. Si l’activité rejoint le plafond de capacité, alors les sorties sont quatre fois plus chères à inscrire sur la chaîne que les scripts de déverrouillage contenus dans les entrées. La mise à niveau, en plus d’installer une remise qui incite à son usage, a créé une dissuasion à alourdir l’ensemble des UTXO. Le facteur 4 se rapproche de la pondération matérielle<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;SegWit Resources, <em>Why a discount factor of 4? Why not 2 or 8?</em>, 13 janvier 2017&nbsp;: <a href="https://medium.com/segwit-co/why-a-discount-factor-of-4-why-not-2-or-8-bbcebe91721e" class="uri">https://medium.com/segwit-co/why-a-discount-factor-of-4-why-not-2-or-8-bbcebe91721e</a>.</p></div><div id="fn28"><p><sup>28</sup>&nbsp;Une transaction à 2 entrées et 2 sorties de type P2WPKH mesure 372 octets et pèse 834 unités de poids au maximum. De ce fait, il est possible d’inclure 4&nbsp;796 transactions dans un bloc, ce qui nous permet de calculer sa taille réelle.</p></div></div><p>Cette limite de 4 millions d’unités de poids est indicative. La taille réelle des blocs n’atteint généralement pas 4&nbsp;Mo en raison de la forme des transactions. Les données contenues dans une transaction normale ne sont en effet pas regroupées dans le témoin, de sorte qu’elle ne remplissent pas entièrement l’espace de bloc autorisé. Par exemple, si nous prenons un bloc constitué uniquement de transactions à 2 entrées et 2 sorties utilisant SegWit, alors sa taille réelle sera de 1,784&nbsp;Mo<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>.</p>
+<p>Les transactions dont les données de déverrouillage sont plus grandes profitent mieux de cet espace de bloc supplémentaire. C’est le cas des transactions qui utilisent la multisignature telles que les fermetures de canaux de paiement. Il est ainsi possible d’approcher la taille des 4&nbsp;Mo en maximisant la taille des données contenues dans le témoin. C’est ce qui a été fait le 1 février 2023 avec la création d’un bloc de 3,955&nbsp;Mo dont le témoin a servi à l’inscription d’une image<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;Voir le bloc 774&nbsp;628, d’identifiant `` dont la taille était de 3&nbsp;955&nbsp;272&nbsp;octets et qui incluait une transaction qui mesurait à elle seule 3&nbsp;938&nbsp;383&nbsp;octets.</p></div></div></section>
+<section id="le-versionnage-des-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="le-versionnage-des-scripts">Le versionnage des scripts</h3>
+<p>Enfin, la mise à niveau SegWit a apporté un versionnage des scripts, qui permettait le déploiement de futures mises à niveau. La version permettait ainsi d’indiquer quelles règles étaient appliquées. La première version de SegWit en 2017 utilisait la version 0, et le déploiement de Taproot en 2021 a été fait au moyen de la version 1.</p>
+<p>Trois types de sortie natifs liés à SegWit existent pour l’instant&nbsp;: le schéma P2WPKH, le schéma P2WSH et le schéma P2TR.</p>
+</section>
+<section id="p2wpkh-pay-to-witness-public-key-hash" class="level3">
+<h3 class="anchored" data-anchor-id="p2wpkh-pay-to-witness-public-key-hash">P2WPKH&nbsp;: Pay to Witness Public Key Hash</h3>
+<p>Le schéma <em>Pay to Witness Public Key Hash</em> (P2WPKH), qui signifie littéralement «&nbsp;payer à l’empreinte de la clé publique témoin&nbsp;», est le premier schéma mis en place par SegWit. L’empreinte de la clé publique est obtenue par le hachage standard (SHA-256 suivi de RIPEMD-160). Le script de verrouillage apparent est alors&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;version (0)&gt; &lt;empreinte (hash160) de la clé publique&gt;</code></pre>
+<p>Ce script est semblable à un script <em>anyone-can-spend</em>, que tout le monde pourrait dépenser, mais l’interpréteur ajoute une condition supplémentaire pour que ce ne soit pas le cas. Le type de la sortie est détecté grâce à sa forme&nbsp;: la version de SegWit (ici 0) et la taille de l’empreinte (ici 20 octets). La version et l’empreinte forment l’information essentielle de l’adresse, qui est encodée grâce au format Bech32 et qui commence toujours par <code>bc1q</code>, à l’instar de ``.</p>
+<p>Le script de déverrouillage est vide. Les données de déverrouillage sont contenues dans le témoin de la transaction. La partie du témoin correspondant à l’entrée est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;2&gt; &lt;signature&gt; &lt;clé publique&gt;</code></pre>
+</section>
+<section id="p2wsh-pay-to-witness-script-hash" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="p2wsh-pay-to-witness-script-hash">P2WSH&nbsp;: Pay to Witness Script Hash</h3>
+<p>Le schéma <em>Pay to Witness Script Hash</em> (P2WSH), dont la traduction littérale est «&nbsp;payer à l’empreinte du script témoin&nbsp;», est la retranscription de P2SH pour SegWit. L’empreinte du script de récupération est obtenue par SHA-256, par peur d’une collision de RIPEMD-160 dans le cas d’une adresse générée par plusieurs personnes<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>. Le script de verrouillage est le suivant&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;Gavin Andresen, <em>[bitcoin-dev] Time to worry about 80-bit collision attacks or not?</em>, /01/2016 19:02:05 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-January/012198.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-January/012198.html</a>.</p></div></div><pre data-fontsize="\footnotesize"><code>&lt;version (0)&gt; &lt;empreinte (sha256) du script de récupération&gt;</code></pre>
+<p>Ce script est encore une fois <em>anyone-can-spend</em> de manière apparente. Le type de la sortie est détecté par l’interpréteur grâce à sa forme&nbsp;: la version de SegWit (ici 0) et la taille de l’empreinte (ici 32 octets). L’adresse est à nouveau constituée de ces deux informations et encodée grâce au format Bech32.</p>
+<p>Le script de déverrouillage est vide. Les données de déverrouillage sont contenues dans le témoin de la transaction. La partie du témoin correspondant à l’entrée est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;nombre d'élements + 1&gt; [éléments de déverrouillage] &lt;script de
+récupération&gt;</code></pre>
+<p>Dans les deux cas, l’empreinte est aussi appelée «&nbsp;programme du témoin&nbsp;».</p>
+</section>
+<section id="les-types-imbriqués-p2sh-p2wpkh-p2sh-p2wsh" class="level3">
+<h3 class="anchored" data-anchor-id="les-types-imbriqués-p2sh-p2wpkh-p2sh-p2wsh">Les types imbriqués (P2SH-P2WPKH, P2SH-P2WSH)</h3>
+<p>SegWit a aussi modifié le format P2SH pour inclure de nouvelles exceptions. Ces exceptions correspondent aux types imbriqués (<em>nested</em>) P2SH-P2WPKH et P2SH-P2WSH. Leur fonctionnement consiste à inclure les scripts de verrouillages précédents (version + empreinte) dans une sortie P2SH en tant que scripts de récupération. Le script de récupération est alors exécuté différemment pour faire appel aux données contenues dans le témoin.</p>
+<p>Ces types imbriqués ont permis de faciliter la transition vers SegWit en rendant les portefeuilles non mis à jour capables d’envoyer des fonds vers ces adresses. L’utilisation d’adresses SegWit natives reste néanmoins plus avantageuse.</p>
+</section>
+<section id="p2tr-pay-to-taproot" class="level3">
+<h3 class="anchored" data-anchor-id="p2tr-pay-to-taproot">P2TR&nbsp;: Pay to Taproot</h3>
+<p>Le dernier schéma à entrer en vigueur est le schéma <em>Pay to Taproot</em> (P2TR), dont le nom peut être traduit par «&nbsp;payer à Taproot&nbsp;». Ce schéma permet de recevoir un paiement sur une clé publique externe qui cache une clé privée servant à signer les transferts de fonds, ou bien la racine pivot d’un arbre de Merkle contenant les clauses d’un contrat autonome (MAST). Puisque la destination du paiement est une clé publique, il s’agit en quelque sorte d’un retour au P2PK. Le script de verrouillage présent dans la sortie transactionnelle est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>&lt;version (1)&gt; &lt;clé publique Taproot&gt;</code></pre>
+<p>La clé publique en question mesure 32 octets. La version et la clé publique constituent les éléments constitutifs de l’adresse. Cette dernière est encodée grâce au format Bech32m, qui est une variante de l’encodage Bech32 ayant corrigé un petit bug dans le calcul de la somme de contrôle. L’adresse résultante commence toujours par <code>bc1p</code> comme par exemple ``. Le déverrouillage de la sortie se fait avec une signature simple, ou bien avec l’exécution du MAST.</p>
+<p>Toutes ces modifications majeures font de SegWit une mise à niveau profonde du protocole, qui a amené beaucoup de choses dans Bitcoin. L’exigence de passer par un soft fork explique la forme qu’elle a prise et elle ne peut par conséquent être comprise que dans le contexte dans lequel elle a été activée. Toutefois, cette mise à niveau a aussi apporté des inconvénients majeurs, dont les deux principaux sont la dette technique alourdissant le coût de maintien et d’amélioration du code, et l’affaiblissement de la confidentialité générale due à l’apparition de nouveaux types d’adresses partiellement adoptés. SegWit était donc loin d’être une mise à niveau parfaite.</p>
+</section>
+</section>
+<section id="le-mélange-de-pièces" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-mélange-de-pièces">Le mélange de pièces</h2>
+<p>Le fait que les transactions soient publiées sur la chaîne entraîne une surveillance. Comme nous l’avons fait remarquer précédemment, il est possible de faire des suppositions pour deviner ce qui se passe réellement sur la chaîne, en admettant que l’utilisateur cherche à minimiser les frais payés au sein de ses transactions. Ces heuristiques (telles que l’heuristique de co-dépense, l’heuristique de la sortie complémentaire ou encore l’heuristique de l’empreinte du portefeuille) forment la base d’une discipline appelée l’analyse de chaîne qui consiste à recouper ces observations avec l’identification d’acteurs réels afin de tirer des conclusions sur leur activité économique effective. C’est pourquoi on parle parfois de «&nbsp;transparence&nbsp;» de la chaîne.</p>
+<p>Cependant, cette transparence est toute relative, car les données de la chaîne ne révèlent pas l’identité des personnes&nbsp;: le système est pseudonyme, dans le sens où il recense les mouvements entre les adresses, et pas entre les personnes. Le modèle de confidentialité de Bitcoin, décrit par Satoshi Nakamoto dans le livre blanc en 2008, consiste ainsi à garder secret le lien qui existe entre l’identité d’une personne et ses adresses<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;«&nbsp;Le modèle bancaire traditionnel atteint un certain niveau de confidentialité en limitant l’accès aux informations aux parties concernées et au tiers de confiance. La nécessité d’annoncer publiquement toutes les transactions exclut cette méthode, mais la confidentialité peut toujours être préservée en interrompant le flux d’informations à un autre endroit&nbsp;: en gardant les clés publiques anonymes. Le public peut voir que quelqu’un envoie un montant à quelqu’un d’autre, mais ne dispose pas d’informations reliant la transaction à qui que ce soit.&nbsp;» – Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="img/white-paper-privacy-model-fr.eps" class="img-fluid"></p>
+<figcaption>Modèle de confidentialité présenté dans le livre blanc de Bitcoin.</figcaption>
+</figure>
+</div>
+<p>Ce modèle de confidentialité possède des faiblesses évidente&nbsp;: les fuites d’information accidentelles, qui ont toujours lieu en ce qui concerne le numérique, et la divulgation volontaire de l’identité de l’utilisateur par son interlocuteur dans l’échange. Par conséquent, nul ne peut prétendre exercer une activité complètement secrète qui échapperait absolument à la surveillance<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>. C’est pour cette raison qu’il existe des méthodes permettant de limiter l’effet de ces révélations afin de restaurer sa confidentialité en toute sérénité.</p>
+<div class="no-row-height column-margin column-container"><div id="fn32"><p><sup>32</sup>&nbsp;«&nbsp;nul ne peut prétendre exercer une activité complètement secrète qui échapperait absolument à la surveillance&nbsp;»&nbsp;: Les premiers utilisateurs de Bitcoin ont ainsi été bien imprudents, à l’instar de Hal Finney qui a révélé des informations entre 2013 et 2014 permettant de déduire qu’il possédait plus de 10&nbsp;000&nbsp;bitcoins en 2011. – Hal Finney, <em>Bitcoin and me</em>, /03/2013 20:40:02 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833" class="uri">https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833</a>&nbsp;; Andy Greenberg, <em>Nakamoto’s Neighbor: My Hunt For Bitcoin’s Creator Led To A Paralyzed Crypto Genius</em>, 25 mars 2014&nbsp;: <a href="https://www.forbes.com/sites/andygreenberg/2014/03/25/satoshi-nakamotos-neighbor-the-bitcoin-ghostwriter-who-wasnt/" class="uri">https://www.forbes.com/sites/andygreenberg/2014/03/25/satoshi-nakamotos-neighbor-the-bitcoin-ghostwriter-who-wasnt/</a>.</p></div><div id="fn33"><p><sup>33</sup>&nbsp;«&nbsp;Comme pare-feu supplémentaire, une nouvelle paire de clés devrait être utilisée pour chaque transaction afin de les empêcher d’être liées à un propriétaire commun. Certains liens sont toujours inévitables avec les transactions à entrées multiples, qui révèlent nécessairement que leurs entrées appartiennent au même propriétaire. Le risque est que si le propriétaire d’une clé est révélé, la liaison pourrait révéler d’autres transactions qui lui appartiennent.&nbsp;» – Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>La première mesure est l’usage unique des adresses. Elle consiste à générer une nouvelle clé privée et une nouvelle adresse lors de chaque paiement entrant ou sortant. L’apport de cette pratique est de réduire l’impact de la divulgation du lien avec l’identité sur la confidentialité générale&nbsp;: tant que l’adresse n’est pas liée à d’autres par l’observation d’une action sur la chaîne (co-dépense par exemple), la fuite d’information se limite à cette seule adresse. Cette bonne pratique, citée dans le livre blanc<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>, est aujourd’hui implémentée dans tous les bons portefeuilles.</p>
+<p>Au-delà de la prévention, il existe également des méthodes pour corriger ses erreurs. La plus connue d’entre elles est le mélange de pièces, qui consiste à combiner ses UTXO avec les UTXO d’autres utilisateurs afin de briser les liens déterministes qui existe entre les pièces et l’identité de leurs propriétaires.</p>
+<p>Le mélange de bitcoins était originellement pris en charge par des services de mixage centralisés, appelés <em>mixers</em> ou <em>tumblers</em>, qui recevaient les bitcoins des utilisateurs, les fusionnaient et leur renvoyaient des bitcoins communs au bout d’un certain temps, préférablement sous la forme de plusieurs transactions. Le premier mélangeur de ce type était BitLaundry, une plateforme qui a été lancée en septembre 2010 par Peter Vessenes<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>. Ces services permettaient d’obscurcir la provenance des bitcoins pour un observateur extérieur, mais pas pour leurs gestionnaires, qui pouvaient aussi s’emparer des bitcoins au passage, ce qui constituait un risque double.</p>
+<div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;«&nbsp;BitLaundry, une plateforme qui a été lancée en septembre 2010 par Peter Vessenes&nbsp;»&nbsp;: Peter Vessenes, <em>Announcing: BitLaundry – decorrelated payment service</em>, /09/2010 05:52:25 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=963.msg11823#msg11823" class="uri">https://bitcointalk.org/index.php?topic=963.msg11823#msg11823</a>.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;Gregory Maxwell, <em>CoinJoin: Bitcoin privacy for the real world</em>, /08/2013 02:32:31 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902" class="uri">https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902</a>.</p></div></div><p>Une technique pour procéder à ce type de mélange sans devoir passer par un intermédiaire a été développée par la suite&nbsp;: c’était CoinJoin, dont la description formelle a été faite en août 2013 par Gregory Maxwell<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Cette méthode consiste à impliquer les pièces dans une transaction jointe collaborative qui brise la correspondance entre les entrées et une partie des sorties. La transaction classique que l’on se représente est celle de plusieurs utilisateurs qui signent chacun une entrée, dont le même nombre de sorties possèdent un montant égal, et dont le reste des sorties forment les sorties complémentaires. Dans ce cas, les sorties complémentaires sont toujours liées aux entrées, contrairement aux sorties principales qui sont indiscernables les unes des autres.</p>
+<div id="fig:coinjoin-transaction" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/coinjoin-transaction-5i-10o.eps" class="img-fluid"></p>
+<figcaption>Exemple d’une transaction CoinJoin à 5 utilisateurs.</figcaption>
+</figure>
+</div>
+<p>Ces mélanges reposent sur la notion d’«&nbsp;ensemble d’anonymat&nbsp;» (<em>anonymity set</em>) qui permet de mesurer la difficulté à faire le lien entre l’entrée et la sortie à un moment donné. On peut ainsi obtenir un score prospectif qui est le nombre de possibilités de pièces en sorties auxquelles peuvent correspondre une pièce en entrée. Dans notre exemple illustré par la figure&nbsp;<a href="#fig:coinjoin-transaction" data-reference-type="ref" data-reference="fig:coinjoin-transaction">12.7</a>, le score prospectif de la sortie au moment de la transaction est de 5. Si la pièce avait subi un nouveau mélange (comme c’est fait dans Whirlpool), alors elle aurait eu un score prospectif de 9. De même, si l’une des autres pièces avait été incluse dans un nouveau mélange, alors le score de la pièce observée aurait augmenté d’autant. On peut aussi calculer un score rétrospectif qui correspond au nombre de potentielles pièces en entrée auxquelles peut être liée une sortie particulière, qu’on suppose être de 5 dans le cas de notre transaction simple, mais qui peut être largement supérieur si une ou plusieurs pièces ont déjà fait l’objet de mélanges successifs<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn36"><p><sup>36</sup>&nbsp;Loïc Morel, <em>Comprendre et utiliser le CoinJoin sur Bitcoin</em>, 19 juillet 2022&nbsp;: <a href="https://www.pandul.fr/post/comprendre-et-utiliser-le-coinjoin-sur-bitcoin" class="uri">https://www.pandul.fr/post/comprendre-et-utiliser-le-coinjoin-sur-bitcoin</a>.</p></div><div id="fn37"><p><sup>37</sup>&nbsp;Adam Ficsor (nopara73), TDevD, <em>ZeroLink: The Bitcoin Fungibility Framework</em>, 14 août 2017&nbsp;: <a href="https://github.com/nopara73/ZeroLink/tree/32ad53927a343383534bea28fffb098af65fe62a" class="uri">https://github.com/nopara73/ZeroLink/tree/32ad53927a343383534bea28fffb098af65fe62a</a>.</p></div></div><p>Pour gérer le tout, le système utilise généralement un protocole qui permet aux participants d’être mis en relation anonymement par le biais d’un coordinateur sans risque de fuite d’information ou de vol des fonds. Le plus connu est ZeroLink, développé par Adam Ficsor et TDevD en août 2017, qui est un protocole qui utilise le procédé de signature aveugle de David Chaum<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. C’est en ce sens qu’on parle parfois de CoinJoin chaumien (<em>Chaumian CoinJoin</em>). Une implémentation classique de cette idée a été réalisée par Whirlpool et par Wasabi 1.0. De plus, des variantes (CoinShuffle, CoinShuffle++, CashShuffle, CashFusion) ont été implémentées sur des variantes de Bitcoin comme Decred ou Bitcoin Cash. Plus récemment le portefeuille Wasabi a intégré Wabisabi qui permet de réaliser des mélanges avec des valeurs arbitraires en sortie, ce qui complique l’estimation de la confidentialité apportée mais évite d’avoir à gérer les sorties complémentaires d’une manière séparée.</p>
+<p>Pour autant, les transactions collaboratives ne se limitent pas à CoinJoin. Il existe par exemple une autre méthode, appelée PayJoin, qui permet au commerçant de réaliser un mélange avec le client au moment du paiement, en impliquant une pièce en entrée. Cette opération a pour effet de fausser l’analyse de chaîne en faisant croire à l’observateur extérieur qu’un seul utilisateur a réuni ses pièces en entrée et en cachant le montant réel du paiement.</p>
+<p>Reprenons notre exemple d’Alice qui paie 7 mBTC à Bob en réunissant deux pièces de 6 et 2 mBTC afin d’atteindre un montant suffisant en entrée. Dans ce cas, les deux entrées sont supposément liées entre elles (heuristique de co-dépense) et liées à la sortie de 1 mBTC (heuristique de la sortie complémentaire). Ici, comme représenté sur la figure&nbsp;<a href="#fig:payjoin-transaction" data-reference-type="ref" data-reference="fig:payjoin-transaction">12.8</a>, l’application de PayJoin consiste pour le commerçant à inclure une ou plusieurs pièces en entrée et à augmenter d’autant le montant de la sortie qui lui est destinée, de 7 mBTC par exemple.</p>
+<div id="fig:payjoin-transaction" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/payjoin-transaction-3i-2o.eps" class="img-fluid"></p>
+<figcaption>Exemple d’une transaction PayJoin.</figcaption>
+</figure>
+</div>
+<p>Cette technique a été conceptualisée en 2018 de plusieurs manières indépendantes, notamment par le biais du protocole de paiement Pay-to-EndPoint<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a> (P2EP) et par les transactions Stowaway de Samourai Wallet<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>. Leur implémentation s’est faite respectivement en 2019 pour les transactions Stowaway<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a> et en 2020 pour P2EP<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn38"><p><sup>38</sup>&nbsp;«&nbsp;protocole de paiement Pay-to-EndPoint&nbsp;»&nbsp;: Adam Ficsor, <em>Pay To EndPoint</em>, 31 juillet 2018&nbsp;: <a href="https://nopara73.medium.com/pay-to-endpoint-56eb05d3cac6" class="uri">https://nopara73.medium.com/pay-to-endpoint-56eb05d3cac6</a>.</p></div><div id="fn39"><p><sup>39</sup>&nbsp;«&nbsp;transactions Stowaway de Samourai Wallet&nbsp;»&nbsp;: Samourai Wallet, <em>Stowaway</em>&nbsp;: <a href="https://samouraiwallet.com/stowaway" class="uri">https://samouraiwallet.com/stowaway</a>. – Il y a également protocole Bustapay qui a été proposé dans le BIP-79 en août 2018.</p></div><div id="fn40"><p><sup>40</sup>&nbsp;«&nbsp;2019 pour les transactions Stowaway&nbsp;»&nbsp;: Samourai Wallet, <em>Collaborative Transactions - "Cahoots"</em>, 11 mars 2019&nbsp;: <a href="https://blog.samouraiwallet.com/post/183378923792/collaborative-transactions-cahoots" class="uri">https://blog.samouraiwallet.com/post/183378923792/collaborative-transactions-cahoots</a>.</p></div><div id="fn41"><p><sup>41</sup>&nbsp;«&nbsp;2020 pour P2EP&nbsp;»&nbsp;: Samson Mow, Daniel Williams, <em>Bitcoin Privacy Improves With BTCPay Server’s P2EP Implementation</em>, 16 avril 2020&nbsp;: <a href="https://blog.blockstream.com/en-bitcoin-privacy-improves-with-btcpay-servers-p2ep-implementation/" class="uri">https://blog.blockstream.com/en-bitcoin-privacy-improves-with-btcpay-servers-p2ep-implementation/</a>.</p></div><div id="fn42"><p><sup>42</sup>&nbsp;Chris Belcher, <em>Design for a CoinSwap Implementation for Massively Improving Bitcoin Privacy and Fungibility</em>, 25 mai 2020&nbsp;: <a href="https://gist.github.com/chris-belcher/9144bd57a91c194e332fb5ca371d0964" class="uri">https://gist.github.com/chris-belcher/9144bd57a91c194e332fb5ca371d0964</a>.</p></div></div><p>Enfin, une dernière méthode qui s’inscrit dans la logique du mélange de pièces est Coinswap, qui est un procédé développé par Chris Belcher, permettant à deux utilisateurs ou plus d’échanger leurs pièces sans qu’ils aient besoin de se faire confiance et sans que cette opération laisse une trace particulière sur la chaîne<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>. Cette technique comporte cependant un inconvénient supplémentaire dans le sens où l’une des parties récupère l’historique entier de la pièce de l’autre, et doit en assumer l’éventuelle responsabilité.</p>
+</section>
+<section id="dautres-techniques-de-confidentialité" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="dautres-techniques-de-confidentialité">D’autres techniques de confidentialité</h2>
+<p>Outre le mélange de pièces simple consistant à brouiller les pistes qu’un observateur externe pourrait suivre, il existe un certain nombre de techniques qui permettent d’améliorer la confidentialité de Bitcoin. Celles-ci requièrent souvent la modification du protocole de base et représentent des compromis, raison pour laquelle elles ne sont pas forcément mises en œuvre.</p>
+<p>Ces techniques ont été développées dans les années qui ont suivi l’apparition de Bitcoin, notamment sur le forum Bitcointalk. N’étant probablement pas un cryptographe universitaire, Satoshi Nakamoto s’est surtout focalisé sur la robustesse du système lorsqu’il l’a conçu et n’a pas cherché à y inclure des techniques avancées. Cependant, il était ouvert à toutes les propositions qui permettraient de créer une «&nbsp;mise en œuvre de Bitcoin bien meilleure, plus facile et plus pratique<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn43"><p><sup>43</sup>&nbsp;Satoshi Nakamoto, <em>Re: Not a suggestion</em>, /08/2010 00:14:22 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=770.msg8637#msg8637" class="uri">https://bitcointalk.org/index.php?topic=770.msg8637#msg8637</a>.</p></div><div id="fn44"><p><sup>44</sup>&nbsp;«&nbsp;formalisé en 2001 par Ronald Rivest, Adi Shamir et Yael Tauman&nbsp;»&nbsp;: Ronald L. Rivest, Adi Shamir, Yael Tauman, «&nbsp;<em>How to Leak a Secret</em>&nbsp;», <em>Advances in Cryptology — ASIACRYPT 2001</em>, 2001, pp.&nbsp;552–565&nbsp;: <a href="https://people.csail.mit.edu/rivest/pubs/RST01.pdf" class="uri">https://people.csail.mit.edu/rivest/pubs/RST01.pdf</a>.</p></div><div id="fn45"><p><sup>45</sup>&nbsp;«&nbsp;signature de groupe&nbsp;»&nbsp;: Satoshi faisait référence à ces signatures de groupe dans l’un de ses messages écrits sur le forum en 2010. – Satoshi Nakamoto, <em>Re: Not a suggestion</em>, /08/2010 19:28:47 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=770.msg9074#msg9074" class="uri">https://bitcointalk.org/index.php?topic=770.msg9074#msg9074</a>.</p></div></div><p>La première technique de cet ordre est le procédé de signature de cercle (<em>ring signature</em>), qui a été formalisé en 2001 par Ronald Rivest, Adi Shamir et Yael Tauman<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a>. Celui-ci se base sur le procédé de signature de groupe<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>, introduit par David Chaum et Eugène van Heyst en 1991, qui permettait à chaque membre d’un groupe de signer un message au nom du groupe sans que ce membre puisse être identifié par un vérificateur externe, mais qui reposait sur un administrateur central. La signature de cercle innovait par le fait qu’elle ne requérait pas d’administrateur, pas de procédure d’installation, pas de coordination, et qu’elle ne permettait pas à un membre de révoquer son anonymat.</p>
+<p>En ce qui concerne la cryptomonnaie, le principe est le suivant&nbsp;: pour chaque pièce en entrée de la transaction, le signataire rassemble plusieurs autres pièces disponibles sur la chaîne (appelées sorties leurres ou <em>decoy outputs</em>), utilise leurs clés publiques et signe avec sa clé privée. Il fournit également une image de clé (<em>key image</em>) correspondant à la pièce, qui est écrite sur la chaîne et qui permet de garantir que la même pièce n’est pas dépensée deux fois. Plus le cercle implique de sorties, plus l’ensemble d’anonymat est grand. Le compromis est que l’utilisation des sorties transactionnelles en tant que leurres oblige les nœuds à conserver l’ensemble de ces sorties, puisqu’on ne peut pas savoir laquelle a été réellement dépensée.</p>
+<p>La deuxième technique est le procédé des adresses furtives, qui a été décrit en 2011 par Nicolas van Saberhagen et qui a été formalisé en 2014 par Peter Todd dans le cadre de Bitcoin<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>. Il utilise essentiellement le schéma d’échange de clés Diffie-Hellman basé sur les courbes elliptiques, abrégé en ECDH, afin de permettre de générer des adresses à usage unique.</p>
+<div class="no-row-height column-margin column-container"><div id="fn46"><p><sup>46</sup>&nbsp;Nicolas van Saberhagen (ByteCoin), <em>Untraceable transactions which can contain a secure message are inevitable</em>, /04/2011, 02:34:24 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=5965.msg87757#msg87757" class="uri">https://bitcointalk.org/index.php?topic=5965.msg87757#msg87757</a>&nbsp;; Peter Todd, <em>[Bitcoin-development] Stealth Addresses</em>, /01/2014 12:03:38 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2014-January/004020.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2014-January/004020.html</a>.</p></div><div id="fn47"><p><sup>47</sup>&nbsp;En termes mathématiques, si on note <span class="math inline">\(r\)</span> et <span class="math inline">\(R\)</span> les clés éphémères de transaction, <span class="math inline">\(v\)</span> et <span class="math inline">\(V\)</span> les clés d’inspection et <span class="math inline">\(k\)</span> et <span class="math inline">\(K\)</span> les clés de dépense, alors la méta-adresse est <span class="math inline">\(M = (K, V)\)</span>, le secret partagé est&nbsp;:</p></div></div><p>Le fonctionnement de base est le suivant. Le destinataire génère une clé privée et en déduit une clé publique qu’il transmet sous la forme d’une méta-adresse. L’expéditeur génère une clé privée éphémère, appelée clé privée de la transaction, et calcule la clé publique correspondante. Ils peuvent calculer un secret partagé à partir de leur clé privée et de la clé publique de l’autre (ECDH). L’expéditeur utilise ce secret et la clé publique du destinataire pour construire une adresse à usage unique et y envoie les fonds, que seul le destinataire peut dépenser sous condition de connaître la clé publique de transaction (qui peut être stockée dans une sortie NULLDATA). Au lieu d’utiliser une seule paire de clés, le destinataire peut également en utiliser deux pour qu’elles aient des rôles séparés&nbsp;: les clés d’inspection (<em>view keys</em>) et les clés de dépense (<em>spend key</em>). La clé privée d’inspection est le seul élément non public qui intervient dans la construction de l’adresse côté destinataire et sert donc à identifier les sorties correspondant à l’adresse en question. La clé privée de dépense est celle qui sert, comme son nom l’indique clairement, à dépenser les fonds<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>.</p>
+<p>Si elle est implémentée de manière externe au protocole, cette méthode a l’inconvénient d’exiger de balayer l’entièreté de la chaîne de blocs pour savoir si on a reçu un paiement. C’est dans l’idée d’éviter cette charge que le BIP-47 a été proposé.</p>
+<p>Le BIP-47 formalise ainsi une autre méthode apparentée aux adresses furtives, plus complexe, qui est celle des codes de paiement réutilisables (<em>reusable payment codes</em>) et qui a été implémentée sous la forme des PayNyms dans les portefeuilles Samourai et Sparrow<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>. Une autre méthode apparentée et plus complexe est celle des codes de paiement réutilisables (<em>reusable payment codes</em>) formalisés par Justus Ranvier dans le BIP-47, qui a été implémentée sous la forme des PayNyms dans les portefeuilles Samourai et Sparrow. Dans ce procédé, les codes de paiement de deux participants permettent de dériver les adresses de réception grâce à la dérivation de clés. Cela implique qu’il faut qu’ils connaissent leurs codes de paiement respectifs, et qu’au moins l’un de ces deux codes reste secret. Le code de paiement du destinataire est généralement public, de sorte que c’est celui de l’expéditeur qui doit être caché. Ce dernier est transmis de manière chiffrée sous la forme d’une transaction de notification envoyée à l’adresse du destinataire. Ce schéma a donc pour gros défaut d’exiger la réalisation d’une transaction (et le paiement des frais lié) pour ajouter un destinataire possible.</p>
+<div class="no-row-height column-margin column-container"><div id="fn48"><p><sup>48</sup>&nbsp;«&nbsp;BIP-47&nbsp;»&nbsp;: Justus Ranvier, <em>Reusable Payment Codes for Hierarchical Deterministic Wallets</em>, 24 avril 2015&nbsp;: <a href="https://github.com/bitcoin/bips/blob/master/bip-0047.mediawiki" class="uri">https://github.com/bitcoin/bips/blob/master/bip-0047.mediawiki</a>.</p></div><div id="fn49"><p><sup>49</sup>&nbsp;Ruben Somsen, <em>Silent Payments</em>, 13 mars 2022&nbsp;: <a href="https://gist.github.com/RubenSomsen/c43b79517e7cb701ebf77eec6dbb46b8" class="uri">https://gist.github.com/RubenSomsen/c43b79517e7cb701ebf77eec6dbb46b8</a>.</p></div></div><p>Une dernière variante est le procédé des paiements silencieux (<em>silent payments</em>), proposé en 2022 par Ruben Somsen<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>, qui évite la charge de la notification en utilisant la clé publique de l’une des entrées de la transaction, et réduit la charge du balayage de la chaîne, en se limitant à l’ensemble des UTXO ou à un sous-ensemble comme les sorties P2TR par exemple.</p>
+<p>La technique des signatures de cercle et le procédé des adresses furtives ont été combinés en 2013 dans le concept de cryptomonnaie CryptoNote par Nicolas van Saberhagen<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>. Dans celui-ci, les nœuds ont besoin de conserver l’ensemble des sorties transactionnelles (car le procédé des signatures de cercle dissimule le fait qu’une sortie a été dépensée) et chaque portefeuille a besoin de balayer l’ensemble de ces sorties pour voir s’il a reçu un paiement. L’intégration des <em>stealth addresses</em> au protocole permet de publier la clé publique éphémère directement dans la transaction (ce qui en fait une clé de transaction) et d’éviter la nécessité de notification. Le concept a été implémenté initialement dans le très douteux Bytecoin en mars 2014, avant de se retrouver dans Monero en avril de la même année, qui en est aujourd’hui le représentant principal, mettant notamment en œuvre des signatures de cercle à 16 membres.</p>
+<div class="no-row-height column-margin column-container"><div id="fn50"><p><sup>50</sup>&nbsp;Nicolas van Saberhagen, <em>CryptoNote v2.0</em>, 17 octobre 2013&nbsp;: <a href="http://cryptonote.org/whitepaper.pdf" class="uri">http://cryptonote.org/whitepaper.pdf</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20140529235502/http://cryptonote.org/whitepaper.pdf" class="uri">https://web.archive.org/web/20140529235502/http://cryptonote.org/whitepaper.pdf</a>.</p></div><div id="fn51"><p><sup>51</sup>&nbsp;Adam Back, <em>bitcoins with homomorphic value (validatable but encrypted)</em>, October 01, 2013, 02:19:53 PM&nbsp;: <a href="https://bitcointalk.org/index.php?topic=305791.msg3277431#msg3277431" class="uri">https://bitcointalk.org/index.php?topic=305791.msg3277431#msg3277431</a>&nbsp;; Gregory Maxwell, <em>Confidential Transactions</em>, 2015&nbsp;: <a href="https://web.archive.org/web/20150628230410/https://people.xiph.org/~greg/confidential_values.txt" class="uri">https://web.archive.org/web/20150628230410/https://people.xiph.org/~greg/confidential_values.txt</a>.</p></div></div><p>La troisième technique d’amélioration de la confidentialité est le procédé des <em>Confidential Transactions</em>, qui permet de dissimuler les montants impliqués dans les échanges des utilisateurs, et qui en toute logique devrait plutôt s’appeler <em>Confidential Amounts</em>. Le procédé a été décrit par Adam Back en 2013 et a été formalisé par Gregory Maxwell en 2015<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>. Il impose à chaque sortie transactionnelle de contenir un engagement de Perdersen (<em>Pedersen commitment</em>) qui lie la pièce à la clé publique du destinataire sans la dévoiler, et une preuve de portée (<em>range proof</em>) qui est une preuve à divulgation nulle de connaissance (ZKP) démontrant la validité du montant sans le révéler.</p>
+<p>Les Confidential Transactions ont été ajoutées en 2017 à Monero grâce au travail de Shen Noether<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a>. RingCT, qui permet de cacher les montants échangés, a ainsi été ajouté au protocole en janvier 2017 et a été rendu obligatoire en septembre de la même année. Il alourdissait les transactions par rapport aux transactions classiques. Néanmoins, depuis octobre 2018, ce compromis a été atténué grâce à l’implémentation des bulletproofs, qui a allégé le fardeau des preuves de portée et qui a permis de réduire de 80&nbsp;% la taille des transactions<a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn52"><p><sup>52</sup>&nbsp;«&nbsp;grâce au travail de Shen Noether&nbsp;»&nbsp;: Shen Noether, <em>Ring Confidential Transactions</em>, 2015&nbsp;: <a href="https://eprint.iacr.org/2015/1098.pdf" class="uri">https://eprint.iacr.org/2015/1098.pdf</a>.</p></div><div id="fn53"><p><sup>53</sup>&nbsp;Benedikt Bünz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, Gregory Maxwell, <em>Bulletproofs: Short Proofs for Confidential Transactions and More</em>, 2018&nbsp;: <a href="https://eprint.iacr.org/2017/1066.pdf" class="uri">https://eprint.iacr.org/2017/1066.pdf</a>.</p></div><div id="fn54"><p><sup>54</sup>&nbsp;«&nbsp;Mimblewimble&nbsp;»&nbsp;: Le nom du concept et le pseudonyme du créateur sont issus de l’univers d’Harry Potter&nbsp;: Mimblewimble est la formule du sortilège à la langue de Plomb qui interdit à l’adversaire de parler en faisant des nœuds avec sa langue (Mimblewimble est censé «&nbsp;empêcher la chaîne de blocs de parler des informations personnelles de ses utilisateurs&nbsp;») et Tom Elvis Jedusor est le vrai nom de Voldemort dans la traduction française.</p></div><div id="fn55"><p><sup>55</sup>&nbsp;«&nbsp;proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC #bitcoin-wizards&nbsp;»&nbsp;: Bitcoin-wizards logs, 1 août 2016&nbsp;: <a href="https://gnusha.org/bitcoin-wizards/2016-08-01.log" class="uri">https://gnusha.org/bitcoin-wizards/2016-08-01.log</a>. Lien originel&nbsp;: <a href="http://5pdcbgndmprm4wud.onion/mimblewimble.txt" class="uri">http://5pdcbgndmprm4wud.onion/mimblewimble.txt</a>.</p></div><div id="fn56"><p><sup>56</sup>&nbsp;Tom Elvis Jedusor, <em>Mimblewimble</em>, 19 juillet 2016, archive&nbsp;: <a href="https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.txt" class="uri">https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.txt</a>.</p></div><div id="fn57"><p><sup>57</sup>&nbsp;Andrew Poelstra, <em>Mimblewimble</em>, 6 octobre 2016&nbsp;: <a href="https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf" class="uri">https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf</a>.</p></div></div><p>Un autre concept faisant usage des Confidential Transactions est Mimblewimble<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>. Celui-ci a été proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC ``<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a> où il partageait un lien vers un texte descriptif hébergé sur Tor<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a>. Mimblewimble a attiré l’attention de certains développeurs de Bitcoin, dont le mathématicien Andrew Poelstra qui en a fait une description plus avancée dans un papier daté du 6 octobre 2016<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>.</p>
+<p>L’apport de Mimblewimble est de condenser l’historique des transactions en chamboulant la structure des transactions. Il repose sur trois primitives cryptographiques&nbsp;: les Confidential Transactions, qui cachent les montants, les signatures agrégées à sens unique (OWAS<a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>), qui permettent de combiner les transactions au sein d’un bloc, et le sectionnage des transactions<a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a> (<em>transaction cut-through</em>), qui permet de supprimer les sorties transactionnelles intermédiaires. Cette réduction, qui améliore la confidentialité du système de manière relativement légère, se fait au prix de la programmabilité, rendue directement impossible.</p>
+<div class="no-row-height column-margin column-container"><div id="fn58"><p><sup>58</sup>&nbsp;«&nbsp;OWAS&nbsp;»&nbsp;: Horas Yuan Mouton, <em>Increasing Anonymity in Bitcoin</em>, 9 septembre 2013&nbsp;: <a href="https://www.dropbox.com/s/nkh22cibel8stb4/horasyuanmouton.pdf" class="uri">https://www.dropbox.com/s/nkh22cibel8stb4/horasyuanmouton.pdf</a>&nbsp;; archive&nbsp;: <a href="https://download.wpsoftware.net/bitcoin/wizardry/horasyuanmouton-owas.pdf" class="uri">https://download.wpsoftware.net/bitcoin/wizardry/horasyuanmouton-owas.pdf</a>.</p></div><div id="fn59"><p><sup>59</sup>&nbsp;«&nbsp;sectionnage des transactions&nbsp;»&nbsp;: Gregory Maxwell, <em>Transaction cut-through</em>, /08/2013 22:17:19 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=281848.msg3014613#msg3014613" class="uri">https://bitcointalk.org/index.php?topic=281848.msg3014613#msg3014613</a>.</p></div></div><p>Mimblewimble a été mis en œuvre de manière native au sein du système Grin développé par Ignotus Peverell à partir d’octobre 2016 et lancé le 15 janvier 2019. Une autre implémentation, également lancée en janvier 2019, était le réseau Beam. Mimblewimble a également été intégré à Litecoin le 20 mai 2022 sous la forme d’un soft fork de bloc auxiliaire, appelé MWEB pour <em>MimbleWimble via Extension Blocks</em>.</p>
+<p>Enfin, il existe d’autres techniques d’anonymisation basées sur des preuves à divulgation nulle de connaissance. Les plus connues ont été popularisées au moyen de deux protocoles rendus publics en 2013 et en 2014 par Matthew Green et ses étudiants&nbsp;: Zerocoin et Zerocash<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>. Le premier protocole, Zerocoin, permet de cacher la provenance des fonds. Le second protocole permet de cacher la provenance, la destination et les montants, au moyen de zk-SNARK (<em>Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge</em><a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a>).</p>
+<div class="no-row-height column-margin column-container"><div id="fn60"><p><sup>60</sup>&nbsp;Ian Miers, Christina Garman, Matthew Green, Aviel D. Rubin, «&nbsp;<em>Zerocoin: Anonymous Distributed E-Cash from Bitcoin</em>&nbsp;», in <em>2013 IEEE Symposium on Security and Privacy</em>, 2013, pp.&nbsp;397–411&nbsp;: <a href="https://ieeexplore.ieee.org/document/6547123" class="uri">https://ieeexplore.ieee.org/document/6547123</a>&nbsp;; Eli Ben Sasson, Alessandro Chiesa, Christina Garman, Matthew Green, Ian Miers, Eran Tromer, Madars Virza, «&nbsp;<em>Zerocash: Decentralized Anonymous Payments from Bitcoin</em>&nbsp;», <em>2014 IEEE Symposium on Security and Privacy</em>, 2014, pp.&nbsp;459–474&nbsp;: <a href="https://ieeexplore.ieee.org/document/6956581" class="uri">https://ieeexplore.ieee.org/document/6956581</a>.</p></div><div id="fn61"><p><sup>61</sup>&nbsp;«&nbsp;<em>Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge</em>&nbsp;»&nbsp;: On peut traduire ce terme par «&nbsp;argument de connaissance succinct et non interactif à divulgation nulle de connaissance&nbsp;» en français.</p></div><div id="fn62"><p><sup>62</sup>&nbsp;Zooko Wilcox-O’Hearn, <em>The Design of the Ceremony</em>, 26 octobre 2016&nbsp;: <a href="https://electriccoin.co/blog/the-design-of-the-ceremony/" class="uri">https://electriccoin.co/blog/the-design-of-the-ceremony/</a>.</p></div></div><p>Zerocoin a été implémenté dans Zcoin en septembre 2016. À partir de 2019, Zcoin s’est progressivement éloigné du Zerocoin en adoptant les protocoles Sigma et Lelantus, et est devenu Firo en 2020. Zerocash a lui été implémenté au sein du système Zcash en octobre 2016. L’utilisation de preuves à divulgation nulle de connaissance demandait une configuration de confiance des paramètres publics. Tandis que les développeurs de Zcoin qui ont fait le choix d’utiliser des paramètres connus, ceux de Zcash ont décidé d’organiser un évènement, appelée «&nbsp;<em>The Ceremony</em>&nbsp;», dans le but de générer ces paramètres. Cette cérémonie a eu lieu du 21 au 23 octobre 2016 et a réuni six participants&nbsp;: Andrew Miller, Peter Van Valkenburgh, Zooko Wilcox-O’Hearn, Derek Hinch, Peter Todd et surtout Edward Snowden sous le pseudonyme de John Dobbertin<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>. Cette configuration de confiance a été rendu inutile en 2022 avec l’intégration du protocole Halo.</p>
+<p>De manière générale, tous ces procédés supposent des compromis au niveau de la scalabilité (les preuves sont plus lourdes qu’une simple signature), au niveau de l’auditabilité (ne pas voir les montants implique de devoir faire entièrement confiance aux procédés et à leur implémentation) et au niveau de la programmabilité (programmer des pièces s’oppose au fait de les rendre indistinctes). C’est pourquoi ils ont tous été mis en œuvre dans des versions alternatives de Bitcoin et pas dans sa version principale (BTC), la communauté de cette dernière étant plus conservatrice par nature.</p>
+</section>
+<section id="une-machine-complexe" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="une-machine-complexe">Une machine complexe</h2>
+<p>Bitcoin forme ainsi une machine qui peut sembler, à première vue, assez complexe. Cet enchevêtrement s’explique par ses objectifs et par les évènements qui ont jalonné son histoire technique. Son but premier – être une monnaie – est à l’origine de la représentation des bitcoins en circulation par des sorties transactionnelles non dépensées, une représentation qui rend la parallélisation plus facile et favorise la confidentialité des échanges (pouvant elle-même être accrue par le mélange des pièces et les techniques cryptographiques dédiées).</p>
+<p>De plus, la volonté de Satoshi d’automatiser divers mécanismes lui a fait intégrer un véritable système de programmation au sein du protocole. Celui-ci permet de mettre en place des contrats autonomes qui exécutent des interactions financières complexes entre plusieurs participants. Il facilite aussi, indirectement, l’inscription de données arbitraires sur la chaîne. Ces deux utilisations (contractuelle et notariale) forment les deux cas d’usage secondaires de Bitcoin, dont nous parlerons dans le prochain chapitre.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/la-determination-du-protocole.html" class="pagination-link" aria-label="La détermination du protocole">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/les-contrats-autonomes.html" class="pagination-link" aria-label="Les contrats autonomes">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

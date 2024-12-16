@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; La cybermonnaie avant Nakamoto – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/la-valeur-de-l-information.html" rel="next">
+<link href="../chapters/un-mouvement-technologique.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="6&nbsp; La cybermonnaie avant Nakamoto – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="6&nbsp; La cybermonnaie avant Nakamoto – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/la-cybermonnaie-avant-nakamoto.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#léchange-monétaire-sur-internet" id="toc-léchange-monétaire-sur-internet" class="nav-link active" data-scroll-target="#léchange-monétaire-sur-internet">L’échange monétaire sur Internet</a></li>
+  <li><a href="#ecash-largent-liquide-chaumien" id="toc-ecash-largent-liquide-chaumien" class="nav-link" data-scroll-target="#ecash-largent-liquide-chaumien">eCash&nbsp;: l’argent liquide chaumien</a></li>
+  <li><a href="#magic-money-les-cyberbucks-et-les-banques" id="toc-magic-money-les-cyberbucks-et-les-banques" class="nav-link" data-scroll-target="#magic-money-les-cyberbucks-et-les-banques">Magic Money, les CyberBucks et les banques</a></li>
+  <li><a href="#libtech-l-révolutionner-la-monnaie" id="toc-libtech-l-révolutionner-la-monnaie" class="nav-link" data-scroll-target="#libtech-l-révolutionner-la-monnaie">libtech-l&nbsp;: révolutionner la monnaie</a></li>
+  <li><a href="#le-concept-b-money" id="toc-le-concept-b-money" class="nav-link" data-scroll-target="#le-concept-b-money">Le concept b-money</a></li>
+  <li><a href="#le-modèle-bit-gold" id="toc-le-modèle-bit-gold" class="nav-link" data-scroll-target="#le-modèle-bit-gold">Le modèle bit gold</a></li>
+  <li><a href="#le-système-rpow" id="toc-le-système-rpow" class="nav-link" data-scroll-target="#le-système-rpow">Le système RPOW</a></li>
+  <li><a href="#le-projet-ripple" id="toc-le-projet-ripple" class="nav-link" data-scroll-target="#le-projet-ripple">Le projet Ripple</a></li>
+  <li><a href="#vers-bitcoin" id="toc-vers-bitcoin" class="nav-link" data-scroll-target="#vers-bitcoin">Vers Bitcoin</a></li>
+  <li><a href="#laboutissement-dune-quête" id="toc-laboutissement-dune-quête" class="nav-link" data-scroll-target="#laboutissement-dune-quête">L’aboutissement d’une quête</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:cybermonnaie" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:6" label="enotezch:6"></span></p>
+<p><span class="lettrine">L</span><span class="smallcaps">a</span> cybermonnaie est une monnaie dont le fonctionnement repose entièrement sur un réseau informatique appartenant à Internet. Elle est définie au sein de ce réseau et est transférée par son intermédiaire. Il s’agit d’une monnaie native du cyberespace, le nouvel espace créé par l’émergence d’Internet, conçu comme une juridiction séparée du monde physique.</p>
+<p>Une forme plus spécifique de cybermonnaie est l’argent liquide numérique, ou <em>digital cash</em> en anglais, qui transcrit les propriétés des espèces sonnantes et trébuchantes dans le cyberespace. Toutefois, bien que cette conception remonte à l’émergence même d’Internet, elle n’a pas tout de suite pu voir le jour en raison de limitations techniques et conceptuelles. L’argent liquide numérique a fait l’objet d’une véritable quête, à laquelle ont participé de nombreux individus désireux d’utiliser Internet pour créer un nouveau paradigme économique, dont les cypherpunks.</p>
+<p>Bitcoin est le résultat de cette quête. Il n’est pas sorti de nulle part&nbsp;: il est le fruit de réflexions, de recherches et d’expérimentations en tous genres. La découverte de Satoshi Nakamoto constitue ainsi une percée dans un domaine qui existait antérieurement.</p>
+<section id="léchange-monétaire-sur-internet" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="léchange-monétaire-sur-internet">L’échange monétaire sur Internet</h2>
+<p>Internet a généralisé le partage informationnel et, ce faisant, a créé un nouvel espace d’interactions humaines&nbsp;: le cyberespace. L’apparition de cet espace a naturellement mené à l’émergence d’une demande pour l’échange monétaire, demande qui s’est manifestée par le développement du commerce électronique dans les années 90. Comme le résumait très bien Robert Hettinga en 1998, la problématique était la suivante&nbsp;:</p>
+<p>«&nbsp;Depuis l’invention du télégraphe, le règlement des transactions financières se heurte à un problème&nbsp;: comment faire des affaires à distance alors que le moyen le plus simple d’exécuter, de compenser et de régler une transaction est l’échange de certificats au porteur<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>&nbsp;?&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Robert A. Hettinga, <em>Digital Bearer Settlement</em>, avril 1998&nbsp;: <a href="http://www.systemics.com/legal/digigold/discovery/postings/Geoecon.pdf" class="uri">http://www.systemics.com/legal/digigold/discovery/postings/Geoecon.pdf</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Le terme «&nbsp;<em>credit card</em>&nbsp;» a été utilisé en 1888 par Edward Bellamy, écrivain et journaliste socialiste américain et précurseur du mouvement technocratique, dans son roman de fiction spéculative <em>Looking Backward</em>, pour désigner la carte de paiement des citoyens de sa supposée utopie. Ce type de carte s’est ensuite développé dans les années 1920–1930 aux États-Unis sous la forme de cartes délivrées indépendamment par Western Union, par les grands magasins, par les compagnies pétrolières et compagnies aériennes.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;Sur les origines du réseau Visa, voir David L. Stearns, <em>Electronic Value Exchange: Origins of the VISA Electronic Payment System</em>, Springer, 2011. Le titre du livre est une référence au projet ambitieux de Dee Hock (le fondateur de Visa) de créer un protocole d’échange de valeur électronique (EVE) permettant d’effectuer l’intégralité des transactions sous forme électronique, ce qui donnerait lieu à «&nbsp;la genèse d’une nouvelle forme de monnaie mondiale&nbsp;».</p></div></div><p>La première solution était d’utiliser du crédit bancaire. L’usage de celui-ci comme intermédiaire d’échange s’était progressivement généralisé en Occident avec la bancarisation de la société. Au cours du temps, une solution technique avait prévalu&nbsp;: la carte de paiement, aussi appelée carte de débit ou carte de crédit selon son fonctionnement. Cette solution n’avait pas constitué quelque chose de novateur<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, mais s’était considérablement popularisée à partir des années 60, par le biais de l’adoption bancaire et de la formation de sociétés spécialisées dans le transfert électronique de fonds comme NBI&nbsp;/&nbsp;Visa et Interbank&nbsp;/&nbsp;MasterCard<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Mais le paiement par carte bancaire n’était pas forcément adapté au cyberespace, car difficile à mettre en place, coûteux et peu sécurisé à l’époque. C’est pourquoi on a vu émerger différentes solutions techniques permettant de faire des paiements sur Internet au milieu des années 90, comme CyberCash<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, First Virtual<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> ou Open Market. Des systèmes de micropaiements ont également fait leur apparition à l’instar de CyberCoin (géré par CyberCash), NetBill<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> et MilliCent<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;«&nbsp;CyberCash&nbsp;»&nbsp;: Peter Wayner, <em>Cybercash’s Lesson in Web Survival</em>, 10 août 1998&nbsp;: <a href="https://www.nytimes.com/1998/08/10/business/cybercash-s-lesson-in-web-survival.html" class="uri">https://www.nytimes.com/1998/08/10/business/cybercash-s-lesson-in-web-survival.html</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20150527080844/https://www.nytimes.com/1998/08/10/business/cybercash-s-lesson-in-web-survival.html" class="uri">https://web.archive.org/web/20150527080844/https://www.nytimes.com/1998/08/10/business/cybercash-s-lesson-in-web-survival.html</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;First Virtual&nbsp;»&nbsp;: <a href="https://www.nytimes.com/1994/10/15/business/company-news-a-credit-card-for-on-line-sprees.html" class="uri">https://www.nytimes.com/1994/10/15/business/company-news-a-credit-card-for-on-line-sprees.html</a></p></div><div id="fn6"><p><sup>6</sup>&nbsp;«&nbsp;NetBill&nbsp;»&nbsp;: Benjamin Cox, J. D. Tygar, Marvin Sirbu, <em>NetBill Security and Transaction Protocol</em>, 1995&nbsp;: <a href="https://people.eecs.berkeley.edu/~tygar/papers/Netbill_securiy_and_transaction_protocol.pdf" class="uri">https://people.eecs.berkeley.edu/~tygar/papers/Netbill_securiy_and_transaction_protocol.pdf</a>.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;«&nbsp;MilliCent&nbsp;»&nbsp;: Martín Abadi, Paul Gauthier, Steve Glassman, Mark S. Manasse, Patrick Sobalvarro, <em>The Millicent Protocol for Electronic Commerce</em>, 1995&nbsp;: <a href="https://www.w3.org/Conferences/WWW4/Papers/246/" class="uri">https://www.w3.org/Conferences/WWW4/Papers/246/</a>.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Sur l’histoire des débuts du service PayPal, voir Eric M. Jackson, <em>The PayPal Wars: Battles With Ebay, the Media, the Mafia, and the Rest of Planet Earth</em>, World Ahead Pub., 2012.</p></div></div><p>Ces systèmes ont fini par échouer, mais c’est dans cette niche que s’est développé le service PayPal à partir de 1999. Celui-ci était conçu pour être simple d’accès (PayPal signifie littéralement «&nbsp;payer copain&nbsp;»)&nbsp;: il permettait des paiements faciles et sans frais, entre adresses de courrier électronique. Son modèle économique se fondait sur la perception des intérêts liés à la conservation des fonds des clients en banque, afin de payer les coûts de fonctionnement et de rémunérer les actionnaires. C’était donc un service de troisième couche, bâti au-dessus du système bancaire, lui-même basé sur le système de monnaie centrale<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<p>En dépit des bonnes intentions de leurs créateurs, ces systèmes étaient complètement à la merci du régulateur. Ceux qui ont survécu se sont par conséquent engagés dans la surveillance et la censure, à un niveau jamais vu auparavant.</p>
+<p>La deuxième solution pour échanger de la valeur sur Internet était d’émettre une nouvelle monnaie numérique, de manière centralisée, si besoin en l’adossant à une monnaie existante. Cette solution consistait à ne pas demander l’autorisation, en jouant sur le flou juridique qui pouvait exister dans un domaine relativement nouveau.</p>
+<p>Les jeux vidéos en ligne massivement multijoueurs, dont les fameux MMORPG, ont contribué à installer l’idée de monnaie numérique indépendante dans les esprits. On peut penser au Token, la monnaie native de Habitat, l’un des premiers MMORPG graphiques, développé en 1985 par Lucasfilm Games et jouable sur Commodore 64<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. On peut aussi citer les cas des pièces de métaux précieux dans Everquest en 1999, du dollar Linden de Second Life en 2003 ou encore de l’or de World of Warcraft en 2004. Tous ces exemples prouvaient qu’une économie réelle pouvait émerger d’une monnaie virtuelle<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;«&nbsp;Habitat, l’un des premiers MMORPG graphiques, développé en 1985&nbsp;»&nbsp;: Chip Morningstar, F. Randall Farmer, <em>The Lessons of Lucasfilm’s Habitat</em>, mai 1990&nbsp;: <a href="http://www.fudco.com/chip/lessons.html" class="uri">http://www.fudco.com/chip/lessons.html</a>.</p></div><div id="fn10"><p><sup>10</sup>&nbsp;«&nbsp;une économie réelle pouvait émerger d’une monnaie virtuelle&nbsp;»&nbsp;: Julian Dibbell, <em>The Life of the Chinese Gold Farmer</em>, 17 juin 2007&nbsp;: <a href="https://www.nytimes.com/2007/06/17/magazine/17lootfarmers-t.html" class="uri">https://www.nytimes.com/2007/06/17/magazine/17lootfarmers-t.html</a>.</p></div><div id="fn11"><p><sup>11</sup>&nbsp;«&nbsp;le Hawthorne Exchange, lancé le 24 mars 1993 sur la liste de diffusion extropienne&nbsp;»&nbsp;: Brian Holt Hawthorne, <em>HEX: Introducing the Hawthorne Exchange</em>, /03/1993 06:20:21 UTC&nbsp;: <a href="https://diyhpl.us/~bryan/irc/extropians/raided-mailing-list-archives/unzipped/disk-07/DIG30152" class="uri">https://diyhpl.us/~bryan/irc/extropians/raided-mailing-list-archives/unzipped/disk-07/DIG30152</a>.</p></div></div><p>Un exemple anecdotique de ce type de système de monnaie numérique était le Hawthorne Exchange, lancé le 24 mars 1993 sur la liste de diffusion extropienne par un individu du nom de Brian Holt Hawthorne<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>. Il s’agissait d’un marché de réputation pour les membres de la liste, dont l’unité de compte servant à l’échange était le Thorne. Le système était peu accessible et peu robuste, mais les extropiens l’ont utilisé et ont donné de la valeur au Thorne, par anticipation du futur. Quelques échanges monétaires contre du dollar et des services ont été réalisés entre les membres de la liste. Toutefois, le Hawthorne Exchange était simplement une expérimentation, le Thorne n’ayant aucune prétention à être une réelle monnaie, que son auteur a décidé d’arrêter en 94.</p>
+<p>Un système bien plus sérieux est apparu en 1996&nbsp;: e-gold. Comme décrit dans le chapitre&nbsp;<a href="la-necessite-de-decentralisation.html" data-reference-type="ref" data-reference="ch:adversaire">4</a>, il s’agissait d’un modèle de monnaie en or numérique dont l’unité de compte était théoriquement adossée à de l’or. Le système reposait sur l’entreprise <em>Gold &amp; Silver Reserve Inc.</em> fondée par Douglas Jackson, qui conservait l’or physique dans ses coffres. Il a connu un grand succès dans les années 2000 avant d’être fermé en 2007 par le Secret Service.</p>
+<p>Toutefois, le problème avec ce type de monnaie était qu’il dépendait toujours d’une entité qui constituait un point de défaillance unique. Ainsi, même si les personnes qui le géraient n’étaient pas malintentionnées, ce type de système n’était pas robuste et ne pouvait pas perdurer à long terme.</p>
+<p>La troisième solution de cybermonnaie était la conception d’un argent liquide électronique, confidentiel, non contrôlé et décentralisé. L’idée était de diminuer le rôle du tiers de confiance le plus possible pour que la monnaie en question se rapproche au mieux de l’argent liquide physique, de minimiser la confiance impliquée. Idéalement l’objectif était d’obtenir un «&nbsp;or numérique&nbsp;» qui soit à la fois «&nbsp;infalsifiable, sans inflation, et intraçable<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;Hadon Nash, <em>Digital gold</em>, /08/1993 20:23:30 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1993/08/msg00698.html" class="uri">https://cypherpunks.venona.com/date/1993/08/msg00698.html</a>.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;«&nbsp;ce type de monnaie numérique était quelque chose d’essentiel dans leur combat&nbsp;»&nbsp;: Eric Hughes, <em>RANTS: A Cypherpunk’s Manifesto</em>, /03/1993 19:51:06 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1993/03/msg00392.html" class="uri">https://cypherpunks.venona.com/date/1993/03/msg00392.html</a>.</p></div></div><p>Les cypherpunks considéraient que ce type de monnaie numérique était quelque chose d’essentiel dans leur combat pour la liberté et la confidentialité<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>. Ils prévoyaient en effet d’utiliser ce type d’unité de compte dans leurs projets, comme en témoignent les Cryptocredits de BlackNet ou le mojo de Mojo Nation. C’est donc tout naturellement qu’ils ont cherché à développer une telle monnaie.</p>
+<p>Cependant, la conception d’un argent liquide numérique, d’une authentique cybermonnaie, n’était pas un tâche facile. La quête pour sa réalisation a mis de longues années avant d’aboutir. Et la première étape dans cette quête a été l’apparition de eCash, qui a eu le mérite de poser sur la table une proposition cohérente, répondant aux exigences des cypherpunks.</p>
+</section>
+<section id="ecash-largent-liquide-chaumien" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="ecash-largent-liquide-chaumien">eCash&nbsp;: l’argent liquide chaumien</h2>
+<p>eCash est un concept de monnaie numérique confidentielle qui a été conçu par le crytographe David Chaum dans les années 80 et qui a été mis en application au cours des années 90. Il a été décrit initialement par Chaum en 1982<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> avant d’être mis en avant en 1985 dans son article intitulé <em>Security without Identification</em> qui promettait de «&nbsp;rendre Big Brother obsolète<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>&nbsp;». Le modèle repose sur le mécanisme de signature aveugle, qui garantit la propriété de la monnaie et l’anonymat des échanges.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;«&nbsp;décrit initialement par Chaum en 1982&nbsp;»&nbsp;: David L. Chaum, «&nbsp;<em>Blind signatures for untraceable payments</em>&nbsp;», in <em>Advances in Cryptology: Proceedings of CRYPTO ’82</em>, 1982, pp.&nbsp;199–203&nbsp;: <a href="https://sceweb.sce.uhcl.edu/yang/teaching/csci5234WebSecurityFall2011/Chaum-blind-signatures.PDF" class="uri">https://sceweb.sce.uhcl.edu/yang/teaching/csci5234WebSecurityFall2011/Chaum-blind-signatures.PDF</a>.</p></div><div id="fn15"><p><sup>15</sup>&nbsp;David L. Chaum, «&nbsp;<em>Security without identification: transaction systems to make big brother obsolete</em>&nbsp;», in <em>Communications of the ACM</em>, vol.&nbsp;28, no. 10, octobre 1985, pp.&nbsp;1030—1044&nbsp;: <a href="https://www.cs.ru.nl/~jhh/pub/secsem/chaum1985bigbrother.pdf" class="uri">https://www.cs.ru.nl/~jhh/pub/secsem/chaum1985bigbrother.pdf</a>.</p></div></div><p>Le modèle eCash gère des billets numériques de différentes coupures qui peuvent être conservés par les utilisateurs. Les billets sont émis et remplacés par de serveurs appelés des banques (<em>banks</em>) ou des monnaieries (<em>mints</em>). Lorsqu’un billet est transféré, le destinataire l’envoie à sa banque qui se charge de le vérifier et de lui en redonner un autre. Les banques du système entretiennent chacune un registre des billets dépensés pour empêcher la double dépense. Le système est chapeauté par une autorité centrale qui délivre les habilitations.</p>
+<p>L’émission d’un billet numérique utilise comme on l’a dit le mécanisme de signature aveugle. Pour l’utilisateur, il s’agit essentiellement de choisir un grand nombre et de le faire signer par sa banque, de manière à ce que ce nombre reste uniquement connu de lui. Le fonctionnement de ce procédé mathématique est analogue à la signature d’un billet physique en papier carbone représentant une quantité précise d’unités monétaires (coupure). Voici comment se passe la création d’un billet par Alice&nbsp;:</p>
+<ol type="1">
+<li><p>Alice crée un billet en papier carbone (en générant aléatoirement un très grand nombre <span class="math inline">\(x\)</span>)&nbsp;;</p></li>
+<li><p>Alice place le billet dans une enveloppe fermée (en utilisant une fonction de commutation <span class="math inline">\(c\)</span> qu’elle seule connaît)&nbsp;;</p></li>
+<li><p>Alice envoie l’enveloppe contenant son billet à la banque et lui communique la coupure souhaitée&nbsp;;</p></li>
+<li><p>La banque signe l’enveloppe en indiquant la quantité d’unités que le billet représente (la banque dispose d’une clé privée pour chaque coupure), ce qui a pour effet de signer le billet en papier carbone à l’intérieur&nbsp;;</p></li>
+<li><p>La banque renvoie l’enveloppe à Alice&nbsp;;</p></li>
+<li><p>Alice ouvre l’enveloppe pour récupérer son billet signé (en utilisant la fonction d’inversion <span class="math inline">\(c'\)</span>)&nbsp;;</p></li>
+<li><p>Alice vérifie que la signature de la banque est authentique (en vérifiant qu’elle correspond à la clé publique de la banque liée à la coupure demandée).</p></li>
+</ol>
+<p>Le transfert du billet signé se fait en le donnant à quelqu’un d’autre. Ainsi, le paiement de Bob par Alice pour un service rendu se compose des étapes suivantes&nbsp;: d’abord, Alice transmet le billet à Bob&nbsp;; puis, Bob vérifie qu’il a bien été signé par la banque d’Alice&nbsp;; ensuite, il envoie immédiatement le billet réceptionné à sa banque&nbsp;; enfin, la banque de Bob vérifie que le billet n’a pas déjà été utilisé et, le cas échéant, signe un nouveau billet de la même coupure pour le donner à Bob.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="img/chaumian-ecash.eps" class="img-fluid"></p>
+<figcaption>Création et remplacement d’un billet chaumien.</figcaption>
+</figure>
+</div>
+<p>Les billets numériques peuvent être émis pour eux-mêmes, auquel cas ils forment une monnaie de base. Mais ils peuvent également être adossés à une autre monnaie comme le dollar. Dans ce dernier cas, l’utilisateur peut à tout moment rendre ses billets à sa banque pour récupérer la somme correspondante.</p>
+<p>La principale conséquence du procédé est qu’aucune banque du système ne peut relier le paiement à l’identité d’Alice. La banque d’Alice sait qu’un billet signé par elle a été dépensé, mais elle ne peut pas savoir de manière absolue qu’il s’agissait d’un billet appartenant à Alice. La banque de Bob sait que Bob a reçu le paiement et qu’il provenait de la banque d’Alice, mais rien de plus. C’est pour cette raison qu’eCash peut être considéré comme un modèle respectueux de la vie privée.</p>
+<p>Toutefois, cette confidentialité du système repose sur une supposition forte&nbsp;: la bienveillance des banques du système. En effet, si une banque voulait obtenir des informations liées à un billet particulier (par exemple sous la pression étatique), elle pourrait les demander à son propriétaire en échange de l’autorisation du transfert. On peut ainsi imaginer un système eCash qui respecte pleinement les normes de surveillance, comme le suggère l’implémentation de Chaum pour une MNBC conceptualisée en 2021<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;David Chaum, Christian Grothoff, Thomas Moser, <em>How to Issue a Central Bank Digital Currency</em>, mars 2021&nbsp;: <a href="https://www.snb.ch/n/mmr/reference/working_paper_2021_03/source/working_paper_2021_03.n.pdf" class="uri">https://www.snb.ch/n/mmr/reference/working_paper_2021_03/source/working_paper_2021_03.n.pdf</a>.</p></div></div></section>
+<section id="magic-money-les-cyberbucks-et-les-banques" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="magic-money-les-cyberbucks-et-les-banques">Magic Money, les CyberBucks et les banques</h2>
+<p>Le concept d’eCash a été mis en application au cours des années 90. À l’époque, le Web venait tout juste d’apparaître, le commerce électronique était inexistant et cette idée constituait une formidable opportunité. Cette mise en œuvre a été réalisée d’abord par les cypherpunks par l’intermédiaire du protocole Magic Money, puis par la société de David Chaum, DigiCash, au moyen de jetons d’essai appelés les CyberBucks et d’un déploiement dans le système bancaire classique.</p>
+<p>Le protocole Magic Money a été présenté sur la liste de diffusion des cypherpunks le 4 février 1994 par un développeur anonyme se faisant appeler Pr0duct Cypher et utilisant PGP pour s’identifier. Magic Money permettait de créer sa monnaie en faisant fonctionner un serveur de courrier électronique qui servait de monnaierie eCash<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>. Magic Money utilisait l’algorithme RSA et la signature aveugle, deux techniques qui étaient brevetées à l’époque, de sorte que son déploiement était <em>de facto</em> illégal et devait se confiner à l’expérimentation. Cette annonce a toutefois été accueillie favorablement sur la liste, notamment par Hal Finney<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;«&nbsp;Magic Money est un système d’argent liquide numérique conçu pour être utilisé par courrier électronique. Le système est en ligne et intraçable. En ligne signifie que chaque transaction implique un échange avec un serveur, pour éviter les doubles dépenses. Intraçable signifie qu’il est impossible pour quiconque de retracer les transactions, de faire correspondre un retrait avec un dépôt, ou de faire correspondre deux pièces de quelque manière que ce soit.&nbsp;» – Pr0duct Cypher, <em>Magic Money Digicash System</em>, /02/1994 20:44:27 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/02/msg00247.html" class="uri">https://cypherpunks.venona.com/date/1994/02/msg00247.html</a>.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;«accueillie favorablement sur la liste, notamment par Hal Finney&nbsp;»&nbsp;: Hal Finney, <em>Re: Magic Money Digicash System</em>, /02/1994 21:58:18 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/02/msg00251.html" class="uri">https://cypherpunks.venona.com/date/1994/02/msg00251.html</a>.</p></div><div id="fn19"><p><sup>19</sup>&nbsp;«&nbsp;Tacky Tokens, dont les pièces étaient émises en valeurs de 1, 2, 5, 10, 20, 50 et 100 unités&nbsp;»&nbsp;: Mike Duvos, <em>Fun With Magic Money</em>, /02/1994 00:51:40 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/02/msg01391.html" class="uri">https://cypherpunks.venona.com/date/1994/02/msg01391.html</a>.</p></div><div id="fn20"><p><sup>20</sup>&nbsp;Timothy C. May, <em>Why Digital Cash is Not Being Used</em>, /05/1994 19:48:18 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/05/msg00155.html" class="uri">https://cypherpunks.venona.com/date/1994/05/msg00155.html</a>.</p></div><div id="fn21"><p><sup>21</sup>&nbsp;«&nbsp;L’activité a très rapidement reculé au cours des semaines&nbsp;»&nbsp;: Mike Duvos, <em>In Search of Genuine DigiCash</em>, /08/1994 06:06:49 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/08/msg00695.html" class="uri">https://cypherpunks.venona.com/date/1994/08/msg00695.html</a>.</p></div></div><p>Le premier système basé sur Magic Money a été mis en ligne par Mike Duvos quelques semaines plus tard avec les Tacky Tokens, dont les pièces étaient émises en valeurs de 1, 2, 5, 10, 20, 50 et 100 unités<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>. Malgré des propositions, aucune transaction réelle n’a été réalisée, ce qui a poussé Tim May à se demander «&nbsp;pourquoi l’argent liquide numérique [n’était] pas utilisé<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>&nbsp;». D’autres implémentations fantaisistes de Magic Money ont vu le jour par la suite, comme les GhostMarks, les DigiFrancs ou les NexusBucks, mais n’ont pas connu un plus grand succès. L’activité a très rapidement reculé au cours des semaines<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>.</p>
+<p>Le concept d’eCash a ensuite été mis en pratique par la société DigiCash B.V., fondée par David Chaum en 1990 et basée à Amsterdam aux Pays-Bas, qui avait pour mission de mettre en application les idées du cryptographe<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>. Plusieurs cypherpunks ont travaillé pour cette entreprise comme Eric Hughes, Bryce Wilcox (le futur Zooko Wilcox-O’Hearn) et Nick Szabo. Après quelques années de développement, un prototype a été présenté en mai 1994 lors de la première conférence internationale sur le World Wide Web au CERN à Genève<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;«&nbsp;Le concept d’eCash a ensuite été mis en pratique par la société DigiCash B.V.&nbsp;»&nbsp;: La chronologie de DigiCash se retrouve sur le site personnel de David Chaum. – David Chaum, <em>eCash</em>&nbsp;: <a href="https://chaum.com/ecash/" class="uri">https://chaum.com/ecash/</a>.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;«&nbsp;présenté en mai 1994 lors de la première conférence internationale sur le World Wide Web au CERN&nbsp;»&nbsp;: DigiCash, <em>World’s first electronic cash payment over computer networks</em>, 27 mai 1994&nbsp;: <a href="https://chaum.com/wp-content/uploads/2022/01/05-27-94-World_s-first-electronic-cash-payment-over-computer-networks.pdf" class="uri">https://chaum.com/wp-content/uploads/2022/01/05-27-94-World_s-first-electronic-cash-payment-over-computer-networks.pdf</a>.</p></div><div id="fn24"><p><sup>24</sup>&nbsp;Jim Crawley, «&nbsp;Electronic Cash&nbsp;», <em>The Computists’ Weekly</em>, vol.&nbsp;5, no. 25, 11 juillet 1995&nbsp;: <a href="https://www.nzdl.org/cgi-bin/library?e=d-00000-00---off-0tcc--00-0----0-10-0---0---0direct-10---4-------0-1l--11-ro-50---20-preferences---10-0-1-00-0--4----0-0-11-10-0utfZz-8-00&amp;a=d&amp;cl=CL2.5&amp;d=HASH0199d48acda6ba6861de2d9e.2" class="uri">https://www.nzdl.org/cgi-bin/library?e=d-00000-00---off-0tcc--00-0----0-10-0---0---0direct-10---4-------0-1l--11-ro-50---20-preferences---10-0-1-00-0--4----0-0-11-10-0utfZz-8-00&amp;a=d&amp;cl=CL2.5&amp;d=HASH0199d48acda6ba6861de2d9e.2</a>.</p></div></div><p>DigiCash a ensuite réalisé un essai qui a débuté le 19 octobre de cette année, avec l’émission de CyberBucks. Bien que leur nom fasse référence à la monnaie étasunienne («&nbsp;<em>a buck</em>&nbsp;»), ceux-ci n’étaient pas adossés au dollar et possédaient donc un prix flottant par rapport à ce dernier. Une distribution initiale de 100 CyberBucks par nouvel utilisateur a été effectuée afin d’aider l’amorçage du système. Les cypherpunks se sont appropriés la chose en effectuant des échanges réels&nbsp;: la récompense pour la résolution d’un problème, la vente de t-shirts, la vente de logiciels, et bien sûr le change avec le dollar<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>. Divers commerçants acceptaient les CyberBucks dans le cadre de cette expérience.</p>
+<p>Mais les CyberBucks ne constituaient qu’une monnaie d’essai, qui a périclité en octobre 1995 lorsque la Mark Twain Bank, une petite banque du Missouri, a lancé sa propre version du protocole en partenariat avec DigiCash. Contrairement à l’essai précédant, l’unité échangée était adossée au dollar étasunien. Bien que l’expérience des CyberBucks ne se soit pas techniquement arrêtée là, leur valeur s’est effondrée à cause de cette nouvelle<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn25"><p><sup>25</sup>&nbsp;«&nbsp;Mark Twain est arrivée sur le marché avec de l’argent liquide numérique <em>réel</em>, et les gens ont complètement cessé d’échanger les certificats bêta. Je ne me souviens même pas du dernier prix de règlement, mais il s’agissait de quelques centimes de dollars.&nbsp;» – Robert Hettinga, <em>e$: Interbank Digital Cash Clearing, Better Living through Walletware, Microintermediation, Net.Currencies and ECM</em>, 3 juin 1996, archive&nbsp;: <a href="https://web.archive.org/web/19980204144728/http://www.shipwright.com/rants/rant_14.html" class="uri">https://web.archive.org/web/19980204144728/http://www.shipwright.com/rants/rant_14.html</a>.</p></div><div id="fn26"><p><sup>26</sup>&nbsp;Antoine Champagne, «&nbsp;<em>L’argent liquide numérique (crypto-curency) est né en 1995&nbsp;: souvenirs</em>&nbsp;», <em>Reflets.info</em>, 11 janvier 2014&nbsp;: <a href="https://reflets.info/articles/l-argent-liquide-numerique-crypto-curency-est-ne-en-1995-souvenirs" class="uri">https://reflets.info/articles/l-argent-liquide-numerique-crypto-curency-est-ne-en-1995-souvenirs</a>.</p></div></div><p>Par la suite, DigiCash a conclu des partenariats avec différentes banques pour s’inscrire dans le milieu financier traditionnel. Entre 1996 et 1998, six banques situées aux quatres coins du monde ont suivi la Mark Twain Bank&nbsp;: la Merita Bank en Finlande, la Deutsche Bank en Allemagne, l’Advance Bank en Australie, la Bank Austria en Autriche, la Den norske Bank en Norvège et le Crédit Suisse en Suisse. On lui promettait alors un avenir radieux<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>.</p>
+<p>C’était toutefois sans compter sur le caractère de David Chaum, qui était têtu, suspicieux et souhaitait garder le contrôle sur son entreprise<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>. Ainsi, ce dernier a refusé des partenariats avec de grands acteurs comme ING et ABN AMRO (deux des trois plus grandes banques néerlandaises à l’époque), Visa, Netscape et Microsoft. Finalement, il a dû, sous pression des actionnaires et des employés, quitter son poste de PDG pour devenir directeur technique et céder sa place à Michael Nash, ancien employé de Visa, en 1997. Le siège social de DigiCash a été déménagé en Californie et l’entreprise est par conséquent devenue une société étasunienne.</p>
+<div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;«&nbsp;<em>Hoe DigiCash alles verknalde</em>&nbsp;», <em>Next! Magazine</em>, 1 janvier 1999, archive&nbsp;: <a href="https://web.archive.org/web/19990427142412/https://www.nextmagazine.nl/ecash.htm" class="uri">https://web.archive.org/web/19990427142412/https://www.nextmagazine.nl/ecash.htm</a>. Une traduction (en anglais) est disponible à l’adresse <a href="https://cryptome.org/jya/digicrash.htm" class="uri">https://cryptome.org/jya/digicrash.htm</a>.</p></div></div><p>Le 17 septembre 1998, la Mark Twain Bank (rachetée par la Mercantile Bancorporation en 1996) a annoncé abandonner eCash, ce qui a provoqué la fin de DigiCash. Le 3 novembre, l’entreprise est entrée en faillite et a été placée sous la protection du chapitre 11 aux États-Unis, de sorte que ses possessions ont été progressivement revendues au fil des années, dont ses brevets en 2002. Avec DigiCash, c’était le concept même d’eCash qui disparaissait de la circulation.</p>
+<p>En 1999, Chaum a expliqué les raisons de l’échec de sa société, à savoir le manque d’adoption dû à la difficulté d’utilisation<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>. Cette disparition a progressivement laissé les cartes de paiement et PayPal triompher.</p>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;«&nbsp;le manque d’adoption dû à la difficulté d’utilisation&nbsp;»&nbsp;: Julie Pitta, <em>Requiem for a Bright Idea</em>, 1 novembre 1999&nbsp;: <a href="https://www.forbes.com/forbes/1999/1101/6411390a.html" class="uri">https://www.forbes.com/forbes/1999/1101/6411390a.html</a>.</p></div></div><p>La fin de DigiCash a ainsi laissé un vide sur le marché de l’argent liquide numérique. Mais la demande n’a jamais disparu, de sorte qu’on pouvait pressentir qu’il réapparaitrait d’une façon ou d’une autre. Tel que le prédisait Milton Friedman, prix Nobel d’économie et fondateur de l’École de Chicago, en 1999, au micro de la National Taxpayers Union Foundation&nbsp;:</p>
+<p>«&nbsp;Je pense qu’Internet va devenir l’une des forces majeures qui va réduire le rôle de l’État. La seule chose qui manque, mais qui sera bientôt développée, c’est un argent liquide électronique fiable, une méthode qui permette de transférer des fonds de A à B sur Internet sans que A connaisse B ou que B connaisse A<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;Milton Friedman, <em>Milton Friedman Full Interview on Anti-Trust and Tech</em> (vidéo), 1999&nbsp;: <a href="https://www.youtube.com/watch?v=mlwxdyLnMXM" class="uri">https://www.youtube.com/watch?v=mlwxdyLnMXM</a>, :32.</p></div></div></section>
+<section id="libtech-l-révolutionner-la-monnaie" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="libtech-l-révolutionner-la-monnaie">libtech-l&nbsp;: révolutionner la monnaie</h2>
+<p>Après l’échec d’eCash en octobre 1998, l’idée d’un argent liquide numérique réel a progressivement été délaissée par les cypherpunks, qui se sont contentés pour la plupart des expériences de monnaie privée et des systèmes de paiement existants. Mais ce n’était pas le cas de tous les membres du mouvement. Un petit nombre d’entre eux s’est ainsi regroupé sur une liste de diffusion privée appelée libtech-l où ils ont pu parler de comment la monnaie évoluerait.</p>
+<p>La liste libtech-l, créée en 1994 par Nick Szabo<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>, avait pour but, comme son nom l’indique, d’héberger des discussions sur les techniques libératoires, à même de protéger la liberté individuelle face à l’autorité, dans l’esprit des mouvements extropien et cypherpunk dont les membres étaient par ailleurs des participants. On pouvait y retrouver notamment les interventions des cypherpunks Wei Dai et Hal Finney, ainsi que celles des économistes Larry White et George Selgin. Ces cinq individus formaient le noyau dur de cette liste privée, dont émergeraient plusieurs idées de monnaie numérique.</p>
+<div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;libtech-l@netcom.com – Timothy C. May, <em>Re: Regional Lists</em>, /06/1994 05:48:50 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1994/06/msg01156.html" class="uri">https://cypherpunks.venona.com/date/1994/06/msg01156.html</a>&nbsp;; Timothy C. May, <em>Cyphernomicon</em>, 2.4.27.</p></div><div id="fn31"><p><sup>31</sup>&nbsp;Nick Szabo, <em>Smart Contracts</em>, 1994, archive&nbsp;: <a href="https://web.archive.org/web/20011102030833/http://szabo.best.vwh.net:80/smart.contracts.html" class="uri">https://web.archive.org/web/20011102030833/http://szabo.best.vwh.net:80/smart.contracts.html</a>.</p></div><div id="fn32"><p><sup>32</sup>&nbsp;«&nbsp;l’avait approfondie dans les années qui ont suivi&nbsp;»&nbsp;: Nick Szabo, «&nbsp;<em>Smart Contracts: Building Blocks for Digital Markets</em>&nbsp;», <em>Extropy</em>, vol.&nbsp;16, 1 janvier 1996&nbsp;: <a href="https://github.com/Extropians/Extropy/blob/master/Extropy-16.pdf" class="uri">https://github.com/Extropians/Extropy/blob/master/Extropy-16.pdf</a>&nbsp;; Nick Szabo, «&nbsp;<em>Smart Contracts: Formalizing and Securing Relationships on Public Networks</em>&nbsp;», <em>First Monday</em>, vol.&nbsp;2, no. 9, 1 septembre 1997&nbsp;: <a href="https://firstmonday.org/ojs/index.php/fm/article/view/548/469" class="uri">https://firstmonday.org/ojs/index.php/fm/article/view/548/469</a>.</p></div></div><p>Nicholas J. Szabo, dit Nick Szabo, était un informaticien américain d’origine hongroise. Extropien, puis cypherpunk, il s’était notamment illustré par son implication dans le combat contre la puce Clipper. En 1994, il avait formalisé la notion de <em>smart contract</em>, qu’il avait définie comme «&nbsp;un protocole de transaction informatisé qui exécute les termes d’un contrat<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>&nbsp;», et l’avait approfondie dans les années qui ont suivi<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>.</p>
+<p>Nick Szabo avait une personnalité curieuse et éclectique, de sorte qu’il s’intéressait à une multitude de domaines, tels que l’informatique, l’économie, la politique et la biologie, et écrivait de manière prolifique à leur sujet<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>. Il avait un intérêt particulier pour le droit, dont il possédait une conception libérale et jusnaturaliste, un intérêt qui le pousserait par la suite à retourner étudier et à obtenir un diplôme dans la discipline en 2006.</p>
+<div class="no-row-height column-margin column-container"><div id="fn33"><p><sup>33</sup>&nbsp;On peut retrouver les écrits de Nick Szabo sur son ancienne page personnelle szabo.best.vwh.net et sur son blog Unenumerated débuté en 2005. – Archive de la page personnelle&nbsp;: <a href="https://web.archive.org/web/20160709091851/http://szabo.best.vwh.net/" class="uri">https://web.archive.org/web/20160709091851/http://szabo.best.vwh.net/</a>&nbsp;; Unenumerated&nbsp;: <a href="https://unenumerated.blogspot.com/" class="uri">https://unenumerated.blogspot.com/</a>.</p></div><div id="fn34"><p><sup>34</sup>&nbsp;Nick Szabo, <em>Trusted Third Parties are Security Holes</em>, 2001, archive&nbsp;: <a href="https://web.archive.org/web/20020423191203/http://szabo.best.vwh.net/ttps.html" class="uri">https://web.archive.org/web/20020423191203/http://szabo.best.vwh.net/ttps.html</a>.</p></div></div><p>Il avait travaillé pendant six mois comme consultant pour DigiCash à Amsterdam vers 1995. Il y avait appris le rôle néfaste (et, finalement, fatal) des tiers de confiance. C’est de cette expérience que provenait son obsession pour la minimisation de la confiance, qu’il s’efforçait à mettre en valeur au sein de ses travaux<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>.</p>
+<p>Hal Finney, comme déjà indiqué dans le chapitre précédent, était un informaticien et cryptographe qui vivait dans la région de Los Angeles. Extropien et cypherpunk de la première heure, il travaillait alors pour Phil Zimmermann sur le développement de PGP, officieusement depuis 1992, puis officiellement à partir de 1996. Hal Finney s’était aussi passionné pour les idées de David Chaum dont son fameux eCash<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn35"><p><sup>35</sup>&nbsp;«&nbsp;Lorsque j’ai découvert les travaux de Chaum, j’ai été époustouflé. Le premier article que j’ai trouvé, je crois, était son article dans CACM, qui donnait un aperçu de beaucoup des choses qui étaient possibles. J’ai commencé à essayer de retrouver d’autres articles de Chaum. On y trouvait toutes les techniques nécessaires pour faire fonctionner le monde de Vinge, des techniques que Vinge connaissait apparemment longtemps avant moi.&nbsp;» – Hal Finney, <em>Why remailers...</em>, /11/1992 01:30:02 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1992/11/msg00108.html" class="uri">https://cypherpunks.venona.com/date/1992/11/msg00108.html</a>.</p></div><div id="fn36"><p><sup>36</sup>&nbsp;«&nbsp;Ayant fui la Chine communiste et émigré aux États-Unis avec sa famille à l’âge de 10 ans&nbsp;»&nbsp;: Wei Dai, <em>A tale from Communist China</em>, /10/2020 17:37 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/osYFcQtxnRKB4F4HA/a-tale-from-communist-china" class="uri">https://www.lesswrong.com/posts/osYFcQtxnRKB4F4HA/a-tale-from-communist-china</a>&nbsp;; Wei Dai, <em>Re: Tell Your Rationalist Origin Story</em>, /09/2009 02:53 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/BHMBBFupzb4s8utts/tell-your-rationalist-origin-story?commentId=ByhZPzBDyYdYs9SRN" class="uri">https://www.lesswrong.com/posts/BHMBBFupzb4s8utts/tell-your-rationalist-origin-story?commentId=ByhZPzBDyYdYs9SRN</a>.</p></div><div id="fn37"><p><sup>37</sup>&nbsp;«&nbsp;participé à l’élaboration de plusieurs brevets&nbsp;»&nbsp;: Voir les brevets US5724279A et US5724279 assignés à Microsoft. Wei Dai est donc <em>a priori</em> son nom civil.</p></div><div id="fn38"><p><sup>38</sup>&nbsp;«&nbsp; Pipenet, un protocole de communication anonyme&nbsp;»&nbsp;: Wei Dai, <em>PipeNet description</em>, /01/1998 07:53:25 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1998/01/msg00878.html" class="uri">https://cypherpunks.venona.com/date/1998/01/msg00878.html</a>&nbsp;; Wei Dai, <em>PipeNet 1.1</em>, /11/1998 23:33:49 UTC&nbsp;: <a href="http://www.weidai.com/pipenet.txt" class="uri">http://www.weidai.com/pipenet.txt</a>.</p></div><div id="fn39"><p><sup>39</sup>&nbsp;«&nbsp;un modèle de crédit anonyme en 1997&nbsp;»&nbsp;: Wei Dai, <em>anonymous credit</em>, /04/1997 09:08:04 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1997/04/msg00398.html" class="uri">https://cypherpunks.venona.com/date/1997/04/msg00398.html</a>.</p></div><div id="fn40"><p><sup>40</sup>&nbsp;Wei Dai, <em>b-money</em>, /11/1998 23:33:49 UTC, archive&nbsp;: <a href="https://web.archive.org/web/19990219124653/http://www.eskimo.com/~weidai/bmoney.txt" class="uri">https://web.archive.org/web/19990219124653/http://www.eskimo.com/~weidai/bmoney.txt</a>.</p></div></div><p>Wei Dai était un jeune cryptographe sino-américain vivant à Seattle. Ayant fui la Chine communiste et émigré aux États-Unis avec ses parents à l’âge de 10 ans<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>, il avait réussi à se faire une place dans le monde du travail et avait été rapidement engagé par Microsoft, où il avait participé à l’élaboration de plusieurs brevets<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. Il avait découvert le mouvement cypherpunk en 1994 et s’y était joint. Le jeune prodige avait contribué au domaine de la cryptographie notamment avec Crypto++, une bibliothèque de fonctions cryptographiques en C++, et Pipenet, un protocole de communication anonyme<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>. Il s’était intéressé aux monnaies numériques et aux contrats autonomes à partir de 1995, et avait conceptualisé un modèle de crédit anonyme en 1997<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>. En 1998, Wei Dai disait être «&nbsp;fasciné par la crypto-anarchie de Tim May&nbsp;», où «&nbsp;l’État [n’était] pas temporairement anéanti mais définitivement oublié et inutile&nbsp;» et où «&nbsp;la violence [était] impossible parce que ses membres ne [pouvaient] pas être reliés à leur vrai nom ou à leur localisation géographique<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>&nbsp;».</p>
+<p>Lawrence H. White, dit Larry White, et George A. Selgin étaient deux économistes ayant été formés dans des universités prestigieuses. Ils étaient tous les deux inspirés par les idées de l’école autrichienne d’économie, sans pour autant y adhérer pleinement. Ils avaient été marqués par les travaux de Friedrich Hayek, et notamment par son ouvrage <em>The Denationalization of Money</em> publié en 1976 qui faisait l’apologie de la concurrence absolue dans le domaine monétaire et bancaire. C’est pourquoi, à partir des années 80, ils s’étaient évertués à promouvoir le système de la banque libre dans lequel des monnaies privées pourraient être librement émises par des sociétés financières, menant à un équilibre de marché.</p>
+<p>Ces individus, présents sur la liste libtech-l, souhaitaient améliorer la monnaie. Ils avaient vu la chute de DigiCash et l’échec d’eCash, et étaient conscients des problèmes liés aux tiers de confiance. C’est ainsi que Wei Dai, Nick Szabo et Hal Finney ont tous les trois développé leur propre concept de monnaie numérique&nbsp;: Wei Dai a imaginé un concept appelé b-money, Nick Szabo a mis au point un modèle nommé bit gold et Hal Finney a construit le système RPOW.</p>
+<p>Leurs projets se fondaient sur la notion de preuve de travail, une notion qui avait été mise en pratique en 1997 par Adam Back avec son algorithme Hashcash, dont le but initial était de fournir un moyen de lutter contre le courrier électronique indésirable<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>. Le cypherpunk britannique avait pensé à en faire la base d’une monnaie numérique, mais il avait conscience que les preuves de travail ainsi obtenues ne pouvaient pas être transférées d’une manière pleinement distribuée (à cause du problème de la double dépense) et qu’il fallait par conséquent passer par un système de monnaieries à la eCash<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn41"><p><sup>41</sup>&nbsp;Pour une explication technique de la preuve de travail, se référer à la section dédiée dans le chapitre&nbsp;<a href="le-consensus-par-le-minage.html" data-reference-type="ref" data-reference="ch:confirmation">8</a>.</p></div><div id="fn42"><p><sup>42</sup>&nbsp;Adam Back, <em>Re: Bypassing the Digicash Patents</em>, /04/1997 09:09:37 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1997/04/msg00822.html" class="uri">https://cypherpunks.venona.com/date/1997/04/msg00822.html</a>.</p></div><div id="fn43"><p><sup>43</sup>&nbsp;Ronald L. Rivest, Adi Shamir, «&nbsp;<em>PayWord and MicroMint: Two Simple Micropayment Schemes</em>&nbsp;», in <em>Security Protocols Workshop</em>, 1996: pp.&nbsp;69–87&nbsp;: <a href="https://people.csail.mit.edu/rivest/pubs/RS96a.pdf" class="uri">https://people.csail.mit.edu/rivest/pubs/RS96a.pdf</a>. Voir aussi <a href="https://people.csail.mit.edu/rivest/pubs/RS96a.slides.pdf" class="uri">https://people.csail.mit.edu/rivest/pubs/RS96a.slides.pdf</a>.</p></div></div><p>L’idée d’utiliser ce type de preuve de travail comme base de la devise était répandue. Par exemple, en 1996, Ronald Rivest et Adi Shamir avaient décrit MicroMint, un système de micropaiement centralisé dont les pièces devaient être impossibles à contrefaire grâce à la production de preuves de travail<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>. Mais elle manquait d’un bon agencement qui puisse lui donner vie de manière robuste et durable.</p>
+</section>
+<section id="le-concept-b-money" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-concept-b-money">Le concept b-money</h2>
+<p>Le premier concept de monnaie numérique à être sorti de la liste libtech-l était b-money, proposé par Wei Dai. Il s’agissait d’un concept de protocole décentralisé gérant une unité de compte du même nom, la b-money, dont la valeur était censée suivre le cours d’un panier de marchandises.</p>
+<p>Wei Dai a travaillé sur son idée à partir de 1995<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a>. Comme il l’a expliqué par la suite, sa motivation était de «&nbsp;rendre possible l’établissement d’une économie en ligne qui soit purement volontaire, une économie qui ne puisse pas être taxée et réglementée par la menace de violence<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn44"><p><sup>44</sup>&nbsp;«&nbsp;Wei Dai a travaillé sur son idée à partir de 1995&nbsp;»&nbsp;: Wei Dai, <em>Re: AALWA: Ask any LessWronger anything</em>, /03/2014 06:14 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/YdfpDyRpNyypivgdu/aalwa-ask-any-lesswronger-anything?commentId=ZvJDryrskf2Gy6nhG" class="uri">https://www.lesswrong.com/posts/YdfpDyRpNyypivgdu/aalwa-ask-any-lesswronger-anything?commentId=ZvJDryrskf2Gy6nhG</a>.</p></div><div id="fn45"><p><sup>45</sup>&nbsp;Morgen E. Peck, «&nbsp;<em>Bitcoin: The Cryptoanarchists’ Answer to Cash</em>&nbsp;», <em>IEEE Spectrum</em>, 30 mai 2012&nbsp;: <a href="https://spectrum.ieee.org/bitcoin-the-cryptoanarchists-answer-to-cash" class="uri">https://spectrum.ieee.org/bitcoin-the-cryptoanarchists-answer-to-cash</a>.</p></div><div id="fn46"><p><sup>46</sup>&nbsp;«&nbsp;Le texte descriptif de b-money a été publié le 26 novembre 1998 par Wei Dai sur sa page personnelle&nbsp;»&nbsp;: Wei Dai, <em>b-money</em>, /11/1998 23:33:49 UTC, archive&nbsp;: <a href="https://web.archive.org/web/19990219124653/http://www.eskimo.com/~weidai/bmoney.txt" class="uri">https://web.archive.org/web/19990219124653/http://www.eskimo.com/~weidai/bmoney.txt</a>.</p></div><div id="fn47"><p><sup>47</sup>&nbsp;Wei Dai, <em>PipeNet 1.1 and b-money</em>, /11/1998 23:33:49 UTC&nbsp;: <a href="https://cypherpunks.venona.com/date/1998/11/msg00941.html" class="uri">https://cypherpunks.venona.com/date/1998/11/msg00941.html</a>.</p></div></div><p>Le texte descriptif de b-money a été publié le 26 novembre 1998 par Wei Dai sur sa page personnelle<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>. Il en a fortuitement partagé le lien à la liste de diffusion cypherpunk dans un courriel où il décrivait b-money comme «&nbsp;un nouveau protocole d’échange monétaire et d’exécution des contrats pour les pseudonymes<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>&nbsp;».</p>
+<p>Le texte était court (un peu plus de 1000 mots) mais riche conceptuellement. Deux versions du protocole étaient décrites par Wei Dai. L’une était irréalisable mais simple, l’autre était plus complexe mais partait d’hypothèses plus réalistes.</p>
+<p>Dans la première version du protocole, chaque participant faisait partie d’un réseau pair à pair intraçable. Chacun était identifié par un «&nbsp;pseudonyme numérique&nbsp;» (c’est-à-dire une clé publique) et chaque message transactionnel était signé par l’expéditeur et chiffré pour le destinataire. Chacun maintenait une base de données séparée qui recensait combien d’unités de b-money possédait chaque pseudonyme.</p>
+<p>La création monétaire était ouverte à tous les participants et se faisait par preuve de travail en diffusant la solution d’un problème informatique connu et précédemment non résolu. Le nombre d’unités créées dépendait alors du coût de cet effort exprimé par rapport à un panier standard de marchandises, pouvant inclure des métaux précieux par exemple&nbsp;: lorsque son cours par rapport au panier de marchandises augmentait, les acteurs économiques déployaient plus de puissance de calcul pour abreuver le marché&nbsp;; à l’inverse lorsque son cours baissait, les acteurs économiques étaient incités à utiliser moins de puissance de calcul, ce qui ralentissait la production de b-money. Il s’agissait donc d’un «&nbsp;stablecoin&nbsp;» décentralisé avant l’heure<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn48"><p><sup>48</sup>&nbsp;Ce fonctionnement pour garantir la stabilité de la b-money ne manque pas de rappeler le stablecoin géré par Maker DAO sur Ethereum, appelé précisément le dai&nbsp;! Plus tard, Wei Dai a reproché à Satoshi Nakamoto la politique monétaire fixe de Bitcoin, qui devait entraîner selon lui «&nbsp;une forte volatilité du prix qui impose un coût élevé pour ses utilisateurs&nbsp;». – Wei Dai, <em>Re: Bitcoins are not digital greenbacks</em>, /04/2013 07:56 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/P9jggxRZTMJcjnaPw/bitcoins-are-not-digital-greenbacks?commentId=3XvTroRzb23NpHQDc" class="uri">https://www.lesswrong.com/posts/P9jggxRZTMJcjnaPw/bitcoins-are-not-digital-greenbacks?commentId=3XvTroRzb23NpHQDc</a>.</p></div></div><p>Le système offrait également la possibilité de créer et d’exécuter des contrats directement sur le réseau, grâce à un procédé rudimentaire de dépôt fiduciaire. Dans un contrat, les parties impliquées étaient contraintes de mettre en jeu une caution et de désigner un arbitre qui avait pour rôle d’intervenir en cas de litige. Sans résolution à l’amiable, c’était le réseau qui devait trancher selon les éléments diffusés, la position de l’arbitre étant en théorie privilégiée.</p>
+<p>Dans la seconde version du protocole, le registre de propriété n’était plus conservé par tout le monde, mais uniquement par un sous-ensemble de participants appelés des serveurs. Les participants à une transaction devaient alors vérifier que leur transaction avait bien été traitée en envoyant des requêtes à un échantillon aléatoire de serveurs. Puisqu’il était nécessaire de faire confiance à ceux-ci dans une certaine mesure, un mécanisme économique de preuve d’enjeu était mis en place pour faire en sorte qu’ils restent honnêtes. Chaque serveur devait déposer un montant de b-money sur un compte spécial afin d’être pénalisé en cas de mauvaise conduite, et était en outre contraint de publier régulièrement sa création de monnaie et son registre.</p>
+<p>Le concept de b-money présenté par Wei Dai était donc assez ingénieux pour l’époque. Toutefois, il n’était pas fonctionnel et présentait quelques défauts majeurs. D’abord, la première version du protocole était impossible à mettre en place à grande échelle, notamment parce qu’elle ne résistait pas à la multiplication excessive des identités (attaque Sybil), chacun pouvant ajouter facilement de nouveaux ordinateurs sur le réseau. Ensuite, la seconde version semblait plus réaliste, mais avait pour effet de centraliser le système en un petit nombre de serveurs, le rendant ainsi plus vulnérable aux attaques et à la corruption. Enfin, la stabilité par rapport à un panier de devises aurait requis ce qu’on appelle aujourd’hui un système décentralisé d’oracles, ce qui est un problème complexe à résoudre<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn49"><p><sup>49</sup>&nbsp;Satoshi avait pensé lui-même au problème de l’oracle. Il écrivait ainsi en février 2009&nbsp;: «&nbsp;Il n’y a personne pour agir en tant que banque centrale ou réserve fédérale afin d’ajuster l’offre monétaire au fur et à mesure que le nombre d’utilisateurs augmente. Il aurait fallu qu’un tiers de confiance détermine la valeur, car je ne connais aucun moyen pour un logiciel de connaître la valeur des choses dans le monde réel. S’il existait un moyen astucieux, ou si nous voulions faire confiance à quelqu’un pour gérer activement l’offre monétaire afin de l’ancrer à quelque chose, les règles auraient pu être programmées à cet effet.&nbsp;» – Satoshi Nakamoto, <em>Re: Bitcoin open source implementation of P2P currency</em>, 18 février 2009&nbsp;: <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562</a>.</p></div></div><p>b-money a attiré l’attention des cypherpunks, et en particulier celle d’Adam Back. Néanmoins, Wei Dai n’a jamais implémenté son modèle, non seulement parce qu’il était dysfonctionnel, mais aussi à cause de sa désillusion à l’égard de la cryptoanarchie. Comme il l’a affirmé en 2014&nbsp;:</p>
+<p>«&nbsp;Je n’ai pris aucune mesure pour coder b-money. Cela a en partie été dû au fait que b-money n’était pas encore un concept complètement pratique, mais je n’ai pas continué à travailler sur ce concept parce que j’étais un peu désenchanté par la cryptoanarchie au moment où j’ai fini d’écrire b-money, et que je ne prévoyais pas qu’un système comme celui-ci, une fois mis en œuvre, pourrait attirer autant d’attention et d’utilisation en dehors d’un petit groupe de cypherpunks inconditionnels<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn50"><p><sup>50</sup>&nbsp;Wei Dai, <em>Re: AALWA: Ask any LessWronger anything</em>, /03/2014 20:34 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/YdfpDyRpNyypivgdu/aalwa-ask-any-lesswronger-anything?commentId=XKwphuwm366RegQ3d" class="uri">https://www.lesswrong.com/posts/YdfpDyRpNyypivgdu/aalwa-ask-any-lesswronger-anything?commentId=XKwphuwm366RegQ3d</a>.</p></div></div></section>
+<section id="le-modèle-bit-gold" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-modèle-bit-gold">Le modèle bit gold</h2>
+<p>Le deuxième modèle qui a émergé de la liste libtech-l était le système bit gold. Celui-ci était censé gérer la création et les échanges d’une ressource virtuelle appelée le bit gold. Contrairement à l’e-gold qui était garanti par de l’or physique, ou la b-money indexée en théorie sur un panier de marchandises, le bit gold ne devait être adossé à aucun autre bien, mais posséder une rareté infalsifiable intrinsèque, et constituer ainsi un or intégralement numérique.</p>
+<p>C’est au cours de l’année 1998 que Nick Szabo a développé son idée de bit gold, qu’il a décrite initialement sur libtech-l, avant d’héberger une ébauche de livre blanc en 1999 sur son site personnel<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>. Il a présenté bit gold au grand public en décembre 2005 dans un article publié sur son blog Unenumerated<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a>. La logique derrière bit gold était de minimiser la confiance dans le but de reproduire autant que possible la cherté de production des métaux précieux dans le cyberespace.</p>
+<div class="no-row-height column-margin column-container"><div id="fn51"><p><sup>51</sup>&nbsp;Nick Szabo, <em>Bit Gold: Towards Trust-Independent Digital Money</em>, 2005, archive&nbsp;: <a href="https://web.archive.org/web/20140406003811/http://szabo.best.vwh.net/bitgold.html" class="uri">https://web.archive.org/web/20140406003811/http://szabo.best.vwh.net/bitgold.html</a>.</p></div><div id="fn52"><p><sup>52</sup>&nbsp;Nick Szabo, <em>Bit gold</em>, 29 décembre 2005&nbsp;: <a href="https://unenumerated.blogspot.com/2005/12/bit-gold.html" class="uri">https://unenumerated.blogspot.com/2005/12/bit-gold.html</a>.</p></div><div id="fn53"><p><sup>53</sup>&nbsp;Le calcul de la preuve de travail dans bit gold ne passait pas par l’inversion partielle d’une fonction de hachage (Hashcash) mais par une <em>secure benchmark function</em> qui mesurait la difficulté du problème à résoudre sur une machine précise. Cela devait permettre d’approximer le niveau d’énergie utilisé. – Voir Nick Szabo, <em>Intrapolynomial Cryptography</em>, 1999, archive&nbsp;: <a href="https://web.archive.org/web/20011217091748/http://szabo.best.vwh.net/intrapoly.html" class="uri">https://web.archive.org/web/20011217091748/http://szabo.best.vwh.net/intrapoly.html</a>.</p></div></div><p>L’élément central du protocole était que la création monétaire se faisait par preuve de travail&nbsp;: les morceaux de bit gold étaient créés grâce à la puissance de calcul des ordinateurs<a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>. Chaque solution était calculée à partir d’une autre, ce qui conduisait à former une chaîne de preuves de travail. Les acteurs responsables de cette production étaient appelés des «&nbsp;mineurs&nbsp;» par Szabo.</p>
+<p>La date et l’heure de production de ces preuves de travail étaient certifiées au moyen de serveurs d’horodatage multiples. Cette diversité, bien que peu satisfaisante, permettait de limiter le risque lié à un service particulier.</p>
+<p>La garantie de la possession et des échanges se faisait par le biais d’un registre public de titres de propriété<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>. Les utilisateurs étaient identifiés par leur clé publique et signaient les transactions grâce à leur clé privée. Le registre était vérifié et maintenu par un réseau de serveurs appelé «&nbsp;club de propriété&nbsp;», serveurs qui se mettaient d’accord par un algorithme de consensus&nbsp;: le <em>Byzantine Quorum System</em> de Malkhi et Reiter<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a>. Ainsi, n’importe qui pouvait se référer à ce registre pour connaître le propriétaire d’un morceau de bit gold.</p>
+<div class="no-row-height column-margin column-container"><div id="fn54"><p><sup>54</sup>&nbsp;«&nbsp;un registre public de titres de propriété&nbsp;»&nbsp;: Nick Szabo, <em>Secure Property Titles with Owner Authority</em>, 1998, archive&nbsp;: <a href="https://web.archive.org/web/20020202165211/http://szabo.best.vwh.net/securetitle.html" class="uri">https://web.archive.org/web/20020202165211/http://szabo.best.vwh.net/securetitle.html</a>.</p></div><div id="fn55"><p><sup>55</sup>&nbsp;«&nbsp;le <em>Byzantine Quorum System</em> de Malkhi et Reiter&nbsp;»&nbsp;: Dahlia Malkhi, Michael Reiter, «&nbsp;<em>Byzantine quorum systems</em>&nbsp;», in <em>Proceedings of the 29th Annual ACM Symposium on Theory of Computing</em>, 1997.</p></div></div><p>Il est intéressant de noter que les trois éléments constitutifs de bit gold – les preuves de travail, leurs horodatages et le registre de propriété – étaient séparés. En particulier, ils étaient pris en charge par des acteurs différents&nbsp;: les mineurs, les serveurs d’horodatage et les membres du club de propriété. Plus tard, dans Bitcoin, ces trois éléments seraient combinés en un seul et même concept&nbsp;: la chaîne de blocs.</p>
+<p>Malgré sa volonté de minimiser la confiance, le système imaginé par Szabo possédait quelques problèmes conceptuels. Tout d’abord, la façon dont étaient produits les morceaux de bit gold faisaient qu’ils n’étaient pas fongibles, c’est-à-dire qu’ils ne pouvaient pas être mélangés entre eux, et devaient donc être évalués sur un marché<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a>, de sorte à pouvoir être utilisés pour servir de base à une réelle unité de compte homogène. Ensuite, bit gold faisait usage de serveurs d’horodatage centralisés, qui formaient des points de défaillance uniques non négligeables. Enfin, le système reposait sur un algorithme de consensus dit «&nbsp;classique&nbsp;» qui requérait que les membres du club de propriété soient choisis à l’avance, qu’ils soient connus de tous, et que 66&nbsp;% d’entre eux se comportent correctement.</p>
+<div class="no-row-height column-margin column-container"><div id="fn56"><p><sup>56</sup>&nbsp;«&nbsp;les morceaux de bit gold [...] devaient donc être évalués sur un marché&nbsp;»&nbsp;: Nick Szabo, <em>Bit gold markets</em>, 10 avril 2008&nbsp;: <a href="https://unenumerated.blogspot.com/2008/04/bit-gold-markets.html" class="uri">https://unenumerated.blogspot.com/2008/04/bit-gold-markets.html</a>.</p></div><div id="fn57"><p><sup>57</sup>&nbsp;«&nbsp;[Bit gold] bénéficierait grandement d’une démonstration, d’un marché expérimental (avec par ex. un tiers de confiance pour se substituer à la sécurité complexe nécessaire au système réel). Quelqu’un veut m’aider à en programmer une&nbsp;?&nbsp;» – Nick Szabo, <em>Re: Bit gold markets</em>, 10 avril 2008, archive&nbsp;: <a href="https://web.archive.org/web/20171227190431/http://unenumerated.blogspot.com/2008/04/bit-gold-markets.html?showComment=1207799580000#c3741843833998921269" class="uri">https://web.archive.org/web/20171227190431/http://unenumerated.blogspot.com/2008/04/bit-gold-markets.html?showComment=1207799580000#c3741843833998921269</a>.</p></div></div><p>À l’époque, bit gold était pensé comme un système de règlement permettant de gérer une monnaie de réserve rare, et au-dessus duquel serait construit une économie bancaire libre, si possible utilisant le modèle chaumien. Nick Szabo a longtemps réfléchi à comment mettre en application son idée, redemandant même de l’aide en avril 2008 dans un commentaire sur son blog<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>. Szabo n’a jamais pu mettre en œuvre son concept, contrairement à Hal Finney qui a essayé au moyen de son système RPOW.</p>
+</section>
+<section id="le-système-rpow" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-système-rpow">Le système RPOW</h2>
+<p>Hal Finney a repris le concept de Nick Szabo et l’a simplifié pour l’implémenter dans un système inédit&nbsp;: celui des preuves de travail réutilisables ou <em>Reusable Proofs of Work</em>, abrégées en RPOW, qu’il a décrit le 15 août 2004. Ce système se basait sur un serveur transparent qui permettait de rendre transférables les preuves de travail produites par Hashcash. Ainsi, le modèle de sécurité ne venait pas d’un réseau distribué comme dans les cas de b-money et de bit gold<a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn58"><p><sup>58</sup>&nbsp;Voir Hal Finney, <em>RPOW Theory</em>, 15 août 2004, archive&nbsp;: <a href="https://web.archive.org/web/20040815154951/http://rpow.net/theory.html" class="uri">https://web.archive.org/web/20040815154951/http://rpow.net/theory.html</a>.</p></div></div><p>Dans ce système, les jetons de preuve de travail réutilisable étaient gérés par un serveur qui se chargeait de les signer à l’aide du chiffrement RSA. Ils étaient fabriqués par la production d’une preuve de travail via Hashcash, ou bien à partir d’un jeton de RPOW précédent. Chaque jeton de RPOW se composait d’une valeur (définie comme une puissance de 2) et des données relatives à la signature du serveur. Un utilisateur pouvait par conséquent vérifier lui-même l’intégrité du jeton.</p>
+<p>Le système RPOW reposait sur l’utilisation d’un serveur central qui s’occupait de détruire et de recréer les preuves de travail impliquées dans chaque opération, notamment en vérifiant qu’elles ne faisaient pas l’objet d’une double dépense. Afin d’assurer la divisibilité de l’unité de compte, le système permettait de séparer une RPOW en plusieurs RPOW de valeur moindre et de combiner plusieurs RPOW pour en obtenir une seule.</p>
+<p>Lors d’un paiement, l’expéditeur donnait ses jetons de RPOW au destinataire qui s’empressait de communiquer avec le serveur pour recevoir un ou plusieurs nouveaux jetons, dont la valeur globale est égale à la valeur en entrée. Le fonctionnement des RPOW était ainsi similaire à celui des billets numériques dans eCash&nbsp;: les jetons de RPOW reposaient sur les informations qu’ils contenaient et pouvaient être transférés de manière confidentielle, mais chaque transaction demandait d’interagir avec le serveur pour garantir l’absence de double dépense.</p>
+<p>Le modèle de sécurité reposait sur le type de serveur mis en place&nbsp;: il s’agissait d’un «&nbsp;serveur transparent<a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a>&nbsp;» utilisant le cryptoprocesseur IBM 4758 Secure Cryptographic Coprocessor, un cryptoprocesseur de haute sécurité résistant aux falsifications, qui permettait, par un procédé d’authentification conçu par IBM, de vérifier quels programmes étaient exécutés sur la machine. De cette manière, un utilisateur externe pouvait s’assurer à tout instant que le serveur RPOW faisait fonctionner le bon programme, dont le code était par ailleurs disponible publiquement.</p>
+<div class="no-row-height column-margin column-container"><div id="fn59"><p><sup>59</sup>&nbsp;Hal Finney, <em>RPOW Security</em>, 15 août 2004, archive&nbsp;: <a href="https://web.archive.org/web/20040815154806/http://rpow.net/security.html" class="uri">https://web.archive.org/web/20040815154806/http://rpow.net/security.html</a>.</p></div><div id="fn60"><p><sup>60</sup>&nbsp;«&nbsp;Il s’agissait, en somme, d’une mise en œuvre partielle du bit gold de Nick Szabo&nbsp;»&nbsp;: À propos du bit gold de Nick Szabo, Hal Finney écrivait&nbsp;:</p></div></div><p>Avec son système RPOW, Hal Finney tentait ainsi de réduire la confiance requise à un minimum. Le système était confidentiel dans le sens où l’utilisateur n’avait jamais à s’identifier auprès du serveur et pouvait communiquer avec lui de manière chiffrée. La transparence du serveur permettait, autant que faire se peut, de s’assurer que le système n’était pas corrompu. En particulier, on pouvait rigoureusement supposer que la quantité de jetons de RPOW dépendait d’une production réelle de preuves de travail, propriété qui permettait d’assimiler les jetons de RPOW à de l’or. Il s’agissait, en somme, d’une mise en œuvre partielle du bit gold de Nick Szabo<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>.</p>
+<p>Le système a été lancé en production le même jour que sa description, le 15 août 2004. Hal Finney l’a annoncé sur la liste des cypherpunks<a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a> et l’annonce a été retransmise sur la liste de Metzdowd.com par Robert Hettinga<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>. Le système a été mis à jour plusieurs fois pour améliorer son fonctionnement et est resté opérationnel pendant des mois.</p>
+<div class="no-row-height column-margin column-container"><div id="fn61"><p><sup>61</sup>&nbsp;«&nbsp;Hal Finney l’a annoncé sur la liste des cypherpunks&nbsp;»&nbsp;: Hal Finney, <em>RPOW - Reusable Proofs of Work</em>, /08/2004 17:43:09 UTC&nbsp;: <a href="https://lists.cpunks.org/pipermail/cypherpunks-legacy/2004-August/134945.html" class="uri">https://lists.cpunks.org/pipermail/cypherpunks-legacy/2004-August/134945.html</a>.</p></div><div id="fn62"><p><sup>62</sup>&nbsp;«&nbsp;l’annonce a été retransmise sur la liste de Metzdowd.com par Robert Hettinga&nbsp;»&nbsp;: Robert Hettinga, <em>FW: RPOW - Reusable Proofs of Work</em>, /08/2004 18:36:51 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2004-August/007362.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2004-August/007362.html</a>.</p></div><div id="fn63"><p><sup>63</sup>&nbsp;Hal Finney, <em>Reusable Proofs of Work</em>, 1 février 2005, archive&nbsp;: <a href="https://web.archive.org/web/20050204193327/http://rpow.net/slides/slide001.html" class="uri">https://web.archive.org/web/20050204193327/http://rpow.net/slides/slide001.html</a>.</p></div><div id="fn64"><p><sup>64</sup>&nbsp;«&nbsp;comptait notamment multiplier le nombre de serveurs autour du monde&nbsp;»&nbsp;: Hal Finney, <em>World of RPOW</em>, 15 août 2004&nbsp;: <a href="http://rpow.net/world.html" class="uri">http://rpow.net/world.html</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20040816004128/http://rpow.net/world.html" class="uri">https://web.archive.org/web/20040816004128/http://rpow.net/world.html</a>.</p></div></div><p>Hal Finney a présenté son système à la CodeCon 2005 organisée à San Francisco. Il y a fait part des usages qu’il envisageait pour RPOW à savoir le transfert de la valeur, la régulation du courrier indésirable (dans la droite lignée de Hashcash), le commerce dans les jeux vidéos, le jeu d’argent en ligne comme le poker, et l’anti-parasitisme sur les protocoles de partage de fichiers comme BitTorrent<a href="#fn63" class="footnote-ref" id="fnref63" role="doc-noteref"><sup>63</sup></a>. Fidèle à son optimisme, Hal Finney envisageait un avenir prometteur pour RPOW et comptait notamment multiplier le nombre de serveurs autour du monde, une fois que son déploiement initial serait réalisé<a href="#fn64" class="footnote-ref" id="fnref64" role="doc-noteref"><sup>64</sup></a>.</p>
+<p>Toutefois, RPOW présentait des défauts intrinsèques qui peuvent expliquer pourquoi il n’a pas rencontré le succès escompté. L’inconvénient majeur était son modèle de sécurité qui démontrait une certaine faiblesse&nbsp;: le ou les serveurs devaient être connus et pouvaient être arrêtés facilement, de sorte qu’ils constituaient des points de défaillance unique. De plus, un autre inconvénient venait de sa politique monétaire qui, bien que théoriquement viable, n’était pas spécialement attractive en raison de la hausse exponentielle des performances informatiques.</p>
+<p>De ce fait, l’utilisation réelle de RPOW a été anecdotique. Le système était loin d’être parfait et ne pouvait pas, de toute évidence, devenir un système monétaire solide. Toutefois, il a eu le mérite de constituer une preuve de concept expérimentale, quatre ans avant Bitcoin.</p>
+</section>
+<section id="le-projet-ripple" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-projet-ripple">Le projet Ripple</h2>
+<p>Les cypherpunks n’étaient pas les seuls à essayer de construire des systèmes distribués qui puissent servir à l’échange monétaire. C’était le cas du développeur canadien Ryan Fugger, qui en 2004 a conçu un protocole de crédit distribué du nom de Ripple. Ce protocole s’inspirait du concept du système d’échange local (SEL) imaginé par Michael Linton dans les années 1980. Fugger lui-même avait participé à un tel système à Vancouver avant de concevoir Ripple<a href="#fn65" class="footnote-ref" id="fnref65" role="doc-noteref"><sup>65</sup></a>. Son invention était ainsi un pur produit du localisme monétaire.</p>
+<div class="no-row-height column-margin column-container"><div id="fn65"><p><sup>65</sup>&nbsp;«&nbsp;Fugger lui-même avait participé à un tel système à Vancouver&nbsp;»&nbsp;: Bailey Reutzel, <em>Disruptor Chris Larsen Returns with a Bitcoin-Like Payment System</em>, 7 décembre 2012&nbsp;: <a href="https://www.americanbanker.com/news/disruptor-chris-larsen-returns-with-a-bitcoin-like-payment-system" class="uri">https://www.americanbanker.com/news/disruptor-chris-larsen-returns-with-a-bitcoin-like-payment-system</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20140323151243/http://www.paymentssource.com/news/disruptor-chris-larsen-returns-with-bitcoin-like-payments-system-3012580-1.html?zkPrintable=1&amp;nopagination=1" class="uri">https://web.archive.org/web/20140323151243/http://www.paymentssource.com/news/disruptor-chris-larsen-returns-with-bitcoin-like-payments-system-3012580-1.html?zkPrintable=1&amp;nopagination=1</a>.</p></div><div id="fn66"><p><sup>66</sup>&nbsp;Ryan Fugger, <em>Money as IOUs in Social Trust Networks &amp; A Proposal for a Decentralized Currency Network Protocol</em>, version 2, 18 avril 2004, archive&nbsp;: <a href="https://web.archive.org/web/20060221162102/http://ripple.sourceforge.net/decentralizedcurrency.pdf" class="uri">https://web.archive.org/web/20060221162102/http://ripple.sourceforge.net/decentralizedcurrency.pdf</a>.</p></div></div><p>Ryan Fugger a publié le livre blanc de Ripple en 2004<a href="#fn66" class="footnote-ref" id="fnref66" role="doc-noteref"><sup>66</sup></a>. Le concept se fondait sur l’idée que la monnaie était essentiellement constituée de reconnaissances de dette (<em>IOUs</em>), c’est-à-dire de crédit.</p>
+<p>Le système Ripple s’établissait sur un réseau pair à pair dont les liens étaient des relations de crédit entre des personnes. Chaque relation était composée de deux paramètres&nbsp;: la dette existante, qui indiquait combien une partie devait à l’autre, et la dette potentielle, qui prenait en compte la propension à prêter et à emprunter des deux parties. Ripple constituait ainsi un système où tous les participants étaient des banquiers. Concernant la monnaie de base, le protocole pouvait gérer de multiples unités de compte (du dollar, de l’euro ou même des heures de travail), mais celles-ci devaient être converties pour être transférées dans une autre devise.</p>
+<p>Dans Ripple, les paiements se faisaient par le routage d’une série d’emprunts. En supposant des relations de confiance entre Alice et Bob, Bob et Carole, et Carole et David, Alice réalisait un paiement de 10&nbsp;$ vers David en prêtant 10&nbsp;$ à Bob, et en demandant à Bob de faire de même auprès de Carole, puis à Carole de faire de même auprès de David. Le compte de David était alors crédité de 10&nbsp;$ issus de la création monétaire d’Alice. Ce fonctionnement par propagation du crédit au sein d’un réseau de confiance explique le nom du projet, le mot <em>ripple</em> signifiant ondulation en anglais.</p>
+<p>La compensation se faisait par la découverte de cycles de crédit dans le réseau. Si Bob devait 5&nbsp;$ à Alice, Carole 5&nbsp;$ à Bob et Alice 5&nbsp;$ à Carole, alors leurs dettes mutuelles disparaissaient, ce qui permettait à tous les acteurs d’avoir une capacité d’emprunt plus grande pour recevoir de futurs paiements. Une dette pouvait également être éteinte par son règlement entre les deux parties dans l’unité de compte indiquée.</p>
+<p>En 2006, dans l’idée de faire progresser son projet, Ryan Fugger a mis en ligne une preuve de concept appelée Ripplepay<a href="#fn67" class="footnote-ref" id="fnref67" role="doc-noteref"><sup>67</sup></a>. Celle-ci était basée sur un serveur central (``) et permettait aux utilisateurs de se connecter avec une simple adresse de courrier électronique. Ryan Fugger a également créé un Google Group en janvier 2007<a href="#fn68" class="footnote-ref" id="fnref68" role="doc-noteref"><sup>68</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn67"><p><sup>67</sup>&nbsp;«&nbsp;une preuve de concept appelée Ripplepay&nbsp;»&nbsp;: <a href="https://web.archive.org/web/20070702210719/http://ripplepay.com/" class="uri">https://web.archive.org/web/20070702210719/http://ripplepay.com/</a>.</p></div><div id="fn68"><p><sup>68</sup>&nbsp;«&nbsp;Ryan Fugger a également créé un Google Group en janvier 2007&nbsp;»&nbsp;: Ryan Fugger, <em>Welcome...</em>, /01/2007 23:47:26 UTC&nbsp;: <a href="https://groups.google.com/g/rippleusers/c/oRDaKz-qPjQ/m/zHV3hMPwMg0J" class="uri">https://groups.google.com/g/rippleusers/c/oRDaKz-qPjQ/m/zHV3hMPwMg0J</a>.</p></div><div id="fn69"><p><sup>69</sup>&nbsp;fiatjaf, <em>Ripple and the problem of the decentralized commit</em>, /10/2020 13:56 UTC&nbsp;: <a href="https://fiatjaf.com/3cb7c325.html" class="uri">https://fiatjaf.com/3cb7c325.html</a>.</p></div><div id="fn70"><p><sup>70</sup>&nbsp;Ce problème a été résolu d’une certaine manière par le réseau Lightning qui possède la même structure que Ripple, à l’exception que l’unité échangée n’est pas du crédit à proprement parler. – Voir fiatjaf, <em>The Lightning Network solves the problem of the decentralized commit</em>, /10/2020 19:09 UTC&nbsp;: <a href="https://fiatjaf.com/e3624832.html" class="uri">https://fiatjaf.com/e3624832.html</a>.</p></div></div><p>Malgré l’enthousiasme de sa communauté et quelques milliers d’utilisateurs, Ripple possédait des défauts inhérents à son fonctionnement distribué. En particulier, il souffrait du «&nbsp;problème de l’engagement décentralisé<a href="#fn69" class="footnote-ref" id="fnref69" role="doc-noteref"><sup>69</sup></a>&nbsp;»&nbsp;: durant un paiement, les participants ne pouvaient pas s’engager d’une façon sûre pour assurer la chaîne de prêts<a href="#fn70" class="footnote-ref" id="fnref70" role="doc-noteref"><sup>70</sup></a>.</p>
+<p>Voyant que son implémentation n’allait nulle part, Ryan Fugger a laissé les rênes de son projet entre les mains des dirigeants de l’entreprise OpenCoin Inc., Chris Larsen et Jed McCaleb, en novembre 2012, qui l’avaient approché quelques mois plus tôt<a href="#fn71" class="footnote-ref" id="fnref71" role="doc-noteref"><sup>71</sup></a>. Ces derniers voulaient combiner son idée avec un nouvel algorithme de consensus, développé par Jed, David Schwartz et Arthur Britto. Le résultat a été sensiblement différent du concept initial, faisant intervenir une unité de compte native, le XRP, et étant bien plus centralisé et contrôlé que ce qu’on attendrait d’un protocole de crédit universel. La société OpenCoin a été renommée en Ripple Labs en 2013. Ryan Fugger a finalement modifié le nom de sa preuve de concept en Rumplepay en 2020 pour éviter la confusion<a href="#fn72" class="footnote-ref" id="fnref72" role="doc-noteref"><sup>72</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn71"><p><sup>71</sup>&nbsp;«&nbsp;Ryan Fugger a laissé les rênes de son projet entre les mains des dirigeants de l’entreprise OpenCoin Inc., Chris Larsen et Jed McCaleb, en novembre 2012&nbsp;»&nbsp;: Ryan Fugger, <em>Ripple.com and taking the project to the next level</em>, /11/2012 21:21:12 UTC&nbsp;: <a href="https://groups.google.com/g/rippleusers/c/IVin3Qwrp7k/m/urzaH_VrQcQJ" class="uri">https://groups.google.com/g/rippleusers/c/IVin3Qwrp7k/m/urzaH_VrQcQJ</a>.</p></div><div id="fn72"><p><sup>72</sup>&nbsp;«&nbsp;Ryan Fugger a finalement modifié le nom de sa preuve de concept en Rumplepay en 2020 pour éviter la confusion&nbsp;»&nbsp;: Ryan Fugger, <em>New Name</em>, 26 août 2020&nbsp;: <a href="https://rumplepay.com/" class="uri">https://rumplepay.com/</a>.</p></div></div></section>
+<section id="vers-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="vers-bitcoin">Vers Bitcoin</h2>
+<p>Tous ces concepts de monnaie numérique ont, directement ou indirectement, mené à Bitcoin, soit parce que Satoshi Nakamoto avait connaissance de ces projets, soit parce qu’il partageait les mêmes références que leurs inventeurs. Bitcoin constituait en effet l’aboutissement de ces tentatives de construire une forme de monnaie numérique native du cyberespace.</p>
+<p>Tout d’abord, Satoshi Nakamoto était pleinement familier de l’eCash de David Chaum et avait de toute évidence lu les échanges des cypherpunks à son sujet. Dans le livre blanc de Bitcoin, il y faisait clairement référence au moment d’aborder le problème de la double dépense tout en utilisant le terme <em>mint</em> (traduit ici par monnaierie), qui était un vocable courant parmi les cypherpunks pour désigner les banques chaumiennes&nbsp;:</p>
+<p>«&nbsp;Une solution courante consiste à introduire une autorité centrale de confiance, ou monnaierie, qui vérifie chaque transaction pour s’assurer qu’il n’y a pas de double dépense<a href="#fn73" class="footnote-ref" id="fnref73" role="doc-noteref"><sup>73</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn73"><p><sup>73</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>De plus, Satoshi Nakamoto a explicitement reconnu la faiblesse de eCash dans ses interventions publiques et privées. Ainsi, dans un courriel adressé à la liste de diffusion p2p-research en février 2009, il réagissait à la comparaison entre Bitcoin et eCash par Martien van Steenbergen en disant&nbsp;:</p>
+<p>«&nbsp;Bien sûr, la plus grande différence est l’absence de serveur central. C’était le talon d’Achille des systèmes chaumiens&nbsp;; lorsque l’entreprise centrale fermait ses portes, la monnaie disparaissait<a href="#fn74" class="footnote-ref" id="fnref74" role="doc-noteref"><sup>74</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn74"><p><sup>74</sup>&nbsp;Satoshi Nakamoto, <em>[p2p-research] Re: Bitcoin open source implementation of P2P currency</em>, /02/2009 19:01:24 UTC&nbsp;: <a href="https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz" class="uri">https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz</a>.</p></div></div><p>En privé, il écrivait aussi à Dustin Trammell en 2009&nbsp;:</p>
+<p>«&nbsp;Vous savez, je pense qu’il y avait beaucoup plus de gens qui étaient intéressés [par la monnaie électronique] dans les années 90, mais après plus d’une décennie d’échecs de systèmes basés sur des tiers de confiance (Digicash,&nbsp;etc.), ils voient cela comme une cause perdue. J’espère qu’ils sauront distinguer que c’est la première fois, à ma connaissance, que nous essayons un système qui n’est pas fondé sur la confiance<a href="#fn75" class="footnote-ref" id="fnref75" role="doc-noteref"><sup>75</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn75"><p><sup>75</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin v0.1 released</em>, /01/2009 07:55:20 UTC&nbsp;: <a href="http://web.archive.org/web/20131204164149/http://www.dustintrammell.com/files/Satoshi_Nakamoto.zip" class="uri">http://web.archive.org/web/20131204164149/http://www.dustintrammell.com/files/Satoshi_Nakamoto.zip</a>. – Il a fait une remarque similaire sur le forum de Fondation P2P. Voir Satoshi Nakamoto, <em>Re: Bitcoin open source implementation of P2P currency</em>, 15 février 2009&nbsp;: <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9493" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9493</a>.</p></div><div id="fn76"><p><sup>76</sup>&nbsp;Gwern Branwen, <em>Wei Dai/Satoshi Nakamoto 2009 Bitcoin emails</em>, 17 mars 2014&nbsp;: <a href="https://gwern.net/doc/bitcoin/2008-nakamoto" class="uri">https://gwern.net/doc/bitcoin/2008-nakamoto</a>.</p></div></div><p>La dernière référence au modèle de Chaum était la première version du livre blanc datant du mois d’août 2008 qui s’intitulait de façon limpide «&nbsp;<em>Electronic Cash Without a Trusted Third Party</em>&nbsp;» («&nbsp;Un argent liquide électronique sans tiers de confiance&nbsp;» en français) et dont le nom du fichier était ``<a href="#fn76" class="footnote-ref" id="fnref76" role="doc-noteref"><sup>76</sup></a>.</p>
+<p>Satoshi Nakamoto s’était donc clairement intéressé à eCash avant de concevoir Bitcoin. Toutefois, ce n’était pas le cas des concepts de b-money, bit gold et RPOW, dont il n’avait vraisemblablement pas connaissance en 2007. Ces systèmes ont cependant joué un rôle indirect dans l’histoire de Bitcoin.</p>
+<p>Comme raconté dans le chapitre&nbsp;<a href="les-debuts-de-bitcoin.html" data-reference-type="ref" data-reference="ch:mythe">1</a>, dans sa préparation à la publication de son concept en août 2008, Satoshi est rentré en contact avec Adam Back, qui l’a renvoyé vers Wei Dai, car le britannique avait remarqué les similitudes de Bitcoin avec b-money. C’est à ce moment-là que Satoshi a ajouté la référence à b-money au livre blanc.</p>
+<p>Satoshi a appris l’existence du modèle bit gold imaginé par Szabo plus tard, probablement grâce à la première intervention de Hal Finney sur la liste de diffusion le 7 novembre 2008. Ce dernier a instantanément noté la similarité entre Bitcoin et le système de Szabo&nbsp;:</p>
+<p>«&nbsp;Je crois aussi qu’il y a une valeur potentielle dans une forme de jeton infalsifiable dont le taux de production est prédictible et qui ne peut pas être influencé par des personnes corrompues. Ceci serait plus comparable à l’or qu’aux monnaies fiat. Nick Szabo a décrit il y a plusieurs années ce qu’il appelait “bit gold” et ceci serait une implémentation de ce concept<a href="#fn77" class="footnote-ref" id="fnref77" role="doc-noteref"><sup>77</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn77"><p><sup>77</sup>&nbsp;Hal Finney, <em>Bitcoin P2P e-cash paper</em>, /11/2008 23:40:12 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014827.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014827.html</a>.</p></div><div id="fn78"><p><sup>78</sup>&nbsp;«&nbsp;La référence à bit gold a fini par être ajoutée sur la page web de Bitcoin.org au début de l’année 2009&nbsp;»&nbsp;: <a href="https://web.archive.org/web/20090303195936/http://bitcoin.org/" class="uri">https://web.archive.org/web/20090303195936/http://bitcoin.org/</a>.</p></div></div><p>La référence à bit gold a fini par être ajoutée sur la page web de Bitcoin.org au début de l’année 2009, aux côtés du lien vers le texte descriptif de b-money<a href="#fn78" class="footnote-ref" id="fnref78" role="doc-noteref"><sup>78</sup></a>.</p>
+<p>Satoshi Nakamoto a reconnu <em>a posteriori</em> la ressemblance de ces deux concepts avec son propre modèle. Le 20 juillet 2010, au sein d’une discussion sur le forum parlant de la possible suppression de l’article concernant Bitcoin par Wikipédia, il écrivait pour montrer le sérieux du projet&nbsp;:</p>
+<p>«&nbsp;Bitcoin est une implémentation de la b-money proposée par Wei Dai sur la liste de diffusion des Cypherpunks en 1998 et du Bitgold proposé par Nick Szabo<a href="#fn79" class="footnote-ref" id="fnref79" role="doc-noteref"><sup>79</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn79"><p><sup>79</sup>&nbsp;Satoshi Nakamoto, <em>Re: They want to delete the Wikipedia article</em>, /07/2010 18:38:28 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=342.msg4508#msg4508" class="uri">https://bitcointalk.org/index.php?topic=342.msg4508#msg4508</a>.</p></div></div><p>Cette phrase, censée démontrer l’inscription de Bitcoin dans l’histoire de la monnaie numérique, est restée gravée dans les esprits, à tel point que la b-money et le bit gold sont régulièrement cités comme des précurseurs de la cryptomonnaie.</p>
+<p>En revanche, Satoshi Nakamoto n’a jamais indiqué à une seule occasion qu’il connaissait le système RPOW de Hal Finney. Celui-ci n’était après tout qu’un modèle eCash basé sur la preuve de travail, dont le serveur central avait la particularité d’être transparent aux yeux des utilisateurs. Néanmoins, Hal Finney a joué un rôle majeur dans les débuts de Bitcoin et a évoqué son système en 2013 sur Bitcointalk<a href="#fn80" class="footnote-ref" id="fnref80" role="doc-noteref"><sup>80</sup></a>, de sorte que RPOW est aujourd’hui lui aussi considéré comme un prédécesseur de la découverte de Satoshi.</p>
+<div class="no-row-height column-margin column-container"><div id="fn80"><p><sup>80</sup>&nbsp;«&nbsp;Je m’intéressais depuis longtemps aux systèmes de paiement cryptographiques. De plus, j’avais eu la chance de rencontrer Wei Dai et Nick Szabo et de correspondre avec eux, généralement reconnus pour avoir créé des idées qui allaient se concrétiser avec Bitcoin. J’avais tenté de créer ma propre monnaie basée sur la preuve de travail, appelée RPOW. J’ai donc trouvé Bitcoin fascinant.&nbsp;» – Hal Finney, <em>Bitcoin and me</em>, /03/2013 20:40:02 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833" class="uri">https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833</a>.</p></div><div id="fn81"><p><sup>81</sup>&nbsp;«&nbsp;Nick Szabo courant 2009&nbsp;»&nbsp;: Nick Szabo, <em>Liar-resistant government</em>, /05/2009 23:13 UTC&nbsp;: <a href="https://unenumerated.blogspot.com/2009/05/liar-resistant-government.html" class="uri">https://unenumerated.blogspot.com/2009/05/liar-resistant-government.html</a>.</p></div><div id="fn82"><p><sup>82</sup>&nbsp;«&nbsp;ils ont tous les trois démenti la chose&nbsp;»&nbsp;: Wei Dai&nbsp;: «&nbsp;Ce que je comprends c’est que le créateur de Bitcoin, qui se fait appeler Satoshi Nakamoto, n’a même pas lu mon article avant de réinventer l’idée lui-même. Il l’a appris par la suite et m’a crédité dans son papier. Donc ma connexion avec le projet est assez limitée.&nbsp;» – Wei Dai, <em>Re: Making money with Bitcoin?</em>, /02/2011 15:27 UTC&nbsp;: <a href="https://www.lesswrong.com/posts/ijr8rsyvJci2edxot/making-money-with-bitcoin?commentId=hbEu9ue9eymNzaF2J" class="uri">https://www.lesswrong.com/posts/ijr8rsyvJci2edxot/making-money-with-bitcoin?commentId=hbEu9ue9eymNzaF2J</a>.</p></div></div><p>La proximité des idées de ces trois hommes avec Bitcoin est étonnante de prime abord, si bien que beaucoup ont spéculé que Satoshi Nakamoto était l’un ou plusieurs d’entre eux. Ces hommes, qui ont publiquement découvert l’existence de Bitcoin assez rapidement (Wei Dai lorsque Satoshi l’a contacté en août 2008, Hal Finney lors de la publication du livre blanc, Nick Szabo courant 2009<a href="#fn81" class="footnote-ref" id="fnref81" role="doc-noteref"><sup>81</sup></a>), avaient le profil pour avoir imaginé le concept, malgré quelques éléments contradictoires. Cependant, ils ont tous les trois démenti la chose<a href="#fn82" class="footnote-ref" id="fnref82" role="doc-noteref"><sup>82</sup></a>.</p>
+<p>Le dernier projet de monnaie numérique qui a marqué l’histoire de Bitcoin est le projet Ripple de Ryan Fugger. Même si celui-ci ne ressemblait pas vraiment à Bitcoin, il a néanmoins eu son influence sur le développement de ce dernier. Satoshi Nakamoto connaissait en effet Ripple. En février 2009, sur la liste de diffusion de la Fondation P2P, il répondait à Martien van Steenbergen qui y faisait référence<a href="#fn83" class="footnote-ref" id="fnref83" role="doc-noteref"><sup>83</sup></a>&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn83"><p><sup>83</sup>&nbsp;«&nbsp;il répondait à Martien van Steenbergen qui y faisait référence&nbsp;»&nbsp;: Martien van Steenbergen faisait aussi référence à d’autres projets issus de la communauté P2P&nbsp;: Pekunio et Wizard Rabbit Treasurer. – Martien van Steenbergen, <em>[p2p-research] Re: Bitcoin open source implementation of P2P currency</em>, /02/2009 20:01:03 UTC&nbsp;: <a href="https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz" class="uri">https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz</a>.</p></div><div id="fn84"><p><sup>84</sup>&nbsp;Satoshi Nakamoto, <em>[p2p-research] Re: Bitcoin open source implementation of P2P currency</em>, /02/2009 02:31:20&nbsp;: <a href="https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz" class="uri">https://diyhpl.us/~bryan/irc/bitcoin-satoshi/p2presearch-again/p2pfoundation.net/backups/p2p_research-archives/2009-February.txt.gz</a>.</p></div></div><p>«&nbsp;En ce qui concerne les systèmes de confiance, Ripple est unique en ce qu’il répartit la confiance plutôt que de la concentrer<a href="#fn84" class="footnote-ref" id="fnref84" role="doc-noteref"><sup>84</sup></a>.&nbsp;»</p>
+<p>Le deuxième lien entre Ripple et Bitcoin est l’implication du développeur Mike Hearn. Ce dernier s’était intéressé au Ripple de Ryan Fugger dès ses débuts et, en 2007, il avait été l’une des premières personnes à intervenir sur le Google Group nouvellement créé<a href="#fn85" class="footnote-ref" id="fnref85" role="doc-noteref"><sup>85</sup></a>. En découvrant Bitcoin en avril 2009, Hearn n’a ainsi pas pu s’empêcher de demander à Satoshi Nakamoto ce qu’il pensait de Ripple, et ce dernier lui avait alors répondu&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn85"><p><sup>85</sup>&nbsp;«&nbsp;il avait été l’une des premières personnes à intervenir sur le Google Group nouvellement créé&nbsp;»&nbsp;: Mike Hearn, <em>Hello from a Ripple fan</em>, /05/2007 12:20:53 UTC&nbsp;: <a href="https://groups.google.com/g/rippleusers/c/i8OyR5yLC0Q/m/SyztfhBGYJEJ" class="uri">https://groups.google.com/g/rippleusers/c/i8OyR5yLC0Q/m/SyztfhBGYJEJ</a>.</p></div><div id="fn86"><p><sup>86</sup>&nbsp;Satoshi Nakamoto, <em>Re: Questions about BitCoin</em>, /04/2009 20:44 UTC&nbsp;: <a href="https://plan99.net/~mike/satoshi-emails/thread1.html" class="uri">https://plan99.net/~mike/satoshi-emails/thread1.html</a>.</p></div></div><p>«&nbsp;Ripple est intéressant dans la mesure où c’est le seul autre système qui fait quelque chose de la confiance en dehors de la concentrer au sein d’un serveur central<a href="#fn86" class="footnote-ref" id="fnref86" role="doc-noteref"><sup>86</sup></a>.&nbsp;»</p>
+<p>Mais Ripple différait sensiblement de Bitcoin, en particulier par le fait qu’il constituait, à proprement parler, un système de crédit distribué et non pas une monnaie de base décentralisée. C’est ce qui a éloigné Ryan Fugger, qui ne voyait pas «&nbsp;pourquoi un bitcoin aurait une quelconque valeur, puisqu’il n’y avait apparemment rien pour le garantir&nbsp;», mais qui s’est finalement rendu à l’évidence que le modèle de Satoshi Nakamoto était «&nbsp;une excellente idée<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn87"><p><sup>87</sup>&nbsp;Ryan Fugger, <em>Re: Is the cryptocurrency Bitcoin a good idea?</em>, /05/2011 07:44:33 UTC&nbsp;: <a href="https://www.quora.com/Is-the-cryptocurrency-Bitcoin-a-good-idea/answer/Ryan-Fugger" class="uri">https://www.quora.com/Is-the-cryptocurrency-Bitcoin-a-good-idea/answer/Ryan-Fugger</a>.</p></div></div><p>Bitcoin ajoutait donc la dernière pierre à l’édifice de l’argent liquide électronique. Il apportait enfin une technique permettant de construire une monnaie numérique réellement solide et durable. Le 26 janvier 2009, Zooko Wilcox-O’Hearn témoignait de cette volonté dans un article de blog, qui serait relayé quelques semaines plus tard sur Bitcoin.org. En voici le texte intégral&nbsp;:</p>
+<p>«&nbsp;Depuis quelque temps, je réfléchis à la manière dont des services de jeux comme World of Warcraft et Second Life (qui prétend ne pas être un jeu) ont réussi là où nous, à DigiCash, avons échoué&nbsp;: l’argent liquide numérique programmable, pratique et largement utilisé. Le problème est que chacune de ces nouvelles monnaies est contrôlée de manière centralisée par une seule entité. Cela limite le champ d’action des personnes qui s’appuient sur cette monnaie et la valeur qu’elles sont prêtes à risquer sur cette monnaie. Des idées circulent sur la manière de faciliter les transactions entre les monnaies, mais cela ne résoudrait pas le problème. Une pléthore de services centralisés concurrents n’est pas la même chose qu’un service décentralisé. Même s’il était bon marché et pratique d’échanger des LindenBucks contre de l’or de WoW, cela ne ferait que nous ramener à l’équivalent des monnaies des États-nations modernes : essentiellement centralisées (en raison de l’effet de réseau), lourdement taxées/réglementées/manipulées, et sujettes à des échecs désastreux. Ce que je veux, c’est une monnaie que tout le monde peut utiliser de manière pratique et peu coûteuse, mais que personne n’a le pouvoir de manipuler. Une monnaie pour laquelle personne n’a le pouvoir d’en gonfler ou d’en dégonfler la quantité en circulation, pour laquelle personne n’a le pouvoir d’en surveiller, d’en taxer ou d’en empêcher les transactions. Un véritable équivalent numérique de l’or, dans les périodes et les lieux où l’or était la monnaie universelle. Voyez l’idée de BitGold de Nick Szabo et l’idée de b-money de Wei Dai, ainsi que le récent effort pour mettre en œuvre quelque chose de ce genre&nbsp;: le BitCoin de Satoshi Nakamoto<a href="#fn88" class="footnote-ref" id="fnref88" role="doc-noteref"><sup>88</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn88"><p><sup>88</sup>&nbsp;Zooko Wilcox-O’Hearn, <em>Decentralized Money</em>, 26 janvier 2009, archive&nbsp;: <a href="https://web.archive.org/web/20090303195936/http://testgrid.allmydata.org:3567/uri/URI:DIR2-RO:j74uhg25nwdpjpacl6rkat2yhm:kav7ijeft5h7r7rxdp5bgtlt3viv32yabqajkrdykozia5544jqa/wiki.html#%5B%5BDecentralized%20Money%5D%5D" class="uri">https://web.archive.org/web/20090303195936/http://testgrid.allmydata.org:3567/uri/URI:DIR2-RO:j74uhg25nwdpjpacl6rkat2yhm:kav7ijeft5h7r7rxdp5bgtlt3viv32yabqajkrdykozia5544jqa/wiki.html#%5B%5BDecentralized%20Money%5D%5D</a>.</p></div></div></section>
+<section id="laboutissement-dune-quête" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="laboutissement-dune-quête">L’aboutissement d’une quête</h2>
+<p>La conception de Bitcoin a ainsi constitué la conclusion logique de la quête de l’argent liquide numérique. D’une part, il exploitait des techniques envisagées précédemment, comme la signature numérique, l’horodatage et la preuve de travail. D’autre part, il s’inscrivait dans une lignée de systèmes ingénieux qui n’avaient pas rencontré le succès escompté à cause de leurs défauts intrinsèques, à l’instar de eCash, de b-money, de bit gold, du système RPOW et du projet Ripple.</p>
+<p>La particularité de Bitcoin était qu’il résolvait le problème de la double dépense sans reposer sur un tiers de confiance, d’une manière jamais vue auparavant. Sa robustesse et sa simplicité permettaient d’enfin disposer d’une cybermonnaie solide et durable, qui puisse résister aux aléas de la réalité. Bitcoin représentait le Saint Graal de la monnaie numérique, trouvé par Satoshi Nakamoto en 2007 et offert au monde le 31 octobre 2008.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/un-mouvement-technologique.html" class="pagination-link" aria-label="Un mouvement technologique">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/la-valeur-de-l-information.html" class="pagination-link" aria-label="La valeur de l'information">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

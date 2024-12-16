@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; La valeur de l’information – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/le-consensus-par-le-minage.html" rel="next">
+<link href="../chapters/la-cybermonnaie-avant-nakamoto.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="7&nbsp; La valeur de l’information – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="7&nbsp; La valeur de l’information – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/la-valeur-de-l-information.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#la-représentation-des-données" id="toc-la-représentation-des-données" class="nav-link active" data-scroll-target="#la-représentation-des-données">La représentation des données</a></li>
+  <li><a href="#la-cryptographie-et-bitcoin" id="toc-la-cryptographie-et-bitcoin" class="nav-link" data-scroll-target="#la-cryptographie-et-bitcoin">La cryptographie et Bitcoin</a></li>
+  <li><a href="#la-signature-numérique" id="toc-la-signature-numérique" class="nav-link" data-scroll-target="#la-signature-numérique">La signature numérique</a></li>
+  <li><a href="#le-hachage" id="toc-le-hachage" class="nav-link" data-scroll-target="#le-hachage">Le hachage</a></li>
+  <li><a href="#les-clés-privées" id="toc-les-clés-privées" class="nav-link" data-scroll-target="#les-clés-privées">Les clés privées</a></li>
+  <li><a href="#les-adresses" id="toc-les-adresses" class="nav-link" data-scroll-target="#les-adresses">Les adresses</a></li>
+  <li><a href="#les-portefeuilles" id="toc-les-portefeuilles" class="nav-link" data-scroll-target="#les-portefeuilles">Les portefeuilles</a></li>
+  <li><a href="#la-dérivation-des-clés" id="toc-la-dérivation-des-clés" class="nav-link" data-scroll-target="#la-dérivation-des-clés">La dérivation des clés</a></li>
+  <li><a href="#la-propriété-dans-bitcoin" id="toc-la-propriété-dans-bitcoin" class="nav-link" data-scroll-target="#la-propriété-dans-bitcoin">La propriété dans Bitcoin</a></li>
+  <li><a href="#le-risque-de-garde" id="toc-le-risque-de-garde" class="nav-link" data-scroll-target="#le-risque-de-garde">Le risque de garde</a></li>
+  <li><a href="#propriété-et-responsabilité" id="toc-propriété-et-responsabilité" class="nav-link" data-scroll-target="#propriété-et-responsabilité">Propriété et responsabilité</a></li>
+  <li><a href="#bitcoin-et-linformation" id="toc-bitcoin-et-linformation" class="nav-link" data-scroll-target="#bitcoin-et-linformation">Bitcoin et l’information</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:propriete" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:7" label="enotezch:7"></span></p>
+<p><span class="lettrine">B</span><span class="smallcaps">i</span>tcoin est un concept de monnaie numérique libre. En tant que tel, il doit garantir la propriété des unités de compte sans nécessiter d’identification auprès d’un tiers de confiance. Il repose pour cela sur un algorithme de signature numérique qui permet d’autoriser une transaction grâce à la connaissance d’une information, la clé privée.</p>
+<p>Pour la première fois dans l’histoire de l’humanité, Bitcoin rend ainsi possible la possession souveraine d’un bien numérique rival, c’est-à-dire de quelque chose qui ne puisse pas simplement être copiée. Puisque cette possession est exercée par la connaissance exclusive des clés privées, l’information possède plus que jamais de la valeur. Il en découle un certain nombre de conséquences qui diffère du modèle traditionnel de la propriété.</p>
+<p>Dans ce chapitre technique, nous verrons comment les données sont représentées au sein de Bitcoin, comment la cryptographie et la signature numérique interviennent, ce qu’est le hachage. Puis, nous décrirons comment est réalisée la génération des clés et des adresses, ce que sont les portefeuilles et comment ils se structurent. Nous examinerons enfin les conséquences de ce modèle, à commencer par la responsabilité conférée au gardien des clés.</p>
+<section id="la-représentation-des-données" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-représentation-des-données">La représentation des données</h2>
+<p>En informatique, une information est un ensemble de données stockées sur un support matériel. Elle est communément représentée sous forme de chiffres binaires (appelés bits par contraction de l’anglais <em>binary digits</em>), pour refléter le fonctionnement de l’électronique numérique utilisée dans les ordinateurs. Les deux valeurs possibles (0 et 1) correspondent en effet à deux états électriques distincts, comme par exemple la présence ou l’absence de courant.</p>
+<p>Dans ce contexte, l’information est essentiellement un nombre. Même si elle prend l’allure d’un contenu multimédia, une information doit être encodée pour être traitée et interprétée par les ordinateurs. Typiquement, l’encodage<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> d’un texte pourra se faire en ASCII ou en UTF-8, celui d’une image en JPEG ou en PNG, celui d’une musique en MP3 ou en FLAC et celui d’une vidéo en MPEG ou en H.264. De cette façon, tout se ramène aux nombres.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Le mot «&nbsp;codage&nbsp;» est également largement utilisé en français.</p></div></div><p>Dans notre monde moderne occidental, nous avons pour habitude de représenter les nombres au moyen d’un système de numération à 10 chiffres, fondé sur la base 10. Il s’agit d’une convention, liée au fait que nous avons longtemps compté avec nos 10 doigts. Mais ce système décimal n’est pas le seul qui existe, et l’informatique fait usage de plusieurs autres bases.</p>
+<p>Tout d’abord, comme on l’a dit, les ordinateurs sont basés sur un système binaire, composé de deux chiffres (le 0 et le 1). Ces deux chiffres sont donc utilisés pour écrire les nombres&nbsp;: 0, 1, 10, 11, 100,&nbsp;etc. Dans ce système, le nombre 21 (base 10) s’exprime comme suit&nbsp;:</p>
+<p><span class="math display">\[21 = 16 + 4 + 1 = \mathbf{1} \times 2^4 + \mathbf{0} \times 2^3 + \mathbf{1} \times 2^2 + \mathbf{0} \times 2^1 + \mathbf{1} \times 2^0 = \mathtt{0b10101}\]</span></p>
+<p>Le préfixe <code>0b</code> est usuellement placé avant le nombre pour indiquer que ce dernier est exprimé en binaire.</p>
+<p>Un autre système de numération communément utilisé en informatique est le système hexadécimal, qui est composé de 16 chiffres, symbolisés par les 10 chiffres arabes et les 6 premières lettres de l’alphabet latin&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>0123456789abcdef</code></pre>
+<p>Dans cette base, le «&nbsp;a&nbsp;» représente le nombre 10, le « b » 11,&nbsp;etc. jusqu’au «&nbsp;f&nbsp;» qui représente le 15.</p>
+<p>Le système hexadécimal permet de condenser la représentation des données. En particulier, il est très adapté pour écrire les octets (appelés <em>bytes</em> en anglais), qui sont des ensembles de 8 bits, et qui peuvent être symbolisés par 2 caractères hexadécimaux. De cette manière, le nombre 2008 (base 10) s’écrit&nbsp;:</p>
+<p><span class="math display">\[2008 = 1792 + 208 + 8 = 7 \times 16^2 + 13 \times 16^1 + 8 \times 16^0 = \mathtt{0x7d8}\]</span></p>
+<p>On place usuellement le préfixe <code>0x</code> avant le nombre pour indiquer qu’on utilise le système hexadécimal.</p>
+<p>Dans Bitcoin, deux bases de numération supplémentaires interviennent, notamment pour représenter certaines informations capitales, comme les clés privées et les adresses. La première est la base 58. Dans ce système à 58 chiffres, les nombres sont écrits en utilisant tous les caractères alphanumériques (chiffres arabes, lettres latines minuscules, lettres latines majuscules) à l’exception des caractères <code>0</code> (zéro), <code>O</code> (o majuscule), <code>l</code> (L minuscule) et <code>I</code> (i majuscule), qui peuvent être confondus entre eux et constituer une source d’erreur. Les chiffres de cette base sont donc, dans l’ordre&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz</code></pre>
+<p>Le seconde est la base 32, moins compacte mais plus adaptée pour les codes QR. Les symboles utilisés dans cette base sont les chiffres arabes et les lettres latines minuscules, auxquels on retranche le <code>1</code>, le <code>b</code>, le <code>i</code> et le <code>o</code> pour éviter les confusions, à savoir les caractères suivants&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>qpzry9x8gf2tvdw0s3jn54khce6mua7l</code></pre>
+<p>Ces systèmes d’encodage permettent de représenter l’information de manière brute. Cependant, elle peut également être encodée dans un format particulier incluant une somme de contrôle. Une somme de contrôle (<em>checksum</em>) est une courte séquence de données numériques calculée à partir d’un ensemble de données plus important permettant de vérifier, avec une très haute probabilité, que l’intégrité de cet ensemble a été préservée lors d’une opération de copie, de stockage ou de transmission. Celle-ci est généralement placée après l’information pour que le tout soit ensuite représenté dans la base adéquate.</p>
+<p>Dans le cas de Bitcoin, la somme de contrôle est essentielle pour transmettre les informations sensibles, comme les clés privées et les adresses, afin qu’une faute de frappe soit détectée immédiatement. Les trois encodages qui mettent en œuvre ce type de somme de contrôle dans BTC sont les formats Base58Check, Bech32 et Bech32m. Le premier a été mis en place par Satoshi dès les débuts de la cryptomonnaie et consiste à calculer une somme de contrôle grâce à l’empreinte cryptographique tronquée de l’information. Il concerne les clés privées et les adresses dites «&nbsp;traditionnelles&nbsp;», comme par exemple l’adresse ``.</p>
+<p>Les deux autres ont vu le jour en 2017 et en 2021 (respectivement). Ils font intervenir des sommes de contrôle par code BCH (Bose–Chaudhuri–Hocquenghem), qui permettent non seulement de détecter la présence d’erreurs de frappe mais aussi de les localiser<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Ces formats servent à encoder (respectivement) les adresses natives de SegWit, comme par exemple <code>, et les clés publiques utilisées dans Taproot, telle que</code>. Le format Bech32 est également utilisé pour encoder les demandes de paiement sur le réseau Lightning.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;«&nbsp;de détecter la présence d’erreurs de frappe mais aussi de les localiser&nbsp;»&nbsp;: Samuel Dobson, <em>(Some of) the math behind Bech32 addresses</em>, 2 septembre 2019&nbsp;: <a href="https://medium.com/@meshcollider/some-of-the-math-behind-bech32-addresses-cf03c7496285" class="uri">https://medium.com/@meshcollider/some-of-the-math-behind-bech32-addresses-cf03c7496285</a>.</p></div></div></section>
+<section id="la-cryptographie-et-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-cryptographie-et-bitcoin">La cryptographie et Bitcoin</h2>
+<p>La cryptographie est la discipline mathématique qui a pour but la sécurisation de la communication en présence de tiers malveillants. Elle avait pour rôle initial de dissimuler de l’information grâce au chiffrement, mais s’est par la suite étendue à l’authentification de l’auteur d’un message (grâce à la cryptographie asymétrique) et à la vérification de données (grâce aux fonctions à sens unique). Aujourd’hui, la cryptographie permet donc d’assurer la confidentialité (chiffrement), l’authenticité (signature) et l’intégrité (hachage) de l’information transmise.</p>
+<p>Bitcoin est un produit cryptographique. D’un point de vue technique, il repose sur des méthodes développées dans les dernières décennies du <span class="smallcaps">xx</span>&nbsp;siècle, comme les arbres de Merkle ou la preuve de travail. D’un point de vue idéologique, il est issu du mouvement cypherpunk, qui préconisait une utilisation proactive de la cryptographie pour sauvegarder la confidentialité et la liberté des individus sur Internet. C’est dans ce double sens qu’on le désigne comme une cryptomonnaie.</p>
+<p>Dans le contexte de Bitcoin, le chiffrement peut être utile pour protéger les clés privées ou pour envoyer des messages à d’autres utilisateurs. Dans de nombreux portefeuilles, il est courant que les clés privées soient chiffrées à l’aide d’un mot de passe (clé secrète) pour éviter qu’une personne malveillante ayant accès à l’appareil puisse dépenser les fonds. Dans Electrum par exemple, les clés privées sont chiffrées par le biais de l’algorithme symétrique AES-256-CBC<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;«&nbsp;Dans Electrum par exemple, les clés privées sont chiffrées par le biais de l’algorithme symétrique AES-256-CBC&nbsp;»&nbsp;: Electrum Documentation, <em>Frequently Asked Questions</em>, 3 octobre 2021&nbsp;: <a href="https://electrum.readthedocs.io/en/latest/faq.html#how-is-the-wallet-encrypted" class="uri">https://electrum.readthedocs.io/en/latest/faq.html#how-is-the-wallet-encrypted</a>.</p></div></div><p>Néanmoins, contrairement à ce qu’on imagine parfois, aucun chiffrement n’est impliqué directement dans le protocole de Bitcoin&nbsp;: toutes les données sont publiques en raison du fonctionnement ouvert et sans autorisation du système. Bitcoin n’est pas un produit cryptographique parce que les transactions seraient chiffrées (elles ne le sont pas), mais parce qu’il repose sur les deux autres fonctions de la cryptographie&nbsp;: l’authentification grâce à la signature numérique et la vérification des données avec le hachage. La signature numérique permet d’authentifier la personne à l’origine d’une transaction pour assurer au réseau qu’il s’agit du propriétaire des bitcoins dépensés. Le hachage intervient lui dans la dérivation des clés et des adresses, dans la construction des blocs et dans le fonctionnement du minage.</p>
+</section>
+<section id="la-signature-numérique" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-signature-numérique">La signature numérique</h2>
+<p>Bitcoin étant conçu pour l’échange de valeur, il repose de manière centrale sur les transactions. Celles-ci sont dans la plupart des cas des transferts d’unités entre deux propriétaires, même si elles peuvent prendre des formes beaucoup plus complexes comme nous le verrons dans le chapitre&nbsp;<a href="les-rouages-de-la-machine.html" data-reference-type="ref" data-reference="ch:rouages">12</a>. L’unité transférée est usuellement le satoshi, qui forme la plus petite unité (indivisible) gérée par le protocole et qui correspond à un cent-millionième de bitcoin&nbsp;: 1 satoshi = 0,00000001 bitcoin. Elle a été nommée comme telle en hommage au créateur de Bitcoin, Satoshi Nakamoto<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Le terme satoshi a été initialement proposé par ribuck sur le forum de Bitcoin, d’abord en novembre 2010 pour désigner 0,01 bitcoin, puis en février 2011 pour nommer la plus petite unité. L’appellation a ensuite été adoptée par la communauté. – ribuck, <em>Re: How did “satoshi” become the name of the base unit?</em>, /01/2014 20:49:00 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=407442.msg4415850#msg4415850" class="uri">https://bitcointalk.org/index.php?topic=407442.msg4415850#msg4415850</a>.</p></div></div><p>Dans le protocole, la signature numérique est utilisée pour autoriser ces mouvements de fonds. Comme nous l’avons décrit dans le chapitre&nbsp;<a href="un-mouvement-technologique.html" data-reference-type="ref" data-reference="ch:cypherpunks">5</a>, ce procédé se base sur une paire de clés&nbsp;: une clé privée, secrète, qui <em>signe</em> le message, et une clé publique, connue de tous, qui permet de <em>vérifier</em> la signature produite. Dans le cas d’un transfert simple, le message à signer est la transaction et le signataire du message est le propriétaire des satoshis à envoyer.</p>
+<p>L’algorithme de signature produit une signature différente pour chaque transaction. Il ne s’agit pas de se contenter de révéler un secret pour effectuer une dépense, auquel cas tout le monde sur le réseau pourrait tenter de dépenser les fonds, mais bien de produire une donnée qui puisse ensuite être vérifiée par le réseau conformément à ce qui est attendu.</p>
+<p>Ce fonctionnement confère un rôle fondamental à la clé privée. Tout individu la connaissant peut accéder aux fonds qu’elle protège et s’en emparer. C’est pourquoi elle doit rester absolument secrète&nbsp;: car celui qui la connaît devient le propriétaire <em>de facto</em> des bitcoins concernés.</p>
+<p>L’algorithme principal utilisé dans Bitcoin est ECDSA (<em>Elliptic Curve Digital Signature Algorithm</em>), une variante de DSA utilisant la cryptographie sur courbes elliptiques. L’algorithme fait appel à des notions d’algèbre complexes, mais on peut tenter d’en expliquer brièvement le fonctionnement.</p>
+<p>La variante d’ECDSA utilisée dans Bitcoin se base sur la courbe elliptique secp256k1<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, qui sert à dériver la clé publique de la clé privée, à signer les transactions grâce à la clé privée et à vérifier les signatures à l’aide de la clé publique. L’équation mathématique de cette courbe est <span class="math inline">\(y^2 = x^3 + 7\)</span> dont les coordonnées <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> évoluent dans le corps fini des nombres entiers modulo <span class="math inline">\(p\)</span>, où <span class="math inline">\(p\)</span> est un nombre premier spécifique<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> inférieur à <span class="math inline">\(2^{256}\)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Le nom secp256k1 est un peu barbare, mais chaque lettre à une importance. Le sigle SEC désigne <em>Standards for Efficient Cryptography</em>, l’ouvrage dont elle est issue (<a href="https://www.secg.org/SEC2-Ver-1.0.pdf" class="uri">https://www.secg.org/SEC2-Ver-1.0.pdf</a>). Le P-256 indique que le nombre premier <span class="math inline">\(p\)</span> utilisé est encodé sur 256 bits. Le k indique qu’il s’agit d’une courbe de Koblitz&nbsp;: les paramètres sont choisis pour rendre les opérations plus efficaces, et n’ont donc pas été sélectionnés aléatoirement (r). Le 1 désigne l’index de la courbe par rapport aux autres courbes similaires.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;Le nombre premier choisi pour secp256k1 est&nbsp;: <span class="math inline">\(p = 2^{256} - 2^{32} - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 1\)</span>.</p></div></div><div id="fig:secp256k1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/secp256k1-curve.png" class="img-fluid figure-img"></p>
+<figcaption>Représentation graphique de la courbe secp256k1 sur les nombres réels (source&nbsp;: Loïc Morel, <em>Bitcoin démocratisé</em>, 2022).</figcaption>
+</figure>
+</div>
+<p>Une addition est définie sur cette courbe pour faire en sorte que la somme de deux points soit également un point de la courbe<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. La multiplication par un scalaire est définie comme étant le fait d’additionner le même point à plusieurs reprises&nbsp;: <span class="math inline">\(m~P = P + \ldots + P~(m~\mathrm{fois})\)</span>. En fixant un point sur la courbe, appelé point de base et noté <span class="math inline">\(G\)</span><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, on peut définir une opération transformant un entier <span class="math inline">\(d\)</span> en un point de la courbe&nbsp;: <span class="math inline">\(Q = d~G\)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;L’addition est définie par <span class="math inline">\(P + Q = R\)</span> où <span class="math inline">\(x_R = \lambda_{P,Q}^2 - x_P - x_Q \pmod p\)</span> et <span class="math inline">\(y_R = \lambda_{P,Q}~( x_P - x_R ) - y_P \pmod p\)</span> avec <span class="math inline">\(\lambda_{P,Q} = \{ \frac{3 x_P^2}{2 y_P} \pmod p~\mathrm{si}~P = Q~;  \frac{y_Q - y_P}{x_Q - x_P} \pmod p~\mathrm{sinon} \}\)</span>.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Le point de base de secp256k1 est&nbsp;: $$\begin{aligned}</p></div></div><p>Ces opérations peuvent être représentées géométriquement sur la courbe. Par exemple, l’équivalent géométrique du doublement du point <span class="math inline">\(G\)</span> (addition avec lui-même) consiste à tracer la tangente du point, à considérer l’intersection de cette tangente avec la courbe et à en prendre l’opposé, comme représenté sur la figure&nbsp;<a href="#fig:secp256k1-multiplication" data-reference-type="ref" data-reference="fig:secp256k1-multiplication">7.2</a>. Toutes ces opérations sont non réversibles.</p>
+<div id="fig:secp256k1-multiplication" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/secp256k1-multiplication.png" class="img-fluid figure-img"></p>
+<figcaption>Représentation géométrique du doublement du point G sur secp256k1 (source&nbsp;: Loïc Morel, <em>Bitcoin démocratisé</em>, 2022).</figcaption>
+</figure>
+</div>
+<p>En choisissant une clé privée <span class="math inline">\(k\)</span>, on peut ainsi calculer la clé publique <span class="math inline">\(K\)</span> qui est <span class="math inline">\(K = k~G\)</span>. Puisque la multiplication par un scalaire est non réversible, le passage de la clé privée à la clé publique constitue une fonction à sens unique. En d’autres termes, il est en pratique impossible de retrouver la clé publique à partir de la clé privée sans essayer chaque possibilité une à une.</p>
+<p>Regardons ce que cela donne en pratique. La clé privée est un nombre choisi aléatoirement. Elle doit être comprise entre <span class="math inline">\(1\)</span> et <span class="math inline">\(n - 1\)</span> où <span class="math inline">\(n\)</span> est l’ordre du point <span class="math inline">\(G\)</span> (qui approche <span class="math inline">\(2^{256}\)</span>)&nbsp;:</p>
+<p><span class="math display">\[n = \mathtt{0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141}\]</span></p>
+<p>Par exemple, le nombre héxadécimal suivant est tout à fait valide pour servir de clé privée&nbsp;:</p>
+<p><span class="math display">\[k = \mathtt{0x999bb87eea489b2fc6219226e7b95d9083a3b627246ea852e85567ac4d72444f}\]</span></p>
+<p>La clé publique est un point de la courbe défini par <span class="math inline">\(K = k~G\)</span>. Si l’on calcule ce point à partir de la clé privée précédente, on obtient&nbsp;:</p>
+<p><span class="math display">\[\begin{aligned}
+K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e300b3bd}, \\
+    &amp;~\mathtt{0x5822f24e0fdb4e568f97a7fff246c07ba486c1756f82971765cc9cf8e45ff5e6}~)\end{aligned}\]</span></p>
+<p>Dans Bitcoin, cette clé publique est représentée de manière sérialisée. Elle peut l’être sous forme non compressée, auquel cas elle est précédée par le préfixe <code>0x04</code>. Dans notre cas, son expression sérialisée est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>04 f6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e300b3bd
+5822f24e0fdb4e568f97a7fff246c07ba486c1756f82971765cc9cf8e45ff5e6</code></pre>
+<p>Il existe également une représentation compressée de la clé publique. Celle-ci est rendu possible par la symétrie de la courbe par rapport à l’axe des abscisses&nbsp;: car en effet, le fait que le point <span class="math inline">\((x, y)\)</span> appartienne à la courbe implique que le point <span class="math inline">\((x, - y)\)</span> y soit aussi. Pour compresser l’information, il suffit ainsi de donner l’abcisse <span class="math inline">\(x\)</span> et un préfixe qui vaut <code>0x02</code> si <span class="math inline">\(y\)</span> est pair ou <code>0x03</code> si <span class="math inline">\(y\)</span> est impair<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. On peut ensuite retrouver grâce à l’équation de la courbe. Dans notre cas, la clé publique compressée est&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Dans le corps fini <span class="math inline">\(\mathbb{F}_p\)</span>, prendre l’opposé d’un élément non nul <span class="math inline">\(y\)</span> inverse sa polarité. En effet, si <span class="math inline">\(y \in [\![ 1, p - 1 ]\!]\)</span>, alors <span class="math inline">\(-y + p \in [\![ 1, p - 1 ]\!]\)</span>.</p></div></div><pre data-fontsize="\footnotesize"><code>02 f6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e300b3bd</code></pre>
+<p>Ce format permet de réduire la taille des transactions (et donc les frais)&nbsp;: c’est pour cela qu’il est utilisé dans la plupart des portefeuilles récents, et qu’il est imposé dans le cas de SegWit. Le format non compressé tend ainsi à disparaître, même s’il reste toujours valide dans les transactions classiques.</p>
+<p>Dans Bitcoin, la clé publique servait initialement à recevoir les fonds directement («&nbsp;<em>Pay to Public Key</em>&nbsp;»), de sorte qu’on la confond encore aujourd’hui avec la notion d’adresse. Toutefois, c’est son empreinte obtenue par hachage («&nbsp;<em>Pay to Public Key Hash</em>&nbsp;»), qui sert généralement d’adresse de réception, comme nous le décrirons plus bas.</p>
+<p>L’algorithme de signature ECDSA s’applique à un message <span class="math inline">\(m\)</span> qui est précédemment haché et produit une signature <span class="math inline">\((r, s)\)</span>. Il est ensuite possible de faire correspondre la signature avec la clé publique <span class="math inline">\(K\)</span> grâce à un algorithme de vérification qui ne nécessite pas de connaître la clé <span class="math inline">\(k\)</span><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;L’algorithme de signature ECDSA est le suivant. En notant <span class="math inline">\(H(m)\)</span> l’empreinte cryptographique du message à signer, la signature est obtenue en appliquant les étapes suivantes&nbsp;:</p></div><div id="fn11"><p><sup>11</sup>&nbsp;Il s’agit de la signature de la transaction d’identifiant <code>. Sous forme sérialisée (DER), cette signature est</code>.</p></div></div><p>Dans Bitcoin, le message est la transaction. L’agorithme de vérification montre ainsi que la personne qui a produit la signature connaît <span class="math inline">\(k\)</span> tel que <span class="math inline">\(K = k~G\)</span>, c’est-à-dire qu’elle est propriétaire des bitcoins. C’est ce qui permet aux nœuds du réseau de s’assurer de la validité des signatures, et par conséquent de celle de la transaction. Un exemple de signature correspondant à notre clé publique et à une transaction réalisée sur le réseau principal est<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>&nbsp;:</p>
+<p><span class="math display">\[\begin{aligned}
+(r, s) = &amp;~(~\mathtt{0x19b83a5e354ef62e98413e6ef3f37ad0c69f75cea7daa6a352cf66f4668a9a0b}, \\
+    &amp;~\mathtt{0x4c13f9b6f2c8ea7af224b3f6a3d9cfdfe5085bbafa150fb1aa72a20ce7cac6b0}~)\end{aligned}\]</span></p>
+<p>Notez que l’algorithme ECDSA présenté ici n’est pas le seul qui existe. En novembre 2021, BTC a intégré un autre algorithme, le schéma de signature numérique de Schnorr, qui est basé sur la même courbe elliptique mais qui apporte des bénéfices majeurs. Certaines autres variantes de Bitcoin comme Monero utilisent EdDSA, un algorithme de signature basée sur une courbe d’Edwards tordue.</p>
+</section>
+<section id="le-hachage" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-hachage">Le hachage</h2>
+<p>Bitcoin fait également usage du hachage. Le hachage est un procédé cryptographique permettant de garantir l’intégrité d’une information numérique. Le nom de ce procédé est issu d’une analogie avec la cuisine, où des aliments peuvent être coupés en petits morceaux et regroupés dans un hachis. Il est mis en œuvre par une fonction de hachage qui transforme un <em>message</em> de taille variable en une <em>empreinte</em> de taille fixe. Cette empreinte est aussi appelé condensat ou <em>hash</em>.</p>
+<p>Les fonctions de hachage sont des fonctions déterministes, facilement exécutables, qui possèdent en théorie trois caractéristiques<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;Il s’agit de suppositions et certaines fonctions satisfont ces caractéristiques plus que d’autres. Ainsi, des collisions ont été trouvées au sein des fonctions MD5 et SHA-1 alors qu’on les croyait sûres.</p></div></div><ul>
+<li><p>Elles sont irréversibles&nbsp;: ce sont des fonctions à sens unique construites de telle sorte qu’il est difficile de retrouver le message à partir d’une empreinte donnée (résistance à la préimage)&nbsp;;</p></li>
+<li><p>Elles sont imprédictibles&nbsp;: toute modification du message initial résulte en une empreinte profondément différente, si bien qu’il est difficile de trouver une empreinte similaire&nbsp;;</p></li>
+<li><p>Elles sont résistantes aux collisions&nbsp;: il est difficile de trouver deux messages dont l’empreinte résultante soit la même.</p></li>
+</ul>
+<p>L’une des fonctions les plus connues est SHA-256, dont le nom vient de l’abréviation de <em>Secure Hash Algorithm</em> et de la taille des empreintes qu’elle produit (256 bits, soit 32 octets). Par exemple, si on considère le message «&nbsp;Bitcoin&nbsp;», le fait de l’orthographier en minuscules ou d’ajouter un point change complètement son empreinte, comme montré dans le tableau&nbsp;<a href="#table:sha256-hashes" data-reference-type="ref" data-reference="table:sha256-hashes">7.1</a>. Cette particularité permet notamment de détecter si le message comporte une erreur.</p>
+<div id="table:sha256-hashes">
+<table class="caption-top table">
+<caption>Empreintes par SHA-256 de messages légèrement différents.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Message</strong></th>
+<th style="text-align: center;"><strong>Empreinte (SHA-256)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Bitcoin</td>
+<td style="text-align: center;">``</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">bitcoin</td>
+<td style="text-align: center;">``</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Bitcoin.</td>
+<td style="text-align: center;">``</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Le hachage intervient à de multiples endroits dans Bitcoin&nbsp;: dans l’algorithme de signature (hachage du message), dans le calcul des adresses, dans la dérivation des clés, pour le calcul des sommes de contrôle, pour le calcul des identifiants des transactions et des blocs, dans la construction des arbres de Merkle dans les blocs, et enfin au cœur du minage.</p>
+<p>Trois fonctions de hachage sont utilisées&nbsp;: SHA-256, qui produit des empreintes de 256 bits (32 octets)&nbsp;; RIPEMD-160, dont le nom est le sigle de l’anglais <em>RACE Integrity Primitives Evaluation Message Digest</em>) et qui résulte en des condensats de 160 bits&nbsp;; et SHA-512, qui hache les données en des empreintes de 512 bits.</p>
+<p>La fonction la plus présente est le double SHA-256 (noté SHA-256d ou HASH-256), qui intervient presque partout. Il est supposé que ce doublement mis en place par Satoshi avait pour rôle la protection contre les attaques par extension de longueur<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>. La composée de SHA-256 par RIPEMD-160 est utilisée pour le calcul des adresses. C’est le seul endroit où RIPEMD-160 intervient de manière substantielle<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>. Enfin, SHA-512 intervient dans l’algorithme de dérivation des clés mis en place dans les portefeuilles.</p>
+<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;«&nbsp;Il est supposé que ce doublement mis en place par Satoshi avait pour rôle la protection contre les attaques par extension de longueur&nbsp;»&nbsp;: <a href="https://bitcoin.stackexchange.com/questions/6037/why-are-hashes-in-the-bitcoin-protocol-typically-computed-twice-double-computed/6042#6042" class="uri">https://bitcoin.stackexchange.com/questions/6037/why-are-hashes-in-the-bitcoin-protocol-typically-computed-twice-double-computed/6042#6042</a>.</p></div><div id="fn14"><p><sup>14</sup>&nbsp;«&nbsp;Les adresses Bitcoin sont le seul endroit où le hachage de 160 bits est utilisé.&nbsp;» – Satoshi Nakamoto, <em>Re: Stealing Coins</em>, /07/2010 20:48:01 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=571.msg5754#msg5754" class="uri">https://bitcointalk.org/index.php?topic=571.msg5754#msg5754</a>.</p></div></div></section>
+<section id="les-clés-privées" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-clés-privées">Les clés privées</h2>
+<p>Par essence, la clé privée est une information numérique, c’est-à-dire un nombre. Plus précisément, il s’agit d’un très grand nombre compris entre <span class="math inline">\(1\)</span> et <span class="math inline">\(n-1\)</span>, où <span class="math inline">\(n\)</span> est l’ordre du point <span class="math inline">\(G\)</span> et approche <span class="math inline">\(2^{256}\)</span> soit <span class="math inline">\(1,1579 \times 10^{77}\)</span>. L’intervalle est considérablement grand, si bien qu’il est statistiquement impossible de tomber sur une même clé privée en la choisissant au hasard. À titre de comparaison, le nombre d’atomes dans l’univers observable est proche de <span class="math inline">\(10^{80}\)</span>.</p>
+<p>La clé privée est créée au hasard, la plupart du temps grâce à des algorithmes générateurs de nombres pseudo-aléatoires permettant de reproduire le hasard de la manière la plus fidèle possible en informatique. Cette génération repose sur l’entropie informatique issue de l’appareil, c’est-à-dire la quantité d’aléatoire qu’il collecte par le biais de sources matérielles (variance du bruit du ventilateur ou du disque dur) ou de sources extérieures (mouvement de la souris, signaux du clavier, etc.). Les outils utilisés pour générer des clés privées sont le plus souvent considérés comme cryptographiquement fiables (CSPRNG).</p>
+<p>La caractère aléatoire du procédé est fondamental, constituant la base de la sécurité du modèle. Par exemple, une personne qui choisirait le nombre 1 comme clé privée ne pourrait jamais utiliser l’adresse correspondante, car la sécurité liée à cette clé est nulle. Tous les bitcoins qui seraient déposés sur cette adresse seraient instantanément débités par un programme spécialisé<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;On peut observer l’adresse `` (correspondant à la clé 1) pour se convaincre qu’il ne s’agit pas d’un bon choix.</p></div><div id="fn16"><p><sup>16</sup>&nbsp;BitMEX Research, <em>Call me Ishmael</em>, 13 octobre 2020&nbsp;: <a href="https://blog.bitmex.com/call-me-ishmael/" class="uri">https://blog.bitmex.com/call-me-ishmael/</a>.</p></div></div><p>Il en est de même des <em>brain wallets</em>, portefeuilles «&nbsp;cérébraux&nbsp;» reposant sur la mémorisation d’une information, qui sont souvent créés de manière non sécurisée. Les gens partent le plus souvent d’une phrase cohérente (comme une citation tirée d’un livre ou d’une chanson) de sorte à pouvoir la retenir facilement, puis la hachent et utilisent l’empreinte résultante en tant que clé privée. Cette manière de faire est hautement risquée en raison de la forte prévisibilité du langage humain, et les adresses créées comme cela ont de bonnes chances d’être vidées, comme l’a montré une enquête de BitMEX Research<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>.</p>
+<p>Cette importance du hasard se retrouve également dans l’algorithme ECDSA qui repose sur la génération d’une clé éphémère pour produire la signature. Dans le cas où cette valeur ne serait pas correctement générée, un attaquant pourrait déduire les clés privées à partir des signatures. C’est notamment ce qui s’est passé en août 2013, lorsqu’une vulnérabilité (CVE-2013-7372) a été découverte au sein de la fonction SecureRandom de Java et a affecté la sécurité de plusieurs portefeuilles logiciels sur Android<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>. L’exploitation de cette faille a mené à la perte d’au moins 55,82 bitcoins, soit 5&nbsp;200&nbsp;$ à l’époque<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;Bitcoin.org, <em>Android Security Vulnerability</em>, 11 août 2013&nbsp;: <a href="https://bitcoin.org/en/alert/2013-08-11-android" class="uri">https://bitcoin.org/en/alert/2013-08-11-android</a>.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;«&nbsp;la perte d’au moins 55,82 bitcoins&nbsp;»&nbsp;: Burt Wagner, <em>Bad signatures leading to 55.82152538 BTC theft (so far)</em>, /08/2013, 22:53:13 UTC&nbsp;:<a href="https://bitcointalk.org/index.php?topic=271486.msg2907468#msg2907468" class="uri">https://bitcointalk.org/index.php?topic=271486.msg2907468#msg2907468</a>.</p></div></div><p>Après avoir été générées, les clés privées doivent ensuite être encodées dans le but de faciliter leur transmission, pour l’import dans un portefeuille ou pour l’export. Dans Bitcoin, elles sont ainsi représentées grâce à l’encodage Base58Check. C’est pourquoi on parle parfois de <em>Wallet Import Format</em> (WIF).</p>
+<p>L’encodage d’une clé suit une série d’étapes simples. Tout d’abord, la clé est préfixée par l’octet de version <code>0x80</code> qui indique qu’il s’agit d’une clé privée. Puis, un suffixe <code>0x01</code> est ajouté (ou non) pour indiquer si l’on souhaite en dériver une clé publique compressée (ou non compressée). Dans le cas de notre clé-exemple, on obtient les octets suivants&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>80 999bb87eea489b2fc6219226e7b95d9083a3b627246ea852e85567ac4d72444f 01</code></pre>
+<p>Ensuite, la somme de contrôle est calculée en prenant les 4 premiers octets de l’empreinte par le double SHA-256 et ajoutée après l’ensemble&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>80 999bb87eea489b2fc6219226e7b95d9083a3b627246ea852e85567ac4d72444f 01
+1dd28791</code></pre>
+<p>Enfin, le tout est encodé en base 58. Dans le cas «&nbsp;compressé&nbsp;», la clé commence toujours par un K ou un L. Ici, notre clé privée s’écrit&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>L2NJfKog9SEdoAkAkm8ZNYDcpWQop95orPepbhsTE2t5Bf1yFmYk</code></pre>
+<p>Dans le cas «&nbsp;non compressé&nbsp;» (de moins en moins utilisé), la clé commence toujours par un 5. Ici, notre clé privée devient&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>5JywJHwyuD4YSsErniGJkrDNi87kggSZNADCEkhRyRScqfMMTEt</code></pre>
+</section>
+<section id="les-adresses" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-adresses">Les adresses</h2>
+<p>Dans Bitcoin, une adresse constitue en quelque sorte un numéro de compte servant à recevoir des fonds. Cette donnée est disponible publiquement sur la chaîne de bloc et n’importe qui peut en vérifier le solde. Néanmoins, un utilisateur peut générer autant d’adresses qu’il le désire afin de ne pas dévoiler l’entièreté de son activité.</p>
+<p>De manière générale, une adresse est l’empreinte d’une clé publique (PKH), la clé publique elle-même (PK), ou bien l’empreinte d’un script (SH). Ici nous parlerons des adresses simples, dérivées de clés publique par hachage, qui sont les plus utilisées sur le réseau BTC.</p>
+<p>Une adresse simple est obtenue par les hachages successifs de la clé publique sérialisée par les fonctions SHA-256 et RIPEMD-160. La composée de ces deux fonctions est communément appelée HASH-160. La fonction RIPEMD-160 a été choisie par Satoshi dans le but de diminuer la longueur des adresses, car elle produisait des empreintes de 20 octets au lieu des 64 octets d’une clé publique ou des 32 octets produits par SHA-256. En notant <span class="math inline">\(A\)</span> l’adresse, on a ainsi&nbsp;:</p>
+<p><span class="math display">\[A = \mathrm{HASH160}(~K~) = \mathrm{RIPEMD160}(~\mathrm{SHA256}( K )~)\]</span></p>
+<p>Puisque cette composée est elle-même une fonction de hachage, elle a pour particularité d’être de même une fonction à sens unique. Il est de ce fait virtuellement impossible de retrouver la clé publique à partir de l’adresse.</p>
+<p>Le risque de collision est lui aussi statistiquement nul, même s’il y a moins d’adresses que de clés privées. La fonction de hachage RIPEMD-160 produit en effet des empreintes de 160 bits, et il existe par conséquent <span class="math inline">\(2^{160}\)</span> (environ <span class="math inline">\(1,4615 \times 10^{48}\)</span>) adresses possibles, soit approximativement <span class="math inline">\(8 \times 10^{28}\)</span> fois moins d’adresses que de clés privées. Néanmoins ce nombre est suffisamment élevé pour que le risque de tomber par hasard sur la même adresse soit complètement négligeable<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;Supposons qu’une population mondiale de 10&nbsp;milliards d’êtres humains utilise Bitcoin activement de sorte que chaque individu génère 1&nbsp;million d’adresses en moyenne. La probabilitié d’une collision serait alors de&nbsp;: <span class="math display">\[10^{16}~/~2^{160} \simeq 0.000000000000000000000000000000684~\%~.\]</span> Même si un individu tentait de construire une machine spécialisée générant et vérifiant un trillion (<span class="math inline">\(10^{18}\)</span>) d’adresses par seconde et fonctionnant en continu, la probabilité d’accéder à une adresse déjà utilisée serait toujours négligeable (de l’ordre de <span class="math inline">\(10^{-21}\)</span>). Nos cerveaux ne sont pas faits pour nous représenter de tels nombres.</p></div></div><p>Comme une clé publique admet deux représentations sérialisées (compressée et non compressée), il est possible de calculer deux empreintes. Nous nous focalisons ici sur la représentation compressée. L’empreinte de notre clé publique compressée est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>a18bd7f41b42c7cc6ebfa4de43e6b63248536ebc</code></pre>
+<p>On peut en dériver trois adresses de type différent&nbsp;: une adresse traditionnelle, une adresse SegWit native et une adresse SegWit imbriquée. Dans les trois cas, le principe est le même, bien que l’usage spécifique de l’empreinte dans le protocole diffère.</p>
+<p>L’adresse traditionnelle est obtenue grâce à un encodage de l’empreinte en Base58Check avec l’octet de version <code>0x00</code>. À cause de cet octet de version, les adresses traditionnelles simples commencent toujours par un 1 (purement symbolique car il vaut 0 en base 58). Notre adresse est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX</code></pre>
+<p>Ce type d’adresse est appelé P2PKH (<em>Pay to Public Key Hash</em>) et a été le premier type d’adresse dans Bitcoin.</p>
+<p>L’adresse SegWit native est encodée grâce au format Bech32. Celui-ci inclut un préfixe indiquant le réseau (<code>bc</code> pour BTC) et un séparateur (<code>1</code>). De manière similaire à l’encodage des adresses traditonnelles, il s’agit de prendre l’information brute (la «&nbsp;charge utile&nbsp;»), de la préfixer avec l’octet de version (<code>0x00</code> pour la première version de SegWit), de calculer une somme de contrôle et d’exprimer le tout dans la base appropriée, à savoir la base 32. Ce procédé fait que l’adresse résultante commencera toujours par <code>bc1q</code>. Dans le cas de notre empreinte de clé publique, on obtient&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>bc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4udhygr2</code></pre>
+<p>Ce type d’adresse est appelé P2WPKH (<em>Pay to Witness Public Key Hash</em>).</p>
+<p>Enfin, on peut également inclure cette donnée sous la forme d’un script dans une adresse P2SH, créant une adresse SegWit dite «&nbsp;imbriquée&nbsp;». Le script, composé de l’octet de version de SegWit (<code>0x00</code>) et de l’empreinte, est haché pour constituer la nouvelle adresse. Comme dans le cas de toutes les adresses P2SH, l’empreinte résultante est encodée en Base58Check avec l’octet de version <code>0x05</code>. Cet octet de version a pour conséquence de faire commencer l’adresse par un 3. Notre empreinte devient ici&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>3JqPHkGuvW7nsUJDgm5CPSNUb47WczCC5e</code></pre>
+<p>Ce type d’adresse est appelé P2SH-P2WPKH (<em>P2SH-nested Pay to Witness Public Key Hash</em>). Nous aborderons plus en détail les différents schémas de script qui sous-tendent ces types d’adresse dans le chapitre&nbsp;<a href="les-rouages-de-la-machine.html" data-reference-type="ref" data-reference="ch:rouages">12</a>.</p>
+<p>Une fois qu’elles ont été encodées, les adresses peuvent être partagées facilement d’une personne à une autre. Grâce à la somme de contrôle, faire une faute de frappe ne crée théoriquement pas de risque, car le logiciel la détectera et refusera de procéder au paiement. Les adresses sont aussi souvent représentées par des codes QR (voir figure&nbsp;<a href="#fig:address-qr-codes" data-reference-type="ref" data-reference="fig:address-qr-codes">7.3</a>), plus adaptés pour l’interaction avec un téléphone multifonction.</p>
+<div id="fig:address-qr-codes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/address-qr-codes.eps" class="img-fluid"></p>
+<figcaption>Codes QR des adresses.</figcaption>
+</figure>
+</div>
+<p>En résumé&nbsp;: lorsqu’un utilisateur veut recevoir un paiement, il génère une clé privée, en dérive une clé publique et crée à partir de celle-ci une adresse&nbsp;; il communique son adresse à un autre utilisateur qui lui envoie des fonds&nbsp;; il peut ensuite dépenser les fonds reçus en signant une transaction à l’aide de sa clé privée. Le réseau pair à pair de Bitcoin vérifie alors que la signature est conforme à la clé publique.</p>
+<p>La clé publique n’est révélée au réseau que lors de la transaction. Cela implique que les fonds sont protégés face à l’éventualité d’une mauvaise implémentation de l’algorithme de signature (comme dans le cas de l’exploitation de la faille au sein de SecureRandom en 2013) ou de la compromission généralisée d’ECDSA (par un ordinateur quantique par exemple). Il s’agit d’un bénéfice secondaire issu de l’utilisation de nouvelles adresses à chaque paiement.</p>
+<p>Au-delà de BTC, les autres cryptomonnaies ont leur encodage propre pour les adresses, qui n’est souvent qu’une variante du standard modifiant la version ou le préfixe. Ainsi, dans Litecoin, les adresses traditionnelles commencent par un <code>L</code> (comme par exemple <code>) et les adresses SegWit par un `ltc1q` (comme par exemple</code>).</p>
+<p>Bitcoin Cash possède également son propre format d’adresse, appelée CashAddr, qui s’inspire fortement du format Bech32. Ce format a été introduit pour différencier les adresses BTC des adresses BCH. Une adresse BCH est simplement une représentation alternative du type P2PKH&nbsp;: dans ce format, l’adresse <code>devient</code>.</p>
+</section>
+<section id="les-portefeuilles" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-portefeuilles">Les portefeuilles</h2>
+<p>Un portefeuille, de l’anglais <em>wallet</em>, parfois aussi qualifié de portemonnaie, est un procédé de stockage des clés privées donnant accès aux pièces de cryptomonnaie de l’utilisateur. Ce procédé est souvent combiné avec la gestion de la cryptomonnaie&nbsp;: sa réception avec la lecture de la chaîne de blocs et son envoi avec la production des signatures. Le moyen utilisé peut être une simple feuille de papier ou un fichier informatique, mais il s’agit généralement d’un logiciel sur mobile ou ordinateur, ou bien d’un appareil spécialisé.</p>
+<p>Un portefeuille est donc par essence un <em>porte-clés</em>. Son rôle principal est de conserver les clés privées dans le temps pour garantir la propriété des bitcoins. La plupart du temps, les clés sont générées par ces portefeuilles de manière déterministe à partir d’une phrase de récupération de 12 à 24 mots. L’utilisateur doit donc conserver précieusement cette phrase sur un autre support, dans l’éventualité de retrouver ses fonds si son appareil est perdu, cassé ou volé.</p>
+<p>En revanche, un compte auprès d’un dépositaire comme une plateforme de change centralisée n’est pas un portefeuille à proprement parler, car ces services conservent les clés privées de leurs utilisateurs à des fins de sécurité et de facilité d’usage. Ainsi, des applications qui ressemblent à s’y méprendre à des portefeuilles, comme le <em>Wallet of Satoshi</em> ou l’application Coinbase, n’en sont pas.</p>
+<p>On peut classifier les portefeuilles existants en deux grandes catégories&nbsp;: les portefeuilles «&nbsp;à chaud&nbsp;» (<em>hot wallets</em>) qui sont connectés à Internet lors de leur utilisation, et les portefeuilles «&nbsp;à froid&nbsp;» (<em>cold wallets</em>) qui ne le sont jamais de manière directe. De plus, on retrouve au sein de ces deux catégories différents types de portefeuilles, qui possèdent chacun leurs qualités et leurs défauts.</p>
+<p>Le stockage à chaud des clés privées, qui utilise des appareils directement connectés à Internet, concerne notamment les portefeuilles logiciels (<em>software wallet</em>) que l’on peut installer sur un mobile, une tablette ou un ordinateur généraliste. Ces logiciels mettent généralement leur code source à disposition du public pour des raisons évidentes de sécurité. Les clés sont conservées sur l’ordinateur et sont généralement chiffrées. Cette catégorie inclut les logiciels de nœud complet, les portefeuilles légers, les extensions de navigateur et les portefeuilles web.</p>
+<p>L’implémentation de nœud complet (<em>full node implementation</em>), aussi appelée client complet, est le premier type de portefeuille qui est apparu et le seul qui existait du temps de Satoshi. Comme son nom l’indique, un tel logiciel réalise toutes les opérations nécessaires au maintien d’un nœud sur le réseau pair à pair&nbsp;: il télécharge l’intégralité de la chaîne de blocs et il vérifie et relaie les transactions non confirmées et les blocs. Bitcoin Core est le logiciel de nœud complet le plus connu. Cependant, en raison de la difficulté d’utilisation, ce type de portefeuille n’est généralement plus utilisé directement, les néophytes préférant utiliser des applications plus légères et les utilisateurs confirmés privilégiant des solutions plus sécurisées, qu’ils peuvent ensuite connecter à leur nœud personnel s’ils le souhaitent.</p>
+<p>Le portefeuille léger (<em>lightweight wallet</em>), aussi appelé portefeuille SPV (pour <em>Simplified Payment Verification</em>), est un logiciel qui ne télécharge pas la chaîne de blocs mais qui procède à une vérification simplifiée des transactions à partir de la chaîne des entêtes qui ne nécessite que peu de ressources informatiques. Ce type de portefeuille est particulièrement adapté aux petits appareils comme les téléphones. Le logiciel peut interagir avec l’ensemble des nœuds complets du réseau pair-à-pair, comme le fait BRD (anciennement appelé <em>breadwallet</em>), mais il passe de manière générale par l’intermédiaire d’une infrastructure de serveurs dédiés qui rendent l’utilisation plus agréable, comme c’est le cas d’Electrum ou de Samourai. Ce type de portefeuille garantit la sûreté des fonds, mais peut avoir un effet dommageable à d’autres niveaux, notamment en ce qui concerne la confidentialité. L’utilisateur peut également choisir de connecter son portefeuille à son propre nœud complet.</p>
+<p>Un portefeuille peut aussi prendre la forme d’une extension de navigateur web, que ce soit sur Chrome, Firefox ou Brave. Contrairement aux clients légers, ces portefeuilles ne procèdent pas toujours à la vérification des transactions et font confiance au serveur auquel elles sont connectées.</p>
+<p>Enfin, le dernier type de stockage à chaud est le portefeuille web. Ces derniers sont des interfaces en ligne permettant de gérer des fonds. Contrairement aux plateformes de change, l’utilisateur garde le contrôle de ses clés privées lorsqu’il passe par ce genre de service&nbsp;: celles-ci sont gérées par le navigateur et ne sont jamais révélées à autrui. Le portefeuille de ce type le plus connu est celui de Blockchain.com.</p>
+<p>Mais ces solutions à chaud ne sont pas les seules, et il existe des méthodes de conservation à froid des clés privées, qui sont coupées de tout accès direct à Internet. Cette conservation a le mérite de réduire la surface d’attaque et donc le risque de vol par piratage informatique. Il s’agit de la solution recommandée pour mettre en sécurité des grosses sommes de cryptomonnaie.</p>
+<p>Dans l’absolu, il faut disposer d’un appareil qui reste constamment hors-ligne pour générer les clés et les adresses. Cet appareil peut être un vieil ordinateur non connecté à Internet ou bien un appareil spécialisé. Les deux méthodes principales pour réaliser du stockage à froid sont le portefeuille papier et le portefeuille matériel.</p>
+<p>Le portefeuille papier (<em>paper wallet</em>) est le type de portefeuille le plus simple qu’on puisse imaginer&nbsp;: les clés privées générées hors-ligne (et les adresses qui leur correspondent) sont écrites sur une feuille de papier. L’information écrite peut également être une phrase mnémotechnique. Le portefeuille papier présente néanmoins un inconvénient majeur&nbsp;: l’impossibilité de signer des transactions sans l’importer dans une interface connectée à Internet. Cette méthode n’est pas du tout pratique, car l’utilisateur ne peut pas signer de transaction sans compromettre la sécurité de son portefeuille et doit se contenter de recevoir des paiements. Pour résoudre ce problème, il existe ce qu’on appelle les portefeuilles matériels.</p>
+<p>Le portefeuille matériel (<em>hardware wallet</em>) est un appareil dont la spécificité est de générer et de conserver les clés privées de manière isolée et de permettre de signer des transactions hors-ligne. Il s’agit aujourd’hui de la solution la plus sûre de détenir du bitcoin. Ces portefeuilles sont construits de telle manière que quelqu’un qui s’en emparerait ne pourrait pas dépenser les fonds sans le mot de passe de l’utilisateur.</p>
+<p>Il existe une diversité de portefeuilles matériels. Les plus connus sont les portefeuilles de Satoshi Labs (le Trezor One et le Trezor model T) et ceux de Ledger (le Nano S et le Nano X), qui sont les modèles les plus anciens et les plus reconnus. Ceux-ci peuvent être connectés à l’ordinateur de manière sûre et les transactions sont toujours signées sur l’appareil. Certains autres perfectionnent la sécurité en étant physiquement isolés de tout ordinateur tiers (grâce à un air gap) comme la Cold Card Mk4. D’autres portefeuilles mettent l’accent sur la facilité d’utilisation comme les cartes Satochip qui se basent sur des smartcards.</p>
+<p>Tous les portefeuilles impliquent une certaine confiance&nbsp;: vous devez vous fier au logiciel que vous utilisez pour conserver vos bitcoins, au programme dont vous vous servez pour générer un portefeuille papier, au matériel spécialisé dans le stockage à froid. Bien entendu, les solutions ouvertes peuvent être considérées comme plus sûres dans le sens où d’autres personnes que les concepteurs ont pu vérifier le produit final&nbsp;: c’est notamment le cas de nombreux portefeuilles logiciels et de l’infrastructure matérielle des portefeuilles Trezor<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>. Dans tous les cas, une composante basée sur la réputation subsiste.</p>
+<div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;«&nbsp;l’infrastructure matérielle des portefeuilles Trezor&nbsp;»&nbsp;: <em>Hardware design of Trezor</em>&nbsp;:<a href="https://github.com/trezor/trezor-hardware" class="uri">https://github.com/trezor/trezor-hardware</a>.</p></div></div><p>De manière générale, chaque type de portefeuille possède une utilité&nbsp;: c’est donc à l’utilisateur de déterminer quel portefeuille conviendra mieux à ses besoins.</p>
+</section>
+<section id="la-dérivation-des-clés" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-dérivation-des-clés">La dérivation des clés</h2>
+<p>Durant les débuts de Bitcoin, les clés privées étaient générées aléatoirement par le logiciel à chaque utilisation. Il s’ensuivait que les clés étaient conservées dans un fichier, appelé <code>wallet.dat</code>, stocké sur le disque dur de l’ordinateur. Cela rendait la perte des clés plus probable.</p>
+<p>Néanmoins, les portefeuilles modernes ne fonctionnent plus comme cela. Les clés et les adresses sont dérivées de manière déterministe à partir d’une seule information générée aléatoirement, qui se présente sous la forme d’une phrase mnémotechnique allant de 12 à 24 mots. Ces mots peuvent être des mots en anglais, en français ou dans une autre langue.</p>
+<p>elder process crowd gentle proof taxi bean patient around warm source boil</p>
+<p>De ce fait, c’est la conservation de cette phrase, appelée phrase de récupération, qui garantit la sécurité des bitcoins. Cette phrase vous permet de retrouver vos fonds si votre appareil est volé ou cassé. C’est pourquoi elle doit rester secrète.</p>
+<p>Ce type de portefeuille est parfois appelé HD wallet pour <em>Hierarchical Deterministic Wallet</em>&nbsp;: portefeuille déterministe hiérarchique. Le concept a été développé pour Bitcoin à partir de 2011<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>. Il a été standardisé en 2012 au sein du BIP-32 écrit par Pieter Wuille, et des propositions BIP-39 et BIP-44 écrites par Marek Palatinus et Pavol Rusnak. Il a été élargi aux autres cryptomonnaies en 2014<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;«&nbsp;Le concept a été développé pour Bitcoin à partir de 2011&nbsp;»&nbsp;: Gregory Maxwell, <em>Deterministic wallets</em>, /06/2011 21:27:29&nbsp;: <a href="https://bitcointalk.org/index.php?topic=19137.msg239768#msg239768" class="uri">https://bitcointalk.org/index.php?topic=19137.msg239768#msg239768</a>.</p></div><div id="fn22"><p><sup>22</sup>&nbsp;«&nbsp;Il a été élargi aux autres cryptomonnaies en 2014&nbsp;»&nbsp;: <em>SLIP-0044 : Registered coin types for BIP-0044</em>&nbsp;: <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md" class="uri">https://github.com/satoshilabs/slips/blob/master/slip-0044.md</a>.</p></div></div><p>En règle générale, la phrase secrète, ou phrase de récupération, est générée par l’appareil de l’utilisateur, qu’il s’agisse d’un téléphone mobile, d’un ordinateur ou d’un portefeuille matériel. Pour ce faire, une entropie est d’abord créée par l’appareil de manière pseudo-aléatoire. L’information, qui possède un nombre de bits précis, est ensuite enrichie d’une somme de contrôle de quelques bits, permettant de détecter les erreurs de saisie, et l’ensemble est divisé en segments de 11 bits. Enfin, chacun de ces segments est associé à un mot dans la liste standarde de 2048 mots, ce qui permet de former la phrase. Cette dérivation est représentée dans la figure&nbsp;<a href="#fig:from-entropy-to-mnemonic" data-reference-type="ref" data-reference="fig:from-entropy-to-mnemonic">7.4</a>.</p>
+<p>Le nombre de mots de la phrase dépend de la taille de l’entropie désirée. Ainsi une entropie de 128 bits est dotée d’une somme de contrôle de 4 bits, ce qui donne une phrase de 12 mots de 11 bits. Pour 256 bits, on a une somme de contrôle de 8 bits et donc une phrase de 24 mots.</p>
+<div id="fig:from-entropy-to-mnemonic" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/from-entropy-to-mnemonic.eps" class="img-fluid"></p>
+<figcaption>De l’entropie à la phrase secrète.</figcaption>
+</figure>
+</div>
+<p>Divers procédés cryptographiques sont utilisés pour dériver les clés et les adresses à partir de cette phrase. Ces procédés de dérivation ont sensiblement les mêmes propriétés que les fonctions de hachage en produisant des résultats irréversibles, imprédictibles et résistants aux collisions.</p>
+<p>Le premier est le code d’authentification de message HMAC-SHA512 (HMAC pour <em>Hash-Based Message Authentication Code</em>) qui calcule une empreinte en utilisant la fonction de hachage SHA-512 en combinaison avec une clé secrète. Le second est la fonction de dérivation de clé PBKDF2 (<em>Password-Based Key Derivation Function 2</em>) qui applique de manière répétée une fonction choisie par l’utilisateur à un message de taille arbitraire avec un sel cryptographique. L’intérêt est de nécessiter une quantité de calcul importante pour éviter un cassage par force brute de l’information supérieure.</p>
+<p>Dans Bitcoin, PBKDF2 est utilisée pour dériver une graine à partir de la phrase mnénmotechnique, en appliquant la fonction HMAC-SHA512 à 2048 reprises. Le sel cryptographique est le terme <code>mnemonic</code> auquel on peut ajouter une phrase de passe (<em>passphrase</em>) pour renforcer la sécurité du procédé. La graine résultante est une information de 512 bits (64 octets), à partir de laquelle la clé maîtresse et les clés suivantes sont dérivées.</p>
+<p>La dérivation des clés se fait grâce à la fonction HMAC-SHA512. Tout d’abord, on procède à une première dérivation à partir de la graîne. On applique le HMAC à la graine et au sel cryptographique <code>Bitcoin seed</code>, ce qui nous donne une clé maîtresse (premiers 256 bits du résultat) et un code de chaîne maître (derniers 256 bits du résultat). Le passage de la phrase secrète à la clé maîtresse et au code de chaîne maître est résumé dans la figure&nbsp;<a href="#fig:from-mnemonic-to-root" data-reference-type="ref" data-reference="fig:from-mnemonic-to-root">7.5</a>.</p>
+<div id="fig:from-mnemonic-to-root" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/from-mnemonic-to-root.eps" class="img-fluid"></p>
+<figcaption>De la phrase secrète à la clé maîtresse.</figcaption>
+</figure>
+</div>
+<p>Ces deux informations permettent de réaliser toutes les dérivations suivantes. Le code de chaîne intervient dans la chaîne de dérivation des clés, de sorte qu’il est impossible de procéder à la dérivation sans lui.</p>
+<p>Plutôt que de gérer ces deux informations indépendamment, on préfère faire appel aux clés privées étendues (<em>extended private keys</em>), qui incluent la clé privée et le code de chaîne, ainsi que d’autres informations comme la profondeur et l’indice de la clé enfant. La clé privée étendue est encodée en Base58Check avec un préfixe spécial qui dépend du type d’adresse dérivé, faisant que le résultat commence par <code>xprv</code> (adresses traditionnelles et clés Taproot), par <code>yprv</code> (adresses SegWit imbriquées) ou par <code>zprv</code> (adresses SegWit natives). Dans notre cas, la clé privée étendue issue de la clé privée maîtresse et du code de chaîne maître est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>xprv9s21ZrQH143K3KSN1mSK8myNuDcXNvNoCDcU4KBxMTuj1Wo83zNn
+jaj8dKFT81GttcgPftdB4XhAzzQLXJEGDtFp35yssYnxDV3yVDEqv1b</code></pre>
+<p>De même, la clé publique étendue (<em>extended private key</em>) regroupe la clé publique et le code de chaîne correspondant à la clé privée dont elle dérive. En Base58Check, cette clé commence toujours par <code>xpub</code>, <code>ypub</code> ou <code>zpub</code>. La clé publique étendue correspondant à la clé privée maîtresse est&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>xpub661MyMwAqRbcFoWq7nyKVuv7TFT1nP6eZSY4rhbZuoShtK8GbXh3
+HP3cUapsPsqEd52TRk1vhkgkhtAReezgSBi4ELh3YoxjmZgKBk7U98h</code></pre>
+<p>La dérivation des clés (<em>child key derivation</em>) consiste à utiliser l’algorithme HMAC-SHA512 pour dériver des clés étendues «&nbsp;enfant&nbsp;» à partir d’une clé étendue «&nbsp;parent&nbsp;». Les codes de chaîne sont utilisés comme sel cryptographique. Deux types de dérivation existent&nbsp;: la dérivation normale et la dérivation endurcie.</p>
+<p>La dérivation normale fait intervenir la clé publique étendue dans le processus, ce qui rend possibles deux opérations&nbsp;: l’obtention de la clé publique (étendue) enfant à partir de la clé publique (étendue) parent, et l’obtention de la clé privée (étendue) enfant à partir de la clé privée (étendue) parent. Le fonctionnement de ce type de dérivation est schématisé par la figure&nbsp;<a href="#fig:normal-child-key-derivation" data-reference-type="ref" data-reference="fig:normal-child-key-derivation">7.6</a>.</p>
+<div id="fig:normal-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/normal-child-key-derivation.eps" class="img-fluid"></p>
+<figcaption>Dérivation normale des clés par HMAC-SHA512.</figcaption>
+</figure>
+</div>
+<p>Cette particularité de la dérivation se révèle extrêmement utile pour générer de nouvelles adresses sans compromettre la clé privée racine. Un utilisateur peut ainsi importer la clé publique étendue dans un processeur de paiement afin de vérifier son solde et générer de nouvelles adresses sans avoir à fournir la clé privée. Cela permet aussi aux commerçants d’avoir des employés qui reçoivent des paiements à différentes adresses sans se soucier de la sécurité des fonds.</p>
+<p>Cependant, cette particularité comporte un risque potentiel&nbsp;: si une clé privée enfant est divulguée, alors la connaissance de la clé publique étendue parente (et donc du code de chaîne correspondant) permet d’obtenir toutes les clés privées enfant ainsi que la clé privée parent.</p>
+<p>C’est pour cela qu’il existe un deuxième type de dérivation, la dérivation endurcie (<em>hardened derivation</em>), qui, contrairement à la première, est restreinte au calcul de clés privées (étendues) enfant, ce qui assure une meilleure sécurité. Celle-ci est représentée dans la figure&nbsp;<a href="#fig:hardened-child-key-derivation" data-reference-type="ref" data-reference="fig:hardened-child-key-derivation">7.7</a>.</p>
+<div id="fig:hardened-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/hardened-child-key-derivation.eps" class="img-fluid"></p>
+<figcaption>Dérivation endurcie des clés par HMAC-SHA512.</figcaption>
+</figure>
+</div>
+<p>Chaque dérivation fait intervenir un indice, encodé sur 32 bits comme un entier signé, dont le bit de signe indique si elle doit être endurcie ou non et dont la valeur indique le numéro de la clé enfant. Ainsi, on peut produire 2&nbsp;147&nbsp;483&nbsp;648 (de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^{31} - 1\)</span>) clés enfants normales et 2&nbsp;147&nbsp;483&nbsp;648 clés enfants endurcies (de <span class="math inline">\(-0\)</span> à <span class="math inline">\(- 2^{31} + 1\)</span>) à partir d’une même clé parent.</p>
+<p>L’usage veut qu’on utilise une apostrophe pour désigner ce signe<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>. L’indice <code>2</code> indique qu’il s’agit de la troisième clé enfant normale. L’indice <code>44’</code> indique qu’il s’agit de la 45 clé enfant endurcie.</p>
+<div class="no-row-height column-margin column-container"><div id="fn23"><p><sup>23</sup>&nbsp;On utilise aussi parfois la lettre <code>h</code> (pour <em>hardened</em>).</p></div></div><p>Les dérivations successives permettent de créer des arbres de dérivation, dont la position de chaque clé peut être retrouvée grâce à un chemin, le chemin de dérivation. Ce dernier est composé des indices successifs des clés, qui sont séparés par des barres obliques (<code>/</code>). On le fait généralement commencer par la lettre <code>m</code> pour indiquer qu’on part de la clé privée maîtresse. Un exemple de chemin de dérivation est ``.</p>
+<p>Chaque portefeuille peut utiliser son propre chemin de dérivation. Néanmoins, un standard a émergé, le BIP-44. Celui-ci simplifie la construction de portefeuilles à usages multiples, supportant plusieurs cryptomonnaies et donnant la possibilité de créer plusieurs comptes pour chacune d’entre elles<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn24"><p><sup>24</sup>&nbsp;Tous les portefeuilles ne respectent néanmoins pas ce standard. Le BRD wallet (ex Bread Wallet) utilise ainsi le chemin <code>m/0’</code> pour dériver le compte principal, conformément aux recommandations initiales du BIP-32.</p></div></div><p>Dans ce standard, on procède à trois dérivations endurcies puis à deux dérivations normales pour arriver à une clé privée et à l’adresse correspondante. Chaque dérivation apporte une information&nbsp;:</p>
+<ul>
+<li><p>La première dérivation (endurcie) sert à définir le but du portefeuille&nbsp;: le 44 (qui fait référence au BIP-44) permet de dériver un compte utilisant des adresses traditionnelles, le 49 (BIP-49) pour les adresses SegWit imbriquées, le 84 (BIP-84) pour les adresses SegWit natives, le 48 ou le 45 (BIP-45) pour les adresses multisignatures, le 86 (BIP-86) pour dériver les clés publiques liées à Taproot,&nbsp;etc.&nbsp;;</p></li>
+<li><p>La deuxième dérivation (endurcie) indique le protocole cryptoéconomique et a fortiori les jetons liés&nbsp;: le chiffre 0 est utilisé pour BTC, le 1 pour le testnet, le 2 pour LTC, le 60 pour ETH, le 128 pour XMR, le 145 pour BCH,&nbsp;etc.</p></li>
+<li><p>La troisième dérivation (endurcie) donne l’indice du compte&nbsp;: 0, 1, 2,&nbsp;etc.&nbsp;;</p></li>
+<li><p>La quatrième dérivation (normale) indique le rôle des adresses&nbsp;: le 0 signale qu’il s’agit d’une adresse externe, dont le rôle est de réceptionner des bitcoins, le 1 d’une adresse interne, utilisée pour accueillir la sortie complémentaire lors d’un envoi de bitcoins (phénomène que nous décrirons dans le chapitre&nbsp;<a href="les-rouages-de-la-machine.html" data-reference-type="ref" data-reference="ch:rouages">12</a>)&nbsp;;</p></li>
+<li><p>La cinquième dérivation (normale) donne l’indice de la clé et de l’adresse considérée&nbsp;: 0, 1, 2,&nbsp;etc.</p></li>
+</ul>
+<p>De ce fait, le chemin de dérivation ressemble à ceci&nbsp;:</p>
+<pre data-fontsize="\footnotesize"><code>m / but' / protocole' / compte' / rôle_adresse / indice_adresse</code></pre>
+<p>Par exemple, la clé <code>correspond à la première adresse de réception d'un compte Bitcoin utilisant les adresses traditionnelles. De même, la clé</code> correspond à la 18 adresse de reste du premier compte Bitcoin utilisant les adresses SegWit natives.</p>
+<p>Toutes les adresses d’un portefeuille restent valides même si elles ont été utilisées. Même si l’on peut générer des adresses à l’infini, le portefeuille balaie usuellement 20 adresses à partir de la dernière adresse active.</p>
+</section>
+<section id="la-propriété-dans-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-propriété-dans-bitcoin">La propriété dans Bitcoin</h2>
+<p>La propriété est le contrôle absolu exercé sur un bien par une personne à l’exclusion de toutes les autres. Bien souvent, la propriété s’exerce par l’intermédiaire d’un droit de propriété qui établit <em>de jure</em> le rapport de force. Le bien possédé peut être un livre, une voiture ou un terrain.</p>
+<p>La propriété est à la base de la monnaie&nbsp;: sans maîtrise réelle sur les unités monétaires, l’échange est impossible. En effet, la cession de pièces de métal précieux ou de billets fiduciaires requiert que le porteur les contrôle entièrement et puisse les abandonner au moment de la transaction. C’est pourquoi on parle aussi d’argent <em>liquide</em>.</p>
+<p>Sans cette propriété, les caractéristiques de la monnaie s’effritent. Aujourd’hui, l’essentiel des transactions a lieu par l’échange du crédit bancaire, que ce soit par le biais d’un paiement par carte bancaire, d’un virement ou d’un autre moyen numérique. Cette situation fait que les gens s’exposent de plus en plus aux formes de censure issues des contraintes réglementaires et de l’arbitraire bancaire, comme l’interdiction d’envoyer un virement ou le gel de compte sans préavis, outre le risque de solvabilité de la banque.</p>
+<p>Bitcoin permet de redevenir pleinement propriétaire de son argent tout en conservant le côté numérique et immatériel de son usage. Cette propriété est de nature différente de celle exercée sur les objets&nbsp;: elle est en effet indissociable de la connaissance exclusive d’une information (les clés privées) et de la protection de cette information.</p>
+<p>Ainsi, l’information possède, plus que jamais, de la valeur. On a toujours associé une valeur au savoir en raison du pouvoir que ce dernier apporte (<em>scientia potentia est</em>), mais cette valeur était indirecte. Aujourd’hui, une information peut procurer un accès direct à un certain montant de cryptomonnaie&nbsp;: si quelqu’un connaît la clé privée qui correspond à une adresse contenant des bitcoins, il possède <em>de facto</em> ces bitcoins.</p>
+<p>Un utilisateur peut conserver du bitcoin extrêmement facilement en gardant en mémoire la clé privée ou la phrase de récupération. Il peut par exemple franchir une frontière étatique en ayant en sa possession un papier sur lequel se trouve l’information en question, ou bien tout simplement en la gardant en tête. C’est par exemple le cas d’un criminel allemand qui, après avoir miné frauduleusement 1&nbsp;700 bitcoins en installant un logiciel sur des ordinateurs à l’insu de leurs propriétaires, a pu conserver sa fortune malgré son emprisonnement de deux ans<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn25"><p><sup>25</sup>&nbsp;Clément Wardzala, «&nbsp;<em>Bitcoin&nbsp;: la police allemande à la recherche d’un mot de passe à 65 millions de dollars</em>&nbsp;», <em>Cryptoast</em>, 5 février 2021&nbsp;: <a href="https://cryptoast.fr/bitcoin-police-allemande-recherche-mot-de-passe-65m/" class="uri">https://cryptoast.fr/bitcoin-police-allemande-recherche-mot-de-passe-65m/</a>.</p></div></div><p>Un utilisateur peut recevoir des bitcoins en générant une nouvelle clé privée sur un appareil. Il ne nécessite aucune autorisation du réseau, même s’il doit bien entendu avoir accès à Internet pour vérifier les paiements entrants. En raison de la résistance du système à la censure, il peut faire ce qu’il veut de ses bitcoins&nbsp;: financer des causes sensibles, acheter de la drogue sur le dark web, jouer au casino en ligne, envoyer des fonds à l’étranger,&nbsp;etc. Il n’y a pas de limite de montant, ce qui confère à un individu fortuné un moyen d’avoir un impact autrement plus grand sur le monde.</p>
+</section>
+<section id="le-risque-de-garde" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-risque-de-garde">Le risque de garde</h2>
+<p>Même si Bitcoin permet l’échange libre au travers du cyberespace, il n’a pas fait disparaître les tiers de confiance pour autant. En effet, beaucoup de gens sont peu confiants dans leur capacité à conserver eux-mêmes leurs bitcoins, et préfèrent déléguer cette responsabilité à des services dépositaires, comme les services de garde spécialisés, les places de marché en ligne ou les applications de paiement. Il est aussi plus pratique de passer par une banque pour prêter son argent et le faire fructifier, ce qui profite aux plateformes de prêt en ligne.</p>
+<p>Bien que ce comportement se comprenne, il faut insister sur le fait que ceux qui épargnent des bitcoins par l’intermédiaire d’un dépositaire ne possèdent pas réellement ces bitcoins. La créance qu’ils possèdent sur le tiers de confiance n’est pas la propriété des bitcoins, puisque c’est le tiers en question qui les garde en son pouvoir. La loi étatique peut intervenir, mais cela n’empêche pas ce contrôle réel de s’exprimer dans une multitude de cas. C’est le sens de l’adage «&nbsp;pas vos clés, pas vos bitcoins&nbsp;» («&nbsp;<em>not your keys, not your coins</em>&nbsp;»), popularisé par Andreas Antonopoulos<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>, qui rappelle que celui qui ne gère pas lui-même ses clés privées, ne possède pas réellement les bitcoins qu’il estime détenir.</p>
+<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;Andreas Antonopoulos, <em>Bitcoin Q&amp;A: How Do I Secure My Bitcoin?</em> (vidéo), 7 juillet 2017&nbsp;: <a href="https://www.youtube.com/watch?v=vt-zXEsJ61U" class="uri">https://www.youtube.com/watch?v=vt-zXEsJ61U</a>.</p></div></div><p>Si la délégation de la propriété apporte certains avantages, elle a aussi ses inconvénients et fait courir des risques à ceux qui y ont recours. Tout d’abord, les dépositaires peuvent faire faillite dans le cas où leurs réserves deviennent trop basses pour les demandes de retrait. En cas de faillite, le client ne retrouve pas l’intégralité de ses fonds, à moins qu’une autre entité rachète les pertes de la plateforme.</p>
+<p>Premièrement, cette faillite peut se matérialiser suite à une perte de fonds, comme ce qui est arrivé en juillet 2011 à la plateforme de change polonaise Bitomat qui avait perdu les clés privées liées à 17 000 BTC suite à un incident technique.</p>
+<p>Deuxièmement, elle peut provenir d’un vol externe à la plateforme, issu par exemple d’un piratage, dont l’exemple le plus connu est le cas de la plateforme Mt. Gox qui a connu de multiples piratages entre 2011 et 2013 ayant mené à la volatilisation de 650&nbsp;000 bitcoins, et qui a fait faillite en 2014<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>. La dette (en dollars) des créanciers de la plateforme devrait être remboursée en 2024, dix ans après les faits.</p>
+<div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;«&nbsp;la plateforme Mt. Gox qui a connu de multiples piratages entre 2011 et 2013 ayant mené à la volatilisation de 650&nbsp;000 bitcoins, et qui a fait faillite en 2014&nbsp;»&nbsp;: Ludovic Lars, <em>Mt. Gox et ses 842 109 bitcoins disparus, la lente descente aux enfers d’un géant du bitcoin</em>, 24 décembre 2020&nbsp;:<a href="https://journalducoin.com/analyses/mt-gox-lente-descente-enfers/" class="uri">https://journalducoin.com/analyses/mt-gox-lente-descente-enfers/</a>.</p></div></div><p>Troisièmement, cette faillite peut résulter d’une escroquerie de sortie ou d’un vol interne, où le gestionnaire de la plateforme «&nbsp;s’enfuit avec la caisse&nbsp;». Ce type d’incident a été illustré en juillet 2011 par la fermeture du service MyBitcoin après le vol de 78&nbsp;740 BTC par son fondateur anonyme Tom Williams. Un autre cas est celui de la plateforme canadienne QuadrigaCX, qui a fait faillite en 2019 suite à la mort de son fondateur et PDG, Gerald Cotten, qui s’avérait avoir dépensé les fonds pour financer son train de vie et son addiction à la spéculation. La faillite de la plateforme d’échange populaire FTX qui est survenue en novembre 2022 suite à l’utilisation frauduleuse des fonds de ses clients constitue un autre exemple explosif de ce type d’évènement.</p>
+<p>Quatrièmement, même si aucune perte ou aucun vol de fonds ne survient, un fonctionnement par réserves fractionnaires du dépositaire peut le pousser à faire faillite à cause d’un resserrement du crédit. C’est notamment arrivé aux plateformes de prêt Celsius, Three Arrows Capital, Voyager Digital, BlockFi et Genesis Files en 2022–2023.</p>
+<p>Ensuite, outre le risque de faillite, l’utilisation d’un dépositaire comporte le risque d’intervention étatique. La plateforme, pourvu qu’elle agisse sur le marché légal, se soumet aux diverses réglementations de LCB-FT et peut donc être amenée à geler un compte, voire à saisir les fonds qui s’y trouvent. C’est ce qu’a fait la place de marché Coinbase le 7 mars 2022 en bloquant 25&nbsp;000 adresses dans le contexte des sanctions occidentales contre la Russie<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>. La plateforme peut également être fermée par les pouvoirs publics, comme cela a été le cas de BTC-e en juillet 2017 qui a été saisie par le département de la Justice des États-Unis<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;Paul Grewal, <em>Using Crypto Tech to Promote Sanctions Compliance</em>, 7 mars 2022&nbsp;: <a href="https://blog.coinbase.com/using-crypto-tech-to-promote-sanctions-compliance-8a17b1dabd68" class="uri">https://blog.coinbase.com/using-crypto-tech-to-promote-sanctions-compliance-8a17b1dabd68</a>.</p></div><div id="fn29"><p><sup>29</sup>&nbsp;Department of Justice, <em>Russian National And Bitcoin Exchange Charged In 21-Count Indictment For Operating Alleged International Money Laundering Scheme And Allegedly Laundering Funds From Hack Of Mt. Gox</em>, 26 juillet 2017&nbsp;:<a href="https://www.justice.gov/usao-ndca/pr/russian-national-and-bitcoin-exchange-charged-21-count-indictment-operating-alleged" class="uri">https://www.justice.gov/usao-ndca/pr/russian-national-and-bitcoin-exchange-charged-21-count-indictment-operating-alleged</a>.</p></div><div id="fn30"><p><sup>30</sup>&nbsp;Patrick Thompson, «&nbsp;<em>Crypto exchanges delisting, denying access and stealing BSV</em>&nbsp;», <em>CoinGeek</em> 17 janvier 2020&nbsp;: <a href="https://coingeek.com/crypto-exchanges-delisting-denying-access-and-stealing-bsv/" class="uri">https://coingeek.com/crypto-exchanges-delisting-denying-access-and-stealing-bsv/</a>.</p></div></div><p>Enfin, un autre inconvénient lié à l’utilisation d’un dépositaire est le cas des scissions, qui sont des duplications permanentes de la chaîne de blocs créant deux monnaies distinctes, et des <em>airdrops</em> («&nbsp;largages&nbsp;»), qui sont des distributions gratuites de jetons à des fins publicitaires. Dans les deux cas, l’adresse de l’utilisateur est créditée d’un actif supplémentaire qui devient sa propriété. Cependant, si la personne passe par l’intermédiaire d’un dépositaire, ce dernier peut choisir de ne pas le lui céder, généralement d’une manière non frauduleuse, selon les critères déterminés par les conditions d’utilisation lors de l’inscription. En ce qui concerne les scissions, on peut citer l’exemple de la plateforme Bitstamp qui a refusé de céder les bitcoins SV de ses utilisateurs après la séparation entre BCH et BSV en novembre 2018 et qui continue de les conserver<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>. Pour les airdrops, on peut évoquer le cas de HEX, pyramide de Ponzi ouverte, dont la genèse en 2020 a été déterminée en partie par la possession de bitcoins&nbsp;: chaque détenteur de bitcoin pouvait prétendre à un montant de jetons HEX proportionnel en publiant une signature numérique sur la chaîne d’Ethereum, mais il semble qu’aucune plateforme n’a pris le risque de tirer profit de ce largage.</p>
+<p>La non-distribution des fruits des scissions et des <em>airdrops</em> représente ainsi un manque à gagner, voire une perte sèche pour le client, surtout s’il s’agit d’une scission entre deux économies de taille équivalente. Toutefois, rien ne peut forcer en soi un dépositaire à proposer le retrait de ces gains, car la mise en œuvre technique a un coût non négligeable. Dans le cas contraire, les plateformes seraient contraintes de soutenir toutes les créations de ce type, y compris les plus fantaisistes, commes les scissions opportunistes de BTC qui ont eu lieu en 2017–2018 (Bitcoin Gold, Bitcoin Diamond, Bitcoin Private, etc.)</p>
+<p>D’une manière générale, le recours à un dépositaire comporte des inconvénients majeurs qui font qu’un utilisateur ne bénéficie pas de la résistance à la censure et de la résistance à l’inflation de Bitcoin. Conserver du bitcoin sur des plateformes réglementées permet à l’utilisateur de profiter vaguement de l’indulgence temporaire de l’État vis-à-vis des transferts et des plus-values réalisés. En outre, la généralisation de la garde de fonds présente un risque systémique comme nous le verrons. C’est pourquoi le recours aux dépositaires doit être considérée comme une exception, et non la règle, en ce qui concerne la conservation des bitcoins.</p>
+</section>
+<section id="propriété-et-responsabilité" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="propriété-et-responsabilité">Propriété et responsabilité</h2>
+<p>Si Bitcoin permet à l’utilisateur de posséder son argent de manière souveraine, cette propriété s’accompagne d’une responsabilité. Cet utilisateur doit comprendre comment le système fonctionne, au moins de manière rudimentaire. Il doit choisir quels logiciels et quel matériel utiliser. Il doit manipuler les fonds, vérifier les adresses, rester vigilant à tout instant. Dans le cas d’une scission sans protection contre la rediffusion des transactions, il doit procéder lui-même à la séparation des pièces d’un côté et de l’autre. Il est seul face à l’incertitude, et surtout, face à lui-même. Cette responsabilité constitue le prix à payer pour la liberté monétaire.</p>
+<p>Il est donc compréhensible que certaines personnes manquant de connaissances techniques finissent par déléguer cette gestion, notamment dans le but de spéculer. Cependant, l’intérêt primordial de Bitcoin n’est pas de revenir à un système bancaire&nbsp;: c’est de posséder pleinement ses fonds, sans que ceux-ci puissent être gelés par un tiers de confiance ou dilués par l’inflation monétaire.</p>
+<p>Puisque la sécurisation des bitcoins repose sur la connaissance d’une information, la conservation des bitcoins est inextricablement liée au dilemme qui existe entre la perte de données et la fuite de données. Pour conserver ses bitcoins, il faut à la fois garder l’accès à ses clés privées (éviter la perte de données) et en exclure les autres personnes (éviter la fuite de données), ce qui ne peut jamais être réalisé totalement.</p>
+<p>Ce dilemme n’est résoluble que par un compromis entre la sécurité contre la perte et la sécurité contre le vol, qui est propre à chaque personne. Ainsi, quelqu’un peut simplement mémoriser sa phrase de 12 ou 24 mots pour conserver ses bitcoins, au risque de l’oublier et de les perdre définitivement. À l’inverse, une autre personne peut conserver des sauvegardes multiples à différents endroits au risque de voir un tiers accéder à l’une d’entre elles et s’emparer de ses fonds.</p>
+<p>D’un côté, nous avons le vol de bitcoins. Celui-ci peut se faire par un cambriolage&nbsp;: une personne s’introduit chez autrui et s’empare du support physique sur lequel se trouve la sauvegarde ou le mot de passe. Mais il peut également être réalisé par intimidation&nbsp;: les propriétaires sont attaqués physiquement pour être extorqués<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>. La famille de Hal Finney a ainsi été ciblée par un maître-chanteur, qui lui a fait subir un swatting en réussissant à convaincre les unités spéciales de police d’intervenir en urgence au domicile familial<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;«&nbsp;les propriétaires sont attaqués physiquement pour être extorqués&nbsp;»&nbsp;: Jameson Lopp maintient un registre (non exhaustif) des attaques physiques connues contre les propriétaires de bitcoins, où ceux-ci subissent des menaces de violences voire de torture afin de transférer des fonds&nbsp;: <em>Known Physical Bitcoin Attacks</em>, <a href="https://github.com/jlopp/physical-bitcoin-attacks/blob/master/README.md" class="uri">https://github.com/jlopp/physical-bitcoin-attacks/blob/master/README.md</a>.</p></div><div id="fn32"><p><sup>32</sup>&nbsp;«&nbsp;La famille de Hal Finney a ainsi été ciblée par un maître-chanteur&nbsp;»&nbsp;: Robert McMillan, <em>An Extortionist Has Been Making Life Hell for Bitcoin’s Earliest Adopters</em>, 29 décembre 2014&nbsp;: <a href="https://www.wired.com/2014/12/finney-swat/" class="uri">https://www.wired.com/2014/12/finney-swat/</a>.</p></div></div><p>Il existe des bonnes pratiques pour ne pas s’exposer à ce type de vol.&nbsp;Tout d’abord, il est primordial de préserver sa confidentialité en évitant de déclarer qu’on possède des cryptomonnaies, combien on en possède, depuis combien de temps,&nbsp;etc. Ce conseil s’applique également vis-à-vis des plateformes de change, qui connaissent l’identité de leurs clients et leurs adresses de retrait, et qui peuvent dévoiler ces informations suite à une requête étatique ou à une fuite.</p>
+<p>Puis, l’utilisateur peut améliorer sa conservation. Il peut éviter de conserver ses sauvegardes dans les lieux les plus sensibles (comme son domicile). Il peut également répartir les fonds dans des portefeuilles gérés différemment afin d’atténuer l’impact d’un vol, bien que cela augmente également le risque de survenue de ce vol.</p>
+<p>Il est ensuite possible de mettre en place un compte secondaire caché au sein d’un portefeuille matériel en exploitant l’utilisation de la phrase de passe. C’est une fonctionnalité que Ledger intègre dans ses produits<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>. Cette technique a le mérite de créer un «&nbsp;déni plausible&nbsp;» à présenter à l’assaillant qui menace ou qui torture le détenteur.</p>
+<div class="no-row-height column-margin column-container"><div id="fn33"><p><sup>33</sup>&nbsp;«&nbsp;C’est une fonctionnalité que Ledger intègre dans ses produits&nbsp;»&nbsp;: Ledger Documentation, <em>Comment configurer une passphrase&nbsp;?</em>&nbsp;: <a href="https://support.ledger.com/hc/fr-fr/articles/115005214529-Comment-configurer-une-passphrase-?" class="uri">https://support.ledger.com/hc/fr-fr/articles/115005214529-Comment-configurer-une-passphrase-?</a>.</p></div></div><p>On peut enfin rendre la propriété des bitcoins collective, soit de manière explicite par la mise en place d’un compte multisignatures où chaque participant dipose de ses propres clés privées, soit de manière implicite par l’algorithme de partage de clés secrètes de Shamir (<em>Shamir’s Secret Sharing</em>). Cela permet d’impliquer d’autres personnes pour rendre l’extorsion plus difficile.</p>
+<p>De l’autre côté, nous avons la perte de bitcoins, qui représente le risque opposé de la conservation. La perte n’est pas en soi un problème pour le système. En effet, elle ne fait que renforcer le côté déflationniste du bitcoin&nbsp;: comme le disait Satoshi Nakamoto, la perte ne fait qu’«&nbsp;augmenter légèrement la valeur des pièces des autres&nbsp;» et peut être considérée «&nbsp;comme un don à tous<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>&nbsp;». Toutefois, il s’agit assurément d’un problème au niveau individuel, et la perte des clés a été pendant longtemps le principal risque pour l’utilisateur.</p>
+<div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;Satoshi Nakamoto, <em>Re: Dying bitcoins</em>, /06/2010, 17:48:26 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=198.msg1647#msg1647" class="uri">https://bitcointalk.org/index.php?topic=198.msg1647#msg1647</a>.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;James Howells a miné entre le 15 février (bloc <span class="math inline">\(4~334\)</span>) et le 24 avril 2009 (bloc <span class="math inline">\(12~098\)</span>). Il a accumulé son revenu de minage à l’adresse ``. En date du 26 avril 2009, cette adresse contenait exactement 8&nbsp;000 bitcoins.</p></div><div id="fn36"><p><sup>36</sup>&nbsp;Alex Hern, «&nbsp;<em>Missing: hard drive containing Bitcoins worth £4m in Newport landfill site</em>&nbsp;», <em>The Guardian</em>, 27 novembre 2013&nbsp;: <a href="https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site" class="uri">https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site</a>.</p></div></div><p>Certains des premiers mineurs ont ainsi perdu les bitcoins qu’ils avaient extrait. C’est le cas de James Howells, un ingénieur britannique qui a miné 8&nbsp;000 bitcoins pendant un peu plus de 2 mois en 2009 et qui a perdu la clé permettant d’y accéder<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Au cours de l’été 2013, il a en effet jeté son ordinateur contenant le fichier du portefeuille, en le déposant à la décharge publique près de chez lui. Il a réalisé son erreur quelques mois plus tard avec la hausse du cours et la médiatisation associée, mais il était trop tard. Son cas a été rendu public en novembre 2013 dans un article du <em>Guardian</em><a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>.</p>
+<p>Un autre exemple (médiatisé en 2021<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>) est celui de Stefan Thomas, le programmeur allemand qui a été payé en bitcoins pour produire la première vidéo qualitative sur Bitcoin. Après avoir payé les frais pour cette vidéo, il a conservé le reste sur son portefeuille<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>. Il a procédé à une sauvegarde sur une clé USB chiffrée (IronKey) mais a fini par oublier son mot de passe de chiffrement.</p>
+<div class="no-row-height column-margin column-container"><div id="fn37"><p><sup>37</sup>&nbsp;Nathaniel Popper, «&nbsp;<em>Lost Passwords Lock Millionaires Out of Their Bitcoin Fortunes</em>&nbsp;», <em>The New York Times</em>, 12 janvier 2021&nbsp;: <a href="https://www.nytimes.com/2021/01/12/technology/bitcoin-passwords-wallets-fortunes.html" class="uri">https://www.nytimes.com/2021/01/12/technology/bitcoin-passwords-wallets-fortunes.html</a>.</p></div><div id="fn38"><p><sup>38</sup>&nbsp;Les adresses de Stefan Thomas sont <code>et</code>. En date du 8 juin 2011, leur solde combiné était de 7&nbsp;003,21 bitcoins.</p></div></div><p>Les pertes sont donc courantes et il est nécessaire de se prémunir contre ce risque. L’adoption des portefeuilles déterministes hiérarchiques (<em>HD wallets</em>), où les clés sont dérivées d’une seule phrase secrète, a grandement aidé à raffermir la sécurité contre la perte. Avant, on devait conserver un fichier contenant ses clés privées sur un appareil&nbsp;; aujourd’hui la simple conservation de cette phrase suffit, ce qui facilite la copie sur un support physique.</p>
+<p>La première mesure à mettre en place pour éviter la perte est la mise en place de sauvegardes multiples. L’utilisateur peut placer la phrase à différents endroits géographiques, si bien qu’il conserve la propriété de ses bitcoins en cas de sinistre de l’un de ces endroits (incendie, inondation, cyclone, etc.) Il peut utiliser une feuille en papier simple ou cartonnée, ou bien il peut également faire le choix de graver ses mots sur une plaque d’acier forgée à cet effet<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn39"><p><sup>39</sup>&nbsp;«&nbsp;graver ses mots sur une plaque d’acier forgée à cet effet&nbsp;»&nbsp;: Jameson Lopp, <em>Metal Bitcoin Seed Storage Reviews</em>&nbsp;: <a href="https://jlopp.github.io/metal-bitcoin-storage-reviews/" class="uri">https://jlopp.github.io/metal-bitcoin-storage-reviews/</a>.</p></div></div><p>L’utilisateur peut même, pour ses portefeuilles les moins fournis, conserver une sauvegarde numérique sur son ordinateur (si possible en la chiffrant) ou sur le <em>cloud</em>, ce qui augmente sensiblement le risque de vol mais permet d’être sûr de pouvoir accéder aux bitcoins. Cet usage est généralement déconseillé, mais c’est à l’individu d’arbitrer la situation.</p>
+<p>L’aspect programmable de Bitcoin peut également être mis à profit contre la perte. On peut ainsi mettre en place des systèmes de récupération de fonds, comme ce qui est fait par exemple dans le portefeuille Liana<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>. Aucun standard de contrat de ce type ne s’est pour l’instant imposé, si bien que cette pratique reste déconseillée pour le novice.</p>
+<div class="no-row-height column-margin column-container"><div id="fn40"><p><sup>40</sup>&nbsp;Jean-Luc (Bitcoin.fr), <em>Sortie de la version 1.0 de Liana</em>, 12 mai 2023&nbsp;: <a href="https://bitcoin.fr/sortie-de-la-version-1-0-de-liana/" class="uri">https://bitcoin.fr/sortie-de-la-version-1-0-de-liana/</a>.</p></div></div><p>Il peut être profitable pour l’utilisateur de tenir un ou plusieurs registres listant ses différents portefeuilles, même les plus anciens, afin de ne pas oublier où sont ses fonds. Cependant, encore une fois, il ne faut pas que ce registre soit trouvé, auquel cas les fonds pourraient être retrouvés plus facilement.</p>
+<p>De même, on ne doit jamais supprimer la sauvegarde d’un portefeuille, même si ce dernier paraît vide. Celui-ci pourrait en effet contenir des cryptomonnaies issues de scissions ou pourrait recevoir des paiements à l’avenir (par exemple s’il inclut une adresse de donation publique). Il est en ce sens recommandé «&nbsp;de le mettre de côté et de conserver l’ancienne copie au cas où<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn41"><p><sup>41</sup>&nbsp;Satoshi Nakamoto, <em>Re: Version 0.3.13, please upgrade</em>, /10/2010 20:54:07 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1327.msg15136#msg15136" class="uri">https://bitcointalk.org/index.php?topic=1327.msg15136#msg15136</a>.</p></div><div id="fn42"><p><sup>42</sup>&nbsp;Pamela Morgan, <em>Cryptoasset Inheritance Planning</em>, Merkle Bloom LLC, 2018.</p></div></div><p>Enfin, l’utilisateur doit se souvenir qu’il va mourir. À moins qu’il ne veuille emporter ses possessions numériques dans sa tombe, il lui faut mettre en place un plan de succession pour ses bitcoins à destination de ses héritiers. Il existe de multiples manières de faire, mais le modèle le plus réputé est celui présenté par Pamela Morgan dans son <em>Cryptoasset Inheritance Planning</em><a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>. Celui-ci consiste à écrire une lettre dans laquelle l’utilisateur inclut les coordonnées de gens de confiance à contacter pour aider ses héritiers (nos proches ne sont <em>a priori</em> pas autant à l’aise que nous avec la manipulation de bitcoins) ainsi que l’inventaire de ses avoirs (dans le but de récupérer les sauvegardes et de restaurer les portefeuilles). La lettre est scellée et placée dans un lieu sûr, comme un coffre-fort personnel, un coffre en banque ou chez un notaire.</p>
+</section>
+<section id="bitcoin-et-linformation" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="bitcoin-et-linformation">Bitcoin et l’information</h2>
+<p>Bitcoin permet donc pour la première fois dans l’histoire d’être propriétaire d’un bien numérique rival. Cette propriété s’exerce par la connaissance exclusive d’informations, les clé privées, qui sont générées et gérées par des outils appelés les portefeuilles. Grâce au procédé de signature numérique, ce sont en effet ces clés privées qui permettent de signer les transactions dépensant les bitcoins.</p>
+<p>Couplée à la résistance à la censure, cette assurance de la propriété permet de réaliser des transactions librement sur Internet, sans craindre le gel de compte. Mais elle s’accompagne également d’une responsabilité qui impose à l’utilisateur de prendre un certain de nombres de mesures pour ne pas voir ses fonds disparaître.</p>
+<p>Ainsi, le système de signatures numériques «&nbsp;fournit un contrôle fort de la propriété&nbsp;». Cependant, il «&nbsp;reste incomplet sans moyen d’empêcher la double dépense<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>&nbsp;». C’est la résolution de ce problème qui constitue l’objet du prochain chapitre.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn43"><p><sup>43</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div></section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="pagination-link" aria-label="La cybermonnaie avant Nakamoto">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/le-consensus-par-le-minage.html" class="pagination-link" aria-label="Le consensus par le minage">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -20,5 +20,4 @@
 /.quarto/
 .venv
 .quarto
-_book
 build

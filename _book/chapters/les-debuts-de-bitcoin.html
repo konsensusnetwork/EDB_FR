@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Les débuts de Bitcoin – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/une-croissance-conflictuelle.html" rel="next">
+<link href="../chapters/avant-propos.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+<meta property="og:title" content="1&nbsp; Les débuts de Bitcoin – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="1&nbsp; Les débuts de Bitcoin – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/les-debuts-de-bitcoin.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#une-naissance-difficile" id="toc-une-naissance-difficile" class="nav-link active" data-scroll-target="#une-naissance-difficile">Une naissance difficile</a></li>
+  <li><a href="#une-enfance-timide" id="toc-une-enfance-timide" class="nav-link" data-scroll-target="#une-enfance-timide">Une enfance timide</a></li>
+  <li><a href="#des-premiers-pas-incertains" id="toc-des-premiers-pas-incertains" class="nav-link" data-scroll-target="#des-premiers-pas-incertains">Des premiers pas incertains</a></li>
+  <li><a href="#le-slashdotting" id="toc-le-slashdotting" class="nav-link" data-scroll-target="#le-slashdotting">Le slashdotting</a></li>
+  <li><a href="#la-disparition-de-satoshi-nakamoto" id="toc-la-disparition-de-satoshi-nakamoto" class="nav-link" data-scroll-target="#la-disparition-de-satoshi-nakamoto">La disparition de Satoshi Nakamoto</a></li>
+  <li><a href="#la-communauté-prend-le-relai" id="toc-la-communauté-prend-le-relai" class="nav-link" data-scroll-target="#la-communauté-prend-le-relai">La communauté prend le relai</a></li>
+  <li><a href="#lamorçage-organique-de-bitcoin" id="toc-lamorçage-organique-de-bitcoin" class="nav-link" data-scroll-target="#lamorçage-organique-de-bitcoin">L’amorçage organique de Bitcoin</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:mythe" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:1" label="enotezch:1"></span></p>
+<p><span class="lettrine">L</span><span class="smallcaps">e</span> 31 octobre 2008, un individu se faisant appeler Satoshi Nakamoto partageait sur Internet un court document qui décrivait le fonctionnement technique d’un système novateur de monnaie numérique&nbsp;: Bitcoin. Ce livre blanc de 9 pages, présenté comme un article scientifique, s’intitulait en anglais <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em> – <em>Bitcoin&nbsp;: un système d’argent liquide électronique pair à pair</em>. Dans celui-ci, Satoshi proposait une solution au problème des paiements en ligne, par la mise en œuvre d’un serveur d’horodatage distribué basé sur un algorithme de preuve de travail.</p>
+<p>Mais cela allait beaucoup plus loin. Le livre blanc de Bitcoin posait les bases d’une révolution conceptuelle profonde&nbsp;: une monnaie exclusivement numérique qui ne reposait sur aucun tiers de confiance, ni pour la confirmation des transactions, ni pour l’émission des nouvelles unités. Ce que Satoshi venait de découvrir, c’était bien plus qu’un système de paiement&nbsp;; c’était un nouveau type de monnaie, quelque chose que nul n’avait su concevoir jusqu’alors, un phénomène économique et social qui rencontrerait un succès inouï au cours des années qui suivraient.</p>
+<p>En particulier, la création de Satoshi Nakamoto réalisait le vieux rêve d’une monnaie numérique échappant au contrôle de l’État&nbsp;: un rêve cher aux cypherpunks dont le mouvement, remontant au début des années 1990, prônait l’utilisation proactive de la cryptographie dans le but d’assurer la confidentialité et la liberté des individus sur Internet. Ces cryptographes rebelles avaient en effet désiré et tenté de concevoir un tel argent liquide électronique pendant des années, celui-ci étant un élément constitutif de leur idéal. Malheureusement, cela n’avait pas abouti, du moins jusqu’à l’apparition de Bitcoin.</p>
+<p>À partir de cette date fatidique, Bitcoin a été mis en œuvre et a connu un certain nombre d’évènements fondateurs qui l’ont mené où il est aujourd’hui. Ces évènements ont façonné la compréhension que nous en avons, et l’histoire des débuts de Bitcoin constitue donc un récit unique qu’il convient de raconter.</p>
+<section id="une-naissance-difficile" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="une-naissance-difficile">Une naissance difficile</h2>
+<p>Bitcoin a été conçu par un individu qui utilisait le pseudonyme de Satoshi Nakamoto et prétendait être un homme japonais de 33 ans<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. On sait peu de choses sur lui en dehors de ses messages publics et du code informatique qu’il a publié. Satoshi a disparu en 2011, et on ignore s’il est toujours vivant.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Certains partent du principe que Satoshi Nakamoto serait un pseudonyme utilisé par un groupe d’individus. Néanmoins, nous supposerons ici qu’il n’y avait qu’une seule personne derrière les messages et le code attribués au créateur de Bitcoin, sans pour autant nier que cette personne a pu se faire aider.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;«&nbsp;Satoshi Nakamoto se met à travailler sur Bitcoin au printemps 2007&nbsp;»&nbsp;: <a href="https://bitcointalk.org/index.php?topic=13.msg46#msg46" class="uri">https://bitcointalk.org/index.php?topic=13.msg46#msg46</a>, <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014863.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014863.html</a>.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin P2P e-cash paper</em>, /11/2008 01:58:48 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014832.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014832.html</a>.</p></div></div><p>D’après son propre témoignage, Satoshi Nakamoto se met à travailler sur Bitcoin au printemps 2007<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Pendant plus d’un an, il garde son modèle secret, souhaitant être sûr qu’il fonctionne correctement avant de le présenter au monde. Il affirmera ainsi avoir codé le prototype avant d’écrire le papier<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>En août 2008, Satoshi a terminé de rédiger le livre blanc et commence à préparer l’annonce de la sortie de Bitcoin. Le 18 août, il réserve le nom de domaine Bitcoin.org via le service anonyme AnonymousSpeech<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Le nom de domaine sera utilisé pour héberger le site principal de Bitcoin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Satoshi a également réservé le nom de domaine Netcoin.org au même moment, ce qui laisse à penser qu’il n’a pas encore finalisé son choix concernant le nom de son modèle. – Or Weinberger sur Twitter, /09/2022 08:54 UTC&nbsp;: <a href="https://twitter.com/orweinberger/status/1573234325046558720" class="uri">https://twitter.com/orweinberger/status/1573234325046558720</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;il rentre en contact avec Adam Back&nbsp;»&nbsp;: Adam Back, <em>Re: Introduce yourself&nbsp;:)</em>, /04/2013 11:27:49 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=15672.msg1873483#msg1873483" class="uri">https://bitcointalk.org/index.php?topic=15672.msg1873483#msg1873483</a>.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;Gwern Branwen, <em>Wei Dai/Satoshi Nakamoto 2009 Bitcoin emails</em>, 17 mars 2014&nbsp;: <a href="https://gwern.net/doc/bitcoin/2008-nakamoto" class="uri">https://gwern.net/doc/bitcoin/2008-nakamoto</a>.</p></div></div><p>Quelques jours plus tard, il rentre en contact avec Adam Back<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, le cryptographe et cypherpunk britannique à l’origine de Hashcash, la technique utilisée dans Bitcoin pour calculer la preuve de travail. Adam Back le renvoie vers le cryptographe Wei Dai, inventeur en 1998 du concept de b-money, un concept qui possède des similarités notables avec Bitcoin. Le 22 août, Satoshi envoie donc un courriel à Wei Dai pour lui dire qu’il «&nbsp;se prépare à publier un document qui étend [ses] idées à un système complètement fonctionnel&nbsp;» et pour lui demander «&nbsp;l’année de publication de [sa] page sur la b-money&nbsp;» afin d’y faire référence dans le livre blanc<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Cependant, malgré ces interactions, Adam Back et Wei Dai ne s’intéressent pas à Bitcoin immédiatement. Ce ne sera que des années plus tard qu’ils reviendront vers la découverte révolutionnaire de ce mystérieux personnage.</p>
+<p>À l’automne 2008, Satoshi décide de rendre public son système. Le 5 octobre, il s’inscrit sur la plateforme de gestion de projets SourceForge, là où le code source ouvert de Bitcoin sera hébergé et maintenu jusqu’en 2011. Le 31 octobre, il publie le livre blanc sur une liste de diffusion de courrier électronique dédiée à la cryptographie. Cette liste est la <em>Metzdowd Cryptography Mailing List</em> gérée par Perry Metzger sur son site web Metzdowd.com où participent un certain nombre d’anciens cypherpunks<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Dans son courriel d’introduction, il écrit&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Les archives de la liste de diffusion de Metzdowd sont disponibles publiquement à l’adresse <a href="https://www.metzdowd.com/pipermail/cryptography/" class="uri">https://www.metzdowd.com/pipermail/cryptography/</a>. Les cypherpunks présents en 2008 étaient, entre autres&nbsp;: John Gilmore, Hal Finney, James A. Donald, Robert Hettinga, Zooko Wilcox-O’Hearn et Len Sassaman.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin P2P e-cash paper</em>, /10/2008 18:10:00 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html</a>.</p></div></div><p>«&nbsp;J’ai travaillé sur un nouveau système d’argent liquide électronique qui est entièrement pair à pair, dépourvu de tiers de confiance<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.&nbsp;»</p>
+<p>Le livre blanc est centré sur le problème des paiements en ligne et le but de Bitcoin est clairement énoncé dès le début&nbsp;:</p>
+<p>«&nbsp;Le commerce sur Internet repose aujourd’hui presque exclusivement sur des institutions financières qui servent de tiers de confiance pour traiter les paiements électroniques. Bien que ce système fonctionne assez bien pour la plupart des transactions, il souffre toujours des faiblesses inhérentes à son modèle basé sur la confiance. [...] Ce dont nous avons besoin, c’est d’un système de paiement électronique basé sur des preuves cryptographiques plutôt que sur la confiance, qui permettrait à deux parties volontaires de réaliser directement des transactions entre elles sans avoir recours à un tiers de confiance<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>D’un point de vue technique, il s’agit de mettre en place un registre de transactions distribué sur un réseau pair à pair et ouvert d’ordinateurs. Ce registre est composé de blocs de transactions qui sont liés les uns à la suite des autres au cours du temps, formant une «&nbsp;chaîne de blocs&nbsp;». Bitcoin constitue ainsi un «&nbsp;serveur d’horodatage distribué&nbsp;», qui répertorie l’ordre des transactions de façon à créer un historique cohérent, sans «&nbsp;double dépense&nbsp;». Cela permet de gérer l’émission et les échanges d’une unité de compte numérique, qui sera appelée le bitcoin.</p>
+<p>La fiabilité du système repose sur des «&nbsp;preuves de travail&nbsp;» qui lient les blocs entre eux de façon à rendre difficile la modification de la chaîne. Ces preuves sont produites périodiquement par des membres du réseau qui fournissent de l’énergie pour cela et qui sont rémunérés par une «&nbsp;incitation&nbsp;» en bitcoins composée des pièces nouvellement créées et des frais de transaction. Les personnes qui dépensent ainsi leur énergie électrique sont comparées par Satoshi aux «&nbsp;mineurs d’or qui dépensent des ressources pour ajouter de l’or dans la circulation&nbsp;», d’où le nom de mineurs qu’ils prendront plus tard.</p>
+<p>Suite à l’annonce de Bitcoin et la publication du livre blanc, Satoshi reçoit peu de réponses, et beaucoup d’entre elles sont sceptiques. D’abord, le cypherpunk James A. Donald remet en cause le passage à l’échelle du système en disant qu’«&nbsp;il ne semble pas pouvoir s’adapter à la taille requise<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>&nbsp;». Ensuite, John Levine critique sa sécurité en évoquant la puissance de calcul détenue par les «&nbsp;fermes de machines zombies<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>&nbsp;» composées d’ordinateurs contrôlés par des pirates. Enfin, un troisième individu du nom de Ray Dillinger s’interroge sur la valeur de l’unité de compte, déplorant le fait que «&nbsp;les preuves de travail informatiques n’ont pas de valeur intrinsèque<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;«&nbsp;Nous avons vraiment, vraiment besoin d’un tel système, mais si je comprends bien votre proposition, il ne semble pas pouvoir s’adapter à la taille requise.&nbsp;» – James A. Donald, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008, 23:46:23 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html</a></p></div><div id="fn11"><p><sup>11</sup>&nbsp;«&nbsp;Les méchants contrôlent couramment des fermes de machines zombies de 100 000 unités ou plus. Les personnes que je connais qui gèrent une liste noire de machines zombies émetteuses de spam me disent qu’elles voient souvent un million de nouveaux machines zombies par jour. C’est la même raison pour laquelle hashcash ne peut pas fonctionner sur l’Internet d’aujourd’hui&nbsp;: les gentils ont une puissance de calcul nettement inférieure à celle des méchants.&nbsp;» – John Levine, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 13:32:39 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014817.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014817.html</a>.</p></div><div id="fn12"><p><sup>12</sup>&nbsp;«&nbsp;Je pense que le vrai problème avec ce système est le marché des bitcoins. Les preuves de travail informatiques n’ont pas de valeur intrinsèque.&nbsp;» – Ray Dillinger, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 05:14:37 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014822.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014822.html</a>.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;Hal Finney, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 23:40:12 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014827.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014827.html</a>.</p></div><div id="fn14"><p><sup>14</sup>&nbsp;Hal Finney, <em>Bitcoin and me</em>, /03/2013 20:40:02 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833" class="uri">https://bitcointalk.org/index.php?topic=155054.msg1643833#msg1643833</a>.</p></div></div><p>Cependant, cet accueil sceptique n’est pas partagé par l’intégralité des personnes inscrites sur la liste de diffusion. En particulier, Hal Finney, un informaticien et cryptographe américain d’une cinquantaine d’années, est résolument enthousiaste et écrit dans son message du 7 novembre que «&nbsp;Bitcoin semble être une idée très prometteuse<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>&nbsp;». Hal Finney n’est pas une personne comme les autres&nbsp;: il s’agit d’un membre historique du mouvement cypherpunk qui a participé au développement du logiciel de chiffrement PGP dans les années 90 aux côtés de Philip Zimmermann, qui a expérimenté avec les premiers systèmes de monnaie électronique et qui a même tenté de créer son propre système de preuves de travail réutilisables. Malgré son expérience, il reste optimiste et devient ainsi le tout premier soutien de Satoshi dans son projet. Quelques années plus tard, il déclarera à ce sujet que «&nbsp;les cryptographes grisonnants [...] ont tendance à devenir cyniques&nbsp;» mais que lui «&nbsp;était plus idéaliste&nbsp;» ayant «&nbsp;toujours aimé la cryptographie, son mystère et son paradoxe<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>.&nbsp;»</p>
+<p>Par la suite, Satoshi distribue les principaux fichiers du code aux personnes intéressées, dont notamment Hal Finney, Ray Dillinger et James A. Donald<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>. Hal et Ray réalisent alors un examen minutieux du code, en se concentrant chacun sur une partie spécifique du système<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>. Ce code inclut déjà tous les éléments constitutifs de Bitcoin. Le prototype est alors prêt à être lancé.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Satoshi a écrit à James A. Donald&nbsp;: «&nbsp;Je t’ai envoyé les fichiers principaux. (disponibles sur demande pour le moment, publication complète bientôt)&nbsp;» – Satoshi Nakamoto, <em>Re: Bitcoin P2P e-cash paper</em>, /11/2008 17:24:43&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014863.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2008-November/014863.html</a>.</p></div><div id="fn16"><p><sup>16</sup>&nbsp;«&nbsp;Hal et Ray réalisent alors un examen minutieux du code&nbsp;»&nbsp;: Ray Dillinger, <em>If I’d Known What We Were Starting</em>, 20 septembre 2017&nbsp;: <a href="https://www.linkedin.com/pulse/id-known-what-we-were-starting-ray-dillinger/" class="uri">https://www.linkedin.com/pulse/id-known-what-we-were-starting-ray-dillinger/</a>.</p></div></div></section>
+<section id="une-enfance-timide" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="une-enfance-timide">Une enfance timide</h2>
+<p>Deux mois après la publication du livre blanc, le 8 janvier 2009 à 19 heures 27, Satoshi Nakamoto partage la première version du logiciel sur la liste de diffusion de Metzdowd. Le code source en C++ est publié de manière ouverte sous licence libre (MIT), de sorte que n’importe qui peut copier, modifier et utiliser le logiciel à sa guise. Celui-ci contient les données du bloc de genèse, le premier bloc de la chaîne à partir duquel celle-ci doit se prolonger.</p>
+<p>Quelques heures plus tard, Satoshi commence à miner. Le deuxième bloc de la chaîne, le bloc 1, est validé par Satoshi le 9 janvier à 2 heures 54 du matin, ce qui marque le lancement effectif du réseau.</p>
+<p>Le 10 janvier, Hal tente de faire fonctionner le logiciel. Après avoir échangé avec Satoshi pour faire en sorte que le logiciel fonctionne<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>, il se met à miner et trouve son premier bloc (le bloc 78) à 1 heure du matin (UTC), gagnant de ce fait 50 bitcoins. Deux heures et demie plus tard, il partage son expérience sur Twitter (média social alors naissant) en écrivant «&nbsp;<em>Running bitcoin</em><a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>&nbsp;». Le lendemain, dans la nuit du 11 au 12 janvier, Satoshi envoie 10 bitcoins à Hal par l’intermédiaire de son adresse IP&nbsp;: il s’agit du premier transfert d’une personne à une autre sur le réseau<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;«&nbsp;Après avoir échangé avec Satoshi&nbsp;»&nbsp;: <a href="https://online.wsj.com/public/resources/documents/finneynakamotoemails.pdf" class="uri">https://online.wsj.com/public/resources/documents/finneynakamotoemails.pdf</a>.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;Hal Finney sur Twitter, /01/2009 3:33 UTC&nbsp;: <a href="https://twitter.com/halfin/status/1110302988" class="uri">https://twitter.com/halfin/status/1110302988</a>.</p></div><div id="fn19"><p><sup>19</sup>&nbsp;Cette première transaction entre Satoshi et Hal avait pour identifiant `` et a été confirmée dans le bloc 170 le 12 janvier à :30.</p></div><div id="fn20"><p><sup>20</sup>&nbsp;L’identifiant de la transaction reçue par Dustin (en P2IP) était ``.</p></div><div id="fn21"><p><sup>21</sup>&nbsp;«&nbsp;Dustin Trammell communique aussi avec Satoshi par courriel, et reçoit 25 bitcoins de sa part le 15 janvier&nbsp;»&nbsp;: <a href="http://web.archive.org/web/20131204164149/http://www.dustintrammell.com/files/Satoshi_Nakamoto.zip" class="uri">http://web.archive.org/web/20131204164149/http://www.dustintrammell.com/files/Satoshi_Nakamoto.zip</a>.</p></div></div><p>Hal n’est pas la seule personne à expérimenter sur le réseau à ce moment-là&nbsp;: c’est également le cas de Dustin Trammell, un chercheur en sécurité informatique américain ayant découvert Bitcoin par la liste de diffusion. Celui-ci communique aussi avec Satoshi par courriel, et reçoit 25 bitcoins de sa part le 15 janvier<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a><a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>.</p>
+<p>Mais les quelques personnes qui font fonctionner le logiciel ne suffisent pas. Dès le début, Satoshi sait bien que peu de gens se sont penchés sérieusement sur son modèle et qu’il va être compliqué d’attirer de nouveaux utilisateurs et contributeurs. C’est pourquoi il essaie de susciter l’enthousiasme en vendant son idée du mieux possible.</p>
+<p>Le premier élément est le programme d’émission du bitcoin, qui a pour limite 21&nbsp;millions d’unités. Dans le courriel d’annonce du prototype, Satoshi explicite le rythme de création monétaire&nbsp;:</p>
+<p>«&nbsp;La circulation totale sera de 21&nbsp;000&nbsp;000 de pièces. Elles seront distribuées aux nœuds du réseau lorsqu’ils créeront des blocs, la quantité émise étant divisée par deux tous les 4 ans. [...] Lorsque cela sera épuisé, le système pourra prendre en charge les frais de transaction si nécessaire<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin v0.1 released</em>, /01/2009 19:27:40 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html</a>.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;Hal Finney, <em>Re: Bitcoin v0.1 released</em>, /01/2009 02:22:01 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015004.html</a>.</p></div></div><p>Le bitcoin a donc vocation à devenir une monnaie à offre fixe, déflationniste par nature, et cette particularité crée un enthousiasme. Le 11 janvier, Hal Finney est le premier à réagir en s’enthousiasmant du fait que «&nbsp;le système peut être configuré pour n’autoriser qu’un nombre maximum certain de pièces à être générées&nbsp;». Il estime alors que si «&nbsp;Bitcoin [réussit] et [devient] le système de paiement dominant utilisé dans le monde entier&nbsp;», chaque pièce aura alors «&nbsp;une valeur d’environ 10 millions&nbsp;» de dollars<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>. L’estimation est contestable mais le raisonnement reste pertinent en raison du fonctionnement de Bitcoin.</p>
+<p>Le 16 janvier, Satoshi reprend ainsi cet élément de communication dans un courriel qu’il partage à la liste de diffusion, où il déclare qu’il «&nbsp;pourrait être judicieux d’en avoir au cas où cela prendrait&nbsp;» et que «&nbsp;si suffisamment de gens pensent la même chose, cela deviendra une prophétie autoréalisatrice<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>&nbsp;». Cet élément est crucial, comme le montre le témoignage de Dustin Trammell qui confie à Satoshi que le raisonnement de Hal est «&nbsp;l’une des autres raisons pour lesquelles [il a] démarré un nœud si rapidement&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn24"><p><sup>24</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin v0.1 released</em>, /01/2009 16:03:14 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015014.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015014.html</a></p></div></div><p>Outre le programme d’émission du bitcoin, Satoshi choisit de communiquer sur les défaillances du système bancaire, ce qui constitue le deuxième élément dans sa stratégie pour attirer l’attention.</p>
+<p>En réalité, il le fait dès le bloc de genèse en y incluant le titre de la une du quotidien britannique <em>The Times</em> du 3 janvier 2009 annonçant que le ministre des finances britannique est sur le point de renflouer les banques pour la deuxième fois&nbsp;:</p>
+<p><em>The Times 03/Jan/2009 Chancellor on brink of second bailout for banks</em></p>
+<p>Cette phrase présente dans le premier bloc de la chaîne possède un rôle double&nbsp;: d’une part, elle empêche l’antidatage en prouvant que le système n’a pas été lancé avant le 3 janvier (Satoshi ne pouvait pas connaître cette une avant)&nbsp;; d’autre part, elle indique symboliquement ce à quoi Bitcoin s’oppose en faisant référence au contexte monétaire et financier de l’époque.</p>
+<p>En janvier 2009, le monde subit en effet de plein fouet les effets de la crise financière amorcée en 2007 par le dégonflement de la bulle immobilière aux États-Unis aussi connu sous le nom de la crise des subprimes. Les États renflouent les banques pour éviter de nouvelles faillites bancaires après celle de Lehman Brothers survenue le 15 septembre 2008, et les banques centrales procèdent à des assouplissements quantitatifs en injectant des liquidités sur les marchés financiers. Cette utilisation d’argent public, qui est littéralement créé pour l’occasion, choque profondément un certain nombre de citoyens qui réalisent que le système bancaire est en fait un système de profits privés et de pertes socialisées.</p>
+<p>De par son absence de tiers de confiance, Bitcoin n’est, lui, pas soumis à l’arbitraire d’une banque centrale. Il contraste ainsi avec les monnaies étatiques, telles que le dollar ou l’euro, dont la quantité peut être modifiée arbitrairement par ceux qui contrôlent la création monétaire, au moyen de ce qu’on appelle une politique monétaire. La politique monétaire du bitcoin est programmée, inscrite en dur dans le protocole, pour en théorie ne plus jamais être altérée.</p>
+<p>C’est ce que met en avant Satoshi lorsqu’il intervient sur le forum de la Fondation P2P, une organisation étudiant l’impact des infrastructures pair à pair sur la société, le 11 février 2009. Dans son message d’introduction à Bitcoin, il écrit&nbsp;:</p>
+<p>«&nbsp;Le problème fondamental de la monnaie conventionnelle est toute la confiance nécessaire pour la faire fonctionner. Il faut faire confiance à la banque centrale pour qu’elle ne déprécie pas la monnaie, mais l’histoire des monnaies fiat est pleine de violations de cette confiance. Il faut faire confiance aux banques pour détenir notre argent et le transférer par voie électronique, mais elles le prêtent par vagues de bulles de crédit avec à peine une fraction en réserve<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn25"><p><sup>25</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin open source implementation of P2P currency</em>, 11 février 2009&nbsp;: <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source</a>.</p></div></div><p>Sur son profil où il indique sur son profil être un homme de 33 ans habitant au Japon, il donne une date de naissance particulière&nbsp;: le 5 avril 1975. Cette date, probablement fictive et composite, fait vraisemblablement référence à l’interdiction pour les particuliers de détenir de l’or aux États-Unis. Le jour du 5 avril se rapporte au jour de l’instauration de cette interdiction par l’Ordre exécutif 6102 signé par Franklin Delano Roosevelt le 5 avril 1933, et l’année 1975 correspond à son année d’abrogation lors de l’entrée en vigueur de la <em>Public Law</em> 93-373. Ce détail n’est pas anodin, puisque cette prohibition a permis en fin de compte d’instaurer un régime monétaire flottant n’ayant plus aucun lien avec l’or.</p>
+<p>Ce n’est pas la seule référence aux métaux précieux. Satoshi écrit dans les commentaires le 18 février&nbsp;:</p>
+<p>«&nbsp;Il n’y a personne pour agir en tant que banque centrale ou réserve fédérale afin d’ajuster l’offre monétaire au fur et à mesure que le nombre d’utilisateurs augmente. [...] En ce sens, il se comporte davantage comme un métal précieux. Plutôt que de faire varier l’offre pour que la valeur reste la même, on détermine l’offre à l’avance et la valeur change. Plus le nombre d’utilisateurs augmente, plus la valeur d’une pièce augmente. Cela peut créer une boucle de rétroaction positive&nbsp;; plus le nombre d’utilisateurs grandit, plus la valeur augmente, ce qui peut attirer davantage d’utilisateurs désireux de profiter de cet accroissement de la valeur<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;Satoshi Nakamoto, <em>Re: Bitcoin open source implementation of P2P currency</em>, 18 février 2009&nbsp;: <a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562</a>.</p></div><div id="fn27"><p><sup>27</sup>&nbsp;Mike Hearn, <em>Questions about BitCoin</em>, /04/2009 22:46 UTC&nbsp;: <a href="https://plan99.net/~mike/satoshi-emails/thread1.html" class="uri">https://plan99.net/~mike/satoshi-emails/thread1.html</a>.</p></div></div><p>Cette méthode de communication porte peu à peu ses fruits. Ainsi, même si certaines personnes finissent de se détourner de Bitcoin à l’instar de Hal Finney, Satoshi continue de recevoir des messages de la part de personnes intéressées. Le 11 avril 2009, Mike Hearn, un développeur britannique travaillant pour Google et s’adonnant au logiciel libre sur son temps libre, lui envoie un courriel posant une série de questions à propos de Bitcoin, en précisant qu’«&nbsp;il est rare de rencontrer des idées vraiment révolutionnaires<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>&nbsp;». Hearn s’intéresse alors aux monnaies numériques, et notamment à Ripple.</p>
+<p>Début mai 2009, c’est un jeune étudiant en informatique finlandais qui contacte Satoshi&nbsp;: il s’agit de Martti Malmi. Celui-ci a découvert Bitcoin début avril, s’est mis à miner et a même rédigé une courte description de Bitcoin sur le forum de Freedomain Radio où il soutenait l’hypothèse anarchiste que la monnaie pair à pair pourrait faire disparaître l’État<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>. Dans son courriel à Satoshi, il écrit&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;Martti Malmi, <em>P2P Currency could make the government extinct?</em>, /04/2009 17:49:47 UTC&nbsp;: <a href="https://web.archive.org/web/20150927195115/https://board.freedomainradio.com/topic/17233-p2p-currency-could-make-the-government-extinct/" class="uri">https://web.archive.org/web/20150927195115/https://board.freedomainradio.com/topic/17233-p2p-currency-could-make-the-government-extinct/</a>.</p></div><div id="fn29"><p><sup>29</sup>&nbsp;Nathaniel Popper, <em>Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money</em>, Harper Paperbacks, 2016, p.&nbsp;29.</p></div></div><p>«&nbsp;J’ai une bonne connaissance des langages Java et C grâce aux cours que j’ai suivis à l’école (j’étudie l’informatique) mais je n’ai pas encore beaucoup d’expérience en matière de développement. J’aimerais aider avec Bitcoin, s’il y a quelque chose que je peux faire<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>.&nbsp;»</p>
+<p>Malgré son manque d’expérience, Martti devient dans les mois qui suivent le principal contributeur à Bitcoin en dehors de Satoshi. Étant étudiant, il a en effet beaucoup de temps à consacrer au projet.</p>
+<p>En particulier, Satoshi lui confie la charge du site web. Dès le mois de mai, Martti Malmi rédige une première version de la description sur SourceForge où il présente Bitcoin comme une «&nbsp;monnaie numérique anonyme basée sur un réseau pair à pair&nbsp;» permettant de «&nbsp;transférer de l’argent facilement par Internet, sans avoir à faire confiance à des tiers&nbsp;» et d’être «&nbsp;à l’abri de l’instabilité causée par le système de réserves fractionnaires et par les mauvaises politiques des banques centrales<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>&nbsp;». Cette ébauche servira de base pour la présentation de Bitcoin sur le site web.</p>
+<div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;Archive de la page web de Bitcoin&nbsp;: <a href="https://web.archive.org/web/20090511173000/http://bitcoin.sourceforge.net/" class="uri">https://web.archive.org/web/20090511173000/http://bitcoin.sourceforge.net/</a>.</p></div></div><p>À l’époque le bitcoin n’a pas de prix. Les gens qui testent le système se contentent de lancer le logiciel pour «&nbsp;générer des pièces&nbsp;». Les transactions sont peu nombreuses, et consistent le plus souvent en des auto-transferts. Les bitcoins sont alors vus comme des collectionnables réservés aux passionnés d’informatique. Les utilisateurs ont l’impression de contribuer à quelque chose, à l’instar des projets de calcul distribué (dits «&nbsp;<span class="citation" data-cites="home">@home</span>&nbsp;») où les gens mettent à disposition leurs ressources informatiques au service de bonnes causes.</p>
+<p>Certains individus minent en continu<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>. C’est le cas de Hal Finney qui fait fonctionner le logiciel entre janvier et mars, de James Howells qui valide des blocs entre février et avril, de Dustin Trammell qui fait tourner ses serveurs pendant plus d’un an, ou de Martti Malmi qui met son ordinateur portable à profit à partir d’avril. Mais le principal mineur de l’année de 2009 reste Satoshi, qui déploie une puissance de calcul bien plus grande et dont la production de blocs représente près de la moitié de celle du réseau.</p>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;«&nbsp;Certains individus minent en continu&nbsp;»&nbsp;: Ludovic Lars, <em>Les premiers mineurs de Bitcoin</em>, 19 juin 2022&nbsp;: <a href="https://journalducoin.com/analyses/premiers-mineurs-bitcoin/" class="uri">https://journalducoin.com/analyses/premiers-mineurs-bitcoin/</a>.</p></div></div><p>En 2009, la difficulté de minage est de 1, ce qui impose à tous les nœuds du réseau de réaliser environ 4,3 millions de calculs pour miner un bloc, et ce n’est pas rien pour un processeur. De ce fait, la production est plus lente que prévue&nbsp;: entre le 3 janvier 2009 et le 3 janvier 2010, seulement 32&nbsp;880 blocs sont trouvés sur les 52560 attendus, ce qui correspond à une durée moyenne entre chaque bloc de 16 minutes au lieu des 10 minutes prévues. En particulier, le mois d’août 2009 constitue le pire mois pour l’activité minière&nbsp;: seuls 1&nbsp;564 sur 4&nbsp;464 blocs attendus sont trouvés, soit un temps moyen de 28 minutes et 30 secondes&nbsp;!</p>
+</section>
+<section id="des-premiers-pas-incertains" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="des-premiers-pas-incertains">Des premiers pas incertains</h2>
+<p>Malgré son lancement timide, Bitcoin survit à l’été et franchit une étape cruciale en octobre&nbsp;: son unité de compte acquiert un prix. Un individu utilisant le pseudonyme NewLibertyStandard (NLS), nouvellement arrivé dans la communauté, met en place sur sa page personnelle un service de change permettant aux gens de convertir leurs dollars en bitcoins et inversement. Pour estimer le taux de change, il se base sur le coût énergétique nécessaire pour obtenir un bitcoin, en prenant en compte le coût de l’électricité à son emplacement et la fréquence de sa production personnelle. Les prix sont publiés quotidiennement sur son site<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn32"><p><sup>32</sup>&nbsp;«&nbsp;Les prix sont publiés quotidiennement sur son site&nbsp;»&nbsp;: <a href="https://web.archive.org/web/20091229132610/http://newlibertystandard.wetpaint.com/page/Exchange+Rate" class="uri">https://web.archive.org/web/20091229132610/http://newlibertystandard.wetpaint.com/page/Exchange+Rate</a>.</p></div><div id="fn33"><p><sup>33</sup>&nbsp;«&nbsp;J’ai trouvé la première transaction connue de bitcoins en USD dans mes sauvegardes de courriel. J’ai vendu 5&nbsp;050 BTC pour 5,02&nbsp;$ le 12-10-2009.&nbsp;» – Martti Malmi sur Twitter, 15/01/2014&nbsp;: <a href="https://twitter.com/marttimalmi/status/423455561703624704" class="uri">https://twitter.com/marttimalmi/status/423455561703624704</a>. L’identifiant de la transaction était ``.</p></div></div><p>Le 12 octobre 2009, a ainsi lieu la première vente de bitcoins en dollars entre Martti Malmi et NewLibertyStandard&nbsp;: Martti cède 5050 bitcoins à NLS pour 5,02&nbsp;$ virés sur son compte PayPal, ce qui correspond à un prix d’environ 0,001&nbsp;$ par bitcoin<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>. NLS effectuera par la suite d’autres échanges au cours des mois suivants, constituant la seule passerelle entre le dollar et le bitcoin.</p>
+<p>Le 22 novembre marque l’ouverture du nouveau forum, sobrement appelé le <em>Bitcoin Forum</em>, qui est hébergé sur Bitcoin.org et géré par Martti Malmi. Ce forum abrite l’essentiel des discussions sur Bitcoin à partir de cette date. Il sera renommé en Bitcointalk en août 2011 et hébergé à une nouvelle adresse.</p>
+<p>Le 16 décembre 2009, Satoshi annonce la sortie de la version 0.2 du logiciel, version pour laquelle Martti Malmi est grandement crédité, ce qui clôt la première période de développement informatique de Bitcoin<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>. L’année se termine en beauté lorsque la difficulté augmente enfin, en passant de 1 à 1,18 le 30 décembre.</p>
+<div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;«&nbsp;Satoshi annonce la sortie de la version 0.2 du logiciel&nbsp;»&nbsp;: Satoshi Nakamoto, <em>Bitcoin 0.2 released!</em>, /12/2009 22:45:36 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=16.msg73#msg73" class="uri">https://bitcointalk.org/index.php?topic=16.msg73#msg73</a>.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;«&nbsp;Au début de l’année 2010, le bitcoin est désigné comme une "cryptomonnaie"&nbsp;»&nbsp;: <a href="https://web.archive.org/web/20100106082749/http://www.bitcoin.org/" class="uri">https://web.archive.org/web/20100106082749/http://www.bitcoin.org/</a></p></div></div><p>Au début de l’année 2010, le bitcoin est désigné comme une «&nbsp;cryptomonnaie&nbsp;» (<em>cryptocurrency</em>) sur le site web<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Le préfixe crypto- (qui vient du grec ancien <span lang="el">kruptos</span>, kruptós, indiquant ce qui est caché, occulté) possède une signification double&nbsp;: il renvoie à la cryptographie sur laquelle Bitcoin s’appuie, et à la confidentialité, Bitcoin étant alors présenté comme une «&nbsp;monnaie numérique anonyme&nbsp;».</p>
+<p>Ce nouveau terme confirme le but central de Bitcoin&nbsp;: devenir une monnaie, c’est-à-dire un intermédiaire dans les échanges. Cela nécessite des personnes qui génèrent des transactions (par le biais du commerce) et d’autres qui traitent ces transactions (par le biais du minage). C’est donc tout naturellement que l’expansion de ces deux aspects complémentaires se produit à ce moment-là.</p>
+<p>Le premier développement est l’essor commercial dont NewLibertyStandard peut être considéré comme le pionnier. Non seulement il est le premier commerçant à accepter le bitcoin comme moyen de paiement par l’intermédiaire de son service d’échange, mais il est aussi l’un des promoteurs originels de cet effort de construction économique. Dans son premier message sur le forum le 19 janvier 2010, il écrit ainsi&nbsp;:</p>
+<p>«&nbsp;Des gens m’ont acheté des bitcoins et m’en ont vendus. L’offre et la demande, même si elle sont faibles, existent déjà et c’est tout ce qu’il faut. Proposer d’échanger des bitcoins contre une autre monnaie n’est en fin de compte pas différent de l’échange de bitcoins contre des biens ou des services. Les monnaies sont des biens et le change est un service. [...] Vous pouvez acheter tous mes dollars ou bitcoins aujourd’hui, mais il y en aura toujours plus demain et après-demain. Toutes les personnes qui achètent ou vendent des biens en utilisant des bitcoins, y compris les changeurs, font progresser l’économie de Bitcoin. Que tout le monde fasse sa part. Achetez ou vendez quelque chose en échange de bitcoins&nbsp;<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>!&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn36"><p><sup>36</sup>&nbsp;NewLibertyStandard, <em>Re: New Exchange Service: "BTC 2 PSC"</em>, /01/2010 08:06:15 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=15.msg111#msg111" class="uri">https://bitcointalk.org/index.php?topic=15.msg111#msg111</a>.</p></div><div id="fn37"><p><sup>37</sup>&nbsp;«&nbsp;NLS propose que le bitcoin [...] adopte le sigle boursier BTC et le symbole du baht thaïlandais&nbsp;»&nbsp;: NewLibertyStandard, <em>Bitcoin Currency Symbol ฿</em>, /02/2010 01:48:53 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=41.msg238#msg238" class="uri">https://bitcointalk.org/index.php?topic=41.msg238#msg238</a>.</p></div><div id="fn38"><p><sup>38</sup>&nbsp;Satoshi Nakamoto, <em>New icon/logo</em>, /02/2010 21:24:23 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=64.msg504#msg504" class="uri">https://bitcointalk.org/index.php?topic=64.msg504#msg504</a>.</p></div></div><p>Dans les mois qui suivent, les services de change se développent, comme BitcoinFX ou Bitcoin Market. C’est pourquoi NLS propose que le bitcoin, à l’instar des monnaies échangées sur le marché des changes, adopte le sigle boursier BTC et le symbole du baht thaïlandais<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. L’utilisation du sigle BTC se normalise rapidement. Quant au symbole (le B majuscule traversé par deux barres verticales rappelant immanquablement le dollar), c’est Satoshi lui-même qui le conçoit, en s’inspirant de la proposition de NLS, lors de la création du premier véritable logo de Bitcoin<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bitcoin530.png" class="img-fluid figure-img"></p>
+<figcaption>Logo de Bitcoin conçu par Satoshi Nakamoto en février 2010.</figcaption>
+</figure>
+</div>
+<p>Les vendeurs de biens et de services apparaissent également. Outre son service de change, NLS ouvre un magasin en ligne où il propose à la vente des timbres et des autocollants<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>. D’autres services acceptant le bitcoin apparaissent comme le service de voix sur IP Link2VoIP, l’hébergeur web Vekja.net et le vendeur de noms de domaines Privacy Shark<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>. En parallèle, la première partie de poker mettant en jeu des bitcoins est organisée, ce qui inaugure la relation forte qui existera entre le jeu d’argent et la cryptomonnaie<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn39"><p><sup>39</sup>&nbsp;«&nbsp;NLS ouvre un magasin en ligne où il propose à la vente des timbres et des autocollants&nbsp;»&nbsp;: Liberty Swap Variety Shop, <a href="https://web.archive.org/web/20100414172623/http://newlibertystandard.wetpaint.com/page/Specialty+Shop" class="uri">https://web.archive.org/web/20100414172623/http://newlibertystandard.wetpaint.com/page/Specialty+Shop</a>.</p></div><div id="fn40"><p><sup>40</sup>&nbsp;«&nbsp;D’autres services acceptant le bitcoin apparaissent&nbsp;»&nbsp;: <a href="https://web.archive.org/web/20100517040312/http://www.bitcoin.org:80/trade" class="uri">https://web.archive.org/web/20100517040312/http://www.bitcoin.org:80/trade</a>.</p></div><div id="fn41"><p><sup>41</sup>&nbsp;«&nbsp;la première partie de poker mettant en jeu des bitcoins est organisée&nbsp;»&nbsp;: Kai Sedgwick, <em>Bitcoin History Part 14: The 1,000 BTC Poker Game</em>, 9 août 2019&nbsp;: <a href="https://news.bitcoin.com/bitcoin-history-part-14-the-1000-btc-poker-game/" class="uri">https://news.bitcoin.com/bitcoin-history-part-14-the-1000-btc-poker-game/</a>.</p></div></div><p>Enfin, en avril 2010, naît MyBitcoin, une application web dépositaire permettant un usage facile et serein de Bitcoin, notamment sur mobile. Grâce à celle-ci, les utilisateurs n’ont en effet pas besoin de télécharger les données complètes pour envoyer et recevoir des transactions, ni de conserver leurs bitcoins eux-mêmes en sauvegardant leurs clés privées. À cette époque, les portefeuilles légers n’existent pas, si bien que Satoshi lui-même juge qu’il est alors acceptable de passer par ce type d’application, même si cela va à l’encontre du principe de désintermédiation à la base de Bitcoin&nbsp;:</p>
+<p>«&nbsp;Le seul inconvénient c’est qu’il faut faire confiance au site, mais cela ne pose pas de problème pour la petite monnaie, pour les micropaiements et les dépenses diverses<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn42"><p><sup>42</sup>&nbsp;Satoshi Nakamoto, <em>Re: Ummmm... where did my bitcoins go?</em>, /05/2010 20:06:46 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=125.msg1149#msg1149" class="uri">https://bitcointalk.org/index.php?topic=125.msg1149#msg1149</a>.</p></div><div id="fn43"><p><sup>43</sup>&nbsp;Satoshi Nakamoto, <em>Re: A few suggestions</em>, /12/2009 17:52:44 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=12.msg54#msg54" class="uri">https://bitcointalk.org/index.php?topic=12.msg54#msg54</a></p></div></div><p>L’année 2010 est également celle de l’essor du minage, qui se manifeste en premier lieu par l’émergence du minage par processeur graphique (GPU). Jusqu’alors, les mineurs sollicitaient leur processeur central (CPU) pour extraire de nouveaux bitcoins. Néanmoins, ces derniers processeurs s’avèrent peu performants pour effectuer des opérations répétées, comparés aux cartes graphiques qui sont largement plus adaptées à ce type de calcul répétitif. Par conséquent, tout le monde sait à ce moment-là que cette évolution est inéluctable, y compris Satoshi qui déclare en décembre 2009 que la communauté doit «&nbsp;se mettre d’accord pour reporter la course aux armements des GPU aussi longtemps que possible pour le bien du réseau<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>&nbsp;».</p>
+<p>La boîte de Pandore est ouverte par Laszlo Hanyecz, un développeur américain d’origine hongroise de 28 ans, qui découvre Bitcoin en avril. Après avoir acheté des bitcoins à NLS<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a> et essayé le système de transactions, celui-ci programme début mai un logiciel de minage qui s’adapte aux cartes graphiques<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>. Cette optimisation lui permet d’occuper rapidement une place importante dans la production des blocs. Ceci attire l’attention de Satoshi Nakamoto qui le contacte et lui demande de ralentir ses opérations afin que le minage reste accessible à tous&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn44"><p><sup>44</sup>&nbsp;«&nbsp;Après avoir acheté des bitcoins à NLS&nbsp;»&nbsp;: <a href="https://blockchair.com/bitcoin/transaction/faf172f5dc06b0ae03268555dddcd65be47e9a8a8bb44a122b12bfaf735f9a81?o=1" class="uri">https://blockchair.com/bitcoin/transaction/faf172f5dc06b0ae03268555dddcd65be47e9a8a8bb44a122b12bfaf735f9a81?o=1</a></p></div><div id="fn45"><p><sup>45</sup>&nbsp;«&nbsp;celui-ci programme début mai un logiciel de minage qui s’adapte aux cartes graphiques&nbsp;»&nbsp;: Laszlo Hanyecz, <em>Generating Bitcoins with your video card (OpenCL/CUDA)</em>, /05/2010, 14:03:57 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=133.msg1103#msg1103" class="uri">https://bitcointalk.org/index.php?topic=133.msg1103#msg1103</a>.</p></div><div id="fn46"><p><sup>46</sup>&nbsp;Satoshi Nakamoto, mai 2010, propos rapportés par Nathaniel Popper&nbsp;: <a href="https://www.reddit.com/r/Bitcoin/comments/36vnmr/heres_what_satoshi_wrote_to_the_man_responsible/" class="uri">https://www.reddit.com/r/Bitcoin/comments/36vnmr/heres_what_satoshi_wrote_to_the_man_responsible/</a>.</p></div></div><p>«&nbsp;L’un des principaux attraits pour les nouveaux utilisateurs est que toute personne disposant d’un ordinateur peut générer des pièces gratuites. Lorsqu’il y aura 5&nbsp;000 utilisateurs, cette incitation s’estompera peut-être, mais pour l’instant, c’est toujours vrai. Les GPU limiteraient prématurément cette incitation à ceux qui disposent d’un matériel GPU haut de gamme. Il est inévitable que les clusters de calcul GPU finiront par accaparer toutes les pièces générées, mais je ne veux pas précipiter l’arrivée de ce jour-là. [...] Je ne veux pas passer pour un socialiste, je me moque de la concentration des richesses, mais pour l’instant, nous obtenons plus de croissance en donnant cet argent à 100&nbsp;% des gens qu’en le donnant à 20&nbsp;%<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>.&nbsp;»</p>
+<p>Laszlo abaisse sa cadence, mais continue à miner avec sa carte graphique. Avec sa méthode, il accumule ainsi des dizaines de milliers de bitcoins.</p>
+<p>Toutefois, cela n’est pas entièrement négatif pour le projet car il finit par réinjecter ses bitcoins dans l’économie de la façon la plus emblématique possible&nbsp;: en achetant quelque chose avec, et plus précisément des pizzas. Le 18 mai 2010, il écrit ainsi l’annonce suivante sur le forum&nbsp;:</p>
+<p>«&nbsp;Je paierai 10&nbsp;000 bitcoins pour deux ou trois pizzas... genre peut-être 2 grandes pour qu’il m’en reste le lendemain. J’aime avoir des restes de pizza à grignoter pour plus tard. Vous pouvez faire la pizza vous-même et l’amener jusqu’à chez moi ou la commander pour moi dans un service de livraison, mais mon objectif c’est de me faire livrer, en échange de bitcoins, de la nourriture que je n’ai pas à commander ou à préparer moi-même. [...] Si vous êtes intéressé, faites-le moi savoir et nous pourrons nous arranger<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn47"><p><sup>47</sup>&nbsp;Laszlo Hanyecz, <em>Pizza for bitcoins?</em>, /05/2010 00:35:20 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=137.msg1141#msg1141" class="uri">https://bitcointalk.org/index.php?topic=137.msg1141#msg1141</a>.</p></div><div id="fn48"><p><sup>48</sup>&nbsp;«&nbsp;un jeune Californien du nom de Jeremy Sturdivant accepte l’échange sur la messagerie instantanée IRC&nbsp;»&nbsp;: Bitcoin Who’s Who, <em>A Living Currency</em>, 22 mai 2015&nbsp;: <a href="https://www.bitcoinwhoswho.com/jercosinterview" class="uri">https://www.bitcoinwhoswho.com/jercosinterview</a>&nbsp;; archive&nbsp;: <a href="https://web.archive.org/web/20150528074728/http://bitcoinwhoswho.com/jercosinterview/" class="uri">https://web.archive.org/web/20150528074728/http://bitcoinwhoswho.com/jercosinterview/</a>.</p></div><div id="fn49"><p><sup>49</sup>&nbsp;L’identifiant de la transaction de la pizza entre Laszlo Hanyecz et Jeremy Sturdivant était ``.</p></div></div><p>Cette offre trouve preneur au bout de quatre jours. Le 22 mai, un jeune Californien du nom de Jeremy Sturdivant accepte l’échange sur la messagerie instantanée IRC<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>&nbsp;: il commande deux pizzas de Papa John’s qui sont livrées chez Laszlo à Jacksonville en Floride, et reçoit en échange 10&nbsp;000 bitcoins<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>, ce qui représente alors environ 44&nbsp;$ sur Bitcoin Market. Cela clôt le premier achat d’un bien physique en bitcoins&nbsp;! Cet évènement symbolique sera par la suite commémoré tous les ans à cette date comme le <em>Bitcoin Pizza Day</em>.</p>
+<p>Une autre personne vient contribuer au succès du projet. Vers la fin du mois de mai, un développeur américain de 44 ans, nommé Gavin Andresen, découvre Bitcoin par le biais d’un article publié sur InfoWorld<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>. De retour d’Australie, momentanément sans emploi, il se met à travailler sur son premier projet&nbsp;: un robinet à bitcoins (<em>bitcoin faucet</em>) qui donne des bitcoins à quiconque en fait la requête. Le 11 juin, Gavin lance son service et le présente sur le forum&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn50"><p><sup>50</sup>&nbsp;«&nbsp;un développeur américain de 44 ans, nommé Gavin Andresen, découvre Bitcoin par le biais d’un article publié sur InfoWorld&nbsp;»&nbsp;: Neil McAllister, <em>Open source innovation on the cutting edge</em>, 24 mai 2010&nbsp;: <a href="https://www.infoworld.com/article/2627013/open-source-innovation-on-the-cutting-edge.html?page=3" class="uri">https://www.infoworld.com/article/2627013/open-source-innovation-on-the-cutting-edge.html?page=3</a>.</p></div><div id="fn51"><p><sup>51</sup>&nbsp;Gavin Andresen, <em>Get 5 free bitcoins from freebitcoins.appspot.com</em>, /06/2010, 17:38:45 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=183.msg1488#msg1488" class="uri">https://bitcointalk.org/index.php?topic=183.msg1488#msg1488</a>.</p></div></div><p>«&nbsp;Pour mon premier projet de programmation sur Bitcoin, j’ai décidé de faire quelque chose qui semble vraiment stupide&nbsp;: j’ai créé un site web qui distribue des bitcoins. [...] Pourquoi&nbsp;? Parce que je veux que le projet Bitcoin réussisse, et je pense qu’il a plus de chances de réussir si les gens peuvent obtenir une poignée de pièces pour l’essayer<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>.&nbsp;»</p>
+<p>Ce <em>faucet</em>, qui offre d’abord 5 bitcoins par requête au tout début, est approuvé par Satoshi, ce dernier ayant «&nbsp;prévu de faire exactement la même chose si quelqu’un d’autre ne l’avait pas fait<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a>&nbsp;». Le service, sollicité par beaucoup de personnes, distribuera plus de 19&nbsp;700 bitcoins jusqu’à sa fermeture deux ans plus tard<a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>. De plus, Gavin s’implique dans le développement du logiciel et échange beaucoup avec Satoshi par courriel. Il en devient rapidement le bras droit grâce à la confiance qu’il lui inspire.</p>
+<div class="no-row-height column-margin column-container"><div id="fn52"><p><sup>52</sup>&nbsp;Satoshi Nakamoto, <em>Re: Get 5 free bitcoins from freebitcoins.appspot.com</em>, /06/2010, 23:08:34 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=183.msg1620#msg1620" class="uri">https://bitcointalk.org/index.php?topic=183.msg1620#msg1620</a>.</p></div><div id="fn53"><p><sup>53</sup>&nbsp;«&nbsp;jusqu’à sa fermeture deux ans plus tard&nbsp;»&nbsp;: Gavin Andresen, <em>Bitcoin Faucet Hacked</em>, 2 mars 2012&nbsp;: <a href="https://gavintech.blogspot.com/2012/03/bitcoin-faucet-hacked.html" class="uri">https://gavintech.blogspot.com/2012/03/bitcoin-faucet-hacked.html</a>.</p></div><div id="fn54"><p><sup>54</sup>&nbsp;James A. Donald, <em>Re: [bitcoin-list] New User</em>, /06/2010 22:29:16&nbsp;: <a href="https://web.archive.org/web/20131016002646/http://sourceforge.net/p/bitcoin/mailman/bitcoin-list/?viewmonth=201006" class="uri">https://web.archive.org/web/20131016002646/http://sourceforge.net/p/bitcoin/mailman/bitcoin-list/?viewmonth=201006</a>. – Dans un autre courriel, James A. Donald ajoutait&nbsp;: «&nbsp;Je ne voulais pas paraître si négatif. Si nous y arrivons, c’est une grande victoire pour la liberté – mais c’est un long périple, et je suis occupé par un autre projet.&nbsp;».</p></div></div><p>Malgré cette croissance économique encourageante, l’activité reste extrêmement réduite sur le réseau. Le 30 juin, sur la liste de diffusion de Bitcoin, James A. Donald déclare ainsi que «&nbsp;Bitcoin est en quelque sorte mort&nbsp;» et que «&nbsp;le problème est que le bitcoin a besoin d’une écologie d’utilisateurs pour être utile<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>&nbsp;». Toutefois, quelques jours plus tard, un évènement vient lui donner tort.</p>
+</section>
+<section id="le-slashdotting" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-slashdotting">Le slashdotting</h2>
+<p>Le 11 juillet 2010, suite à la sortie de la version 0.3 du logiciel, une courte présentation de Bitcoin rédigée par un utilisateur est publiée sur Slashdot, un site d’actualité très populaire traitant de sujets pour les <em>nerds</em> comme l’informatique, les jeux vidéo, la science, Internet,&nbsp;etc. L’argumentaire de vente est le suivant&nbsp;:</p>
+<p>«&nbsp;Que pensez-vous de cette technologie disruptrice&nbsp;? Bitcoin est une monnaie numérique basée sur un réseau pair à pair, sans banque centrale, et sans frais de transaction. À l’aide d’un concept de preuve de travail, les nœuds brûlent des cycles de processeur pour chercher des paquets de pièces et diffusent leurs résultats sur le réseau. L’analyse de la consommation d’énergie révèle que la valeur marchande des bitcoins est déjà supérieure à la valeur de l’énergie nécessaire pour les générer, ce qui indique une demande saine. La communauté a bon espoir que la monnaie restera hors de portée de tout État<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn55"><p><sup>55</sup>&nbsp;teppy, «&nbsp;<em>Bitcoin Releases Version 0.3</em>&nbsp;», <em>Slashdot</em>, 11 juillet 2010&nbsp;: <a href="https://news.slashdot.org/story/10/07/11/1747245/Bitcoin-Releases-Version-03" class="uri">https://news.slashdot.org/story/10/07/11/1747245/Bitcoin-Releases-Version-03</a>.</p></div><div id="fn56"><p><sup>56</sup>&nbsp;«&nbsp;Le réseau tient le coup malgré la montée en charge&nbsp;»&nbsp;: Gavin Andresen, <em>Re: Scalability</em>, /7/2010, 04:22:49 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=286.msg2745#msg2745" class="uri">https://bitcointalk.org/index.php?topic=286.msg2745#msg2745</a>.</p></div></div><p>Ceci provoque un afflux massif de nouveaux visiteurs sur le site et sur le forum, ainsi qu’une augmentation du nombre d’utilisateurs et de mineurs sur le réseau. Le réseau tient le coup malgré la montée en charge<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a>. En conséquence, le prix du bitcoin connaît la première hausse majeure de son histoire, en passant de 0,008&nbsp;$ à 0,08&nbsp;$ en une semaine, soit une multiplication par 10&nbsp;!</p>
+<p>Parmi les personnes qui découvrent Bitcoin grâce à Slashdot, il y a Jed McCaleb<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>, un entrepreneur et programmeur américain de 35 ans, connu pour avoir cofondé et développé le logiciel de partage de fichiers en pair à pair eDonkey2000 dans les années 2000. Constatant à quel point il est pénible de se procurer du bitcoin contre des dollars, il décide de créer une place de marché spécialisée. Pour ce faire, il réutilise un de ses anciens projets mis au point en 2007&nbsp;: <em>Magic The Gathering Online eXchange</em> (MTGOX), un site web qui permettait d’acheter et de vendre des cartes du jeu en ligne <em>Magic: The Gathering Online</em><a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>. Il reprend le même nom de domaine au passage&nbsp;: mtgox.com.</p>
+<div class="no-row-height column-margin column-container"><div id="fn57"><p><sup>57</sup>&nbsp;«&nbsp;Parmi les personnes qui découvrent Bitcoin grâce à Slashdot, il y a Jed McCaleb&nbsp;»&nbsp;: The Ripple Blog, <em>Interview with Jed McCaleb, inventor of the Ripple protocol and co-founder of OpenCoin</em>, 17 avril 2013&nbsp;: <a href="https://web.archive.org/web/20130428155220/https://ripple.com/blog/interview-with-jed-mccaleb-inventor-of-the-ripple-protocol-and-co-founder-of-opencoin/" class="uri">https://web.archive.org/web/20130428155220/https://ripple.com/blog/interview-with-jed-mccaleb-inventor-of-the-ripple-protocol-and-co-founder-of-opencoin/</a>.</p></div><div id="fn58"><p><sup>58</sup>&nbsp;Gwern Branwen, <em>2014 Jed McCaleb MtGox interview</em>, 16 février 2014&nbsp;: <a href="https://www.gwern.net/docs/bitcoin/2014-mccaleb" class="uri">https://www.gwern.net/docs/bitcoin/2014-mccaleb</a>.</p></div><div id="fn59"><p><sup>59</sup>&nbsp;«&nbsp;la plateforme de change Mt. Gox [...] est lancée et annoncée officiellement sur le forum par Jed&nbsp;»&nbsp;: Jed McCaleb, <em>New Bitcoin Exchange</em>, /07/2010 01:57:19 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=444.msg3866#msg3866" class="uri">https://bitcointalk.org/index.php?topic=444.msg3866#msg3866</a>.</p></div><div id="fn60"><p><sup>60</sup>&nbsp;Jed McCaleb, <em>Re: New Bitcoin Exchange</em>, /07/2010 02:53:07 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=444.msg3891#msg3891" class="uri">https://bitcointalk.org/index.php?topic=444.msg3891#msg3891</a>.</p></div></div><p>Une semaine plus tard, le 18, la plateforme de change Mt. Gox («&nbsp;<em>Mount Gox</em>&nbsp;») est lancée et annoncée officiellement sur le forum par Jed<a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a>. Grâce à son expertise, il fait en sorte que la plateforme fonctionne comme une place de marché automatisée, à l’instar des bourses en ligne modernes. Elle se distingue de Bitcoin Market par le fait qu’elle est «&nbsp;toujours en ligne, automatisée&nbsp;», que «&nbsp;le site est plus rapide et a un hébergement dédié&nbsp;» et que «&nbsp;l’interface est plus agréable<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>&nbsp;». Par conséquent, Mt. Gox s’impose rapidement comme le moyen principal de se procurer du bitcoin, devenant la référence en ce qui concerne le cotation en dollars.</p>
+<p>Le minage connaît également une phase ascendante. L’afflux de nouveaux mineurs fait passer le taux de hachage du réseau (le nombre de calculs par seconde) au-dessus du milliard de calculs par seconde (1&nbsp;GH/s) dès le 13 juillet. Certains mineurs développent leur propre algorithme de minage par GPU. C’est le cas de ArtForz, un développeur allemand, qui se met à miner le 19 juillet et qui construit au cours du temps la première ferme de minage de Bitcoin, qui sera connue sous le nom d’«&nbsp;ArtFarm&nbsp;»<a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn61"><p><sup>61</sup>&nbsp;Le 13 août 2010, le ferme de minage d’ArtForz était constituée de 6 cartes graphiques ATI Radeon HD 5770&nbsp;; à la fin, elle se composait de 24 ATI Radeon HD 5970. – Tim Swanson, <em>How ArtForz changed the history of Bitcoin mining</em>, 20 avril 2014&nbsp;: <a href="https://www.ofnumbers.com/2014/04/20/how-artforz-changed-the-history-of-bitcoin-mining/" class="uri">https://www.ofnumbers.com/2014/04/20/how-artforz-changed-the-history-of-bitcoin-mining/</a>.</p></div></div><p>Mais cette croissance suivant la présentation sur Slashdot provoque également des problèmes d’ordre technique, mettant le système à l’épreuve. Deux incidents viennent ainsi perturber le projet.</p>
+<p>Le premier incident est la découverte d’une vulnérabilité dans le code de Bitcoin qui rend possible la dépense de bitcoins à partir de n’importe quelle adresse (cette vulnérabilité sera appelée le «&nbsp;1 RETURN bug&nbsp;» en référence au script nécessaire pour réaliser cette dépense). C’est ArtForz qui en découvre l’existence à la fin du mois de juillet 2010. Au lieu d’exploiter cette faille et de s’emparer de la richesse présente sur le réseau pour la revendre discrètement, il choisit de prévenir Satoshi et Gavin par courriel. Satoshi s’empresse d’inclure la correction dans la mise à jour 0.3.6 et recommande à tous les utilisateurs de mettre à jour leur logiciel<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>. La vulnérabilité n’est pas exploitée et Bitcoin échappe ainsi au pire.</p>
+<div class="no-row-height column-margin column-container"><div id="fn62"><p><sup>62</sup>&nbsp;«&nbsp;Satoshi s’empresse d’inclure la correction dans la mise à jour 0.3.6&nbsp;»&nbsp;: Satoshi Nakamoto, <em>*** ALERT *** Upgrade to 0.3.6</em>, /07/2010 19:13:06 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=626.msg6451#msg6451" class="uri">https://bitcointalk.org/index.php?topic=626.msg6451#msg6451</a>.</p></div><div id="fn63"><p><sup>63</sup>&nbsp;Jeff Garzik, <em>Strange block 74638</em>, /08/2010, 18:08:49 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=822.msg9474#msg9474" class="uri">https://bitcointalk.org/index.php?topic=822.msg9474#msg9474</a></p></div></div><p>Le second évènement est le <em>value overflow incident</em>. Le 15 août vers 17 heures, un bloc miné contient une transaction qui crée plus de 184 milliards de bitcoins. Cette création exploite une vulnérabilité de dépassement de mémoire (<em>overflow</em>) dans la représentation des quantités dans Bitcoin. Une heure plus tard, le problème est repéré par Jeff Garzik, un ingénieur américain ayant découvert Bitcoin grâce à Slashdot, qui avertit la communauté sur le forum<a href="#fn63" class="footnote-ref" id="fnref63" role="doc-noteref"><sup>63</sup></a>.</p>
+<p>La réaction de Satoshi ne se fait pas attendre. Un peu avant minuit, il publie un correctif créant une chaîne alternative ne contenant pas la transaction incriminée<a href="#fn64" class="footnote-ref" id="fnref64" role="doc-noteref"><sup>64</sup></a>. La situation conflictuelle est résolue lorsque la chaîne correcte devient plus longue que l’autre le lendemain à 8 heures 10 du matin<a href="#fn65" class="footnote-ref" id="fnref65" role="doc-noteref"><sup>65</sup></a>. Cet incident perturbe l’activité du réseau pendant 15 heures environ mais le problème est vite résolu grâce à une réactivité forte de la communauté. Suite à cet incident, Satoshi implémente un système d’alerte dans Bitcoin, lui permettant d’avertir tous les nœuds du réseau en cas de problème technique<a href="#fn66" class="footnote-ref" id="fnref66" role="doc-noteref"><sup>66</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn64"><p><sup>64</sup>&nbsp;«&nbsp;il publie un correctif créant une chaîne alternative ne contenant pas la transaction incriminée&nbsp;»&nbsp;: Satoshi Nakamoto, <em>Version 0.3.10 - block 74638 overflow PATCH!</em>, /08/2010 23:48:22 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=827.msg9590#msg9590" class="uri">https://bitcointalk.org/index.php?topic=827.msg9590#msg9590</a>.</p></div><div id="fn65"><p><sup>65</sup>&nbsp;«&nbsp;la chaîne correcte devient plus longue que l’autre le lendemain à 8 heures 10 du matin&nbsp;»&nbsp;: Satoshi Nakamoto, <em>Re: overflow bug SERIOUS</em>, /08/2010 12:59:38 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=823.msg9734#msg9734" class="uri">https://bitcointalk.org/index.php?topic=823.msg9734#msg9734</a>.</p></div><div id="fn66"><p><sup>66</sup>&nbsp;Satoshi Nakamoto, <em>Development of alert system</em>, /08/2010 23:55:06 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=898.msg10722#msg10722" class="uri">https://bitcointalk.org/index.php?topic=898.msg10722#msg10722</a>. – Après avoir servi entre 2012 et 2015, ce système d’alerte a été progressivement désactivé pour finir par être définitivement supprimé du logiciel en 2017 (<a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement" class="uri">https://bitcoin.org/en/alert/2016-11-01-alert-retirement</a>).</p></div><div id="fn67"><p><sup>67</sup>&nbsp;Marek Palatinus, <em>Cooperative mining</em>, /11/2010, 13:45:41 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1976.msg24844#msg24844" class="uri">https://bitcointalk.org/index.php?topic=1976.msg24844#msg24844</a>.</p></div></div><p>Au cours de l’automne, la popularisation du minage par processeur graphique rend le minage par CPU quasi-impossible. C’est ce qui provoque l’apparition de la première coopérative de minage le 27 novembre, Bitcoin.cz Mining, une organisation permettant aux petits mineurs de lisser leurs revenus en regroupant leurs puissances de calcul respectives<a href="#fn67" class="footnote-ref" id="fnref67" role="doc-noteref"><sup>67</sup></a>. Créée par Marek Palatinus (connu sous le pseudonyme de slush), un architecte informatique tchèque, la coopérative sera par la suite renommée en Slush Pool en son hommage.</p>
+<p>De manière générale, à la fin de l’année 2010, on peut considérer que le projet Bitcoin a pris son envol&nbsp;: l’économie s’est fortifiée, notamment avec les services de change, le minage s’est spécialisé avec l’apparition du minage par GPU et le protocole a été mis à l’épreuve par la découverte de failles dans le logiciel. Ces éléments montrent que les incitations des différents acteurs du système sont alignées. C’est à ce moment-là que Satoshi décide de disparaître.</p>
+</section>
+<section id="la-disparition-de-satoshi-nakamoto" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-disparition-de-satoshi-nakamoto">La disparition de Satoshi Nakamoto</h2>
+<p>La disparition de Satoshi Nakamoto se fait progressivement à partir de décembre 2010. Satoshi n’explicite pas les raisons qui le poussent à s’éclipser, mais nous pouvons les deviner. Tout d’abord, le projet a pris : il a grossi à tel point qu’il devient difficile de diriger le mouvement<a href="#fn68" class="footnote-ref" id="fnref68" role="doc-noteref"><sup>68</sup></a>. Mais surtout Satoshi redoute la réaction des agences étatiques, une préoccupation qu’il exprime dans un message daté du 5 juillet 2010 (commentant le brouillon de la présentation de Bitcoin qui sera proposée à Slashdot), où il déclare ne pas vouloir mettre trop en avant l’aspect «&nbsp;anonyme&nbsp;» de Bitcoin ou son opposition aux autorités légales qui constituerait une «&nbsp;provocation<a href="#fn69" class="footnote-ref" id="fnref69" role="doc-noteref"><sup>69</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn68"><p><sup>68</sup>&nbsp;«&nbsp;il a grossi à tel point qu’il devient difficile de diriger le mouvement&nbsp;»&nbsp;: Pete Rizzo, «&nbsp;<em>The Last Days of Satoshi: What Happened when Bitcoin’s Creator Disappeared</em>&nbsp;», <em>Bitcoin Magazine</em>, 26 avril 2021&nbsp;: <a href="https://bitcoinmagazine.com/technical/what-happened-when-bitcoin-creator-satoshi-nakamoto-disappeared" class="uri">https://bitcoinmagazine.com/technical/what-happened-when-bitcoin-creator-satoshi-nakamoto-disappeared</a>.</p></div><div id="fn69"><p><sup>69</sup>&nbsp;«&nbsp;Nous ne voulons pas mettre l’aspect “anonyme” au premier plan. (J’avais l’intention de modifier la page d’accueil) “Les développeurs s’attendent à ce que cela se traduise par une monnaie stable par rapport à l’énergie et hors de portée de tout État.” – Je ne fais certainement pas ce genre de provocation ou d’affirmation.&nbsp;» – Satoshi Nakamoto, <em>Re: Slashdot Submission for 1.0</em>, /07/2010 21:31:14 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=234.msg1976#msg1976" class="uri">https://bitcointalk.org/index.php?topic=234.msg1976#msg1976</a>.</p></div><div id="fn70"><p><sup>70</sup>&nbsp;L’histoire de Bradley Manning (devenu Chelsea Manning après une transition de genre) est narrée par Andy Greenberg dans son ouvrage <em>This Machine Kills Secrets</em> publié en 2012.</p></div></div><p>L’élément déclencheur est l’affaire WikiLeaks. WikiLeaks est une organisation non gouvernementale à but non lucratif fondée par le cypherpunk Julian Assange en 2006, dont la raison d’être est de donner une audience aux lanceurs d’alertes et aux fuites d’information, tout en protégeant leurs sources. À partir de 2010, les documents confidentiels révélés de l’ONG commencent à être relayés par les grands médias et à faire du bruit dans l’opinion publique. C’est notamment le cas de l’<em>Afghan War Diary</em>, un ensemble de documents et de rapports militaires américains secrets sur la guerre en Afghanistan faisant notamment état de la dissimulation des victimes civiles, qui est publié le 25 juillet 2010 grâce à la contribution de Bradley Manning, un analyste militaire de l’armée des États-Unis<a href="#fn70" class="footnote-ref" id="fnref70" role="doc-noteref"><sup>70</sup></a>. On peut également citer les <em>Iraq War Logs</em>, documents secrets sur la guerre en Irak entre 2004 et 2009 publiés le 23 octobre et révélant le nombre de victimes civiles et les actes de torture perpétrés.</p>
+<p>Le financement de WikiLeaks repose essentiellement sur les dons du public. Il s’agit d’une activité sensible pour les firmes réglementées qui craignent les potentielles représailles des autorités. C’est ainsi que la société de paiement en ligne Moneybookers gèle le compte de l’ONG le 14 octobre 2010. À la suite de ces révélations, il est ainsi de plus en plus probable que WikiLeaks s’expose à davantage de sanctions.</p>
+<p>Le 10 novembre, Amir Taaki, un jeune anglais d’origine iranienne ayant fraîchement découvert Bitcoin, voit dans la situation de WikiLeaks une opportunité de démontrer l’utilité de la résistance à la censure du système. Il écrit ainsi sur le forum&nbsp;:</p>
+<p>«&nbsp;Je voulais envoyer une lettre à Wikileaks à propos de Bitcoin car, malheureusement, ils ont subi plusieurs incidents où leurs fonds ont été saisis dans le passé. Quelqu’un sait où leur envoyer un message<a href="#fn71" class="footnote-ref" id="fnref71" role="doc-noteref"><sup>71</sup></a>&nbsp;?&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn71"><p><sup>71</sup>&nbsp;Amir Taaki, <em>Wikileaks contact info?</em>, /11/2010 12:49:16 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1735.msg21271#msg21271" class="uri">https://bitcointalk.org/index.php?topic=1735.msg21271#msg21271</a>.</p></div><div id="fn72"><p><sup>72</sup>&nbsp;ShadowOfHarbringer, <em>Re: Wikileaks contact info?</em>, /11/2010 13:28:00 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1735.msg21283#msg21283" class="uri">https://bitcointalk.org/index.php?topic=1735.msg21283#msg21283</a>.</p></div></div><p>Les réactions sont mitigées. D’après un utilisateur, «&nbsp;cela peut être bénéfique pour wikileaks, mais pas nécessairement pour Bitcoin<a href="#fn72" class="footnote-ref" id="fnref72" role="doc-noteref"><sup>72</sup></a>&nbsp;».</p>
+<p>Un mois plus tard, le 3 décembre, PayPal gèle le compte de WikiLeaks<a href="#fn73" class="footnote-ref" id="fnref73" role="doc-noteref"><sup>73</sup></a>. Certaines personnes sur le forum suggèrent d’encourager WikiLeaks à accepter le bitcoin&nbsp;: cela paraît en effet le «&nbsp;moment idéal pour commencer les dons en bitcoins<a href="#fn74" class="footnote-ref" id="fnref74" role="doc-noteref"><sup>74</sup></a>&nbsp;». Cela fait réagir Satoshi le lendemain qui s’oppose à cette évolution et déclare&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn73"><p><sup>73</sup>&nbsp;«&nbsp;PayPal gèle le compte de WikiLeaks&nbsp;»&nbsp;: <em>PayPal statement regarding WikiLeaks</em>, 3 décembre 2010&nbsp;: <a href="https://web.archive.org/web/20101206112350/https://www.thepaypalblog.com/2010/12/paypal-statement-regarding-wikileaks/" class="uri">https://web.archive.org/web/20101206112350/https://www.thepaypalblog.com/2010/12/paypal-statement-regarding-wikileaks/</a>.</p></div><div id="fn74"><p><sup>74</sup>&nbsp;Wladimir van der Laan, <em>Re: Wikileaks contact info?</em>, /12/2010 08:57:41 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1735.msg26737#msg26737" class="uri">https://bitcointalk.org/index.php?topic=1735.msg26737#msg26737</a>.</p></div></div><p>«&nbsp;Le projet a besoin de grandir progressivement pour que le logiciel puisse se renforcer en cours de route.</p>
+<p>J’appelle WikiLeaks à ne pas commencer à utiliser Bitcoin. Bitcoin est une petite communauté expérimentale encore naissante. Vous n’obtiendriez rien de plus que quelques piécettes et l’agitation que vous apporteriez nous détruirait probablement à ce stade<a href="#fn75" class="footnote-ref" id="fnref75" role="doc-noteref"><sup>75</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn75"><p><sup>75</sup>&nbsp;Satoshi Nakamoto, <em>Re: Wikileaks contact info?</em>, /12/2010 09:08:08 UTC, <a href="https://bitcointalk.org/index.php?topic=1735.msg26999#msg26999" class="uri">https://bitcointalk.org/index.php?topic=1735.msg26999#msg26999</a>.</p></div><div id="fn76"><p><sup>76</sup>&nbsp;«&nbsp;met en péril la survie financière de l’ONG&nbsp;»&nbsp;: Le 24 octobre 2011, un communiqué de WikiLeaks (<em>Banking Blockade</em>, /10/2011 13:00 UTC, <a href="https://wikileaks.org/Banking-Blockade.html" class="uri">https://wikileaks.org/Banking-Blockade.html</a>) a indiqué que le blocus financier a fait disparaître de ses 95&nbsp;% des revenus.</p></div></div><p>Dans les jours qui suivent, c’est un véritable blocus financier qui se met en place contre WikiLeaks, auquel participent Mastercard et Visa, mais aussi Western Union, Bank of America et d’autres acteurs, ce qui met en péril la survie financière de l’ONG<a href="#fn76" class="footnote-ref" id="fnref76" role="doc-noteref"><sup>76</sup></a>. Tout naturellement certains insistent pour que Bitcoin soit mis à profit.</p>
+<p>Le 11 décembre, un article est publié sur PC World pour mettre en avant la possibilité d’un usage de Bitcoin par WikiLeaks<a href="#fn77" class="footnote-ref" id="fnref77" role="doc-noteref"><sup>77</sup></a>. Cet article est rapidement évoqué sur le forum et la réaction de Satoshi est sans appel. Il écrit&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn77"><p><sup>77</sup>&nbsp;«&nbsp;un article est publié sur PC World pour mettre en avant la possibilité d’un usage de Bitcoin par WikiLeaks&nbsp;»&nbsp;: Keir Thomas, <em>Could the Wikileaks Scandal Lead to New Virtual Currency?</em>, décembre 2010, 00:30&nbsp;: <a href="https://www.pcworld.com/article/499375/could_wikileaks_scandal_lead_to_new_virtual_currency.html" class="uri">https://www.pcworld.com/article/499375/could_wikileaks_scandal_lead_to_new_virtual_currency.html</a>.</p></div><div id="fn78"><p><sup>78</sup>&nbsp;Satoshi Nakamoto, <em>Re: PC World Article on Bitcoin</em>, /12/2010 23:39:16 UTC, <a href="https://bitcointalk.org/index.php?topic=2216.msg29280#msg29280" class="uri">https://bitcointalk.org/index.php?topic=2216.msg29280#msg29280</a>.</p></div></div><p>«&nbsp;Il aurait été bon d’attirer cette attention dans un tout autre contexte. WikiLeaks a donné un coup de pied dans la fourmilière, et la colonie se dirige maintenant vers nous<a href="#fn78" class="footnote-ref" id="fnref78" role="doc-noteref"><sup>78</sup></a>.&nbsp;»</p>
+<p>C’est son avant-dernier message public. Le lendemain, il poste son dernier message sur le forum pour annoncer la version 0.3.19 du logiciel, puis se volatilise. Il transmet les rênes du projet à ses deux bras droits historiques&nbsp;: Martti Malmi et Gavin Andresen.</p>
+<p>Martti Malmi hérite du site web et du forum. Néanmoins, à l’instar de Satoshi, il se détourne progressivement de Bitcoin et délègue la gestion de ces plateformes à d’autres personnes, à qui il cèdera le contrôle entièrement en 2015<a href="#fn79" class="footnote-ref" id="fnref79" role="doc-noteref"><sup>79</sup></a>. Il vendra ses 55&nbsp;000 bitcoins pour s’acheter un appartement près de Helsinki<a href="#fn80" class="footnote-ref" id="fnref80" role="doc-noteref"><sup>80</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn79"><p><sup>79</sup>&nbsp;Le contrôle du site a été cédé à un individu utilisant le pseudonyme Cøbra tandis que la charge du forum a été donnée à Michael Marquardt (theymos). Les deux personnes co-gèrent ces deux plateformes.</p></div><div id="fn80"><p><sup>80</sup>&nbsp;«&nbsp;Il vendra ses 55&nbsp;000 bitcoins pour s’acheter un appartement près de Helsinki&nbsp;»&nbsp;: Martti Malmi sur Twitter, /12/2020 12:22 UTC&nbsp;: <a href="https://twitter.com/marttimalmi/status/1339908783187832834" class="uri">https://twitter.com/marttimalmi/status/1339908783187832834</a>.</p></div><div id="fn81"><p><sup>81</sup>&nbsp;Gavin Andresen, <em>Development process straw-man</em>, /12/2010 16:41:39 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=2367.msg31651#msg31651" class="uri">https://bitcointalk.org/index.php?topic=2367.msg31651#msg31651</a>.</p></div></div><p>De son côté, Gavin Andresen hérite de la clé d’alerte, du dépôt SourceForge et de la liste de diffusion. Dès le 19 décembre, il annonce «&nbsp;commencer à gérer le projet Bitcoin de manière plus active<a href="#fn81" class="footnote-ref" id="fnref81" role="doc-noteref"><sup>81</sup></a>&nbsp;» et crée le dépôt GitHub de Bitcoin, où le projet sera dorénavant développé. Il ignore alors qu’il est devenu le développeur en chef du projet et que le créateur de Bitcoin va disparaître.</p>
+<p>Satoshi se volatilise définitivement durant le printemps 2011. Le 23 avril, il adresse un dernier courriel à Mike Hearn, l’ingénieur de Google qui l’avait approché deux ans auparavant et qui était resté en contact avec lui, dans lequel il écrit&nbsp;:</p>
+<p>«&nbsp;Je suis passé à autre chose. [Bitcoin] est entre de bonnes mains avec Gavin et les autres<a href="#fn82" class="footnote-ref" id="fnref82" role="doc-noteref"><sup>82</sup></a>.&nbsp;» Il fait également ses adieux à Gavin et Martti. En particulier, il demande à Gavin d’éviter de parler de lui comme d’une «&nbsp;personnalité sombre et mystérieuse&nbsp;» à la presse<a href="#fn83" class="footnote-ref" id="fnref83" role="doc-noteref"><sup>83</sup></a>. Le 27 avril, Gavin annonce qu’il a été invité par la CIA à faire une présentation sur Bitcoin<a href="#fn84" class="footnote-ref" id="fnref84" role="doc-noteref"><sup>84</sup></a>. Cette visite se passe le 14 juin<a href="#fn85" class="footnote-ref" id="fnref85" role="doc-noteref"><sup>85</sup></a>. De manière intéressante, c’est également le jour où WikiLeaks se met finalement à accepter les dons en bitcoin<a href="#fn86" class="footnote-ref" id="fnref86" role="doc-noteref"><sup>86</sup></a>. Ces deux évènements viennent confirmer ce que Satoshi redoutait.</p>
+<div class="no-row-height column-margin column-container"><div id="fn82"><p><sup>82</sup>&nbsp;Satoshi Nakamoto, <em>Re: Holding coins in an unspendable state for a rolling time window</em>, /04/2011 13:40 UTC&nbsp;: <a href="https://plan99.net/~mike/satoshi-emails/thread5.html" class="uri">https://plan99.net/~mike/satoshi-emails/thread5.html</a>.</p></div><div id="fn83"><p><sup>83</sup>&nbsp;Allie Jones, «&nbsp;<em>Former Coworker Regrets Helping Reveal Identity of Bitcoin’s Founder</em>&nbsp;», <em>The Wire</em>, 6 mars 2014, archive&nbsp;: <a href="https://web.archive.org/web/20140309041730/http://www.thewire.com/technology/2014/03/bitcoin-founders-coworker-regrets-doxxing-him/358878" class="uri">https://web.archive.org/web/20140309041730/http://www.thewire.com/technology/2014/03/bitcoin-founders-coworker-regrets-doxxing-him/358878</a>.</p></div><div id="fn84"><p><sup>84</sup>&nbsp;«&nbsp;Gavin annonce qu’il a été invité par la CIA&nbsp;»&nbsp;: Gavin Andresen, <em>Gavin will visit the CIA</em>, /04/2011 19:00:26 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=6652.msg97181#msg97181" class="uri">https://bitcointalk.org/index.php?topic=6652.msg97181#msg97181</a>.</p></div><div id="fn85"><p><sup>85</sup>&nbsp;«&nbsp;Cette visite se passe le 14 juin&nbsp;»&nbsp;: Gavin Andresen sur Twitter, /06/2011 23:55 UTC&nbsp;: <a href="https://twitter.com/gavinandresen/status/80785477342478336" class="uri">https://twitter.com/gavinandresen/status/80785477342478336</a>.</p></div><div id="fn86"><p><sup>86</sup>&nbsp;«&nbsp;WikiLeaks accepte désormais les dons anonymes en bitcoin sur ``&nbsp;» – WikiLeaks sur Twitter, /06/2011 23:12 UTC&nbsp;: <a href="https://twitter.com/wikileaks/status/80774521350668288" class="uri">https://twitter.com/wikileaks/status/80774521350668288</a>.</p></div><div id="fn87"><p><sup>87</sup>&nbsp;Ce montant a été retrouvé grâce au Patoshi Pattern, mis en lumière par Sergio Lerner en 2013 dans un article intitulé <em>The Well Deserved Fortune of Satoshi Nakamoto, Bitcoin creator, Visionary and Genius</em> (<a href="https://bitslog.com/2013/04/17/the-well-deserved-fortune-of-satoshi-nakamoto/" class="uri">https://bitslog.com/2013/04/17/the-well-deserved-fortune-of-satoshi-nakamoto/</a>). L’estimation utilisée ici est celle de Whale Alert publiée en 2020&nbsp;: <a href="https://whale-alert.medium.com/the-satoshi-fortune-e49cf73f9a9b" class="uri">https://whale-alert.medium.com/the-satoshi-fortune-e49cf73f9a9b</a>.</p></div></div><p>Satoshi Nakamoto laisse derrière lui une fortune colossale&nbsp;: 1&nbsp;122&nbsp;693 bitcoins selon une estimation de 2020<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a>. Cela représente plus de 5 % de la quantité totale de bitcoins. Ces fonds ne bougeront jamais.</p>
+<p>Quelques messages émaneront de ses différents comptes<a href="#fn88" class="footnote-ref" id="fnref88" role="doc-noteref"><sup>88</sup></a>, mais on supposera qu’ils ont été piratés.</p>
+<div class="no-row-height column-margin column-container"><div id="fn88"><p><sup>88</sup>&nbsp;Un message provenant du compte de Satoshi sur le forum de la Fondation P2P a été publié le 7 mars 2014 pour nier son association à Dorian Nakamoto (<a href="https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:52186" class="uri">https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:52186</a>), et un courriel d’opposition à Bitcoin XT a été envoyé le 15 août 2015 à la liste de diffusion de développement depuis son adresse satoshi@vistomail.com (<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-August/010238.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-August/010238.html</a>).</p></div><div id="fn89"><p><sup>89</sup>&nbsp;Parmi les candidats pour être la figure de Satoshi Nakamoto, ceux qui reviennent le plus souvent sont&nbsp;: Nick Szabo, Hal Finney, Adam Back, Len Sassaman.</p></div></div><p>L’identité de Satoshi Nakamoto restera inconnue, celui-ci ayant réussi à conserver son anonymat grâce à l’usage de Tor et de services respectueux de la vie privée. Dans les années qui suivront, sa «&nbsp;personnalité sombre et mystérieuse&nbsp;» deviendra un mythe à part entière, suscitant les spéculations les plus diverses. Tout le monde se demandera «&nbsp;Qui est Satoshi Nakamoto&nbsp;?&nbsp;» à l’instar des personnages de <em>La Grève</em> d’Ayn Rand s’interrogeant sur l’identité de John Galt. On cherchera à savoir qui il est, quelques pistes seront privilégiées<a href="#fn89" class="footnote-ref" id="fnref89" role="doc-noteref"><sup>89</sup></a>, mais jamais son identité civile ne sera formellement identifiée.</p>
+<p>En 2013, dans l’un de ses derniers messages sur le forum, Hal Finney partagera une citation énigmatique du film <em>Man of Steel</em> tout juste sorti, résumant bien la dimension mystérieuse entourant le créateur de Bitcoin&nbsp;:</p>
+<p>«&nbsp;Comment retrouver quelqu’un qui a toujours brouillé les pistes&nbsp;? [...] Pour certains, c’était un ange gardien. Pour d’autres, [une énigme,] un fantôme, toujours un peu à l’écart. [...] Que représente le S&nbsp;?<a href="#fn90" class="footnote-ref" id="fnref90" role="doc-noteref"><sup>90</sup></a>&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn90"><p><sup>90</sup>&nbsp;Hal Finney, <em>Re: Another *Potential* Identifying Piece of Evidence on Satoshi</em>, /06/2013 01:23:42 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=234330.msg2479328#msg2479328" class="uri">https://bitcointalk.org/index.php?topic=234330.msg2479328#msg2479328</a>.</p></div><div id="fn91"><p><sup>91</sup>&nbsp;Leah McGrath Goodman, «&nbsp;<em>The Face Behind Bitcoin</em>&nbsp;», <em>Newsweek Magazine</em>, 6 mars 2014&nbsp;: <a href="https://www.newsweek.com/2014/03/14/face-behind-bitcoin-247957.html" class="uri">https://www.newsweek.com/2014/03/14/face-behind-bitcoin-247957.html</a>.</p></div><div id="fn92"><p><sup>92</sup>&nbsp;Andy Greenberg, «&nbsp;<em>Nakamoto’s Neighbor: My Hunt For Bitcoin’s Creator Led To A Paralyzed Crypto Genius</em>&nbsp;», <em>Forbes</em>, 25 mars 2014&nbsp;: <a href="https://www.forbes.com/sites/andygreenberg/2014/03/25/satoshi-nakamotos-neighbor-the-bitcoin-ghostwriter-who-wasnt/" class="uri">https://www.forbes.com/sites/andygreenberg/2014/03/25/satoshi-nakamotos-neighbor-the-bitcoin-ghostwriter-who-wasnt/</a>.</p></div></div><p>En mars 2014, on croira l’avoir trouvé en la personne de Dorian Prentice Satoshi Nakamoto suite à la publication d’un article de Newsweek<a href="#fn91" class="footnote-ref" id="fnref91" role="doc-noteref"><sup>91</sup></a>. Cet ingénieur des télécommunications, citoyen américain naturalisé d’origine japonaise, vivant avec sa mère à Temple City dans la banlieue de Los Angeles, se fera harceler par la presse mais niera en bloc. On découvrira cependant que la famille de Hal Finney a habité dans la même municipalité, «&nbsp;à quelques pâtés de maisons de la maison familiale des Nakamoto&nbsp;», durant l’adolescence de Hal, ce qui attirera quelques soupçons sur ce dernier<a href="#fn92" class="footnote-ref" id="fnref92" role="doc-noteref"><sup>92</sup></a>.</p>
+<p>Hal Finney décèdera en août 2014 des suites de la maladie de Charcot. En tant que futuriste averti, il se fera cryogéniser par la fondation Alcor.</p>
+</section>
+<section id="la-communauté-prend-le-relai" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-communauté-prend-le-relai">La communauté prend le relai</h2>
+<p>Alors que Satoshi se met progressivement en retrait, la popularité de Bitcoin augmente prodigieusement. En particulier, le prix du bitcoin évolue de manière favorable&nbsp;: alors qu’il n’était que de 20&nbsp;centimes en décembre 2010, il atteint la parité avec le dollar le 9 février 2011 et s’y maintient pendant quelques temps. Cette hausse du prix attise l’enthousiasme de la communauté, et notamment celui de Hal Finney qui déclare avoir «&nbsp;vraiment de la chance d’être au début d’un nouveau phénomène potentiellement explosif<a href="#fn93" class="footnote-ref" id="fnref93" role="doc-noteref"><sup>93</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn93"><p><sup>93</sup>&nbsp;Hal Finney, <em>Re: Parity Party</em>, /01/2011 21:17:04 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=2734.msg37307#msg37307" class="uri">https://bitcointalk.org/index.php?topic=2734.msg37307#msg37307</a>.</p></div><div id="fn94"><p><sup>94</sup>&nbsp;La première mention publique de Silk Road par Ross Ulbricht remonte au 27 janvier 2011 sur le forum de <em>The Shroomery</em>, un site consacré aux champignons hallucinogènes, où il prétendait être tombé par hasard sur la place de marché. – Ross Ulbricht, <em>anonymous market online?</em>, /01/2011 22:28 UTC&nbsp;: <a href="https://www.shroomery.org/forums/showflat.php/Number/13860995" class="uri">https://www.shroomery.org/forums/showflat.php/Number/13860995</a>.</p></div></div><p>Cette période coïncide avec l’apparition de Silk Road, une place de marché du dark web s’appuyant sur Tor et Bitcoin qui permet à ses utilisateurs d’échanger librement des produits et des services légaux et illégaux. Celle-ci est lancée à la fin du mois de janvier par un jeune Texan du nom de Ross Ulbricht, qui en fait mention sur le forum de Bitcoin en feignant d’avoir découvert le site par hasard<a href="#fn94" class="footnote-ref" id="fnref94" role="doc-noteref"><sup>94</sup></a>.</p>
+<p>Ross Ulbricht adhère profondément aux principes du libertarianisme, une philosophie libérale originaire des États-Unis prônant le respect impératif de la liberté individuelle, des droits de propriété et du marché. Silk Road est pour lui une incarnation de cet idéal. De ce fait, la gamme des produits et services qui peuvent être listés sur le site est restreinte et nécessite qu’aucun mal n’ait été fait à autrui&nbsp;: on y retrouve ainsi de la drogue, des médicaments, des pièces de métaux précieux, mais en aucun cas des cartes bancaires volées, de la pédopornographie ou des services de tueur à gages<a href="#fn95" class="footnote-ref" id="fnref95" role="doc-noteref"><sup>95</sup></a>. Dans l’ensemble, le site sert principalement à la vente de drogue illicite (dont surtout de petites quantités de cannabis), chose pour laquelle il deviendra célèbre.</p>
+<div class="no-row-height column-margin column-container"><div id="fn95"><p><sup>95</sup>&nbsp;«&nbsp;en aucun cas des cartes bancaires volées, de la pédopornographie ou des services de tueur à gages&nbsp;»&nbsp;: Capture du <em>Seller’s Guide</em> du 18/9/2012 (GX-120), <a href="https://antilop.cc/sr/exhibits/GX-120_Redacted.pdf" class="uri">https://antilop.cc/sr/exhibits/GX-120_Redacted.pdf</a>&nbsp;: «&nbsp;Ne pas mettre en vente les objets dont le but est de nuire ou de frauder, comme les objets ou les informations volés, les cartes de crédit volées, la fausse monnaie, les informations personnelles, les assassinats et les armes de toutes sortes. Ne pas mettre en vente les objets liés à la pédophilie.&nbsp;»</p></div><div id="fn96"><p><sup>96</sup>&nbsp;WeUseCoins, <em>What is Bitcoin?</em> (vidéo), 22 mars 2011&nbsp;: <a href="https://www.youtube.com/watch?v=Um63OQz3bjo" class="uri">https://www.youtube.com/watch?v=Um63OQz3bjo</a>.</p></div></div><p>La promotion de Bitcoin s’intensifie également. Le 22 mars, la première vidéo expliquant Bitcoin de manière qualitative est publiée<a href="#fn96" class="footnote-ref" id="fnref96" role="doc-noteref"><sup>96</sup></a>. Cette vidéo, intitulée sobrement «&nbsp;<em>What is Bitcoin?</em>&nbsp;», est produite par Stefan Thomas grâce à un financement participatif de la communauté. Elle aura un succès retentissant au fil des années en totalisant plusieurs millions de vues sur YouTube. Les vidéos de ce type se multiplieront.</p>
+<p>Bitcoin est notamment vanté dans les cercles libertariens, où son caractère libre, anonyme et hors de portée de l’État est mis en avant. Le 16 mars 2011, une partie de l’épisode de FreeTalkLive du jour est consacrée à Bitcoin et à Silk Road<a href="#fn97" class="footnote-ref" id="fnref97" role="doc-noteref"><sup>97</sup></a>. Cela attire l’attention de l’entrepreneur et activiste Roger Ver, déjà millionnaire grâce à sa société de revente de composants informatiques, Memory Dealers. Il découvre Bitcoin à la fin du mois d’avril en écoutant une rediffusion de l’épisode et est instantanément conquis&nbsp;: il se met à lire tout ce qu’il peut sur le sujet, achète du bitcoin et commence à l’accepter avec son entreprise<a href="#fn98" class="footnote-ref" id="fnref98" role="doc-noteref"><sup>98</sup></a>. Il deviendra rapidement l’un des promoteurs les plus zélés de Bitcoin, ce qui lui vaudra le surnom de <em>Bitcoin Jesus</em> pendant un temps.</p>
+<div class="no-row-height column-margin column-container"><div id="fn97"><p><sup>97</sup>&nbsp;«&nbsp;une partie de l’épisode de FreeTalkLive du jour est consacrée à Bitcoin et à Silk Road&nbsp;»&nbsp;: <a href="https://soundcloud.com/freetalklive/ftl2011-03-16" class="uri">https://soundcloud.com/freetalklive/ftl2011-03-16</a>.</p></div><div id="fn98"><p><sup>98</sup>&nbsp;«&nbsp;commence à l’accepter avec son entreprise&nbsp;»&nbsp;: Roger Ver, <em>Re: Earn 131BTC or 12-13BTC for getting shops/organisations to accept Bitcoin!</em>, /04/2011 08:00:52 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=4667.msg95746#msg95746" class="uri">https://bitcointalk.org/index.php?topic=4667.msg95746#msg95746</a>.</p></div><div id="fn99"><p><sup>99</sup>&nbsp;Adrian Chen, «&nbsp;<em>The Underground Website Where You Can Buy Any Drug Imaginable</em>&nbsp;», <em>Gawker</em>, 1 juin 2011&nbsp;: <a href="https://www.gawker.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160" class="uri">https://www.gawker.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160</a>.</p></div></div><p>L’existence de Silk Road est révélée au grand public le 1 juin 2011 avec un article d’Adrien Chen sur Gawker<a href="#fn99" class="footnote-ref" id="fnref99" role="doc-noteref"><sup>99</sup></a>, ce qui a pour effet d’attirer l’attention sur Bitcoin encore un peu plus, notamment en incitant les consommateurs à se procurer du bitcoin pour acheter des produits sur la plateforme.</p>
+<p>Au cours du printemps 2011, on assiste par conséquent à une forte poussée du prix, due à l’augmentation de la demande. Après avoir stagné pendant quelques mois, celui-ci passe ainsi de 1&nbsp;$ le 15 avril à plus de 32&nbsp;$ le 8 juin.</p>
+<p>Mt. Gox, la principale plateforme de change de l’époque, se retrouve sous pression. Celle-ci a alors été reprise depuis quelques mois par Mark Karpelès, un développeur français de 26 ans vivant au Japon, qui est quelque peu négligent et n’a pas su résoudre les problèmes d’implémentation de son prédécesseur. C’est ainsi qu’un incident malencontreux survient le dimanche 19 juin&nbsp;: un groupe de pirates accède au compte administrateur de Jed McCaleb et tente d’en extraite un maximum d’argent.</p>
+<p>La limite de retrait journalière étant fixée à 1&nbsp;000&nbsp;$, les pirates cherchent à faire baisser le prix afin de retirer le plus de bitcoins possibles. Ils vendent les bitcoins de Jed McCaleb au marché ce qui provoque un krach éclair sur le cours&nbsp;: le prix, qui stationne ce jour-là autour des 17&nbsp;$, chute à 0,01&nbsp;$ en quelques minutes. C’est la panique dans la communauté, et beaucoup d’utilisateurs de Mt. Gox vendent sous le coup de l’émotion afin de conserver ce qui leur reste. La situation est rétablie dans la journée mais 2&nbsp;000 bitcoins manquent à l’appel. Le 23 juin, Mark Karpelès prouve la solvabilité de l’entreprise en déplaçant 424&nbsp;242 bitcoins d’une adresse à une autre<a href="#fn100" class="footnote-ref" id="fnref100" role="doc-noteref"><sup>100</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn100"><p><sup>100</sup>&nbsp;L’identifiant de la transaction de preuve de solvabilité de Mt. Gox en 2011 était ``.</p></div><div id="fn101"><p><sup>101</sup>&nbsp;«&nbsp;son fondateur anonyme, Tom Williams, disparaît avec les 154&nbsp;406 bitcoins présents sur les comptes de ses clients&nbsp;»&nbsp;: shotgun, <em>mybitcoin down or just me?</em>, /07/2011 22:41:36 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=32900.msg411251#msg411251" class="uri">https://bitcointalk.org/index.php?topic=32900.msg411251#msg411251</a>.</p></div></div><p>Cet incident entraîne la fin de la folie spéculative sur le bitcoin et le prix se met à descendre doucement. C’est ce moment-là qu’on assiste à l’escroquerie de sortie de MyBitcoin&nbsp;: le 29 juillet, son fondateur anonyme, Tom Williams, disparaît avec les 154&nbsp;406 bitcoins présents sur les comptes de ses clients<a href="#fn101" class="footnote-ref" id="fnref101" role="doc-noteref"><sup>101</sup></a>. Suite à cet évènement, le prix baissera en flèche jusqu’à atteindre un creux local de 2&nbsp;$ en novembre.</p>
+<p>Mais cela ne décourage pas pour autant les membres de la communauté. Du 19 au 21 août 2011 a lieu la première conférence sur Bitcoin à New York, qui est organisée par Bruce Wagner, l’animateur du <em>Bitcoin Show</em>, une émission d’entretiens filmés avec les acteurs de l’écosystème<a href="#fn102" class="footnote-ref" id="fnref102" role="doc-noteref"><sup>102</sup></a>. La conférence revêt un caractère amateur (qui caractérise la communauté d’alors) et seules quatre présentations ont lieu&nbsp;: celle de Bruce Wagner ainsi que les interventions de Gavin Andresen, Jeff Garzik et Stefan Thomas. Cela permet néanmoins aux membres les plus actifs, tels que Roger Ver, Jesse Powell, Jed McCaleb, Mark Karpelès ou Charlie Lee, de se réunir en personne pour la première fois.</p>
+<div class="no-row-height column-margin column-container"><div id="fn102"><p><sup>102</sup>&nbsp;La chaîne Youtube de Bruce Wagner se trouve à l’adresse <a href="https://www.youtube.com/@vlogwrap" class="uri">https://www.youtube.com/@vlogwrap</a>. Les vidéos des présentations à la conférence peuvent y être retrouvées.</p></div><div id="fn103"><p><sup>103</sup>&nbsp;Jeff Garzik, <em>[Bitcoin-development] Preparing 0.3.23-rc1 release</em>, /06/2011 02:23:58 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2011-June/000000.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2011-June/000000.html</a>.</p></div><div id="fn104"><p><sup>104</sup>&nbsp;Le système des BIP a été initialement proposé le 19 septembre 2011 par Amir Taaki sous le nom de <em>Bitcoin Enhancement Proposals</em>, en référence directe aux <em>Python Enhancement Proposals</em> (PEP) dont il s’est inspiré. (Amir Taaki, <em>[Bitcoin-development] Bitcoin Enhancement Proposals (BEPS)</em>, /09/2011 00:31:55 UTC, <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2011-September/000554.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2011-September/000554.html</a>)</p></div></div><p>Le développement logiciel s’organise aussi. Jusqu’ici, il était centralisé dans les mains de Satoshi, le «&nbsp;dictateur bienveillant&nbsp;» du projet. Mais après le départ du créateur de Bitcoin, il s’ouvre à la participation de la communauté, sous la supervision de Gavin Andresen. On voit ainsi des contributeurs talentueux commencer à s’impliquer dans l’évolution de Bitcoin comme Nils Schneider, Matt Corallo, Pieter Wuille, Jeff Garzik, Wladimir van der Laan, Luke-Jr ou encore Gregory Maxwell. Des méthodes de coordination sont rapidement mises en place comme la liste de diffusion `` permettant de discuter formellement des changements à apporter<a href="#fn103" class="footnote-ref" id="fnref103" role="doc-noteref"><sup>103</sup></a>, et le système des propositions d’amélioration de Bitcoin (<em>Bitcoin Improvement Proposals</em> ou BIP), qui décrivent publiquement ces changements<a href="#fn104" class="footnote-ref" id="fnref104" role="doc-noteref"><sup>104</sup></a>.</p>
+<p>L’utilisation de Bitcoin devient plus facile. On assiste à l’apparition de portefeuilles légers permettant d’utiliser Bitcoin sans avoir à télécharger et vérifier l’intégralité de la chaîne. Ces derniers utilisent la vérification de paiement simplifiée décrite par Satoshi Nakamoto dans la section 8 du livre blanc. Celle-ci est mise en œuvre par Mike Hearn au sein de sa bibliothèque logicielle <em>bitcoinj</em> programmée en Java, qui permet entre autres une meilleure compatibilité avec les applications sur les téléphones multifonctions fonctionnant sous Android. Le premier portefeuille pour mobile, le <em>Bitcoin Wallet for Android</em>, est lancé par Andreas Schildbach en mars 2011<a href="#fn105" class="footnote-ref" id="fnref105" role="doc-noteref"><sup>105</sup></a>. Celui-ci montre que l’usage direct de Bitcoin dans la vie de tous les jours est possible. Du côté ordinateur, Thomas Voegtlin crée Electrum en novembre 2011, présenté comme un portefeuille qui permet à l’utilisateur de récupérer ses fonds par le biais d’une phrase mnémotechnique<a href="#fn106" class="footnote-ref" id="fnref106" role="doc-noteref"><sup>106</sup></a>. Cette pratique sera plus tard standardisée et adoptée largement dans l’écosystème.</p>
+<div class="no-row-height column-margin column-container"><div id="fn105"><p><sup>105</sup>&nbsp;«&nbsp;Le premier portefeuille pour mobile [...] est lancé par Andreas Schildbach en mars 2011&nbsp;»&nbsp;: Andreas Schildbach, <em>Bitcoin Wallet for Android</em>, /03/2011 21:25:51 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=4384.msg64142#msg64142" class="uri">https://bitcointalk.org/index.php?topic=4384.msg64142#msg64142</a>.</p></div><div id="fn106"><p><sup>106</sup>&nbsp;«&nbsp;Thomas Voegtlin crée Electrum en novembre 2011&nbsp;»&nbsp;: Thomas Voegtlin, <em>[Electrum] a brainwallet in twelve words</em>, /11/2011 01:06:59 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=51397.msg612674#msg612674" class="uri">https://bitcointalk.org/index.php?topic=51397.msg612674#msg612674</a>.</p></div></div><p>Ce développement décentralisé est également source de tensions. Sans son fondateur, le projet ne dispose plus d’un meneur incontestable&nbsp;: certes Gavin Andresen possède le contrôle du dépôt, mais n’a pas l’autorité technique suffisante pour imposer toutes ses vues aux autres développeurs. Les décisions sont prises relativement collectivement, ce qui pose la question de la gouvernance de Bitcoin&nbsp;: qui décide d’apporter un changement au protocole&nbsp;?</p>
+<p>À la fin de l’année 2011 et au début de l’année 2012, le premier débat technique en l’absence de Satoshi a lieu. Le groupe de développeurs est alors encore très restreint mais cela suffit pour créer un conflit à propos de l’amélioration de la programmabilité des transactions, qui permettrait notamment de créer des comptes multisignatures. On s’en souviendra comme la «&nbsp;bataille pour P2SH<a href="#fn107" class="footnote-ref" id="fnref107" role="doc-noteref"><sup>107</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn107"><p><sup>107</sup>&nbsp;Pete Rizzo, Aaron van Wirdum, «&nbsp;<em>The Battle For P2SH: The Untold Story Of The First Bitcoin War</em>&nbsp;», <em>Bitcoin Magazine</em>, 4 décembre 2020&nbsp;: <a href="https://bitcoinmagazine.com/technical/the-battle-for-p2sh-the-untold-story-of-the-first-bitcoin-war" class="uri">https://bitcoinmagazine.com/technical/the-battle-for-p2sh-the-untold-story-of-the-first-bitcoin-war</a>.</p></div></div><p>De par sa nature informatique, Bitcoin constitue un système de monnaie programmable qui permet à l’utilisateur d’imposer des conditions au blocage et au déblocage des fonds. Il dispose pour cela d’un mécanisme de scripts reposant sur des instructions logiques appelées codes opérations. Cependant, ces scripts sont compliqués à gérer. Il s’agit donc de trouver un moyen simple pour l’utilisateur d’envoyer des fonds vers un script défini préalablement par le récipiendaire. C’est l’idée derrière la proposition faite par Nicolas van Saberhagen d’ajouter un nouveau code opération appelé <code>. Cette proposition souffre néanmoins d'un problème de récursivité, ce qui provoque rapidement l'apparition de deux propositions concurrentes&nbsp;: *Pay to Script Hash* (P2SH) proposé par Gavin Andresen et</code> (CHV) proposé par Luke-Jr.</p>
+<p>Une tension émerge entre les deux propositions, ce qui crée le débat. Amir Taaki, qui ne soutient ni l’une ni l’autre, appelle à la discussion et déclare le 29 janvier 2012&nbsp;:</p>
+<p>«&nbsp;Ma crainte c’est qu’un jour Bitcoin soit corrompu. Développeurs : considérez cet examen supplémentaire comme une opportunité de construire une culture d’ouverture<a href="#fn108" class="footnote-ref" id="fnref108" role="doc-noteref"><sup>108</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn108"><p><sup>108</sup>&nbsp;Amir Taaki, <em>The Truth behind BIP 16 and 17 (important read)</em>, /01/2012 03:54:08 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=61705.msg719790#msg719790" class="uri">https://bitcointalk.org/index.php?topic=61705.msg719790#msg719790</a>.</p></div></div><p>Finalement, c’est P2SH qui est choisi pour être intégré à Bitcoin sur l’ordre de Gavin Andresen. Cette intégration sera réalisée, non sans difficulté, le 1 avril 2012.</p>
+<p>Dans un même temps, la popularisation de Bitcoin se poursuit. Le 28 février, un russo-canadien du nom de Vitalik Buterin, âgé de seulement 18 ans, co-fonde le <em>Bitcoin Magazine</em> avec Mihai Alisie, un développeur roumain. Ce média, d’abord uniquement disponible en version web, est distribué en édition papier à partir de mai. Le jeune Vitalik y écrit de nombreux articles documentant l’actualité de l’époque. Par la suite, de nombreux sites d’information spécialisés verront le jour comme CoinDesk ou CoinTelegraph.</p>
+<p>Le 24 avril 2012, un jeu de hasard en ligne nommé SatoshiDICE est lancé par l’entrepreneur américain Erik Voorhees<a href="#fn109" class="footnote-ref" id="fnref109" role="doc-noteref"><sup>109</sup></a>. Le site repose sur un fonctionnement très simple&nbsp;: le joueur envoie des bitcoins à une adresse spécifique et il a une probabilité prédéfinie de recevoir une récompense qui correspond à un multiple du montant envoyé (il a par exemple une chance sur deux de recevoir un peu moins de deux fois sa mise). Le procédé est instantané et aisément vérifiable, ce qui attire de nombreux parieurs.</p>
+<div class="no-row-height column-margin column-container"><div id="fn109"><p><sup>109</sup>&nbsp;Erik Voorhees, <em>SatoshiDICE.com - The World’s Most Popular Bitcoin Game</em>, /04/2012 02:17:31 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=77870.msg865877#msg865877" class="uri">https://bitcointalk.org/index.php?topic=77870.msg865877#msg865877</a>.</p></div><div id="fn110"><p><sup>110</sup>&nbsp;«&nbsp;il réalise même une IPO pour son entreprise sur la plateforme roumaine MPEx&nbsp;»&nbsp;: Erik Voorhees, <em>S.DICE - SatoshiDICE 100% Dividend-Paying Asset on MPEx</em>, /08/2012 04:14:43 UTC&nbsp;: <a href="https://web.archive.org/web/20121024050433/https://bitcointalk.org/index.php?topic=101902.0" class="uri">https://web.archive.org/web/20121024050433/https://bitcointalk.org/index.php?topic=101902.0</a>.</p></div><div id="fn111"><p><sup>111</sup>&nbsp;«&nbsp;Il revendra la plateforme le 17 juillet 2013 pour 126&nbsp;315 bitcoins, soit 12,4 millions de dollars au moment de l’acquisition&nbsp;»&nbsp;: Erik Voorhees, «&nbsp;<em>SatoshiDice Sold for $12.4 Million</em>&nbsp;», <em>Bitcoin Magazine</em>, 28 juillet 2012&nbsp;: <a href="https://bitcoinmagazine.com/markets/satoshidice-sold-12-4-million" class="uri">https://bitcoinmagazine.com/markets/satoshidice-sold-12-4-million</a>.</p></div></div><p>En tant que libertarien convaincu vivant dans le New Hampshire, Erik Voorhees voit en SatoshiDICE une manière d’échapper à la réglementation. Le 20 août, il réalise même une IPO pour son entreprise sur la plateforme roumaine MPEx<a href="#fn110" class="footnote-ref" id="fnref110" role="doc-noteref"><sup>110</sup></a>. Il revendra la plateforme le 17 juillet 2013 pour 126&nbsp;315 bitcoins, soit 12,4 millions de dollars au moment de l’acquisition<a href="#fn111" class="footnote-ref" id="fnref111" role="doc-noteref"><sup>111</sup></a>.</p>
+<p>Le succès de SatoshiDICE provoque une augmentation significative du nombre de transactions sur la chaîne, qui triple en quelques mois. Cette activité provenant du site est remarquée et dérange certains développeurs qui la qualifient de «&nbsp;spam<a href="#fn112" class="footnote-ref" id="fnref112" role="doc-noteref"><sup>112</sup></a>&nbsp;». À la moitié de l’année 2012, Bitcoin est ainsi complètement lancé et prêt à être découvert par un public plus large.</p>
+<div class="no-row-height column-margin column-container"><div id="fn112"><p><sup>112</sup>&nbsp;Matt Corallo, <em>Huge increase in satoshidice spam over the past day</em>, /06/2012 23:21:47 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=87444.msg961132#msg961132" class="uri">https://bitcointalk.org/index.php?topic=87444.msg961132#msg961132</a>.</p></div></div></section>
+<section id="lamorçage-organique-de-bitcoin" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="lamorçage-organique-de-bitcoin">L’amorçage organique de Bitcoin</h2>
+<p>Les premières années de Bitcoin ont été déterminantes pour son succès. Il a en effet pu grandir dans la discrétion et connaître une croissance organique et prudente, à l’abri de l’opportunisme et de la propagande de notre monde.</p>
+<p>Bitcoin a été proposé en 2008 par Satoshi Nakamoto, qui l’a mis en œuvre en janvier 2009. Les débuts ont été difficiles, à tel point qu’il a fallu attendre neuf mois avant que le bitcoin n’acquière un prix&nbsp;! Satoshi s’est dévoué pleinement à son œuvre sans jamais profiter personnellement de sa fortune accumulée. En disparaissant en 2011, il a finalement laissé la communauté s’approprier le projet.</p>
+<p>Bitcoin a été façonné dans un creuset mêlant cypherpunks, anarchistes, libertariens et autres amoureux de la liberté. Il s’est construit en opposition au système étatico-bancaire traditionnel, où règnent la censure et les renflouements publics. C’est pourquoi le message derrière Bitcoin est si radical et que tant de gens se sont pris de passion pour lui.</p>
+<p>Entre 2010 et 2012, les premiers cas d’utilisation de Bitcoin ont émergé. Financement de projets politiquement sensibles, jeu d’argent en ligne, achat de drogues à distance, envois de fonds à l’étranger&nbsp;: il s’agissait d’usages à la limite de légalité, voire complètement illégaux, qui démontraient toute l’efficacité du bitcoin en tant que monnaie incensurable et relativement anonyme. Cependant, cette tendance a été rapidement tempérée comme on a pu le constater durant les années qui ont suivi.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/avant-propos.html" class="pagination-link" aria-label="Avant-propos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Avant-propos</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/une-croissance-conflictuelle.html" class="pagination-link" aria-label="Une croissance conflictuelle">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,26 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/chapters/preface-de-jacques-favier.html",
+      "/chapters/remerciements.html",
+      "/chapters/avant-propos.html",
+      "/chapters/les-debuts-de-bitcoin.html",
+      "/chapters/une-croissance-conflictuelle.html",
+      "/chapters/des-racines-monetaires.html",
+      "/chapters/la-necessite-de-decentralisation.html",
+      "/chapters/un-mouvement-technologique.html",
+      "/chapters/la-cybermonnaie-avant-nakamoto.html",
+      "/chapters/la-valeur-de-l-information.html",
+      "/chapters/le-consensus-par-le-minage.html",
+      "/chapters/la-resistance-a-la-censure.html",
+      "/chapters/le-changement-de-la-monnaie.html",
+      "/chapters/la-determination-du-protocole.html",
+      "/chapters/les-rouages-de-la-machine.html",
+      "/chapters/les-contrats-autonomes.html",
+      "/chapters/le-passage-a-l-echelle.html",
+      "/chapters/l-avenir-de-bitcoin.html",
+      "/chapters/ordinals.html"
+    ]
+  }
+]

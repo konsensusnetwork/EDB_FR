@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; La résistance à la censure – Book Title</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/le-changement-de-la-monnaie.html" rel="next">
+<link href="../chapters/le-consensus-par-le-minage.html" rel="prev">
+<link href="..//figures/freestarfish.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+<meta property="og:title" content="9&nbsp; La résistance à la censure – Book Title">
+<meta property="og:description" content="">
+<meta property="og:image" content="cover.png">
+<meta property="og:site_name" content="Book Title">
+<meta name="twitter:title" content="9&nbsp; La résistance à la censure – Book Title">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="cover.png">
+<meta name="twitter:site" content="@konsensusn">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Book Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+</i> 
+<span class="menu-text">Read online</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bitcoinbook.shop/products/"> <i class="bi bi-shop" role="img" aria-label="Shop">
+</i> 
+<span class="menu-text">Buy this book!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/la-resistance-a-la-censure.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Recherche"></div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Over dit boek</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remerciements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/avant-propos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avant-propos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-debuts-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Les débuts de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/une-croissance-conflictuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Une croissance conflictuelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/des-racines-monetaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Des racines monétaires</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-necessite-de-decentralisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La nécessité de décentralisation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/un-mouvement-technologique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un mouvement technologique</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-cybermonnaie-avant-nakamoto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">La cybermonnaie avant Nakamoto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-valeur-de-l-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La valeur de l’information</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-consensus-par-le-minage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-resistance-a-la-censure.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-changement-de-la-monnaie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/la-determination-du-protocole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">La détermination du protocole</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-rouages-de-la-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les rouages de la machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/les-contrats-autonomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Les contrats autonomes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/le-passage-a-l-echelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Le passage à l’échelle</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#quentendons-nous-par-censure-financière" id="toc-quentendons-nous-par-censure-financière" class="nav-link active" data-scroll-target="#quentendons-nous-par-censure-financière">Qu’entendons-nous par censure financière&nbsp;?</a></li>
+  <li><a href="#la-banque-et-la-censure" id="toc-la-banque-et-la-censure" class="nav-link" data-scroll-target="#la-banque-et-la-censure">La banque et la censure</a></li>
+  <li><a href="#les-cas-de-censure-financière" id="toc-les-cas-de-censure-financière" class="nav-link" data-scroll-target="#les-cas-de-censure-financière">Les cas de censure financière</a></li>
+  <li><a href="#censure-et-monnaie-numérique-de-banque-centrale" id="toc-censure-et-monnaie-numérique-de-banque-centrale" class="nav-link" data-scroll-target="#censure-et-monnaie-numérique-de-banque-centrale">Censure et monnaie numérique de banque centrale</a></li>
+  <li><a href="#la-censure-dans-bitcoin" id="toc-la-censure-dans-bitcoin" class="nav-link" data-scroll-target="#la-censure-dans-bitcoin">La censure dans Bitcoin</a></li>
+  <li><a href="#le-mécanisme-de-résistance-à-la-censure" id="toc-le-mécanisme-de-résistance-à-la-censure" class="nav-link" data-scroll-target="#le-mécanisme-de-résistance-à-la-censure">Le mécanisme de résistance à la censure</a></li>
+  <li><a href="#limportance-de-la-confidentialité" id="toc-limportance-de-la-confidentialité" class="nav-link" data-scroll-target="#limportance-de-la-confidentialité">L’importance de la confidentialité</a></li>
+  <li><a href="#les-interventions-humaines-dans-le-consensus" id="toc-les-interventions-humaines-dans-le-consensus" class="nav-link" data-scroll-target="#les-interventions-humaines-dans-le-consensus">Les interventions humaines dans le consensus</a></li>
+  <li><a href="#les-variantes-des-consensus-par-preuve-de-travail" id="toc-les-variantes-des-consensus-par-preuve-de-travail" class="nav-link" data-scroll-target="#les-variantes-des-consensus-par-preuve-de-travail">Les variantes des consensus par preuve de travail</a></li>
+  <li><a href="#la-preuve-denjeu" id="toc-la-preuve-denjeu" class="nav-link" data-scroll-target="#la-preuve-denjeu">La preuve d’enjeu</a></li>
+  <li><a href="#consommation-dénergie-et-résistance-à-la-censure" id="toc-consommation-dénergie-et-résistance-à-la-censure" class="nav-link" data-scroll-target="#consommation-dénergie-et-résistance-à-la-censure">Consommation d’énergie et résistance à la censure</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ch:censure" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La résistance à la censure</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="enotezch:9" label="enotezch:9"></span></p>
+<p><span class="lettrine">L</span><span class="smallcaps">'</span>un des problèmes croissants de notre époque est la censure financière. Avec le développement de l’économie mondialisée, reposant notamment sur Internet, le recours aux intermédiaires financiers est devenu de plus en plus courant. Cette évolution fait que l’entrave de transferts monétaires constitue aujourd’hui une complication générale, expérimentée par une part grandissante de la population.</p>
+<p>Bitcoin forme une solution à ce problème. L’une de ses caractéristiques primordiales est en effet sa résistance à la censure, c’est-à-dire le fait qu’il est difficile pour une entité quelconque d’empêcher la réalisation d’un paiement. En permettant «&nbsp;aux paiements en ligne d’être envoyés directement d’une partie à l’autre sans passer par une institution financière&nbsp;», Bitcoin contourne l’arsenal de contrôles financiers qui gangrènent nos moyens de paiement et d’épargne modernes.</p>
+<p>La résistance à la censure est, comme la confirmation des transactions, un mécanisme économique. Elle se fonde de manière essentielle sur la preuve de travail ainsi qu’elle est appliquée dans l’algorithme de consensus de Nakamoto. De ce fait, les alternatives proposées comme les algorithmes de preuve d’enjeu montrent une résistance à la censure bien plus faible.</p>
+<p>Dans ce chapitre, nous verrons d’abord comment la censure financière intervient dans le monde bancaire aujourd’hui et pourquoi elle devrait se généraliser à l’avenir avec le déploiement des monnaies numériques de banque centrale. Puis, nous décrirons de quelle façon la censure peut s’exercer dans Bitcoin et comment le système peut y résister. Nous expliquerons enfin en quoi les propositions alternatives ne suffisent pas.</p>
+<section id="quentendons-nous-par-censure-financière" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="quentendons-nous-par-censure-financière">Qu’entendons-nous par censure financière&nbsp;?</h2>
+<p>La notion de censure peut paraître étrange de prime abord quand on parle de monnaie. Au sens courant, la censure désigne la restriction de l’expression, notamment par l’interdiction de la diffusion de certaines idées. Néanmoins, il est possible de la comprendre dans un sens plus large, qui mêle paiement et expression.</p>
+<p>Le terme de censure vient du latin <em>censeo</em> signifiant «&nbsp;évaluer&nbsp;», «&nbsp;estimer&nbsp;», «&nbsp;déclarer&nbsp;», «&nbsp;juger&nbsp;». Il trouve son origine dans une institution importante de la République romaine, celle des censeurs, deux magistrats qui avaient pour charge de procéder au dénombrement des citoyens et de leurs biens (le <em>census</em>), de collecter les impôts, de superviser les travaux publics, de gérer la liste des personnes admises au Sénat (l’<em>album senatorium</em>) et de veiller au maintien des «&nbsp;bonnes mœurs&nbsp;» de la population en administrant des blâmes ou des peines temporaires. La première fonction des censeurs a donné sa signification au mot recensement. La seconde aux concepts de cens et de suffrage censitaire. Et la dernière a été à l’origine de ce que nous appelons la censure.</p>
+<p>Au Moyen Âge, le mot latin <em>censura</em> a été repris par le catholicisme pour prendre un sens religieux et se limiter ainsi au discours, et en particulier aux textes. La censure s’apparentait alors à un blâme (sens encore parfois employé, notamment en matière de critique littéraire) ou à une interdiction. Elle se caractérisait par la relecture et la correction des ouvrages rédigés pour s’assurer que tout était conforme au dogme de l’Église catholique romaine.</p>
+<p>Néanmoins, l’apparition de l’imprimerie au <span class="smallcaps">xv</span>&nbsp;siècle a bouleversé les choses&nbsp;: le nombre de livres a explosé, et ce faisant, a retiré le contrôle que la hiérarchie catholique avait sur la publication des écrits, contrôle qui a été transféré à l’État. La censure a par conséquent acquis son sens politique actuel, en désignant l’examen que le pouvoir étatique fait préalablement des livres, journaux, pièces de théâtre,&nbsp;etc., pour en permettre ou en prohiber la publication ou la représentation. Par la suite, le terme a fini par nommer toute atteinte à la liberté d’expression, quel que soit le support, que cela se fasse avant (censure a priori) ou après la diffusion (censure a posteriori).</p>
+<p>Avec le développement des médias de masse (journaux, radio, télévision) et surtout des médias sociaux, le terme a acquis un sens élargi et on s’est mis à parler de censure pour tout choix d’édition pris par une entité privée vis-à-vis de ses clients ou de ses utilisateurs. Cette censure privée n’est pas une atteinte à la liberté d’expression au sens strict, mais elle pose problème lorsque le domaine est monopolisé par un petit nombre d’acteurs bénéficiant souvent d’un avantage légal ou d’une subvention étatique. De plus, cette censure peut être directement l’émanation d’une intervention politique, la plateforme en question ne faisant qu’appliquer les directives générales du pouvoir<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Voir par exemple l’affaire des Twitter Files qui a révélé les manœuvres internes et l’intervention de l’État fédéral des États-Unis dans la politique de censure de la plateforme. – Evan Perez, Donie O’Sullivan, Brian Fung, «&nbsp;<em>No directive: FBI agents, tech executives deny government ordered Twitter to suppress Hunter Biden story</em>&nbsp;», <em>CNN</em>, 23 décembre 2022&nbsp;: <a href="https://edition.cnn.com/2022/12/23/politics/twitter-files-elon-musk-fbi-hunter-biden-laptop/index.html" class="uri">https://edition.cnn.com/2022/12/23/politics/twitter-files-elon-musk-fbi-hunter-biden-laptop/index.html</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Students for Liberty, <em>Financial Censorship</em>&nbsp;: <a href="https://studentsforliberty.org/blog/freedom-of-expression/financial-censorship/" class="uri">https://studentsforliberty.org/blog/freedom-of-expression/financial-censorship/</a>.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;«&nbsp;C’est aussi le sens que lui donne l’<em>Electronic Frontier Foundation</em>&nbsp;»&nbsp;: Electronic Frontier Foundation, <em>Financial Censorship</em>&nbsp;: <a href="https://www.eff.org/issues/financial-censorship" class="uri">https://www.eff.org/issues/financial-censorship</a>.</p></div></div><p>Cependant, cette censure de l’expression peut également être réalisée par l’atteinte de l’activité économique de celui qui s’exprime. En effet, en restreignant la capacité à gagner de l’argent d’une personne et en lui faisant comprendre que son discours pose problème, on peut l’amener à taire ce discours. C’est dans ce contexte qu’a émergé le concept de censure financière, ou <em>financial censorship</em> en anglais, que l’organisation internationale <em>Students for Liberty</em> définit comme le fait de «&nbsp;restreindre l’activité financière d’une entité privée, de manière à inhiber ses opérations, avec l’intention implicite de la réduire au silence<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>&nbsp;». C’est aussi le sens que lui donne l’<em>Electronic Frontier Foundation</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Mais les répercussions du contrôle financier ne s’arrêtent pas à l’expression et peuvent concerner l’action humaine en général. Ainsi, la censure financière peut être saisie dans un sens plus large, une signification par exemple adoptée par trois chercheurs de l’université d’État de San José qui affirment que «&nbsp;la censure financière se produit lorsqu’une institution financière refuse ses services à une partie en raison des opinions exprimées, des actions ou du secteur d’activité de cette partie<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Marco Pagani, George Whaley, David Czerwinski, «&nbsp;<em>Frameworks for Assessing Financial Censorship and Its Implications</em>&nbsp;», in <em>Journal of Accounting and Finance</em>, vol.&nbsp;22, no.&nbsp;1, 2022&nbsp;: <a href="https://articlegateway.com/index.php/JAF/article/download/4989/4759" class="uri">https://articlegateway.com/index.php/JAF/article/download/4989/4759</a>.</p></div></div><p>Enfin, on peut comprendre la censure financière comme la restriction financière elle-même à condition qu’elle repose sur un critère subjectif externe (respect de normes arbitraires) et non pas sur une donnée économique objective, comme par exemple le paiement d’une commission. La censure peut être appliquée de manière publique (interdiction légale d’une transaction), privée (par une banque par exemple) ou les deux. Cette définition conserve toujours en elle l’idée de modeler le comportement extérieur de la personne par l’intervention sur ses finances. C’est notamment cette signification qui est donnée à la censure dans Bitcoin.</p>
+<p>Au sens général, la censure financière consiste donc à restreindre directement l’activité financière d’une entité de façon à inhiber son expression ou son action. L’idée est d’influencer l’individu par le contrôle sur la monnaie dont il se sert, un outil qui est essentiel à sa survie économique. Aujourd’hui, la censure s’applique essentiellement au crédit bancaire, dont les transferts sont hautement réglementés par le pouvoir. Demain, elle pourra concerner la monnaie numérique gérée par la banque centrale.</p>
+</section>
+<section id="la-banque-et-la-censure" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-banque-et-la-censure">La banque et la censure</h2>
+<p>La censure financière s’exerce par la maîtrise sur le transfert de monnaie, de sorte que cette censure peut difficilement s’appliquer à l’argent liquide physique. En effet, ce dernier (qu’il prenne la forme de pièces de métal précieux ou de billets fiduciaires) permet l’échange direct et confidentiel de personne à personne, ce qui empêche la mise en place de toute restriction en dehors de quelques cas particuliers.</p>
+<p>En revanche, dans le domaine bancaire, le client dispose d’un compte courant sur lequel la banque inscrit les crédits et gère les transferts. La restriction financière est de ce fait beaucoup plus simple&nbsp;: la banque peut sélectionner les transferts, geler le compte momentanément et même refuser le retrait d’argent. C’est aussi le cas de tout les services construits au-dessus du système bancaire traditionnel, comme PayPal.</p>
+<p>C’est donc tout naturellement que l’accroissement de la censure financière a coïncidé avec la bancarisation de la société, qui a eu lieu à partir des années 1960 en Occident<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, et qui s’est caractérisée par la généralisation de l’usage du compte courant et des moyens de paiement apparentés comme le chèque bancaire, la carte de crédit et le virement. En quelques décennies, le paiement a migré vers le domaine bancaire, favorisé par la loi et bien plus commode à utiliser que les espèces, dont l’utilisation a elle-même été restreinte légalement. D’où la meilleure efficacité de la censure&nbsp;: si le liquide ne permet plus de gérer ses affaires convenablement, alors la possibilité de se retirer complètement du système bancaire n’est plus une option viable.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;«&nbsp;la bancarisation de la société, qui a eu lieu à partir des années 1960 en Occident&nbsp;»&nbsp;: <a href="https://books.openedition.org/pur/121053?lang=fr" class="uri">https://books.openedition.org/pur/121053?lang=fr</a>&nbsp;; <a href="https://www.the-american-interest.com/2019/02/25/bigger-fewer-riskier-the-evolution-of-u-s-banking-since-1950/" class="uri">https://www.the-american-interest.com/2019/02/25/bigger-fewer-riskier-the-evolution-of-u-s-banking-since-1950/</a>.</p></div></div><p>Cette censure a été mise en place par l’intermédiaire de la surveillance financière, qui est aujourd’hui particulièrement fréquente dans l’industrie bancaire. Les banques ont en effet l’obligation légale de surveiller leurs clients et d’intervenir dans le cas où elles constatent un comportement «&nbsp;suspect&nbsp;» de leur part, en empêchant leurs virements ou en gelant leurs comptes. Elles ne font pas cela de gaieté de cœur&nbsp;: elles ne procèdent pas à la surveillance de leurs clients pour les «&nbsp;protéger&nbsp;», mais pour se protéger elles-mêmes contre les éventuelles complications liées à la réglementation.</p>
+<p>Cette réglementation s’est développée à mesure que l’activité bancaire se popularisait. À partir des années 70, le prétexte de la lutte contre le blanchiment d’argent (notamment dans le cadre de la guerre contre la drogue) s’est imposé comme le principal prétexte derrière les restrictions imposées aux banques. Aux États-Unis notamment, la réglementation bancaire s’est particulièrement durcie suite à l’adoption du <em>Bank Secrecy Act</em> de 1970, qui se proposait de lutter contre le blanchiment d’argent.</p>
+<p>Puis, avec l’apparition du web dans les années 1990, l’utilisation des banques internationales a demandé une réglementation accrue. Différents organismes de surveillance ont ainsi été créés. Le Groupe d’action financière (GAFI), un organisme intergouvernemental émettant régulièrement des recommandations de normes réglementaires et de sanctions économiques, a été créé en juillet 1989 dans le but de lutter contre le blanchiment d’argent. Le Financial Crimes Enforcement Network (FinCEN), le bureau du département du Trésor des États-Unis qui collecte et analyse les informations sur les transactions financières, a été formé dans ce sens le 25 avril 1990. L’équivalent français, la cellule TRACFIN (Traitement du renseignement et action contre les circuits financiers clandestins), est apparu en juillet 1990. Du côté européen, la première directive de l’Union Européenne relative à la prévention de l’utilisation du système financier aux fins du blanchiment de capitaux est datée du 10 juin 1990<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;«&nbsp;la première directive de l’Union Européenne relative à la prévention de l’utilisation du système financier aux fins du blanchiment de capitaux&nbsp;»&nbsp;: <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:31991L0308&amp;from=FR" class="uri">https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:31991L0308&amp;from=FR</a>.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;Code pénal, Article 421-2-2, 15 novembre 2001.</p></div></div><p>Enfin, après les attentats islamistes du 11 septembre 2001, un autre prétexte est apparu&nbsp;: la lutte contre le financement du terrorisme. Celle-ci s’est matérialisée aux États-Unis par l’adoption du <em>PATRIOT Act</em> en octobre 2001, dont le Titre 3 concerne les restrictions financières. En France, la loi du 15 novembre 2001 relative à la sécurité quotidienne a requalifié «&nbsp;le fait de financer une entreprise terroriste&nbsp;» comme un acte de terrorisme en lui-même<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. La surveillance financière s’est renforcée en conséquence.</p>
+<p>Ces deux évolutions forment la base de ce qu’on appelle généralement la lutte contre le blanchiment des capitaux et le financement du terrorisme (LCB-FT) en France et les normes AML/CFT (pour <em>Anti-Money Laundering/Combating the Financing of Terrorism</em>) aux États-Unis. Ce resserrement se caractérise notamment par la connaissance du client (<em>Know Your Customer</em> ou KYC), une pratique également appelée vigilance à l’égard de la clientèle, qui consiste à vérifier l’identité, la conformité et les risques liés à chaque client. Cette exigence d’identification s’est insérée dans tous les services financiers aujourd’hui.</p>
+<p>En conséquence, le secret bancaire, c’est-à-dire l’obligation pour les banques de ne pas livrer des informations sur leurs clients à des tiers, a fini par disparaître<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, y compris en Suisse<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. L’usage d’un compte bancaire aujourd’hui présuppose la surveillance générale des transactions et l’inspection minutieuse des opérations les moins usuelles. Ainsi, il est aujourd’hui impossible de virer une importante somme d’argent d’un compte à un autre sans devoir fournir une justification.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;«&nbsp;le secret bancaire [...] a fini par disparaître&nbsp;»&nbsp;: Anthony Amicelle, Jean Bérard, <em>Vers la fin du secret bancaire ou de la vie privée&nbsp;?</em>, 2019&nbsp;: <a href="https://journals.openedition.org/conflits/21291" class="uri">https://journals.openedition.org/conflits/21291</a>.</p></div><div id="fn9"><p><sup>9</sup>&nbsp;«&nbsp;y compris en Suisse&nbsp;»&nbsp;: Mathilde Damgé, <em>Comment la Suisse a renoncé au secret bancaire</em>, 11 février 2015&nbsp;: <a href="https://www.lemonde.fr/evasion-fiscale/article/2015/02/11/comment-la-suisse-a-renonce-au-secret-bancaire_4572485_4862750.html" class="uri">https://www.lemonde.fr/evasion-fiscale/article/2015/02/11/comment-la-suisse-a-renonce-au-secret-bancaire_4572485_4862750.html</a>.</p></div></div><p>Cette situation du domaine financier a été résumée en janvier 2009 par Jonathan Thornbug sur la liste de diffusion en réponse à Satoshi Nakamoto qui décrivait les utilisations qu’on pouvait faire de Bitcoin&nbsp;:</p>
+<p>«&nbsp;Dans le monde moderne, aucun État important ne veut autoriser des transactions financières internationales intraçables au-delà d’un certain seuil de taille assez modeste. (Les phrases d’accroche habituelles sont des choses comme “blanchiment de l’argent de la drogue”, “évasion fiscale”, et/ou “financement de groupes terroristes”). À cette fin, les transactions financières électroniques sont actuellement surveillées par divers États et leurs agences, et toutes les transactions, sauf les plus petites, sont désormais assorties de diverses exigences en matière d’identification des personnes à chaque extrémité<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;Jonathan Thornbug, <em>Re: Bitcoin v0.1 released</em>, /01/2009 16:49:45 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015016.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015016.html</a>.</p></div></div></section>
+<section id="les-cas-de-censure-financière" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-cas-de-censure-financière">Les cas de censure financière</h2>
+<p>Au cours des dernières années, les cas célèbres de censure financière se sont multipliés, à tel point qu’il est impossible d’en faire une liste exhaustive. Nous nous contenterons d’en citer les exemples les plus manifestes en Occident, tout en gardant en tête que cette censure n’est généralement pas rendue publique par ceux qui la subissent.</p>
+<p>L’exemple le plus connu est probablement le blocus financier contre WikiLeaks mis en place par Mastercard, Visa, Western Union, Bank of America et d’autres acteurs, en décembre 2010, dans le but de faire taire l’organisation. En octobre 2011, un communiqué de WikiLeaks a indiqué que le blocus financier avait fait disparaître 95&nbsp;% de ses revenus<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>. Cette affaire a eu des répercussions directes dans l’histoire de Bitcoin, comme nous l’avons raconté dans le chapitre&nbsp;<a href="les-debuts-de-bitcoin.html" data-reference-type="ref" data-reference="ch:mythe">1</a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;«&nbsp;le blocus financier avait fait disparaître 95&nbsp;% de ses revenus&nbsp;»&nbsp;: WikiLeaks, <em>Banking Blockade</em>, /10/2011 13:00 UTC, <a href="https://wikileaks.org/Banking-Blockade.html" class="uri">https://wikileaks.org/Banking-Blockade.html</a>.</p></div><div id="fn12"><p><sup>12</sup>&nbsp;«&nbsp;opération Choke Point mise en place entre 2013 et 2017 par le département de la Justice des États-Unis&nbsp;»&nbsp;: <a href="https://en.wikipedia.org/wiki/Operation_Choke_Point" class="uri">https://en.wikipedia.org/wiki/Operation_Choke_Point</a>&nbsp;; <a href="https://www.wsj.com/articles/SB10001424127887323838204578654411043000772" class="uri">https://www.wsj.com/articles/SB10001424127887323838204578654411043000772</a>, archive&nbsp;: <a href="https://archive.is/bF8KZ" class="uri">https://archive.is/bF8KZ</a>.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;«&nbsp;en subissant une fermeture de ses comptes par Chase, PayPal et Strip&nbsp;»&nbsp;: Kelsey Bolar, <em>Firearms Sellers Say They’re Being Choked Off From Payment Processors</em>, 12 janvier 2015&nbsp;: <a href="https://www.dailysignal.com/2015/01/12/firearms-sellers-say-theyre-choked-off-payment-processors/" class="uri">https://www.dailysignal.com/2015/01/12/firearms-sellers-say-theyre-choked-off-payment-processors/</a>.</p></div></div><p>Un autre cas, qui visait cette fois la profession des personnes censurées, est l’opération Choke Point mise en place entre 2013 et 2017 par le département de la Justice des États-Unis<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. L’opération avait pour but d’«&nbsp;étouffer&nbsp;» certains secteurs d’activité en restreignant leur accès au crédit et à d’autres services bancaires. Ces activités jugées «&nbsp;à haut risque&nbsp;» incluaient le prêt sur gages ou sur salaire, le jeu d’argent, la pornographie, l’escorting, mais aussi la vente de tabac et de produits pharmaceutiques, la vente de pièces de monnaie, les services de rencontre ou encore l’organisation des clubs de voyage. La vente d’armes et de munitions était aussi concernée&nbsp;: Defense Distributed, l’entreprise du crypto-anarchiste libertarien Cody Wilson, spécialisée dans la diffusion de schémas de conception d’armes à feu fabriquées par imprimante 3D, en a fait les frais en 2015 en subissant une fermeture de ses comptes par Chase, PayPal et Stripe<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>.</p>
+<p>En 2018, c’est l’opinion politique qui a dû endurer la censure. De nombreuses personnalités et organisations d’<em>alt-right</em> américaine ont ainsi été bannies des divers réseaux sociaux et ont perdu l’accès à divers services financiers. L’exemple le plus emblématique était Alex Jones, fondateur du site de réinformation InfoWars, qui, outre sa purge des médias sociaux durant l’été 2018, a vu son compte PayPal être clôturé<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>. On peut aussi citer les cas du média social Gab (chassé de PayPal, Stripe Cash App et Coinbase<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>), de Milo Yiannopoulos (banni de PayPal pour avoir fait un salut nazi<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>) ou encore de Robert Spencer (chroniqueur du blog anti-islam Jihad Watch, chassé de Patreon suite à la pression de Mastercard<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>). En France, cette censure s’est manifestée à l’encontre d’Égalité et Réconciliation, l’association de l’antisioniste Alain Soral, qui a été exclue de PayPal en août 2018, dans le cadre d’une purge similaire à celle des militants américains. L’association a également vu plusieurs de ses comptes bancaires (Banque postale, BNP Paribas, Banque populaire) être fermés au cours des années<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;«&nbsp;Alex Jones [...] a vu son compte PayPal être clôturé&nbsp;»&nbsp;: Brian Fung, <em>PayPal bans Alex Jones, saying Infowars ‘promoted hate or discriminatory intolerance’</em>, 21 septembre 2018&nbsp;: <a href="https://www.washingtonpost.com/technology/2018/09/21/paypal-bans-alex-jones-saying-infowars-promoted-hate-or-discriminatory-intolerance/" class="uri">https://www.washingtonpost.com/technology/2018/09/21/paypal-bans-alex-jones-saying-infowars-promoted-hate-or-discriminatory-intolerance/</a></p></div><div id="fn15"><p><sup>15</sup>&nbsp;«&nbsp;chassé de PayPal, Stripe Cash App et Coinbase&nbsp;»&nbsp;: <a href="https://www.bitcoininsider.org/article/44690/after-coinbase-paypal-bans-social-media-platform-gab-just-because" class="uri">https://www.bitcoininsider.org/article/44690/after-coinbase-paypal-bans-social-media-platform-gab-just-because</a>.</p></div><div id="fn16"><p><sup>16</sup>&nbsp;«&nbsp;banni de PayPal pour avoir fait un salut nazi&nbsp;»&nbsp;: <a href="https://www.timesofisrael.com/paypal-suspends-milo-yiannopoulos-over-nazi-based-trolling-of-jewish-journalist/" class="uri">https://www.timesofisrael.com/paypal-suspends-milo-yiannopoulos-over-nazi-based-trolling-of-jewish-journalist/</a>.</p></div><div id="fn17"><p><sup>17</sup>&nbsp;«&nbsp;chassé de Patreon suite à la pression de Mastercard&nbsp;»&nbsp;: <a href="https://twitter.com/Patreon/status/1029551216886341634" class="uri">https://twitter.com/Patreon/status/1029551216886341634</a>.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;«&nbsp;L’association a également vu plusieurs de ses comptes bancaires (Banque postale, BNP Paribas, Banque populaire) être fermés&nbsp;»&nbsp;: Égalité et Réconciliation, <em>Soutenez-nous&nbsp;: la Banque populaire ferme le compte en banque d’Égalité &amp; Réconciliation</em>, 6 février 2022&nbsp;: <a href="https://www.egaliteetreconciliation.fr/Soutenez-nous-la-Banque-populaire-ferme-le-compte-en-banque-d-Egalite-Reconciliation-67155.html" class="uri">https://www.egaliteetreconciliation.fr/Soutenez-nous-la-Banque-populaire-ferme-le-compte-en-banque-d-Egalite-Reconciliation-67155.html</a>.</p></div><div id="fn19"><p><sup>19</sup>&nbsp;«&nbsp;elle a gelé le compte du démocrate Ted Hui en décembre 2020&nbsp;»&nbsp;: <a href="https://hongkongfp.com/2020/12/07/hsbc-re-freezes-accounts-belonging-to-family-of-exiled-democrat-ted-hui-amid-hong-kong-police-money-laundering-probe/" class="uri">https://hongkongfp.com/2020/12/07/hsbc-re-freezes-accounts-belonging-to-family-of-exiled-democrat-ted-hui-amid-hong-kong-police-money-laundering-probe/</a>.</p></div><div id="fn20"><p><sup>20</sup>&nbsp;«&nbsp;elle refusait aux Hongkongais ayant fui au Royaume-Uni d’accéder légitimement à leurs fonds de pension, pour un montant s’élevant à 2,2 milliards de livres sterling&nbsp;»&nbsp;: <a href="https://www.lefigaro.fr/flash-eco/hsbc-complice-de-violation-des-droits-humains-a-hong-kong-selon-un-rapport-parlementaire-20230208" class="uri">https://www.lefigaro.fr/flash-eco/hsbc-complice-de-violation-des-droits-humains-a-hong-kong-selon-un-rapport-parlementaire-20230208</a>, <a href="https://www.telegraph.co.uk/business/2023/08/07/hsbc-exececutive-apologises-calling-uk-weak-on-china/" class="uri">https://www.telegraph.co.uk/business/2023/08/07/hsbc-exececutive-apologises-calling-uk-weak-on-china/</a>.</p></div></div><p>Toujours dans le domaine politique, mais en Chine cette fois-ci, on peut citer le cas du mouvement contre l’amendement de la loi d’extradition par le gouvernement de Hong Kong, série de manifestations ayant eu lieu entre mars 2019 et juillet 2020, qui a dû subir les interventions du conglomérat bancaire international HSBC, probablement sous pression de l’État central chinois. En novembre 2019, la filiale de Hong Kong a en effet décidé de fermer un compte utilisé pour soutenir le mouvement de protestation. Puis, elle a gelé le compte du démocrate Ted Hui en décembre 2020<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>. Par ailleurs, on a appris en 2023 qu’elle refusait aux Hongkongais ayant fui au Royaume-Uni d’accéder légitimement à leurs fonds de pension, pour un montant s’élevant à 2,2 milliards de livres sterling<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>.</p>
+<p>Plus récemment, la pandémie de Covid-19 a fourni d’autres occurrences de censure financière. De nombreux activistes opposés aux mesures coercitives comme le confinement, le port du masque et la vaccination obligatoire, ont ainsi été largement censurés, généralement accusés de propager la désinformation. Le groupe d’action néerlandais Viruswaarheid – s’opposant à la distanciation sociale, au confinement, au couvre-feu et au programme de vaccination – a ainsi vu son compte bancaire utilisé pour recevoir des donations être fermé par ING Bank en février 2021<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;«&nbsp;Viruswaarheid [...] a ainsi vu son compte bancaire utilisé pour recevoir des donations être fermé par ING Bank en février 2021&nbsp;»&nbsp;: Andreas Kouwenhoven et Wilmer Heck, <em>De complotdenker bankiert maar elders, zegt de bank</em>, 17 août 2021&nbsp;: <a href="https://www.nrc.nl/nieuws/2021/08/17/de-complotdenker-bankiert-maar-elders-zegt-de-bank-a4055125" class="uri">https://www.nrc.nl/nieuws/2021/08/17/de-complotdenker-bankiert-maar-elders-zegt-de-bank-a4055125</a>&nbsp;; archive&nbsp;: <a href="https://archive.is/8LI0k" class="uri">https://archive.is/8LI0k</a>.</p></div><div id="fn22"><p><sup>22</sup>&nbsp;«&nbsp;celle de GoFundMe, ayant réuni 10 millions de dollars canadiens, a été retirée le 4 février&nbsp;»&nbsp;: Radio-Canada, <em>La campagne de sociofinancement du convoi des camionneurs retirée de GoFundMe</em>, 4 février 2022&nbsp;: <a href="https://ici.radio-canada.ca/nouvelle/1859918/retrait-campagne-gofundme-convoi-camionneurs-2022" class="uri">https://ici.radio-canada.ca/nouvelle/1859918/retrait-campagne-gofundme-convoi-camionneurs-2022</a>.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;«&nbsp;les fonds récupérés par les campagnes organisées sur la plateforme chrétienne GiveSendGo [...] ont été gelés par le gouvernement ontarien&nbsp;»&nbsp;: Stephanie Taylor, <em>Ontario court freezes access to donations for truckers’ protest from GiveSendGo</em>, 10 février 2022&nbsp;: <a href="https://www.ctvnews.ca/canada/ontario-court-freezes-access-to-donations-for-truckers-protest-from-givesendgo-1.5776674" class="uri">https://www.ctvnews.ca/canada/ontario-court-freezes-access-to-donations-for-truckers-protest-from-givesendgo-1.5776674</a>.</p></div><div id="fn24"><p><sup>24</sup>&nbsp;«&nbsp;280 comptes contenant 8 millions de dollars au total ont été gelés de le sorte&nbsp;»&nbsp;: Bill Curry, Marsha McLeod, <em>Deputy Minister of Finance describes race against time to prevent economic damage from border blockades</em>, 17 novembre 2022&nbsp;: <a href="https://www.theglobeandmail.com/politics/article-emergencies-act-inquiry-michael-sabia/" class="uri">https://www.theglobeandmail.com/politics/article-emergencies-act-inquiry-michael-sabia/</a>.</p></div><div id="fn25"><p><sup>25</sup>&nbsp;Rob Gillies, «&nbsp;<em>Judge: Canada right to invoke emergency act in truck protest</em>&nbsp;», <em>Associated Press News</em>, 17 février 2023&nbsp;: <a href="https://apnews.com/article/canada-government-justin-trudeau-ottawa-montana-9c1e37aa86d4315703e69f7794637e7f" class="uri">https://apnews.com/article/canada-government-justin-trudeau-ottawa-montana-9c1e37aa86d4315703e69f7794637e7f</a>.</p></div></div><p>Mais l’exemple qui ressort du lot est le mouvement canadien du «&nbsp;Convoi de la liberté&nbsp;» de février 2022, initié par les camionneurs qui s’opposaient à l’obligation vaccinale imposée pour entrer sur le territoire par voie terrestre et qui ont manifesté leur mécontentement en faisant route jusqu’à Ottawa pour occuper la ville. Ce mouvement a fait face à une censure financière drastique. Il a dans un premier temps été victime des plateformes de financement participatif, qui ont annulé ses différentes campagnes qui avaient pour objectif de payer le déplacement des camionneurs&nbsp;: celle de GoFundMe, ayant réuni 10 millions de dollars canadiens, a été retirée le 4 février<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>&nbsp;; tandis que les fonds récupérés par les campagnes organisées sur la plateforme chrétienne GiveSendGo (9 millions de dollars environ) ont été gelés par le gouvernement ontarien, et n’ont pas pu être distribués<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>. La répression financière s’est considérablement amplifiée lorsque, suite à l’entrée en vigueur de l’état d’urgence déclaré par Justin Trudeau le 14 février, le gouvernement canadien a décidé de geler des comptes bancaires personnels ou professionnels en lien avec le mouvement&nbsp;: 280 comptes contenant 8 millions de dollars au total ont été gelés de le sorte<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>. L’année suivante, le juge Paul Rouleau, en charge de la Commission sur l’état d’urgence, a déclaré que le gel des comptes bancaires était un «&nbsp;outil puissant pour décourager la participation [aux manifestations] et inciter les manifestants à abandonner<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>&nbsp;».</p>
+<p>Un autre évènement important survenu durant le mois de février est le durcissement des sanctions économiques mises en place par les États occidentaux contre la Russie, suite à son invasion de l’Ukraine<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>. Les sanctions financières incluaient l’exclusion de certaines banques russes du système SWIFT, la prohibition du financement en Russie et de l’achat de roubles, et l’interdiction de la fourniture de services de portefeuille, de compte ou de conservation de crypto-actifs. De manière générale, les virements vers la Russie ont été interdits, de sorte que les citoyens russes exilés ne pouvaient plus envoyer d’argent à leur famille. C’est aussi le cas des ressortissants ukrainiens dont les proches sont restés sur le territoire occupé par l’armée russe, comme cette Ukrainienne réfugiée en France qui ne pouvait pas envoyer un virement bancaire de 100&nbsp;euros à ses parents à Donetsk<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;Les sanctions économiques internationales qui concernent le domaine financier rentrent dans la catégorie de la censure financière. Celles-ci ont en effet pour but premier d’empêcher le commerce avec la population gouvernée par un État ennemi. Le cas des Russes n’est pas un cas isolé, et de nombreuses autres populations n’ont pas accès aux services financiers disponibles pour les Occidentaux, comme les Palestiniens par exemple. Voir à ce sujet Electronic Frontier Foundation, <em>Why Is PayPal Denying Service to Palestinians?</em>, 12 octobre 2021&nbsp;: <a href="https://www.eff.org/deeplinks/2021/10/why-paypal-denying-service-palestinians" class="uri">https://www.eff.org/deeplinks/2021/10/why-paypal-denying-service-palestinians</a>.</p></div><div id="fn27"><p><sup>27</sup>&nbsp;Ben Canton, <em>Un an de guerre en Ukraine&nbsp;: la petite histoire de Valériia et de Binance</em>, 24 février 2023&nbsp;: <a href="https://journalducoin.com/analyses/un-an-guerre-ukraine-petite-histoire-valeriia-binance/" class="uri">https://journalducoin.com/analyses/un-an-guerre-ukraine-petite-histoire-valeriia-binance/</a>.</p></div><div id="fn28"><p><sup>28</sup>&nbsp;«&nbsp;RT France [...] a ainsi subi le gel de ses avoirs&nbsp;»&nbsp;: Le Parisien, <em>RT France, branche française de la chaîne russe, annonce sa fermeture</em>, 23 janvier 2022&nbsp;: <a href="https://www.leparisien.fr/international/rt-france-branche-francaise-de-la-chaine-russe-annonce-sa-fermeture-21-01-2023-YMOTSTASWZAF3KSGCYHAFFMG6U.php" class="uri">https://www.leparisien.fr/international/rt-france-branche-francaise-de-la-chaine-russe-annonce-sa-fermeture-21-01-2023-YMOTSTASWZAF3KSGCYHAFFMG6U.php</a>.</p></div></div><p>Du côté occidental, des mesures financières ont également été prises dans le but de faire respecter la censure des médias financés par le Kremlin. En janvier 2023, la chaîne d’information RT France, qui était déjà interdite de diffusion en Europe, mais qui continuait d’être accessible sur Internet, a ainsi subi le gel de ses avoirs, ce qui l’a contrainte à fermer définitivement<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>.</p>
+<p>Enfin, pour finir à propos des différentes occurrences de censure financière, on ne peut pas ne pas évoquer les activités liées aux cryptomonnaies, qui ont subi et continuent de subir des restrictions de la part des organismes financiers. L’achat de cryptomonnaies est entravé par les banques qui interdisent régulièrement à leurs clients (toujours en prétendant les «&nbsp;protéger&nbsp;») d’envoyer des fonds vers les plateformes de change<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>. De plus, les entreprises du secteur peinent régulièrement à ouvrir un compte bancaire en raison de la méfiance des acteurs traditionnels<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;«&nbsp;L’achat de cryptomonnaies est entravé par les banques qui interdisent régulièrement à leurs clients [...] d’envoyer des fonds vers les plateformes de change&nbsp;»&nbsp;: Jean-Luc (Bitcoin.fr), <em>Les banques et Bitcoin — Classement de janvier 2023</em>, 9 janvier 2023&nbsp;: <a href="https://bitcoin.fr/bitcoin-et-les-banques-classement-de-janvier-2023/" class="uri">https://bitcoin.fr/bitcoin-et-les-banques-classement-de-janvier-2023/</a>.</p></div><div id="fn30"><p><sup>30</sup>&nbsp;Dans son livre <em>Cryptomonnaie&nbsp;: la nouvelle guerre</em>, François-Xavier Thoorens explique par exemple comment lui et sa famille ont été expulsés de leur banque familiale après avoir voulu ouvrir un compte professionnel pour recevoir des fonds récupérés lors de l’ICO de Ark (pp.&nbsp;91 – 97). Mais son cas est loin d’être une exception.</p></div></div><p>La censure financière est donc de plus en plus fréquente dans notre société. Elle touche de nombreuses personnes de bords politiques opposés, de nationalités diverses et de professions variées. Elle s’exerce bien souvent sans décision juridique spécifique, ce qui donne un caractère ésotérique, caché, arbitraire à l’application du pouvoir réel. C’est ce qui en fait un problème subtil et difficile à expliciter.</p>
+<p>L’intervention plus prononcée de cette censure a pour effet de pousser les gens à s’intéresser à Bitcoin. En effet, l’expérience d’une telle restriction provoque nécessairement le désir de trouver un moyen de la contourner, quand bien même celle-ci serait légère. Lorsqu’une personne prend pleinement conscience de la censure comme une réalité concrète et non plus comme un risque abstrait, elle ressent le besoin de s’en libérer et de se prémunir de ce danger, ce qui lui démontre (ou lui confirme) la proposition de valeur de Bitcoin<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>. C’est le cas de l’auteur de cet ouvrage qui a vu son compte bancaire être gelé sans préavis, sans que la banque ne mentionne la raison derrière cette suspension, et qui n’a pu récupérer ses fonds que six mois plus tard<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;Cet effet de l’expérience de la censure a été décrit par Nick Szabo au micro de Peter McCormack en 2019&nbsp;: «&nbsp;Certaines personnes doivent être frappées par la réalité. Si vous êtes censuré par une banque, comme c’est de plus en plus le cas – et c’est d’ailleurs l’un des risques de la centralisation numérique – c’est que les gens soient censurés et les activistes politiques de différents bords commencent à découvrir qu’on peut aller voir les banques et faire taire ses ennemis politiques et les gens qui font des choses qu’on ne veut pas qu’ils fassent, on les fait taire. On n’a pas nécessairement besoin de faire passer une loi, on peut convaincre certains régulateurs ou certains politiciens, et puis ils mettent la pression sur les banques, et boum&nbsp;: c’est notre loi de facto juste là. Ça se produit de plus en plus souvent parce que la centralisation numérique rend les choses si vulnérables à ça. Il s’agit donc d’une tendance opposée et tout dépend de la vitesse à laquelle elle se développe, car à chaque fois que quelqu’un est censuré, boum&nbsp;: c’est une réalité qui s’impose à lui et il devient fan de Bitcoin.&nbsp;» – What Bitcoin Did Podcast, <em>Nick Szabo on Cypherpunks, Money and Bitcoin</em> (audio), 1 novembre 2019&nbsp;: <a href="https://www.whatbitcoindid.com/podcast/nick-szabo-on-cypherpunks-money-and-bitcoin" class="uri">https://www.whatbitcoindid.com/podcast/nick-szabo-on-cypherpunks-money-and-bitcoin</a>.</p></div><div id="fn32"><p><sup>32</sup>&nbsp;«&nbsp;C’est le cas de l’auteur de cet ouvrage&nbsp;»&nbsp;: Ludovic Lars sur Twitter, /02/2022 10:42 UTC&nbsp;: <a href="https://twitter.com/lugaxker/status/1493536121678147586" class="uri">https://twitter.com/lugaxker/status/1493536121678147586</a>.</p></div></div></section>
+<section id="censure-et-monnaie-numérique-de-banque-centrale" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="censure-et-monnaie-numérique-de-banque-centrale">Censure et monnaie numérique de banque centrale</h2>
+<p>La tendance est donc claire&nbsp;: avec l’utilisation intensive des comptes bancaires en lieu et place des espèces, le pouvoir de censure financière est devenu de plus en plus important. Ainsi, même si cette censure reste aujourd’hui occasionnelle, nous pouvons nous attendre à ce qu’elle constitue un problème grandissant à l’avenir. Plus précisément, elle pourrait devenir une contrainte générale dans les décennies à venir avec le déploiement progressif des monnaies numériques de banque centrale (MNBC) et la disparition conjointe de l’argent liquide.</p>
+<p>Tel que nous l’avons vu dans la section dédiée à la monnaie numérique de banque centrale dans le chapitre&nbsp;<a href="la-necessite-de-decentralisation.html" data-reference-type="ref" data-reference="ch:adversaire">4</a>, la numérisation de la monnaie constitue la prochaine étape dans l’évolution de la monnaie étatique. Depuis 2016, les banques centrales autour du monde s’efforcent de concevoir des systèmes qui pourraient être utilisés par le grand public et les communications à ce sujet se multiplient depuis 2020.</p>
+<p>Une telle monnaie numérique permettrait de récupérer un revenu de seigneuriage supplémentaire en supprimant le coût de la production de l’argent liquide remplacé et en reprenant une part de l’activité monétaire qui a lieu aujourd’hui par l’intermédiaire du crédit émis par les banques commerciales. Mais elle permettrait aussi (ce qui nous intéresse ici) d’exercer un contrôle financier total sur les transactions des citoyens en centralisant la gestion du système entre les mains de la banque centrale et des organismes agréés.</p>
+<p>Ce contrôle s’accompagnerait bien entendu d’une surveillance financière accrue, qui serait justifiée par les mêmes prétextes utilisés aujourd’hui, comme la lutte contre le blanchiment d’argent et le financement du terrorisme. Ceci pourrait conduire à l’instauration d’un système panoptique, où la surveillance se ferait à l’insu du surveillé<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>. Les banques centrales nient vouloir aller dans cette direction, mais le fait est qu’elles ne rendront jamais leurs systèmes strictement confidentiels, réservant toujours un droit de regard aux autorités compétentes.</p>
+<div class="no-row-height column-margin column-container"><div id="fn33"><p><sup>33</sup>&nbsp;«&nbsp;un système panoptique, où la surveillance se ferait à l’insu du surveillé&nbsp;»&nbsp;: Le panoptique (en anglais, <em>panopticon</em>) était un type d’architecture carcérale imaginée par le philosophe utilitariste Jeremy Bentham et son frère Samuel à la fin du <span class="smallcaps">xviii</span>&nbsp;siècle. L’objectif de la structure panoptique était de permettre à un gardien, logé dans une tour centrale, d’observer tous les prisonniers, enfermés dans des cellules individuelles autour de la tour, sans que ceux-ci puissent savoir s’ils étaient observés.</p></div><div id="fn34"><p><sup>34</sup>&nbsp;«&nbsp;C’est le cas de la Suède [...] où l’État fait tout pour mettre à disposition des moyens de paiement numérique innovants&nbsp;»&nbsp;: sweden.se, <em>A cashless society</em>&nbsp;: <a href="https://sweden.se/life/society/a-cashless-society" class="uri">https://sweden.se/life/society/a-cashless-society</a>.</p></div></div><p>Cette surveillance financière pourrait être affermie par la disparition progressive de l’argent liquide, qui a déjà commencé à certains endroits du monde. C’est le cas de la Suède, où la question de la fin des espèces est déjà discutée et où l’État fait tout pour mettre à disposition des moyens de paiement numérique innovants<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>. C’est aussi le cas de la Chine, où l’essentiel des transferts se fait par l’intermédiaire de systèmes de paiement mobile comme WeChat Pay et Alipay. Ce n’est pas un hasard si ces deux pays ont été les premiers à envisager sérieusement de développer une monnaie numérique.</p>
+<p>La guerre contre l’argent liquide sévit déjà dans certains pays par le biais de la démonétisation de certains billets en circulation, qui peuvent être échangés contre d’autres billets ou être déposés sur un compte bancaire, à condition d’attester de la provenance des fonds. En Inde en novembre 2016, le gouvernement de Narendra Modi a ainsi démonétisé les billets de 500 et 1000 roupies, équivalant à 7,5 et 15&nbsp;$, et représentant à eux seuls 86&nbsp;% de la monnaie en circulation, dans le but affiché de lutter contre la contrefaçon de faux billets, l’évasion fiscale et l’économie informelle<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Au Nigéria, début 2023, le gouvernement a tenté (sans grand succès) d’appliquer une mesure similaire, par la limitation des retraits et la démonétisation des grosses coupures, dans le but de contrôler l’inflation, de lutter contre la contrefaçon et de promouvoir le naïra électronique (eNaira) lancé par la banque centrale en octobre 2021<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>. Cette pratique de la démonétisation n’est cependant pas nouvelle puisqu’elle avait été utilisée en Europe après la Seconde Guerre mondiale pour enrayer les effets inflationnistes du faux-monnayage et pour détruire les profits du marché noir, ce qui avait fait d’ailleurs dire au personnage du Dabe dans <em>Le cave se rebiffe</em> qu’«&nbsp;en matière de monnaie, les États ont tous les droits et les particuliers aucun&nbsp;!&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn35"><p><sup>35</sup>&nbsp;«&nbsp;Narendra Modi a ainsi démonétisé les billets de 500 et 1000 roupies&nbsp;»&nbsp;: Ninon Renaud, Michel De Grandi, <em>En Inde, la démonétisation des grosses coupures provoque l’émoi</em>, 13 novembre 2016&nbsp;: <a href="https://www.lesechos.fr/2016/11/en-inde-la-demonetisation-des-grosses-coupures-provoque-lemoi-216048" class="uri">https://www.lesechos.fr/2016/11/en-inde-la-demonetisation-des-grosses-coupures-provoque-lemoi-216048</a>.</p></div><div id="fn36"><p><sup>36</sup>&nbsp;«&nbsp;la limitation des retraits et la démonétisation des grosses coupures&nbsp;»&nbsp;: Simi Jolaoso, <em>Nigeria’s naira shortage: Anger and chaos outside banks</em>, 14 février 2023&nbsp;: <a href="https://www.bbc.com/news/world-africa-64626127" class="uri">https://www.bbc.com/news/world-africa-64626127</a>.</p></div></div><p>Une fois la monnaie numérique en place et l’argent liquide largement limité, les gens respectueux de la loi n’auraient d’autre choix que d’utiliser ce système surveillé. Le système pourrait limiter le montant que les gens dépensent, ce pour quoi ils l’utilisent et avec qui ils commercent. De plus, en tant que système informatique, il pourrait être facilement programmé de façon à imposer des conditions de dépense pour chaque montant de monnaie possédé par l’utilisateur. Une telle programmabilité permettrait aux autorités en charge d’orienter le comportement politique, économique et moral des individus dans le sens désiré, ce qui donnerait à la censure financière une portée jamais vue auparavant.</p>
+<p>Au niveau économique d’abord, cela permettrait d’améliorer ce que les banquiers centraux appellent la transmission de la politique monétaire, c’est-à-dire le processus par lequel les décisions de politique monétaire affectent l’économie en général et le niveau des prix en particulier. Aujourd’hui cette transmission est essentiellement assurée par la modification des taux d’intérêt directeurs. Demain, elle pourrait se faire par la programmation de la monnaie. Cela permettrait notamment de transformer le système d’aides sociales en un système de subvention directe exigeant la dépense rapide dans un secteur économique précis, dans le but de le stimuler.</p>
+<p>Ensuite au niveau moral, cette programmabilité permettrait d’orienter massivement les paroles et les actions des gens dans un sens déterminé, dans la droite lignée des censeurs de la Rome antique. Dans notre société moderne, cela pourrait être fait dans le cadre de la lutte contre le changement climatique, en récompensant le comportement «&nbsp;écologique&nbsp;», tel que la location d’un vélo pour se déplacer, et en punissant l’attitude «&nbsp;pollueuse&nbsp;», telle que la consommation de viande. Cette possibilité fait ainsi entrevoir l’instauration d’un système de crédit social à la chinoise.</p>
+<p>Enfin d’un point de vue politique, ce système permettrait de réduire l’opposition au pouvoir en sanctionnant ceux qui pensent mal, ceux qui s’expriment trop, ceux qui manifestent contre, etc. Le pouvoir politique pourrait raffermir sa position en appliquant les interventions, non plus de manière publique et légale (conformément à l’idée d’état de droit au sens de <em>Rechtsstaat</em>), mais de façon cachée et discrétionnaire. Cela pourrait constituer les prémices d’un régime totalitaire où l’État saurait tout, contrôlerait tout, et où il n’y aurait plus besoin de lois formelles<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. La MNBC serait un outil puissant de surveillance financière de masse, pouvant œuvrer à la réalisation d’un avenir orwellien dans lequel les individus n’auraient plus aucune vie privée et dont le pouvoir de résistance à l’autorité serait réduit au minimum.</p>
+<div class="no-row-height column-margin column-container"><div id="fn37"><p><sup>37</sup>&nbsp;«&nbsp;où il n’y aurait plus besoin de lois formelles&nbsp;»&nbsp;: George Orwell, <em>1984</em>, 1949&nbsp;: «&nbsp;Ce qu’il allait commencer, c’était son journal. Ce n’était pas illégal (rien n’était illégal, puisqu’il n’y avait plus de lois), mais s’il était découvert, il serait, sans aucun doute, puni de mort ou de vingt-cinq ans au moins de travaux forcés dans un camp.&nbsp;»</p></div></div><p>Cette censure financière aurait lieu à une échelle jamais vue auparavant. Par conséquent, il serait difficile de la mettre en place par une gestion manuelle des êtres humains. C’est pour cette raison qu’elle serait probablement déléguée à un algorithme doté d’une intelligence artificielle, qui détecterait les mauvais paiements et les bloquerait instantanément. Le système de MNBC pourrait ainsi nous mener à une situation qui rappellerait celle décrite par saint Jean dans son Apocalypse&nbsp;:</p>
+<p>«&nbsp;Par ses manœuvres, tous, petits et grands, riches ou pauvres, libres et esclaves, se feront marquer sur la main droite et sur le front, et nul ne pourra rien acheter ni vendre s’il n’est pas marqué au nom de la Bête ou au chiffre de son nom<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn38"><p><sup>38</sup>&nbsp;Ap :16-17.</p></div></div><p>Dans ce monde dystopique dont nous pouvons à peine imaginer les ramifications, l’espoir serait représenté par Bitcoin, dont la promesse fondamentale est d’échapper à de telles interventions. Par sa résistance à la censure, Bitcoin constituerait ainsi un oasis de liberté dans le désert de la servitude généralisée. Il serait, en substance, le dernier recours pour une population qui aurait sombré dans l’asservissement par la technique.</p>
+</section>
+<section id="la-censure-dans-bitcoin" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-censure-dans-bitcoin">La censure dans Bitcoin</h2>
+<p>Pour bien comprendre comment Bitcoin s’oppose à la censure, il est nécessaire de comprendre comment cette dernière peut s’exercer sur la chaîne. En effet, si le modèle de Nakamoto est réputé <em>résistant</em> à la censure, ceci ne signifie pas pour autant qu’il est «&nbsp;incensurable&nbsp;». La censure dans Bitcoin est non seulement possible, mais elle est aussi probable au-delà d’un certain stade d’adoption.</p>
+<p>Lorsqu’on parle de Bitcoin, le terme de censure possède un sens précis&nbsp;: il désigne l’action d’empêcher une transaction d’être réalisée sur une base économiquement irrationnelle, en entravant son inscription pérenne dans la chaîne de blocs. Cette définition rejoint l’idée de restreindre l’activité financière d’une entité dans le but de modeler son comportement. En un sens, cette censure ressemble également à de la censure du discours, car il s’agit d’empêcher indirectement l’individu d’écrire une transaction signée dans un registre.</p>
+<p>La façon dont peut s’exercer la censure dans Bitcoin peut être extrapolée à partir de ce qui existe déjà dans le monde bancaire et dans le secteur des cryptomonnaies, à commencer par les prétextes utilisés pour la défendre. D’une part, les justifications utilisées dans la finance traditionnelle sont largement applicables à Bitcoin, comme la lutte contre le blanchiment d’argent, le financement du terrorisme et la protection des épargnants&nbsp;: la cryptomonnaie permet en effet d’éviter l’impôt, de financer tous les projets imaginables et de participer à des escroqueries. D’autre part, de nouveaux prétextes émergent comme la dévaluation de la monnaie locale (un instrument déflationniste représente une concurrence déloyale) ou la lutte contre le changement climatique (le minage émet du CO<sub>2</sub>).</p>
+<p>De ces prétextes, les autorités tirent des réglementations générales qui s’appliquent à l’échelle internationale, comme c’est déjà le cas dans le système bancaire mondial. Les différentes juridictions se basent sur les recommandations du GAFI, dont le rôle premier est la lutte contre le blanchiment d’argent et le financement du terrorisme. Comme nous l’avons expliqué en parlant de l’arbitrage juridictionnel (voir chapitre&nbsp;<a href="la-necessite-de-decentralisation.html" data-reference-type="ref" data-reference="ch:adversaire">4</a>), elles sont fortement poussées à appliquer ces recommandations sous peine de subir les sanctions économiques des États-membres. Le FMI peut également être mis à profit, celui-ci ayant pour but d’assurer la stabilité du système monétaire mondial (donc de protéger les monnaies des États-membres).</p>
+<p>Cette coopération permet de constituer des listes noires d’adresses ne rentrant pas en conformité avec les réglementations, listes qui sont distribuées aux divers acteurs financiers réglementés. On peut citer par exemple la liste dressée par l’<em>Office of Foreign Assets Control</em> (OFAC), l’organisme dépendant du Trésor étasunien en charge d’appliquer les sanctions internationales des États-Unis dans le domaine financier<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>, qui fait autorité dans le domaine financier en raison de l’extraterritorialité du droit étasunien.</p>
+<div class="no-row-height column-margin column-container"><div id="fn39"><p><sup>39</sup>&nbsp;«&nbsp;la liste dressée par l’<em>Office of Foreign Assets Control</em>&nbsp;»&nbsp;: U.S. Department of the Treasury, <em>Treasury Sanctions IRGC-Affiliated Cyber Actors for Roles in Ransomware Activity</em>, 14 septembre 2022&nbsp;: <a href="https://home.treasury.gov/news/press-releases/jy0948" class="uri">https://home.treasury.gov/news/press-releases/jy0948</a>&nbsp;; <a href="https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220914" class="uri">https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220914</a>.</p></div><div id="fn40"><p><sup>40</sup>&nbsp;«&nbsp;les processeurs de paiement&nbsp;»&nbsp;: Depuis le début de l’année 2021, BitPay demande par exemple à ses clients européens de s’inscrire et de vérifier leur identité avant de pouvoir effectuer un achat.</p></div><div id="fn41"><p><sup>41</sup>&nbsp;«&nbsp;en refusant des bitcoins provenant de mélanges de pièces et geler les comptes des personnes le faisant&nbsp;»&nbsp;: Jamie Redman, <em>As FATF Regulations Galvanize, Crypto Mixing Applications Are Targeted</em>, 27 décembre 2019&nbsp;: <a href="https://news.bitcoin.com/as-fatf-regulations-galvanize-crypto-mixing-applications-are-targeted/" class="uri">https://news.bitcoin.com/as-fatf-regulations-galvanize-crypto-mixing-applications-are-targeted/</a>&nbsp;; 6102bitcoin, <em>CoinJoin Flagging</em>&nbsp;: <a href="https://6102bitcoin.com/coinjoin-flagging/" class="uri">https://6102bitcoin.com/coinjoin-flagging/</a>.</p></div><div id="fn42"><p><sup>42</sup>&nbsp;Sur Ethereum, les adresses liées au contrat de mélange Tornado Cash ont été placées sur la liste de l’OFAC en août 2022. Mais sur BTC, aucune loi ni liste liée au mélange n’est connue&nbsp;: il y a juste une suspicion généralisée.</p></div></div><p>La censure s’applique ainsi déjà dans une partie de l’économie basée sur Bitcoin. Tous les acteurs qui se conforment aux réglementations bloquent les bitcoins (et autres cryptomonnaies) provenant des adresses présentes sur les listes noires et gèlent les comptes de l’utilisateur jusqu’à ce qu’il se justifie. Toutefois, cette pratique conserve un caractère partiel et implicite&nbsp;: les transactions en elles-mêmes ne sont pas encore explicitement interdites, mais les fonds ne doivent pas être envoyés aux intermédiaires financiers réglementés, comme les plateformes de change ou les processeurs de paiement<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>. Cette situation pousse certaines plateformes à faire beaucoup de zèle dans le domaine en refusant des bitcoins provenant de mélanges de pièces et geler les comptes des personnes le faisant<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>, en l’absence d’une réglementation explicite<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>.</p>
+<p>La réglementation peut également s’étendre à l’industrie du minage. L’activité minière tend naturellement à se centraliser, par l’agrégation de la puissance de hachage en fermes de minage, par le rassemblement des hacheurs en coopératives minières et par l’utilisation de relais de communication par ces coopératives. Ces gros acteurs sont généralement identifiables et se soumettent donc plus facilement aux réglementations concernant les transactions à traiter. C’est ce qui pourrait amener une censure sur le réseau.</p>
+<p>Les mineurs peuvent dans un premier temps pratiquer une censure passive en refusant systématiquement de confirmer des transactions, pour des raisons économiquement irrationnelles, typiquement sous la pression du régulateur. Ce type de censure a notamment été envisagé par la coopérative du groupe Marathon, qui avait déclaré en 2021 vouloir pratiquer le «&nbsp;minage de blocs propres<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>&nbsp;», avant de se rétracter sous la pression populaire. Ce filtrage est mis en place sur Ethereum avec les validateurs qui utilisent des relais d’optimisation de MEV qui respectent les normes de l’OFAC et par conséquent n’incluent pas les transactions considérées comme sales<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a>. Les participants à ces relais étaient principalement des plateformes de change en 2023.</p>
+<div class="no-row-height column-margin column-container"><div id="fn43"><p><sup>43</sup>&nbsp;Communiqué de Marathon et de DMG Blockchain Solutions, <em>Marathon Patent Group and DMG Blockchain Solutions to Form the Digital Currency Miners of North America (DCMNA) and Launch North America’s First Cooperative Mining Pool</em>, 5 janvier 2021&nbsp;: <a href="https://web.archive.org/web/20210128112455/https://www.marathonpg.com/news/press-releases/detail/1220/marathon-patent-group-and-dmg-blockchain-solutions-to-form" class="uri">https://web.archive.org/web/20210128112455/https://www.marathonpg.com/news/press-releases/detail/1220/marathon-patent-group-and-dmg-blockchain-solutions-to-form</a>.</p></div><div id="fn44"><p><sup>44</sup>&nbsp;La valeur extractible maximale (<em>maximal extractable value</em>), initialement appelée valeur extractible par les mineurs (<em>miner extractable value</em>), est la valeur maximale que le validateur peut générer en modifiant l’ordre ou en excluant des transactions au sein de son bloc, profitant des différentes irrégularités des contrats autonomes, notamment en ce qui concerne les places de marché décentralisées. En octobre 2022, la quantité de validation passant par des relais appliquant ce type d’optimisation a dépassé les 50&nbsp;%, indiquant la potentialité d’une attaque. – Voir MEV Watch&nbsp;: <a href="https://www.mevwatch.info/" class="uri">https://www.mevwatch.info/</a>.</p></div></div><p>Cette censure passive n’est pas très problématique car elle demande que 100&nbsp;% de la puissance de calcul s’y conforme pour être effective. Les mineurs dissidents, c’est-à-dire ceux qui ignorent délibérément les réglementations, débloquent la situation en validant les transactions ignorées par les autres. Seuls les délais de confirmation sont affectés.</p>
+<p>Cependant, cette situation peut devenir autrement plus grave si les mineurs conformistes, à savoir les mineurs suivant méticuleusement les réglementations, commencent à refuser les blocs contenant les transactions «&nbsp;sales&nbsp;». C’est ce que nous appelons ici la censure active, qui consiste à empêcher des transactions d’être confirmées en rendant orphelins tous les blocs qui les contiennent. Pour être maintenue dans le temps de manière certaine, elle nécessite de disposer de la majorité de la puissance de calcul du réseau&nbsp;: il s’agit donc d’une attaque des 51&nbsp;%. Les branches faibles formées par l’attaque de censure sont mises de côté en vertu du principe de la chaîne la plus longue, comme illustré sur la figure&nbsp;<a href="#fig:censorship-attack" data-reference-type="ref" data-reference="fig:censorship-attack">9.1</a>.</p>
+<div id="fig:censorship-attack" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="img/mining-attack-censorship.eps" class="img-fluid"></p>
+<figcaption>Attaque de censure active.</figcaption>
+</figure>
+</div>
+<p>Le coût d’une telle attaque peut être colossal suivant la puissance de calcul déployée sur le réseau<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>. Mais ce coût serait justifié par le développement des activités illégales évitant l’impôt et le seigneuriage. En effet, comme montré dans le chapitre&nbsp;<a href="la-necessite-de-decentralisation.html" data-reference-type="ref" data-reference="ch:adversaire">4</a>, le profil-type de l’attaquant est l’État dont le pouvoir de prélèvement repose grandement sur son contrôle de la monnaie&nbsp;: c’est pourquoi il se moque de réduire (voire de détruire) l’utilité de Bitcoin ce faisant.</p>
+<div class="no-row-height column-margin column-container"><div id="fn45"><p><sup>45</sup>&nbsp;On a vu dans le chapitre&nbsp;<a href="le-consensus-par-le-minage.html" data-reference-type="ref" data-reference="ch:confirmation">8</a> que le coût d’une telle attaque se chiffre en milliards de dollars sur le réseau Bitcoin principal.</p></div></div><p>Cette attaque hypothétique serait précédée d’une déclaration de guerre contre Bitcoin. Toute la tolérance vis-à-vis des utilisateurs disparaîtrait, et ce qui n’était pas officiel le deviendrait&nbsp;: toutes les transactions qui ne sont pas explicitement autorisées seraient déclarées interdites. L’utilisation libre serait criminalisée d’une manière ou d’une autre, et le minage honnête aussi.</p>
+<p>Ce durcissement permettrait de coopter plus largement les regroupements miniers auxquels les directives étatiques seraient transmises. L’État pourrait aussi réquisitionner ou acheter son propre matériel de hachage. En somme, il disposerait à un moment donné d’une puissance de calcul majoritaire. Une fois la puissance de calcul rassemblée, l’attaque serait mise à exécution.</p>
+<p>La censure active est insidieuse car il suffit que 51&nbsp;% l’applique pour qu’elle continue. Son prolongement dans le temps peut finir par constituer une nouvelle normalité. Par conséquent, les mineurs économiquement rationnels ont tout intérêt à appliquer la censure, comme l’a montré un article de Juraj Bednar sur le sujet<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>. L’attaquant ne doit donc pas nécessairement disposer en permanence de la majorité du taux de hachage.</p>
+<div class="no-row-height column-margin column-container"><div id="fn46"><p><sup>46</sup>&nbsp;Juraj Bednar, <em>Bitcoin censorship will most likely come, pt 2</em>, 18 novembre 2020&nbsp;: <a href="https://juraj.bednar.io/en/blog-en/2020/11/18/bitcoin-censorship-will-most-likely-come-pt-2/" class="uri">https://juraj.bednar.io/en/blog-en/2020/11/18/bitcoin-censorship-will-most-likely-come-pt-2/</a>.</p></div><div id="fn47"><p><sup>47</sup>&nbsp;Joshua A. Kroll, Ian C. Davey, Edward W. Felten, «&nbsp;<em>The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries</em>&nbsp;», in <em>Workshop on the Economics of Information Security</em>, 2013&nbsp;: <a href="https://asset-pdf.scinapse.io/prod/2188530018/2188530018.pdf" class="uri">https://asset-pdf.scinapse.io/prod/2188530018/2188530018.pdf</a>.</p></div></div><p>La confidentialité n’empêche pas la censure d’avoir lieu, mais la rend simplement plus coûteuse. Dans le cas où l’intégralité des utilisateurs refuserait de se conformer aux normes de surveillance, les censeurs devraient refuser l’ensemble des transactions et ne pas recevoir les frais correspondants. L’attaque prendrait alors la forme d’une destruction totale de l’utilité de la chaîne par le minage de blocs vides, c’est-à-dire une attaque Goldfinger. Le nom de cette dernière fait référence au principal antagoniste du film de James Bond éponyme sorti en 1964, qui souhaitait irradier le stock d’or américain sécurisé au dépôt de Fort Knox dans le but de le rendre durablement inutilisable et d’augmenter la valeur du reste de l’or<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>.</p>
+<p>De ce fait, il est tout à fait possible d’exercer de la censure dans Bitcoin. Toutefois, ce n’est ni facile, ni définitif, car il existe un mécanisme au sein du protocole permettant de lutter contre ce type d’attaque&nbsp;: la résistance à la censure.</p>
+</section>
+<section id="le-mécanisme-de-résistance-à-la-censure" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="le-mécanisme-de-résistance-à-la-censure">Le mécanisme de résistance à la censure</h2>
+<p>La résistance à la censure désigne la difficulté à entraver arbitrairement les transactions. Elle est couramment citée comme l’une des deux grandes promesses de Bitcoin&nbsp;: permettre à quiconque d’envoyer des fonds à n’importe qui d’autre, quel que soit le moment, où que se trouve le destinataire dans le monde, pourvu qu’il dispose d’un accès à Internet.</p>
+<p>La résistance à la censure constitue un élément essentiel de Bitcoin. Si elle n’existait pas, le système ne pourrait tout simplement pas survivre en tant que tel&nbsp;: il deviendrait un système contrôlé centralement par une autorité décidant des bonnes et des mauvaises transactions. Il devrait s’adapter, tel GoldMoney ou PayPal, ou périr, à l’instar de e-gold ou de Liberty Reserve. De plus, le pouvoir absolu sur la sélection des transactions permettrait à cette autorité d’exercer <em>de facto</em> une influence irrésistible sur le protocole par le biais de l’application de soft forks (comme nous le verrons dans les chapitres <a href="le-changement-de-la-monnaie.html" data-reference-type="ref" data-reference="ch:changement">10</a> et <a href="la-determination-du-protocole.html" data-reference-type="ref" data-reference="ch:determination">11</a>), ce qui mènerait <em>in fine</em> à la destruction de la politique monétaire originelle. Sans résistance à la censure, la proposition de valeur de Bitcoin s’effondrerait.</p>
+<p>Cependant, cette résistance n’a jamais été décrite explicitement par Satoshi Nakamoto. Dans ses interventions, le père de Bitcoin a expliqué comment son système était sécurisé économiquement contre la double dépense, ce qui était déjà une grande évolution par rapport aux modèles décentralisés précédents. Mais il n’a en revanche pas indiqué comment le système pouvait s’opposer à la censure, c’est-à-dire au blocage partiel ou total de l’activité transactionnelle par une entité hostile. Il semblait se reposer sur la bonne volonté des mineurs «&nbsp;honnêtes&nbsp;», pensant même qu’il y aurait «&nbsp;probablement toujours des nœuds prêts à traiter les transactions gratuitement<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>&nbsp;», cette résistance allant de soi.</p>
+<div class="no-row-height column-margin column-container"><div id="fn48"><p><sup>48</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin v0.1 released</em>, /01/2009 19:27:40 UTC&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html</a>.</p></div><div id="fn49"><p><sup>49</sup>&nbsp;Le mécanisme de résistance à la censure a initialement été décrit par Eric Voskuil en janvier 2018&nbsp;: <a href="https://github.com/libbitcoin/libbitcoin-system/wiki/Other-Means-Principle/77d7556a14f89d1704f1bb97ca0aed04606363d0" class="uri">https://github.com/libbitcoin/libbitcoin-system/wiki/Other-Means-Principle/77d7556a14f89d1704f1bb97ca0aed04606363d0</a>. Voir aussi Eric Voskuil, «&nbsp;Propriété de résistance à la censure&nbsp;», in <em>Cryptoéconomie&nbsp;: Principes fondamentaux de Bitcoin</em>, Amazon KDP, 2022, pp.&nbsp;24–25.</p></div></div><p>Le mécanisme de résistance à la censure de Bitcoin a été mis en lumière en 2018, par le développeur et auteur Eric Voskuil, qui a montré qu’il reposait de manière essentielle sur les frais de transaction<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>. Comme dans le cas de la résistance à la double dépense, la propriété de résistance à la censure n’est pas absolue mais économique&nbsp;: c’est une régulation financée par les frais des transactions prohibées.</p>
+<p>La sécurité minière, on le rappelle, repose sur un principe majoritaire&nbsp;: la quantité de puissance de calcul contrôlée par les mineurs honnêtes doit être supérieure par rapport à celle des attaquants. L’important n’est pas que le taux de hachage de Bitcoin soit le plus haut possible&nbsp;; c’est que les mineurs disposant d’une puissance de calcul non négligeable soient prêts à miner systématiquement toutes les transactions payant un montant correct de frais et à toujours construire leurs blocs à partir de la plus longue chaîne.</p>
+<p>Ainsi, cette sécurité ne dépend pas uniquement de la puissance de calcul. Elle est aussi fonction de la distribution de cette puissance de calcul et de la fraction de mineurs par rapport au reste de l’humanité<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>. En effet, un taux de hachage qui serait concentré dans les mains d’un seul mineur créerait une sécurité équivalente à celle d’un système centralisé, dépendante du mineur en question. Aussi, un réseau équitablement distribué et déployant une grande quantité puissance de calcul aura plus de risque d’être coopté s’il comporte un petit nombre de mineurs que s’il en comporte un grand nombre.</p>
+<div class="no-row-height column-margin column-container"><div id="fn50"><p><sup>50</sup>&nbsp;Eric Voskuil, «&nbsp;Modèle de sécurité qualitatif&nbsp;», in <em>Cryptoéconomie&nbsp;: Principes fondamentaux de Bitcoin</em>, Amazon KDP, 2022, pp.&nbsp;59–62.</p></div></div><p>La solution au problème de la censure provient des mineurs dissidents, qui sont prêts à confirmer des transactions litigieuses ou décrétées comme illégales par le pouvoir. Le risque pris par ces mineurs doit alors être compensé économiquement.</p>
+<p>Le mineur dissident a besoin de rester anonyme afin de pouvoir miner dans la clandestinité. Cette possibilité est assurée par le fait que les mineurs ne sont jamais contraints de s’identifier au sein du protocole. Le signalement des blocs minés par les coopératives minières est en effet une démarche purement optionnelle et volontaire, ayant pour but de rassurer les utilisateurs (leurs clients) sur la distribution du système.</p>
+<p>La part du revenu du minage provenant de la création monétaire joue un rôle accessoire dans la lutte contre la censure, que cette dernière soit passive ou active. D’une part, cette partie de la récompense est la même pour tous les mineurs, ce qui fait qu’elle n’influe pas sur leur choix économique d’inclure une transaction ou non dans un bloc. D’autre part, la potentielle chute de l’utilité (et donc du revenu de minage) du système provoquée par une censure active (attaque), ne saurait empêcher l’autorité à l’origine d’arriver à ses fins. Les motivations de cette dernière sont en effet particulières&nbsp;: elle ne cherche pas à réaliser un profit direct mais à contrôler, voire détruire, le système en décrétant quelles transactions sont autorisées et lesquelles ne le sont pas.</p>
+<p>En revanche, les frais de transaction sont, eux, essentiels au mécanisme de résistance à la censure. Par leur intégration dans le protocole, ces commissions sont chacunes associées publiquement à une transaction. Ainsi, les frais luttent d’une part contre la censure passive en incitant les mineurs à confirmer les transactions, et découragent d’autre part la censure active en donnant à la branche censurée une importance économique plus grande.</p>
+<p>Dans le cas d’une attaque de censure active, les censeurs acquièrent plus de la moitié de la puissance de calcul du réseau et rejettent ouvertement un groupe de transactions défini (par une liste noire par exemple) en refusant les blocs qui contiendrait l’une d’entre elles. La chaîne des censeurs est considérée par les nœuds honnêtes comme la chaîne correcte car elle est plus longue.</p>
+<p>C’est dans ce contexte que le mécanisme des frais intervient. Les initiateurs des transactions censurées, voyant que leurs transactions ne sont pas confirmées, augmentent leurs commissions. C’est un comportement naturel que l’on observe déjà lors des périodes de congestion du réseau, comme au sommet de la bulle de 2017, lorsque les frais médians par transaction ont dépassé les 30&nbsp;$<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>. En outre, il est logique de payer une grande quantité de frais pour transférer de fortes sommes, celles-ci étant plus à risque que les petits transferts<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn51"><p><sup>51</sup>&nbsp;«&nbsp;lorsque les frais médians par transaction ont dépassé les 30&nbsp;$&nbsp;»&nbsp;: <a href="https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#alltime" class="uri">https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#alltime</a>.</p></div><div id="fn52"><p><sup>52</sup>&nbsp;Dans Bitcoin, les frais sont aujourd’hui payés proportionnellement à la charge des données (taille ou poids de la transaction). Cependant, la menace de plus en plus claire de la censure pourrait pousser les utilisateurs à payer des frais proportionnels au montant transféré comme cela se fait dans le domaine financier en général.</p></div></div><p>Cette augmentation crée un supplément de frais, qui constitue la différence entre les frais de toutes les transactions et ceux des transactions non autorisées qui se retrouvent dans les mempools des nœuds honnêtes. C’est ce supplément (et ce supplément uniquement) qui incite les mineurs dissidents à déployer plus de puissance de calcul au cours du temps&nbsp;: plus l’économie supprimée est importante, plus le différentiel de puissance de calcul résultant est grand.</p>
+<p>Les mineurs dissidents se coordonnent en privé ou par la voie d’un signalement pour planifier une riposte. Une fois que la puissance de calcul est jugée suffisante, ils se mettent à confirmer les transactions censurées. Puisque leur puissance de calcul est majoritaire, leur chaîne devient la plus longue et la chaîne des censeurs est invalidée. De cette manière, la censure est vaincue, du moins jusqu’à une nouvelle offensive de l’ennemi.</p>
+<p>Ainsi, le mécanisme de résistance à la censure est ancré profondément dans le protocole. La preuve de travail, le caractère anonyme du minage, le système de frais intégré&nbsp;: ce sont autant d’éléments permettant de coordonner un marché des frais afin de repousser les censeurs. Il est impossible d’estimer quelle serait la part de l’économie censurée, l’envergure de l’attaque étatique ou le montant de frais que les utilisateurs seraient prêts à payer, de sorte qu’on ne peut pas garantir l’incensurabilité de Bitcoin. Mais le mécanisme n’en est pas moins fonctionnel.</p>
+<p>Il est à noter que le rôle des frais de transaction, explicité en 2018 par Eric Voskuil, a été négligé par certains protocoles cryptoéconomiques. C’est en particulier le cas d’Ethereum qui a fait le choix de brûler une partie des frais du réseau dans le but de rendre l’éther déflationniste au sens monétaire avec l’activation de l’EIP-1559 en août 2021<a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>. La communauté d’Ethereum a également choisi de passer en preuve d’enjeu en septembre 2022, ce qui constitue un autre pas vers l’acceptation de la censure comme nous l’expliquerons plus bas.</p>
+<div class="no-row-height column-margin column-container"><div id="fn53"><p><sup>53</sup>&nbsp;«&nbsp;l’activation de l’EIP-1559 en août 2021&nbsp;»&nbsp;: Ludovic Lars, <em>Ethereum face à une catastrophe annoncée&nbsp;? Censure et volatilité&nbsp;: l’EIP-1559, le cauchemar des mineurs</em>, 15 juillet 2021&nbsp;: <a href="https://journalducoin.com/analyses/eip-1559-changement-nefaste-ethereum/" class="uri">https://journalducoin.com/analyses/eip-1559-changement-nefaste-ethereum/</a>.</p></div></div></section>
+<section id="limportance-de-la-confidentialité" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="limportance-de-la-confidentialité">L’importance de la confidentialité</h2>
+<p>La censure financière est étroitement apparentée à la surveillance des transactions. Cette dernière permet en effet d’affiner la sélection des transferts et d’exercer un pouvoir subtil sur l’économie, sans brusquer les personnes les plus dociles. La chose vaut pour le monde bancaire comme nous l’avons constaté, mais elle vaut aussi pour Bitcoin.</p>
+<p>Il existe deux manières de protéger sa richesse et sa liberté&nbsp;: par la force physique et par la dissimulation. La première méthode consiste à se prémunir contre le vol directement en défendant soi-même ses biens (si besoin à l’aide d’une arme à feu), ou bien indirectement par le recours aux services de police étatiques ou aux services de protection privés (gardes du corps, quartiers sécurisés, agence de protection), très prisés des personnes très fortunées. Cette méthode est importante et utile contre les criminels communs, mais elle est relativement inefficace contre la puissance dominante locale dont nous sommes à la merci – l’État.</p>
+<p>C’est pourquoi les individus ont plus souvent recours à la seconde méthode, qui consiste à dissimuler leur richesse pour ne pas qu’autrui en ait connaissance et puisse s’en emparer directement. Cela permet de dissuader le voleur usant la menace de violence d’aller plus loin&nbsp;: il pourrait nous interroger pour savoir où se trouve notre richesse, mais cette action représenterait un coût supplémentaire (proportionnel à notre refus de lui livrer cette information) qui freinerait sa recherche.</p>
+<p>Cette méthode est directement liée à la confidentialité (aussi appelée <em>privacy</em> ou protection de la vie privée) qui est le fait de réserver des informations à un petit nombre de personnes déterminées. La confidentialité est distincte du secret dans le sens où la personne peut choisir de révéler sélectivement des informations (confidence). Dans le contexte financier, il s’agit généralement de faire en sorte que les détails d’une transaction ne soient connus que des participants.</p>
+<p>La confidentialité forme la base de la liberté individuelle dans la société et constitue une caractéristique essentielle pour tout le monde. Elle sert en effet à <em>créer une asymétrie</em> entre le faible et le fort, entre l’individu et l’État, de sorte que ce dernier ne puisse pas empiéter absolument sur les droits du premier. L’État veut vous persuader du contraire, en vous disant que vous n’avez rien à craindre si vous n’avez rien à cacher<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>, mais il n’y a rien d’historiquement plus faux, comme l’ont montré les exemples des totalitarisme du <span class="smallcaps">xx</span>&nbsp;siècle.</p>
+<div class="no-row-height column-margin column-container"><div id="fn54"><p><sup>54</sup>&nbsp;«&nbsp;Je dis que quiconque tremble en ce moment est coupable&nbsp;; car jamais l’innocence ne redoute la surveillance publique.&nbsp;» – Maximilien de Robespierre, <em>Discours du 11 germinal, an II</em>, 31 mars 1794.</p></div></div><p>De ce fait, puisque la censure financière est issue de l’initiative étatique, la résistance à la censure est en général intrinsèquement liée à la confidentialité.</p>
+<p>D’une part, la résistance à la censure de l’utilisateur individuel repose sur la confidentialité du système. Si l’État connaît toutes les transactions, il peut sanctionner l’utilisateur pour avoir effectué une transaction non autorisée, quand bien même celle-ci serait confirmée par le réseau. Certains promoteurs de BTC mettent en avant la transparence du protocole, en la présentant comme un avantage par rapport aux systèmes bancaires opaques, en insistant sur le pseudonymat et en réservant la propriété d’anonymat aux «&nbsp;cryptomonnaies confidentielles&nbsp;» comme Monero. Mais il s’agit d’une mécompréhension du rôle de cette transparence&nbsp;: les données dans Bitcoin sont publiques dans le but unique d’assurer le consensus et l’audit, et Monero ne fait qu’implémenter un compromis différent sur le degré de transparence des transactions.</p>
+<p>D’autre part, la confidentialité de l’utilisateur dépend de la résistance à la censure du système. En effet, si l’État dispose d’un contrôle total sur la sélection des transactions, alors il peut choisir de ne confirmer que les transactions qui dévoilent l’identité de l’expéditeur et celle du destinataire. Cette dépendance est souvent remise en question par certains partisans de Monero qui estiment que la confidentialité par défaut du système protège les utilisateurs de la censure, considérant que l’État ne peut pas censurer une transaction qu’il ne connaît pas. Néanmoins, cette vision est plutôt naïve car les utilisateurs ont la possibilité technique de révéler les informations relatives à leurs adresses aux organismes de surveillance<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a>&nbsp;; la seule barrière à cela est le coût supplémentaire qu’une telle surveillance représente.</p>
+<div class="no-row-height column-margin column-container"><div id="fn55"><p><sup>55</sup>&nbsp;Dans Monero et dans les systèmes apparentés, la révélation des transactions liées à une adresse se fait par l’intermédiaire d’une clé privée d’inspection (<em>private view key</em>).</p></div></div><p>La confidentialité et la résistance à la censure sont donc interdépendantes dans Bitcoin. Sans confidentialité, il n’y a pas de résistance à la censure individuelle&nbsp;; et sans résistance à la censure, il n’y a pas de confidentialité individuelle. C’est pour cette raison que la surveillance généralisée, loin d’être anodine, constitue un problème majeur.</p>
+<p>La surveillance s’est étendue dans Bitcoin au cours de son développement économique par la réglementation des intermédiaires financiers. Les plateformes de change entre monnaies traditionnelles et cryptomonnaies ont été progressivement contraintes d’appliquer des normes de connaissance du client (KYC) et de lutte contre le blanchiment (AML) similaires au système bancaire classique. Cette récupération d’informations s’est accompagnée de l’émergence de sociétés d’analyses de chaîne, telles que Chainalysis ou Ciphertrace, qui croisent les données d’identification avec les évènements de la chaîne de blocs de façon à en dégager une interprétation probable, et qui fournissent les résultats à leurs clients qui sont les agences étatiques, les institutions financières et les grandes entreprises du domaine. En outre, l’étau est encore en train de se resserrer, avec l’apparition d’une version modifiée de la «&nbsp;règle du voyage&nbsp;» (<em>Travel Rule</em>), recommandée par le GAFI et déjà imposée par la FINMA suisse, qui consiste pour un intermédiaire à vérifier systématiquement l’adresse de retrait du client<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a><a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn56"><p><sup>56</sup>&nbsp;Dans le monde bancaire, la <em>Travel Rule</em> a originellement été promulguée par le FinCEN étasunien en 1996 (voir 31 CFR 103.33(g)). Elle exige que toutes les institutions financières transmettent des informations sur les expéditeurs à l’institution financière suivante lors de certains transferts de fonds. Dans le cas de Bitcoin et des cryptomonnaies, il s’agit d’émuler ce voyage en considérant que les utilisateurs sont des institutions financières lorsqu’ils réalisent des transactions souveraines. Le GAFI a ajouté le transfert d’«&nbsp;actifs virtuels&nbsp;» à ses recommandations en juin 2019, notamment en ce qui concerne la recommandation 16. Cette règle du voyage cryptomonétaire pourrait être appliquée par l’intégration dans les portefeuilles du protocole de preuve de propriété d’adresse (AOPP) proposé en janvier 2022.</p></div><div id="fn57"><p><sup>57</sup>&nbsp;«&nbsp;l’apparition d’une version modifiée de la "règle du voyage", recommandée par le GAFI et déjà imposée par la FINMA suisse&nbsp;»&nbsp;: <a href="https://www.fincen.gov/sites/default/files/advisory/advissu7.pdf" class="uri">https://www.fincen.gov/sites/default/files/advisory/advissu7.pdf</a> – Recommandation 16 du GAFI, mise à jour en juin 2019 pour inclure le transferts d’actifs virtuels&nbsp;: <a href="https://www.fatf-gafi.org/fr/publications/Recommandationsgafi/Recommandations-gafi.html" class="uri">https://www.fatf-gafi.org/fr/publications/Recommandationsgafi/Recommandations-gafi.html</a>. – <a href="https://www.finma.ch/en/news/2019/08/20190826-mm-kryptogwg/" class="uri">https://www.finma.ch/en/news/2019/08/20190826-mm-kryptogwg/</a> – <a href="https://aopp.group/" class="uri">https://aopp.group/</a>.</p></div></div><p>Cette évolution crée une réelle menace sur Bitcoin en général. C’est pourquoi il se forme en face une résistance visant à déjouer la surveillance, notamment par l’intermédiaire de techniques d’amélioration de la confidentialité. C’est le cas par exemple du mélange de pièces, ou CoinJoin, qui permet de brouiller les pistes. C’est aussi le cas des méthodes intégrées dans Monero. Nous développerons cet aspect dans le chapitre&nbsp;<a href="les-rouages-de-la-machine.html" data-reference-type="ref" data-reference="ch:rouages">12</a>.</p>
+<p>Ainsi, la confidentialité est essentielle pour préserver sa richesse et son autonomie. On ne peut pas être réellement libre sans protéger sa vie privée. Comme l’écrivait le fabuliste Florian&nbsp;: «&nbsp;Pour vivre heureux vivons cachés<a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn58"><p><sup>58</sup>&nbsp;Jean-Pierre Claris de Florian, «&nbsp;Le Grillon&nbsp;», in <em>Fables de Florian</em>, 1793.</p></div></div></section>
+<section id="les-interventions-humaines-dans-le-consensus" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-interventions-humaines-dans-le-consensus">Les interventions humaines dans le consensus</h2>
+<p>La possibilité de censure dans Bitcoin provoque généralement une volonté de trouver une solution, s’inscrivant dans la démarche d’ingénieur qui caractérise les amateurs de cryptomonnaie. Beaucoup de personnes sont en effet séduites par une alternative à la régulation par les frais&nbsp;: l’intervention humaine directe sur la chaîne. Celle-ci consiste à recourir au «&nbsp;consensus social<a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a>&nbsp;», c’est-à-dire au mécanisme de détermination du protocole. Deux idées de ce type semblent avoir un certain succès&nbsp;: l’UASF anti-censure et l’UAHF de changement de preuve de travail. Il s’agit cependant d’une tentation dangereuse comme nous allons essayer de le montrer.</p>
+<div class="no-row-height column-margin column-container"><div id="fn59"><p><sup>59</sup>&nbsp;«&nbsp;consensus social&nbsp;»&nbsp;: Arthur Breitman parlait de <em>social consensus</em> dès août 2014 dans la première description formelle de Tezos. – Arthur Breitman, <em>Tezos: A Self-Amending Crypto-Ledger</em>, 3 août 2014&nbsp;: <a href="https://tezos.com/position-paper.pdf" class="uri">https://tezos.com/position-paper.pdf</a>.</p></div></div><p>La première idée est de rejeter la censure en invalidant la branche des censeurs partiellement ou totalement, c’est-à-dire en portant atteinte au principe de la chaîne la plus longue. Le rejet peut se faire en rendant les blocs de la chaîne des censeurs invalides ou en imposant la validité de la chaîne concurrente par un point de contrôle temporaire. Une telle mesure constitue un soft fork (à savoir une restriction des règles de consensus) et doit être activée par les utilisateurs à un horodatage ou à une hauteur de bloc donné, d’où le fait qu’on la désigne comme un <em>User Activated Soft Fork</em> (UASF). Elle provoque une scission car elle n’est pas, dans le cas précis de la censure, soutenue par la majorité de la puissance de calcul.</p>
+<p>L’idée d’invalider la censure par consensus social était déjà évoquée par Vitalik Buterin en 2016 dans le cas de la preuve d’enjeu&nbsp;:</p>
+<p>«&nbsp;Sur des échelles de temps moyennes à longues, les humains sont assez bons pour le consensus. Même si un adversaire avait accès à une puissance de hachage illimitée, et qu’il parvenait à réaliser une attaque des 51&nbsp;% contre une chaîne de blocs majeure en inversant ne serait-ce que le dernier mois d’histoire, il serait beaucoup plus difficile de convaincre la communauté que cette chaîne est légitime que de simplement distancer la puissance de hachage de la chaîne principale. [...] Ces considérations sociales sont ce qui protège finalement toute chaîne de blocs à long terme, que la communauté de cette chaîne de blocs l’admette ou non (notez que Bitcoin Core admet cette primauté de la couche sociale)<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn60"><p><sup>60</sup>&nbsp;Vitalik Buterin, <em>A Proof of Stake Design Philosophy</em>, 30 décembre 2016&nbsp;: <a href="https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51" class="uri">https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51</a>.</p></div><div id="fn61"><p><sup>61</sup>&nbsp;«&nbsp;invalidation directe&nbsp;»&nbsp;: Cette méthode peut par exemple être mise en place dans l’esprit de l’<em>User Resisted Soft Fork</em> proposé par Michael Folkson en avril 2022 en réaction à la menace d’activation de la mise à niveau ``. – Michael Folkson, <em>[bitcoin-dev] User Resisted Soft Fork for CTV</em>, /04/2022 16:45:20 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020262.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020262.html</a>.</p></div><div id="fn62"><p><sup>62</sup>&nbsp;Un seul bloc (le bloc 662&nbsp;687 d’identifiant ``) de l’attaquant a été invalidé, faisant que 172 blocs ont été mis de côté, et que la chaîne non censurée est devenue la chaîne correcte. – Nikita Zhavoronkov sur Twitter, /12/2020 21:59 UTC&nbsp;: <a href="https://twitter.com/nikzh/status/1333893457920876550" class="uri">https://twitter.com/nikzh/status/1333893457920876550</a>.</p></div></div><p>Cette mesure peut être mise en place par une invalidation directe mais celle-ci n’est facile à implémenter que si les censeurs marquent leurs blocs d’une manière ou d’une autre<a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a>. Cela a été réalisé par Bitcoin ABC le 1 décembre 2020 sur sa chaîne nouvellement créée pour contrer la censure active d’un mineur mécontent de la scission avec Bitcoin Cash<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>.</p>
+<p>Il est aussi possible d’inclure un point de contrôle (<em>checkpoint</em>) dans le protocole. Un point de contrôle est un bloc considéré comme valide par défaut. Ce mécanisme a été implémenté dans le logiciel de Bitcoin dès juillet 2010 dans le but d’éviter une recoordination de chaîne<a href="#fn63" class="footnote-ref" id="fnref63" role="doc-noteref"><sup>63</sup></a> et certains de ces points de contrôle sont encore présents dans Bitcoin Core<a href="#fn64" class="footnote-ref" id="fnref64" role="doc-noteref"><sup>64</sup></a><a href="#fn65" class="footnote-ref" id="fnref65" role="doc-noteref"><sup>65</sup></a>. Dans cette logique, il suffit d’imposer un bloc comme obligatoire pour invalider la chaîne des censeurs. Cela a été réalisé par Bitcoin SV en août 2021, qui subissait alors une censure active<a href="#fn66" class="footnote-ref" id="fnref66" role="doc-noteref"><sup>66</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn63"><p><sup>63</sup>&nbsp;«&nbsp;implémenté dans le logiciel de Bitcoin dès juillet 2010&nbsp;»&nbsp;: Satoshi Nakamoto, <em>Bitcoin 0.3.2 released</em>, /07/2010 21:35:51 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=437.msg3807#msg3807" class="uri">https://bitcointalk.org/index.php?topic=437.msg3807#msg3807</a>.</p></div><div id="fn64"><p><sup>64</sup>&nbsp;Le point de contrôle le plus récent est celui du bloc 295&nbsp;000 miné le 9 avril 2014 (au même moment de l’arrivée de Wladimir van der Laan au poste de mainteneur principal) et ayant pour identifiant <code>. Voir le fichier</code> dans Bitcoin Core.</p></div><div id="fn65"><p><sup>65</sup>&nbsp;«&nbsp;certains de ces points de contrôle sont encore présents dans Bitcoin Core&nbsp;»&nbsp;: <a href="https://github.com/bitcoin/bitcoin/blob/24.x/src/chainparams.cpp#L148-L164" class="uri">https://github.com/bitcoin/bitcoin/blob/24.x/src/chainparams.cpp#L148-L164</a>.</p></div><div id="fn66"><p><sup>66</sup>&nbsp;BSV Association sur Twitter, /09/2021 21:17 UTC&nbsp;: <a href="https://twitter.com/BitcoinAssn/status/1422668065024663554" class="uri">https://twitter.com/BitcoinAssn/status/1422668065024663554</a>.</p></div></div><p>Toutefois, même si ce type de recours peut effectivement fonctionner de manière ponctuelle et temporaire, il ne constitue en rien un mécanisme robuste de résistance à la censure. En effet, il crée beaucoup trop d’instabilité en faisant en dernier lieu reposer le consensus sur l’accord social. Il offre ainsi la possibilité pour une puissance hostile de déstabiliser durablement le système en semant la zizanie dans la communauté (notamment par la pression exercée sur les relais d’opinion) et en créant par là des scissions multiples impossibles à départager par un facteur objectif.</p>
+<p>L’intervention directe de l’accord social dans la confirmation des transactions est par conséquent une très mauvaise idée. Même dans les cas où les participants sont d’accord pour dire qu’un tel évènement est indésirable, ils sont souvent en total désaccord sur la manière de traiter le problème, ainsi qu’on l’a observé lors de la scission entre Ethereum et Ethereum Classic. Les être humains sont capables de se mettre d’accord à long terme, comme le témoigne la convergence vers un petit nombre de langues, de religions, de monnaies, etc. Néanmoins, à court terme ce n’est très certainement pas le cas. D’où le recours au mécanisme de consensus automatisé qu’est le minage.</p>
+<p>Une autre mesure proposée, moins subjective mais plus perturbatrice, est la modification de la fonction de preuve de travail. Celle-ci permet de faire cesser l’attaque à court terme puisqu’elle rend le matériel spécialisé des censeurs obsolète, leur faisant supporter une lourde perte au passage. Il s’agit d’un hard fork (à savoir une modification incompatible des règles de consensus) qui doit être activé par les utilisateurs à un horodatage ou à une hauteur de bloc donné, c’est-à-dire un <em>User Activated Hard Fork</em> (UAHF). Cette option extrême a été soutenue par les développeurs luke-jr et Gregory Maxwell lors de la guerre des blocs en 2015 – 2016<a href="#fn67" class="footnote-ref" id="fnref67" role="doc-noteref"><sup>67</sup></a>. Elle a également été défendue par le développeur en chef de Bitcoin ABC Amaury Séchet en novembre 2018 qui l’a qualifiée d’«&nbsp;option nucléaire [...] de dernier recours<a href="#fn68" class="footnote-ref" id="fnref68" role="doc-noteref"><sup>68</sup></a>&nbsp;».</p>
+<div class="no-row-height column-margin column-container"><div id="fn67"><p><sup>67</sup>&nbsp;«&nbsp;soutenue par les développeurs luke-jr et Gregory Maxwell&nbsp;»&nbsp;: <a href="https://www.reddit.com/r/Bitcoin/comments/3fg0jw/could_a_cartel_of_pool_operators_collude_to/ctoat0d/" class="uri">https://www.reddit.com/r/Bitcoin/comments/3fg0jw/could_a_cartel_of_pool_operators_collude_to/ctoat0d/</a>&nbsp;;<a href="https://www.reddit.com/r/bitcoinxt/comments/41pbmf/maxwell_considers_changing_the_pow_algorithm_in/" class="uri">https://www.reddit.com/r/bitcoinxt/comments/41pbmf/maxwell_considers_changing_the_pow_algorithm_in/</a>.</p></div><div id="fn68"><p><sup>68</sup>&nbsp;Amaury Séchet (deadalnix) sur Twitter, /11/2018 11:42 UTC&nbsp;: <a href="https://twitter.com/deadalnix/status/1061947426096009216" class="uri">https://twitter.com/deadalnix/status/1061947426096009216</a>.</p></div></div><p>De même que dans le cas de l’invalidation de la censure par intervention sociale, il s’agit d’une mesure plus néfaste à long terme que le statu quo. Premièrement, la perte subie par les censeurs est aussi encaissée par les mineurs honnêtes et dissidents. Deuxièmement, l’économie est répartie entre deux chaînes distinctes, réduisant l’utilité monétaire totale. Troisièmement, le coût d’une attaque est drastiquement réduit à court terme. Quatrièmement, les mineurs perdent confiance dans le protocole et doivent s’assurer contre le risque d’un nouveau changement, réhaussant le coût de la sécurité minière par rapport au coût de l’attaque. Et cinquièmement, la nouvelle distribution du minage n’est pas forcément meilleure que l’ancienne, les gros mineurs pouvant déployer du capital plus facilement.</p>
+<p>De manière générale, l’intervention humaine à court terme est loin d’être désirable. Si la chaîne subit une attaque minière, il est probable qu’elle soit aussi attaquée au niveau social. Les interventions ont ainsi toutes les chances de se multiplier, faisant sombrer la chaîne dans une spirale de scissions et la menant à l’insignifiance économique. Le cas de Bitcoin Cash est le plus éclairant&nbsp;: en raison de hard forks programmés tous les six mois, la chaîne a subi deux scissions majeures après sa séparation avec Bitcoin-BTC (en 2018 avec BSV et en 2020 avec XEC), ce qui a mené l’ensemble à être valorisé à moins de 1&nbsp;% de la valeur agrégée du BTC. En outre, si ce caractère néfaste est valable pour les cryptomonnaies en construction, qui peuvent se permettre ces interventions en raison de la petitesse et de l’homogénéité de leur économie, elle l’est d’autant plus pour une version mature de Bitcoin qui soutiendrait une économie plus grande et plus diversifiée.</p>
+</section>
+<section id="les-variantes-des-consensus-par-preuve-de-travail" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="les-variantes-des-consensus-par-preuve-de-travail">Les variantes des consensus par preuve de travail</h2>
+<p>Le risque de censure a également inspiré le développement d’algorithmes de consensus alternatifs à celui de Bitcoin. L’alternative la plus connue est la preuve d’enjeu, qui sera décrite dans la section suivante. Les autres alternatives sont des variantes de l’algorithme de Nakamoto par preuve de travail, dont les trois principales sont le minage combiné, la preuve d’espace et la finalisation anticipée.</p>
+<p>La première proposition est le minage combiné<a href="#fn69" class="footnote-ref" id="fnref69" role="doc-noteref"><sup>69</sup></a>. Le minage combiné, ou <em>merge mining</em> en anglais, est l’action de miner plusieurs chaînes en simultané par la réutilisation du travail fourni sur une chaîne parente pour la validation des chaînes filles ou auxiliaires.</p>
+<div class="no-row-height column-margin column-container"><div id="fn69"><p><sup>69</sup>&nbsp;«&nbsp;le minage combiné&nbsp;»&nbsp;: Aljosha Judmayer, Alexei Zamyatin, Nicholas Stifter, Artemios G. Voyiatzis, Edgar Weippl, <em>Merged Mining: Curse of Cure?</em>, 22 août 2017&nbsp;: <a href="https://eprint.iacr.org/2017/791" class="uri">https://eprint.iacr.org/2017/791</a>.</p></div></div><p>Le procédé a été décrit par Satoshi Nakamoto en décembre 2010, dans un message concernant BitDNS, le projet de système distribué de noms de domaine à l’origine de Namecoin. Le créateur de Bitcoin écrivait ainsi sur le forum&nbsp;:</p>
+<p>«&nbsp;Je pense qu’il serait possible que BitDNS forme un réseau complètement séparé et possède une chaîne de blocs distincte, tout en partageant la puissance de calcul avec Bitcoin. Le seul chevauchement consisterait à faire en sorte que les mineurs puissent rechercher des preuves de travail pour les deux réseaux simultanément.</p>
+<p>Les réseaux n’auraient besoin d’aucune coordination. Les mineurs adhéreraient aux deux réseaux en parallèle. Ils scanneraient SHA de telle sorte que s’ils obtenaient un résultat, ils pourraient résoudre les deux en même temps. Une solution pourrait concerner un seul des réseaux si l’un d’eux présente une difficulté moindre.</p>
+<p>Je pense qu’un mineur externe pourrait appeler getwork sur les deux programmes et combiner le travail. Peut-être appeler Bitcoin, en tirer du travail, le remettre à getwork sur BitDNS pour le combiner en un travail commun.</p>
+<p>Au lieu d’une fragmentation, les réseaux partageraient et augmenteraient la puissance de calcul totale de chacun. Cela résoudrait le problème des réseaux multiples, qui constituent un danger les uns pour les autres si la puissance de calcul disponible se concentre sur l’un d’entre eux. Au lieu de cela, tous les réseaux du monde partageraient la puissance de calcul combinée, augmentant ainsi la puissance totale. Il serait plus facile pour les petits réseaux de se lancer en puisant dans une base existante de mineurs<a href="#fn70" class="footnote-ref" id="fnref70" role="doc-noteref"><sup>70</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn70"><p><sup>70</sup>&nbsp;Satoshi Nakamoto, <em>Re: BitDNS and Generalizing Bitcoin</em>, /12/2010 21:02:42 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=1790.msg28696#msg28696" class="uri">https://bitcointalk.org/index.php?topic=1790.msg28696#msg28696</a>.</p></div></div><p>Le minage combiné consiste à réutiliser des preuves de travail partielles d’une chaîne mère comme des preuves de travail valides sur une chaîne fille. Ces preuves de travail, dite «&nbsp;auxiliaires&nbsp;» et abrégées en AuxPOW, sont des sous-produits du minage de la chaîne mère, et ne nécessitent pas de dépense d’énergie supplémentaire. La seule charge imposée par le minage combiné est la gestion de la chaîne fille.</p>
+<p>Les mineurs de la chaîne fille reçoivent des récompenses supplémentaires qui sont constituées de la création monétaire locale (si la chaîne utilise une nouvelle unité de compte) et des frais de transaction. Les mineurs de la chaîne mère sont donc incités à tirer profit de cette nouvelle manne. La chaîne fille peut de ce fait disposer d’un taux de hachage conséquent assez rapidement.</p>
+<p>Le minage combiné a été mis en avant comme une méthode permettant de faciliter l’amorçage d’une nouvelle cryptomonnaie, en bénéficiant de l’industrie minière établie. Ce type d’algorithme de consensus a ainsi été mis en place sur Namecoin par rapport à Bitcoin et sur Dogecoin par rapport à Litecoin. Il a aussi été suggéré comme mécanisme de synchronisation des chaînes latérales. Il est ainsi implémenté de manière hybride dans RSK. Il est plus largement envisagé par Paul Sztorc dans sa proposition de Drivechain (voir chapitre&nbsp;<a href="le-passage-a-l-echelle.html" data-reference-type="ref" data-reference="ch:scalabilite">14</a>).</p>
+<p>Cependant, l’apport en sécurité du minage combiné par rapport au minage classique est relativement faible. Le procédé permet d’augmenter le nombre d’acteurs impliqués et de restreindre les attaquants possibles (ceux-ci devant être des mineurs de la chaîne principale), mais il ne modifie pas le coût de l’attaque, qui dépend du revenu minier de cette chaîne et, dans le cas de la censure, des frais de transaction.</p>
+<p>Une illustration éclatante de ce fait est l’exemple de Coiledcoin (CLC), une cryptomonnaie alternative créée en janvier 2012 qui a subi une attaque de censure fatale peu de temps après son lancement. L’attaque a été réalisée par le développeur de Bitcoin luke-jr par le biais de sa coopérative de minage, Eligius, sans qu’il n’en informe les hacheurs. Dans son message d’explication, il précisait qu’aucun membre de la coopérative n’avait subi de perte, le coût étant surtout le temps qu’il avait passé à configurer le logiciel<a href="#fn71" class="footnote-ref" id="fnref71" role="doc-noteref"><sup>71</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn71"><p><sup>71</sup>&nbsp;luke-jr, <em>Re: [DEAD] Coiledcoin - yet another cryptocurrency, but with OP_EVAL!</em>, /01/2012 18:56:03 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=56675.msg678006#msg678006" class="uri">https://bitcointalk.org/index.php?topic=56675.msg678006#msg678006</a>.</p></div></div><p>Le minage combiné a deux effets sur la sécurité minière de la chaîne mère. D’une part, il augmente artificiellement la puissance de calcul déployée pour miner des blocs, ce qui paraît bénéfique de prime abord. Cependant, cette hausse artificielle n’agit en rien contre la censure des transactions. D’autre part, le minage combiné entraîne une centralisation de l’activité minière, en raison de la charge que représente la gestion des chaînes auxiliaires&nbsp;: si les chaînes auxiliaires deviennent importantes économiquement, les mineurs de la chaîne mère n’ont d’autre choix que de les miner pour rester rentables.</p>
+<p>La deuxième alternative est la preuve d’espace<a href="#fn72" class="footnote-ref" id="fnref72" role="doc-noteref"><sup>72</sup></a> (de l’anglais <em>proof of space</em>), parfois aussi appelée preuve de capacité ou preuve de stockage, qui se base, non pas sur le calcul informatique, mais sur la capacité à garder des données en mémoire. La ressource n’est plus la puissance de calcul, mais l’espace disque.</p>
+<div class="no-row-height column-margin column-container"><div id="fn72"><p><sup>72</sup>&nbsp;«&nbsp;la preuve d’espace&nbsp;»&nbsp;: Stefan Dziembowski, Sebastian Faust, Vladimir Kolmogorov, Krzysztof Pietrzak, <em>Proofs of Space</em>, 2013&nbsp;: <a href="https://eprint.iacr.org/2013/796" class="uri">https://eprint.iacr.org/2013/796</a>.</p></div><div id="fn73"><p><sup>73</sup>&nbsp;«&nbsp;intégrée au sein de Tenebrix en septembre 2011&nbsp;»&nbsp;: Lolcust, <em>[ANNOUNCE] Tenebrix, a CPU-friendly, GPU-hostile cryptocurrency</em>, /09/2011 00:09:44 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=45667.msg544675#msg544675" class="uri">https://bitcointalk.org/index.php?topic=45667.msg544675#msg544675</a>.</p></div><div id="fn74"><p><sup>74</sup>&nbsp;«&nbsp;héritée plus tard par Litecoin&nbsp;»&nbsp;: Charlie Lee, <em>Re: [ANN] Litecoin - a lite version of Bitcoin. Be ready when is launches!</em>, /10/2011 06:14:28 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=47417.msg564414#msg564414" class="uri">https://bitcointalk.org/index.php?topic=47417.msg564414#msg564414</a>.</p></div><div id="fn75"><p><sup>75</sup>&nbsp;«&nbsp;ETHash&nbsp;»&nbsp;: <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/" class="uri">https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/</a>.</p></div><div id="fn76"><p><sup>76</sup>&nbsp;«&nbsp;GHOST&nbsp;»&nbsp;: <em>Ethereum Whitepaper</em>, consulté le 11 mars 2023&nbsp;: <a href="https://ethereum.org/en/whitepaper/#modified-ghost-implementation" class="uri">https://ethereum.org/en/whitepaper/#modified-ghost-implementation</a>.</p></div><div id="fn77"><p><sup>77</sup>&nbsp;«&nbsp;ETCHash&nbsp;»&nbsp;: <a href="https://github.com/eth-classic/etchash/blob/main/README.md" class="uri">https://github.com/eth-classic/etchash/blob/main/README.md</a>.</p></div><div id="fn78"><p><sup>78</sup>&nbsp;«&nbsp;RandomX&nbsp;»&nbsp;: <a href="https://github.com/tevador/RandomX" class="uri">https://github.com/tevador/RandomX</a>.</p></div></div><p>Cette idée a été partiellement incluse dans certains algorithmes hybrides de preuve de travail, dans le but de décourager le développement de matériel spécialisé (ASIC) et de favoriser le minage par processeurs accessibles au grand public (CPU et GPU). C’est le cas de la fonction scrypt (ou S-Crypt), une fonction de dérivation de clé coûteuse en mémoire adaptée par le mineur ArtForz pour être intégrée au sein de Tenebrix en septembre 2011<a href="#fn73" class="footnote-ref" id="fnref73" role="doc-noteref"><sup>73</sup></a>. Celle-ci a été héritée plus tard par Litecoin<a href="#fn74" class="footnote-ref" id="fnref74" role="doc-noteref"><sup>74</sup></a>. C’est également le cas de l’ancienne fonction de minage d’Ethereum utilisé entre 2015 et 2022, ETHash, qui est une variante de l’algorithme Dagger-Hashimoto et qui rend le calcul de la preuve plus coûteux en mémoire par la nécessité de stocker un graphe acyclique orienté de plusieurs gigaoctets<a href="#fn75" class="footnote-ref" id="fnref75" role="doc-noteref"><sup>75</sup></a>. Ethereum utilisait de plus une version modifiée de l’algorithme de Nakamoto, GHOST, qui avait pour intérêt de sélectionner la chaîne la plus lourde en prenant en compte les blocs orphelins<a href="#fn76" class="footnote-ref" id="fnref76" role="doc-noteref"><sup>76</sup></a>. Depuis novembre 2020, Ethereum Classic utilise une variante de ETHash nommée ETCHash<a href="#fn77" class="footnote-ref" id="fnref77" role="doc-noteref"><sup>77</sup></a>. Un dernier exemple est l’algorithme RandomX, actif sur Monero depuis 2019, qui est conçu spécialement pour favoriser le minage par CPU<a href="#fn78" class="footnote-ref" id="fnref78" role="doc-noteref"><sup>78</sup></a>.</p>
+<p>Au-delà des fonctions de preuve de travail coûteuses en mémoire, il existe des algorithmes de preuve d’espace pure. C’est en pratique le cas du système Chia Network, projet de Bram Cohen, qui se base sur les «&nbsp;preuves d’espace et de temps&nbsp;» pour déterminer la chaîne correcte<a href="#fn79" class="footnote-ref" id="fnref79" role="doc-noteref"><sup>79</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn79"><p><sup>79</sup>&nbsp;«&nbsp;Chia Network&nbsp;»&nbsp;: Ludovic Lars, <em>Face à la preuve de travail de Bitcoin, la preuve d’espace, une fausse solution écologique</em>, 19 mai 2021&nbsp;: <a href="https://journalducoin.com/analyses/preuve-espace-fausse-solution-ecologique/" class="uri">https://journalducoin.com/analyses/preuve-espace-fausse-solution-ecologique/</a>.</p></div></div><p>Ces algorithmes fondés à des degrés divers sur la mémoire informatique sont censés être plus résistants à la censure en facilitant la participation du grand public et en améliorant de ce fait la distribution de la validation. Mais ils ne font que déplacer le problème. Ce qu’il faut comprendre avec la preuve d’espace, c’est qu’il s’agit de dépenser de l’énergie extérieure d’une autre manière. La preuve d’espace est une preuve de travail déguisée&nbsp;: elle revient en fin de compte à effectuer une autre forme de travail, qui peut être optimisée. Cette optimisation peut avoir lieu tant au niveau de la conception du matériel (ASIC) qu’au niveau de l’organisation industrielle (économie d’échelle), ce qui fait que les pressions centralisatrices ne disparaissent pas complètement. Tout ce qu’on peut espérer, c’est de rapprocher l’efficacité du matériel spécialisé de celle d’un outil utilisé par tous, comme ce qui est fait par RandomX avec le CPU.</p>
+<p>La troisième alternative est la finalisation anticipée des blocs. Celle-ci consiste à mettre en place des points de contrôle mobiles au sein du protocole, de façon à considérer comme final tout bloc qui se trouverait en-dessous d’une certaine profondeur. Vitalik Buterin parle de «&nbsp;subjectivité faible<a href="#fn80" class="footnote-ref" id="fnref80" role="doc-noteref"><sup>80</sup></a>&nbsp;» pour décrire ce type de mécanisme.</p>
+<div class="no-row-height column-margin column-container"><div id="fn80"><p><sup>80</sup>&nbsp;Vitalik Buterin, <em>Proof of Stake: How I Learned to Love Weak Subjectivity</em>, 25 novembre 2014&nbsp;: <a href="https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity" class="uri">https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity</a>.</p></div><div id="fn81"><p><sup>81</sup>&nbsp;«&nbsp;protection contre la recoordination profonde&nbsp;»&nbsp;: Bitcoin ABC, <em>Bitcoin ABC 0.18.5 Released</em>, 20 novembre 2018&nbsp;: <a href="https://www.bitcoinabc.org/2018-11-20-bitcoin-abc-0-18-5/" class="uri">https://www.bitcoinabc.org/2018-11-20-bitcoin-abc-0-18-5/</a>.</p></div></div><p>Un tel algorithme a été mis en place par Bitcoin ABC le 20 novembre 2018 au sein de Bitcoin Cash, face à la menace d’attaque de la part du camp de Bitcoin SV, sous la forme d’une protection contre la recoordination profonde, qui consistait à considérer un bloc comme final au bout de 11 confirmations<a href="#fn81" class="footnote-ref" id="fnref81" role="doc-noteref"><sup>81</sup></a>. Ce procédé est encore présent dans certaines implémentations de Bitcoin Cash et de XEC, et est appliqué par les grandes plateformes de change, ce qui en fait <em>de facto</em> une règle de consensus.</p>
+<p>Dans Ethereum Classic, qui a subi de multiples attaques de double dépense en 2019 et en 2020, une variante de cette finalisation a été intégrée le 11 octobre 2020. L’algorithme en question est appelé <em>Modified Exponential Subjective Scoring</em> (MESS) et consiste à attribuer différents scores aux branches concurrentes, privilégiant les segments vus les premiers aux segments vus ultérieurement. Il permettrait de diviser le coût d’une attaque par 31<a href="#fn82" class="footnote-ref" id="fnref82" role="doc-noteref"><sup>82</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn82"><p><sup>82</sup>&nbsp;«&nbsp;MESS&nbsp;»&nbsp;: Dean Pappas, <em>An Elegant MESS – The Fast Solution to 51% attacks and Low Hash Rate</em>, 18 septembre 2020&nbsp;: <a href="https://medium.com/ethereum-classic-labs/an-elegant-mess-the-fast-solution-to-51-attacks-and-low-hash-rate-4e8f8347bdfe" class="uri">https://medium.com/ethereum-classic-labs/an-elegant-mess-the-fast-solution-to-51-attacks-and-low-hash-rate-4e8f8347bdfe</a>.</p></div><div id="fn83"><p><sup>83</sup>&nbsp;Ce problème peut être atténué par une intervention sociale en décrétant un certain nombre de blocs comme valides par défaut. Mais on en revient alors à la situation discutée dans la section précédente.</p></div></div><p>Ces algorithmes réduisent effectivement la probabilité d’une attaque opportuniste, car ils empêchent les recoordinations. Cependant, ils ont le résultat inverse sur les attaques de censure dont le but est de détruire l’utilité fondamentale de la chaîne. Ces algorithmes sont en effet sujets au problème de la subjectivité. Un nouveau nœud qui se synchronise avec le réseau peut être trompé par un attaquant en suivant la chaîne la plus longue et non la chaîne considérée comme valide par le reste du réseau. De ce fait, un attaquant (réalisant une attaque Goldfinger) peut facilement tirer profit de cette caractéristique en créant des chaînes concurrentes plus longues pour causer la confusion<a href="#fn83" class="footnote-ref" id="fnref83" role="doc-noteref"><sup>83</sup></a>.</p>
+<p>Idéalement, le concept de Bitcoin n’intègre aucun point de contrôle à l’exception du bloc de genèse défini préalablement, et la chaîne correcte est déterminée uniquement par la quantité de travail accumulée. Bien qu’il ait lui-même ajouté des points de contrôle manuels, Satoshi Nakamoto expliquait&nbsp;:</p>
+<p>«&nbsp;Il n’y a aucun moyen pour le logiciel de savoir automatiquement si une chaîne est meilleure qu’une autre, sauf par la plus grande preuve de travail. Dans la conception, il était nécessaire qu’il se tourne vers la chaîne plus longue, quelle que soit la distance à parcourir<a href="#fn84" class="footnote-ref" id="fnref84" role="doc-noteref"><sup>84</sup></a>.&nbsp;»</p>
+<div class="no-row-height column-margin column-container"><div id="fn84"><p><sup>84</sup>&nbsp;À propos de l’acceptation de la plus longue chaîne par le logiciel, Satoshi ajoutait&nbsp;: «&nbsp;La seule exception à cela, ce sont les points de contrôle manuels que j’ai ajoutés. S’ils n’étaient pas là, il serait capable de se recoordonner en remontant jusqu’au premier bloc.&nbsp;» – Voir Satoshi Nakamoto, <em>Re: checkpointing the block chain</em>, /08/2010 20:20:53 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=834.msg9816#msg9816" class="uri">https://bitcointalk.org/index.php?topic=834.msg9816#msg9816</a>.</p></div></div></section>
+<section id="la-preuve-denjeu" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="la-preuve-denjeu">La preuve d’enjeu</h2>
+<p>L’autre alternative à l’algorithme de Nakamoto par preuve de travail est le recours à un autre mécanisme de résistance aux attaques Sybil&nbsp;: la preuve d’enjeu. La preuve d’enjeu, de l’anglais <em>proof of stake</em>, est un procédé permettant à quelqu’un de démontrer son implication dans un système par le biais d’un algorithme de signature, dans le cadre de l’accès à un privilège. Dans le cas des systèmes cryptoéconomiques gérant une unité de compte numérique, elle intervient dans le choix des validateurs en charge de produire les blocs de transactions. Le validateur d’un bloc donné est alors sélectionné par le réseau selon le nombre d’unités qu’il met en jeu (ou selon un autre paramètre lié). La preuve d’enjeu est parfois décrite comme du «&nbsp;minage virtuel&nbsp;» car les jetons numériques jouent le même rôle que l’énergie électrique dans les algorithmes basés sur la preuve de travail, la probablité de valider un bloc étant la plupart du temps proportionnelle au nombre de jetons en possession du validateur.</p>
+<p>Les jetons du validateur sont mis en jeu dans le sens où ils sont bloqués par le système et où ils sont détruits en cas de comportement hostile au réseau. Cette dernière propriété permet d’éviter le problème du «&nbsp;rien à perdre&nbsp;» (<em>nothing-at-stake problem</em>) qui se poserait dans le cas d’une mise en œuvre naïve du procédé, dans laquelle les validateurs peuvent valider plusieurs chaînes concurrentes en même temps, contrairement à la preuve de travail où l’énergie ne peut pas être dupliquée. Par exemple, l’algorithme de consensus d’Ethereum, Casper FFG, met en place une «&nbsp;coupe des fonds&nbsp;» (ou <em>slashing</em><a href="#fn85" class="footnote-ref" id="fnref85" role="doc-noteref"><sup>85</sup></a>) pour sanctionner progressivement les validateurs qui ne respectent pas les règles de bonne conduite<a href="#fn86" class="footnote-ref" id="fnref86" role="doc-noteref"><sup>86</sup></a>. Cela permet au réseau de se prémunir contre les attaques de courte portée. De plus, la preuve d’enjeu étant subjective, elle nécessite des points de contrôles, qui séparent différentes «&nbsp;époques&nbsp;», pour contrer les attaques de longue portée.</p>
+<div class="no-row-height column-margin column-container"><div id="fn85"><p><sup>85</sup>&nbsp;«&nbsp;slashing&nbsp;»&nbsp;: Vitalik Buterin, <em>Slasher: A Punitive Proof-of-Stake Algorithm</em>, 15 janvier 2014&nbsp;: <a href="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm" class="uri">https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm</a>.</p></div><div id="fn86"><p><sup>86</sup>&nbsp;Vitalik Buterin et al., <em>Combining GHOST and Casper</em>, 11 mai 2020&nbsp;: <a href="https://arxiv.org/pdf/2003.03052.pdf" class="uri">https://arxiv.org/pdf/2003.03052.pdf</a>.</p></div></div><p>L’idée de la preuve d’enjeu est une vieille idée puisqu’on la retrouve dans la conception de b-money, le système imaginé par le cypherpunk Wei Dai en 1998 et décrit dans le chapitre&nbsp;<a href="la-cybermonnaie-avant-nakamoto.html" data-reference-type="ref" data-reference="ch:cybermonnaie">6</a>. Dans son modèle, chaque serveur devait déposer un certain montant de b-money sur un compte spécial pour participer aux opérations du réseau. Le montant servait de garantie pour pénaliser le serveur en cas de mauvaise conduite.</p>
+<p>Le terme «&nbsp;<em>proof of stake</em>&nbsp;» a été inventé en juillet 2011 par un membre du forum de Bitcoin utilisant le pseudonyme QuantumMechanic, qui décrivait comment le concept pouvait être adapté aux systèmes cryptomonétaires<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a>. Cette idée a été mise en œuvre un an plus tard, en août 2012, par Sunny King et Scott Nadal, par le biais de leur protocole PPCoin<a href="#fn88" class="footnote-ref" id="fnref88" role="doc-noteref"><sup>88</sup></a>. Ce dernier se basait sur un modèle hybride combinant énergie électrique et âge des pièces (preuve de conservation) pour sa validation. Il est aujourd’hui connu sous le nom de Peercoin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn87"><p><sup>87</sup>&nbsp;QuantumMechanic, <em>Proof of stake instead of proof of work</em>, /07/2011 04:12:45 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=27787.msg349645#msg349645" class="uri">https://bitcointalk.org/index.php?topic=27787.msg349645#msg349645</a>.</p></div><div id="fn88"><p><sup>88</sup>&nbsp;«&nbsp;par le biais de leur protocole PPCoin&nbsp;»&nbsp;: Sunny King, Scott Nadal, <em>PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake</em>, 19 août 2012, archive&nbsp;: <a href="https://web.archive.org/web/20121021014644/http://www.ppcoin.org/static/ppcoin-paper.pdf" class="uri">https://web.archive.org/web/20121021014644/http://www.ppcoin.org/static/ppcoin-paper.pdf</a>.</p></div><div id="fn89"><p><sup>89</sup>&nbsp;«&nbsp;preuve d’enjeu déléguée&nbsp;»&nbsp;: Dan Larimer, <em>DPOS Consensus Algorithm - The Missing White Paper</em>, 29 mai 2017&nbsp;: <a href="https://hive.blog/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper" class="uri">https://hive.blog/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper</a>.</p></div><div id="fn90"><p><sup>90</sup>&nbsp;«&nbsp;preuve d’enjeu liquide&nbsp;»&nbsp;: Jacob Arluck, <em>Liquid Proof-of-Stake</em>, 30 juillet 2018&nbsp;: <a href="https://medium.com/tezos/liquid-proof-of-stake-aec2f7ef1da7" class="uri">https://medium.com/tezos/liquid-proof-of-stake-aec2f7ef1da7</a>.</p></div></div><p>De même que la preuve de travail peut être étendue en preuve de mémoire, la preuve d’enjeu peut être dérivée en plusieurs variantes. La preuve d’enjeu déléguée<a href="#fn89" class="footnote-ref" id="fnref89" role="doc-noteref"><sup>89</sup></a> prend ainsi en compte les jetons possédés mais aussi les jetons délégués aux validateurs. Il s’agit de la variante la plus répandue. Elle permet de mettre en place une preuve d’enjeu liquide (à la Tezos<a href="#fn90" class="footnote-ref" id="fnref90" role="doc-noteref"><sup>90</sup></a>), mais a néanmoins pour inconvénient de centraliser la validation. Il existe également d’autres variantes comme la preuve de conservation (Peercoin), la preuve de vélocité (Reddcoin) ou la preuve d’importance (NEM).</p>
+<p>De manière générale, on peut regrouper les mécanismes de résistance aux attaques Sybil des systèmes ouverts en deux catégories de preuve&nbsp;: les preuves externes, basées sur l’utilisation de l’énergie dans le monde physique, et les preuves internes, basées sur l’état du registre virtuel. Il y a ainsi une auto-référence dans le cas de la preuve d’enjeu, ce qui peut poser problème.</p>
+<p>Les défenseurs de la preuve d’enjeu prétendent que la preuve d’enjeu est plus sécurisée, car le coût d’une attaque est un ordre de grandeur plus élevé<a href="#fn91" class="footnote-ref" id="fnref91" role="doc-noteref"><sup>91</sup></a>. Une attaque de censure pourrait en outre faire baisser le prix de l’unité de compte, ce qui provoquerait une baisse de valeur du capital de l’attaquant. Nous affirmons l’inverse&nbsp;: la preuve d’enjeu offre une résistance à la censure moins forte que la preuve de travail.</p>
+<div class="no-row-height column-margin column-container"><div id="fn91"><p><sup>91</sup>&nbsp;«&nbsp;le coût d’une attaque est un ordre de grandeur plus élevé&nbsp;»&nbsp;: <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/pos-vs-pow/#security" class="uri">https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/pos-vs-pow/#security</a>.</p></div></div><p>Tout d’abord, réunir les jetons nécessaires est loin d’être une tâche impossible. Premièrement, tous les détenteurs ne sont pas impliqués dans le consensus, ce qui veut dire que seule la portion des jetons mis en jeu est concernée. Deuxièmement, contrairement à la preuve de travail qui exige 51&nbsp;% de la puissance de calcul pour perturber le système, le plupart des algorithmes par preuve d’enjeu sont des algorithmes classiques dont l’attaque ne nécessite que 34&nbsp;% des fonds en jeu. Troisièmement, une grande partie des jetons sont conservés par des acteurs centralisés qui offrent généralement des services de <em>staking</em> (incitant l’accumulation), et qui sont réglementés et donc particulièrement sensibles à la cooptation étatique.</p>
+<p>Ensuite, un défaut de la preuve d’enjeu est qu’elle permet une meilleure identification du validateur, associé à une clé publique liée aux fonds sous séquestre, que dans le cas de la preuve de travail, où les mineurs peuvent diriger leur puissance de calcul vers la chaîne libre plus discrètement. La validation par preuve d’enjeu est donc moins confidentielle que le minage qui est complètement anonyme par conception.</p>
+<p>Enfin, et surtout, la principale raison pour laquelle la preuve d’enjeu produit une résistance à la censure plus faible est le caractère interne de la preuve. Dans le cas de la preuve de travail, il est toujours possible de combattre la censure&nbsp;: il suffit de réunir une puissance de calcul supérieure aux censeurs, en construisant des machines et en apportant une énergie supplémentaire. Dans le cas de la preuve d’enjeu, il n’est pas possible de créer de nouvelles unités sans modifier les règles de consensus de sorte que les censeurs, qui contrôlent une majorité des jetons existants et touchent par conséquent une majorité des jetons créés, sont intouchables.</p>
+<p>Pour répondre à ce problème, les partisans de la preuve d’enjeu sur Ethereum prônent généralement le recours à l’accord social. Il ne s’agit pas seulement de sélectionner la chaîne valide manuellement comme nous l’avons expliqué précédemment, mais de rééquilibrer la distribution des jetons de façon à retrouver un système de validation qui ne censure pas. Puisque la création d’unités supplémentaires pose la question épineuse de la destination desdites unités, ce rééquilibrage consiste plutôt à détruire les fonds mis en jeu par les censeurs, une mesure appelée le <em>slashing</em> social<a href="#fn92" class="footnote-ref" id="fnref92" role="doc-noteref"><sup>92</sup></a>. Ce recours est notamment soutenu par Vitalik Buterin, qui écrivait la chose suivante en 2020&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="fn92"><p><sup>92</sup>&nbsp;Eric Wall, <em>The Case for Social Slashing</em>, 22 août 2022&nbsp;: <a href="https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7" class="uri">https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7</a>.</p></div><div id="fn93"><p><sup>93</sup>&nbsp;Vitalik Buterin, <em>Why Proof of Stake (Nov 2020)</em>, 6 novembre 2020&nbsp;: <a href="https://vitalik.ca/general/2020/11/06/pos2020.html" class="uri">https://vitalik.ca/general/2020/11/06/pos2020.html</a>.</p></div></div><p>«&nbsp;Pour d’autres attaques plus difficiles à détecter (notamment une coalition de 51&nbsp;% censurant tous les autres), la communauté peut se coordonner pour réaliser un soft fork activé par les utilisateurs (UASF) minoritaire dans lequel les fonds de l’attaquant sont [...] largement détruits (dans Ethereum, cela se fait via le “mécanisme de fuite d’inactivité”). Aucun “hard fork pour supprimer les pièces” explicite n’est nécessaire&nbsp;; à l’exception de la nécessité de coordonner l’UASF pour sélectionner un bloc minoritaire, tout le reste est automatisé et suit simplement l’exécution des règles du protocole<a href="#fn93" class="footnote-ref" id="fnref93" role="doc-noteref"><sup>93</sup></a>.&nbsp;»</p>
+<p>À l’heure d’écriture de ces lignes, la mesure n’a jamais été appliquée sur Ethereum. Le cas qui s’en rapproche le plus est le contentieux entre la Fondation Tron de Justin Sun et la communauté historique de Steem qui s’est conclu par le gel des fonds de la première par une intervention externe de la communauté en mars 2020. Cette intervention a provoqué une scission entre le protocole Steem contrôlé par la Fondation Tron et la plateforme Hive<a href="#fn94" class="footnote-ref" id="fnref94" role="doc-noteref"><sup>94</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn94"><p><sup>94</sup>&nbsp;«&nbsp; une scission entre le protocole Steem contrôlé par la Fondation Tron et la plateforme Hive&nbsp;»&nbsp;: Tim Copeland, <em>Steem vs Tron: The rebellion against a cryptocurrency empire</em>, 18 août 2020&nbsp;: <a href="https://decrypt.co/38050/steem-steemit-tron-justin-sun-cryptocurrency-war" class="uri">https://decrypt.co/38050/steem-steemit-tron-justin-sun-cryptocurrency-war</a>.</p></div></div><p>Le recours à l’accord social paraît une nouvelle fois être une bonne idée. Cependant, il s’agit clairement de jouer avec le feu&nbsp;: le risque de créer la confusion et de provoquer une scission est largement sous-estimé. De manière générale, c’est ce qui différencie la philosophie derrière la preuve d’enjeu de celle de la preuve de travail. Les défenseurs de la preuve d’enjeu ne modélisent pas la menace de la même manière, et c’est pourquoi le modèle de sécurité de Bitcoin est bien plus exigeant que celui d’Ethereum.</p>
+</section>
+<section id="consommation-dénergie-et-résistance-à-la-censure" class="level2 unnumbered page-columns page-full">
+<h2 class="unnumbered anchored" data-anchor-id="consommation-dénergie-et-résistance-à-la-censure">Consommation d’énergie et résistance à la censure</h2>
+<p>Ainsi, la preuve de travail joue un rôle essentiel dans la résistance à la censure de Bitcoin. Tout le génie de Nakamoto réside dans le fait d’avoir découvert un mécanisme de consensus basé sur une grandeur objective extérieure au système, qui permette la résolution de la censure sans intervention humaine au niveau du protocole, même face à une attaque étatique.</p>
+<p>Il s’avère que la mise en œuvre de cette preuve de travail consomme une importante quantité d’énergie électrique. Mais c’est cette consommation qui ancre le protocole dans le réel et c’est donc le prix à payer pour disposer d’un système réellement résistant à la censure. Elle peut être réduite, mais elle ne peut pas être évitée.</p>
+<p>La consommation d’énergie est l’un des arguments d’opposition à Bitcoin les plus récurrents, en raison de son supposé impact écologique<a href="#fn95" class="footnote-ref" id="fnref95" role="doc-noteref"><sup>95</sup></a>. Au vu de ce que nous avons dit dans ce chapitre, cette opposition de façade, loin de lutter contre la consommation d’énergie de la cryptomonnaie, contribue à renforcer le conflit qui existe entre le contrôle financier et la résistance à la censure, et par conséquent à augmenter l’énergie consommée des deux côtés. C’est pourquoi une bonne façon de réduire la consommation d’énergie de Bitcoin serait de prôner une plus grande concurrence monétaire et bancaire en vue de diminuer son utilité réelle et potentielle.</p>
+<div class="no-row-height column-margin column-container"><div id="fn95"><p><sup>95</sup>&nbsp;La première critique de la consommation d’énergie de Bitcoin a été faite par l’ancien cypherpunk John Gilmore en janvier 2009&nbsp;: «&nbsp;La dernière chose dont nous avons besoin est de déployer un système conçu pour brûler tous les cycles disponibles, consommant de l’électricité et générant du dioxyde de carbone, partout sur internet, afin de produire de petites quantités de dollars binaires pour faire passer des courriels ou des spams.&nbsp;» – John Gilmore, <em>Proof of Work -&gt; atmospheric carbon</em>, /01/2009 22:40:45&nbsp;: <a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/015042.html" class="uri">https://www.metzdowd.com/pipermail/cryptography/2009-January/015042.html</a>.</p></div><div id="fn96"><p><sup>96</sup>&nbsp;«&nbsp;proposition de l’abandon de la preuve de travail, telle que celle faite par Greenpeace en 2022&nbsp;»&nbsp;: Tyler Kruse, <em>Change The Code: Not The Climate — Greenpeace USA, EWG, Others Launch Campaign to Push Bitcoin to Reduce Climate Pollution</em>, 29 mars 2022&nbsp;: <a href="https://www.greenpeace.org/usa/news/change-the-code-not-the-climate-greenpeace-usa-ewg-others-launch-campaign-to-push-bitcoin-to-reduce-climate-pollution/" class="uri">https://www.greenpeace.org/usa/news/change-the-code-not-the-climate-greenpeace-usa-ewg-others-launch-campaign-to-push-bitcoin-to-reduce-climate-pollution/</a>.</p></div></div><p>La proposition de l’abandon de la preuve de travail, telle que celle faite par Greenpeace en 2022<a href="#fn96" class="footnote-ref" id="fnref96" role="doc-noteref"><sup>96</sup></a>, s’inscrit donc dans la deuxième catégorie d’attaques contre Bitcoin, à savoir les attaques sociales. Heureusement, Bitcoin dispose également d’un mécanisme de défense à ce niveau-là. Dans les chapitres suivants, nous décrirons comment le protocole peut être modifié et quels principes sous-jacents sont à l’œuvre dans sa détermination.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/le-consensus-par-le-minage.html" class="pagination-link" aria-label="Le consensus par le minage">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Le consensus par le minage</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/le-changement-de-la-monnaie.html" class="pagination-link" aria-label="Le changement de la monnaie">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le changement de la monnaie</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2024 Konsensus Network
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../presale.html">
+<p>Presale</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/konsensusn">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/konsensusnetwork">
+      <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/konsensusnetwork">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/konsensusnetwork">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
