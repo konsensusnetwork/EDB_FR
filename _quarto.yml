@@ -58,25 +58,24 @@ book:
     site: "@konsensusn"
   chapters:
     - index.qmd
-    - chapters/preface-de-jacques-favier.md
-    - chapters/remerciements.md
-    - chapters/avant-propos.md
-    - chapters/les-debuts-de-bitcoin.md
-    - chapters/une-croissance-conflictuelle.md
-    - chapters/des-racines-monetaires.md
-    - chapters/la-necessite-de-decentralisation.md
-    - chapters/un-mouvement-technologique.md
-    - chapters/la-cybermonnaie-avant-nakamoto.md
-    - chapters/la-valeur-de-l-information.md
-    - chapters/le-consensus-par-le-minage.md
-    - chapters/la-resistance-a-la-censure.md
-    - chapters/le-changement-de-la-monnaie.md
-    - chapters/la-determination-du-protocole.md
-    - chapters/les-rouages-de-la-machine.md
-    - chapters/les-contrats-autonomes.md
-    - chapters/le-passage-a-l-echelle.md
-    - chapters/l-avenir-de-bitcoin.md
-    - chapters/ordinals.md
+    - chapters/preface-de-jacques-favier.qmd
+    - chapters/remerciements.qmd
+    - chapters/avant-propos.qmd
+    - chapters/les-debuts-de-bitcoin.qmd
+    - chapters/une-croissance-conflictuelle.qmd
+    - chapters/des-racines-monetaires.qmd
+    - chapters/la-necessite-de-decentralisation.qmd
+    - chapters/un-mouvement-technologique.qmd
+    - chapters/la-cybermonnaie-avant-nakamoto.qmd
+    - chapters/la-valeur-de-l-information.qmd
+    - chapters/le-consensus-par-le-minage.qmd
+    - chapters/la-resistance-a-la-censure.qmd
+    - chapters/le-changement-de-la-monnaie.qmd
+    - chapters/la-determination-du-protocole.qmd
+    - chapters/les-rouages-de-la-machine.qmd
+    - chapters/les-contrats-autonomes.qmd
+    - chapters/le-passage-a-l-echelle.qmd
+    - chapters/l-avenir-de-bitcoin.qmd
 
 format:
   html:
