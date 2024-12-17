@@ -173,6 +173,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/preface-de-jacques-favier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface de Jacques Favier</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remerciements</span></a>
   </div>
@@ -273,12 +279,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -358,7 +358,7 @@ window.Quarto = {
 <p>Le script de verrouillage d’une pièce contient le plus souvent une clé publique ou une empreinte déterminée, de sorte que la pièce peut être vue comme étant détenue par l’adresse correspondante. De ce fait, deux pièces partageant le même script de verrouillage sont détenues par la même adresse. Un compte dans Bitcoin correspond à l’ensemble des adresses contrôlées par un utilisateur. Le solde est récupéré en balayant l’ensemble des UTXO de façon à retrouver les pièces détenues par ces adresses.</p>
 <div id="fig:coins-utxos" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/coins-utxos-account.eps" class="img-fluid"></p>
+<p><img src="img/coins-utxos-account.png" class="img-fluid figure-img"></p>
 <figcaption>Exemples de pièces détenues par un même compte.</figcaption>
 </figure>
 </div>
@@ -367,21 +367,21 @@ window.Quarto = {
 <p>Considérons quelques exemples en ignorant ces frais et supposons qu’Alice veuille procéder à un paiement. Si Alice possède une pièce de 12 mBTC (0,012 BTC) et veut donner 7 mBTC à Bob, alors elle doit construire et signer une transaction ayant pour entrée cette pièce de 12 mBTC et pour sorties une pièce de 7 mBTC vers l’adresse de Bob et une pièce restante de 5 mBTC vers sa propre adresse. Cette transaction est représentée par la figure&nbsp;<a href="#fig:transaction-1i-2o" data-reference-type="ref" data-reference="fig:transaction-1i-2o">12.2</a>.</p>
 <div id="fig:transaction-1i-2o" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/transaction-1i-2o.eps" class="img-fluid"></p>
+<p><img src="img/transaction-1i-2o.png" class="img-fluid figure-img"></p>
 <figcaption>Schéma d’une transaction à 1 entrée et 2 sorties.</figcaption>
 </figure>
 </div>
 <p>Si Alice ne possède pas une pièce ayant une valeur faciale supérieure à 7 mBTC, alors elle doit regrouper des pièces pour réunir un montant suffisant en entrée, par exemple une pièce de 6 mBTC et une pièce de 2 mBTC. Comme précédemment, elle doit créer une sortie complémentaire vers elle-même dans le but de se rendre la monnaie. Dans ce cas, illustré sur la figure&nbsp;<a href="#fig:transaction-2i-2o" data-reference-type="ref" data-reference="fig:transaction-2i-2o">12.3</a>, on peut deviner en observant la transaction que la pièce de 7 mBTC est le résultat du paiement, car il serait économiquement irrationnel de fusionner plusieurs pièces pour envoyer 1 mBTC.</p>
 <div id="fig:transaction-2i-2o" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/transaction-2i-2o.eps" class="img-fluid"></p>
+<p><img src="img/transaction-2i-2o.png" class="img-fluid figure-img"></p>
 <figcaption>Schéma d’une transaction à 2 entrées et 2 sorties.</figcaption>
 </figure>
 </div>
 <p>Si Alice désire transférer l’intégralité des fonds vers un autre compte, alors elle rassemble l’ensemble de ses pièces (6 mBTC, 4 mBTC, 2 mBTC) pour les envoyer vers une adresse unique, comme montré sur la figure&nbsp;<a href="#fig:transaction-3i-1o" data-reference-type="ref" data-reference="fig:transaction-3i-1o">12.4</a>. C’est ce qu’on appelle une consolidation de portefeuille, qui peut être identifiée par un observateur extérieur en raison de l’unicité de la sortie.</p>
 <div id="fig:transaction-3i-1o" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/transaction-3i-1o.eps" class="img-fluid"></p>
+<p><img src="img/transaction-3i-1o.png" class="img-fluid figure-img"></p>
 <figcaption>Schéma d’une transaction à 3 entrées et 1 sortie.</figcaption>
 </figure>
 </div>
@@ -406,7 +406,7 @@ window.Quarto = {
 <p>L’exécution successive de ces deux scripts (voir figure&nbsp;<a href="#fig:bitcoin-stack" data-reference-type="ref" data-reference="fig:bitcoin-stack">12.5</a>) a lieu comme suit&nbsp;: 1)&nbsp;la valeur 21 est placée sur la pile&nbsp;; 2)&nbsp;la valeur 17 est placée au-dessus&nbsp;; 3)&nbsp;l’opérateur <code>OP_ADD</code> additionne les deux valeurs en haut de la pile et les remplace par leur somme, ici 38&nbsp;; 4)&nbsp;la valeur 38 est placée au sommet de la pile&nbsp;; 5)&nbsp;l’opérateur <code>OP_EQUAL</code> compare les deux valeurs en haut de la pile et les remplace par le booléen d’égalité, ici <code>TRUE</code>. L’exécution du script est donc un succès.</p>
 <div id="fig:bitcoin-stack" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/bitcoin-stack-example.eps" class="img-fluid"></p>
+<p><img src="img/bitcoin-stack-example.png" class="img-fluid figure-img"></p>
 <figcaption>Exécution d’un script d’addition sur la pile de données.</figcaption>
 </figure>
 </div>
@@ -486,7 +486,7 @@ window.Quarto = {
 <p>Les trois signaux concernant les sorties peuvent être associés à <code>, ce qui permet de former finalement six types de signatures différents, représentés sur la figure&nbsp;[12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment</code> même si certains autres types peuvent parfois trouver une utilité. C’est notamment le cas de `` qui permet de construire des transactions de type <em>anyone-can-pay</em>, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.</p>
 <div id="fig:signature-hash-types" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/signature-hash-types.eps" class="img-fluid"></p>
+<p><img src="img/signature-hash-types.png" class="img-fluid figure-img"></p>
 <figcaption>Les différents types de signatures dans Bitcoin.</figcaption>
 </figure>
 </div>
@@ -560,7 +560,7 @@ récupération&gt;</code></pre>
 <p>Cependant, cette transparence est toute relative, car les données de la chaîne ne révèlent pas l’identité des personnes&nbsp;: le système est pseudonyme, dans le sens où il recense les mouvements entre les adresses, et pas entre les personnes. Le modèle de confidentialité de Bitcoin, décrit par Satoshi Nakamoto dans le livre blanc en 2008, consiste ainsi à garder secret le lien qui existe entre l’identité d’une personne et ses adresses<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;«&nbsp;Le modèle bancaire traditionnel atteint un certain niveau de confidentialité en limitant l’accès aux informations aux parties concernées et au tiers de confiance. La nécessité d’annoncer publiquement toutes les transactions exclut cette méthode, mais la confidentialité peut toujours être préservée en interrompant le flux d’informations à un autre endroit&nbsp;: en gardant les clés publiques anonymes. Le public peut voir que quelqu’un envoie un montant à quelqu’un d’autre, mais ne dispose pas d’informations reliant la transaction à qui que ce soit.&nbsp;» – Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><embed src="img/white-paper-privacy-model-fr.eps" class="img-fluid"></p>
+<p><img src="img/white-paper-privacy-model-fr.png" class="img-fluid figure-img"></p>
 <figcaption>Modèle de confidentialité présenté dans le livre blanc de Bitcoin.</figcaption>
 </figure>
 </div>
@@ -571,7 +571,7 @@ récupération&gt;</code></pre>
 <div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;«&nbsp;BitLaundry, une plateforme qui a été lancée en septembre 2010 par Peter Vessenes&nbsp;»&nbsp;: Peter Vessenes, <em>Announcing: BitLaundry – decorrelated payment service</em>, /09/2010 05:52:25 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=963.msg11823#msg11823" class="uri">https://bitcointalk.org/index.php?topic=963.msg11823#msg11823</a>.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;Gregory Maxwell, <em>CoinJoin: Bitcoin privacy for the real world</em>, /08/2013 02:32:31 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902" class="uri">https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902</a>.</p></div></div><p>Une technique pour procéder à ce type de mélange sans devoir passer par un intermédiaire a été développée par la suite&nbsp;: c’était CoinJoin, dont la description formelle a été faite en août 2013 par Gregory Maxwell<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Cette méthode consiste à impliquer les pièces dans une transaction jointe collaborative qui brise la correspondance entre les entrées et une partie des sorties. La transaction classique que l’on se représente est celle de plusieurs utilisateurs qui signent chacun une entrée, dont le même nombre de sorties possèdent un montant égal, et dont le reste des sorties forment les sorties complémentaires. Dans ce cas, les sorties complémentaires sont toujours liées aux entrées, contrairement aux sorties principales qui sont indiscernables les unes des autres.</p>
 <div id="fig:coinjoin-transaction" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/coinjoin-transaction-5i-10o.eps" class="img-fluid"></p>
+<p><img src="img/coinjoin-transaction-5i-10o.png" class="img-fluid figure-img"></p>
 <figcaption>Exemple d’une transaction CoinJoin à 5 utilisateurs.</figcaption>
 </figure>
 </div>
@@ -581,7 +581,7 @@ récupération&gt;</code></pre>
 <p>Reprenons notre exemple d’Alice qui paie 7 mBTC à Bob en réunissant deux pièces de 6 et 2 mBTC afin d’atteindre un montant suffisant en entrée. Dans ce cas, les deux entrées sont supposément liées entre elles (heuristique de co-dépense) et liées à la sortie de 1 mBTC (heuristique de la sortie complémentaire). Ici, comme représenté sur la figure&nbsp;<a href="#fig:payjoin-transaction" data-reference-type="ref" data-reference="fig:payjoin-transaction">12.8</a>, l’application de PayJoin consiste pour le commerçant à inclure une ou plusieurs pièces en entrée et à augmenter d’autant le montant de la sortie qui lui est destinée, de 7 mBTC par exemple.</p>
 <div id="fig:payjoin-transaction" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/payjoin-transaction-3i-2o.eps" class="img-fluid"></p>
+<p><img src="img/payjoin-transaction-3i-2o.png" class="img-fluid figure-img"></p>
 <figcaption>Exemple d’une transaction PayJoin.</figcaption>
 </figure>
 </div>

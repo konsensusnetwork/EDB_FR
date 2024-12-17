@@ -173,6 +173,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/preface-de-jacques-favier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface de Jacques Favier</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remerciements</span></a>
   </div>
@@ -271,12 +277,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
   </div>
 </li>
     </ul>
@@ -484,7 +484,7 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <p>Une fois qu’elles ont été encodées, les adresses peuvent être partagées facilement d’une personne à une autre. Grâce à la somme de contrôle, faire une faute de frappe ne crée théoriquement pas de risque, car le logiciel la détectera et refusera de procéder au paiement. Les adresses sont aussi souvent représentées par des codes QR (voir figure&nbsp;<a href="#fig:address-qr-codes" data-reference-type="ref" data-reference="fig:address-qr-codes">7.3</a>), plus adaptés pour l’interaction avec un téléphone multifonction.</p>
 <div id="fig:address-qr-codes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/address-qr-codes.eps" class="img-fluid"></p>
+<p><img src="img/address-qr-codes.png" class="img-fluid figure-img"></p>
 <figcaption>Codes QR des adresses.</figcaption>
 </figure>
 </div>
@@ -523,7 +523,7 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <p>Le nombre de mots de la phrase dépend de la taille de l’entropie désirée. Ainsi une entropie de 128 bits est dotée d’une somme de contrôle de 4 bits, ce qui donne une phrase de 12 mots de 11 bits. Pour 256 bits, on a une somme de contrôle de 8 bits et donc une phrase de 24 mots.</p>
 <div id="fig:from-entropy-to-mnemonic" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/from-entropy-to-mnemonic.eps" class="img-fluid"></p>
+<p><img src="img/from-entropy-to-mnemonic.png" class="img-fluid figure-img"></p>
 <figcaption>De l’entropie à la phrase secrète.</figcaption>
 </figure>
 </div>
@@ -533,7 +533,7 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <p>La dérivation des clés se fait grâce à la fonction HMAC-SHA512. Tout d’abord, on procède à une première dérivation à partir de la graîne. On applique le HMAC à la graine et au sel cryptographique <code>Bitcoin seed</code>, ce qui nous donne une clé maîtresse (premiers 256 bits du résultat) et un code de chaîne maître (derniers 256 bits du résultat). Le passage de la phrase secrète à la clé maîtresse et au code de chaîne maître est résumé dans la figure&nbsp;<a href="#fig:from-mnemonic-to-root" data-reference-type="ref" data-reference="fig:from-mnemonic-to-root">7.5</a>.</p>
 <div id="fig:from-mnemonic-to-root" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/from-mnemonic-to-root.eps" class="img-fluid"></p>
+<p><img src="img/from-mnemonic-to-root.png" class="img-fluid figure-img"></p>
 <figcaption>De la phrase secrète à la clé maîtresse.</figcaption>
 </figure>
 </div>
@@ -548,7 +548,7 @@ HP3cUapsPsqEd52TRk1vhkgkhtAReezgSBi4ELh3YoxjmZgKBk7U98h</code></pre>
 <p>La dérivation normale fait intervenir la clé publique étendue dans le processus, ce qui rend possibles deux opérations&nbsp;: l’obtention de la clé publique (étendue) enfant à partir de la clé publique (étendue) parent, et l’obtention de la clé privée (étendue) enfant à partir de la clé privée (étendue) parent. Le fonctionnement de ce type de dérivation est schématisé par la figure&nbsp;<a href="#fig:normal-child-key-derivation" data-reference-type="ref" data-reference="fig:normal-child-key-derivation">7.6</a>.</p>
 <div id="fig:normal-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/normal-child-key-derivation.eps" class="img-fluid"></p>
+<p><img src="img/normal-child-key-derivation.png" class="img-fluid figure-img"></p>
 <figcaption>Dérivation normale des clés par HMAC-SHA512.</figcaption>
 </figure>
 </div>
@@ -557,7 +557,7 @@ HP3cUapsPsqEd52TRk1vhkgkhtAReezgSBi4ELh3YoxjmZgKBk7U98h</code></pre>
 <p>C’est pour cela qu’il existe un deuxième type de dérivation, la dérivation endurcie (<em>hardened derivation</em>), qui, contrairement à la première, est restreinte au calcul de clés privées (étendues) enfant, ce qui assure une meilleure sécurité. Celle-ci est représentée dans la figure&nbsp;<a href="#fig:hardened-child-key-derivation" data-reference-type="ref" data-reference="fig:hardened-child-key-derivation">7.7</a>.</p>
 <div id="fig:hardened-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/hardened-child-key-derivation.eps" class="img-fluid"></p>
+<p><img src="img/hardened-child-key-derivation.png" class="img-fluid figure-img"></p>
 <figcaption>Dérivation endurcie des clés par HMAC-SHA512.</figcaption>
 </figure>
 </div>

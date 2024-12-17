@@ -173,6 +173,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/preface-de-jacques-favier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface de Jacques Favier</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remerciements</span></a>
   </div>
@@ -273,12 +279,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -343,7 +343,7 @@ window.Quarto = {
 <p>Cependant, un petit nombre de ces généraux s’avèrent être des traîtres au service de l’ennemi qui essaient de semer la confusion au sein de l’armée. Ces traîtres envoient ainsi des messages contradictoires à leurs interlocuteurs, pour faire en sorte que certains généraux loyaux attaquent, et que d’autres battent en retraite au moment de l’assaut, causant par là une défaite certaine, comme illustré sur la figure&nbsp;<a href="#fig:byzantine-generals-attack" data-reference-type="ref" data-reference="fig:byzantine-generals-attack">8.1</a>.</p>
 <div id="fig:byzantine-generals-attack" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/byzantine-generals-attack.eps" class="img-fluid"></p>
+<p><img src="img/byzantine-generals-attack.png" class="img-fluid figure-img"></p>
 <figcaption>Attaque des généraux byzantins contre la ville&nbsp;: succès et échec.</figcaption>
 </figure>
 </div>
@@ -457,7 +457,7 @@ window.Quarto = {
 <p>Le fait de placer la racine dans l’entête interdit à quiconque de modifier, d’ajouter ou de supprimer une transaction, sans modifier l’entête lui-même et devoir reproduire la preuve de travail. L’ensemble des transactions est ainsi attaché à l’entête, ce qui assure l’intégrité du bloc.</p>
 <div id="fig:merkle-tree" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/merkle-tree.eps" class="img-fluid"></p>
+<p><img src="img/merkle-tree.png" class="img-fluid figure-img"></p>
 <figcaption>Représentation d’un arbre de Merkle à six feuilles.</figcaption>
 </figure>
 </div>
@@ -486,7 +486,7 @@ window.Quarto = {
 \mathtt{0x000000000000000000065aebf106c8824f4b565d54d6d6df32498b2b041cfd07} &amp; \le \\ \mathtt{0x00000000000000000009ed880000000000000000000000000000000000000000} &amp; ~\end{aligned}\]</span></p>
 <div id="fig:bitcoin-segwit-block" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/bitcoin-segwit-block.eps" class="img-fluid"></p>
+<p><img src="img/bitcoin-segwit-block.png" class="img-fluid figure-img"></p>
 <figcaption>Schéma d’un bloc de Bitcoin (avec SegWit).</figcaption>
 </figure>
 </div>
@@ -543,7 +543,7 @@ etc...</p>
 <p>Il se produit alors ce qu’on appelle une recoordination (<em>reorganization</em>) qui réconcilie les nœuds du réseau entre eux. Le bloc de la branche faible est considéré comme incorrect et mis de côté. On dit que ce bloc est rendu orphelin (<em>orphaned</em>) car il perd son attachement à la chaîne mère<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>. La branche forte (possédant le plus de travail accumulé) est considérée comme la version correcte de la chaîne.</p>
 <div class="no-row-height column-margin column-container"><div id="fn43"><p><sup>43</sup>&nbsp;L’appellation (quelque peu ambigüe) de «&nbsp;bloc orphelin&nbsp;» a été introduite par Satoshi Nakamoto au sein de la première version du logiciel. On parle aussi de «&nbsp;bloc oncle&nbsp;» (en référence au fait qu’il ne donne pas de descendance fertile) ou bien de «&nbsp;bloc périmé&nbsp;» (<em>stale block</em>).</p></div></div><div id="fig:blockchain-common-fork" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/blockchain-common-fork.eps" class="img-fluid"></p>
+<p><img src="img/blockchain-common-fork.png" class="img-fluid figure-img"></p>
 <figcaption>Schéma d’un embranchement commun de la chaîne.</figcaption>
 </figure>
 </div>
@@ -568,7 +568,7 @@ etc...</p>
 <p>La troisième étape est la recoordination de chaîne, représentée sur la figure&nbsp;<a href="#fig:doublespending-attack" data-reference-type="ref" data-reference="fig:doublespending-attack">8.5</a>. L’attaquant a continué de miner sa chaîne parallèle jusqu’à la livraison du bien économique acheté. À ce moment-là, il dévoile sa chaîne au reste du réseau, qui doit accepter celle-ci en vertu du principe de la chaîne la plus longue. Les nœuds procèdent alors à une recoordination&nbsp;: les blocs de l’ancienne chaîne sont écartés (rendus orphelins), leurs transactions sont remises dans la mempool et les nouveaux blocs sont vérifiés et ajoutés à la chaîne. Comme la transaction légitime dépense les mêmes fonds que la transaction frauduleuse, qui est incluse dans la nouvelle chaîne, cette transaction légitime est invalidée en tant que double dépense. Le commerçant ne possède plus les bitcoins, qui reviennent à l’attaquant.</p>
 <div id="fig:doublespending-attack" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/mining-attack-doublespending.eps" class="img-fluid"></p>
+<p><img src="img/mining-attack-doublespending.png" class="img-fluid figure-img"></p>
 <figcaption>Attaque de double dépense par recoordination de chaîne.</figcaption>
 </figure>
 </div>
@@ -596,7 +596,7 @@ etc...</p>
 <p>Les coopératives ont pour habitude de signaler les blocs qu’elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751&nbsp;005 contient la chaîne de caractères ``, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n’est pas obligatoire (le minage est anonyme par essence), mais permet d’avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure&nbsp;<a href="#fig:hashrate-distribution" data-reference-type="ref" data-reference="fig:hashrate-distribution">8.6</a>) et d’estimer par conséquent la centralisation de l’activité minière.</p>
 <div id="fig:hashrate-distribution" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/hashrate-distribution-coin-dance-week-20231012.eps" class="img-fluid"></p>
+<p><img src="img/hashrate-distribution-coin-dance-week-20231012.png" class="img-fluid figure-img"></p>
 <figcaption>Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source&nbsp;: coin.dance)</figcaption>
 </figure>
 </div>

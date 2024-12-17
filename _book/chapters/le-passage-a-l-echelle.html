@@ -173,6 +173,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/preface-de-jacques-favier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface de Jacques Favier</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remerciements</span></a>
   </div>
@@ -271,12 +277,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../chapters/l-avenir-de-bitcoin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
   </div>
 </li>
     </ul>
@@ -380,7 +380,7 @@ window.Quarto = {
 <p>Deux aspects différencient le modèle de sécurité d’une chaîne latérale de celui de la chaîne principale&nbsp;: le maintien de l’ancrage bilatéral et le mécanisme de consensus. Le premier consiste à décider qui peut déverrouiller les fonds lors d’un transfert de la chaîne latérale vers la chaîne principale. En effet, puisque la chaîne latérale est voulue comme un complément (et pas comme une extension), les nœuds de la chaîne principale n’ont pas connaissance de cette chaîne latérale. De ce fait, le retrait est soumis à une certaine confiance, placée usuellement dans une fédération de participants qui se méfient les uns des autres<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;«&nbsp;une fédération de participants qui se méfient les uns des autres&nbsp;»&nbsp;: Johnny Dilley, Andrew Poelstra, Jonathan Wilkins, Marta Piekarska, Ben Gorlick, Mark Friedenbach, <em>Strong Federations: An Interoperable Blockchain Solution to Centralized Third-Party Risks</em>, 2016&nbsp;: <a href="https://blockstream.com/strong-federations.pdf" class="uri">https://blockstream.com/strong-federations.pdf</a>.</p></div></div><div id="fig:sidechain-two-way-peg" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/sidechain-two-way-peg.eps" class="img-fluid"></p>
+<p><img src="img/sidechain-two-way-peg.png" class="img-fluid figure-img"></p>
 <figcaption>Chaîne latérale&nbsp;: dépôt, transfert et retrait.</figcaption>
 </figure>
 </div>
@@ -399,7 +399,7 @@ window.Quarto = {
 <p>Le principe du réseau Lightning est de router les paiements au travers de ces canaux par l’intermédiaire de HTLC, qui sont des contrats d’engagement plus complexes permettant de mettre à jour les canaux concernés<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. Un paiement transite sur le réseau moyennant des frais minimes qui vont aux nœuds le relayant. Le réseau Lightning est donc semblable à un boulier, dont les tiges sont des canaux et dont les boules sont les satoshis qui transitent d’un côté ou de l’autre des canaux, comme on peut le voir sur la figure&nbsp;<a href="#fig:lightning-network-abacus" data-reference-type="ref" data-reference="fig:lightning-network-abacus">14.2</a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn37"><p><sup>37</sup>&nbsp;En pratique, ces HTLC sont souvent aussi utilisés pour mettre à jour les canaux directement, afin de simplifier la mise en œuvre et d’améliorer la confidentialité. – Voir Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, «&nbsp;Routing on a Network of Payment Channels&nbsp;», in <em>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments</em>, O’Reilly Media, 2022, pp.&nbsp;185–207.</p></div></div><div id="fig:lightning-network-abacus" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/lightning-network-abacus.eps" class="img-fluid"></p>
+<p><img src="img/lightning-network-abacus.png" class="img-fluid figure-img"></p>
 <figcaption>Paiement de 3&nbsp;mBTC sur le réseau Lightning.</figcaption>
 </figure>
 </div>

@@ -173,6 +173,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/preface-de-jacques-favier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface de Jacques Favier</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/remerciements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remerciements</span></a>
   </div>
@@ -273,12 +279,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L’avenir de Bitcoin</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/ordinals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ordinals</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -353,7 +353,7 @@ window.Quarto = {
 </ul>
 <div id="fig:escrow-contract" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/escrow-contract.eps" class="img-fluid"></p>
+<p><img src="img/escrow-contract.png" class="img-fluid figure-img"></p>
 <figcaption>Contrat de dépôt fiduciaire.</figcaption>
 </figure>
 </div>
@@ -366,7 +366,7 @@ window.Quarto = {
 <p>D’un point de vue technique, il s’agit de créer une transaction dite <em>anyone-can-pay</em> («&nbsp;tout le monde peut payer&nbsp;») où la signature de chaque contributeur ne prend en compte que la sortie transactionnelle de la levée de fonds et l’entrée du contributeur en question, donnant la possibilité d’ajouter des entrées (voir figure&nbsp;<a href="#fig:sighash-anyonecanpay" data-reference-type="ref" data-reference="fig:sighash-anyonecanpay">13.2</a>). La transaction résultante n’est valide que si le montant en entrée atteint le montant indiqué en sortie, de sorte que les contributeurs conservent le contrôle de leurs fonds jusqu’à la réalisation du paiement total et peuvent se retirer à tout moment.</p>
 <div id="fig:sighash-anyonecanpay" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/sighash-anyonecanpay.eps" class="img-fluid"></p>
+<p><img src="img/sighash-anyonecanpay.png" class="img-fluid figure-img"></p>
 <figcaption>Transaction de financement participatif.</figcaption>
 </figure>
 </div>
@@ -385,7 +385,7 @@ window.Quarto = {
 <p>Lorsque les transactions d’engagement ont toutes deux été confirmées sur leurs chaînes respectives, la seconde phase de l’échange atomique, la phase de collecte, peut commencer. Alice construit, signe et diffuse une transaction de collecte qui lui permet de récupérer les 10&nbsp;LTC de Bob. Pour cela, elle fournit le secret au sein de la transaction et, ce faisant, le révèle nécessairement à Bob. Finalement, Bob peut lui-aussi construire, signer et diffuser une transaction qui lui octroie les 0,03 BTC sur son compte. De cette manière, l’échange est clos&nbsp;!</p>
 <div id="fig:atomic-swap-contract" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/atomic-swap-contract.eps" class="img-fluid"></p>
+<p><img src="img/atomic-swap-contract.png" class="img-fluid figure-img"></p>
 <figcaption>Contrats et transactions dans un échange atomique.</figcaption>
 </figure>
 </div>
@@ -415,7 +415,7 @@ window.Quarto = {
 <div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, «&nbsp;Payment Channels&nbsp;», in <em>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments</em>, O’Reilly Media, 2022, pp.&nbsp;149–184.</p></div></div><p>La révélation de la clé de révocation à chaque étape de mise à jour rend possible l’activation d’un mécanisme de punition à tout moment. Si l’une des deux parties diffuse une transaction d’engagement correspondant à un état antérieur du canal, alors l’autre peut récupérer <em>l’intégralité</em> des fonds du canal. Par exemple, Alice pourrait récupérer les fonds de Bob si ce dernier était amené à diffuser le précédent état du canal dans le but d’«&nbsp;annuler&nbsp;» le dernier paiement réalisé.</p>
 <div id="fig:poon-dryja-contracts" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/lightning-poon-dryja-channel-contracts.eps" class="img-fluid"></p>
+<p><img src="img/lightning-poon-dryja-channel-contracts.png" class="img-fluid figure-img"></p>
 <figcaption>Contrats et transactions dans un canal de paiement de Poon-Dryja&nbsp;: cas d’un paiement de Bob de 2&nbsp;mBTC à Alice.</figcaption>
 </figure>
 </div>
@@ -434,7 +434,7 @@ window.Quarto = {
 <p>Ici il n’y a plus besoin de recourir à des clés de révocation pour rendre les anciens états du canal inexploitables&nbsp;: ce sont les transactions elles-mêmes qui ont ce rôle. Eltoo fait intervenir ce qu’on appelle des transactions flottantes, qui peuvent dépenser les fonds issus de n’importe quelle transaction de mise à jour précédente. De cette manière, chaque transaction de mise à jour est flottante, ainsi que chaque transaction de règlement, ce qui permet d’omettre toutes les mises à jour précédentes. De plus, un numéro d’état est inscrit dans chaque transaction pour ordonner les transactions et ainsi éviter la diffusion d’un état antérieur.</p>
 <div id="fig:eltoo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/eltoo-offchain-protocol.eps" class="img-fluid"></p>
+<p><img src="img/eltoo-offchain-protocol.png" class="img-fluid figure-img"></p>
 <figcaption>Aperçu du protocole Eltoo.</figcaption>
 </figure>
 </div>
@@ -503,7 +503,7 @@ window.Quarto = {
 <p>Le premier type de métaprotocole qui a été élaboré est le procédé des <em>colored coins</em>, ou pièces colorées en français, qui consiste à marquer des pièces (UTXO) par l’inscription annexe de données, comme montré sur la figure&nbsp;<a href="#fig:colored-coin" data-reference-type="ref" data-reference="fig:colored-coin">13.7</a>. Chaque type de jeton créé est lié à un identifiant, que l’on peut assimiler à une couleur, d’où le nom de ce procédé. L’idée a été présentée en 2012 par Yoni Assia et Meni Rosenfeld<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn32"><p><sup>32</sup>&nbsp;Yoni Assia, <em>bitcoin 2.X (aka Colored Bitcoin) – initial specs</em>, 27 mars 2012&nbsp;: <a href="https://yoniassia.com/coloredbitcoin/" class="uri">https://yoniassia.com/coloredbitcoin/</a>&nbsp;; Meni Rosenfeld, <em>Overview of Colored Coins</em>, 4 décembre 2012&nbsp;: <a href="https://bitcoil.co.il/BitcoinX.pdf" class="uri">https://bitcoil.co.il/BitcoinX.pdf</a>.</p></div></div><div id="fig:colored-coin" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/colored-coin.eps" class="img-fluid"></p>
+<p><img src="img/colored-coin.png" class="img-fluid figure-img"></p>
 <figcaption>Création et transfert d’un jeton émis sous la forme d’un colored coin.</figcaption>
 </figure>
 </div>
@@ -531,7 +531,7 @@ window.Quarto = {
 <p>Taproot repose sur un arbre de hachage, appelé un MAST<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>, dont les feuilles sont les clauses du contrat, c’est-à-dire les conditions de dépense. Lors de l’exécution du MAST, les participants concernés ont seulement besoin de révéler la clause appliquée et de fournir les empreintes liées aux autres clauses (chemin de Merkle), comme montré sur la figure&nbsp;<a href="#fig:taproot-mast" data-reference-type="ref" data-reference="fig:taproot-mast">13.8</a>. Les autres conditions de dépense ne sont ainsi pas révélées.</p>
 <div class="no-row-height column-margin column-container"><div id="fn54"><p><sup>54</sup>&nbsp;L’acronyme MAST signifie originellement <em>Merklized Abstract Syntax Trees</em>, ou «&nbsp;arbre syntaxique abstrait merkélisé&nbsp;» en français, et se réfère aux structures de données décrites par le BIP-114. Dans Taproot, ce ne sont pas vraiment des arbres syntaxiques abstraits qui interviennent, mais le terme reste utilisé. Les arbres de hachage de Taproot peuvent dans ce cas être appelés des <em>Merklized Alternative Script Trees</em>, par rétroacronymie. Voir Anthony Towns, <em>[bitcoin-dev] Safer sighashes and more granular SIGHASH_NOINPUT</em>, /11/2018 05:03:30 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html</a>.</p></div></div><div id="fig:taproot-mast" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><embed src="img/taproot-mast.eps" class="img-fluid"></p>
+<p><img src="img/taproot-mast.png" class="img-fluid figure-img"></p>
 <figcaption>MAST impliquant les clauses d’un contrat.</figcaption>
 </figure>
 </div>
