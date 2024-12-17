@@ -18,7 +18,7 @@ Le problème est énoncé sous la forme d'une métaphore faisant intervenir des 
 
 Cependant, un petit nombre de ces généraux s'avèrent être des traîtres au service de l'ennemi qui essaient de semer la confusion au sein de l'armée. Ces traîtres envoient ainsi des messages contradictoires à leurs interlocuteurs, pour faire en sorte que certains généraux loyaux attaquent, et que d'autres battent en retraite au moment de l'assaut, causant par là une défaite certaine, comme illustré sur la figure [8.1](#fig:byzantine-generals-attack){reference-type="ref" reference="fig:byzantine-generals-attack"}.
 
-![Attaque des généraux byzantins contre la ville : succès et échec.](img/byzantine-generals-attack.eps){#fig:byzantine-generals-attack}
+![Attaque des généraux byzantins contre la ville : succès et échec.](img/byzantine-generals-attack.png){#fig:byzantine-generals-attack}
 
 Le problème est de trouver une stratégie (c'est-à-dire un algorithme) permettant de s'assurer que tous les généraux loyaux se mettront d'accord sur le plan de bataille. Les traîtres battront alors en retraite, mais puisque leur nombre est supposément restreint, l'attaque sera quand même un succès.
 
@@ -170,7 +170,7 @@ La racine de Merkle du bloc 751 005 est ainsi :
 
 Le fait de placer la racine dans l'entête interdit à quiconque de modifier, d'ajouter ou de supprimer une transaction, sans modifier l'entête lui-même et devoir reproduire la preuve de travail. L'ensemble des transactions est ainsi attaché à l'entête, ce qui assure l'intégrité du bloc.
 
-![Représentation d'un arbre de Merkle à six feuilles.](img/merkle-tree.eps){#fig:merkle-tree}
+![Représentation d'un arbre de Merkle à six feuilles.](img/merkle-tree.png){#fig:merkle-tree}
 
 Cette organisation se révèle particulièrement utile pour les portefeuilles légers (dits à vérification de paiement simplifiée ou SPV) qui ne conservent pas la chaîne de blocs entière mais uniquement la chaîne des entêtes, qui est bien moins volumineuse (un peu plus de 62 Mio en novembre 2023). En effet, pour s'assurer de la présence d'une transaction dans un bloc, ils peuvent se contenter de demander les informations liées à la branche (chemin de Merkle) et procéder aux hachages eux-mêmes[^593]. Par exemple, un utilisateur voulant vérifier la confirmation de la transaction $\mathrm{tx}_D$ doit simplement demander les informations $H_C$, $H_{A\!B}$ et $H_{E\!F\!E\!F}$ aux nœuds du réseau et procéder aux différents hachages pour comparer la racine obtenue avec celle contenue dans l'entête. Cela a pour effet de réduire considérablement la charge des portefeuilles légers.
 
@@ -207,7 +207,7 @@ Comme on l'a dit, le résultat est utilisé comme identifiant du bloc. La preuve
 $$\begin{aligned}
 \mathtt{0x000000000000000000065aebf106c8824f4b565d54d6d6df32498b2b041cfd07} & \le \\ \mathtt{0x00000000000000000009ed880000000000000000000000000000000000000000} & ~\end{aligned}$$
 
-![Schéma d'un bloc de Bitcoin (avec SegWit).](img/bitcoin-segwit-block.eps){#fig:bitcoin-segwit-block}
+![Schéma d'un bloc de Bitcoin (avec SegWit).](img/bitcoin-segwit-block.png){#fig:bitcoin-segwit-block}
 
 ## Le revenu du minage {#le-revenu-du-minage .unnumbered}
 
@@ -297,7 +297,7 @@ Le réseau passe par trois étapes. Tout d'abord, il se comporte de manière att
 
 Il se produit alors ce qu'on appelle une recoordination (*reorganization*) qui réconcilie les nœuds du réseau entre eux. Le bloc de la branche faible est considéré comme incorrect et mis de côté. On dit que ce bloc est rendu orphelin (*orphaned*) car il perd son attachement à la chaîne mère[^614]. La branche forte (possédant le plus de travail accumulé) est considérée comme la version correcte de la chaîne.
 
-![Schéma d'un embranchement commun de la chaîne.](img/blockchain-common-fork.eps){#fig:blockchain-common-fork}
+![Schéma d'un embranchement commun de la chaîne.](img/blockchain-common-fork.png){#fig:blockchain-common-fork}
 
 Tout conflit sur le réseau est résolu de la sorte, ce qui a pour conséquence de conférer une nature particulière à l'algorithme de Nakamoto, et par extension à Bitcoin.
 
@@ -333,7 +333,7 @@ La deuxième étape est le minage d'une chaîne parallèle. Une fois que la tran
 
 La troisième étape est la recoordination de chaîne, représentée sur la figure [8.5](#fig:doublespending-attack){reference-type="ref" reference="fig:doublespending-attack"}. L'attaquant a continué de miner sa chaîne parallèle jusqu'à la livraison du bien économique acheté. À ce moment-là, il dévoile sa chaîne au reste du réseau, qui doit accepter celle-ci en vertu du principe de la chaîne la plus longue. Les nœuds procèdent alors à une recoordination : les blocs de l'ancienne chaîne sont écartés (rendus orphelins), leurs transactions sont remises dans la mempool et les nouveaux blocs sont vérifiés et ajoutés à la chaîne. Comme la transaction légitime dépense les mêmes fonds que la transaction frauduleuse, qui est incluse dans la nouvelle chaîne, cette transaction légitime est invalidée en tant que double dépense. Le commerçant ne possède plus les bitcoins, qui reviennent à l'attaquant.
 
-![Attaque de double dépense par recoordination de chaîne.](img/mining-attack-doublespending.eps){#fig:doublespending-attack}
+![Attaque de double dépense par recoordination de chaîne.](img/mining-attack-doublespending.png){#fig:doublespending-attack}
 
 Il s'agit d'une attaque opportuniste : elle est motivée par un gain, c'est-à-dire le bien économique obtenu, qui doit être supérieur au coût (matériel, logistique, électrique et logiciel) nécessaire pour y procéder. Sur le réseau Bitcoin principal, ce coût se chiffre aujourd'hui en milliards de dollars[^624].
 
@@ -375,7 +375,7 @@ La première coopérative de minage a été lancée le 27 novembre 2010 par Mare
 
 Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères ``, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
 
-![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.eps){#fig:hashrate-distribution}
+![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.png){#fig:hashrate-distribution}
 
 Un autre défaut inhérent du minage est la latence liée à l'annonce des blocs. Comme expliqué dans la section sur la chaîne la plus longue, cette latence produit des blocs orphelins, qui sont valides mais ne sont pas rattachés à la chaîne principale. Cela fait que des mineurs mal connectés ont une puissance de hachage apparente inférieure à leur puissance de hachage réelle.
 

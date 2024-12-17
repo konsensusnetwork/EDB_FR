@@ -654,7 +654,7 @@ En 2020, la réaction mondiale à la pandémie de Covid-19 vient accélérer les
 
 De ce fait, un nouvel engouement spéculatif apparaît et le prix du bitcoin s'envole à nouveau. Alors qu'il oscillait autour des 10 000 \$ depuis 2019, il monte rapidement à l'automne 2020, pour dépasser son ancien sommet en décembre et atteindre les 64 000 \$ en avril 2021.
 
-![Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source : buybitcoinworldwide.com).](img/btc-historical-price-20100719-20231130.eps){#fig:btc-historical-price}
+![Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source : buybitcoinworldwide.com).](img/btc-historical-price-20100719-20231130.png){#fig:btc-historical-price}
 
 Mais cette tendance va plus loin que les entreprises et l'engouement atteint un petit État d'Amérique centrale : le Salvador. Cette croissance du prix attire en effet l'attention du jeune président, Nayib Bukele, qui décide de faire du bitcoin une monnaie ayant cours légal dans son pays, aux côtés du dollar étasunien. Le président est inspiré par Jack Mallers, le PDG énergique de Strike, ainsi que par l'expérience de Bitcoin Beach, un projet de développement d'une économie durable basée sur le bitcoin autour de la plage d'El Zonte, au sud de la capitale San Salvador.
 
@@ -1648,7 +1648,7 @@ L'émission d'un billet numérique utilise comme on l'a dit le mécanisme de sig
 
 Le transfert du billet signé se fait en le donnant à quelqu'un d'autre. Ainsi, le paiement de Bob par Alice pour un service rendu se compose des étapes suivantes : d'abord, Alice transmet le billet à Bob ; puis, Bob vérifie qu'il a bien été signé par la banque d'Alice ; ensuite, il envoie immédiatement le billet réceptionné à sa banque ; enfin, la banque de Bob vérifie que le billet n'a pas déjà été utilisé et, le cas échéant, signe un nouveau billet de la même coupure pour le donner à Bob.
 
-![Création et remplacement d'un billet chaumien.](img/chaumian-ecash.eps)
+![Création et remplacement d'un billet chaumien.](img/chaumian-ecash.png)
 
 Les billets numériques peuvent être émis pour eux-mêmes, auquel cas ils forment une monnaie de base. Mais ils peuvent également être adossés à une autre monnaie comme le dollar. Dans ce dernier cas, l'utilisateur peut à tout moment rendre ses billets à sa banque pour récupérer la somme correspondante.
 
@@ -2094,7 +2094,7 @@ Ce type d'adresse est appelé P2SH-P2WPKH (*P2SH-nested Pay to Witness Public Ke
 
 Une fois qu'elles ont été encodées, les adresses peuvent être partagées facilement d'une personne à une autre. Grâce à la somme de contrôle, faire une faute de frappe ne crée théoriquement pas de risque, car le logiciel la détectera et refusera de procéder au paiement. Les adresses sont aussi souvent représentées par des codes QR (voir figure [7.3](#fig:address-qr-codes){reference-type="ref" reference="fig:address-qr-codes"}), plus adaptés pour l'interaction avec un téléphone multifonction.
 
-![Codes QR des adresses.](img/address-qr-codes.eps){#fig:address-qr-codes}
+![Codes QR des adresses.](img/address-qr-codes.png){#fig:address-qr-codes}
 
 En résumé : lorsqu'un utilisateur veut recevoir un paiement, il génère une clé privée, en dérive une clé publique et crée à partir de celle-ci une adresse ; il communique son adresse à un autre utilisateur qui lui envoie des fonds ; il peut ensuite dépenser les fonds reçus en signant une transaction à l'aide de sa clé privée. Le réseau pair à pair de Bitcoin vérifie alors que la signature est conforme à la clé publique.
 
@@ -2154,7 +2154,7 @@ En règle générale, la phrase secrète, ou phrase de récupération, est gén�
 
 Le nombre de mots de la phrase dépend de la taille de l'entropie désirée. Ainsi une entropie de 128 bits est dotée d'une somme de contrôle de 4 bits, ce qui donne une phrase de 12 mots de 11 bits. Pour 256 bits, on a une somme de contrôle de 8 bits et donc une phrase de 24 mots.
 
-![De l'entropie à la phrase secrète.](img/from-entropy-to-mnemonic.eps){#fig:from-entropy-to-mnemonic}
+![De l'entropie à la phrase secrète.](img/from-entropy-to-mnemonic.png){#fig:from-entropy-to-mnemonic}
 
 Divers procédés cryptographiques sont utilisés pour dériver les clés et les adresses à partir de cette phrase. Ces procédés de dérivation ont sensiblement les mêmes propriétés que les fonctions de hachage en produisant des résultats irréversibles, imprédictibles et résistants aux collisions.
 
@@ -2164,7 +2164,7 @@ Dans Bitcoin, PBKDF2 est utilisée pour dériver une graine à partir de la phra
 
 La dérivation des clés se fait grâce à la fonction HMAC-SHA512. Tout d'abord, on procède à une première dérivation à partir de la graîne. On applique le HMAC à la graine et au sel cryptographique `Bitcoin seed`, ce qui nous donne une clé maîtresse (premiers 256 bits du résultat) et un code de chaîne maître (derniers 256 bits du résultat). Le passage de la phrase secrète à la clé maîtresse et au code de chaîne maître est résumé dans la figure [7.5](#fig:from-mnemonic-to-root){reference-type="ref" reference="fig:from-mnemonic-to-root"}.
 
-![De la phrase secrète à la clé maîtresse.](img/from-mnemonic-to-root.eps){#fig:from-mnemonic-to-root}
+![De la phrase secrète à la clé maîtresse.](img/from-mnemonic-to-root.png){#fig:from-mnemonic-to-root}
 
 Ces deux informations permettent de réaliser toutes les dérivations suivantes. Le code de chaîne intervient dans la chaîne de dérivation des clés, de sorte qu'il est impossible de procéder à la dérivation sans lui.
 
@@ -2186,7 +2186,7 @@ La dérivation des clés (*child key derivation*) consiste à utiliser l'algorit
 
 La dérivation normale fait intervenir la clé publique étendue dans le processus, ce qui rend possibles deux opérations : l'obtention de la clé publique (étendue) enfant à partir de la clé publique (étendue) parent, et l'obtention de la clé privée (étendue) enfant à partir de la clé privée (étendue) parent. Le fonctionnement de ce type de dérivation est schématisé par la figure [7.6](#fig:normal-child-key-derivation){reference-type="ref" reference="fig:normal-child-key-derivation"}.
 
-![Dérivation normale des clés par HMAC-SHA512.](img/normal-child-key-derivation.eps){#fig:normal-child-key-derivation}
+![Dérivation normale des clés par HMAC-SHA512.](img/normal-child-key-derivation.png){#fig:normal-child-key-derivation}
 
 Cette particularité de la dérivation se révèle extrêmement utile pour générer de nouvelles adresses sans compromettre la clé privée racine. Un utilisateur peut ainsi importer la clé publique étendue dans un processeur de paiement afin de vérifier son solde et générer de nouvelles adresses sans avoir à fournir la clé privée. Cela permet aussi aux commerçants d'avoir des employés qui reçoivent des paiements à différentes adresses sans se soucier de la sécurité des fonds.
 
@@ -2194,7 +2194,7 @@ Cependant, cette particularité comporte un risque potentiel : si une clé priv
 
 C'est pour cela qu'il existe un deuxième type de dérivation, la dérivation endurcie (*hardened derivation*), qui, contrairement à la première, est restreinte au calcul de clés privées (étendues) enfant, ce qui assure une meilleure sécurité. Celle-ci est représentée dans la figure [7.7](#fig:hardened-child-key-derivation){reference-type="ref" reference="fig:hardened-child-key-derivation"}.
 
-![Dérivation endurcie des clés par HMAC-SHA512.](img/hardened-child-key-derivation.eps){#fig:hardened-child-key-derivation}
+![Dérivation endurcie des clés par HMAC-SHA512.](img/hardened-child-key-derivation.png){#fig:hardened-child-key-derivation}
 
 Chaque dérivation fait intervenir un indice, encodé sur 32 bits comme un entier signé, dont le bit de signe indique si elle doit être endurcie ou non et dont la valeur indique le numéro de la clé enfant. Ainsi, on peut produire 2 147 483 648 (de $0$ à $2^{31} - 1$) clés enfants normales et 2 147 483 648 clés enfants endurcies (de $-0$ à $- 2^{31} + 1$) à partir d'une même clé parent.
 
@@ -2334,7 +2334,7 @@ Le problème est énoncé sous la forme d'une métaphore faisant intervenir des 
 
 Cependant, un petit nombre de ces généraux s'avèrent être des traîtres au service de l'ennemi qui essaient de semer la confusion au sein de l'armée. Ces traîtres envoient ainsi des messages contradictoires à leurs interlocuteurs, pour faire en sorte que certains généraux loyaux attaquent, et que d'autres battent en retraite au moment de l'assaut, causant par là une défaite certaine, comme illustré sur la figure [8.1](#fig:byzantine-generals-attack){reference-type="ref" reference="fig:byzantine-generals-attack"}.
 
-![Attaque des généraux byzantins contre la ville : succès et échec.](img/byzantine-generals-attack.eps){#fig:byzantine-generals-attack}
+![Attaque des généraux byzantins contre la ville : succès et échec.](img/byzantine-generals-attack.png){#fig:byzantine-generals-attack}
 
 Le problème est de trouver une stratégie (c'est-à-dire un algorithme) permettant de s'assurer que tous les généraux loyaux se mettront d'accord sur le plan de bataille. Les traîtres battront alors en retraite, mais puisque leur nombre est supposément restreint, l'attaque sera quand même un succès.
 
@@ -2486,7 +2486,7 @@ La racine de Merkle du bloc 751 005 est ainsi :
 
 Le fait de placer la racine dans l'entête interdit à quiconque de modifier, d'ajouter ou de supprimer une transaction, sans modifier l'entête lui-même et devoir reproduire la preuve de travail. L'ensemble des transactions est ainsi attaché à l'entête, ce qui assure l'intégrité du bloc.
 
-![Représentation d'un arbre de Merkle à six feuilles.](img/merkle-tree.eps){#fig:merkle-tree}
+![Représentation d'un arbre de Merkle à six feuilles.](img/merkle-tree.png){#fig:merkle-tree}
 
 Cette organisation se révèle particulièrement utile pour les portefeuilles légers (dits à vérification de paiement simplifiée ou SPV) qui ne conservent pas la chaîne de blocs entière mais uniquement la chaîne des entêtes, qui est bien moins volumineuse (un peu plus de 62 Mio en novembre 2023). En effet, pour s'assurer de la présence d'une transaction dans un bloc, ils peuvent se contenter de demander les informations liées à la branche (chemin de Merkle) et procéder aux hachages eux-mêmes[^593]. Par exemple, un utilisateur voulant vérifier la confirmation de la transaction $\mathrm{tx}_D$ doit simplement demander les informations $H_C$, $H_{A\!B}$ et $H_{E\!F\!E\!F}$ aux nœuds du réseau et procéder aux différents hachages pour comparer la racine obtenue avec celle contenue dans l'entête. Cela a pour effet de réduire considérablement la charge des portefeuilles légers.
 
@@ -2523,7 +2523,7 @@ Comme on l'a dit, le résultat est utilisé comme identifiant du bloc. La preuve
 $$\begin{aligned}
 \mathtt{0x000000000000000000065aebf106c8824f4b565d54d6d6df32498b2b041cfd07} & \le \\ \mathtt{0x00000000000000000009ed880000000000000000000000000000000000000000} & ~\end{aligned}$$
 
-![Schéma d'un bloc de Bitcoin (avec SegWit).](img/bitcoin-segwit-block.eps){#fig:bitcoin-segwit-block}
+![Schéma d'un bloc de Bitcoin (avec SegWit).](img/bitcoin-segwit-block.png){#fig:bitcoin-segwit-block}
 
 ## Le revenu du minage {#le-revenu-du-minage .unnumbered}
 
@@ -2613,7 +2613,7 @@ Le réseau passe par trois étapes. Tout d'abord, il se comporte de manière att
 
 Il se produit alors ce qu'on appelle une recoordination (*reorganization*) qui réconcilie les nœuds du réseau entre eux. Le bloc de la branche faible est considéré comme incorrect et mis de côté. On dit que ce bloc est rendu orphelin (*orphaned*) car il perd son attachement à la chaîne mère[^614]. La branche forte (possédant le plus de travail accumulé) est considérée comme la version correcte de la chaîne.
 
-![Schéma d'un embranchement commun de la chaîne.](img/blockchain-common-fork.eps){#fig:blockchain-common-fork}
+![Schéma d'un embranchement commun de la chaîne.](img/blockchain-common-fork.png){#fig:blockchain-common-fork}
 
 Tout conflit sur le réseau est résolu de la sorte, ce qui a pour conséquence de conférer une nature particulière à l'algorithme de Nakamoto, et par extension à Bitcoin.
 
@@ -2649,7 +2649,7 @@ La deuxième étape est le minage d'une chaîne parallèle. Une fois que la tran
 
 La troisième étape est la recoordination de chaîne, représentée sur la figure [8.5](#fig:doublespending-attack){reference-type="ref" reference="fig:doublespending-attack"}. L'attaquant a continué de miner sa chaîne parallèle jusqu'à la livraison du bien économique acheté. À ce moment-là, il dévoile sa chaîne au reste du réseau, qui doit accepter celle-ci en vertu du principe de la chaîne la plus longue. Les nœuds procèdent alors à une recoordination : les blocs de l'ancienne chaîne sont écartés (rendus orphelins), leurs transactions sont remises dans la mempool et les nouveaux blocs sont vérifiés et ajoutés à la chaîne. Comme la transaction légitime dépense les mêmes fonds que la transaction frauduleuse, qui est incluse dans la nouvelle chaîne, cette transaction légitime est invalidée en tant que double dépense. Le commerçant ne possède plus les bitcoins, qui reviennent à l'attaquant.
 
-![Attaque de double dépense par recoordination de chaîne.](img/mining-attack-doublespending.eps){#fig:doublespending-attack}
+![Attaque de double dépense par recoordination de chaîne.](img/mining-attack-doublespending.png){#fig:doublespending-attack}
 
 Il s'agit d'une attaque opportuniste : elle est motivée par un gain, c'est-à-dire le bien économique obtenu, qui doit être supérieur au coût (matériel, logistique, électrique et logiciel) nécessaire pour y procéder. Sur le réseau Bitcoin principal, ce coût se chiffre aujourd'hui en milliards de dollars[^624].
 
@@ -2691,7 +2691,7 @@ La première coopérative de minage a été lancée le 27 novembre 2010 par Mare
 
 Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères ``, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
 
-![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.eps){#fig:hashrate-distribution}
+![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.png){#fig:hashrate-distribution}
 
 Un autre défaut inhérent du minage est la latence liée à l'annonce des blocs. Comme expliqué dans la section sur la chaîne la plus longue, cette latence produit des blocs orphelins, qui sont valides mais ne sont pas rattachés à la chaîne principale. Cela fait que des mineurs mal connectés ont une puissance de hachage apparente inférieure à leur puissance de hachage réelle.
 
@@ -2847,7 +2847,7 @@ Cette censure passive n'est pas très problématique car elle demande que 100 %
 
 Cependant, cette situation peut devenir autrement plus grave si les mineurs conformistes, à savoir les mineurs suivant méticuleusement les réglementations, commencent à refuser les blocs contenant les transactions « sales ». C'est ce que nous appelons ici la censure active, qui consiste à empêcher des transactions d'être confirmées en rendant orphelins tous les blocs qui les contiennent. Pour être maintenue dans le temps de manière certaine, elle nécessite de disposer de la majorité de la puissance de calcul du réseau : il s'agit donc d'une attaque des 51 %. Les branches faibles formées par l'attaque de censure sont mises de côté en vertu du principe de la chaîne la plus longue, comme illustré sur la figure [9.1](#fig:censorship-attack){reference-type="ref" reference="fig:censorship-attack"}.
 
-![Attaque de censure active.](img/mining-attack-censorship.eps){#fig:censorship-attack}
+![Attaque de censure active.](img/mining-attack-censorship.png){#fig:censorship-attack}
 
 Le coût d'une telle attaque peut être colossal suivant la puissance de calcul déployée sur le réseau[^683]. Mais ce coût serait justifié par le développement des activités illégales évitant l'impôt et le seigneuriage. En effet, comme montré dans le chapitre [4](#ch:adversaire){reference-type="ref" reference="ch:adversaire"}, le profil-type de l'attaquant est l'État dont le pouvoir de prélèvement repose grandement sur son contrôle de la monnaie : c'est pourquoi il se moque de réduire (voire de détruire) l'utilité de Bitcoin ce faisant.
 
@@ -3111,7 +3111,7 @@ Les BIP peuvent être répartis en trois types : le BIP de suivi de standard (*
 
 Avant d'être adopté, un BIP doit passer par de nombreuses étapes. D'abord, il est assigné à un ou plusieurs auteurs qui se chargent d'en rédiger une première version respectant le format défini et prenant en compte l'état de l'art correspondant. Puis, le BIP est partagé dans la communauté des développeurs de Bitcoin, généralement par l'intermédiaire de la liste de diffusion de développement (bitcoin-dev). Les discussions ont lieu sur cette mailing list. Ensuite, le BIP est officiellement proposé au système sous la forme d'une demande de modification du code (*pull request*) sur le dépôt GitHub, qui doit être approuvée par l'éditeur désigné par Bitcoin Core (luke-jr depuis 2016). Enfin, un numéro lui est assigné et il est intégré au dépôt sous la forme d'une ébauche. Il peut par la suite changer de statut au cours du temps, selon l'adoption de la communauté, l'objectif étant qu'il devienne définitif ou actif.
 
-![Schéma de la procédure d'adoption d'un BIP, inspiré du BIP-1.](img/bip-process-fr.eps)
+![Schéma de la procédure d'adoption d'un BIP, inspiré du BIP-1.](img/bip-process-fr.png)
 
 Notez que ces documents sont utilisés pour BTC mais également pour d'autres protocoles. Par exemple, les BIP décrivant le fonctionnement des portefeuilles (BIP-32, BIP-39, BIP-44) sont valides pour la grande majorité des cryptomonnaies. Le SLIP-44 recense les cryptomonnaies compatibles avec le BIP-44[^753]. Les autres protocoles cryptoéconomiques disposent même parfois de leurs propres systèmes de propositions. Ethereum utilise les EIP (*Ethereum Improvement Proposals*), Bitcoin Cash les CHIP[^754] (*Cash Improvement Proposals*), Litecoin les LIP[^755], etc.
 
@@ -3167,13 +3167,13 @@ Le hard fork est le concept le plus ancien si on le compare au soft fork. Il ét
 
 Un hard fork peut être extensif, c'est-à-dire élargir les règles de consensus sur les blocs et les transactions. Les anciens peuvent ainsi produire des blocs valides sur la nouvelle chaîne, mais pas l'inverse. L'exemple typique de ce genre de hard fork est l'augmentation de la taille limite des blocs, qui consiste à accepter des blocs ayant une taille ou un poids plus grand, comme 2 Mo au lieu de 1 Mo ou 8 MWU à la place de 4 MWU. Ce hard fork extensif est illustré sur la figure [10.1](#fig:expanding-hard-fork){reference-type="ref" reference="fig:expanding-hard-fork"}.
 
-![Schéma d'un hard fork extensif : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, les deux chaînes persistent ; dans le cas contraire, seule la deuxième survit.](img/expanding-hard-fork-induced-forks.eps){#fig:expanding-hard-fork}
+![Schéma d'un hard fork extensif : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, les deux chaînes persistent ; dans le cas contraire, seule la deuxième survit.](img/expanding-hard-fork-induced-forks.png){#fig:expanding-hard-fork}
 
 Dans le cas où le hard fork extensif n'est pas soutenu par une majorité de la puissance de calcul du réseau, celui-ci risque de ne pas créer une branche persistante. Par exemple, les blocs de la branche imposant une limite de taille plus petite sont entièrement compatibles avec les nouvelles règles, de sorte que, si elle est plus longue, c'est elle qui sera sélectionnée comme la branche correcte. C'est pour éviter cette situation problématique que les hard forks sont généralement bilatéraux.
 
 Le hard fork bitatéral est un hard fork qui crée une incompatibilité totale entre les nouvelles règles et les anciennes. Il peut s'agir d'une règle ajoutée comme l'exigence que le premier bloc de l'embranchement inclue un changement incompatible. Dans notre cas de l'augmentation de la taille limite des blocs, il s'agirait d'imposer au premier bloc d'être strictement plus gros que la taille limite précédente, comme on le voit sur la figure [10.2](#fig:expanding-hard-fork-failure){reference-type="ref" reference="fig:expanding-hard-fork-failure"}. Cette règle supplémentaire est appelée protection contre la destruction par recoordination (ou *wipeout protection* en anglais).
 
-![Schéma d'un hard fork bilatéral : les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent.](img/bilateral-hard-fork-induced-fork.eps){#fig:expanding-hard-fork-failure}
+![Schéma d'un hard fork bilatéral : les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent.](img/bilateral-hard-fork-induced-fork.png){#fig:expanding-hard-fork-failure}
 
 Un autre exemple est le changement de l'algorithme de signature des transactions, qui rend l'intégralité des transactions signées et des blocs non vides strictement incompatibles. Ce changement a pour effet de permettre en plus une protection contre la rediffusion des transactions (*replay protection*), dans le cas où deux chaînes concurrentes persisteraient.
 
@@ -3191,7 +3191,7 @@ Le premier exemple de hard fork contentieux majeur est celui qui a eu lieu sur E
 
 Le second exemple de hard fork contentieux est celui qui a mené à la création de Bitcoin Cash en août 2017 suite au débat sur la scalabilité et à la guerre des blocs[^770]. Ce hard fork n'intégrait pas SegWit, augmentait la taille limite des blocs à 8 Mo et améliorait l'algorithme de signature. Il était rendu bilatéral par une règle qui imposait au bloc suivant l'activation d'avoir une taille strictement supérieure à 1 Mo. Il offrait aussi *de facto* une protection contre la rediffusion des transactions. Ce changement ayant dû se faire sans l'accord de la majorité économique, la chaîne qui ne modifiait pas les règles a pu conserver le nom de Bitcoin et le sigle boursier BTC, tandis que la nouvelle chaîne a dû adopter un nouveau nom, Bitcoin Cash, et un nouveau sigle, BCH.
 
-![Exemples de hard forks bilatéraux : ETH / ETC et BCH / BTC.](img/hard-forks-eth-etc-bch-btc.eps){#fig:hard-forks-eth-bch}
+![Exemples de hard forks bilatéraux : ETH / ETC et BCH / BTC.](img/hard-forks-eth-etc-bch-btc.png){#fig:hard-forks-eth-bch}
 
 Notez qu'un tel hard fork peut être amené à modifier l'algorithme d'ajustement de la difficulté. En effet, si la puissance de calcul est trop faible pour le soutenir, il est possible que l'ajustement n'arrive pas à terme. C'est pour cette raison que Bitcoin Cash a dû implémenter un *Emergency Difficulty Adjustment* (EDA) qui a permis de procéder à l'adaptation sur une période plus courte. Ethereum Classic n'a cependant pas dû le faire, car l'ajustement sur Ethereum avait déjà lieu à tous les blocs.
 
@@ -3201,7 +3201,7 @@ Passons maintenant au soft fork, qui est un procédé de mise à niveau souvent 
 
 Le soft fork peut être appliqué en conservant une seule et même chaîne. S'il est imposé par la majorité de la puissance de calcul du réseau, il n'y a aucun risque de scission. En effet, l'ensemble des blocs créés par les mineurs qui appliquent les nouvelles règles est entièrement compatible avec les anciennes règles, de sorte que la branche appliquant les nouvelles règles sera considérée comme la branche correcte par tous les nœuds si elle est majoritaire. Si l'application du soft fork est en revanche minoritaire, alors ce dernier résulte en deux chaînes persistantes distinctes. Les deux cas de figure sont illustrés sur la figure [10.4](#fig:soft-fork){reference-type="ref" reference="fig:soft-fork"}.
 
-![Schéma d'un soft fork : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, seule la première survit ; dans le cas contraire, les deux chaînes persistent.](img/soft-fork-induced-forks.eps){#fig:soft-fork}
+![Schéma d'un soft fork : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, seule la première survit ; dans le cas contraire, les deux chaînes persistent.](img/soft-fork-induced-forks.png){#fig:soft-fork}
 
 Le concept de soft fork est postérieur à celui de hard fork. Il a été formellement découvert par Gavin Andresen en octobre 2011 qui, suite à son étude de la proposition d'ajout du code opération `OP_EVAL` par Nicolas van Saberhagen[^771], s'est aperçu que la mise à niveau pouvait se faire grâce au code opération `OP_NOP1` sans nécessairement provoquer de scission[^772].
 
@@ -3255,7 +3255,7 @@ Cette ouverture implique aussi que la mise en œuvre de Bitcoin est nécessairem
 
 Toutefois, toutes les branches ne sont pas équivalentes : toutes les mises en œuvre n'ont pas la même importance. L'une d'entre elle (BTC) est aujourd'hui supermajoritaire, de sorte que nous l'appelons naturellement Bitcoin, et sa modification est (heureusement) difficile. Dans le prochain chapitre, nous examinerons le mécanisme sous-jacent qui fait que Bitcoin est ce qu'il est aujourd'hui et comment l'évolution du protocole est gouvernée.
 
-![Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin.](img/bitcoin-forks-tree.eps){#fig:bitcoin-forks-tree}
+![Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin.](img/bitcoin-forks-tree.png){#fig:bitcoin-forks-tree}
 
 # La détermination du protocole {#ch:determination}
 
@@ -3369,7 +3369,7 @@ En outre, l'influence sur le protocole provient également des entités extérie
 
 Ainsi, les commerçants subissent un ensemble d'influences de la part de participants internes au système, comme les développeurs, les mineurs et les autres utilisateurs, mais également de la part d'acteurs externes, comme les relais idéologiques, les financiers et les régulateurs. Par ailleurs, ces groupes interagissent mutuellement, de sorte que le tout forme un ensemble sociologique complexe, qui influe sur le choix final du protocole. Même si expliquer comment cet ensemble complexe se comporte ne rentre pas dans nos compétences, essayons d'en esquisser un modèle général en nous attardant sur les pressions intérieures avant d'examiner les forces extérieures, plus diffuses.
 
-![Un modèle de gouvernance de Bitcoin : interactions des principaux groupes d'acteurs dans la détermination du protocole.](img/bitcoin-governance-model.eps)
+![Un modèle de gouvernance de Bitcoin : interactions des principaux groupes d'acteurs dans la détermination du protocole.](img/bitcoin-governance-model.png)
 
 ## L'influence des développeurs {#linfluence-des-développeurs .unnumbered}
 
@@ -3537,7 +3537,7 @@ Chaque pièce est constituée d'un montant en unités (satoshis) et d'un script 
 
 Le script de verrouillage d'une pièce contient le plus souvent une clé publique ou une empreinte déterminée, de sorte que la pièce peut être vue comme étant détenue par l'adresse correspondante. De ce fait, deux pièces partageant le même script de verrouillage sont détenues par la même adresse. Un compte dans Bitcoin correspond à l'ensemble des adresses contrôlées par un utilisateur. Le solde est récupéré en balayant l'ensemble des UTXO de façon à retrouver les pièces détenues par ces adresses.
 
-![Exemples de pièces détenues par un même compte.](img/coins-utxos-account.eps){#fig:coins-utxos}
+![Exemples de pièces détenues par un même compte.](img/coins-utxos-account.png){#fig:coins-utxos}
 
 Ce modèle de représentation par des pièces fait qu'on peut voir le mécanisme de transaction comme une fonderie de pièces de monnaie. Chaque transaction consiste à fondre ensemble une ou plusieurs pièces de bitcoin en entrée et à frapper une ou plusieurs pièces en sortie. C'est en ceci que le serveur d'horodatage distribué de Bitcoin vient remplacer la monnaierie numérique centralisée permettant le remplacement systématique des pièces, qui est présente dans eCash et RPOW par exemple.
 
@@ -3545,15 +3545,15 @@ La construction d'une transaction implique de rassembler des pièces de valeur s
 
 Considérons quelques exemples en ignorant ces frais et supposons qu'Alice veuille procéder à un paiement. Si Alice possède une pièce de 12 mBTC (0,012 BTC) et veut donner 7 mBTC à Bob, alors elle doit construire et signer une transaction ayant pour entrée cette pièce de 12 mBTC et pour sorties une pièce de 7 mBTC vers l'adresse de Bob et une pièce restante de 5 mBTC vers sa propre adresse. Cette transaction est représentée par la figure [12.2](#fig:transaction-1i-2o){reference-type="ref" reference="fig:transaction-1i-2o"}.
 
-![Schéma d'une transaction à 1 entrée et 2 sorties.](img/transaction-1i-2o.eps){#fig:transaction-1i-2o}
+![Schéma d'une transaction à 1 entrée et 2 sorties.](img/transaction-1i-2o.png){#fig:transaction-1i-2o}
 
 Si Alice ne possède pas une pièce ayant une valeur faciale supérieure à 7 mBTC, alors elle doit regrouper des pièces pour réunir un montant suffisant en entrée, par exemple une pièce de 6 mBTC et une pièce de 2 mBTC. Comme précédemment, elle doit créer une sortie complémentaire vers elle-même dans le but de se rendre la monnaie. Dans ce cas, illustré sur la figure [12.3](#fig:transaction-2i-2o){reference-type="ref" reference="fig:transaction-2i-2o"}, on peut deviner en observant la transaction que la pièce de 7 mBTC est le résultat du paiement, car il serait économiquement irrationnel de fusionner plusieurs pièces pour envoyer 1 mBTC.
 
-![Schéma d'une transaction à 2 entrées et 2 sorties.](img/transaction-2i-2o.eps){#fig:transaction-2i-2o}
+![Schéma d'une transaction à 2 entrées et 2 sorties.](img/transaction-2i-2o.png){#fig:transaction-2i-2o}
 
 Si Alice désire transférer l'intégralité des fonds vers un autre compte, alors elle rassemble l'ensemble de ses pièces (6 mBTC, 4 mBTC, 2 mBTC) pour les envoyer vers une adresse unique, comme montré sur la figure [12.4](#fig:transaction-3i-1o){reference-type="ref" reference="fig:transaction-3i-1o"}. C'est ce qu'on appelle une consolidation de portefeuille, qui peut être identifiée par un observateur extérieur en raison de l'unicité de la sortie.
 
-![Schéma d'une transaction à 3 entrées et 1 sortie.](img/transaction-3i-1o.eps){#fig:transaction-3i-1o}
+![Schéma d'une transaction à 3 entrées et 1 sortie.](img/transaction-3i-1o.png){#fig:transaction-3i-1o}
 
 Nous voyons ainsi que les transactions ne sont pas des transferts bruts d'une adresse vers une autre, mais des combinaisons-séparations de pièces de monnaies numériques. Ce fonctionnement est quelque peu contre-intuitif, mais se révèle utile pour la scalabilité du système, en permettant le traitement indépendant des pièces, et pour la confidentialité des utilisateurs, en n'incitant pas au rassemblement sur une même adresse et en facilitant l'implémentation de techniques d'anonymisation comme le mélange des pièces. Ce modèle est donc particulièrement adapté à l'utilisation monétaire[^828].
 
@@ -3593,7 +3593,7 @@ Toute personne disposant de la réponse peut dépenser la pièce, ce qui on en c
 
 L'exécution successive de ces deux scripts (voir figure [12.5](#fig:bitcoin-stack){reference-type="ref" reference="fig:bitcoin-stack"}) a lieu comme suit : 1) la valeur 21 est placée sur la pile ; 2) la valeur 17 est placée au-dessus ; 3) l'opérateur `OP_ADD` additionne les deux valeurs en haut de la pile et les remplace par leur somme, ici 38 ; 4) la valeur 38 est placée au sommet de la pile ; 5) l'opérateur `OP_EQUAL` compare les deux valeurs en haut de la pile et les remplace par le booléen d'égalité, ici `TRUE`. L'exécution du script est donc un succès.
 
-![Exécution d'un script d'addition sur la pile de données.](img/bitcoin-stack-example.eps){#fig:bitcoin-stack}
+![Exécution d'un script d'addition sur la pile de données.](img/bitcoin-stack-example.png){#fig:bitcoin-stack}
 
 Si la valeur avait été différente, de 22 par exemple, alors la dernière opération aurait retourné le booléen `FALSE` (« faux ») et la transaction de dépense aurait été invalidée.
 
@@ -3735,7 +3735,7 @@ Le type de signature est construit à partir de plusieurs signaux de signature q
 
 Les trois signaux concernant les sorties peuvent être associés à ``, ce qui permet de former finalement six types de signatures différents, représentés sur la figure [12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment `` même si certains autres types peuvent parfois trouver une utilité. C'est notamment le cas de `` qui permet de construire des transactions de type *anyone-can-pay*, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.
 
-![Les différents types de signatures dans Bitcoin.](img/signature-hash-types.eps){#fig:signature-hash-types}
+![Les différents types de signatures dans Bitcoin.](img/signature-hash-types.png){#fig:signature-hash-types}
 
 Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile : celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu'il pouvait avoir une utilité. C'est dans cet esprit que le signal de signature `` a été proposé en février 2016 par Joseph Poon[^844].
 
@@ -3846,7 +3846,7 @@ Le fait que les transactions soient publiées sur la chaîne entraîne une surve
 
 Cependant, cette transparence est toute relative, car les données de la chaîne ne révèlent pas l'identité des personnes : le système est pseudonyme, dans le sens où il recense les mouvements entre les adresses, et pas entre les personnes. Le modèle de confidentialité de Bitcoin, décrit par Satoshi Nakamoto dans le livre blanc en 2008, consiste ainsi à garder secret le lien qui existe entre l'identité d'une personne et ses adresses[^856].
 
-![Modèle de confidentialité présenté dans le livre blanc de Bitcoin.](img/white-paper-privacy-model-fr.eps)
+![Modèle de confidentialité présenté dans le livre blanc de Bitcoin.](img/white-paper-privacy-model-fr.png)
 
 Ce modèle de confidentialité possède des faiblesses évidente : les fuites d'information accidentelles, qui ont toujours lieu en ce qui concerne le numérique, et la divulgation volontaire de l'identité de l'utilisateur par son interlocuteur dans l'échange. Par conséquent, nul ne peut prétendre exercer une activité complètement secrète qui échapperait absolument à la surveillance[^857]. C'est pour cette raison qu'il existe des méthodes permettant de limiter l'effet de ces révélations afin de restaurer sa confidentialité en toute sérénité.
 
@@ -3858,7 +3858,7 @@ Le mélange de bitcoins était originellement pris en charge par des services de
 
 Une technique pour procéder à ce type de mélange sans devoir passer par un intermédiaire a été développée par la suite : c'était CoinJoin, dont la description formelle a été faite en août 2013 par Gregory Maxwell[^860]. Cette méthode consiste à impliquer les pièces dans une transaction jointe collaborative qui brise la correspondance entre les entrées et une partie des sorties. La transaction classique que l'on se représente est celle de plusieurs utilisateurs qui signent chacun une entrée, dont le même nombre de sorties possèdent un montant égal, et dont le reste des sorties forment les sorties complémentaires. Dans ce cas, les sorties complémentaires sont toujours liées aux entrées, contrairement aux sorties principales qui sont indiscernables les unes des autres.
 
-![Exemple d'une transaction CoinJoin à 5 utilisateurs.](img/coinjoin-transaction-5i-10o.eps){#fig:coinjoin-transaction}
+![Exemple d'une transaction CoinJoin à 5 utilisateurs.](img/coinjoin-transaction-5i-10o.png){#fig:coinjoin-transaction}
 
 Ces mélanges reposent sur la notion d'« ensemble d'anonymat » (*anonymity set*) qui permet de mesurer la difficulté à faire le lien entre l'entrée et la sortie à un moment donné. On peut ainsi obtenir un score prospectif qui est le nombre de possibilités de pièces en sorties auxquelles peuvent correspondre une pièce en entrée. Dans notre exemple illustré par la figure [12.7](#fig:coinjoin-transaction){reference-type="ref" reference="fig:coinjoin-transaction"}, le score prospectif de la sortie au moment de la transaction est de 5. Si la pièce avait subi un nouveau mélange (comme c'est fait dans Whirlpool), alors elle aurait eu un score prospectif de 9. De même, si l'une des autres pièces avait été incluse dans un nouveau mélange, alors le score de la pièce observée aurait augmenté d'autant. On peut aussi calculer un score rétrospectif qui correspond au nombre de potentielles pièces en entrée auxquelles peut être liée une sortie particulière, qu'on suppose être de 5 dans le cas de notre transaction simple, mais qui peut être largement supérieur si une ou plusieurs pièces ont déjà fait l'objet de mélanges successifs[^861].
 
@@ -3868,7 +3868,7 @@ Pour autant, les transactions collaboratives ne se limitent pas à CoinJoin. Il 
 
 Reprenons notre exemple d'Alice qui paie 7 mBTC à Bob en réunissant deux pièces de 6 et 2 mBTC afin d'atteindre un montant suffisant en entrée. Dans ce cas, les deux entrées sont supposément liées entre elles (heuristique de co-dépense) et liées à la sortie de 1 mBTC (heuristique de la sortie complémentaire). Ici, comme représenté sur la figure [12.8](#fig:payjoin-transaction){reference-type="ref" reference="fig:payjoin-transaction"}, l'application de PayJoin consiste pour le commerçant à inclure une ou plusieurs pièces en entrée et à augmenter d'autant le montant de la sortie qui lui est destinée, de 7 mBTC par exemple.
 
-![Exemple d'une transaction PayJoin.](img/payjoin-transaction-3i-2o.eps){#fig:payjoin-transaction}
+![Exemple d'une transaction PayJoin.](img/payjoin-transaction-3i-2o.png){#fig:payjoin-transaction}
 
 Cette technique a été conceptualisée en 2018 de plusieurs manières indépendantes, notamment par le biais du protocole de paiement Pay-to-EndPoint[^863] (P2EP) et par les transactions Stowaway de Samourai Wallet[^864]. Leur implémentation s'est faite respectivement en 2019 pour les transactions Stowaway[^865] et en 2020 pour P2EP[^866].
 
@@ -3950,7 +3950,7 @@ Prenons l'exemple de deux personnes qui ne se connaissent pas, Alice et Bob, et 
 
 -   Le litige : après une période prédéterminée (par exemple 30 jours), le contrat est déverrouillé par la signature de Lenny et celle de l'une des deux parties ; dans ce cas, Lenny se charge de déterminer qui est la partie honnête et de lui envoyer les fonds.
 
-![Contrat de dépôt fiduciaire.](img/escrow-contract.eps){#fig:escrow-contract}
+![Contrat de dépôt fiduciaire.](img/escrow-contract.png){#fig:escrow-contract}
 
 Ce fonctionnement, décrit sur la figure [13.1](#fig:escrow-contract){reference-type="ref" reference="fig:escrow-contract"}, incite d'une part les deux parties à coopérer pour ne pas perdre de temps, et empêche d'autre part la collusion de la tierce partie (Lenny) avec l'une des deux autres avant le délai prévu (30 jours ici). Le recours à la confiance est ainsi minimisé autant que possible.
 
@@ -3962,7 +3962,7 @@ Le financement participatif consiste à faire appel au grand public pour contrib
 
 D'un point de vue technique, il s'agit de créer une transaction dite *anyone-can-pay* (« tout le monde peut payer ») où la signature de chaque contributeur ne prend en compte que la sortie transactionnelle de la levée de fonds et l'entrée du contributeur en question, donnant la possibilité d'ajouter des entrées (voir figure [13.2](#fig:sighash-anyonecanpay){reference-type="ref" reference="fig:sighash-anyonecanpay"}). La transaction résultante n'est valide que si le montant en entrée atteint le montant indiqué en sortie, de sorte que les contributeurs conservent le contrôle de leurs fonds jusqu'à la réalisation du paiement total et peuvent se retirer à tout moment.
 
-![Transaction de financement participatif.](img/sighash-anyonecanpay.eps){#fig:sighash-anyonecanpay}
+![Transaction de financement participatif.](img/sighash-anyonecanpay.png){#fig:sighash-anyonecanpay}
 
 Dans le monde du logiciel libre, ce type de financement participatif est particulièrement important, car il n'y a pas de privilège lié à l'écriture du code qui permette de gagner sa vie par la vente de licences. C'est encore plus vrai dans le monde de la cryptomonnaie qui dépend fortement du bon maintien des implémentations logicielles. C'est pourquoi Mike Hearn, qui s'intéressait de près aux capacités de programmation de Bitcoin, s'est vite approprié cette possibilité pour déployer de tels « contrats de garantie[^893] » (*assurance contracts*) permettant de financer les biens publics. Il a mis le concept en œuvre au sein de son application Lighthouse, dont une version fonctionnelle est sortie en 2015, qui avait pour but de faciliter le soutien communautaire des projets de l'écosystème. Avec le déclenchement de la guerre des blocs, ce projet a été mis de côté par Hearn et a fini par être abandonné. Le procédé a été néanmoins repris sur Bitcoin Cash en 2020 par l'intermédiaire de Flipstarter, qui a permis de lever d'importantes sommes pour le financement de l'infrastructure logicielle du protocole[^894].
 
@@ -3982,7 +3982,7 @@ La première phase est la phase d'engagement. D'abord, Alice construit, signe et
 
 Lorsque les transactions d'engagement ont toutes deux été confirmées sur leurs chaînes respectives, la seconde phase de l'échange atomique, la phase de collecte, peut commencer. Alice construit, signe et diffuse une transaction de collecte qui lui permet de récupérer les 10 LTC de Bob. Pour cela, elle fournit le secret au sein de la transaction et, ce faisant, le révèle nécessairement à Bob. Finalement, Bob peut lui-aussi construire, signer et diffuser une transaction qui lui octroie les 0,03 BTC sur son compte. De cette manière, l'échange est clos !
 
-![Contrats et transactions dans un échange atomique.](img/atomic-swap-contract.eps){#fig:atomic-swap-contract}
+![Contrats et transactions dans un échange atomique.](img/atomic-swap-contract.png){#fig:atomic-swap-contract}
 
 Ce modèle garantit qu'aucun des deux participants ne peut se rembourser avant la fin du temps de verrouillage de Bob (8 heures) ; qu'Alice ne peut pas faire valoir sa transaction de remboursement au moment de la diffusion de sa transaction de collecte ; et que Bob ne peut pas s'approprier des fonds d'Alice tant qu'elle n'a pas diffusé sa transaction de collecte. Ces garanties rendent le procédé logiquement sécurisé, même si certains évènements perturbateurs peuvent survenir comme une augmentation des temps de confirmation liée à la volatilité du marché des frais.
 
@@ -4016,7 +4016,7 @@ Si un paiement a lieu d'Alice vers Bob, la mise à jour du canal se fait de la m
 
 La révélation de la clé de révocation à chaque étape de mise à jour rend possible l'activation d'un mécanisme de punition à tout moment. Si l'une des deux parties diffuse une transaction d'engagement correspondant à un état antérieur du canal, alors l'autre peut récupérer *l'intégralité* des fonds du canal. Par exemple, Alice pourrait récupérer les fonds de Bob si ce dernier était amené à diffuser le précédent état du canal dans le but d'« annuler » le dernier paiement réalisé.
 
-![Contrats et transactions dans un canal de paiement de Poon-Dryja : cas d'un paiement de Bob de 2 mBTC à Alice.](img/lightning-poon-dryja-channel-contracts.eps){#fig:poon-dryja-contracts}
+![Contrats et transactions dans un canal de paiement de Poon-Dryja : cas d'un paiement de Bob de 2 mBTC à Alice.](img/lightning-poon-dryja-channel-contracts.png){#fig:poon-dryja-contracts}
 
 Le défaut principal de ce mécanisme de punition est qu'il faut surveiller le réseau en permanence pour éviter un vol, ce qui se fait avec un nœud complet ou bien avec un tiers de confiance bien choisi (« tour de garde » ou « *watchtower* »).
 
@@ -4036,7 +4036,7 @@ Le fonctionnement des canaux de Decker-Russel-Osuntokun se base sur une chaîne 
 
 Ici il n'y a plus besoin de recourir à des clés de révocation pour rendre les anciens états du canal inexploitables : ce sont les transactions elles-mêmes qui ont ce rôle. Eltoo fait intervenir ce qu'on appelle des transactions flottantes, qui peuvent dépenser les fonds issus de n'importe quelle transaction de mise à jour précédente. De cette manière, chaque transaction de mise à jour est flottante, ainsi que chaque transaction de règlement, ce qui permet d'omettre toutes les mises à jour précédentes. De plus, un numéro d'état est inscrit dans chaque transaction pour ordonner les transactions et ainsi éviter la diffusion d'un état antérieur.
 
-![Aperçu du protocole Eltoo.](img/eltoo-offchain-protocol.eps){#fig:eltoo}
+![Aperçu du protocole Eltoo.](img/eltoo-offchain-protocol.png){#fig:eltoo}
 
 Une transaction supplémentaire est ajoutée à la chaîne de transactions pour éviter que le délai d'expiration des transactions de règlement $T_{s,i}$ soit atteint et qu'elles soient diffusées sur la chaîne. Cette transaction envoie simplement les fonds vers un compte multisignatures classique, et est signée et diffusée après la signature des premières transactions de mise à jour et de règlement ($T_{u,0}$ et $T_{s,0}$). Le délai d'expiration ne commence que lorsque la transaction $T_{u,0}$ est diffusée.
 
@@ -4121,7 +4121,7 @@ Il ne s'agit pas d'une idée nouvelle. Dès les premières années d'existence d
 
 Le premier type de métaprotocole qui a été élaboré est le procédé des *colored coins*, ou pièces colorées en français, qui consiste à marquer des pièces (UTXO) par l'inscription annexe de données, comme montré sur la figure [13.7](#fig:colored-coin){reference-type="ref" reference="fig:colored-coin"}. Chaque type de jeton créé est lié à un identifiant, que l'on peut assimiler à une couleur, d'où le nom de ce procédé. L'idée a été présentée en 2012 par Yoni Assia et Meni Rosenfeld[^919].
 
-![Création et transfert d'un jeton émis sous la forme d'un colored coin.](img/colored-coin.eps){#fig:colored-coin}
+![Création et transfert d'un jeton émis sous la forme d'un colored coin.](img/colored-coin.png){#fig:colored-coin}
 
 L'implémentation de ce concept a été réalisée dès la fin de l'année 2012 par l'intermédiaire du ChromaWallet[^920]. Cependant, elle n'a vraiment pris de l'ampleur qu'à partir de 2014, avec l'apparition des Open Assets de Coinprism, des *CoinSpark assets* de Coin Sciences, et des Colored Coins de Colu. Ces usages sont depuis tombés en désuétude, même si le procédé a pu servir de manière sporadique au fil des années, comme dans le cas du jeton BSQ de Bisq créé en 2018 comme base de sa DAO. Une tentative de restauration a également été faite sur Bitcoin Cash avec les jetons SLP, sans grand succès.
 
@@ -4163,7 +4163,7 @@ Outre cela, le schéma de Schnorr facilite grandement l'implémentation de Tapro
 
 Taproot repose sur un arbre de hachage, appelé un MAST[^941], dont les feuilles sont les clauses du contrat, c'est-à-dire les conditions de dépense. Lors de l'exécution du MAST, les participants concernés ont seulement besoin de révéler la clause appliquée et de fournir les empreintes liées aux autres clauses (chemin de Merkle), comme montré sur la figure [13.8](#fig:taproot-mast){reference-type="ref" reference="fig:taproot-mast"}. Les autres conditions de dépense ne sont ainsi pas révélées.
 
-![MAST impliquant les clauses d'un contrat.](img/taproot-mast.eps){#fig:taproot-mast}
+![MAST impliquant les clauses d'un contrat.](img/taproot-mast.png){#fig:taproot-mast}
 
 L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé `` (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
 
@@ -4283,7 +4283,7 @@ Une chaîne latérale est une chaîne de blocs parallèle à une autre qui perme
 
 Deux aspects différencient le modèle de sécurité d'une chaîne latérale de celui de la chaîne principale : le maintien de l'ancrage bilatéral et le mécanisme de consensus. Le premier consiste à décider qui peut déverrouiller les fonds lors d'un transfert de la chaîne latérale vers la chaîne principale. En effet, puisque la chaîne latérale est voulue comme un complément (et pas comme une extension), les nœuds de la chaîne principale n'ont pas connaissance de cette chaîne latérale. De ce fait, le retrait est soumis à une certaine confiance, placée usuellement dans une fédération de participants qui se méfient les uns des autres[^974].
 
-![Chaîne latérale : dépôt, transfert et retrait.](img/sidechain-two-way-peg.eps){#fig:sidechain-two-way-peg}
+![Chaîne latérale : dépôt, transfert et retrait.](img/sidechain-two-way-peg.png){#fig:sidechain-two-way-peg}
 
 Le second aspect concerne la confirmation des transactions sur la chaîne latérale, et ici les options sont plus variées. Le consensus peut reposer sur le minage combiné, auquel cas c'est le travail de la chaîne principale qui est utilisé. Il peut se fonder sur la preuve d'enjeu, auquel cas c'est l'unité de la chaîne principale qui est impliquée. Ou il peut recourir à une fédération se mettant d'accord grâce à un algorithme BFT classique, auquel cas c'est l'appartenance à cette fédération qui importe (preuve d'autorité).
 
@@ -4307,7 +4307,7 @@ L'infrastructure du réseau Lighning repose sur des canaux de paiement qui sont 
 
 Le principe du réseau Lightning est de router les paiements au travers de ces canaux par l'intermédiaire de HTLC, qui sont des contrats d'engagement plus complexes permettant de mettre à jour les canaux concernés[^981]. Un paiement transite sur le réseau moyennant des frais minimes qui vont aux nœuds le relayant. Le réseau Lightning est donc semblable à un boulier, dont les tiges sont des canaux et dont les boules sont les satoshis qui transitent d'un côté ou de l'autre des canaux, comme on peut le voir sur la figure [14.2](#fig:lightning-network-abacus){reference-type="ref" reference="fig:lightning-network-abacus"}.
 
-![Paiement de 3 mBTC sur le réseau Lightning.](img/lightning-network-abacus.eps){#fig:lightning-network-abacus}
+![Paiement de 3 mBTC sur le réseau Lightning.](img/lightning-network-abacus.png){#fig:lightning-network-abacus}
 
 Ce fonctionnement offre la possibilité de réaliser des paiements quasi instantanés et peu chers. Il permet de faire plus de transferts en bitcoins sans réaliser davantage de transactions sur la chaîne et sans déléguer explicitement la gestion des fonds à un tiers. De plus, le modèle conserve toute la programmabilité de Bitcoin et ouvre le champ des possibles quant à l'utilisation monétaire sur Internet.
 

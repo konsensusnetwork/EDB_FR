@@ -234,7 +234,7 @@ En 2020, la réaction mondiale à la pandémie de Covid-19 vient accélérer les
 
 De ce fait, un nouvel engouement spéculatif apparaît et le prix du bitcoin s'envole à nouveau. Alors qu'il oscillait autour des 10 000 \$ depuis 2019, il monte rapidement à l'automne 2020, pour dépasser son ancien sommet en décembre et atteindre les 64 000 \$ en avril 2021.
 
-![Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source : buybitcoinworldwide.com).](img/btc-historical-price-20100719-20231130.eps){#fig:btc-historical-price}
+![Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source : buybitcoinworldwide.com).](img/btc-historical-price-20100719-20231130.png){#fig:btc-historical-price}
 
 Mais cette tendance va plus loin que les entreprises et l'engouement atteint un petit État d'Amérique centrale : le Salvador. Cette croissance du prix attire en effet l'attention du jeune président, Nayib Bukele, qui décide de faire du bitcoin une monnaie ayant cours légal dans son pays, aux côtés du dollar étasunien. Le président est inspiré par Jack Mallers, le PDG énergique de Strike, ainsi que par l'expérience de Bitcoin Beach, un projet de développement d'une économie durable basée sur le bitcoin autour de la plage d'El Zonte, au sud de la capitale San Salvador.
 

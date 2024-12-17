@@ -30,7 +30,7 @@ Prenons l'exemple de deux personnes qui ne se connaissent pas, Alice et Bob, et 
 
 -   Le litige : après une période prédéterminée (par exemple 30 jours), le contrat est déverrouillé par la signature de Lenny et celle de l'une des deux parties ; dans ce cas, Lenny se charge de déterminer qui est la partie honnête et de lui envoyer les fonds.
 
-![Contrat de dépôt fiduciaire.](img/escrow-contract.eps){#fig:escrow-contract}
+![Contrat de dépôt fiduciaire.](img/escrow-contract.png){#fig:escrow-contract}
 
 Ce fonctionnement, décrit sur la figure [13.1](#fig:escrow-contract){reference-type="ref" reference="fig:escrow-contract"}, incite d'une part les deux parties à coopérer pour ne pas perdre de temps, et empêche d'autre part la collusion de la tierce partie (Lenny) avec l'une des deux autres avant le délai prévu (30 jours ici). Le recours à la confiance est ainsi minimisé autant que possible.
 
@@ -42,7 +42,7 @@ Le financement participatif consiste à faire appel au grand public pour contrib
 
 D'un point de vue technique, il s'agit de créer une transaction dite *anyone-can-pay* (« tout le monde peut payer ») où la signature de chaque contributeur ne prend en compte que la sortie transactionnelle de la levée de fonds et l'entrée du contributeur en question, donnant la possibilité d'ajouter des entrées (voir figure [13.2](#fig:sighash-anyonecanpay){reference-type="ref" reference="fig:sighash-anyonecanpay"}). La transaction résultante n'est valide que si le montant en entrée atteint le montant indiqué en sortie, de sorte que les contributeurs conservent le contrôle de leurs fonds jusqu'à la réalisation du paiement total et peuvent se retirer à tout moment.
 
-![Transaction de financement participatif.](img/sighash-anyonecanpay.eps){#fig:sighash-anyonecanpay}
+![Transaction de financement participatif.](img/sighash-anyonecanpay.png){#fig:sighash-anyonecanpay}
 
 Dans le monde du logiciel libre, ce type de financement participatif est particulièrement important, car il n'y a pas de privilège lié à l'écriture du code qui permette de gagner sa vie par la vente de licences. C'est encore plus vrai dans le monde de la cryptomonnaie qui dépend fortement du bon maintien des implémentations logicielles. C'est pourquoi Mike Hearn, qui s'intéressait de près aux capacités de programmation de Bitcoin, s'est vite approprié cette possibilité pour déployer de tels « contrats de garantie[^893] » (*assurance contracts*) permettant de financer les biens publics. Il a mis le concept en œuvre au sein de son application Lighthouse, dont une version fonctionnelle est sortie en 2015, qui avait pour but de faciliter le soutien communautaire des projets de l'écosystème. Avec le déclenchement de la guerre des blocs, ce projet a été mis de côté par Hearn et a fini par être abandonné. Le procédé a été néanmoins repris sur Bitcoin Cash en 2020 par l'intermédiaire de Flipstarter, qui a permis de lever d'importantes sommes pour le financement de l'infrastructure logicielle du protocole[^894].
 
@@ -62,7 +62,7 @@ La première phase est la phase d'engagement. D'abord, Alice construit, signe et
 
 Lorsque les transactions d'engagement ont toutes deux été confirmées sur leurs chaînes respectives, la seconde phase de l'échange atomique, la phase de collecte, peut commencer. Alice construit, signe et diffuse une transaction de collecte qui lui permet de récupérer les 10 LTC de Bob. Pour cela, elle fournit le secret au sein de la transaction et, ce faisant, le révèle nécessairement à Bob. Finalement, Bob peut lui-aussi construire, signer et diffuser une transaction qui lui octroie les 0,03 BTC sur son compte. De cette manière, l'échange est clos !
 
-![Contrats et transactions dans un échange atomique.](img/atomic-swap-contract.eps){#fig:atomic-swap-contract}
+![Contrats et transactions dans un échange atomique.](img/atomic-swap-contract.png){#fig:atomic-swap-contract}
 
 Ce modèle garantit qu'aucun des deux participants ne peut se rembourser avant la fin du temps de verrouillage de Bob (8 heures) ; qu'Alice ne peut pas faire valoir sa transaction de remboursement au moment de la diffusion de sa transaction de collecte ; et que Bob ne peut pas s'approprier des fonds d'Alice tant qu'elle n'a pas diffusé sa transaction de collecte. Ces garanties rendent le procédé logiquement sécurisé, même si certains évènements perturbateurs peuvent survenir comme une augmentation des temps de confirmation liée à la volatilité du marché des frais.
 
@@ -96,7 +96,7 @@ Si un paiement a lieu d'Alice vers Bob, la mise à jour du canal se fait de la m
 
 La révélation de la clé de révocation à chaque étape de mise à jour rend possible l'activation d'un mécanisme de punition à tout moment. Si l'une des deux parties diffuse une transaction d'engagement correspondant à un état antérieur du canal, alors l'autre peut récupérer *l'intégralité* des fonds du canal. Par exemple, Alice pourrait récupérer les fonds de Bob si ce dernier était amené à diffuser le précédent état du canal dans le but d'« annuler » le dernier paiement réalisé.
 
-![Contrats et transactions dans un canal de paiement de Poon-Dryja : cas d'un paiement de Bob de 2 mBTC à Alice.](img/lightning-poon-dryja-channel-contracts.eps){#fig:poon-dryja-contracts}
+![Contrats et transactions dans un canal de paiement de Poon-Dryja : cas d'un paiement de Bob de 2 mBTC à Alice.](img/lightning-poon-dryja-channel-contracts.png){#fig:poon-dryja-contracts}
 
 Le défaut principal de ce mécanisme de punition est qu'il faut surveiller le réseau en permanence pour éviter un vol, ce qui se fait avec un nœud complet ou bien avec un tiers de confiance bien choisi (« tour de garde » ou « *watchtower* »).
 
@@ -116,7 +116,7 @@ Le fonctionnement des canaux de Decker-Russel-Osuntokun se base sur une chaîne 
 
 Ici il n'y a plus besoin de recourir à des clés de révocation pour rendre les anciens états du canal inexploitables : ce sont les transactions elles-mêmes qui ont ce rôle. Eltoo fait intervenir ce qu'on appelle des transactions flottantes, qui peuvent dépenser les fonds issus de n'importe quelle transaction de mise à jour précédente. De cette manière, chaque transaction de mise à jour est flottante, ainsi que chaque transaction de règlement, ce qui permet d'omettre toutes les mises à jour précédentes. De plus, un numéro d'état est inscrit dans chaque transaction pour ordonner les transactions et ainsi éviter la diffusion d'un état antérieur.
 
-![Aperçu du protocole Eltoo.](img/eltoo-offchain-protocol.eps){#fig:eltoo}
+![Aperçu du protocole Eltoo.](img/eltoo-offchain-protocol.png){#fig:eltoo}
 
 Une transaction supplémentaire est ajoutée à la chaîne de transactions pour éviter que le délai d'expiration des transactions de règlement $T_{s,i}$ soit atteint et qu'elles soient diffusées sur la chaîne. Cette transaction envoie simplement les fonds vers un compte multisignatures classique, et est signée et diffusée après la signature des premières transactions de mise à jour et de règlement ($T_{u,0}$ et $T_{s,0}$). Le délai d'expiration ne commence que lorsque la transaction $T_{u,0}$ est diffusée.
 
@@ -201,7 +201,7 @@ Il ne s'agit pas d'une idée nouvelle. Dès les premières années d'existence d
 
 Le premier type de métaprotocole qui a été élaboré est le procédé des *colored coins*, ou pièces colorées en français, qui consiste à marquer des pièces (UTXO) par l'inscription annexe de données, comme montré sur la figure [13.7](#fig:colored-coin){reference-type="ref" reference="fig:colored-coin"}. Chaque type de jeton créé est lié à un identifiant, que l'on peut assimiler à une couleur, d'où le nom de ce procédé. L'idée a été présentée en 2012 par Yoni Assia et Meni Rosenfeld[^919].
 
-![Création et transfert d'un jeton émis sous la forme d'un colored coin.](img/colored-coin.eps){#fig:colored-coin}
+![Création et transfert d'un jeton émis sous la forme d'un colored coin.](img/colored-coin.png){#fig:colored-coin}
 
 L'implémentation de ce concept a été réalisée dès la fin de l'année 2012 par l'intermédiaire du ChromaWallet[^920]. Cependant, elle n'a vraiment pris de l'ampleur qu'à partir de 2014, avec l'apparition des Open Assets de Coinprism, des *CoinSpark assets* de Coin Sciences, et des Colored Coins de Colu. Ces usages sont depuis tombés en désuétude, même si le procédé a pu servir de manière sporadique au fil des années, comme dans le cas du jeton BSQ de Bisq créé en 2018 comme base de sa DAO. Une tentative de restauration a également été faite sur Bitcoin Cash avec les jetons SLP, sans grand succès.
 
@@ -243,7 +243,7 @@ Outre cela, le schéma de Schnorr facilite grandement l'implémentation de Tapro
 
 Taproot repose sur un arbre de hachage, appelé un MAST[^941], dont les feuilles sont les clauses du contrat, c'est-à-dire les conditions de dépense. Lors de l'exécution du MAST, les participants concernés ont seulement besoin de révéler la clause appliquée et de fournir les empreintes liées aux autres clauses (chemin de Merkle), comme montré sur la figure [13.8](#fig:taproot-mast){reference-type="ref" reference="fig:taproot-mast"}. Les autres conditions de dépense ne sont ainsi pas révélées.
 
-![MAST impliquant les clauses d'un contrat.](img/taproot-mast.eps){#fig:taproot-mast}
+![MAST impliquant les clauses d'un contrat.](img/taproot-mast.png){#fig:taproot-mast}
 
 L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé `` (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
 

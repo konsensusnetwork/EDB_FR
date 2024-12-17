@@ -110,7 +110,7 @@ En outre, l'influence sur le protocole provient également des entités extérie
 
 Ainsi, les commerçants subissent un ensemble d'influences de la part de participants internes au système, comme les développeurs, les mineurs et les autres utilisateurs, mais également de la part d'acteurs externes, comme les relais idéologiques, les financiers et les régulateurs. Par ailleurs, ces groupes interagissent mutuellement, de sorte que le tout forme un ensemble sociologique complexe, qui influe sur le choix final du protocole. Même si expliquer comment cet ensemble complexe se comporte ne rentre pas dans nos compétences, essayons d'en esquisser un modèle général en nous attardant sur les pressions intérieures avant d'examiner les forces extérieures, plus diffuses.
 
-![Un modèle de gouvernance de Bitcoin : interactions des principaux groupes d'acteurs dans la détermination du protocole.](img/bitcoin-governance-model.eps)
+![Un modèle de gouvernance de Bitcoin : interactions des principaux groupes d'acteurs dans la détermination du protocole.](img/bitcoin-governance-model.png)
 
 ## L'influence des développeurs {#linfluence-des-développeurs .unnumbered}
 

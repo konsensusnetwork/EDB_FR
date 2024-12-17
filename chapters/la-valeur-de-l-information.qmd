@@ -246,7 +246,7 @@ Ce type d'adresse est appelé P2SH-P2WPKH (*P2SH-nested Pay to Witness Public Ke
 
 Une fois qu'elles ont été encodées, les adresses peuvent être partagées facilement d'une personne à une autre. Grâce à la somme de contrôle, faire une faute de frappe ne crée théoriquement pas de risque, car le logiciel la détectera et refusera de procéder au paiement. Les adresses sont aussi souvent représentées par des codes QR (voir figure [7.3](#fig:address-qr-codes){reference-type="ref" reference="fig:address-qr-codes"}), plus adaptés pour l'interaction avec un téléphone multifonction.
 
-![Codes QR des adresses.](img/address-qr-codes.eps){#fig:address-qr-codes}
+![Codes QR des adresses.](img/address-qr-codes.png){#fig:address-qr-codes}
 
 En résumé : lorsqu'un utilisateur veut recevoir un paiement, il génère une clé privée, en dérive une clé publique et crée à partir de celle-ci une adresse ; il communique son adresse à un autre utilisateur qui lui envoie des fonds ; il peut ensuite dépenser les fonds reçus en signant une transaction à l'aide de sa clé privée. Le réseau pair à pair de Bitcoin vérifie alors que la signature est conforme à la clé publique.
 
@@ -306,7 +306,7 @@ En règle générale, la phrase secrète, ou phrase de récupération, est gén�
 
 Le nombre de mots de la phrase dépend de la taille de l'entropie désirée. Ainsi une entropie de 128 bits est dotée d'une somme de contrôle de 4 bits, ce qui donne une phrase de 12 mots de 11 bits. Pour 256 bits, on a une somme de contrôle de 8 bits et donc une phrase de 24 mots.
 
-![De l'entropie à la phrase secrète.](img/from-entropy-to-mnemonic.eps){#fig:from-entropy-to-mnemonic}
+![De l'entropie à la phrase secrète.](img/from-entropy-to-mnemonic.png){#fig:from-entropy-to-mnemonic}
 
 Divers procédés cryptographiques sont utilisés pour dériver les clés et les adresses à partir de cette phrase. Ces procédés de dérivation ont sensiblement les mêmes propriétés que les fonctions de hachage en produisant des résultats irréversibles, imprédictibles et résistants aux collisions.
 
@@ -316,7 +316,7 @@ Dans Bitcoin, PBKDF2 est utilisée pour dériver une graine à partir de la phra
 
 La dérivation des clés se fait grâce à la fonction HMAC-SHA512. Tout d'abord, on procède à une première dérivation à partir de la graîne. On applique le HMAC à la graine et au sel cryptographique `Bitcoin seed`, ce qui nous donne une clé maîtresse (premiers 256 bits du résultat) et un code de chaîne maître (derniers 256 bits du résultat). Le passage de la phrase secrète à la clé maîtresse et au code de chaîne maître est résumé dans la figure [7.5](#fig:from-mnemonic-to-root){reference-type="ref" reference="fig:from-mnemonic-to-root"}.
 
-![De la phrase secrète à la clé maîtresse.](img/from-mnemonic-to-root.eps){#fig:from-mnemonic-to-root}
+![De la phrase secrète à la clé maîtresse.](img/from-mnemonic-to-root.png){#fig:from-mnemonic-to-root}
 
 Ces deux informations permettent de réaliser toutes les dérivations suivantes. Le code de chaîne intervient dans la chaîne de dérivation des clés, de sorte qu'il est impossible de procéder à la dérivation sans lui.
 
@@ -338,7 +338,7 @@ La dérivation des clés (*child key derivation*) consiste à utiliser l'algorit
 
 La dérivation normale fait intervenir la clé publique étendue dans le processus, ce qui rend possibles deux opérations : l'obtention de la clé publique (étendue) enfant à partir de la clé publique (étendue) parent, et l'obtention de la clé privée (étendue) enfant à partir de la clé privée (étendue) parent. Le fonctionnement de ce type de dérivation est schématisé par la figure [7.6](#fig:normal-child-key-derivation){reference-type="ref" reference="fig:normal-child-key-derivation"}.
 
-![Dérivation normale des clés par HMAC-SHA512.](img/normal-child-key-derivation.eps){#fig:normal-child-key-derivation}
+![Dérivation normale des clés par HMAC-SHA512.](img/normal-child-key-derivation.png){#fig:normal-child-key-derivation}
 
 Cette particularité de la dérivation se révèle extrêmement utile pour générer de nouvelles adresses sans compromettre la clé privée racine. Un utilisateur peut ainsi importer la clé publique étendue dans un processeur de paiement afin de vérifier son solde et générer de nouvelles adresses sans avoir à fournir la clé privée. Cela permet aussi aux commerçants d'avoir des employés qui reçoivent des paiements à différentes adresses sans se soucier de la sécurité des fonds.
 
@@ -346,7 +346,7 @@ Cependant, cette particularité comporte un risque potentiel : si une clé priv
 
 C'est pour cela qu'il existe un deuxième type de dérivation, la dérivation endurcie (*hardened derivation*), qui, contrairement à la première, est restreinte au calcul de clés privées (étendues) enfant, ce qui assure une meilleure sécurité. Celle-ci est représentée dans la figure [7.7](#fig:hardened-child-key-derivation){reference-type="ref" reference="fig:hardened-child-key-derivation"}.
 
-![Dérivation endurcie des clés par HMAC-SHA512.](img/hardened-child-key-derivation.eps){#fig:hardened-child-key-derivation}
+![Dérivation endurcie des clés par HMAC-SHA512.](img/hardened-child-key-derivation.png){#fig:hardened-child-key-derivation}
 
 Chaque dérivation fait intervenir un indice, encodé sur 32 bits comme un entier signé, dont le bit de signe indique si elle doit être endurcie ou non et dont la valeur indique le numéro de la clé enfant. Ainsi, on peut produire 2 147 483 648 (de $0$ à $2^{31} - 1$) clés enfants normales et 2 147 483 648 clés enfants endurcies (de $-0$ à $- 2^{31} + 1$) à partir d'une même clé parent.
 

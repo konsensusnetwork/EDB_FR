@@ -76,7 +76,7 @@ Les BIP peuvent être répartis en trois types : le BIP de suivi de standard (*
 
 Avant d'être adopté, un BIP doit passer par de nombreuses étapes. D'abord, il est assigné à un ou plusieurs auteurs qui se chargent d'en rédiger une première version respectant le format défini et prenant en compte l'état de l'art correspondant. Puis, le BIP est partagé dans la communauté des développeurs de Bitcoin, généralement par l'intermédiaire de la liste de diffusion de développement (bitcoin-dev). Les discussions ont lieu sur cette mailing list. Ensuite, le BIP est officiellement proposé au système sous la forme d'une demande de modification du code (*pull request*) sur le dépôt GitHub, qui doit être approuvée par l'éditeur désigné par Bitcoin Core (luke-jr depuis 2016). Enfin, un numéro lui est assigné et il est intégré au dépôt sous la forme d'une ébauche. Il peut par la suite changer de statut au cours du temps, selon l'adoption de la communauté, l'objectif étant qu'il devienne définitif ou actif.
 
-![Schéma de la procédure d'adoption d'un BIP, inspiré du BIP-1.](img/bip-process-fr.eps)
+![Schéma de la procédure d'adoption d'un BIP, inspiré du BIP-1.](img/bip-process-fr.png)
 
 Notez que ces documents sont utilisés pour BTC mais également pour d'autres protocoles. Par exemple, les BIP décrivant le fonctionnement des portefeuilles (BIP-32, BIP-39, BIP-44) sont valides pour la grande majorité des cryptomonnaies. Le SLIP-44 recense les cryptomonnaies compatibles avec le BIP-44[^753]. Les autres protocoles cryptoéconomiques disposent même parfois de leurs propres systèmes de propositions. Ethereum utilise les EIP (*Ethereum Improvement Proposals*), Bitcoin Cash les CHIP[^754] (*Cash Improvement Proposals*), Litecoin les LIP[^755], etc.
 
@@ -132,13 +132,13 @@ Le hard fork est le concept le plus ancien si on le compare au soft fork. Il ét
 
 Un hard fork peut être extensif, c'est-à-dire élargir les règles de consensus sur les blocs et les transactions. Les anciens peuvent ainsi produire des blocs valides sur la nouvelle chaîne, mais pas l'inverse. L'exemple typique de ce genre de hard fork est l'augmentation de la taille limite des blocs, qui consiste à accepter des blocs ayant une taille ou un poids plus grand, comme 2 Mo au lieu de 1 Mo ou 8 MWU à la place de 4 MWU. Ce hard fork extensif est illustré sur la figure [10.1](#fig:expanding-hard-fork){reference-type="ref" reference="fig:expanding-hard-fork"}.
 
-![Schéma d'un hard fork extensif : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, les deux chaînes persistent ; dans le cas contraire, seule la deuxième survit.](img/expanding-hard-fork-induced-forks.eps){#fig:expanding-hard-fork}
+![Schéma d'un hard fork extensif : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, les deux chaînes persistent ; dans le cas contraire, seule la deuxième survit.](img/expanding-hard-fork-induced-forks.png){#fig:expanding-hard-fork}
 
 Dans le cas où le hard fork extensif n'est pas soutenu par une majorité de la puissance de calcul du réseau, celui-ci risque de ne pas créer une branche persistante. Par exemple, les blocs de la branche imposant une limite de taille plus petite sont entièrement compatibles avec les nouvelles règles, de sorte que, si elle est plus longue, c'est elle qui sera sélectionnée comme la branche correcte. C'est pour éviter cette situation problématique que les hard forks sont généralement bilatéraux.
 
 Le hard fork bitatéral est un hard fork qui crée une incompatibilité totale entre les nouvelles règles et les anciennes. Il peut s'agir d'une règle ajoutée comme l'exigence que le premier bloc de l'embranchement inclue un changement incompatible. Dans notre cas de l'augmentation de la taille limite des blocs, il s'agirait d'imposer au premier bloc d'être strictement plus gros que la taille limite précédente, comme on le voit sur la figure [10.2](#fig:expanding-hard-fork-failure){reference-type="ref" reference="fig:expanding-hard-fork-failure"}. Cette règle supplémentaire est appelée protection contre la destruction par recoordination (ou *wipeout protection* en anglais).
 
-![Schéma d'un hard fork bilatéral : les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent.](img/bilateral-hard-fork-induced-fork.eps){#fig:expanding-hard-fork-failure}
+![Schéma d'un hard fork bilatéral : les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent.](img/bilateral-hard-fork-induced-fork.png){#fig:expanding-hard-fork-failure}
 
 Un autre exemple est le changement de l'algorithme de signature des transactions, qui rend l'intégralité des transactions signées et des blocs non vides strictement incompatibles. Ce changement a pour effet de permettre en plus une protection contre la rediffusion des transactions (*replay protection*), dans le cas où deux chaînes concurrentes persisteraient.
 
@@ -156,7 +156,7 @@ Le premier exemple de hard fork contentieux majeur est celui qui a eu lieu sur E
 
 Le second exemple de hard fork contentieux est celui qui a mené à la création de Bitcoin Cash en août 2017 suite au débat sur la scalabilité et à la guerre des blocs[^770]. Ce hard fork n'intégrait pas SegWit, augmentait la taille limite des blocs à 8 Mo et améliorait l'algorithme de signature. Il était rendu bilatéral par une règle qui imposait au bloc suivant l'activation d'avoir une taille strictement supérieure à 1 Mo. Il offrait aussi *de facto* une protection contre la rediffusion des transactions. Ce changement ayant dû se faire sans l'accord de la majorité économique, la chaîne qui ne modifiait pas les règles a pu conserver le nom de Bitcoin et le sigle boursier BTC, tandis que la nouvelle chaîne a dû adopter un nouveau nom, Bitcoin Cash, et un nouveau sigle, BCH.
 
-![Exemples de hard forks bilatéraux : ETH / ETC et BCH / BTC.](img/hard-forks-eth-etc-bch-btc.eps){#fig:hard-forks-eth-bch}
+![Exemples de hard forks bilatéraux : ETH / ETC et BCH / BTC.](img/hard-forks-eth-etc-bch-btc.png){#fig:hard-forks-eth-bch}
 
 Notez qu'un tel hard fork peut être amené à modifier l'algorithme d'ajustement de la difficulté. En effet, si la puissance de calcul est trop faible pour le soutenir, il est possible que l'ajustement n'arrive pas à terme. C'est pour cette raison que Bitcoin Cash a dû implémenter un *Emergency Difficulty Adjustment* (EDA) qui a permis de procéder à l'adaptation sur une période plus courte. Ethereum Classic n'a cependant pas dû le faire, car l'ajustement sur Ethereum avait déjà lieu à tous les blocs.
 
@@ -166,7 +166,7 @@ Passons maintenant au soft fork, qui est un procédé de mise à niveau souvent 
 
 Le soft fork peut être appliqué en conservant une seule et même chaîne. S'il est imposé par la majorité de la puissance de calcul du réseau, il n'y a aucun risque de scission. En effet, l'ensemble des blocs créés par les mineurs qui appliquent les nouvelles règles est entièrement compatible avec les anciennes règles, de sorte que la branche appliquant les nouvelles règles sera considérée comme la branche correcte par tous les nœuds si elle est majoritaire. Si l'application du soft fork est en revanche minoritaire, alors ce dernier résulte en deux chaînes persistantes distinctes. Les deux cas de figure sont illustrés sur la figure [10.4](#fig:soft-fork){reference-type="ref" reference="fig:soft-fork"}.
 
-![Schéma d'un soft fork : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, seule la première survit ; dans le cas contraire, les deux chaînes persistent.](img/soft-fork-induced-forks.eps){#fig:soft-fork}
+![Schéma d'un soft fork : si la chaîne suivant la nouvelle règle est plus longue que celle suivant l'ancienne, seule la première survit ; dans le cas contraire, les deux chaînes persistent.](img/soft-fork-induced-forks.png){#fig:soft-fork}
 
 Le concept de soft fork est postérieur à celui de hard fork. Il a été formellement découvert par Gavin Andresen en octobre 2011 qui, suite à son étude de la proposition d'ajout du code opération `OP_EVAL` par Nicolas van Saberhagen[^771], s'est aperçu que la mise à niveau pouvait se faire grâce au code opération `OP_NOP1` sans nécessairement provoquer de scission[^772].
 
@@ -220,7 +220,7 @@ Cette ouverture implique aussi que la mise en œuvre de Bitcoin est nécessairem
 
 Toutefois, toutes les branches ne sont pas équivalentes : toutes les mises en œuvre n'ont pas la même importance. L'une d'entre elle (BTC) est aujourd'hui supermajoritaire, de sorte que nous l'appelons naturellement Bitcoin, et sa modification est (heureusement) difficile. Dans le prochain chapitre, nous examinerons le mécanisme sous-jacent qui fait que Bitcoin est ce qu'il est aujourd'hui et comment l'évolution du protocole est gouvernée.
 
-![Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin.](img/bitcoin-forks-tree.eps){#fig:bitcoin-forks-tree}
+![Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin.](img/bitcoin-forks-tree.png){#fig:bitcoin-forks-tree}
 
 [^735]: « la syntaxe des messages de transmission de données » : Bitcoin Wiki, *Protocol documentation: Common structures* : <https://en.bitcoin.it/wiki/Protocol_documentation#Common_structures>.
 [^736]: « l'implémentation principale utilisée par plus de 99 % des nœuds en novembre 2023 » : <https://coin.dance/nodes>.

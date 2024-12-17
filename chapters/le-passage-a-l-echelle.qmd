@@ -98,7 +98,7 @@ Une chaîne latérale est une chaîne de blocs parallèle à une autre qui perme
 
 Deux aspects différencient le modèle de sécurité d'une chaîne latérale de celui de la chaîne principale : le maintien de l'ancrage bilatéral et le mécanisme de consensus. Le premier consiste à décider qui peut déverrouiller les fonds lors d'un transfert de la chaîne latérale vers la chaîne principale. En effet, puisque la chaîne latérale est voulue comme un complément (et pas comme une extension), les nœuds de la chaîne principale n'ont pas connaissance de cette chaîne latérale. De ce fait, le retrait est soumis à une certaine confiance, placée usuellement dans une fédération de participants qui se méfient les uns des autres[^974].
 
-![Chaîne latérale : dépôt, transfert et retrait.](img/sidechain-two-way-peg.eps){#fig:sidechain-two-way-peg}
+![Chaîne latérale : dépôt, transfert et retrait.](img/sidechain-two-way-peg.png){#fig:sidechain-two-way-peg}
 
 Le second aspect concerne la confirmation des transactions sur la chaîne latérale, et ici les options sont plus variées. Le consensus peut reposer sur le minage combiné, auquel cas c'est le travail de la chaîne principale qui est utilisé. Il peut se fonder sur la preuve d'enjeu, auquel cas c'est l'unité de la chaîne principale qui est impliquée. Ou il peut recourir à une fédération se mettant d'accord grâce à un algorithme BFT classique, auquel cas c'est l'appartenance à cette fédération qui importe (preuve d'autorité).
 
@@ -122,7 +122,7 @@ L'infrastructure du réseau Lighning repose sur des canaux de paiement qui sont 
 
 Le principe du réseau Lightning est de router les paiements au travers de ces canaux par l'intermédiaire de HTLC, qui sont des contrats d'engagement plus complexes permettant de mettre à jour les canaux concernés[^981]. Un paiement transite sur le réseau moyennant des frais minimes qui vont aux nœuds le relayant. Le réseau Lightning est donc semblable à un boulier, dont les tiges sont des canaux et dont les boules sont les satoshis qui transitent d'un côté ou de l'autre des canaux, comme on peut le voir sur la figure [14.2](#fig:lightning-network-abacus){reference-type="ref" reference="fig:lightning-network-abacus"}.
 
-![Paiement de 3 mBTC sur le réseau Lightning.](img/lightning-network-abacus.eps){#fig:lightning-network-abacus}
+![Paiement de 3 mBTC sur le réseau Lightning.](img/lightning-network-abacus.png){#fig:lightning-network-abacus}
 
 Ce fonctionnement offre la possibilité de réaliser des paiements quasi instantanés et peu chers. Il permet de faire plus de transferts en bitcoins sans réaliser davantage de transactions sur la chaîne et sans déléguer explicitement la gestion des fonds à un tiers. De plus, le modèle conserve toute la programmabilité de Bitcoin et ouvre le champ des possibles quant à l'utilisation monétaire sur Internet.
 

@@ -130,7 +130,7 @@ Cette censure passive n'est pas très problématique car elle demande que 100 %
 
 Cependant, cette situation peut devenir autrement plus grave si les mineurs conformistes, à savoir les mineurs suivant méticuleusement les réglementations, commencent à refuser les blocs contenant les transactions « sales ». C'est ce que nous appelons ici la censure active, qui consiste à empêcher des transactions d'être confirmées en rendant orphelins tous les blocs qui les contiennent. Pour être maintenue dans le temps de manière certaine, elle nécessite de disposer de la majorité de la puissance de calcul du réseau : il s'agit donc d'une attaque des 51 %. Les branches faibles formées par l'attaque de censure sont mises de côté en vertu du principe de la chaîne la plus longue, comme illustré sur la figure [9.1](#fig:censorship-attack){reference-type="ref" reference="fig:censorship-attack"}.
 
-![Attaque de censure active.](img/mining-attack-censorship.eps){#fig:censorship-attack}
+![Attaque de censure active.](img/mining-attack-censorship.png){#fig:censorship-attack}
 
 Le coût d'une telle attaque peut être colossal suivant la puissance de calcul déployée sur le réseau[^683]. Mais ce coût serait justifié par le développement des activités illégales évitant l'impôt et le seigneuriage. En effet, comme montré dans le chapitre [4](#ch:adversaire){reference-type="ref" reference="ch:adversaire"}, le profil-type de l'attaquant est l'État dont le pouvoir de prélèvement repose grandement sur son contrôle de la monnaie : c'est pourquoi il se moque de réduire (voire de détruire) l'utilité de Bitcoin ce faisant.
 
