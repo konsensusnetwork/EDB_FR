@@ -5,15 +5,15 @@ project:
     browser: false
 
 book:
-  title: "Book Title"
+  title: "L'Élégance de Bitcoin"
   output-file: main
-  author: "Book Author"
-  date: "01/01/0000"
+  author: "Ludovic Lars"
+  date: "31/01/2024"
   image: cover.png
-  image-alt: "Book Cover"
-  isbn: "978-XXX"
-  license: CC-BY-4.0
-  language: nl
+  image-alt: "L'Élégance de Bitcoin"
+  isbn: "978-9916-723-62-3"
+  license: CC-BY-NC-SA-4.0
+  language: fr
   publisher: Konsensus Network
   favicon: /figures/freestarfish.png
   search:
@@ -25,12 +25,12 @@ book:
   navbar:
     left:
       - icon: book
-        text: "Read online"
+        text: "Lire en ligne"
         href: index.qmd
         aria-label: Book
       - icon: shop
-        text: "Buy this book!"
-        href: https://bitcoinbook.shop/products/
+        text: "Acheter ce livre!"
+        href: https://bitcoinbook.shop/products/lelegance-de-bitcoin
         aria-label: Shop
   page-footer:
     left:
@@ -38,7 +38,7 @@ book:
     center:
       - text: "License"
         href: index.qmd
-      - text: "Presale"
+      - text: "Acheter"
         href: presale.qmd
     right:
       - icon: twitter
