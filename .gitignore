@@ -2,3 +2,4 @@
 .venv
 .quarto
 build
+site_libs
