@@ -62,4 +62,4 @@ def split_md_file(input_file):
         print(f'Created {filename}')
 
 if __name__ == '__main__':
-    split_md_file('chapters/main.md')
+    split_md_file('main.md')

@@ -91,17 +91,6 @@ format:
     toc: true
     toc-location: left
     reference-location: margin
-  pdf:
-    lang: nl
-    documentclass: memoir
-    classoption: smalldemyvopaper,10pt,twoside,onecolumn,openright,extrafontsizes,hidelinks
-    papersize: a5
-    toc-depth: 1
-    toc-title: Inhoudsopgave
-    keep-tex: true
-    colorlinks: false
-    include-in-header:
-      - preamble.tex
   epub:
     cover-image: cover.png
     cover-image-alt: |
