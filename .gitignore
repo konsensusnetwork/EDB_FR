@@ -17,3 +17,7 @@
 *.bcf
 *.xml
 *.ent
+.quarto
+.venv
+build
+site_libs
