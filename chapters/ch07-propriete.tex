@@ -183,7 +183,7 @@ Dans Bitcoin, cette clé publique est représentée de manière sérialisée. El
 \end{Verbatim}
 
 % Représentation compressée
-Il existe également une représentation compressée de la clé publique. Celle-ci est rendue possible par la symétrie de la courbe par rapport à l'axe des abscisses~: car en effet, le fait que le point $(x, y)$ appartienne à la courbe implique que le point $(x, - y)$ y soit aussi. Pour compresser l'information, il suffit ainsi de donner l'abscisse $x$ et un préfixe qui vaut \texttt{0x02} si $y$ est pair ou \texttt{0x03} si $y$ est impair\sendnote{Dans le corps fini $\mathbb{F}_p$, prendre l'opposé d'un élément non nul $y$ inverse sa polarité. En effet, si $y \in [\![ 1, p - 1 ]\!]$, alors $-y + p \in [\![ 1, p - 1 ]\!]$.}. On peut ensuite retrouver grâce à l'équation de la courbe. Dans notre cas, la clé publique compressée est~:
+Il existe également une représentation compressée de la clé publique. Celle-ci est rendue possible par la symétrie de la courbe par rapport à l'axe des abscisses~: car en effet, le fait que le point $(x, y)$ appartienne à la courbe implique que le point $(x, - y)$ y soit aussi. Pour compresser l'information, il suffit ainsi de donner l'abscisse $x$ et un préfixe qui vaut \texttt{0x02} si $y$ est pair ou \texttt{0x03} si $y$ est impair\footnote{Dans le corps fini $\mathbb{F}_p$, prendre l'opposé d'un élément non nul $y$ inverse sa polarité. En effet, si $y \in [\![ 1, p - 1 ]\!]$, alors $-y + p \in [\![ 1, p - 1 ]\!]$.}. On peut ensuite retrouver grâce à l'équation de la courbe. Dans notre cas, la clé publique compressée est~:
 
 \begin{Verbatim}[fontsize=\footnotesize]
 02 f6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e300b3bd
@@ -216,7 +216,7 @@ L'algorithme de vérification est le suivant~:
 \end{itemize}}.
 
 % Transaction et signature
-Dans Bitcoin, le message est la transaction. L'algorithme de vérification montre ainsi que la personne qui a produit la signature connaît $k$ tel que $K = k~G$, c'est-à-dire qu'elle est propriétaire des bitcoins. C'est ce qui permet aux nœuds du réseau de s'assurer de la validité des signatures, et par conséquent de celle de la transaction. Un exemple de signature correspondant à notre clé publique et à une transaction réalisée sur le réseau principal est\sendnote{Il s'agit de la signature de la transaction d'identifiant \longstring{08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb}. Sous forme sérialisée (DER), cette signature est \longstring{3044022019b83a5e354ef62e98413e6ef3f37ad0c69f75cea7daa6a352cf66f4668a9a0b02204c13f9b6f2c8ea7af224b3f6a3d9cfdfe5085bbafa150fb1aa72a20ce7cac6b001}.}~:
+Dans Bitcoin, le message est la transaction. L'algorithme de vérification montre ainsi que la personne qui a produit la signature connaît $k$ tel que $K = k~G$, c'est-à-dire qu'elle est propriétaire des bitcoins. C'est ce qui permet aux nœuds du réseau de s'assurer de la validité des signatures, et par conséquent de celle de la transaction. Un exemple de signature correspondant à notre clé publique et à une transaction réalisée sur le réseau principal est\footnote{Il s'agit de la signature de la transaction d'identifiant \longstring{08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb}. Sous forme sérialisée (DER), cette signature est \longstring{3044022019b83a5e354ef62e98413e6ef3f37ad0c69f75cea7daa6a352cf66f4668a9a0b02204c13f9b6f2c8ea7af224b3f6a3d9cfdfe5085bbafa150fb1aa72a20ce7cac6b001}.}~:
 
 { \footnotesize
 \begin{align*}
@@ -327,7 +327,7 @@ A = \mathrm{HASH160}(~K~) = \mathrm{RIPEMD160}(~\mathrm{SHA256}( K )~)
 
 Puisque cette composée est elle-même une fonction de hachage, elle a pour particularité d'être de même une fonction à sens unique. Il est de ce fait virtuellement impossible de retrouver la clé publique à partir de l'adresse.
 
-Le risque de collision est lui aussi statistiquement nul, même s'il y a moins d'adresses que de clés privées. La fonction de hachage RIPEMD-160 produit en effet des empreintes de 160 bits, et il existe par conséquent $2^{160}$ (environ $1,4615 \times 10^{48}$) adresses possibles, soit approximativement $8 \times 10^{28}$ fois moins d'adresses que de clés privées. Néanmoins ce nombre est suffisamment élevé pour que le risque de tomber par hasard sur la même adresse soit complètement négligeable\sendnote{Supposons qu'une population mondiale de 10~milliards d'êtres humains utilise Bitcoin activement de sorte que chaque individu génère 1~million d'adresses en moyenne. La probabilité d'une collision serait alors de~:
+Le risque de collision est lui aussi statistiquement nul, même s'il y a moins d'adresses que de clés privées. La fonction de hachage RIPEMD-160 produit en effet des empreintes de 160 bits, et il existe par conséquent $2^{160}$ (environ $1,4615 \times 10^{48}$) adresses possibles, soit approximativement $8 \times 10^{28}$ fois moins d'adresses que de clés privées. Néanmoins ce nombre est suffisamment élevé pour que le risque de tomber par hasard sur la même adresse soit complètement négligeable\footnote{Supposons qu'une population mondiale de 10~milliards d'êtres humains utilise Bitcoin activement de sorte que chaque individu génère 1~million d'adresses en moyenne. La probabilité d'une collision serait alors de~:
 \[
 10^{16}~/~2^{160} \simeq 0.000000000000000000000000000000684~\%~.
 \]
@@ -654,4 +654,4 @@ Bitcoin permet donc pour la première fois dans l'histoire d'être propriétaire
 
 Couplée à la résistance à la censure, cette assurance de la propriété permet de réaliser des transactions librement sur Internet, sans craindre le gel de compte. Mais elle s'accompagne également d'une responsabilité qui impose à l'utilisateur de prendre un certain de nombres de mesures pour ne pas voir ses fonds disparaître.
 
-Ainsi, le système de signatures numériques «~fournit un contrôle fort de la propriété~». Cependant, il «~reste incomplet sans moyen d'empêcher la double dépense\sendnote{Satoshi Nakamoto, \eng{Bitcoin: A Peer-to-Peer Electronic Cash System}, 31 octobre 2008.}~». C'est la résolution de ce problème qui constitue l'objet du prochain chapitre.
+Ainsi, le système de signatures numériques «~fournit un contrôle fort de la propriété~». Cependant, il «~reste incomplet sans moyen d'empêcher la double dépense\footnote{Satoshi Nakamoto, \eng{Bitcoin: A Peer-to-Peer Electronic Cash System}, 31 octobre 2008.}~». C'est la résolution de ce problème qui constitue l'objet du prochain chapitre.
