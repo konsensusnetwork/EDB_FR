@@ -27,7 +27,7 @@
 
 *: Histoire, enjeux et principes*
 
-Version: v1.2.2
+Version: v1.3.0
 
 Cette œuvre est mise à disposition selon les termes de la licence CC BY-SA 4.0.\
 Une copie de cette licence se trouve à l'adresse\

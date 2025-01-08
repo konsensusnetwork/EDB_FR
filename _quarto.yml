@@ -98,7 +98,7 @@ format:
     creator: Konsensus Network
     toc: true
     toc-depth: 1
-    toc-title: Inhoudsopgave
-    lang: "nl-NL"
+    toc-title: Contenu
+    lang: "fr-FR"
     css: epub.css
     number-depth: 2
