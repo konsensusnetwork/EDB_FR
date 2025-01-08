@@ -275,7 +275,7 @@ Depuis l'activation de SegWit le 24 août 2017, chaque bloc contient un arbre de
 
 \subsection{L'horodatage} L'horodatage indique la date et l'heure de construction du bloc qui sont déclarées par le mineur. D'un point de vue technique, il est donné par l'heure Unix, c'est-à-dire le nombre de secondes écoulées depuis le 1\ier{} janvier 1970 \wtime{00:00:00 UTC}. Pour notre bloc, l'horodatage est de $1661407005$ ce qui correspond à la date du 25 août 2022 à 5 heures 56 minutes et 45 secondes (UTC).
 
-\clearpage
+
 Le mineur ne peut pas choisir cet horodatage au hasard. L'heure déclarée doit se situer dans le futur par rapport au temps médian passé (MTP) -- la médiane des horodatages des 11 derniers blocs, qui retarde généralement d'une heure sur le temps réel -- et ne doit pas dépasser l'horloge des nœuds récepteurs de deux heures\pagenote{«~ne doit pas dépasser l'horloge des nœuds récepteurs de deux heures~»~: \url{https://github.com/bitcoin/bitcoin/blob/24.x/src/validation.cpp\#L3483-L3490}.}. Cette contrainte relativement permissive permet au temps réseau de rester relativement cohérent avec la réalité.
 
 % --- Valeur cible ---
