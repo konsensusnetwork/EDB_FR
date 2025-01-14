@@ -16,7 +16,7 @@ Dans Bitcoin, les transactions possèdent un rôle central. Le protocole est fai
 
 Chaque transaction est constituée d'une ou plusieurs entrées et d'une ou plusieurs sorties. Une sortie transactionnelle se compose simplement d'une indication de destination et d'un montant en unités (satoshis). Une entrée fait généralement référence à une sortie transactionnelle précédente, sauf dans le cas de la transaction de récompense où elle représente une « base de pièce » créant de nouvelles unités issues de l'émission monétaire et des frais de transaction.
 
-L'identifiant d'une transaction (*transaction identifier* ou ) est l'empreinte des données brutes qu'elle contient, obtenue via le hachage par double SHA-256. Chaque sortie transactionnelle est caractérisée par l'identifiant de la transaction dont elle est issue et par sa position dans cette transaction, qu'on appelle l'indice. Ce point de sortie (*outpoint*) sert d'indication de provenance. Un exemple de point de sortie est .
+L'identifiant d'une transaction (*transaction identifier* ou txid) est l'empreinte des données brutes qu'elle contient, obtenue via le hachage par double SHA-256. Chaque sortie transactionnelle est caractérisée par l'identifiant de la transaction dont elle est issue et par sa position dans cette transaction, qu'on appelle l'indice. Ce point de sortie (*outpoint*) sert d'indication de provenance. Un exemple de point de sortie est f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16:0.
 
 Contrairement à ce que la description de la propriété dans le chapitre [7](#ch:propriete){reference-type="ref" reference="ch:propriete"} suggère, la destination et la provenance des unités ne sont pas à proprement parler des adresses, mais des scripts de verrouillage, c'est-à-dire des petits programmes qui déterminent leurs conditions de dépense. Chaque sortie crée ainsi un script qui bloque les fonds d'une façon spécifique. Le plus souvent, ce script contient une clé publique ou une empreinte de clé publique, qui peut être interprétée comme une adresse par le portefeuille.
 
@@ -70,7 +70,7 @@ Satoshi Nakamoto a inclus ce système de scripts dans Bitcoin pour lui permettre
 
 Le langage est constitué de plus d'une centaine d'opérateurs, aussi appelés codes opération (*opcodes*), qui agissent sur la pile primaire d'une manière ou d'une autre. Les opérateurs sont des nombres codés sur 1 octet (allant de 0 à 255), mais sont usuellement désignés par un nom décrivant leur fonction, dans le but de rendre la lecture plus compréhensible par l'être humain. Ils sont notés en majuscules et sont souvent précédés du préfixe `OP_` même s'il peut être omis en l'absence d'ambiguïté. Par exemple, l'opérateur permettant de vérifier une signature (`0xac`) est noté `OP_CHECKSIG` ou `CHECKSIG`.
 
-Les opérateurs allant de 1 à 75, parfois notés , ont pour action d'empiler des données ayant une taille allant de 1 à 75 octets. L'utilisation d'opérateurs supplémentaires spécifiques (notés ) permet cependant de placer une information plus grande sur la pile. Bien qu'on puisse utiliser cette notation, il est généralement plus simple de placer un élément entre chevrons pour indiquer qu'il est placé au sommet de la pile. Par exemple, le fait d'écrire au sein d'un script signifie que la signature est empilée.
+Les opérateurs allant de 1 à 75, parfois notés OP_PUSHBYTES_X, ont pour action d'empiler des données ayant une taille allant de 1 à 75 octets. L'utilisation d'opérateurs supplémentaires spécifiques (notés OP_PUSHDATA_Y) permet cependant de placer une information plus grande sur la pile. Bien qu'on puisse utiliser cette notation, il est généralement plus simple de placer un élément entre chevrons pour indiquer qu'il est placé au sommet de la pile. Par exemple, le fait d'écrire \<signature\> au sein d'un script signifie que la signature est empilée.
 
 La valeur retournée à la fin de l'exécution des scripts est un booléen, de sorte que le script peut être valide, auquel cas la dépense de la pièce est approuvée, ou bien invalide, auquel cas la transaction est rejetée dans son ensemble. Le script est valide si et seulement si la valeur `TRUE` (« vrai ») est présente en haut de la pile à la fin de l'exécution. Il est invalide si ce n'est pas le cas ou si son exécution s'est arrêtée avant la fin.
 
@@ -106,7 +106,7 @@ De même, la vérification de la validité d'une signature est réalisée par le
 <signature> || <clé publique> CHECKSIG
 ```
 
-En outre, il existe des conditions plus avancées comme les verrous temporels. Ceux-ci permettent de bloquer les fonds de la pièce pour un temps précis, que ce soit jusqu'à une date donnée, auquel cas on parle de temps de verrouillage absolu, ou bien pendant une période donnée, auquel cas on parle de temps de verrouillage relatif. Le premier est le fait de l'opérateur dont les spécificités techniques sont décrites dans le BIP-65. Le second est appliqué par le code opération décrit dans le BIP-112.
+En outre, il existe des conditions plus avancées comme les verrous temporels. Ceux-ci permettent de bloquer les fonds de la pièce pour un temps précis, que ce soit jusqu'à une date donnée, auquel cas on parle de temps de verrouillage absolu, ou bien pendant une période donnée, auquel cas on parle de temps de verrouillage relatif. Le premier est le fait de l'opérateur OP_CHECKLOCKTIMEVERIFY dont les spécificités techniques sont décrites dans le BIP-65. Le second est appliqué par le code opération OP_CHECKSEQUENCEVERIFY décrit dans le BIP-112.
 
 ## Les schémas classiques {#les-schémas-classiques .unnumbered}
 
@@ -136,7 +136,7 @@ Le schéma P2PK était utilisé dans les débuts de Bitcoin pour recevoir les pa
 
 ### P2PKH : Pay to Public Key Hash
 
-Le schéma Pay to Public Key Hash (P2PKH), qui est traduit littéralement par « payer à l'empreinte de la clé publique », est le deuxième type de format de réception apparu dans Bitcoin dès le début du fait de la conception de Satoshi Nakamoto. Ce schéma permet non pas de réaliser un paiement vers une clé publique, mais vers l'empreinte d'une clé publique, tout en faisant en sorte que l'interpréteur vérifie quand même la validité de la signature vis-à-vis de la clé publique lors de la dépense des fonds. L'empreinte de la clé publique est alors considérée comme la donnée essentielle (« charge utile ») de l'adresse, qui dans ce cas commence toujours par un 1, comme par exemple . Le script de verrouillage ici est :
+Le schéma Pay to Public Key Hash (P2PKH), qui est traduit littéralement par « payer à l'empreinte de la clé publique », est le deuxième type de format de réception apparu dans Bitcoin dès le début du fait de la conception de Satoshi Nakamoto. Ce schéma permet non pas de réaliser un paiement vers une clé publique, mais vers l'empreinte d'une clé publique, tout en faisant en sorte que l'interpréteur vérifie quand même la validité de la signature vis-à-vis de la clé publique lors de la dépense des fonds. L'empreinte de la clé publique est alors considérée comme la donnée essentielle (« charge utile ») de l'adresse, qui dans ce cas commence toujours par un 1, comme par exemple 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX. Le script de verrouillage ici est :
 
 ``` {fontsize="\\footnotesize"}
 DUP HASH160 <empreinte de la clé publique> EQUALVERIFY CHECKSIG
@@ -166,13 +166,13 @@ Le script de déverrouillage correspondant est :
 <leurre (0)> <signature 1> ... <signature M>
 ```
 
-La présence du leurre (généralement 0) est dû à un défaut dans l'implémentation de l'exécution de l'opérateur par Satoshi, qui requiert un élément de trop. Les développeurs n'ont pas jugé opportun de corriger ce défaut, car cette correction constituait un hard fork.
+La présence du leurre (généralement 0) est dû à un défaut dans l'implémentation de l'exécution de l'opérateur OP_CHECKMULTISIG par Satoshi, qui requiert un élément de trop. Les développeurs n'ont pas jugé opportun de corriger ce défaut, car cette correction constituait un hard fork.
 
 C'est ce schéma, particulièrement exigeant au niveau de la mise en place, qui a motivé la création du schéma P2SH.
 
 ### P2SH : Pay to Script Hash
 
-Le schéma Pay to Script Hash (P2SH), pouvant être traduit littéralement par « payer à l'empreinte du script », reprend l'idée derrière P2PKH, à la seule différence que la donnée hachée n'est pas une clé publique, mais le script lui-même ! Le script en question est alors appelé script de récupération (*redeem script*) pour le différencier du script de déverrouillage. Son empreinte est la donnée constitutive de l'adresse, cette dernière commençant toujours par un 3 à l'instar de .
+Le schéma Pay to Script Hash (P2SH), pouvant être traduit littéralement par « payer à l'empreinte du script », reprend l'idée derrière P2PKH, à la seule différence que la donnée hachée n'est pas une clé publique, mais le script lui-même ! Le script en question est alors appelé script de récupération (*redeem script*) pour le différencier du script de déverrouillage. Son empreinte est la donnée constitutive de l'adresse, cette dernière commençant toujours par un 3 à l'instar de 3K8Ps6Ayw5ZaKDaLZjfGo3mTgDsc1VXZ8d.
 
 Ce schéma donne à l'utilisateur la possibilité d'y inclure n'importe quel script, sans discrimination sur son format, à condition qu'il respecte bien sûr certaines limites. Il permet aussi de recevoir des fonds depuis la quasi-totalité des portefeuilles existants, le fardeau de la construction et du déverrouillage du script revenant uniquement au destinataire, et n'est pas partagé à l'expéditeur comme dans le cas de l'utilisation de scripts bruts.
 
@@ -198,13 +198,13 @@ DUP HASH160 <empreinte du script de récupération> EQUALVERIFY EVAL
 
 tandis que le script de déverrouillage aurait été le même que pour P2SH. L'exécution successive de ces deux scripts aurait permis dans un premier temps de vérifier la conformité du hachage du script de récupération avec l'empreinte ; puis dans un second temps d'exécuter le script de récupération et de lui combiner les éléments de déverrouillage. Néanmoins cette solution n'a pas été acceptée, celle-ci ayant été jugée trop dangereuse à cause de son pouvoir de récursion. Il lui a été préféré le modèle, plus restrictif, de P2SH.
 
-L'exécution de P2SH fonctionne exactement comme le schéma lié à `OP_EVAL`, à l'exception qu'une partie du script n'est pas explicitement indiquée. D'un côté, la vérification de la correspondance entre l'empreinte indiquée et le script de récupération est bien réalisée par le script de verrouillage. De l'autre côté, l'évaluation du script de récupération est effectuée implicitement grâce à une exception ajoutée au code source qui fait que les nœuds du réseau qui reconnaissent le schéma l'interprètent différemment. Dans Bitcoin Core, on peut observer cette condition au sein de la fonction de l'interpréteur.
+L'exécution de P2SH fonctionne exactement comme le schéma lié à `OP_EVAL`, à l'exception qu'une partie du script n'est pas explicitement indiquée. D'un côté, la vérification de la correspondance entre l'empreinte indiquée et le script de récupération est bien réalisée par le script de verrouillage. De l'autre côté, l'évaluation du script de récupération est effectuée implicitement grâce à une exception ajoutée au code source qui fait que les nœuds du réseau qui reconnaissent le schéma l'interprètent différemment. Dans Bitcoin Core, on peut observer cette condition au sein de la fonction VerifyScript de l'interpréteur.
 
 La proposition a été codifiée dans le BIP-16. Si cette solution est pratique, elle crée de la complexité et n'est pas très élégante. Comme le disait Gavin Andresen dans l'explication introductive de ce BIP :
 
 « Reconnaître une forme "spéciale" de scriptPubKey et réaliser une validation supplémentaire quand elle est détectée, c'est laid. Cependant, l'avis général est que les alternatives sont soit encore plus laides, soit plus complexes à implémenter, et / ou étendent le pouvoir du langage d'expression de manière dangereuse[^488]. »
 
-Le schéma P2SH a fini par être activé le 1 avril 2012 sous la forme d'un soft fork, en dépit de l'opposition notable de Luke-Jr qui proposait un opérateur alternatif, , décrit dans le BIP-17.
+Le schéma P2SH a fini par être activé le 1 avril 2012 sous la forme d'un soft fork, en dépit de l'opposition notable de Luke-Jr qui proposait un opérateur alternatif, OP_CHECKHASHVERIFY, décrit dans le BIP-17.
 
 ### NULLDATA
 
@@ -222,21 +222,21 @@ La programmabilité de Bitcoin n'est pas seulement issue de son langage de progr
 
 Le type de signature est construit à partir de plusieurs signaux de signature qui peuvent être combinés. Les quatre signaux de signature qui existent sont :
 
--   (`0x01`) qui indique que toutes les sorties sont signées ;
+-   SIGHASH_ALL (`0x01`) qui indique que toutes les sorties sont signées ;
 
--   (`0x03`) qui permet de ne signer qu'une seule sortie ;
+-   SIGHASH_SINGLE (`0x03`) qui permet de ne signer qu'une seule sortie ;
 
--   (`0x02`) qui indique qu'aucune sortie n'est signée ;
+-   SIGHASH_NONE (`0x02`) qui indique qu'aucune sortie n'est signée ;
 
--   (`0x80`) qui permet de ne signer qu'une seule entrée.
+-   SIGHASH_ANYONECANPAY (`0x80`) qui permet de ne signer qu'une seule entrée.
 
-Les trois signaux concernant les sorties peuvent être associés à , ce qui permet de former finalement six types de signatures différents, représentés sur la figure [12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment même si certains autres types peuvent parfois trouver une utilité. C'est notamment le cas de qui permet de construire des transactions de type *anyone-can-pay*, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.
+Les trois signaux concernant les sorties peuvent être associés à SIGHASH_ANYONECANPAY, ce qui permet de former finalement six types de signatures différents, représentés sur la figure [12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment SIGHASH_ALL même si certains autres types peuvent parfois trouver une utilité. C'est notamment le cas de SIGHASH_ALL \| SIGHASH_ANYONECANPAY qui permet de construire des transactions de type *anyone-can-pay*, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.
 
 ![Les différents types de signatures dans Bitcoin.](img/signature-hash-types.png){#fig:signature-hash-types}
 
-Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile : celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu'il pouvait avoir une utilité. C'est dans cet esprit que le signal de signature a été proposé en février 2016 par Joseph Poon[^490].
+Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile : celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu'il pouvait avoir une utilité. C'est dans cet esprit que le signal de signature SIGHASH_NOINPUT a été proposé en février 2016 par Joseph Poon[^490].
 
-Ce type de signal pourrait être implémenté de manière partielle dans BTC par l'intermédiaire du BIP-118, qui prévoit l'intégration de deux nouveaux signaux au sein des scripts de Taproot : et . Il permettrait d'améliorer le fonctionnement du réseau Lightning par la mise en œuvre du protocole Eltoo reposant sur la construction de transactions flottantes.
+Ce type de signal pourrait être implémenté de manière partielle dans BTC par l'intermédiaire du BIP-118, qui prévoit l'intégration de deux nouveaux signaux au sein des scripts de Taproot : SIGHASH_ANYPREVOUT et SIGHASH_ANYPREVOUTANYSCRIPT. Il permettrait d'améliorer le fonctionnement du réseau Lightning par la mise en œuvre du protocole Eltoo reposant sur la construction de transactions flottantes.
 
 ## SegWit : le témoin séparé {#segwit-le-témoin-séparé .unnumbered}
 
@@ -292,7 +292,7 @@ Le schéma *Pay to Witness Public Key Hash* (P2WPKH), qui signifie littéralemen
 <version (0)> <empreinte (hash160) de la clé publique>
 ```
 
-Ce script est semblable à un script *anyone-can-spend*, que tout le monde pourrait dépenser, mais l'interpréteur ajoute une condition supplémentaire pour que ce ne soit pas le cas. Le type de la sortie est détecté grâce à sa forme : la version de SegWit (ici 0) et la taille de l'empreinte (ici 20 octets). La version et l'empreinte forment l'information essentielle de l'adresse, qui est encodée grâce au format Bech32 et qui commence toujours par `bc1q`, à l'instar de .
+Ce script est semblable à un script *anyone-can-spend*, que tout le monde pourrait dépenser, mais l'interpréteur ajoute une condition supplémentaire pour que ce ne soit pas le cas. Le type de la sortie est détecté grâce à sa forme : la version de SegWit (ici 0) et la taille de l'empreinte (ici 20 octets). La version et l'empreinte forment l'information essentielle de l'adresse, qui est encodée grâce au format Bech32 et qui commence toujours par `bc1q`, à l'instar de bc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4udhygr2.
 
 Le script de déverrouillage est vide. Les données de déverrouillage sont contenues dans le témoin de la transaction. La partie du témoin correspondant à l'entrée est :
 
@@ -333,7 +333,7 @@ Le dernier schéma à entrer en vigueur est le schéma *Pay to Taproot* (P2TR), 
 <version (1)> <clé publique Taproot>
 ```
 
-La clé publique en question mesure 32 octets. La version et la clé publique constituent les éléments constitutifs de l'adresse. Cette dernière est encodée grâce au format Bech32m, qui est une variante de l'encodage Bech32 ayant corrigé un petit bug dans le calcul de la somme de contrôle. L'adresse résultante commence toujours par `bc1p` comme par exemple . Le déverrouillage de la sortie se fait avec une signature simple, ou bien avec l'exécution du MAST.
+La clé publique en question mesure 32 octets. La version et la clé publique constituent les éléments constitutifs de l'adresse. Cette dernière est encodée grâce au format Bech32m, qui est une variante de l'encodage Bech32 ayant corrigé un petit bug dans le calcul de la somme de contrôle. L'adresse résultante commence toujours par `bc1p` comme par exemple bc1pqlqqhzrg60v5h87r8lugusrddgz0j306shcupthy0tdqaqurwn8qr8qsej. Le déverrouillage de la sortie se fait avec une signature simple, ou bien avec l'exécution du MAST.
 
 Toutes ces modifications majeures font de SegWit une mise à niveau profonde du protocole, qui a amené beaucoup de choses dans Bitcoin. L'exigence de passer par un soft fork explique la forme qu'elle a prise et elle ne peut par conséquent être comprise que dans le contexte dans lequel elle a été activée. Toutefois, cette mise à niveau a aussi apporté des inconvénients majeurs, dont les deux principaux sont la dette technique alourdissant le coût de maintien et d'amélioration du code, et l'affaiblissement de la confidentialité générale due à l'apparition de nouveaux types d'adresses partiellement adoptés. SegWit était donc loin d'être une mise à niveau parfaite.
 
@@ -397,7 +397,7 @@ La troisième technique d'amélioration de la confidentialité est le procédé 
 
 Les Confidential Transactions ont été ajoutées en 2017 à Monero grâce au travail de Shen Noether. RingCT, qui permet de cacher les montants échangés, a ainsi été ajouté au protocole en janvier 2017 et a été rendu obligatoire en septembre de la même année. Il alourdissait les transactions par rapport aux transactions classiques. Néanmoins, depuis octobre 2018, ce compromis a été atténué grâce à l'implémentation des bulletproofs, qui a allégé le fardeau des preuves de portée et qui a permis de réduire de 80 % la taille des transactions[^510].
 
-Un autre concept faisant usage des Confidential Transactions est Mimblewimble. Celui-ci a été proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC où il partageait un lien vers un texte descriptif hébergé sur Tor[^511]. Mimblewimble a attiré l'attention de certains développeurs de Bitcoin, dont le mathématicien Andrew Poelstra qui en a fait une description plus avancée dans un papier daté du 6 octobre 2016[^512].
+Un autre concept faisant usage des Confidential Transactions est Mimblewimble. Celui-ci a été proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC #bitcoin-wizards où il partageait un lien vers un texte descriptif hébergé sur Tor[^511]. Mimblewimble a attiré l'attention de certains développeurs de Bitcoin, dont le mathématicien Andrew Poelstra qui en a fait une description plus avancée dans un papier daté du 6 octobre 2016[^512].
 
 L'apport de Mimblewimble est de condenser l'historique des transactions en chamboulant la structure des transactions. Il repose sur trois primitives cryptographiques : les Confidential Transactions, qui cachent les montants, les signatures agrégées à sens unique (OWAS), qui permettent de combiner les transactions au sein d'un bloc, et le sectionnage des transactions (*transaction cut-through*), qui permet de supprimer les sorties transactionnelles intermédiaires. Cette réduction, qui améliore la confidentialité du système de manière relativement légère, se fait au prix de la programmabilité, rendue directement impossible.
 
@@ -422,13 +422,13 @@ De plus, la volonté de Satoshi d'automatiser divers mécanismes lui a fait int�
 [^486]: Nicolas van Saberhagen (ByteCoin), *OP_EVAL proposal*, 02/10/2011 00:49:19 UTC : <https://bitcointalk.org/index.php?topic=46538.msg553689#msg553689>.
 [^487]: Gavin Andresen, *Re: OP_EVAL proposal*, 02/10/2011 20:42:32 UTC : <https://bitcointalk.org/index.php?topic=46538.msg554620#msg554620>.
 [^488]: Gavin Andresen, *BIP-16: Pay to Script Hash*, 3 janvier 2012 : <https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki#rationale>.
-[^489]: L'instruction `OP_RETURN` servait initialement à retourner la valeur au sommet de la pile, d'où son nom. Cependant, en juillet 2010, la découverte du « *1 RETURN bug* », qui permettait de dépenser toute sortie transactionnelle via le script de déverrouillage , a poussé Satoshi Nakamoto à désactiver cette fonctionnalité en lui faisant renvoyer `FALSE` systématiquement. Voir Satoshi Nakamoto, *reverted makefile.unix wx-config -- version 0.3.6 (git commit)*, 29/07/2010 18:27:12 UTC : <https://sourceforge.net/p/bitcoin/code/119/>.
+[^489]: L'instruction `OP_RETURN` servait initialement à retourner la valeur au sommet de la pile, d'où son nom. Cependant, en juillet 2010, la découverte du « *1 RETURN bug* », qui permettait de dépenser toute sortie transactionnelle via le script de déverrouillage TRUE RETURN, a poussé Satoshi Nakamoto à désactiver cette fonctionnalité en lui faisant renvoyer `FALSE` systématiquement. Voir Satoshi Nakamoto, *reverted makefile.unix wx-config -- version 0.3.6 (git commit)*, 29/07/2010 18:27:12 UTC : <https://sourceforge.net/p/bitcoin/code/119/>.
 [^490]: Joseph Poon, *\[bitcoin-dev\] SIGHASH_NOINPUT in Segregated Witness*, 26/02/2016 01:07:46 UTC : <https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-February/012460.html>.
 [^491]: Sur l'attaque de méalléabilité contre Mt. Gox, voir Ken Shirriff, *The Bitcoin malleability attack graphed hour by hour*, 15 février 2014 : <https://www.righto.com/2014/02/the-bitcoin-malleability-attack-hour-by.html>. Voir aussi Christian Decker, Roger Wattenhofer, *Bitcoin Transaction Malleability and MtGox*, 26 mars 2014 : <https://arxiv.org/pdf/1403.6676.pdf>.
 [^492]: SF Bitcoin Developers, *Sidechains: Bringing New Elements to Bitcoin* (vidéo), 8 juin 2015 : <https://www.youtube.com/watch?v=Twynh6xIKUc>.
 [^493]: SegWit Resources, *Why a discount factor of 4? Why not 2 or 8?*, 13 janvier 2017 : <https://medium.com/segwit-co/why-a-discount-factor-of-4-why-not-2-or-8-bbcebe91721e>.
 [^494]: Une transaction à 2 entrées et 2 sorties de type P2WPKH mesure 372 octets et pèse 834 unités de poids au maximum. De ce fait, il est possible d'inclure 4 796 transactions dans un bloc, ce qui nous permet de calculer sa taille réelle.
-[^495]: Voir le bloc 774 628, d'identifiant dont la taille était de 3 955 272 octets et qui incluait une transaction qui mesurait à elle seule 3 938 383 octets.
+[^495]: Voir le bloc 774 628, d'identifiant 0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d dont la taille était de 3 955 272 octets et qui incluait une transaction qui mesurait à elle seule 3 938 383 octets.
 [^496]: Gavin Andresen, *\[bitcoin-dev\] Time to worry about 80-bit collision attacks or not?*, 07/01/2016 19:02:05 UTC : <https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-January/012198.html>.
 [^497]: « Le modèle bancaire traditionnel atteint un certain niveau de confidentialité en limitant l'accès aux informations aux parties concernées et au tiers de confiance. La nécessité d'annoncer publiquement toutes les transactions exclut cette méthode, mais la confidentialité peut toujours être préservée en interrompant le flux d'informations à un autre endroit : en gardant les clés publiques anonymes. Le public peut voir que quelqu'un envoie un montant à quelqu'un d'autre, mais ne dispose pas d'informations reliant la transaction à qui que ce soit. » -- Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
 [^498]: « Comme pare-feu supplémentaire, une nouvelle paire de clés devrait être utilisée pour chaque transaction afin de les empêcher d'être liées à un propriétaire commun. Certains liens sont toujours inévitables avec les transactions à entrées multiples, qui révèlent nécessairement que leurs entrées appartiennent au même propriétaire. Le risque est que si le propriétaire d'une clé est révélé, la liaison pourrait révéler d'autres transactions qui lui appartiennent. » -- Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.

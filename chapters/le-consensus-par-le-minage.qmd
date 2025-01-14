@@ -58,7 +58,7 @@ L'algorithme de preuve de travail de Hashcash consiste à trouver une collision 
 
 La preuve de travail est réalisée par le calcul successif d'empreintes d'une chaîne de caractères, composée d'une information de base, et d'un nombre qu'on fait varier, appelé le compteur ou le nonce. L'information de base comporte généralement des indications sur le contexte dans lequel la preuve de travail a été produite (identifiant, date, heure, protocole, etc.) pour démontrer que cette preuve de travail n'a pas déjà été utilisée.
 
-Prenons un exemple pour illustrer le propos. D'abord, on choisit une information de base propre au contexte : pour produire une preuve de travail liée à cet ouvrage et à sa date d'écriture, on peut opter pour l'information de base . Puis on détermine le degré de la preuve de travail, c'est-à-dire le nombre de zéros binaires par lequel doit commencer l'empreinte, ici 16. On procède ensuite à la recherche du résultat voulu en incrémentant le nonce : à chaque itération, on le met bout à bout avec l'information de base et on vérifie si l'empreinte de l'ensemble est satisfaisante. Le travail s'arrête enfin lorsque l'empreinte commence avec un nombre suffisant de zéros : ici 95 690 tentatives. Notre preuve de travail est donc :
+Prenons un exemple pour illustrer le propos. D'abord, on choisit une information de base propre au contexte : pour produire une preuve de travail liée à cet ouvrage et à sa date d'écriture, on peut opter pour l'information de base 20231031181000:BitcoinElegance:. Puis on détermine le degré de la preuve de travail, c'est-à-dire le nombre de zéros binaires par lequel doit commencer l'empreinte, ici 16. On procède ensuite à la recherche du résultat voulu en incrémentant le nonce : à chaque itération, on le met bout à bout avec l'information de base et on vérifie si l'empreinte de l'ensemble est satisfaisante. Le travail s'arrête enfin lorsque l'empreinte commence avec un nombre suffisant de zéros : ici 95 690 tentatives. Notre preuve de travail est donc :
 
 ``` {fontsize="\\footnotesize"}
 20231031181000:BitcoinElegance:95690
@@ -73,13 +73,13 @@ Et l'empreinte correspondante, commençant par 4 zéros hexadécimaux (soit 16 z
 Les étapes de cette procédure sont décrites dans le tableau [8.1](#table:hashcash-hashes){reference-type="ref" reference="table:hashcash-hashes"}.
 
 ::: {#table:hashcash-hashes}
-   **Nonce**   **Empreinte (SHA-256)**
-  ----------- -------------------------
-       0      
-       1      
-       2      
-       3      
-    95 690    
+   **Nonce**                       **Empreinte (SHA-256)**
+  ----------- ------------------------------------------------------------------
+       0       933c448c18e334c1cc5191f035d8581af611417578392b2d695d521c29b396d5
+       1       50530c98d1b171826b3d26fa5442e4ce7aa1f8a1277b71bc74d3adc1cd88b9ae
+       2       fa27ed560df22d676d69966c9a981c5adfc395b4e7f78ca54d2593a98fd2ea38
+       3       011692df53a84ecdddcd154de4f329e7311090580adb189e8360ea1729d75c99
+    95 690     0000387b99b1412e3cb6e49548cc0d11bdc797138e1a0f5ff095279a710b895a
 
   : Recherche de la preuve de travail à partir de l'information de base `20231031181000:BitcoinElegance:`.
 :::
@@ -374,7 +374,7 @@ C'est pour corriger ce défaut de variance que sont nées les coopératives de m
 
 La première coopérative de minage a été lancée le 27 novembre 2010 par Marek Palatinus (aussi connu sous le pseudonyme de *slush*). Elle portait initialement le nom de Bitcoin.cz Mining avant d'être plus tard rebaptisée Slush Pool en hommage à son fondateur, puis de devenir Braiins Pool en septembre 2022. Aujourd'hui, les coopératives de minage sont nombreuses et concentrent l'essentiel de la puissance de calcul du réseau. Elles sont généralement basées dans les juridictions où le minage est très présent, comme la Chine (jusqu'en 2021) ou plus récemment les États-Unis.
 
-Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères , ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
+Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères poolin.com, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
 
 ![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.png){#fig:hashrate-distribution}
 
@@ -424,7 +424,7 @@ Il existe cependant une menace plus importante, plus insidieuse : celle de la c
 [^364]: Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
 [^365]: En décembre 2017, le mineur du bloc 501 726 s'est ainsi rémunéré de la coquette somme de 0 BTC !
 [^366]: Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
-[^367]: Dans Bitcoin Core, l'algorithme d'ajustement est décrit par la fonction dans le fichier `pow.cpp`. La variation est limitée à un facteur 4 (multiplication comme division) pour éviter les instabilités. L'algorithme *surestime* la puissance de calcul déployée car le temps écoulé est mesuré sur 2 015 intervalles, et non pas 2 016 comme cela devrait se faire.
+[^367]: Dans Bitcoin Core, l'algorithme d'ajustement est décrit par la fonction CalculateNextWorkRequired dans le fichier `pow.cpp`. La variation est limitée à un facteur 4 (multiplication comme division) pour éviter les instabilités. L'algorithme *surestime* la puissance de calcul déployée car le temps écoulé est mesuré sur 2 015 intervalles, et non pas 2 016 comme cela devrait se faire.
 [^368]: Satoshi Nakamoto, *Bitcoin v0.1 released*, 08/01/2009 19:27:40 UTC : <https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html>.
 [^369]: Cette convergence est illustrée par le paradoxe d'Achille et de la tortue formulé par le philosophe grec Zénon. La suite $\left( \sum_{i=1}^{n} (1/2)^i \right)$ converge vers $1$ lorsque $n\to+\infty$.
 [^370]: « Une fois qu'un nombre prédéterminé de pièces a été mis en circulation, l'incitation peut être entièrement financée par les frais de transaction et ne plus requérir aucune inflation. » -- Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 24 mars 2009.

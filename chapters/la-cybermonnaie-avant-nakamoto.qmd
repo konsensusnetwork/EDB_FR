@@ -196,7 +196,7 @@ Dans Ripple, les paiements se faisaient par le routage d'une série d'emprunts. 
 
 La compensation se faisait par la découverte de cycles de crédit dans le réseau. Si Bob devait 5 \$ à Alice, Carole 5 \$ à Bob et Alice 5 \$ à Carole, alors leurs dettes mutuelles disparaissaient, ce qui permettait à tous les acteurs d'avoir une capacité d'emprunt plus grande pour recevoir de futurs paiements. Une dette pouvait également être éteinte par son règlement entre les deux parties dans l'unité de compte indiquée.
 
-En 2006, dans l'idée de faire progresser son projet, Ryan Fugger a mis en ligne une preuve de concept appelée Ripplepay. Celle-ci était basée sur un serveur central () et permettait aux utilisateurs de se connecter avec une simple adresse de courrier électronique. Ryan Fugger a également créé un Google Group en janvier 2007.
+En 2006, dans l'idée de faire progresser son projet, Ryan Fugger a mis en ligne une preuve de concept appelée Ripplepay. Celle-ci était basée sur un serveur central (ripplepay.com) et permettait aux utilisateurs de se connecter avec une simple adresse de courrier électronique. Ryan Fugger a également créé un Google Group en janvier 2007.
 
 Malgré l'enthousiasme de sa communauté et quelques milliers d'utilisateurs, Ripple possédait des défauts inhérents à son fonctionnement distribué. En particulier, il souffrait du « problème de l'engagement décentralisé[^298] » : durant un paiement, les participants ne pouvaient pas s'engager d'une façon sûre pour assurer la chaîne de prêts[^299].
 
@@ -218,7 +218,7 @@ En privé, il écrivait aussi à Dustin Trammell en 2009 :
 
 « Je pense qu'il y avait beaucoup plus de gens qui étaient intéressés \[par la monnaie électronique\] dans les années 90, mais après plus d'une décennie d'échecs de systèmes basés sur des tiers de confiance (Digicash, etc.), ils considèrent qu'il s'agit d'une cause perdue. J'espère qu'ils sauront distinguer que c'est la première fois, à ma connaissance, que nous essayons un système qui n'est pas fondé sur la confiance[^302]. »
 
-La dernière référence au modèle de Chaum était la première version du livre blanc datant du mois d'août 2008 qui s'intitulait de façon limpide « *Electronic Cash Without a Trusted Third Party* » (« Un argent liquide électronique sans tiers de confiance » en français) et dont le nom du fichier était [^303].
+La dernière référence au modèle de Chaum était la première version du livre blanc datant du mois d'août 2008 qui s'intitulait de façon limpide « *Electronic Cash Without a Trusted Third Party* » (« Un argent liquide électronique sans tiers de confiance » en français) et dont le nom du fichier était ecash.pdf[^303].
 
 Satoshi Nakamoto s'était donc clairement intéressé à eCash avant de concevoir Bitcoin. Toutefois, ce n'était pas le cas des concepts de b-money, bit gold et RPOW, dont il n'avait vraisemblablement pas connaissance en 2007. Ces systèmes ont cependant joué un rôle indirect dans l'histoire de Bitcoin.
 

@@ -50,9 +50,9 @@ qpzry9x8gf2tvdw0s3jn54khce6mua7l
 
 Ces systèmes d'encodage permettent de représenter l'information de manière brute. Cependant, elle peut également être encodée dans un format particulier incluant une somme de contrôle. Une somme de contrôle (*checksum*) est une courte séquence de données numériques calculée à partir d'un ensemble de données plus important permettant de vérifier, avec une très haute probabilité, que l'intégrité de cet ensemble a été préservée lors d'une opération de copie, de stockage ou de transmission. Celle-ci est généralement placée après l'information pour que le tout soit ensuite représenté dans la base adéquate.
 
-Dans le cas de Bitcoin, la somme de contrôle est essentielle pour transmettre les informations sensibles, comme les clés privées et les adresses, afin qu'une faute de frappe soit détectée immédiatement. Les trois encodages qui mettent en œuvre ce type de somme de contrôle dans BTC sont les formats Base58Check, Bech32 et Bech32m. Le premier a été mis en place par Satoshi dès les débuts de la cryptomonnaie et consiste à calculer une somme de contrôle grâce à l'empreinte cryptographique tronquée de l'information. Il concerne les clés privées et les adresses dites « traditionnelles », comme par exemple l'adresse .
+Dans le cas de Bitcoin, la somme de contrôle est essentielle pour transmettre les informations sensibles, comme les clés privées et les adresses, afin qu'une faute de frappe soit détectée immédiatement. Les trois encodages qui mettent en œuvre ce type de somme de contrôle dans BTC sont les formats Base58Check, Bech32 et Bech32m. Le premier a été mis en place par Satoshi dès les débuts de la cryptomonnaie et consiste à calculer une somme de contrôle grâce à l'empreinte cryptographique tronquée de l'information. Il concerne les clés privées et les adresses dites « traditionnelles », comme par exemple l'adresse 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX.
 
-Les deux autres ont vu le jour en 2017 et en 2021 (respectivement). Ils font intervenir des sommes de contrôle par code BCH (Bose--Chaudhuri--Hocquenghem), qui permettent non seulement de détecter la présence d'erreurs de frappe mais aussi de les localiser. Ces formats servent à encoder (respectivement) les adresses natives de SegWit, comme par exemple , et les clés publiques utilisées dans Taproot, telle que . Le format Bech32 est également utilisé pour encoder les demandes de paiement sur le réseau Lightning.
+Les deux autres ont vu le jour en 2017 et en 2021 (respectivement). Ils font intervenir des sommes de contrôle par code BCH (Bose--Chaudhuri--Hocquenghem), qui permettent non seulement de détecter la présence d'erreurs de frappe mais aussi de les localiser. Ces formats servent à encoder (respectivement) les adresses natives de SegWit, comme par exemple bc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4udhygr2, et les clés publiques utilisées dans Taproot, telle que bc1pqlqqhzrg60v5h87r8lugusrddgz0j306shcupthy0tdqaqurwn8qr8qsej. Le format Bech32 est également utilisé pour encoder les demandes de paiement sur le réseau Lightning.
 
 ## La cryptographie et Bitcoin {#la-cryptographie-et-bitcoin .unnumbered}
 
@@ -146,11 +146,11 @@ Les fonctions de hachage sont des fonctions déterministes, facilement exécutab
 L'une des fonctions les plus connues est SHA-256, dont le nom vient de l'abréviation de *Secure Hash Algorithm* et de la taille des empreintes qu'elle produit (256 bits, soit 32 octets). Par exemple, si on considère le message « Bitcoin », le fait de l'orthographier en minuscules ou d'ajouter un point change complètement son empreinte, comme montré dans le tableau [7.1](#table:sha256-hashes){reference-type="ref" reference="table:sha256-hashes"}. Cette particularité permet notamment de détecter si le message comporte une erreur.
 
 ::: {#table:sha256-hashes}
-   **Message**   **Empreinte (SHA-256)**
-  ------------- -------------------------
-     Bitcoin    
-     bitcoin    
-    Bitcoin.    
+   **Message**                       **Empreinte (SHA-256)**
+  ------------- ------------------------------------------------------------------
+     Bitcoin     b4056df6691f8dc72e56302ddad345d65fead3ead9299609a826e2344eb63aa4
+     bitcoin     6b88c087247aa2f07ee1c5956b8e1a9f4c7f892a70e324f1bb3d161e05ca107b
+    Bitcoin.     a9adf3c04d168153b296083f05015f587d7df6e0b85305b6c7beb2a69e3f4e75
 
   : Empreintes par SHA-256 de messages légèrement différents.
 :::
@@ -254,9 +254,9 @@ En résumé : lorsqu'un utilisateur veut recevoir un paiement, il génère une 
 
 La clé publique n'est révélée au réseau que lors de la transaction. Cela implique que les fonds sont protégés face à l'éventualité d'une mauvaise implémentation de l'algorithme de signature (comme dans le cas de l'exploitation de la faille au sein de SecureRandom en 2013) ou de la compromission généralisée d'ECDSA (par un ordinateur quantique par exemple). Il s'agit d'un bénéfice secondaire issu de l'utilisation de nouvelles adresses à chaque paiement.
 
-Au-delà de BTC, les autres cryptomonnaies ont leur encodage propre pour les adresses, qui n'est souvent qu'une variante du standard modifiant la version ou le préfixe. Ainsi, dans Litecoin, les adresses traditionnelles commencent par un `L` (comme par exemple ) et les adresses SegWit par un `ltc1q` (comme par exemple ).
+Au-delà de BTC, les autres cryptomonnaies ont leur encodage propre pour les adresses, qui n'est souvent qu'une variante du standard modifiant la version ou le préfixe. Ainsi, dans Litecoin, les adresses traditionnelles commencent par un `L` (comme par exemple LZx8abhwS7xSh2STChvgxBbEXcWG1AZ2iR) et les adresses SegWit par un `ltc1q` (comme par exemple ltc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4uft7vm6).
 
-Bitcoin Cash possède également son propre format d'adresse, appelé CashAddr, qui s'inspire fortement du format Bech32. Ce format a été introduit pour différencier les adresses BTC des adresses BCH. Une adresse BCH est simplement une représentation alternative du type P2PKH : dans ce format, l'adresse devient .
+Bitcoin Cash possède également son propre format d'adresse, appelé CashAddr, qui s'inspire fortement du format Bech32. Ce format a été introduit pour différencier les adresses BTC des adresses BCH. Une adresse BCH est simplement une représentation alternative du type P2PKH : dans ce format, l'adresse 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX devient bitcoincash:qzsch4l5rdpv0nrwh7jduslxkceys5mwhs03g7e6dq.
 
 ## Les portefeuilles {#les-portefeuilles .unnumbered}
 
@@ -354,7 +354,7 @@ Chaque dérivation fait intervenir un indice, encodé sur 32 bits comme un entie
 
 L'usage veut qu'on utilise une apostrophe pour désigner ce signe[^327]. L'indice `2` indique qu'il s'agit de la troisième clé enfant normale. L'indice `44’` indique qu'il s'agit de la 45 clé enfant endurcie.
 
-Les dérivations successives permettent de créer des arbres de dérivation, dont la position de chaque clé peut être retrouvée grâce à un chemin, le chemin de dérivation. Ce dernier est composé des indices successifs des clés, qui sont séparés par des barres obliques (`/`). On le fait généralement commencer par la lettre `m` pour indiquer qu'on part de la clé privée maîtresse. Un exemple de chemin de dérivation est .
+Les dérivations successives permettent de créer des arbres de dérivation, dont la position de chaque clé peut être retrouvée grâce à un chemin, le chemin de dérivation. Ce dernier est composé des indices successifs des clés, qui sont séparés par des barres obliques (`/`). On le fait généralement commencer par la lettre `m` pour indiquer qu'on part de la clé privée maîtresse. Un exemple de chemin de dérivation est m/84'/0'/0'/1/17.
 
 Chaque portefeuille peut utiliser son propre chemin de dérivation. Néanmoins, un standard a émergé, le BIP-44. Celui-ci simplifie la construction de portefeuilles à usages multiples, supportant plusieurs cryptomonnaies et donnant la possibilité de créer plusieurs comptes pour chacune d'entre elles[^328].
 
@@ -376,7 +376,7 @@ De ce fait, le chemin de dérivation ressemble à ceci :
 m / but' / protocole' / compte' / rôle_adresse / indice_adresse
 ```
 
-Par exemple, la clé correspond à la première adresse de réception d'un compte Bitcoin utilisant les adresses traditionnelles. De même, la clé correspond à la 18 adresse de reste du premier compte Bitcoin utilisant les adresses SegWit natives.
+Par exemple, la clé m/44'/0'/0'/0/0 correspond à la première adresse de réception d'un compte Bitcoin utilisant les adresses traditionnelles. De même, la clé m/84'/0'/0'/1/17 correspond à la 18 adresse de reste du premier compte Bitcoin utilisant les adresses SegWit natives.
 
 Toutes les adresses d'un portefeuille restent valides même si elles ont été utilisées. Même si l'on peut générer des adresses à l'infini, le portefeuille balaie usuellement 20 adresses à partir de la dernière adresse active.
 
@@ -476,10 +476,10 @@ Ainsi, le système de signatures numériques « fournit un contrôle fort de la
 [^317]: Le point de base de secp256k1 est : $$\begin{aligned}
 [^318]: Dans le corps fini $\mathbb{F}_p$, prendre l'opposé d'un élément non nul $y$ inverse sa polarité. En effet, si $y \in [\![ 1, p - 1 ]\!]$, alors $-y + p \in [\![ 1, p - 1 ]\!]$.
 [^319]: L'algorithme de signature ECDSA est le suivant. En notant $H(m)$ l'empreinte cryptographique du message à signer, la signature est obtenue en appliquant les étapes suivantes :
-[^320]: Il s'agit de la signature de la transaction d'identifiant . Sous forme sérialisée (DER), cette signature est .
+[^320]: Il s'agit de la signature de la transaction d'identifiant 08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb. Sous forme sérialisée (DER), cette signature est 3044022019b83a5e354ef62e98413e6ef3f37ad0c69f75cea7daa6a352cf66f4668a9a0b02204c13f9b6f2c8ea7af224b3f6a3d9cfdfe5085bbafa150fb1aa72a20ce7cac6b001.
 [^321]: Il s'agit de suppositions et certaines fonctions satisfont ces caractéristiques plus que d'autres. Ainsi, des collisions ont été trouvées au sein des fonctions MD5 et SHA-1 alors qu'on les croyait sûres.
 [^322]: « Les adresses Bitcoin sont le seul endroit où le hachage de 160 bits est utilisé. » -- Satoshi Nakamoto, *Re: Stealing Coins*, 25/07/2010 20:48:01 UTC : <https://bitcointalk.org/index.php?topic=571.msg5754#msg5754>.
-[^323]: On peut observer l'adresse (correspondant à la clé 1) pour se convaincre qu'il ne s'agit pas d'un bon choix.
+[^323]: On peut observer l'adresse 1EHNa6Q4Jz2uvNExL497mE43ikXhwF6kZm (correspondant à la clé 1) pour se convaincre qu'il ne s'agit pas d'un bon choix.
 [^324]: BitMEX Research, *Call me Ishmael*, 13 octobre 2020 : <https://blog.bitmex.com/call-me-ishmael/>.
 [^325]: Bitcoin.org, *Android Security Vulnerability*, 11 août 2013 : <https://bitcoin.org/en/alert/2013-08-11-android>.
 [^326]: Supposons qu'une population mondiale de 10 milliards d'êtres humains utilise Bitcoin activement de sorte que chaque individu génère 1 million d'adresses en moyenne. La probabilité d'une collision serait alors de : $$10^{16}~/~2^{160} \simeq 0.000000000000000000000000000000684~\%~.$$ Même si un individu tentait de construire une machine spécialisée générant et vérifiant un trillion ($10^{18}$) d'adresses par seconde et fonctionnant en continu, la probabilité d'accéder à une adresse déjà utilisée serait toujours négligeable (de l'ordre de $10^{-21}$). Nos cerveaux ne sont pas faits pour nous représenter de tels nombres.
@@ -491,10 +491,10 @@ Ainsi, le système de signatures numériques « fournit un contrôle fort de la
 [^332]: Department of Justice, *Russian National And Bitcoin Exchange Charged In 21-Count Indictment For Operating Alleged International Money Laundering Scheme And Allegedly Laundering Funds From Hack Of Mt. Gox*, 26 juillet 2017 :<https://www.justice.gov/usao-ndca/pr/russian-national-and-bitcoin-exchange-charged-21-count-indictment-operating-alleged>.
 [^333]: Patrick Thompson, « *Crypto exchanges delisting, denying access and stealing BSV* », *CoinGeek* 17 janvier 2020 : <https://coingeek.com/crypto-exchanges-delisting-denying-access-and-stealing-bsv/>.
 [^334]: Satoshi Nakamoto, *Re: Dying bitcoins*, 21/06/2010, 17:48:26 UTC : <https://bitcointalk.org/index.php?topic=198.msg1647#msg1647>.
-[^335]: James Howells a miné entre le 15 février (bloc $4~334$) et le 24 avril 2009 (bloc $12~098$). Il a accumulé son revenu de minage à l'adresse . En date du 26 avril 2009, cette adresse contenait exactement 8 000 bitcoins.
+[^335]: James Howells a miné entre le 15 février (bloc $4~334$) et le 24 avril 2009 (bloc $12~098$). Il a accumulé son revenu de minage à l'adresse 198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi. En date du 26 avril 2009, cette adresse contenait exactement 8 000 bitcoins.
 [^336]: Alex Hern, « *Missing: hard drive containing Bitcoins worth £4m in Newport landfill site* », *The Guardian*, 27 novembre 2013 : <https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site>.
 [^337]: Nathaniel Popper, « *Lost Passwords Lock Millionaires Out of Their Bitcoin Fortunes* », *The New York Times*, 12 janvier 2021 : <https://www.nytimes.com/2021/01/12/technology/bitcoin-passwords-wallets-fortunes.html>.
-[^338]: Les adresses de Stefan Thomas sont et . En date du 8 juin 2011, leur solde combiné était de 7 003,21 bitcoins.
+[^338]: Les adresses de Stefan Thomas sont 1AYLzYN7SGu5FQLBTADBzqKm4b6Udt6Bw6 et 17eSZivDJpuJp9TxezTXVxkgLbsr3XZM1i. En date du 8 juin 2011, leur solde combiné était de 7 003,21 bitcoins.
 [^339]: Jean-Luc (Bitcoin.fr), *Sortie de la version 1.0 de Liana*, 12 mai 2023 : <https://bitcoin.fr/sortie-de-la-version-1-0-de-liana/>.
 [^340]: Satoshi Nakamoto, *Re: Version 0.3.13, please upgrade*, 03/10/2010 20:54:07 UTC : <https://bitcointalk.org/index.php?topic=1327.msg15136#msg15136>.
 [^341]: Pamela Morgan, *Cryptoasset Inheritance Planning*, Merkle Bloom LLC, 2018.

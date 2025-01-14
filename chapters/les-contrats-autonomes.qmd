@@ -122,7 +122,7 @@ Une transaction supplémentaire est ajoutée à la chaîne de transactions pour 
 
 Ce fonctionnement permet d'obtenir un protocole simple de mise à jour du canal, peu contraignant pour les nœuds, sans mécanisme de punition, et permettant de ne pas à avoir à décider les frais à l'avance. Cette facilité d'implémentation pourrait rendre plus aisée la création de contrats plus complexes sur Lightning, comme les canaux de paiement à 3 participants ou plus. En outre, leur implémentation ne doit en aucun cas remplacer celle des canaux de Poon-Dryja : les deux modèles peuvent coexister au sein d'un seul et même réseau de canaux de paiement.
 
-Les transactions flottantes sont implémentées à l'aide de . La mise en œuvre de Eltoo repose donc sur l'intégration du BIP-118 dans Bitcoin.
+Les transactions flottantes sont implémentées à l'aide de SIGHASH_ANYPREVOUT. La mise en œuvre de Eltoo repose donc sur l'intégration du BIP-118 dans Bitcoin.
 
 ## L'inscription de données arbitraires {#linscription-de-données-arbitraires .unnumbered}
 
@@ -138,7 +138,7 @@ D'une part, l'écriture de données arbitraires peut être réalisée par les mi
 
 D'autres blocs contiennent des messages emblématiques. Le bloc d'exode de BCH (de hauteur 478 559) contenait un message de bienvenue pour Shuya Yang, la fille du PDG de la coopérative ViaBTC. Le bloc précédant le troisième halving sur BTC en 2020 (de hauteur 629 999) incluait le titre d'un article du New York Times du 9 avril annonçant l'injection de liquidité record de la Réserve Fédérale (2 300 milliards de dollars) en réaction à la crise du Covid-19 : « *NYTimes 09/Apr/2020 With \$2.3T Injection, Fed's Plan Far Exceeds 2008 Rescue* ».
 
-Le script de déverrouillage de la base de pièce peut être utilisé pour écrire d'autres données. C'est le cas du nonce supplémentaire (le critère qui a permis d'identifier les bitcoins de Satoshi). C'est aussi le cas du signalement des coopératives minières qui est réalisé via ce champ : par exemple, la base de pièce du bloc 751 005 contient la chaîne de caractères , ce qui indique que sa validation a probablement été réalisée par la coopérative chinoise Poolin.
+Le script de déverrouillage de la base de pièce peut être utilisé pour écrire d'autres données. C'est le cas du nonce supplémentaire (le critère qui a permis d'identifier les bitcoins de Satoshi). C'est aussi le cas du signalement des coopératives minières qui est réalisé via ce champ : par exemple, la base de pièce du bloc 751 005 contient la chaîne de caractères poolin.com, ce qui indique que sa validation a probablement été réalisée par la coopérative chinoise Poolin.
 
 D'autre part, l'inscription des données arbitraires peut aussi être le fait des utilisateurs, qui peuvent les inclure dans leurs transactions et payer les frais correspondants. Plusieurs méthodes ont été exploitées pour ce faire.
 
@@ -154,7 +154,7 @@ D'abord, on peut inscrire une empreinte, l'inscription servant alors à l'horoda
 
 Cette possibilité peut aussi être exploitée par les systèmes décentralisés d'hébergement de fichiers, comme le système IPFS (InterPlanetary File System) qui utilise les empreintes des fichiers pour les identifier et permettre leur stockage par un réseau pair à pair d'utilisateurs. Il est donc possible d'associer le texte écrit sur la chaîne de blocs et des images ou des vidéos, hébergées de manière décentralisée.
 
-Ensuite, on peut inscrire un texte, qui est généralement encodé en ASCII / UTF-8. Par exemple, la phrase « La beauté sauvera le monde. » a été inscrite sur la chaîne de BTC le 10 août 2022 dans la transaction d'identifiant . L'inscription de textes permet aussi de dessiner des images en art ASCII. C'est le cas de l'hommage à Len Sassaman (voir figure [13.6](#fig:sassaman-tribute){reference-type="ref" reference="fig:sassaman-tribute"}), décédé en juillet 2011, qui a été inscrit sur la chaîne par les développeurs Dan Kaminsky et Travis Goodspeed dans des sorties P2PKH, et qui contient notamment une représentation de l'ancien président de la Fed, Ben Bernanke.
+Ensuite, on peut inscrire un texte, qui est généralement encodé en ASCII / UTF-8. Par exemple, la phrase « La beauté sauvera le monde. » a été inscrite sur la chaîne de BTC le 10 août 2022 dans la transaction d'identifiant 08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb. L'inscription de textes permet aussi de dessiner des images en art ASCII. C'est le cas de l'hommage à Len Sassaman (voir figure [13.6](#fig:sassaman-tribute){reference-type="ref" reference="fig:sassaman-tribute"}), décédé en juillet 2011, qui a été inscrit sur la chaîne par les développeurs Dan Kaminsky et Travis Goodspeed dans des sorties P2PKH, et qui contient notamment une représentation de l'ancien président de la Fed, Ben Bernanke.
 
 <figure id="fig:sassaman-tribute">
 <pre data-fontsize="\footnotesize"><code>---BEGIN TRIBUTE---  =-=-=-=-=-=-=-=-=-=     ASCII BERNANKE
@@ -246,7 +246,7 @@ Taproot repose sur un arbre de hachage, appelé un MAST[^540], dont les feuilles
 
 ![MAST impliquant les clauses d'un contrat.](img/taproot-mast.png){#fig:taproot-mast}
 
-L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
+L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé OP_MERKLEBRANCHVERIFY (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
 
 Taproot inclut en effet une condition de dépense coopérative intégrée. La clé publique agrégée interne est modifiée légèrement (*tweaked*) à l'aide de la racine du MAST, afin de prendre ce dernier en compte. La clé obtenue est celle inscrite dans le script de verrouillage de la pièce, de sorte qu'elle est indiscernable des autres sorties P2TR. De même, la signature agrégée ne peut pas être distinguée d'une signature classique. De ce fait, les participants peuvent dépenser les fonds à l'amiable, tout en étant sûrs qu'un litige mènera au règlement sur la chaîne.
 
@@ -266,23 +266,23 @@ Les contrats autonomes forment la pierre angulaire des relations financières da
 
 [^515]: L'appellation « contrat autonome » visant à traduire *smart contract* a été proposée par Jacques Favier, Adli Takkal-Bataille et Benoît Huguet dans *Bitcoin : Métamorphoses* (pp. 105--107) en 2018.
 [^516]: Nick Szabo, *Smart Contracts*, 1994, archive : <https://web.archive.org/web/20011102030833/http://szabo.best.vwh.net:80/smart.contracts.html>.
-[^517]: L'adresse multisignatures 3-parmi-5 de Bitfinex est .
+[^517]: L'adresse multisignatures 3-parmi-5 de Bitfinex est bc1qgdjqv0av3q56jvd82tkdjpy7gdp9ut8tlqmgrpmv24sq90ecnvqqjwvw97.
 [^518]: « Les acheteurs pourraient être facilement protégés par la mise en œuvre de mécanismes de dépôt fiduciaire routiniers. » -- Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
 [^519]: Sergio Demian Lerner, *P2PTradeX: P2P Trading between cryptocurrencies*, 05/07/2012 23:49:48 UTC : <https://bitcointalk.org/index.php?topic=91843.msg1011737#msg1011737> ; Gregory Maxwell, *Re: P2PTradeX: P2P Trading between cryptocurrencies*, 06/07/2012 02:17:02 UTC : <https://bitcointalk.org/index.php?topic=91843.msg1011956#msg1011956>.
 [^520]: Pour assurer la bonne exécution du contrat (éviter le remplacement de la transaction durant l'attente de confirmation), des clés publiques sont assignées à chacune de ces conditions de sorte qu'une signature est systématiquement demandée au destinataire des fonds.
-[^521]: Les adresses des contrats sur LTC et DCR étaient (respectivement) et . L'échange était de 1,337 LTC contre 2,4066 DCR. -- *Decred-compatible cross-chain atomic swapping*, 20 septembre 2017 : <https://github.com/decred/atomicswap/blob/master/README.md#first-mainnet-dcr-ltc-atomic-swap>.
+[^521]: Les adresses des contrats sur LTC et DCR étaient (respectivement) MLp49daA411aoZ1TmGEdyLuTCE9YA6xhpc et DccPF1yt9cV8vhr97fq3umBx7RqV53MYGDY. L'échange était de 1,337 LTC contre 2,4066 DCR. -- *Decred-compatible cross-chain atomic swapping*, 20 septembre 2017 : <https://github.com/decred/atomicswap/blob/master/README.md#first-mainnet-dcr-ltc-atomic-swap>.
 [^522]: Joseph Poon et Thaddeus Dryja, *The Bitcoin Lightning Network DRAFT Version 0.5*, 28 février 2015 : <https://lightning.network/lightning-network-paper-DRAFT-0.5.pdf>.
 [^523]: Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, « Payment Channels », in *Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments*, O'Reilly Media, 2022, pp. 149--184.
 [^524]: Christian Decker, Rusty Russell, Olaoluwa Osuntokun, *eltoo: A Simple Layer2 Protocol for Bitcoin*, 30 avril 2018 : <https://blockstream.com/eltoo.pdf>.
-[^525]: La transaction , confirmée le 13 décembre 2012, contient par exemple la chaîne de caractères en référence au jeu vidéo Portal.
+[^525]: La transaction c0b2cf75b47d1e7f48cdb4287109ff1dd5bcf146d5f77a9e8784c0c9c0ef02ad, confirmée le 13 décembre 2012, contient par exemple la chaîne de caractères TheCakeIsALie\\n en référence au jeu vidéo Portal.
 [^526]: Bitcoin Core, *Bitcoin Core version 0.9.0 released*, 19 mars 2014 : <https://bitcoin.org/en/release/v0.9.0#opreturn-and-data-in-the-block-chain>.
 [^527]: Ken Shirriff, *Hidden surprises in the Bitcoin blockchain and how they are stored: Nelson Mandela, Wikileaks, photos, and Python software*, 16 février 2014 : <https://www.righto.com/2014/02/ascii-bernanke-wikileaks-photographs.html>.
 [^528]: Hal Finney, *Re: \[bitcoin-list\] Bitcoin v0.1.5 released*, 27/02/2009 20:00:12 UTC, archive : <https://web.archive.org/web/20131016004925/http://sourceforge.net/p/bitcoin/mailman/bitcoin-list/?viewmonth=200902>.
 [^529]: CoinGeek, *Jerry Chan: Bitcoin's value is as a universal source of truth*, 17 juillet 2019 : <https://coingeek.com/jerry-chan-bitcoins-value-is-as-a-universal-source-of-truth-video/>.
 [^530]: Yoni Assia, *bitcoin 2.X (aka Colored Bitcoin) -- initial specs*, 27 mars 2012 : <https://yoniassia.com/coloredbitcoin/> ; Meni Rosenfeld, *Overview of Colored Coins*, 4 décembre 2012 : <https://bitcoil.co.il/BitcoinX.pdf>.
 [^531]: J.R. Willett, *The Second Bitcoin Whitepaper*, 6 janvier 2012, archive : <https://cryptochainuni.com/wp-content/uploads/Mastercoin-2nd-Bitcoin-Whitepaper.pdf>.
-[^532]: Tous les bitcoins envoyés à l'adresse étaient transformés en MSC à raison de 100 MSC au début, taux dégressif au fil des semaines.
-[^533]: Tous les bitcoins envoyés à l'adresse entre le 2 janvier et le 3 février 2014 étaient convertis en XCP à un taux qui variait entre 1 000 et 1 500 XCP par BTC
+[^532]: Tous les bitcoins envoyés à l'adresse 1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P étaient transformés en MSC à raison de 100 MSC au début, taux dégressif au fil des semaines.
+[^533]: Tous les bitcoins envoyés à l'adresse 1CounterpartyXXXXXXXXXXXXXXXUWLpVr entre le 2 janvier et le 3 février 2014 étaient convertis en XCP à un taux qui variait entre 1 000 et 1 500 XCP par BTC
 [^534]: Hal Finney, *Crypto trading cards.*, 17/01/1993 18:48:02 UTC : <https://cypherpunks.venona.com/date/1993/01/msg00152.html>.
 [^535]: Jeff Garzik, *Resist the urge to use block chain for generalized storage*, 07/12/2010 22:04:54 UTC : <https://bitcointalk.org/index.php?topic=2129.msg27884#msg27884>.
 [^536]: BitMEX Research, *The OP_Return Wars of 2014 -- Dapps Vs Bitcoin Transactions*, 12 juillet 2022 : <https://blog.bitmex.com/dapps-or-only-bitcoin-transactions-the-2014-debate/>.
