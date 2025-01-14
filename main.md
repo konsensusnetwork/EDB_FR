@@ -376,7 +376,7 @@ Cet incident entraîne la fin de la folie spéculative sur le bitcoin et le prix
 
 Mais cela ne décourage pas pour autant les membres de la communauté. Du 19 au 21 août 2011 a lieu la première conférence sur Bitcoin à New York, qui est organisée par Bruce Wagner, l'animateur du *Bitcoin Show*, une émission d'entretiens filmés avec les acteurs de l'écosystème[^67]. La conférence revêt un caractère amateur (typique de la communauté d'alors) et seules quatre présentations ont lieu : celle de Bruce Wagner ainsi que les interventions de Gavin Andresen, Jeff Garzik et Stefan Thomas. Cela permet néanmoins aux membres les plus actifs, tels que Roger Ver, Jesse Powell, Jed McCaleb, Mark Karpelès ou Charlie Lee, de se réunir en personne pour la première fois.
 
-Le développement logiciel s'organise aussi. Jusqu'ici, il était centralisé dans les mains de Satoshi, le « dictateur bienveillant » du projet. Mais après le départ du créateur de Bitcoin, il s'ouvre à la participation de la communauté, sous la supervision de Gavin Andresen. On voit ainsi des contributeurs talentueux commencer à s'impliquer dans l'évolution de Bitcoin comme Nils Schneider, Matt Corallo, Pieter Wuille, Jeff Garzik, Wladimir van der Laan, Luke-Jr ou encore Gregory Maxwell. Des méthodes de coordination sont rapidement mises en place comme la liste de diffusion permettant de discuter formellement des changements à apporter[^68], et le système des propositions d'amélioration de Bitcoin (*Bitcoin Improvement Proposals* ou BIP), qui décrivent publiquement ces changements[^69].
+Le développement logiciel s'organise aussi. Jusqu'ici, il était centralisé dans les mains de Satoshi, le « dictateur bienveillant » du projet. Mais après le départ du créateur de Bitcoin, il s'ouvre à la participation de la communauté, sous la supervision de Gavin Andresen. On voit ainsi des contributeurs talentueux commencer à s'impliquer dans l'évolution de Bitcoin comme Nils Schneider, Matt Corallo, Pieter Wuille, Jeff Garzik, Wladimir van der Laan, Luke-Jr ou encore Gregory Maxwell. Des méthodes de coordination sont rapidement mises en place comme la liste de diffusion bitcoin-development permettant de discuter formellement des changements à apporter[^68], et le système des propositions d'amélioration de Bitcoin (*Bitcoin Improvement Proposals* ou BIP), qui décrivent publiquement ces changements[^69].
 
 L'utilisation de Bitcoin devient plus facile. On assiste à l'apparition de portefeuilles légers permettant d'utiliser Bitcoin sans avoir à télécharger et vérifier l'intégralité de la chaîne. Ces derniers utilisent la vérification de paiement simplifiée décrite par Satoshi Nakamoto dans la section 8 du livre blanc. Celle-ci est mise en œuvre par Mike Hearn au sein de sa bibliothèque logicielle BitCoinJ programmée en Java, qui permet entre autres une meilleure compatibilité avec les applications sur les téléphones multifonctions fonctionnant sous Android. Le premier portefeuille pour mobile, le *Bitcoin Wallet for Android*, est lancé par Andreas Schildbach en mars 2011. Celui-ci montre que l'usage direct de Bitcoin dans la vie de tous les jours est possible. Du côté ordinateur, Thomas Voegtlin crée Electrum en novembre 2011, présenté comme un portefeuille qui permet à l'utilisateur de récupérer ses fonds par le biais d'une phrase mnémotechnique. Cette pratique sera plus tard standardisée et adoptée largement dans l'écosystème.
 
@@ -384,7 +384,7 @@ Ce développement décentralisé est également source de tensions. Sans son fon
 
 À la fin de l'année 2011 et au début de l'année 2012, le premier débat technique en l'absence de Satoshi a lieu. Le groupe de développeurs est alors encore très restreint mais cela suffit pour créer un conflit à propos de l'amélioration de la programmabilité des transactions, qui permettrait notamment de créer des comptes multisignatures. On s'en souviendra comme la « bataille pour P2SH[^70] ».
 
-De par sa nature informatique, Bitcoin constitue un système de monnaie programmable qui permet à l'utilisateur d'imposer des conditions au blocage et au déblocage des fonds. Il dispose pour cela d'un mécanisme de scripts reposant sur des instructions logiques appelées codes opérations. Cependant, ces scripts sont compliqués à gérer. Il s'agit donc de trouver un moyen simple pour l'utilisateur d'envoyer des fonds vers un script défini préalablement par le récipiendaire. C'est l'idée derrière la proposition faite par Nicolas van Saberhagen d'ajouter un nouveau code opération appelé . Cette proposition souffre néanmoins d'un problème de récursivité, ce qui provoque rapidement l'apparition de deux propositions concurrentes : *Pay to Script Hash* (P2SH) proposé par Gavin Andresen et (CHV) proposé par Luke-Jr.
+De par sa nature informatique, Bitcoin constitue un système de monnaie programmable qui permet à l'utilisateur d'imposer des conditions au blocage et au déblocage des fonds. Il dispose pour cela d'un mécanisme de scripts reposant sur des instructions logiques appelées codes opérations. Cependant, ces scripts sont compliqués à gérer. Il s'agit donc de trouver un moyen simple pour l'utilisateur d'envoyer des fonds vers un script défini préalablement par le récipiendaire. C'est l'idée derrière la proposition faite par Nicolas van Saberhagen d'ajouter un nouveau code opération appelé OP_EVAL. Cette proposition souffre néanmoins d'un problème de récursivité, ce qui provoque rapidement l'apparition de deux propositions concurrentes : *Pay to Script Hash* (P2SH) proposé par Gavin Andresen et OP_CHECKHASHVERIFY (CHV) proposé par Luke-Jr.
 
 Une tension émerge entre les deux propositions, ce qui crée le débat. Amir Taaki, qui ne soutient ni l'une ni l'autre, appelle à la discussion et déclare le 29 janvier 2012 :
 
@@ -496,7 +496,7 @@ Dans ces deux camps, il existe des nuances et des contradictions. Le sujet de la
 
 L'opposition entre les deux tendances se manifeste tout d'abord au sein du projet logiciel de Bitcoin, dont les contributeurs principaux sont majoritairement des partisans des petits blocs. Durant le printemps 2014, le logiciel connaît ainsi un tournant majeur. Au niveau de la forme d'abord, il est renommé « Bitcoin Core » le 19 mars dans le but de « réduire la confusion entre Bitcoin-le-réseau et Bitcoin-le-logiciel[^87] ». Puis en ce qui concerne le fond, le dépôt GitHub subit une passation de pouvoir le 7 avril lorsque Gavin Andresen cède son poste de mainteneur principal à Wladimir van der Laan, pour se consacrer à ses activités de scientifique en chef de la Fondation Bitcoin.
 
-Ce changement de gestion se matérialise dans l'année, lorsque Mike Hearn voit sa proposition d'ajout de la requête de réseau être rejetée pour cause de non-unanimité dans l'équipe de Bitcoin Core. L'ingénieur a besoin de cette fonctionnalité pour le développement de son application de financement participatif, Lighthouse. De ce fait, il est contraint de créer Bitcoin XT en décembre 2014, une implémentation alternative issue de Bitcoin Core qui inclut les changements désirés mais qui reste compatible avec le réseau.
+Ce changement de gestion se matérialise dans l'année, lorsque Mike Hearn voit sa proposition d'ajout de la requête de réseau getutxos être rejetée pour cause de non-unanimité dans l'équipe de Bitcoin Core. L'ingénieur a besoin de cette fonctionnalité pour le développement de son application de financement participatif, Lighthouse. De ce fait, il est contraint de créer Bitcoin XT en décembre 2014, une implémentation alternative issue de Bitcoin Core qui inclut les changements désirés mais qui reste compatible avec le réseau.
 
 Simultanément, la discorde s'étend à l'ensemble de la communauté. La logique des petits blocs se diffuse en particulier grâce à une vidéo produite par le développeur Peter Todd en 2013, qui explique « pourquoi la taille limite des blocs permet à Bitcoin de rester libre et décentralisé[^88] ». Un autre argument invoqué est celui du marché des frais, notamment mis en valeur par l'économiste français Nicolas Houy, qui explique dans un article de 2014 que « laisser les frais de transaction résulter d'un marché *et* rendre la taille des blocs non pertinente ou non contraignante conduirait à un niveau de sécurité trop faible pour Bitcoin[^89] ». Enfin, les partisans des petits blocs cherchent à justifier leur point de vue en proposant des solutions de passage à l'échelle, permettant d'accroître l'activité économique soutenue par le réseau sans pour autant augmenter significativement la taille des blocs.
 
@@ -844,7 +844,9 @@ Certains économistes autrichiens refusent d'admettre que le bitcoin ait pu éme
 
 L'essentiel de ce théorème se trouve dans la *Théorie de la monnaie et du crédit*, un ouvrage publié en 1912, où Mises écrit :
 
-« La théorie de la valeur de la monnaie en tant que telle peut faire remonter la valeur d'échange objective seulement jusqu'au point où elle cesse d'être la valeur de la monnaie et devient uniquement la valeur d'une marchandise. À ce point, la théorie doit laisser cours pour toute investigation ultérieure à la théorie générale de la valeur, qui n'a alors plus aucune difficulté à résoudre le problème. Il est vrai que l'évaluation subjective de la monnaie présuppose une valeur d'échange objective existante, mais la valeur qui a besoin d'être présupposée n'est pas la même que la valeur qu'il faut expliquer. Ce qui est présupposé est la valeur d'échange d'*hier* et il est parfaitement légitime de l'utiliser pour expliquer celle d'aujourd'hui. La valeur d'échange objective de la monnaie qui s'établit sur le marché d'aujourd'hui découle de celle d'hier sous l'influence des évaluations subjectives des individus fréquentant le marché, tout comme celle d'hier découlait à son tour, sous l'influence des évaluations subjectives, de la valeur d'échange objective de la monnaie d'avant-hier. Si de cette façon nous retournons de façon continuelle en arrière, nous devons arriver à un point où nous ne trouvons plus aucune composante dans la valeur d'échange objective qui provienne des évaluations basées sur la fonction de la monnaie comme moyen d'échange commun ; un point où la valeur de la monnaie n'est rien d'autre que la valeur de l'objet qui est utile d'une autre façon que comme monnaie[^143]. »
+« La théorie de la valeur de la monnaie en tant que telle peut faire remonter la valeur d'échange objective seulement jusqu'au point où elle cesse d'être la valeur de la monnaie et devient uniquement la valeur d'une marchandise. À ce point, la théorie doit laisser cours pour toute investigation ultérieure à la théorie générale de la valeur, qui n'a alors plus aucune difficulté à résoudre le problème. Il est vrai que l'évaluation subjective de la monnaie présuppose une valeur d'échange objective existante, mais la valeur qui a besoin d'être présupposée n'est pas la même que la valeur qu'il faut expliquer. Ce qui est présupposé est la valeur d'échange d'*hier* et il est parfaitement légitime de l'utiliser pour expliquer celle d'aujourd'hui. La valeur d'échange objective de la monnaie qui s'établit sur le marché d'aujourd'hui découle de celle d'hier sous l'influence des évaluations subjectives des individus fréquentant le marché, tout comme celle d'hier découlait à son tour, sous l'influence des évaluations subjectives, de la valeur d'échange objective de la monnaie d'avant-hier.
+
+Si de cette façon nous retournons de façon continuelle en arrière, nous devons arriver à un point où nous ne trouvons plus aucune composante dans la valeur d'échange objective qui provienne des évaluations basées sur la fonction de la monnaie comme moyen d'échange commun ; un point où la valeur de la monnaie n'est rien d'autre que la valeur de l'objet qui est utile d'une autre façon que comme monnaie[^143]. »
 
 Le théorème comporte deux éléments : la régression et la première valorisation.
 
@@ -1512,7 +1514,7 @@ Une autre personne présente durant cette réunion fondatrice était l'activiste
 
 C'est elle qui a donné leur nom aux cypherpunks lors de cette réunion, sur le ton de la plaisanterie. « Je pense que vous êtes des cryptoanarchistes -- ce que j'appellerais des cypherpunks ! », a-t-elle écrit par la suite[^253]. Le terme capturait bien l'esprit de la cryptoanarchie, tout en donnant au mouvement un côté moins formel et dogmatique. En effet, les gens préoccupés par ces enjeux n'étaient pas tous anarchistes : ils pouvaient s'opposer fermement à l'autoritarisme et à la surveillance, sans pour autant vouloir remettre en cause les fondements même de l'État[^254]. C'est ce côté informel qui a fait que le terme a été adopté immédiatement.
 
-Après la réunion, Eric Hughes, avec l'aide de Hugh Daniel, a créé une liste de diffusion de courrier électronique nommée « Cypherpunks ». Le courriel de bienvenue a été envoyé dans la soirée du 21 septembre (PDT). La liste était relayée par le serveur associé au nom de domaine appartenant à John Gilmore. Ce dernier a aussi offert la disponibilité des locaux de Cygnus pour les réunions ultérieures.
+Après la réunion, Eric Hughes, avec l'aide de Hugh Daniel, a créé une liste de diffusion de courrier électronique nommée « Cypherpunks ». Le courriel de bienvenue a été envoyé dans la soirée du 21 septembre (PDT). La liste était relayée par le serveur associé au nom de domaine toad.com appartenant à John Gilmore. Ce dernier a aussi offert la disponibilité des locaux de Cygnus pour les réunions ultérieures.
 
 La liste a accueilli de nombreuses discussions relatives à la cryptographie et à son utilisation concrète, dont notamment l'argent liquide électronique. Beaucoup de gens sont intervenus dès les premiers mois, comme par exemple l'ancien pirate téléphonique John Draper. En un an à peine, la liste recensait ainsi plus de 500 participants.
 
@@ -1774,7 +1776,7 @@ Dans Ripple, les paiements se faisaient par le routage d'une série d'emprunts. 
 
 La compensation se faisait par la découverte de cycles de crédit dans le réseau. Si Bob devait 5 \$ à Alice, Carole 5 \$ à Bob et Alice 5 \$ à Carole, alors leurs dettes mutuelles disparaissaient, ce qui permettait à tous les acteurs d'avoir une capacité d'emprunt plus grande pour recevoir de futurs paiements. Une dette pouvait également être éteinte par son règlement entre les deux parties dans l'unité de compte indiquée.
 
-En 2006, dans l'idée de faire progresser son projet, Ryan Fugger a mis en ligne une preuve de concept appelée Ripplepay. Celle-ci était basée sur un serveur central () et permettait aux utilisateurs de se connecter avec une simple adresse de courrier électronique. Ryan Fugger a également créé un Google Group en janvier 2007.
+En 2006, dans l'idée de faire progresser son projet, Ryan Fugger a mis en ligne une preuve de concept appelée Ripplepay. Celle-ci était basée sur un serveur central (ripplepay.com) et permettait aux utilisateurs de se connecter avec une simple adresse de courrier électronique. Ryan Fugger a également créé un Google Group en janvier 2007.
 
 Malgré l'enthousiasme de sa communauté et quelques milliers d'utilisateurs, Ripple possédait des défauts inhérents à son fonctionnement distribué. En particulier, il souffrait du « problème de l'engagement décentralisé[^298] » : durant un paiement, les participants ne pouvaient pas s'engager d'une façon sûre pour assurer la chaîne de prêts[^299].
 
@@ -1796,7 +1798,7 @@ En privé, il écrivait aussi à Dustin Trammell en 2009 :
 
 « Je pense qu'il y avait beaucoup plus de gens qui étaient intéressés \[par la monnaie électronique\] dans les années 90, mais après plus d'une décennie d'échecs de systèmes basés sur des tiers de confiance (Digicash, etc.), ils considèrent qu'il s'agit d'une cause perdue. J'espère qu'ils sauront distinguer que c'est la première fois, à ma connaissance, que nous essayons un système qui n'est pas fondé sur la confiance[^302]. »
 
-La dernière référence au modèle de Chaum était la première version du livre blanc datant du mois d'août 2008 qui s'intitulait de façon limpide « *Electronic Cash Without a Trusted Third Party* » (« Un argent liquide électronique sans tiers de confiance » en français) et dont le nom du fichier était [^303].
+La dernière référence au modèle de Chaum était la première version du livre blanc datant du mois d'août 2008 qui s'intitulait de façon limpide « *Electronic Cash Without a Trusted Third Party* » (« Un argent liquide électronique sans tiers de confiance » en français) et dont le nom du fichier était ecash.pdf[^303].
 
 Satoshi Nakamoto s'était donc clairement intéressé à eCash avant de concevoir Bitcoin. Toutefois, ce n'était pas le cas des concepts de b-money, bit gold et RPOW, dont il n'avait vraisemblablement pas connaissance en 2007. Ces systèmes ont cependant joué un rôle indirect dans l'histoire de Bitcoin.
 
@@ -1888,9 +1890,9 @@ qpzry9x8gf2tvdw0s3jn54khce6mua7l
 
 Ces systèmes d'encodage permettent de représenter l'information de manière brute. Cependant, elle peut également être encodée dans un format particulier incluant une somme de contrôle. Une somme de contrôle (*checksum*) est une courte séquence de données numériques calculée à partir d'un ensemble de données plus important permettant de vérifier, avec une très haute probabilité, que l'intégrité de cet ensemble a été préservée lors d'une opération de copie, de stockage ou de transmission. Celle-ci est généralement placée après l'information pour que le tout soit ensuite représenté dans la base adéquate.
 
-Dans le cas de Bitcoin, la somme de contrôle est essentielle pour transmettre les informations sensibles, comme les clés privées et les adresses, afin qu'une faute de frappe soit détectée immédiatement. Les trois encodages qui mettent en œuvre ce type de somme de contrôle dans BTC sont les formats Base58Check, Bech32 et Bech32m. Le premier a été mis en place par Satoshi dès les débuts de la cryptomonnaie et consiste à calculer une somme de contrôle grâce à l'empreinte cryptographique tronquée de l'information. Il concerne les clés privées et les adresses dites « traditionnelles », comme par exemple l'adresse .
+Dans le cas de Bitcoin, la somme de contrôle est essentielle pour transmettre les informations sensibles, comme les clés privées et les adresses, afin qu'une faute de frappe soit détectée immédiatement. Les trois encodages qui mettent en œuvre ce type de somme de contrôle dans BTC sont les formats Base58Check, Bech32 et Bech32m. Le premier a été mis en place par Satoshi dès les débuts de la cryptomonnaie et consiste à calculer une somme de contrôle grâce à l'empreinte cryptographique tronquée de l'information. Il concerne les clés privées et les adresses dites « traditionnelles », comme par exemple l'adresse 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX.
 
-Les deux autres ont vu le jour en 2017 et en 2021 (respectivement). Ils font intervenir des sommes de contrôle par code BCH (Bose--Chaudhuri--Hocquenghem), qui permettent non seulement de détecter la présence d'erreurs de frappe mais aussi de les localiser. Ces formats servent à encoder (respectivement) les adresses natives de SegWit, comme par exemple , et les clés publiques utilisées dans Taproot, telle que . Le format Bech32 est également utilisé pour encoder les demandes de paiement sur le réseau Lightning.
+Les deux autres ont vu le jour en 2017 et en 2021 (respectivement). Ils font intervenir des sommes de contrôle par code BCH (Bose--Chaudhuri--Hocquenghem), qui permettent non seulement de détecter la présence d'erreurs de frappe mais aussi de les localiser. Ces formats servent à encoder (respectivement) les adresses natives de SegWit, comme par exemple bc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4udhygr2, et les clés publiques utilisées dans Taproot, telle que bc1pqlqqhzrg60v5h87r8lugusrddgz0j306shcupthy0tdqaqurwn8qr8qsej. Le format Bech32 est également utilisé pour encoder les demandes de paiement sur le réseau Lightning.
 
 ## La cryptographie et Bitcoin {#la-cryptographie-et-bitcoin .unnumbered}
 
@@ -1984,11 +1986,11 @@ Les fonctions de hachage sont des fonctions déterministes, facilement exécutab
 L'une des fonctions les plus connues est SHA-256, dont le nom vient de l'abréviation de *Secure Hash Algorithm* et de la taille des empreintes qu'elle produit (256 bits, soit 32 octets). Par exemple, si on considère le message « Bitcoin », le fait de l'orthographier en minuscules ou d'ajouter un point change complètement son empreinte, comme montré dans le tableau [7.1](#table:sha256-hashes){reference-type="ref" reference="table:sha256-hashes"}. Cette particularité permet notamment de détecter si le message comporte une erreur.
 
 ::: {#table:sha256-hashes}
-   **Message**   **Empreinte (SHA-256)**
-  ------------- -------------------------
-     Bitcoin    
-     bitcoin    
-    Bitcoin.    
+   **Message**                       **Empreinte (SHA-256)**
+  ------------- ------------------------------------------------------------------
+     Bitcoin     b4056df6691f8dc72e56302ddad345d65fead3ead9299609a826e2344eb63aa4
+     bitcoin     6b88c087247aa2f07ee1c5956b8e1a9f4c7f892a70e324f1bb3d161e05ca107b
+    Bitcoin.     a9adf3c04d168153b296083f05015f587d7df6e0b85305b6c7beb2a69e3f4e75
 
   : Empreintes par SHA-256 de messages légèrement différents.
 :::
@@ -2092,9 +2094,9 @@ En résumé : lorsqu'un utilisateur veut recevoir un paiement, il génère une 
 
 La clé publique n'est révélée au réseau que lors de la transaction. Cela implique que les fonds sont protégés face à l'éventualité d'une mauvaise implémentation de l'algorithme de signature (comme dans le cas de l'exploitation de la faille au sein de SecureRandom en 2013) ou de la compromission généralisée d'ECDSA (par un ordinateur quantique par exemple). Il s'agit d'un bénéfice secondaire issu de l'utilisation de nouvelles adresses à chaque paiement.
 
-Au-delà de BTC, les autres cryptomonnaies ont leur encodage propre pour les adresses, qui n'est souvent qu'une variante du standard modifiant la version ou le préfixe. Ainsi, dans Litecoin, les adresses traditionnelles commencent par un `L` (comme par exemple ) et les adresses SegWit par un `ltc1q` (comme par exemple ).
+Au-delà de BTC, les autres cryptomonnaies ont leur encodage propre pour les adresses, qui n'est souvent qu'une variante du standard modifiant la version ou le préfixe. Ainsi, dans Litecoin, les adresses traditionnelles commencent par un `L` (comme par exemple LZx8abhwS7xSh2STChvgxBbEXcWG1AZ2iR) et les adresses SegWit par un `ltc1q` (comme par exemple ltc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4uft7vm6).
 
-Bitcoin Cash possède également son propre format d'adresse, appelé CashAddr, qui s'inspire fortement du format Bech32. Ce format a été introduit pour différencier les adresses BTC des adresses BCH. Une adresse BCH est simplement une représentation alternative du type P2PKH : dans ce format, l'adresse devient .
+Bitcoin Cash possède également son propre format d'adresse, appelé CashAddr, qui s'inspire fortement du format Bech32. Ce format a été introduit pour différencier les adresses BTC des adresses BCH. Une adresse BCH est simplement une représentation alternative du type P2PKH : dans ce format, l'adresse 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX devient bitcoincash:qzsch4l5rdpv0nrwh7jduslxkceys5mwhs03g7e6dq.
 
 ## Les portefeuilles {#les-portefeuilles .unnumbered}
 
@@ -2192,7 +2194,7 @@ Chaque dérivation fait intervenir un indice, encodé sur 32 bits comme un entie
 
 L'usage veut qu'on utilise une apostrophe pour désigner ce signe[^327]. L'indice `2` indique qu'il s'agit de la troisième clé enfant normale. L'indice `44’` indique qu'il s'agit de la 45 clé enfant endurcie.
 
-Les dérivations successives permettent de créer des arbres de dérivation, dont la position de chaque clé peut être retrouvée grâce à un chemin, le chemin de dérivation. Ce dernier est composé des indices successifs des clés, qui sont séparés par des barres obliques (`/`). On le fait généralement commencer par la lettre `m` pour indiquer qu'on part de la clé privée maîtresse. Un exemple de chemin de dérivation est .
+Les dérivations successives permettent de créer des arbres de dérivation, dont la position de chaque clé peut être retrouvée grâce à un chemin, le chemin de dérivation. Ce dernier est composé des indices successifs des clés, qui sont séparés par des barres obliques (`/`). On le fait généralement commencer par la lettre `m` pour indiquer qu'on part de la clé privée maîtresse. Un exemple de chemin de dérivation est m/84'/0'/0'/1/17.
 
 Chaque portefeuille peut utiliser son propre chemin de dérivation. Néanmoins, un standard a émergé, le BIP-44. Celui-ci simplifie la construction de portefeuilles à usages multiples, supportant plusieurs cryptomonnaies et donnant la possibilité de créer plusieurs comptes pour chacune d'entre elles[^328].
 
@@ -2214,7 +2216,7 @@ De ce fait, le chemin de dérivation ressemble à ceci :
 m / but' / protocole' / compte' / rôle_adresse / indice_adresse
 ```
 
-Par exemple, la clé correspond à la première adresse de réception d'un compte Bitcoin utilisant les adresses traditionnelles. De même, la clé correspond à la 18 adresse de reste du premier compte Bitcoin utilisant les adresses SegWit natives.
+Par exemple, la clé m/44'/0'/0'/0/0 correspond à la première adresse de réception d'un compte Bitcoin utilisant les adresses traditionnelles. De même, la clé m/84'/0'/0'/1/17 correspond à la 18 adresse de reste du premier compte Bitcoin utilisant les adresses SegWit natives.
 
 Toutes les adresses d'un portefeuille restent valides même si elles ont été utilisées. Même si l'on peut générer des adresses à l'infini, le portefeuille balaie usuellement 20 adresses à partir de la dernière adresse active.
 
@@ -2366,7 +2368,7 @@ L'algorithme de preuve de travail de Hashcash consiste à trouver une collision 
 
 La preuve de travail est réalisée par le calcul successif d'empreintes d'une chaîne de caractères, composée d'une information de base, et d'un nombre qu'on fait varier, appelé le compteur ou le nonce. L'information de base comporte généralement des indications sur le contexte dans lequel la preuve de travail a été produite (identifiant, date, heure, protocole, etc.) pour démontrer que cette preuve de travail n'a pas déjà été utilisée.
 
-Prenons un exemple pour illustrer le propos. D'abord, on choisit une information de base propre au contexte : pour produire une preuve de travail liée à cet ouvrage et à sa date d'écriture, on peut opter pour l'information de base . Puis on détermine le degré de la preuve de travail, c'est-à-dire le nombre de zéros binaires par lequel doit commencer l'empreinte, ici 16. On procède ensuite à la recherche du résultat voulu en incrémentant le nonce : à chaque itération, on le met bout à bout avec l'information de base et on vérifie si l'empreinte de l'ensemble est satisfaisante. Le travail s'arrête enfin lorsque l'empreinte commence avec un nombre suffisant de zéros : ici 95 690 tentatives. Notre preuve de travail est donc :
+Prenons un exemple pour illustrer le propos. D'abord, on choisit une information de base propre au contexte : pour produire une preuve de travail liée à cet ouvrage et à sa date d'écriture, on peut opter pour l'information de base 20231031181000:BitcoinElegance:. Puis on détermine le degré de la preuve de travail, c'est-à-dire le nombre de zéros binaires par lequel doit commencer l'empreinte, ici 16. On procède ensuite à la recherche du résultat voulu en incrémentant le nonce : à chaque itération, on le met bout à bout avec l'information de base et on vérifie si l'empreinte de l'ensemble est satisfaisante. Le travail s'arrête enfin lorsque l'empreinte commence avec un nombre suffisant de zéros : ici 95 690 tentatives. Notre preuve de travail est donc :
 
 ``` {fontsize="\\footnotesize"}
 20231031181000:BitcoinElegance:95690
@@ -2381,13 +2383,13 @@ Et l'empreinte correspondante, commençant par 4 zéros hexadécimaux (soit 16 z
 Les étapes de cette procédure sont décrites dans le tableau [8.1](#table:hashcash-hashes){reference-type="ref" reference="table:hashcash-hashes"}.
 
 ::: {#table:hashcash-hashes}
-   **Nonce**   **Empreinte (SHA-256)**
-  ----------- -------------------------
-       0      
-       1      
-       2      
-       3      
-    95 690    
+   **Nonce**                       **Empreinte (SHA-256)**
+  ----------- ------------------------------------------------------------------
+       0       933c448c18e334c1cc5191f035d8581af611417578392b2d695d521c29b396d5
+       1       50530c98d1b171826b3d26fa5442e4ce7aa1f8a1277b71bc74d3adc1cd88b9ae
+       2       fa27ed560df22d676d69966c9a981c5adfc395b4e7f78ca54d2593a98fd2ea38
+       3       011692df53a84ecdddcd154de4f329e7311090580adb189e8360ea1729d75c99
+    95 690     0000387b99b1412e3cb6e49548cc0d11bdc797138e1a0f5ff095279a710b895a
 
   : Recherche de la preuve de travail à partir de l'information de base `20231031181000:BitcoinElegance:`.
 :::
@@ -2682,7 +2684,7 @@ C'est pour corriger ce défaut de variance que sont nées les coopératives de m
 
 La première coopérative de minage a été lancée le 27 novembre 2010 par Marek Palatinus (aussi connu sous le pseudonyme de *slush*). Elle portait initialement le nom de Bitcoin.cz Mining avant d'être plus tard rebaptisée Slush Pool en hommage à son fondateur, puis de devenir Braiins Pool en septembre 2022. Aujourd'hui, les coopératives de minage sont nombreuses et concentrent l'essentiel de la puissance de calcul du réseau. Elles sont généralement basées dans les juridictions où le minage est très présent, comme la Chine (jusqu'en 2021) ou plus récemment les États-Unis.
 
-Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères , ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
+Les coopératives ont pour habitude de signaler les blocs qu'elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751 005 contient la chaîne de caractères poolin.com, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n'est pas obligatoire (le minage est anonyme par essence), mais permet d'avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure [8.6](#fig:hashrate-distribution){reference-type="ref" reference="fig:hashrate-distribution"}) et d'estimer par conséquent la centralisation de l'activité minière.
 
 ![Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source : coin.dance)](img/hashrate-distribution-coin-dance-week-20231012.eps){#fig:hashrate-distribution}
 
@@ -3180,7 +3182,7 @@ En dehors de BTC, les mises à niveaux par hard fork sont nombreuses, notamment 
 
 Le hard fork contentieux est un hard fork visant délibérément à créer une nouvelle chaîne. Il est issu d'une dissension dans la communauté, qui est si forte qu'elle pousse à la sécession. Il est généralement bilatéral.
 
-Le premier exemple de hard fork contentieux majeur est celui qui a eu lieu sur Ethereum en juillet 2016, dans le contexte du piratage de TheDAO. Ce hard fork consistait à reprendre les fonds du pirate par un « changement d'état irrégulier ». Celui-ci était rendu bilatéral par la règle imposant aux 10 premiers blocs d'inclure la chaîne de caractères . Puisque la majorité économique se trouvait du côté de l'annulation, la chaîne altérée a gardé le nom d'Ethereum et le sigle boursier ETH, tandis que l'autre chaîne a pris le nom d'Ethereum Classic et le sigle boursier ETC.
+Le premier exemple de hard fork contentieux majeur est celui qui a eu lieu sur Ethereum en juillet 2016, dans le contexte du piratage de TheDAO. Ce hard fork consistait à reprendre les fonds du pirate par un « changement d'état irrégulier ». Celui-ci était rendu bilatéral par la règle imposant aux 10 premiers blocs d'inclure la chaîne de caractères dao-hard-fork. Puisque la majorité économique se trouvait du côté de l'annulation, la chaîne altérée a gardé le nom d'Ethereum et le sigle boursier ETH, tandis que l'autre chaîne a pris le nom d'Ethereum Classic et le sigle boursier ETC.
 
 Le second exemple de hard fork contentieux est celui qui a mené à la création de Bitcoin Cash en août 2017 suite au débat sur la scalabilité et à la guerre des blocs. Ce hard fork n'intégrait pas SegWit, augmentait la taille limite des blocs à 8 Mo et améliorait l'algorithme de signature. Il était rendu bilatéral par une règle qui imposait au bloc suivant l'activation d'avoir une taille strictement supérieure à 1 Mo. Il offrait aussi *de facto* une protection contre la rediffusion des transactions. Ce changement ayant dû se faire sans l'accord de la majorité économique, la chaîne qui ne modifiait pas les règles a pu conserver le nom de Bitcoin et le sigle boursier BTC, tandis que la nouvelle chaîne a dû adopter un nouveau nom, Bitcoin Cash, et un nouveau sigle, BCH.
 
@@ -3222,7 +3224,7 @@ D'autre part, le soft fork activé par les mineurs (en anglais *miner activated 
 
 La même distinction existe dans l'activation des hard forks, mais celle-ci a peu de pertinence, la puissance de calcul ne pouvant pas empêcher la scission. Ainsi, le hard fork activé par les mineurs ou MAHF, longtemps soutenu par les partisans de l'augmentation de la taille limite des blocs, n'a pas d'intérêt particulier. Comme les hard forks, les soft forks peuvent être rangés en deux catégories plus ou moins distinctes : le soft fork de mise à niveau et le soft fork contentieux. Le soft fork est idéal pour mettre à niveau le protocole. Cela permet aux nœuds de ne pas se mettre à niveau tout de suite. Même s'il demande une certaine synchronisation, celle-ci n'est pas aussi contraignante que pour les hard forks.
 
-Dans BTC, le soft fork est ainsi privilégié par les développeurs depuis sa découverte. De nombreuses mises à niveau en étaient, comme *Pay to Script Hash* (BIP-16), ou l'obligation de spécifier la hauteur du bloc dans la transaction de récompense (BIP-34), ou encore l'ajout d'un standard d'encodage des signatures (BIP-66). Les ajouts des codes opération et permettant l'usage de verrous temporels dans le langage de script par l'utilisation respective des codes `OP_NOP2` et `OP_NOP3` ont également été des soft forks. Enfin, plus récemment, l'adoption de Schnorr-Taproot (ou Taproot pour faire court) a été une mise à niveau par soft fork.
+Dans BTC, le soft fork est ainsi privilégié par les développeurs depuis sa découverte. De nombreuses mises à niveau en étaient, comme *Pay to Script Hash* (BIP-16), ou l'obligation de spécifier la hauteur du bloc dans la transaction de récompense (BIP-34), ou encore l'ajout d'un standard d'encodage des signatures (BIP-66). Les ajouts des codes opération OP_CHECKLOCKTIMEVERIFY et OP_CHECKSEQUENCEVERIFY permettant l'usage de verrous temporels dans le langage de script par l'utilisation respective des codes `OP_NOP2` et `OP_NOP3` ont également été des soft forks. Enfin, plus récemment, l'adoption de Schnorr-Taproot (ou Taproot pour faire court) a été une mise à niveau par soft fork.
 
 Litecoin fait aussi usage de ce type de transition. Le protocole a notamment intégré SegWit en mai 2017, ainsi que Schnorr-Taproot et MimbleWimble (MWEB) en mai 2022.
 
@@ -3512,7 +3514,7 @@ Dans Bitcoin, les transactions possèdent un rôle central. Le protocole est fai
 
 Chaque transaction est constituée d'une ou plusieurs entrées et d'une ou plusieurs sorties. Une sortie transactionnelle se compose simplement d'une indication de destination et d'un montant en unités (satoshis). Une entrée fait généralement référence à une sortie transactionnelle précédente, sauf dans le cas de la transaction de récompense où elle représente une « base de pièce » créant de nouvelles unités issues de l'émission monétaire et des frais de transaction.
 
-L'identifiant d'une transaction (*transaction identifier* ou ) est l'empreinte des données brutes qu'elle contient, obtenue via le hachage par double SHA-256. Chaque sortie transactionnelle est caractérisée par l'identifiant de la transaction dont elle est issue et par sa position dans cette transaction, qu'on appelle l'indice. Ce point de sortie (*outpoint*) sert d'indication de provenance. Un exemple de point de sortie est .
+L'identifiant d'une transaction (*transaction identifier* ou txid) est l'empreinte des données brutes qu'elle contient, obtenue via le hachage par double SHA-256. Chaque sortie transactionnelle est caractérisée par l'identifiant de la transaction dont elle est issue et par sa position dans cette transaction, qu'on appelle l'indice. Ce point de sortie (*outpoint*) sert d'indication de provenance. Un exemple de point de sortie est f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16:0.
 
 Contrairement à ce que la description de la propriété dans le chapitre [7](#ch:propriete){reference-type="ref" reference="ch:propriete"} suggère, la destination et la provenance des unités ne sont pas à proprement parler des adresses, mais des scripts de verrouillage, c'est-à-dire des petits programmes qui déterminent leurs conditions de dépense. Chaque sortie crée ainsi un script qui bloque les fonds d'une façon spécifique. Le plus souvent, ce script contient une clé publique ou une empreinte de clé publique, qui peut être interprétée comme une adresse par le portefeuille.
 
@@ -3566,7 +3568,7 @@ Satoshi Nakamoto a inclus ce système de scripts dans Bitcoin pour lui permettre
 
 Le langage est constitué de plus d'une centaine d'opérateurs, aussi appelés codes opération (*opcodes*), qui agissent sur la pile primaire d'une manière ou d'une autre. Les opérateurs sont des nombres codés sur 1 octet (allant de 0 à 255), mais sont usuellement désignés par un nom décrivant leur fonction, dans le but de rendre la lecture plus compréhensible par l'être humain. Ils sont notés en majuscules et sont souvent précédés du préfixe `OP_` même s'il peut être omis en l'absence d'ambiguïté. Par exemple, l'opérateur permettant de vérifier une signature (`0xac`) est noté `OP_CHECKSIG` ou `CHECKSIG`.
 
-Les opérateurs allant de 1 à 75, parfois notés , ont pour action d'empiler des données ayant une taille allant de 1 à 75 octets. L'utilisation d'opérateurs supplémentaires spécifiques (notés ) permet cependant de placer une information plus grande sur la pile. Bien qu'on puisse utiliser cette notation, il est généralement plus simple de placer un élément entre chevrons pour indiquer qu'il est placé au sommet de la pile. Par exemple, le fait d'écrire au sein d'un script signifie que la signature est empilée.
+Les opérateurs allant de 1 à 75, parfois notés OP_PUSHBYTES_X, ont pour action d'empiler des données ayant une taille allant de 1 à 75 octets. L'utilisation d'opérateurs supplémentaires spécifiques (notés OP_PUSHDATA_Y) permet cependant de placer une information plus grande sur la pile. Bien qu'on puisse utiliser cette notation, il est généralement plus simple de placer un élément entre chevrons pour indiquer qu'il est placé au sommet de la pile. Par exemple, le fait d'écrire \<signature\> au sein d'un script signifie que la signature est empilée.
 
 La valeur retournée à la fin de l'exécution des scripts est un booléen, de sorte que le script peut être valide, auquel cas la dépense de la pièce est approuvée, ou bien invalide, auquel cas la transaction est rejetée dans son ensemble. Le script est valide si et seulement si la valeur `TRUE` (« vrai ») est présente en haut de la pile à la fin de l'exécution. Il est invalide si ce n'est pas le cas ou si son exécution s'est arrêtée avant la fin.
 
@@ -3602,7 +3604,7 @@ De même, la vérification de la validité d'une signature est réalisée par le
 <signature> || <clé publique> CHECKSIG
 ```
 
-En outre, il existe des conditions plus avancées comme les verrous temporels. Ceux-ci permettent de bloquer les fonds de la pièce pour un temps précis, que ce soit jusqu'à une date donnée, auquel cas on parle de temps de verrouillage absolu, ou bien pendant une période donnée, auquel cas on parle de temps de verrouillage relatif. Le premier est le fait de l'opérateur dont les spécificités techniques sont décrites dans le BIP-65. Le second est appliqué par le code opération décrit dans le BIP-112.
+En outre, il existe des conditions plus avancées comme les verrous temporels. Ceux-ci permettent de bloquer les fonds de la pièce pour un temps précis, que ce soit jusqu'à une date donnée, auquel cas on parle de temps de verrouillage absolu, ou bien pendant une période donnée, auquel cas on parle de temps de verrouillage relatif. Le premier est le fait de l'opérateur OP_CHECKLOCKTIMEVERIFY dont les spécificités techniques sont décrites dans le BIP-65. Le second est appliqué par le code opération OP_CHECKSEQUENCEVERIFY décrit dans le BIP-112.
 
 ## Les schémas classiques {#les-schémas-classiques .unnumbered}
 
@@ -3632,7 +3634,7 @@ Le schéma P2PK était utilisé dans les débuts de Bitcoin pour recevoir les pa
 
 ### P2PKH : Pay to Public Key Hash
 
-Le schéma Pay to Public Key Hash (P2PKH), qui est traduit littéralement par « payer à l'empreinte de la clé publique », est le deuxième type de format de réception apparu dans Bitcoin dès le début du fait de la conception de Satoshi Nakamoto. Ce schéma permet non pas de réaliser un paiement vers une clé publique, mais vers l'empreinte d'une clé publique, tout en faisant en sorte que l'interpréteur vérifie quand même la validité de la signature vis-à-vis de la clé publique lors de la dépense des fonds. L'empreinte de la clé publique est alors considérée comme la donnée essentielle (« charge utile ») de l'adresse, qui dans ce cas commence toujours par un 1, comme par exemple . Le script de verrouillage ici est :
+Le schéma Pay to Public Key Hash (P2PKH), qui est traduit littéralement par « payer à l'empreinte de la clé publique », est le deuxième type de format de réception apparu dans Bitcoin dès le début du fait de la conception de Satoshi Nakamoto. Ce schéma permet non pas de réaliser un paiement vers une clé publique, mais vers l'empreinte d'une clé publique, tout en faisant en sorte que l'interpréteur vérifie quand même la validité de la signature vis-à-vis de la clé publique lors de la dépense des fonds. L'empreinte de la clé publique est alors considérée comme la donnée essentielle (« charge utile ») de l'adresse, qui dans ce cas commence toujours par un 1, comme par exemple 1FjBKPQ7MTiPSDkJ2ZwPgAXUKQ8yoGbVJX. Le script de verrouillage ici est :
 
 ``` {fontsize="\\footnotesize"}
 DUP HASH160 <empreinte de la clé publique> EQUALVERIFY CHECKSIG
@@ -3662,13 +3664,13 @@ Le script de déverrouillage correspondant est :
 <leurre (0)> <signature 1> ... <signature M>
 ```
 
-La présence du leurre (généralement 0) est dû à un défaut dans l'implémentation de l'exécution de l'opérateur par Satoshi, qui requiert un élément de trop. Les développeurs n'ont pas jugé opportun de corriger ce défaut, car cette correction constituait un hard fork.
+La présence du leurre (généralement 0) est dû à un défaut dans l'implémentation de l'exécution de l'opérateur OP_CHECKMULTISIG par Satoshi, qui requiert un élément de trop. Les développeurs n'ont pas jugé opportun de corriger ce défaut, car cette correction constituait un hard fork.
 
 C'est ce schéma, particulièrement exigeant au niveau de la mise en place, qui a motivé la création du schéma P2SH.
 
 ### P2SH : Pay to Script Hash
 
-Le schéma Pay to Script Hash (P2SH), pouvant être traduit littéralement par « payer à l'empreinte du script », reprend l'idée derrière P2PKH, à la seule différence que la donnée hachée n'est pas une clé publique, mais le script lui-même ! Le script en question est alors appelé script de récupération (*redeem script*) pour le différencier du script de déverrouillage. Son empreinte est la donnée constitutive de l'adresse, cette dernière commençant toujours par un 3 à l'instar de .
+Le schéma Pay to Script Hash (P2SH), pouvant être traduit littéralement par « payer à l'empreinte du script », reprend l'idée derrière P2PKH, à la seule différence que la donnée hachée n'est pas une clé publique, mais le script lui-même ! Le script en question est alors appelé script de récupération (*redeem script*) pour le différencier du script de déverrouillage. Son empreinte est la donnée constitutive de l'adresse, cette dernière commençant toujours par un 3 à l'instar de 3K8Ps6Ayw5ZaKDaLZjfGo3mTgDsc1VXZ8d.
 
 Ce schéma donne à l'utilisateur la possibilité d'y inclure n'importe quel script, sans discrimination sur son format, à condition qu'il respecte bien sûr certaines limites. Il permet aussi de recevoir des fonds depuis la quasi-totalité des portefeuilles existants, le fardeau de la construction et du déverrouillage du script revenant uniquement au destinataire, et n'est pas partagé à l'expéditeur comme dans le cas de l'utilisation de scripts bruts.
 
@@ -3694,13 +3696,13 @@ DUP HASH160 <empreinte du script de récupération> EQUALVERIFY EVAL
 
 tandis que le script de déverrouillage aurait été le même que pour P2SH. L'exécution successive de ces deux scripts aurait permis dans un premier temps de vérifier la conformité du hachage du script de récupération avec l'empreinte ; puis dans un second temps d'exécuter le script de récupération et de lui combiner les éléments de déverrouillage. Néanmoins cette solution n'a pas été acceptée, celle-ci ayant été jugée trop dangereuse à cause de son pouvoir de récursion. Il lui a été préféré le modèle, plus restrictif, de P2SH.
 
-L'exécution de P2SH fonctionne exactement comme le schéma lié à `OP_EVAL`, à l'exception qu'une partie du script n'est pas explicitement indiquée. D'un côté, la vérification de la correspondance entre l'empreinte indiquée et le script de récupération est bien réalisée par le script de verrouillage. De l'autre côté, l'évaluation du script de récupération est effectuée implicitement grâce à une exception ajoutée au code source qui fait que les nœuds du réseau qui reconnaissent le schéma l'interprètent différemment. Dans Bitcoin Core, on peut observer cette condition au sein de la fonction de l'interpréteur.
+L'exécution de P2SH fonctionne exactement comme le schéma lié à `OP_EVAL`, à l'exception qu'une partie du script n'est pas explicitement indiquée. D'un côté, la vérification de la correspondance entre l'empreinte indiquée et le script de récupération est bien réalisée par le script de verrouillage. De l'autre côté, l'évaluation du script de récupération est effectuée implicitement grâce à une exception ajoutée au code source qui fait que les nœuds du réseau qui reconnaissent le schéma l'interprètent différemment. Dans Bitcoin Core, on peut observer cette condition au sein de la fonction VerifyScript de l'interpréteur.
 
 La proposition a été codifiée dans le BIP-16. Si cette solution est pratique, elle crée de la complexité et n'est pas très élégante. Comme le disait Gavin Andresen dans l'explication introductive de ce BIP :
 
 « Reconnaître une forme "spéciale" de scriptPubKey et réaliser une validation supplémentaire quand elle est détectée, c'est laid. Cependant, l'avis général est que les alternatives sont soit encore plus laides, soit plus complexes à implémenter, et / ou étendent le pouvoir du langage d'expression de manière dangereuse[^488]. »
 
-Le schéma P2SH a fini par être activé le 1 avril 2012 sous la forme d'un soft fork, en dépit de l'opposition notable de Luke-Jr qui proposait un opérateur alternatif, , décrit dans le BIP-17.
+Le schéma P2SH a fini par être activé le 1 avril 2012 sous la forme d'un soft fork, en dépit de l'opposition notable de Luke-Jr qui proposait un opérateur alternatif, OP_CHECKHASHVERIFY, décrit dans le BIP-17.
 
 ### NULLDATA
 
@@ -3718,21 +3720,21 @@ La programmabilité de Bitcoin n'est pas seulement issue de son langage de progr
 
 Le type de signature est construit à partir de plusieurs signaux de signature qui peuvent être combinés. Les quatre signaux de signature qui existent sont :
 
--   (`0x01`) qui indique que toutes les sorties sont signées ;
+-   SIGHASH_ALL (`0x01`) qui indique que toutes les sorties sont signées ;
 
--   (`0x03`) qui permet de ne signer qu'une seule sortie ;
+-   SIGHASH_SINGLE (`0x03`) qui permet de ne signer qu'une seule sortie ;
 
--   (`0x02`) qui indique qu'aucune sortie n'est signée ;
+-   SIGHASH_NONE (`0x02`) qui indique qu'aucune sortie n'est signée ;
 
--   (`0x80`) qui permet de ne signer qu'une seule entrée.
+-   SIGHASH_ANYONECANPAY (`0x80`) qui permet de ne signer qu'une seule entrée.
 
-Les trois signaux concernant les sorties peuvent être associés à , ce qui permet de former finalement six types de signatures différents, représentés sur la figure [12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment même si certains autres types peuvent parfois trouver une utilité. C'est notamment le cas de qui permet de construire des transactions de type *anyone-can-pay*, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.
+Les trois signaux concernant les sorties peuvent être associés à SIGHASH_ANYONECANPAY, ce qui permet de former finalement six types de signatures différents, représentés sur la figure [12.6](#fig:signature-hash-types){reference-type="ref" reference="fig:signature-hash-types"}. Le type de signature le plus fréquent est évidemment SIGHASH_ALL même si certains autres types peuvent parfois trouver une utilité. C'est notamment le cas de SIGHASH_ALL \| SIGHASH_ANYONECANPAY qui permet de construire des transactions de type *anyone-can-pay*, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.
 
 ![Les différents types de signatures dans Bitcoin.](img/signature-hash-types.eps){#fig:signature-hash-types}
 
-Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile : celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu'il pouvait avoir une utilité. C'est dans cet esprit que le signal de signature a été proposé en février 2016 par Joseph Poon[^490].
+Ces signaux ont été implémentés dès le début par Satoshi Nakamoto au sein du prototype. Il en manquait logiquement un, que Satoshi Nakamoto a probablement jugé inutile : celui qui ne signait aucune entrée. Toutefois, avec le développement des canaux de paiements pour le réseau Lightning, les développeurs se sont rendu compte qu'il pouvait avoir une utilité. C'est dans cet esprit que le signal de signature SIGHASH_NOINPUT a été proposé en février 2016 par Joseph Poon[^490].
 
-Ce type de signal pourrait être implémenté de manière partielle dans BTC par l'intermédiaire du BIP-118, qui prévoit l'intégration de deux nouveaux signaux au sein des scripts de Taproot : et . Il permettrait d'améliorer le fonctionnement du réseau Lightning par la mise en œuvre du protocole Eltoo reposant sur la construction de transactions flottantes.
+Ce type de signal pourrait être implémenté de manière partielle dans BTC par l'intermédiaire du BIP-118, qui prévoit l'intégration de deux nouveaux signaux au sein des scripts de Taproot : SIGHASH_ANYPREVOUT et SIGHASH_ANYPREVOUTANYSCRIPT. Il permettrait d'améliorer le fonctionnement du réseau Lightning par la mise en œuvre du protocole Eltoo reposant sur la construction de transactions flottantes.
 
 ## SegWit : le témoin séparé {#segwit-le-témoin-séparé .unnumbered}
 
@@ -3788,7 +3790,7 @@ Le schéma *Pay to Witness Public Key Hash* (P2WPKH), qui signifie littéralemen
 <version (0)> <empreinte (hash160) de la clé publique>
 ```
 
-Ce script est semblable à un script *anyone-can-spend*, que tout le monde pourrait dépenser, mais l'interpréteur ajoute une condition supplémentaire pour que ce ne soit pas le cas. Le type de la sortie est détecté grâce à sa forme : la version de SegWit (ici 0) et la taille de l'empreinte (ici 20 octets). La version et l'empreinte forment l'information essentielle de l'adresse, qui est encodée grâce au format Bech32 et qui commence toujours par `bc1q`, à l'instar de .
+Ce script est semblable à un script *anyone-can-spend*, que tout le monde pourrait dépenser, mais l'interpréteur ajoute une condition supplémentaire pour que ce ne soit pas le cas. Le type de la sortie est détecté grâce à sa forme : la version de SegWit (ici 0) et la taille de l'empreinte (ici 20 octets). La version et l'empreinte forment l'information essentielle de l'adresse, qui est encodée grâce au format Bech32 et qui commence toujours par `bc1q`, à l'instar de bc1q5x9a0aqmgtrucm4l5n0y8e4kxfy9xm4udhygr2.
 
 Le script de déverrouillage est vide. Les données de déverrouillage sont contenues dans le témoin de la transaction. La partie du témoin correspondant à l'entrée est :
 
@@ -3829,7 +3831,7 @@ Le dernier schéma à entrer en vigueur est le schéma *Pay to Taproot* (P2TR), 
 <version (1)> <clé publique Taproot>
 ```
 
-La clé publique en question mesure 32 octets. La version et la clé publique constituent les éléments constitutifs de l'adresse. Cette dernière est encodée grâce au format Bech32m, qui est une variante de l'encodage Bech32 ayant corrigé un petit bug dans le calcul de la somme de contrôle. L'adresse résultante commence toujours par `bc1p` comme par exemple . Le déverrouillage de la sortie se fait avec une signature simple, ou bien avec l'exécution du MAST.
+La clé publique en question mesure 32 octets. La version et la clé publique constituent les éléments constitutifs de l'adresse. Cette dernière est encodée grâce au format Bech32m, qui est une variante de l'encodage Bech32 ayant corrigé un petit bug dans le calcul de la somme de contrôle. L'adresse résultante commence toujours par `bc1p` comme par exemple bc1pqlqqhzrg60v5h87r8lugusrddgz0j306shcupthy0tdqaqurwn8qr8qsej. Le déverrouillage de la sortie se fait avec une signature simple, ou bien avec l'exécution du MAST.
 
 Toutes ces modifications majeures font de SegWit une mise à niveau profonde du protocole, qui a amené beaucoup de choses dans Bitcoin. L'exigence de passer par un soft fork explique la forme qu'elle a prise et elle ne peut par conséquent être comprise que dans le contexte dans lequel elle a été activée. Toutefois, cette mise à niveau a aussi apporté des inconvénients majeurs, dont les deux principaux sont la dette technique alourdissant le coût de maintien et d'amélioration du code, et l'affaiblissement de la confidentialité générale due à l'apparition de nouveaux types d'adresses partiellement adoptés. SegWit était donc loin d'être une mise à niveau parfaite.
 
@@ -3893,7 +3895,7 @@ La troisième technique d'amélioration de la confidentialité est le procédé 
 
 Les Confidential Transactions ont été ajoutées en 2017 à Monero grâce au travail de Shen Noether. RingCT, qui permet de cacher les montants échangés, a ainsi été ajouté au protocole en janvier 2017 et a été rendu obligatoire en septembre de la même année. Il alourdissait les transactions par rapport aux transactions classiques. Néanmoins, depuis octobre 2018, ce compromis a été atténué grâce à l'implémentation des bulletproofs, qui a allégé le fardeau des preuves de portée et qui a permis de réduire de 80 % la taille des transactions[^510].
 
-Un autre concept faisant usage des Confidential Transactions est Mimblewimble. Celui-ci a été proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC où il partageait un lien vers un texte descriptif hébergé sur Tor[^511]. Mimblewimble a attiré l'attention de certains développeurs de Bitcoin, dont le mathématicien Andrew Poelstra qui en a fait une description plus avancée dans un papier daté du 6 octobre 2016[^512].
+Un autre concept faisant usage des Confidential Transactions est Mimblewimble. Celui-ci a été proposé le 1 août 2016 par un inconnu se faisant appeler Tom Elvis Jedusor au sein du canal IRC #bitcoin-wizards où il partageait un lien vers un texte descriptif hébergé sur Tor[^511]. Mimblewimble a attiré l'attention de certains développeurs de Bitcoin, dont le mathématicien Andrew Poelstra qui en a fait une description plus avancée dans un papier daté du 6 octobre 2016[^512].
 
 L'apport de Mimblewimble est de condenser l'historique des transactions en chamboulant la structure des transactions. Il repose sur trois primitives cryptographiques : les Confidential Transactions, qui cachent les montants, les signatures agrégées à sens unique (OWAS), qui permettent de combiner les transactions au sein d'un bloc, et le sectionnage des transactions (*transaction cut-through*), qui permet de supprimer les sorties transactionnelles intermédiaires. Cette réduction, qui améliore la confidentialité du système de manière relativement légère, se fait au prix de la programmabilité, rendue directement impossible.
 
@@ -4035,7 +4037,7 @@ Une transaction supplémentaire est ajoutée à la chaîne de transactions pour 
 
 Ce fonctionnement permet d'obtenir un protocole simple de mise à jour du canal, peu contraignant pour les nœuds, sans mécanisme de punition, et permettant de ne pas à avoir à décider les frais à l'avance. Cette facilité d'implémentation pourrait rendre plus aisée la création de contrats plus complexes sur Lightning, comme les canaux de paiement à 3 participants ou plus. En outre, leur implémentation ne doit en aucun cas remplacer celle des canaux de Poon-Dryja : les deux modèles peuvent coexister au sein d'un seul et même réseau de canaux de paiement.
 
-Les transactions flottantes sont implémentées à l'aide de . La mise en œuvre de Eltoo repose donc sur l'intégration du BIP-118 dans Bitcoin.
+Les transactions flottantes sont implémentées à l'aide de SIGHASH_ANYPREVOUT. La mise en œuvre de Eltoo repose donc sur l'intégration du BIP-118 dans Bitcoin.
 
 ## L'inscription de données arbitraires {#linscription-de-données-arbitraires .unnumbered}
 
@@ -4051,7 +4053,7 @@ D'une part, l'écriture de données arbitraires peut être réalisée par les mi
 
 D'autres blocs contiennent des messages emblématiques. Le bloc d'exode de BCH (de hauteur 478 559) contenait un message de bienvenue pour Shuya Yang, la fille du PDG de la coopérative ViaBTC. Le bloc précédant le troisième halving sur BTC en 2020 (de hauteur 629 999) incluait le titre d'un article du New York Times du 9 avril annonçant l'injection de liquidité record de la Réserve Fédérale (2 300 milliards de dollars) en réaction à la crise du Covid-19 : « *NYTimes 09/Apr/2020 With \$2.3T Injection, Fed's Plan Far Exceeds 2008 Rescue* ».
 
-Le script de déverrouillage de la base de pièce peut être utilisé pour écrire d'autres données. C'est le cas du nonce supplémentaire (le critère qui a permis d'identifier les bitcoins de Satoshi). C'est aussi le cas du signalement des coopératives minières qui est réalisé via ce champ : par exemple, la base de pièce du bloc 751 005 contient la chaîne de caractères , ce qui indique que sa validation a probablement été réalisée par la coopérative chinoise Poolin.
+Le script de déverrouillage de la base de pièce peut être utilisé pour écrire d'autres données. C'est le cas du nonce supplémentaire (le critère qui a permis d'identifier les bitcoins de Satoshi). C'est aussi le cas du signalement des coopératives minières qui est réalisé via ce champ : par exemple, la base de pièce du bloc 751 005 contient la chaîne de caractères poolin.com, ce qui indique que sa validation a probablement été réalisée par la coopérative chinoise Poolin.
 
 D'autre part, l'inscription des données arbitraires peut aussi être le fait des utilisateurs, qui peuvent les inclure dans leurs transactions et payer les frais correspondants. Plusieurs méthodes ont été exploitées pour ce faire.
 
@@ -4067,7 +4069,7 @@ D'abord, on peut inscrire une empreinte, l'inscription servant alors à l'horoda
 
 Cette possibilité peut aussi être exploitée par les systèmes décentralisés d'hébergement de fichiers, comme le système IPFS (InterPlanetary File System) qui utilise les empreintes des fichiers pour les identifier et permettre leur stockage par un réseau pair à pair d'utilisateurs. Il est donc possible d'associer le texte écrit sur la chaîne de blocs et des images ou des vidéos, hébergées de manière décentralisée.
 
-Ensuite, on peut inscrire un texte, qui est généralement encodé en ASCII / UTF-8. Par exemple, la phrase « La beauté sauvera le monde. » a été inscrite sur la chaîne de BTC le 10 août 2022 dans la transaction d'identifiant . L'inscription de textes permet aussi de dessiner des images en art ASCII. C'est le cas de l'hommage à Len Sassaman (voir figure [13.6](#fig:sassaman-tribute){reference-type="ref" reference="fig:sassaman-tribute"}), décédé en juillet 2011, qui a été inscrit sur la chaîne par les développeurs Dan Kaminsky et Travis Goodspeed dans des sorties P2PKH, et qui contient notamment une représentation de l'ancien président de la Fed, Ben Bernanke.
+Ensuite, on peut inscrire un texte, qui est généralement encodé en ASCII / UTF-8. Par exemple, la phrase « La beauté sauvera le monde. » a été inscrite sur la chaîne de BTC le 10 août 2022 dans la transaction d'identifiant 08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb. L'inscription de textes permet aussi de dessiner des images en art ASCII. C'est le cas de l'hommage à Len Sassaman (voir figure [13.6](#fig:sassaman-tribute){reference-type="ref" reference="fig:sassaman-tribute"}), décédé en juillet 2011, qui a été inscrit sur la chaîne par les développeurs Dan Kaminsky et Travis Goodspeed dans des sorties P2PKH, et qui contient notamment une représentation de l'ancien président de la Fed, Ben Bernanke.
 
 <figure id="fig:sassaman-tribute">
 <pre data-fontsize="\footnotesize"><code>---BEGIN TRIBUTE---  =-=-=-=-=-=-=-=-=-=     ASCII BERNANKE
@@ -4159,7 +4161,7 @@ Taproot repose sur un arbre de hachage, appelé un MAST[^540], dont les feuilles
 
 ![MAST impliquant les clauses d'un contrat.](img/taproot-mast.eps){#fig:taproot-mast}
 
-L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
+L'implémentation de tels MAST au sein de Bitcoin avait déjà été proposée par le passé, que ce soit sous la forme d'une nouvelle version de SegWit (BIP-114), ou bien d'un nouveau code opération appelé OP_MERKLEBRANCHVERIFY (BIP-116, BIP-117). Mais Taproot a constitué une proposition supérieure en permettant de ne pas révéler l'existence du MAST lui-même.
 
 Taproot inclut en effet une condition de dépense coopérative intégrée. La clé publique agrégée interne est modifiée légèrement (*tweaked*) à l'aide de la racine du MAST, afin de prendre ce dernier en compte. La clé obtenue est celle inscrite dans le script de verrouillage de la pièce, de sorte qu'elle est indiscernable des autres sorties P2TR. De même, la signature agrégée ne peut pas être distinguée d'une signature classique. De ce fait, les participants peuvent dépenser les fonds à l'amiable, tout en étant sûrs qu'un litige mènera au règlement sur la chaîne.
 
@@ -4201,7 +4203,7 @@ Pour détecter et rejeter un événement de double dépense dans un délai conve
 
 James A. Donald mettait par là en valeur le manque de scalabilité de Bitcoin. Pour tout système donné, une augmentation de volume transactionnel accroît le nombre de transactions à obtenir et à traiter. Cet accroissement rend plus difficile de faire fonctionner un nœud, ce qui peut affecter la décentralisation du réseau et donc la sécurité. De ce fait, il existe toujours un compromis entre l'utilité et la sécurité du système, ou pour mieux le dire, entre la facilité de transaction et la facilité de vérification.
 
-Ce compromis se manifeste généralement par une limite de capacité transactionnelle, décrite par les règles de consensus (limite explicite) ou, plus rarement, par les règles de réseau (limite implicite). La limite de capacité transactionnelle était originellement décrite comme une taille limite des blocs, qui interdisait aux mineurs de créer des blocs plus grands qu'une certaine taille. Dans le prototype, cette taille était définie implicitement par la taille maximale des messages du protocole de transmission, c'est-à-dire 32 Mio. Puis, une limite explicite de 1 mégaoctet (1 Mo) a été ajoutée par Satoshi Nakamoto en septembre 2010 par le biais de la constante , sans annonce publique de sa part, dans le but d'éviter les attaques par déni de service. Cette taille correspondait, pour un réseau tournant à plein régime, à un volume théorique de 4,5 transactions classiques par seconde, ce qui se ramenait plutôt à 3 transactions par seconde en pratique.
+Ce compromis se manifeste généralement par une limite de capacité transactionnelle, décrite par les règles de consensus (limite explicite) ou, plus rarement, par les règles de réseau (limite implicite). La limite de capacité transactionnelle était originellement décrite comme une taille limite des blocs, qui interdisait aux mineurs de créer des blocs plus grands qu'une certaine taille. Dans le prototype, cette taille était définie implicitement par la taille maximale des messages du protocole de transmission, c'est-à-dire 32 Mio. Puis, une limite explicite de 1 mégaoctet (1 Mo) a été ajoutée par Satoshi Nakamoto en septembre 2010 par le biais de la constante MAX_BLOCK_SIZE, sans annonce publique de sa part, dans le but d'éviter les attaques par déni de service. Cette taille correspondait, pour un réseau tournant à plein régime, à un volume théorique de 4,5 transactions classiques par seconde, ce qui se ramenait plutôt à 3 transactions par seconde en pratique.
 
 Avec l'intégration de SegWit dans la version principale de Bitcoin en août 2017, cette limitation est devenue un poids limite des blocs. Cette nouvelle métrique donnait une importance plus grande de la taille de base par rapport à la taille du témoin dans le calcul de la mesure du bloc, modifiant également la façon dont comptaient les mineurs pour ajouter les transactions au bloc. Cette modification était une augmentation effective de la capacité transactionnelle du protocole, portant le volume autorisé de transactions à 8 transactions par seconde en théorie, et à 4,5 transactions par seconde en pratique.
 
@@ -4457,27 +4459,47 @@ Quoi qu'il en soit, Bitcoin ne peut pas être oublié. La découverte de Satoshi
 
 Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole Ordinals, dont les inscriptions ont pour identifiants :
 
-1)  
-2)  
-3)  
-4)  
-5)  
-6)  
-7)  
-8)  
-9)  
-10) 
-11) 
-12) 
-13) 
-14) 
-15) 
-16) 
-17) 
-18) 
-19) 
-20) 
-21) 
+1)  c3ed7ac0cd0bf8586e4e115bf4b5f1a66ad4a2447d2522d6bc71c706d01ddee3i0
+
+2)  f9a1f95f7cc9862ca02cdc770565a2766a36b97365417b2a35fc9e0cd399ecaai0
+
+3)  b252e48d7d340047b3d1c80de7be9ed5230c235d5f137ddab19829061ec60956i0
+
+4)  19a8d407d37e6c629c0e73fbbd8d30bc7af15d38ca11c389314a6b8d8189fb44i0
+
+5)  7e9415a062dda7d90511aa023143b8c5276d6200efe60bffacb9786d79ac1c07i0
+
+6)  4ae6456348ce94bf1d718488766d99b0d6885e03793a40e29a1d72ced77b6955i0
+
+7)  30214cfa989a2da1cad2d8ba4a38921124b8171815c48eb5f68c14de7a256c26i0
+
+8)  ec07ec6ee204b69ec8901f2e0d7745971cef9f5d767bfbbb25adbbd41cf60f68i0
+
+9)  b66e1e7f930a1c1ca6b40982cc8df3268cf49c42816acf662db123a890f60456i0
+
+10) 17d4a288947cd581d5f2f0e8b8d85ca4adbad14fdcbc13160d6f86f397a51b5di0
+
+11) cacc4812c50b2fc324f6ebe550b670e2786fbd289fb6368203c81f6103aa42c2i0
+
+12) f0b48c45889400c775f7bae8f20667c30492a944614fc3d643472bc12dc35ab8i0
+
+13) 3d11766b28aceecad850f288765676369161af9c5316032b502e4f71e703917di0
+
+14) 732dddc094b7b2a8ccbdc21eb0c9846ef793ddd93fcae89f36bb39692c9713e9i0
+
+15) 9bf621cc5d3dd725439d0381db287b20ee2f3cd1e26c698941110c96cf32e0efi0
+
+16) d85100401bad5afa5358fff0569f80fde3cdd7fc7ff55027503e739b563dd18ci0
+
+17) bafb8659c6261766123185609235238f29b02aa76ef5963ec834b779fd6aafa7i0
+
+18) 7cf36f6bdc7eddcb669a0977504c5ea505aa959bf7ce03604b7cdf8ea7d98e44i0
+
+19) 9a22171981d2b9ca05ba15673a113169b47d80d472f27ead67e694a08a70c2bbi0
+
+20) aa6f4be48a6ccec912e8a66f469b70d9ce905cd2e22056122b6baa453fb31d22i0
+
+21) de5c7219da2fd9b160e987df7fc818e7db9c8e7f9e168f563f5945a5025c9452i0
 
 [^1]: Certains partent du principe que Satoshi Nakamoto serait un pseudonyme utilisé par un groupe d'individus. Néanmoins, nous supposerons ici qu'il n'y avait qu'une seule personne derrière les messages et le code attribués au créateur de Bitcoin, sans pour autant nier que cette personne a pu se faire aider.
 
@@ -4507,9 +4529,9 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^14]: Hal Finney sur Twitter, 11/01/2009 3:33 UTC : <https://twitter.com/halfin/status/1110302988>.
 
-[^15]: Cette première transaction entre Satoshi et Hal avait pour identifiant et a été confirmée dans le bloc 170 le 12 janvier à 3:30.
+[^15]: Cette première transaction entre Satoshi et Hal avait pour identifiant f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 et a été confirmée dans le bloc 170 le 12 janvier à 3:30.
 
-[^16]: L'identifiant de la transaction reçue par Dustin (en P2IP) était .
+[^16]: L'identifiant de la transaction reçue par Dustin (en P2IP) était d71fd2f64c0b34465b7518d240c00e83f6a5b10138a7079d1252858fe7e6b577.
 
 [^17]: Satoshi Nakamoto, *Bitcoin v0.1 released*, 08/01/2009 19:27:40 UTC : <https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html>.
 
@@ -4529,7 +4551,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^25]: Archive de la page web de Bitcoin : <https://web.archive.org/web/20090511173000/http://bitcoin.sourceforge.net/>.
 
-[^26]: « J'ai trouvé la première transaction connue de bitcoins en USD dans mes sauvegardes de courriel. J'ai vendu 5 050 BTC pour 5,02 \$ le 12-10-2009. » -- Martti Malmi sur Twitter, 15/01/2014 : <https://twitter.com/marttimalmi/status/423455561703624704>. L'identifiant de la transaction était .
+[^26]: « J'ai trouvé la première transaction connue de bitcoins en USD dans mes sauvegardes de courriel. J'ai vendu 5 050 BTC pour 5,02 \$ le 12-10-2009. » -- Martti Malmi sur Twitter, 15/01/2014 : <https://twitter.com/marttimalmi/status/423455561703624704>. L'identifiant de la transaction était 7dff938918f07619abd38e4510890396b1cef4fbeca154fb7aafba8843295ea2.
 
 [^27]: NewLibertyStandard, *Re: New Exchange Service: \"BTC 2 PSC\"*, 19/01/2010 08:06:15 UTC : <https://bitcointalk.org/index.php?topic=15.msg111#msg111>.
 
@@ -4543,7 +4565,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^32]: Laszlo Hanyecz, *Pizza for bitcoins?*, 18/05/2010 00:35:20 UTC : <https://bitcointalk.org/index.php?topic=137.msg1141#msg1141>.
 
-[^33]: L'identifiant de la transaction de la pizza entre Laszlo Hanyecz et Jeremy Sturdivant était .
+[^33]: L'identifiant de la transaction de la pizza entre Laszlo Hanyecz et Jeremy Sturdivant était a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d.
 
 [^34]: Gavin Andresen, *Get 5 free bitcoins from freebitcoins.appspot.com*, 11/06/2010, 17:38:45 UTC : <https://bitcointalk.org/index.php?topic=183.msg1488#msg1488>.
 
@@ -4587,7 +4609,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^54]: Allie Jones, « *Former Coworker Regrets Helping Reveal Identity of Bitcoin's Founder* », *The Wire*, 6 mars 2014, archive : <https://web.archive.org/web/20140309041730/http://www.thewire.com/technology/2014/03/bitcoin-founders-coworker-regrets-doxxing-him/358878>.
 
-[^55]: « WikiLeaks accepte désormais les dons anonymes en bitcoins sur  » -- WikiLeaks sur Twitter, 14/06/2011 23:12 UTC : <https://twitter.com/wikileaks/status/80774521350668288>.
+[^55]: « WikiLeaks accepte désormais les dons anonymes en bitcoins sur 1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v » -- WikiLeaks sur Twitter, 14/06/2011 23:12 UTC : <https://twitter.com/wikileaks/status/80774521350668288>.
 
 [^56]: Ce montant a été retrouvé grâce au Patoshi Pattern, mis en lumière par Sergio Lerner en 2013 dans un article intitulé *The Well Deserved Fortune of Satoshi Nakamoto, Bitcoin creator, Visionary and Genius* (<https://bitslog.com/2013/04/17/the-well-deserved-fortune-of-satoshi-nakamoto/>). L'estimation utilisée ici est celle de Whale Alert publiée en 2020 : <https://whale-alert.medium.com/the-satoshi-fortune-e49cf73f9a9b>.
 
@@ -4611,7 +4633,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^65]: Adrian Chen, « *The Underground Website Where You Can Buy Any Drug Imaginable* », *Gawker*, 1 juin 2011 : <https://www.gawker.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160> ; archive : <https://www.gawkerarchives.com/the-underground-website-where-you-can-buy-any-drug-imag-30818160>.
 
-[^66]: L'identifiant de la transaction de preuve de solvabilité de Mt. Gox en 2011 était .
+[^66]: L'identifiant de la transaction de preuve de solvabilité de Mt. Gox en 2011 était 3a1b9e330d32fef1ee42f8e86420d2be978bbe0dc5862f17da9027cf9e11f8c4.
 
 [^67]: La chaîne Youtube de Bruce Wagner se trouve à l'adresse <https://www.youtube.com/@vlogwrap>. Les vidéos des présentations à la conférence peuvent y être retrouvées.
 
@@ -4643,7 +4665,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^81]: Deux agents corrompus du FBI ont notamment profité de l'enquête pour subtiliser plus de 20 000 bitcoins (soit environ 350 000 \$) et pour simuler un assassinat. -- Ludovic Lars, « *Meurtres, escroqueries et vol de bitcoins - Le côté obscur de Silk Road* », *Le Journal du Coin*, 27 juin 2021 : <https://journalducoin.com/analyses/cote-obscur-silk-road/>.
 
-[^82]: 29 656,52080180 BTC ont été envoyés à l'adresse entre le 2 et le 16 octobre, tandis que 144 336,39429472 BTC ont été transférés vers l'adresse le 25 octobre. -- U.S. Attorney's Office, Southern District of New York, *Manhattan U.S. Attorney Announces Seizure of Additional \$28 Million Worth of Bitcoins Belonging to Ross William Ulbricht, Alleged Owner and Operator of "Silk Road" Website*, 25 octobre 2013 : <https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-seizure-additional-28-million-worth-bitcoins-belonging>.
+[^82]: 29 656,52080180 BTC ont été envoyés à l'adresse 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX entre le 2 et le 16 octobre, tandis que 144 336,39429472 BTC ont été transférés vers l'adresse 1FfmbHfnpaZjKFvyi1okTjJJusN455paPH le 25 octobre. -- U.S. Attorney's Office, Southern District of New York, *Manhattan U.S. Attorney Announces Seizure of Additional \$28 Million Worth of Bitcoins Belonging to Ross William Ulbricht, Alleged Owner and Operator of "Silk Road" Website*, 25 octobre 2013 : <https://www.justice.gov/usao-sdny/pr/manhattan-us-attorney-announces-seizure-additional-28-million-worth-bitcoins-belonging>.
 
 [^83]: Lors du procès, la juge Katherine Forrest a affirmé : « Je rends ce jugement en ayant à l'esprit les crimes que vous avez commis et la nécessité de vous infliger la peine la plus sévère possible. Il ne doit faire aucun doute que le non-respect de la loi ne sera pas toléré. Il ne doit faire aucun doute que personne n'est au-dessus de la loi, quels que soient son éducation ou ses privilèges. » -- *Ross Ulbricht's sentencing transcript*, 4 février 2015 : <https://freeross.org/wp-content/uploads/2018/02/Doc_36_Jan_12_Vol_VI_Appendix_A1314-A1554.pdf#page=240>.
 
@@ -4689,7 +4711,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^104]: BBC News, *Mr Bitcoin: \"I don't want money, I don't want fame!\"* (vidéo), 2 mai 2016 : <https://www.youtube.com/watch?v=5DCAC1j2HTY>.
 
-[^105]: La signature fournie par Craig Wright correspond à la clé publique liée à l'adresse qui a servi à recevoir la récompense du bloc 9 et à envoyer le premier paiement à Hal Finney le 12 janvier 2009, et a donc été produite par Satoshi Nakamoto. Néanmoins, un utilisateur de Reddit (JoukeH) a découvert très rapidement qu'il s'agissait de la signature d'une transaction présente sur la chaîne : <https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v/>.
+[^105]: La signature fournie par Craig Wright correspond à la clé publique liée à l'adresse 12cbQLTFMXRnSzktFkuoG3eHoMeFtpTu3S qui a servi à recevoir la récompense du bloc 9 et à envoyer le premier paiement à Hal Finney le 12 janvier 2009, et a donc été produite par Satoshi Nakamoto. Néanmoins, un utilisateur de Reddit (JoukeH) a découvert très rapidement qu'il s'agissait de la signature d'une transaction présente sur la chaîne : <https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v/>.
 
 [^106]: Gavin Andresen, *Satoshi*, 2 mai 2016 : <http://gavinandresen.ninja/satoshi>
 
@@ -4715,7 +4737,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^117]: Vitalik Buterin, « *In Defense of Alternative Cryptocurrencies* », *Bitcoin Magazine*, 7 septembre 2013 : <https://bitcoinmagazine.com/business/defense-alternative-cryptocurrencies>.
 
-[^118]: L'adresse BTC utilisée par EthSuisse était . -- Vitalik Buterin, *Launching the Ether Sale*, 22 juillet 2014 : <https://blog.ethereum.org/2014/07/22/launching-the-ether-sale>.
+[^118]: L'adresse BTC utilisée par EthSuisse était 36PrZ1KHYMpqSyAQXSG8VwbUiq2EogxLo2. -- Vitalik Buterin, *Launching the Ether Sale*, 22 juillet 2014 : <https://blog.ethereum.org/2014/07/22/launching-the-ether-sale>.
 
 [^119]: Blockstream, *Why We Founded Blockstream*, 22 octobre 2014, archive : <https://web.archive.org/web/20161022162335/https://www.blockstream.com/2014/10/23/why-we-are-co-founders-of-blockstream.html>.
 
@@ -4805,11 +4827,11 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^162]: Jamie Crawley, « *Edward Snowden says use crypto, don't invest in it: 'Bitcoin is what I used to pay for the servers pseudonymously'* », *Fortune*, 11 juin 2022 :<https://fortune.com/2022/06/11/edward-snowden-says-use-crypto-dont-invest-in-it-bitcoin-is-what-i-used-to-pay-for-the-servers-pseudonymously/>.
 
-[^163]: L'adresse principale d'Alexeï Navalny était .
+[^163]: L'adresse principale d'Alexeï Navalny était 3QzYvaRFY6bakFBW4YBRrzmwzTnfZcaA6E.
 
 [^164]: Alexeï Navalny est mort en prison en février 2024. (Note de janvier 2025.)
 
-[^165]: La page de donation se situe à l'adresse <https://sci-hub.se/donate>. L'ancienne adresse (d'après une capture antérieure du site : <https://web.archive.org/web/20160202212649/http://sci-hub.la/>) a reçu 94,42594975 BTC entre le 03/07/2015 et le 14/11/2020. Les autres adresses liées à Sci-Hub sont et .
+[^165]: La page de donation se situe à l'adresse <https://sci-hub.se/donate>. L'ancienne adresse 1K4t2vSBSS2xFjZ6PofYnbgZewjeqbG1TM (d'après une capture antérieure du site : <https://web.archive.org/web/20160202212649/http://sci-hub.la/>) a reçu 94,42594975 BTC entre le 03/07/2015 et le 14/11/2020. Les autres adresses liées à Sci-Hub sont 12PCbUDS4ho7vgSccmixKTHmq9qL2mdSns et bc1q7eqheemcu6xpgr42vl0ayel6wj087nxdfjfndf.
 
 [^166]: Le travail domestique (cuisine, ménage, linge, éducation des enfants, etc.) était auparavant principalement assuré par les femmes, avant qu'elles n'abandonnent le foyer et que ce travail ne devienne un travail taxé comme un autre. La société promue par l'État moderne est avant tout une société mercantile, où tout se vend et où tout peut être taxé de la naissance à la mort de l'individu.
 
@@ -5147,13 +5169,13 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
     -   Vérifier que $r = i \mod n$.
 
-[^320]: Il s'agit de la signature de la transaction d'identifiant . Sous forme sérialisée (DER), cette signature est .
+[^320]: Il s'agit de la signature de la transaction d'identifiant 08e5ce0783ab6d5534e234136df02e0e240f76108eb6af04b8b624646b66f5eb. Sous forme sérialisée (DER), cette signature est 3044022019b83a5e354ef62e98413e6ef3f37ad0c69f75cea7daa6a352cf66f4668a9a0b02204c13f9b6f2c8ea7af224b3f6a3d9cfdfe5085bbafa150fb1aa72a20ce7cac6b001.
 
 [^321]: Il s'agit de suppositions et certaines fonctions satisfont ces caractéristiques plus que d'autres. Ainsi, des collisions ont été trouvées au sein des fonctions MD5 et SHA-1 alors qu'on les croyait sûres.
 
 [^322]: « Les adresses Bitcoin sont le seul endroit où le hachage de 160 bits est utilisé. » -- Satoshi Nakamoto, *Re: Stealing Coins*, 25/07/2010 20:48:01 UTC : <https://bitcointalk.org/index.php?topic=571.msg5754#msg5754>.
 
-[^323]: On peut observer l'adresse (correspondant à la clé 1) pour se convaincre qu'il ne s'agit pas d'un bon choix.
+[^323]: On peut observer l'adresse 1EHNa6Q4Jz2uvNExL497mE43ikXhwF6kZm (correspondant à la clé 1) pour se convaincre qu'il ne s'agit pas d'un bon choix.
 
 [^324]: BitMEX Research, *Call me Ishmael*, 13 octobre 2020 : <https://blog.bitmex.com/call-me-ishmael/>.
 
@@ -5177,13 +5199,13 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^334]: Satoshi Nakamoto, *Re: Dying bitcoins*, 21/06/2010, 17:48:26 UTC : <https://bitcointalk.org/index.php?topic=198.msg1647#msg1647>.
 
-[^335]: James Howells a miné entre le 15 février (bloc $4~334$) et le 24 avril 2009 (bloc $12~098$). Il a accumulé son revenu de minage à l'adresse . En date du 26 avril 2009, cette adresse contenait exactement 8 000 bitcoins.
+[^335]: James Howells a miné entre le 15 février (bloc $4~334$) et le 24 avril 2009 (bloc $12~098$). Il a accumulé son revenu de minage à l'adresse 198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi. En date du 26 avril 2009, cette adresse contenait exactement 8 000 bitcoins.
 
 [^336]: Alex Hern, « *Missing: hard drive containing Bitcoins worth £4m in Newport landfill site* », *The Guardian*, 27 novembre 2013 : <https://www.theguardian.com/technology/2013/nov/27/hard-drive-bitcoin-landfill-site>.
 
 [^337]: Nathaniel Popper, « *Lost Passwords Lock Millionaires Out of Their Bitcoin Fortunes* », *The New York Times*, 12 janvier 2021 : <https://www.nytimes.com/2021/01/12/technology/bitcoin-passwords-wallets-fortunes.html>.
 
-[^338]: Les adresses de Stefan Thomas sont et . En date du 8 juin 2011, leur solde combiné était de 7 003,21 bitcoins.
+[^338]: Les adresses de Stefan Thomas sont 1AYLzYN7SGu5FQLBTADBzqKm4b6Udt6Bw6 et 17eSZivDJpuJp9TxezTXVxkgLbsr3XZM1i. En date du 8 juin 2011, leur solde combiné était de 7 003,21 bitcoins.
 
 [^339]: Jean-Luc (Bitcoin.fr), *Sortie de la version 1.0 de Liana*, 12 mai 2023 : <https://bitcoin.fr/sortie-de-la-version-1-0-de-liana/>.
 
@@ -5241,7 +5263,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^366]: Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
 
-[^367]: Dans Bitcoin Core, l'algorithme d'ajustement est décrit par la fonction dans le fichier `pow.cpp`. La variation est limitée à un facteur 4 (multiplication comme division) pour éviter les instabilités. L'algorithme *surestime* la puissance de calcul déployée car le temps écoulé est mesuré sur 2 015 intervalles, et non pas 2 016 comme cela devrait se faire.
+[^367]: Dans Bitcoin Core, l'algorithme d'ajustement est décrit par la fonction CalculateNextWorkRequired dans le fichier `pow.cpp`. La variation est limitée à un facteur 4 (multiplication comme division) pour éviter les instabilités. L'algorithme *surestime* la puissance de calcul déployée car le temps écoulé est mesuré sur 2 015 intervalles, et non pas 2 016 comme cela devrait se faire.
 
 [^368]: Satoshi Nakamoto, *Bitcoin v0.1 released*, 08/01/2009 19:27:40 UTC : <https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html>.
 
@@ -5341,9 +5363,9 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^416]: Vitalik Buterin, *A Proof of Stake Design Philosophy*, 30 décembre 2016 : <https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51>.
 
-[^417]: Un seul bloc (le bloc 662 687 d'identifiant ) de l'attaquant a été invalidé, faisant que 172 blocs ont été mis de côté, et que la chaîne non censurée est devenue la chaîne correcte. -- Nikita Zhavoronkov sur Twitter, 01/12/2020 21:59 UTC : <https://twitter.com/nikzh/status/1333893457920876550>.
+[^417]: Un seul bloc (le bloc 662 687 d'identifiant 00000000000000000709b858a6a0c8610e604e77072ef4407763afb0780ce712) de l'attaquant a été invalidé, faisant que 172 blocs ont été mis de côté, et que la chaîne non censurée est devenue la chaîne correcte. -- Nikita Zhavoronkov sur Twitter, 01/12/2020 21:59 UTC : <https://twitter.com/nikzh/status/1333893457920876550>.
 
-[^418]: Le point de contrôle le plus récent est celui du bloc 295 000 miné le 9 avril 2014 (au même moment de l'arrivée de Wladimir van der Laan au poste de mainteneur principal) et ayant pour identifiant . Voir le fichier dans Bitcoin Core.
+[^418]: Le point de contrôle le plus récent est celui du bloc 295 000 miné le 9 avril 2014 (au même moment de l'arrivée de Wladimir van der Laan au poste de mainteneur principal) et ayant pour identifiant 00000000000000004d9b4ef50f0f9d686fd69db2e03af35a100370c64632a983. Voir le fichier chainparams.cpp dans Bitcoin Core.
 
 [^419]: BSV Association sur Twitter, 03/09/2021 21:17 UTC : <https://twitter.com/BitcoinAssn/status/1422668065024663554>.
 
@@ -5491,7 +5513,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^488]: Gavin Andresen, *BIP-16: Pay to Script Hash*, 3 janvier 2012 : <https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki#rationale>.
 
-[^489]: L'instruction `OP_RETURN` servait initialement à retourner la valeur au sommet de la pile, d'où son nom. Cependant, en juillet 2010, la découverte du « *1 RETURN bug* », qui permettait de dépenser toute sortie transactionnelle via le script de déverrouillage , a poussé Satoshi Nakamoto à désactiver cette fonctionnalité en lui faisant renvoyer `FALSE` systématiquement. Voir Satoshi Nakamoto, *reverted makefile.unix wx-config -- version 0.3.6 (git commit)*, 29/07/2010 18:27:12 UTC : <https://sourceforge.net/p/bitcoin/code/119/>.
+[^489]: L'instruction `OP_RETURN` servait initialement à retourner la valeur au sommet de la pile, d'où son nom. Cependant, en juillet 2010, la découverte du « *1 RETURN bug* », qui permettait de dépenser toute sortie transactionnelle via le script de déverrouillage TRUE RETURN, a poussé Satoshi Nakamoto à désactiver cette fonctionnalité en lui faisant renvoyer `FALSE` systématiquement. Voir Satoshi Nakamoto, *reverted makefile.unix wx-config -- version 0.3.6 (git commit)*, 29/07/2010 18:27:12 UTC : <https://sourceforge.net/p/bitcoin/code/119/>.
 
 [^490]: Joseph Poon, *\[bitcoin-dev\] SIGHASH_NOINPUT in Segregated Witness*, 26/02/2016 01:07:46 UTC : <https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-February/012460.html>.
 
@@ -5503,7 +5525,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^494]: Une transaction à 2 entrées et 2 sorties de type P2WPKH mesure 372 octets et pèse 834 unités de poids au maximum. De ce fait, il est possible d'inclure 4 796 transactions dans un bloc, ce qui nous permet de calculer sa taille réelle.
 
-[^495]: Voir le bloc 774 628, d'identifiant dont la taille était de 3 955 272 octets et qui incluait une transaction qui mesurait à elle seule 3 938 383 octets.
+[^495]: Voir le bloc 774 628, d'identifiant 0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d dont la taille était de 3 955 272 octets et qui incluait une transaction qui mesurait à elle seule 3 938 383 octets.
 
 [^496]: Gavin Andresen, *\[bitcoin-dev\] Time to worry about 80-bit collision attacks or not?*, 07/01/2016 19:02:05 UTC : <https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-January/012198.html>.
 
@@ -5555,7 +5577,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^516]: Nick Szabo, *Smart Contracts*, 1994, archive : <https://web.archive.org/web/20011102030833/http://szabo.best.vwh.net:80/smart.contracts.html>.
 
-[^517]: L'adresse multisignatures 3-parmi-5 de Bitfinex est .
+[^517]: L'adresse multisignatures 3-parmi-5 de Bitfinex est bc1qgdjqv0av3q56jvd82tkdjpy7gdp9ut8tlqmgrpmv24sq90ecnvqqjwvw97.
 
 [^518]: « Les acheteurs pourraient être facilement protégés par la mise en œuvre de mécanismes de dépôt fiduciaire routiniers. » -- Satoshi Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 31 octobre 2008.
 
@@ -5563,7 +5585,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^520]: Pour assurer la bonne exécution du contrat (éviter le remplacement de la transaction durant l'attente de confirmation), des clés publiques sont assignées à chacune de ces conditions de sorte qu'une signature est systématiquement demandée au destinataire des fonds.
 
-[^521]: Les adresses des contrats sur LTC et DCR étaient (respectivement) et . L'échange était de 1,337 LTC contre 2,4066 DCR. -- *Decred-compatible cross-chain atomic swapping*, 20 septembre 2017 : <https://github.com/decred/atomicswap/blob/master/README.md#first-mainnet-dcr-ltc-atomic-swap>.
+[^521]: Les adresses des contrats sur LTC et DCR étaient (respectivement) MLp49daA411aoZ1TmGEdyLuTCE9YA6xhpc et DccPF1yt9cV8vhr97fq3umBx7RqV53MYGDY. L'échange était de 1,337 LTC contre 2,4066 DCR. -- *Decred-compatible cross-chain atomic swapping*, 20 septembre 2017 : <https://github.com/decred/atomicswap/blob/master/README.md#first-mainnet-dcr-ltc-atomic-swap>.
 
 [^522]: Joseph Poon et Thaddeus Dryja, *The Bitcoin Lightning Network DRAFT Version 0.5*, 28 février 2015 : <https://lightning.network/lightning-network-paper-DRAFT-0.5.pdf>.
 
@@ -5571,7 +5593,7 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^524]: Christian Decker, Rusty Russell, Olaoluwa Osuntokun, *eltoo: A Simple Layer2 Protocol for Bitcoin*, 30 avril 2018 : <https://blockstream.com/eltoo.pdf>.
 
-[^525]: La transaction , confirmée le 13 décembre 2012, contient par exemple la chaîne de caractères en référence au jeu vidéo Portal.
+[^525]: La transaction c0b2cf75b47d1e7f48cdb4287109ff1dd5bcf146d5f77a9e8784c0c9c0ef02ad, confirmée le 13 décembre 2012, contient par exemple la chaîne de caractères TheCakeIsALie\\n en référence au jeu vidéo Portal.
 
 [^526]: Bitcoin Core, *Bitcoin Core version 0.9.0 released*, 19 mars 2014 : <https://bitcoin.org/en/release/v0.9.0#opreturn-and-data-in-the-block-chain>.
 
@@ -5585,9 +5607,9 @@ Cet ouvrage est lié à 21 jetons non fongibles (NFT) émis grâce au protocole 
 
 [^531]: J.R. Willett, *The Second Bitcoin Whitepaper*, 6 janvier 2012, archive : <https://cryptochainuni.com/wp-content/uploads/Mastercoin-2nd-Bitcoin-Whitepaper.pdf>.
 
-[^532]: Tous les bitcoins envoyés à l'adresse étaient transformés en MSC à raison de 100 MSC au début, taux dégressif au fil des semaines.
+[^532]: Tous les bitcoins envoyés à l'adresse 1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P étaient transformés en MSC à raison de 100 MSC au début, taux dégressif au fil des semaines.
 
-[^533]: Tous les bitcoins envoyés à l'adresse entre le 2 janvier et le 3 février 2014 étaient convertis en XCP à un taux qui variait entre 1 000 et 1 500 XCP par BTC
+[^533]: Tous les bitcoins envoyés à l'adresse 1CounterpartyXXXXXXXXXXXXXXXUWLpVr entre le 2 janvier et le 3 février 2014 étaient convertis en XCP à un taux qui variait entre 1 000 et 1 500 XCP par BTC
 
 [^534]: Hal Finney, *Crypto trading cards.*, 17/01/1993 18:48:02 UTC : <https://cypherpunks.venona.com/date/1993/01/msg00152.html>.
 
