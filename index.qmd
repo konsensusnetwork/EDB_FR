@@ -4,7 +4,7 @@ about:
   image: cover.png
   links:
     - icon: book
-      href: /chapters/preface-de-jacques-favier.html
+      href: /chapters/les-debuts-de-bitcoin.html
       text: "Livre"
       aria-label: "Livre"
     - icon: shop
@@ -16,6 +16,9 @@ about:
       text: "Amazon"
       aria-label: "Amazon"              
 navbar: true
+lang: fr
+language:
+  title-block-author-single: "Auteur"
 sidebar: false
 page-layout: full
 format:
@@ -40,10 +43,17 @@ listing:
 ::: {.content-hidden when-format="pdf"}
 ## À propos de ce livre {.unnumbered}
 
+Bitcoin est un modèle novateur de monnaie numérique décentralisée, dont l'existence vient bousculer l'ordre établi en proposant une alternative audacieuse au système bancaire classique.
+
+Depuis son énigmatique conception par Satoshi Nakamoto en 2008, Bitcoin a connu une croissance fulgurante qui a marqué les esprits. Il a déchaîné toutes les passions, de l'enthousiasme démesuré de ses promoteurs au rejet épidermique de ses détracteurs.
+
+Plongez dans cet ouvrage captivant où l'auteur propose un point de vue réaliste et pragmatique sur Bitcoin. Vous découvrirez sa fantastique histoire, ainsi que les principes économiques, idéologiques et techniques qui ont assuré sa survie dans un environnement hostile.
+
+Vous en ressortirez avec une compréhension de Bitcoin susceptible de transformer votre vision du monde.
+
+Préface de Jacques Favier
 
 ## Avis {.unnumbered}
-
-
 
 ## Contenu
 ::: {#sample-listings}

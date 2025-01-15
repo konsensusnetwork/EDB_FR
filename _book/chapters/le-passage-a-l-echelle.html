@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -349,9 +352,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Les chaînes latérales, ou <em>sidechains</em> en anglais, sont des chaînes de blocs secondaires fonctionnant parallèlement à une autre chaîne de blocs dite «&nbsp;principale&nbsp;». Elles ont été formalisées en octobre 2014 par les développeurs de Blockstream<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>. Cette solution technique apporte une capacité de traitement supplémentaire et une extensibilité supérieure, au prix d’une sécurité locale sensiblement amoindrie. En 2014, Blockstream envisageait de construire ainsi tout un écosystème de chaînes latérales permettant d’accomplir des tâches impossibles sur la chaîne principale comme l’émission d’actifs natifs, le déploiement de contrats autonomes avancés ou la gestion de noms de domaine.</p>
 <div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, Pieter Wuille, <em>Enabling Blockchain Innovations with Pegged Sidechains</em>, 22 octobre 2014&nbsp;: <a href="https://blockstream.com/sidechains.pdf" class="uri">https://blockstream.com/sidechains.pdf</a>.</p></div></div><p>Une chaîne latérale est une chaîne de blocs parallèle à une autre qui permet de transférer des fonds d’une chaîne à l’autre sans mettre en jeu l’intégrité des fonds déplacés. Il s’agit généralement de procéder à un ancrage bilatéral (<em>two-way peg</em>) permettant aux bitcoins d’être transférés d’une chaîne à l’autre sans perte de valeur, comme représenté sur la figure&nbsp;<a href="#fig:sidechain-two-way-peg" data-reference-type="ref" data-reference="fig:sidechain-two-way-peg">14.1</a>. Dans un sens, les bitcoins sont verrouillés sur la chaîne principale et leur équivalent est créé sur la chaîne latérale&nbsp;; dans l’autre, les bitcoins sont détruits sur la chaîne latérale et leur équivalent est déverrouillé sur la chaîne principale.</p>
 <p>Deux aspects différencient le modèle de sécurité d’une chaîne latérale de celui de la chaîne principale&nbsp;: le maintien de l’ancrage bilatéral et le mécanisme de consensus. Le premier consiste à décider qui peut déverrouiller les fonds lors d’un transfert de la chaîne latérale vers la chaîne principale. En effet, puisque la chaîne latérale est voulue comme un complément (et pas comme une extension), les nœuds de la chaîne principale n’ont pas connaissance de cette chaîne latérale. De ce fait, le retrait est soumis à une certaine confiance, placée usuellement dans une fédération de participants qui se méfient les uns des autres.</p>
-<div id="fig:sidechain-two-way-peg" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sidechain-two-way-peg.png" class="img-fluid figure-img"></p>
+<p><a href="img/sidechain-two-way-peg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Chaîne latérale&nbsp;: dépôt, transfert et retrait."><img src="img/sidechain-two-way-peg.png" class="img-fluid figure-img" alt="Chaîne latérale&nbsp;: dépôt, transfert et retrait."></a></p>
 <figcaption>Chaîne latérale&nbsp;: dépôt, transfert et retrait.</figcaption>
 </figure>
 </div>
@@ -368,9 +371,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Le réseau Lightning, ou <em>Lightning Network</em> en anglais, est un concept de réseau de canaux de paiements bidirectionnels. Celui-ci a été présenté pour la première fois le 23 février 2015 par Joseph Poon et Thaddeus Dryja lors d’un séminaire de développeurs Bitcoin à San Francisco<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>. À l’époque, des propositions concurrentes basées sur des idées similaires existaient comme Amiko Pay (conceptualisé par Corné Plooy), Impulse (développé par Jeff Garzik pour Bitpay) et Ström (imaginé par la start-up Strawpay), mais Lightning est rapidement devenu dominant. En 2023, il s’agissait de la solution favorisée par les utilisateurs de BTC pour effectuer davantage de transferts, si bien que le sigle LNP/BP a émergé pour désigner l’ensemble des protocoles intervenant dans le passage en surcouche (à l’instar de TCP/IP vis-à-vis d’Internet).</p>
 <div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;Taariq Lewis, <em>SF Bitcoin Devs Seminar: Scaling Bitcoin to Billions of Transactions Per Day</em>, 5 mars 2015&nbsp;: <a href="https://www.youtube.com/watch?v=8zVzw912wPo" class="uri">https://www.youtube.com/watch?v=8zVzw912wPo</a>.</p></div></div><p>L’infrastructure du réseau Lighning repose sur des canaux de paiement qui sont ouverts et fermés entre des participants. Un canal de paiement est, comme décrit dans le chapitre&nbsp;<a href="les-contrats-autonomes.html" data-reference-type="ref" data-reference="ch:contrats">13</a>, un ensemble de contrats autonomes qui permet à deux personnes d’effectuer des paiements répétés de manière sûre et instantanée à partir de liquidités préalablement bloquées. L’utilisation d’un canal est par conséquent limitée par sa capacité, c’est-à-dire la somme des deux soldes des acteurs concernés.</p>
 <p>Le principe du réseau Lightning est de router les paiements au travers de ces canaux par l’intermédiaire de HTLC, qui sont des contrats d’engagement plus complexes permettant de mettre à jour les canaux concernés<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>. Un paiement transite sur le réseau moyennant des frais minimes qui vont aux nœuds le relayant. Le réseau Lightning est donc semblable à un boulier, dont les tiges sont des canaux et dont les boules sont les satoshis qui transitent d’un côté ou de l’autre des canaux, comme on peut le voir sur la figure&nbsp;<a href="#fig:lightning-network-abacus" data-reference-type="ref" data-reference="fig:lightning-network-abacus">14.2</a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;En pratique, ces HTLC sont souvent aussi utilisés pour mettre à jour les canaux directement, afin de simplifier la mise en œuvre et d’améliorer la confidentialité. – Voir Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, «&nbsp;Routing on a Network of Payment Channels&nbsp;», in <em>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments</em>, O’Reilly Media, 2022, pp.&nbsp;185–207.</p></div></div><div id="fig:lightning-network-abacus" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;En pratique, ces HTLC sont souvent aussi utilisés pour mettre à jour les canaux directement, afin de simplifier la mise en œuvre et d’améliorer la confidentialité. – Voir Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, «&nbsp;Routing on a Network of Payment Channels&nbsp;», in <em>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments</em>, O’Reilly Media, 2022, pp.&nbsp;185–207.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/lightning-network-abacus.png" class="img-fluid figure-img"></p>
+<p><a href="img/lightning-network-abacus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Paiement de 3&nbsp;mBTC sur le réseau Lightning."><img src="img/lightning-network-abacus.png" class="img-fluid figure-img" alt="Paiement de 3&nbsp;mBTC sur le réseau Lightning."></a></p>
 <figcaption>Paiement de 3&nbsp;mBTC sur le réseau Lightning.</figcaption>
 </figure>
 </div>
@@ -863,7 +866,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -899,6 +902,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

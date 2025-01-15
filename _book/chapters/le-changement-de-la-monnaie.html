@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -368,7 +371,7 @@ window.Quarto = {
 <div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;Eric Lombrozo, <em>BIP-123: BIP Classification</em>, 26 août 2015&nbsp;: <a href="https://github.com/bitcoin/bips/blob/master/bip-0123.mediawiki" class="uri">https://github.com/bitcoin/bips/blob/master/bip-0123.mediawiki</a>.</p></div></div><p>Avant d’être adopté, un BIP doit passer par de nombreuses étapes. D’abord, il est assigné à un ou plusieurs auteurs qui se chargent d’en rédiger une première version respectant le format défini et prenant en compte l’état de l’art correspondant. Puis, le BIP est partagé dans la communauté des développeurs de Bitcoin, généralement par l’intermédiaire de la liste de diffusion de développement (bitcoin-dev). Les discussions ont lieu sur cette mailing list. Ensuite, le BIP est officiellement proposé au système sous la forme d’une demande de modification du code (<em>pull request</em>) sur le dépôt GitHub, qui doit être approuvée par l’éditeur désigné par Bitcoin Core (Luke-Jr depuis 2016). Enfin, un numéro lui est assigné et il est intégré au dépôt sous la forme d’une ébauche. Il peut par la suite changer de statut au cours du temps, selon l’adoption de la communauté, l’objectif étant qu’il devienne définitif ou actif.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bip-process-fr.png" class="img-fluid figure-img"></p>
+<p><a href="img/bip-process-fr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Schéma de la procédure d’adoption d’un BIP, inspiré du BIP-1."><img src="img/bip-process-fr.png" class="img-fluid figure-img" alt="Schéma de la procédure d’adoption d’un BIP, inspiré du BIP-1."></a></p>
 <figcaption>Schéma de la procédure d’adoption d’un BIP, inspiré du BIP-1.</figcaption>
 </figure>
 </div>
@@ -403,17 +406,17 @@ window.Quarto = {
 <p>Enfin, le terme fork peut, par métonymie, désigner une modification des règles de consensus, qui est toujours susceptible de provoquer une scission de chaîne et une séparation du réseau. Une restriction des règles de consensus est appelée un soft fork, ou «&nbsp;embranchement convergent&nbsp;», en vertu de sa capacité à résulter en une branche unique. Toute autre modification des règles de consensus, qu’il s’agisse d’une extension ou d’une modification strictement incompatible, est appelée un hard fork, en référence à sa propension à créer une scission de chaîne. C’est de ces deux modifications dont nous voulons parler ici<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Notez que les concepts sont liés. Ainsi, un fork logiciel (copie et modification) peut implémenter un fork des règles de consensus (hard fork ou soft fork) qui finira par créer un fork persistant de la chaîne (scission).</p></div><div id="fn16"><p><sup>16</sup>&nbsp;David François (davout), <em>Re: Small protocol changes for flexibility</em>, 07/12/2010 15:08:02 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=894.msg27757#msg27757" class="uri">https://bitcointalk.org/index.php?topic=894.msg27757#msg27757</a>.</p></div></div><p>Le hard fork est le concept le plus ancien si on le compare au soft fork. Il était auparavant qualifié de «&nbsp;changement incompatible<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>&nbsp;». Le hard fork est une modification non restrictive des règles de consensus. Il provoque un conflit sur le réseau entre les nœuds qui appliquent les anciennes règles et les nœuds qui appliquent les nouvelles.</p>
 <p>Un hard fork peut être extensif, c’est-à-dire élargir les règles de consensus sur les blocs et les transactions. Les anciens peuvent ainsi produire des blocs valides sur la nouvelle chaîne, mais pas l’inverse. L’exemple typique de ce genre de hard fork est l’augmentation de la taille limite des blocs, qui consiste à accepter des blocs ayant une taille ou un poids plus grand, comme 2&nbsp;Mo au lieu de 1&nbsp;Mo ou 8&nbsp;MWU à la place de 4&nbsp;MWU. Ce hard fork extensif est illustré sur la figure&nbsp;<a href="#fig:expanding-hard-fork" data-reference-type="ref" data-reference="fig:expanding-hard-fork">10.1</a>.</p>
-<div id="fig:expanding-hard-fork" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/expanding-hard-fork-induced-forks.png" class="img-fluid figure-img"></p>
+<p><a href="img/expanding-hard-fork-induced-forks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Schéma d’un hard fork extensif&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, les deux chaînes persistent&nbsp;; dans le cas contraire, seule la deuxième survit."><img src="img/expanding-hard-fork-induced-forks.png" class="img-fluid figure-img" alt="Schéma d’un hard fork extensif&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, les deux chaînes persistent&nbsp;; dans le cas contraire, seule la deuxième survit."></a></p>
 <figcaption>Schéma d’un hard fork extensif&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, les deux chaînes persistent&nbsp;; dans le cas contraire, seule la deuxième survit.</figcaption>
 </figure>
 </div>
 <p>Dans le cas où le hard fork extensif n’est pas soutenu par une majorité de la puissance de calcul du réseau, celui-ci risque de ne pas créer une branche persistante. Par exemple, les blocs de la branche imposant une limite de taille plus petite sont entièrement compatibles avec les nouvelles règles, de sorte que, si elle est plus longue, c’est elle qui sera sélectionnée comme la branche correcte. C’est pour éviter cette situation problématique que les hard forks sont généralement bilatéraux.</p>
 <p>Le hard fork bilatéral est un hard fork qui crée une incompatibilité totale entre les nouvelles règles et les anciennes. Il peut s’agir d’une règle ajoutée comme l’exigence que le premier bloc de l’embranchement inclue un changement incompatible. Dans notre cas de l’augmentation de la taille limite des blocs, il s’agirait d’imposer au premier bloc d’être strictement plus gros que la taille limite précédente, comme on le voit sur la figure&nbsp;<a href="#fig:expanding-hard-fork-failure" data-reference-type="ref" data-reference="fig:expanding-hard-fork-failure">10.2</a>. Cette règle supplémentaire est appelée protection contre la destruction par recoordination (ou <em>wipeout protection</em> en anglais).</p>
-<div id="fig:expanding-hard-fork-failure" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bilateral-hard-fork-induced-fork.png" class="img-fluid figure-img"></p>
+<p><a href="img/bilateral-hard-fork-induced-fork.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Schéma d’un hard fork bilatéral&nbsp;: les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent."><img src="img/bilateral-hard-fork-induced-fork.png" class="img-fluid figure-img" alt="Schéma d’un hard fork bilatéral&nbsp;: les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent."></a></p>
 <figcaption>Schéma d’un hard fork bilatéral&nbsp;: les nouvelles règles sont strictement incompatibles avec les anciennes règles, de sorte que les deux chaînes persistent.</figcaption>
 </figure>
 </div>
@@ -425,9 +428,9 @@ window.Quarto = {
 <p>Le hard fork contentieux est un hard fork visant délibérément à créer une nouvelle chaîne. Il est issu d’une dissension dans la communauté, qui est si forte qu’elle pousse à la sécession. Il est généralement bilatéral.</p>
 <p>Le premier exemple de hard fork contentieux majeur est celui qui a eu lieu sur Ethereum en juillet 2016, dans le contexte du piratage de TheDAO. Ce hard fork consistait à reprendre les fonds du pirate par un «&nbsp;changement d’état irrégulier&nbsp;». Celui-ci était rendu bilatéral par la règle imposant aux 10 premiers blocs d’inclure la chaîne de caractères dao-hard-fork. Puisque la majorité économique se trouvait du côté de l’annulation, la chaîne altérée a gardé le nom d’Ethereum et le sigle boursier ETH, tandis que l’autre chaîne a pris le nom d’Ethereum Classic et le sigle boursier ETC.</p>
 <p>Le second exemple de hard fork contentieux est celui qui a mené à la création de Bitcoin Cash en août 2017 suite au débat sur la scalabilité et à la guerre des blocs. Ce hard fork n’intégrait pas SegWit, augmentait la taille limite des blocs à 8&nbsp;Mo et améliorait l’algorithme de signature. Il était rendu bilatéral par une règle qui imposait au bloc suivant l’activation d’avoir une taille strictement supérieure à 1&nbsp;Mo. Il offrait aussi <em>de facto</em> une protection contre la rediffusion des transactions. Ce changement ayant dû se faire sans l’accord de la majorité économique, la chaîne qui ne modifiait pas les règles a pu conserver le nom de Bitcoin et le sigle boursier BTC, tandis que la nouvelle chaîne a dû adopter un nouveau nom, Bitcoin Cash, et un nouveau sigle, BCH.</p>
-<div id="fig:hard-forks-eth-bch" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/hard-forks-eth-etc-bch-btc.png" class="img-fluid figure-img"></p>
+<p><a href="img/hard-forks-eth-etc-bch-btc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Exemples de hard forks bilatéraux&nbsp;: ETH / ETC et BCH / BTC."><img src="img/hard-forks-eth-etc-bch-btc.png" class="img-fluid figure-img" alt="Exemples de hard forks bilatéraux&nbsp;: ETH / ETC et BCH / BTC."></a></p>
 <figcaption>Exemples de hard forks bilatéraux&nbsp;: ETH / ETC et BCH / BTC.</figcaption>
 </figure>
 </div>
@@ -437,9 +440,9 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="les-soft-forks">Les soft forks</h2>
 <p>Passons maintenant au soft fork, qui est un procédé de mise à niveau souvent mal compris. Le soft fork est une restriction des règles de consensus. Il consiste ainsi par essence à rendre l’ensemble des blocs et des transactions valides plus petit, en ajoutant une règle ou en modifiant une règle existante de façon plus restrictive. L’exemple typique de ce genre de fork est la diminution de la taille limite des blocs. L’ajout de la limite explicite des 1&nbsp;Mo en octobre 2010 était de ce fait un soft fork.</p>
 <p>Le soft fork peut être appliqué en conservant une seule et même chaîne. S’il est imposé par la majorité de la puissance de calcul du réseau, il n’y a aucun risque de scission. En effet, l’ensemble des blocs créés par les mineurs qui appliquent les nouvelles règles est entièrement compatible avec les anciennes règles, de sorte que la branche appliquant les nouvelles règles sera considérée comme la branche correcte par tous les nœuds si elle est majoritaire. Si l’application du soft fork est en revanche minoritaire, alors ce dernier résulte en deux chaînes persistantes distinctes. Les deux cas de figure sont illustrés sur la figure&nbsp;<a href="#fig:soft-fork" data-reference-type="ref" data-reference="fig:soft-fork">10.4</a>.</p>
-<div id="fig:soft-fork" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/soft-fork-induced-forks.png" class="img-fluid figure-img"></p>
+<p><a href="img/soft-fork-induced-forks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Schéma d’un soft fork&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, seule la première survit&nbsp;; dans le cas contraire, les deux chaînes persistent."><img src="img/soft-fork-induced-forks.png" class="img-fluid figure-img" alt="Schéma d’un soft fork&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, seule la première survit&nbsp;; dans le cas contraire, les deux chaînes persistent."></a></p>
 <figcaption>Schéma d’un soft fork&nbsp;: si la chaîne suivant la nouvelle règle est plus longue que celle suivant l’ancienne, seule la première survit&nbsp;; dans le cas contraire, les deux chaînes persistent.</figcaption>
 </figure>
 </div>
@@ -471,9 +474,9 @@ window.Quarto = {
 <p>Le fonctionnement ouvert et libre de l’évolution de Bitcoin fait que le protocole peut être modifié à volonté. Bitcoin évolue de manière organique, lentement mais sûrement&nbsp;: il n’est pas un système figé, dont les règles seraient dictées par une autorité centrale. Et, par là, il s’améliore avec le temps.</p>
 <p>Cette ouverture implique aussi que la mise en œuvre de Bitcoin est nécessairement plurielle. Bitcoin n’est pas un système unique, mais un modèle ouvert qui est appliqué de façon plus ou moins fidèle par plusieurs protocoles. L’ensemble des mises en œuvre de Bitcoin constitue un arbre dont les branches proviennent d’un même tronc et des mêmes racines.</p>
 <p>Toutefois, toutes les branches ne sont pas équivalentes&nbsp;: toutes les mises en œuvre n’ont pas la même importance. L’une d’entre elles (BTC) est aujourd’hui supermajoritaire, de sorte que nous l’appelons naturellement Bitcoin, et sa modification est (heureusement) difficile. Dans le prochain chapitre, nous examinerons le mécanisme sous-jacent qui fait que Bitcoin est ce qu’il est aujourd’hui et comment l’évolution du protocole est gouvernée.</p>
-<div id="fig:bitcoin-forks-tree" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bitcoin-forks-tree.png" class="img-fluid figure-img"></p>
+<p><a href="img/bitcoin-forks-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin."><img src="img/bitcoin-forks-tree.png" class="img-fluid figure-img" alt="Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin."></a></p>
 <figcaption>Variations conceptuelles, modifications logicielles et forks de consensus de Bitcoin.</figcaption>
 </figure>
 </div>
@@ -933,7 +936,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -969,6 +972,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

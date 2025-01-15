@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -356,32 +359,32 @@ window.Quarto = {
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>Dans Bitcoin, les pièces existantes sont donc les sorties transactionnelles non dépensées, nommées usuellement UTXO par abréviation de l’anglais <em>Unspent Transaction Outputs</em>, à savoir les sorties transactionnelles qui n’ont pas été utilisées comme entrée dans une autre transaction. L’ensemble de ces pièces, l’<em>UTXO set</em>, constitue le registre de propriété. C’est l’état du système, qui peut être récupéré à partir de son historique, la chaîne de blocs.</p>
 <p>Chaque pièce est constituée d’un montant en unités (satoshis) et d’un script de verrouillage. Il peut ainsi exister des pièces d’un milliard de satoshis (10 bitcoins) tout comme on peut avoir des pièces de 546&nbsp;satoshis (0,00000546 bitcoin).</p>
 <p>Le script de verrouillage d’une pièce contient le plus souvent une clé publique ou une empreinte déterminée, de sorte que la pièce peut être vue comme étant détenue par l’adresse correspondante. De ce fait, deux pièces partageant le même script de verrouillage sont détenues par la même adresse. Un compte dans Bitcoin correspond à l’ensemble des adresses contrôlées par un utilisateur. Le solde est récupéré en balayant l’ensemble des UTXO de façon à retrouver les pièces détenues par ces adresses.</p>
-<div id="fig:coins-utxos" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/coins-utxos-account.png" class="img-fluid figure-img"></p>
+<p><a href="img/coins-utxos-account.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Exemples de pièces détenues par un même compte."><img src="img/coins-utxos-account.png" class="img-fluid figure-img" alt="Exemples de pièces détenues par un même compte."></a></p>
 <figcaption>Exemples de pièces détenues par un même compte.</figcaption>
 </figure>
 </div>
 <p>Ce modèle de représentation par des pièces fait qu’on peut voir le mécanisme de transaction comme une fonderie de pièces de monnaie. Chaque transaction consiste à fondre ensemble une ou plusieurs pièces de bitcoin en entrée et à frapper une ou plusieurs pièces en sortie. C’est en ceci que le serveur d’horodatage distribué de Bitcoin vient remplacer la monnaierie numérique centralisée permettant le remplacement systématique des pièces, qui est présente dans eCash et RPOW par exemple.</p>
 <p>La construction d’une transaction implique de rassembler des pièces de valeur suffisante en entrée pour les fondre et en frapper de nouvelles. En général, deux pièces sont créées&nbsp;: la première est créée sur l’adresse fournie par le destinataire pour effectuer le paiement (sortie principale) et la seconde est créée sur l’une des adresses de l’expéditeur afin qu’il se «&nbsp;rende la monnaie&nbsp;» (sortie complémentaire). La différence entre le montant en entrée et le montant en sortie est prise en compte dans la récompense du mineur en tant que frais de transaction.</p>
 <p>Considérons quelques exemples en ignorant ces frais et supposons qu’Alice veuille procéder à un paiement. Si Alice possède une pièce de 12 mBTC (0,012 BTC) et veut donner 7 mBTC à Bob, alors elle doit construire et signer une transaction ayant pour entrée cette pièce de 12 mBTC et pour sorties une pièce de 7 mBTC vers l’adresse de Bob et une pièce restante de 5 mBTC vers sa propre adresse. Cette transaction est représentée par la figure&nbsp;<a href="#fig:transaction-1i-2o" data-reference-type="ref" data-reference="fig:transaction-1i-2o">12.2</a>.</p>
-<div id="fig:transaction-1i-2o" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/transaction-1i-2o.png" class="img-fluid figure-img"></p>
+<p><a href="img/transaction-1i-2o.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Schéma d’une transaction à 1 entrée et 2 sorties."><img src="img/transaction-1i-2o.png" class="img-fluid figure-img" alt="Schéma d’une transaction à 1 entrée et 2 sorties."></a></p>
 <figcaption>Schéma d’une transaction à 1 entrée et 2 sorties.</figcaption>
 </figure>
 </div>
 <p>Si Alice ne possède pas une pièce ayant une valeur faciale supérieure à 7 mBTC, alors elle doit regrouper des pièces pour réunir un montant suffisant en entrée, par exemple une pièce de 6 mBTC et une pièce de 2 mBTC. Comme précédemment, elle doit créer une sortie complémentaire vers elle-même dans le but de se rendre la monnaie. Dans ce cas, illustré sur la figure&nbsp;<a href="#fig:transaction-2i-2o" data-reference-type="ref" data-reference="fig:transaction-2i-2o">12.3</a>, on peut deviner en observant la transaction que la pièce de 7 mBTC est le résultat du paiement, car il serait économiquement irrationnel de fusionner plusieurs pièces pour envoyer 1 mBTC.</p>
-<div id="fig:transaction-2i-2o" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/transaction-2i-2o.png" class="img-fluid figure-img"></p>
+<p><a href="img/transaction-2i-2o.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Schéma d’une transaction à 2 entrées et 2 sorties."><img src="img/transaction-2i-2o.png" class="img-fluid figure-img" alt="Schéma d’une transaction à 2 entrées et 2 sorties."></a></p>
 <figcaption>Schéma d’une transaction à 2 entrées et 2 sorties.</figcaption>
 </figure>
 </div>
 <p>Si Alice désire transférer l’intégralité des fonds vers un autre compte, alors elle rassemble l’ensemble de ses pièces (6 mBTC, 4 mBTC, 2 mBTC) pour les envoyer vers une adresse unique, comme montré sur la figure&nbsp;<a href="#fig:transaction-3i-1o" data-reference-type="ref" data-reference="fig:transaction-3i-1o">12.4</a>. C’est ce qu’on appelle une consolidation de portefeuille, qui peut être identifiée par un observateur extérieur en raison de l’unicité de la sortie.</p>
-<div id="fig:transaction-3i-1o" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/transaction-3i-1o.png" class="img-fluid figure-img"></p>
+<p><a href="img/transaction-3i-1o.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Schéma d’une transaction à 3 entrées et 1 sortie."><img src="img/transaction-3i-1o.png" class="img-fluid figure-img" alt="Schéma d’une transaction à 3 entrées et 1 sortie."></a></p>
 <figcaption>Schéma d’une transaction à 3 entrées et 1 sortie.</figcaption>
 </figure>
 </div>
@@ -404,9 +407,9 @@ window.Quarto = {
 <p>Toute personne disposant de la réponse peut dépenser la pièce, ce qui on en convient n’est pas très sécurisé. La dépense requiert ici de fournir le script de déverrouillage composé uniquement de la solution de l’équation, à savoir 21&nbsp;:</p>
 <pre data-fontsize="\footnotesize"><code>&lt;21&gt;</code></pre>
 <p>L’exécution successive de ces deux scripts (voir figure&nbsp;<a href="#fig:bitcoin-stack" data-reference-type="ref" data-reference="fig:bitcoin-stack">12.5</a>) a lieu comme suit&nbsp;: 1)&nbsp;la valeur 21 est placée sur la pile&nbsp;; 2)&nbsp;la valeur 17 est placée au-dessus&nbsp;; 3)&nbsp;l’opérateur <code>OP_ADD</code> additionne les deux valeurs en haut de la pile et les remplace par leur somme, ici 38&nbsp;; 4)&nbsp;la valeur 38 est placée au sommet de la pile&nbsp;; 5)&nbsp;l’opérateur <code>OP_EQUAL</code> compare les deux valeurs en haut de la pile et les remplace par le booléen d’égalité, ici <code>TRUE</code>. L’exécution du script est donc un succès.</p>
-<div id="fig:bitcoin-stack" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bitcoin-stack-example.png" class="img-fluid figure-img"></p>
+<p><a href="img/bitcoin-stack-example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Exécution d’un script d’addition sur la pile de données."><img src="img/bitcoin-stack-example.png" class="img-fluid figure-img" alt="Exécution d’un script d’addition sur la pile de données."></a></p>
 <figcaption>Exécution d’un script d’addition sur la pile de données.</figcaption>
 </figure>
 </div>
@@ -484,9 +487,9 @@ window.Quarto = {
 <li><p>SIGHASH_ANYONECANPAY (<code>0x80</code>) qui permet de ne signer qu’une seule entrée.</p></li>
 </ul>
 <p>Les trois signaux concernant les sorties peuvent être associés à SIGHASH_ANYONECANPAY, ce qui permet de former finalement six types de signatures différents, représentés sur la figure&nbsp;<a href="#fig:signature-hash-types" data-reference-type="ref" data-reference="fig:signature-hash-types">12.6</a>. Le type de signature le plus fréquent est évidemment SIGHASH_ALL même si certains autres types peuvent parfois trouver une utilité. C’est notamment le cas de SIGHASH_ALL | SIGHASH_ANYONECANPAY qui permet de construire des transactions de type <em>anyone-can-pay</em>, dont les sorties sont déterminées, mais où chacun peut signer sa propre entrée sans connaître les autres.</p>
-<div id="fig:signature-hash-types" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/signature-hash-types.png" class="img-fluid figure-img"></p>
+<p><a href="img/signature-hash-types.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Les différents types de signatures dans Bitcoin."><img src="img/signature-hash-types.png" class="img-fluid figure-img" alt="Les différents types de signatures dans Bitcoin."></a></p>
 <figcaption>Les différents types de signatures dans Bitcoin.</figcaption>
 </figure>
 </div>
@@ -560,7 +563,7 @@ récupération&gt;</code></pre>
 <p>Cependant, cette transparence est toute relative, car les données de la chaîne ne révèlent pas l’identité des personnes&nbsp;: le système est pseudonyme, dans le sens où il recense les mouvements entre les adresses, et pas entre les personnes. Le modèle de confidentialité de Bitcoin, décrit par Satoshi Nakamoto dans le livre blanc en 2008, consiste ainsi à garder secret le lien qui existe entre l’identité d’une personne et ses adresses<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;«&nbsp;Le modèle bancaire traditionnel atteint un certain niveau de confidentialité en limitant l’accès aux informations aux parties concernées et au tiers de confiance. La nécessité d’annoncer publiquement toutes les transactions exclut cette méthode, mais la confidentialité peut toujours être préservée en interrompant le flux d’informations à un autre endroit&nbsp;: en gardant les clés publiques anonymes. Le public peut voir que quelqu’un envoie un montant à quelqu’un d’autre, mais ne dispose pas d’informations reliant la transaction à qui que ce soit.&nbsp;» – Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/white-paper-privacy-model-fr.png" class="img-fluid figure-img"></p>
+<p><a href="img/white-paper-privacy-model-fr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Modèle de confidentialité présenté dans le livre blanc de Bitcoin."><img src="img/white-paper-privacy-model-fr.png" class="img-fluid figure-img" alt="Modèle de confidentialité présenté dans le livre blanc de Bitcoin."></a></p>
 <figcaption>Modèle de confidentialité présenté dans le livre blanc de Bitcoin.</figcaption>
 </figure>
 </div>
@@ -569,9 +572,9 @@ récupération&gt;</code></pre>
 <div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;«&nbsp;Comme pare-feu supplémentaire, une nouvelle paire de clés devrait être utilisée pour chaque transaction afin de les empêcher d’être liées à un propriétaire commun. Certains liens sont toujours inévitables avec les transactions à entrées multiples, qui révèlent nécessairement que leurs entrées appartiennent au même propriétaire. Le risque est que si le propriétaire d’une clé est révélé, la liaison pourrait révéler d’autres transactions qui lui appartiennent.&nbsp;» – Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>Au-delà de la prévention, il existe également des méthodes pour corriger ses erreurs. La plus connue d’entre elles est le mélange de pièces, qui consiste à combiner ses UTXO avec les UTXO d’autres utilisateurs afin de briser les liens déterministes qui existent entre les pièces et l’identité de leurs propriétaires.</p>
 <p>Le mélange de bitcoins était originellement pris en charge par des services de mixage centralisés, appelés <em>mixers</em> ou <em>tumblers</em>, qui recevaient les bitcoins des utilisateurs, les fusionnaient et leur renvoyaient des bitcoins communs au bout d’un certain temps, préférablement sous la forme de plusieurs transactions. Le premier mélangeur de ce type était BitLaundry, une plateforme qui a été lancée en septembre 2010 par Peter Vessenes. Ces services permettaient d’obscurcir la provenance des bitcoins pour un observateur extérieur, mais pas pour leurs gestionnaires, qui pouvaient aussi s’emparer des bitcoins au passage, ce qui constituait un risque double.</p>
 <p>Une technique pour procéder à ce type de mélange sans devoir passer par un intermédiaire a été développée par la suite&nbsp;: c’était CoinJoin, dont la description formelle a été faite en août 2013 par Gregory Maxwell<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>. Cette méthode consiste à impliquer les pièces dans une transaction jointe collaborative qui brise la correspondance entre les entrées et une partie des sorties. La transaction classique que l’on se représente est celle de plusieurs utilisateurs qui signent chacun une entrée, dont le même nombre de sorties possèdent un montant égal, et dont le reste des sorties forment les sorties complémentaires. Dans ce cas, les sorties complémentaires sont toujours liées aux entrées, contrairement aux sorties principales qui sont indiscernables les unes des autres.</p>
-<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;Gregory Maxwell, <em>CoinJoin: Bitcoin privacy for the real world</em>, 22/08/2013 02:32:31 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902" class="uri">https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902</a>.</p></div></div><div id="fig:coinjoin-transaction" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;Gregory Maxwell, <em>CoinJoin: Bitcoin privacy for the real world</em>, 22/08/2013 02:32:31 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902" class="uri">https://bitcointalk.org/index.php?topic=279249.msg2983902#msg2983902</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/coinjoin-transaction-5i-10o.png" class="img-fluid figure-img"></p>
+<p><a href="img/coinjoin-transaction-5i-10o.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Exemple d’une transaction CoinJoin à 5 utilisateurs."><img src="img/coinjoin-transaction-5i-10o.png" class="img-fluid figure-img" alt="Exemple d’une transaction CoinJoin à 5 utilisateurs."></a></p>
 <figcaption>Exemple d’une transaction CoinJoin à 5 utilisateurs.</figcaption>
 </figure>
 </div>
@@ -579,9 +582,9 @@ récupération&gt;</code></pre>
 <div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;Loïc Morel, <em>Comprendre et utiliser le CoinJoin sur Bitcoin</em>, 19 juillet 2022&nbsp;: <a href="https://www.pandul.fr/post/comprendre-et-utiliser-le-coinjoin-sur-bitcoin" class="uri">https://www.pandul.fr/post/comprendre-et-utiliser-le-coinjoin-sur-bitcoin</a>.</p></div><div id="fn20"><p><sup>20</sup>&nbsp;Adam Ficsor (nopara73), William Hill (TDevD), <em>ZeroLink: The Bitcoin Fungibility Framework</em>, 14 août 2017&nbsp;: <a href="https://github.com/nopara73/ZeroLink/tree/32ad53927a343383534bea28fffb098af65fe62a" class="uri">https://github.com/nopara73/ZeroLink/tree/32ad53927a343383534bea28fffb098af65fe62a</a>.</p></div><div id="fn21"><p><sup>21</sup>&nbsp;Le système de mélange Whirlpool, ainsi que le portefeuille Samourai, ont été interrompus le 24 avril 2024 sur ordre du département de la Justice des États-Unis. Les cofondateurs de ces services, Keonne Rodriguez et William Hill, ont été arrêtés le même jour par les autorités. – United States Attorney for the Southern District of New York, <em>Founders And CEO Of Cryptocurrency Mixing Service Arrested And Charged With Money Laundering And Unlicensed Money Transmitting Offenses</em>, 24 avril 2024&nbsp;: <a href="https://www.justice.gov/usao-sdny/pr/founders-and-ceo-cryptocurrency-mixing-service-arrested-and-charged-money-laundering" class="uri">https://www.justice.gov/usao-sdny/pr/founders-and-ceo-cryptocurrency-mixing-service-arrested-and-charged-money-laundering</a>. (Note de janvier 2025.)</p></div></div><p>Pour gérer le tout, le système utilise généralement un protocole qui permet aux participants d’être mis en relation anonymement par le biais d’un coordinateur sans risque de fuite d’information ou de vol des fonds. Le plus connu est ZeroLink, développé par Adam Ficsor et William Hill en août 2017, qui est un protocole qui utilise le procédé de signature aveugle de David Chaum<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>. C’est en ce sens qu’on parle parfois de CoinJoin chaumien (<em>Chaumian CoinJoin</em>). Une implémentation classique de cette idée a été réalisée par Whirlpool (Samourai Wallet<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>) et par Wasabi 1.0. De plus, des variantes (CoinShuffle, CoinShuffle++, CashShuffle, CashFusion) ont été implémentées sur des variantes de Bitcoin comme Decred ou Bitcoin Cash. Plus récemment le portefeuille Wasabi a intégré Wabisabi qui permet de réaliser des mélanges avec des valeurs arbitraires en sortie, ce qui complique l’estimation de la confidentialité apportée mais évite d’avoir à gérer les sorties complémentaires d’une manière séparée.</p>
 <p>Pour autant, les transactions collaboratives ne se limitent pas à CoinJoin. Il existe par exemple une autre méthode, appelée PayJoin, qui permet au commerçant de réaliser un mélange avec le client au moment du paiement, en impliquant une pièce en entrée. Cette opération a pour effet de fausser l’analyse de chaîne en faisant croire à l’observateur extérieur qu’un seul utilisateur a réuni ses pièces en entrée et en cachant le montant réel du paiement.</p>
 <p>Reprenons notre exemple d’Alice qui paie 7 mBTC à Bob en réunissant deux pièces de 6 et 2 mBTC afin d’atteindre un montant suffisant en entrée. Dans ce cas, les deux entrées sont supposément liées entre elles (heuristique de codépense) et liées à la sortie de 1 mBTC (heuristique de la sortie complémentaire). Ici, comme représenté sur la figure&nbsp;<a href="#fig:payjoin-transaction" data-reference-type="ref" data-reference="fig:payjoin-transaction">12.8</a>, l’application de PayJoin consiste pour le commerçant à inclure une ou plusieurs pièces en entrée et à augmenter d’autant le montant de la sortie qui lui est destinée, de 7 mBTC par exemple.</p>
-<div id="fig:payjoin-transaction" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/payjoin-transaction-3i-2o.png" class="img-fluid figure-img"></p>
+<p><a href="img/payjoin-transaction-3i-2o.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Exemple d’une transaction PayJoin."><img src="img/payjoin-transaction-3i-2o.png" class="img-fluid figure-img" alt="Exemple d’une transaction PayJoin."></a></p>
 <figcaption>Exemple d’une transaction PayJoin.</figcaption>
 </figure>
 </div>
@@ -1069,7 +1072,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -1105,6 +1108,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

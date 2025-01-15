@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -351,9 +354,9 @@ window.Quarto = {
 <li><p>Le règlement à l’amiable&nbsp;: le contrat est déverrouillé par les signatures des deux parties, qui peuvent choisir d’envoyer les fonds vers Bob (réussite de l’échange) ou bien de rembourser Alice (échec de l’échange)&nbsp;;</p></li>
 <li><p>Le litige&nbsp;: après une période prédéterminée (par exemple 30 jours), le contrat est déverrouillé par la signature de Lenny et celle de l’une des deux parties&nbsp;; dans ce cas, Lenny se charge de déterminer qui est la partie honnête et de lui envoyer les fonds.</p></li>
 </ul>
-<div id="fig:escrow-contract" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/escrow-contract.png" class="img-fluid figure-img"></p>
+<p><a href="img/escrow-contract.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Contrat de dépôt fiduciaire."><img src="img/escrow-contract.png" class="img-fluid figure-img" alt="Contrat de dépôt fiduciaire."></a></p>
 <figcaption>Contrat de dépôt fiduciaire.</figcaption>
 </figure>
 </div>
@@ -364,9 +367,9 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="le-financement-participatif">Le financement participatif</h3>
 <p>Le financement participatif consiste à faire appel au grand public pour contribuer au soutien d’un projet, par opposition au financement par prêt bancaire ou par levée de fonds auprès des professionnels du capital-risque. Il s’agit le plus souvent d’un accord informel entre le promoteur du projet et le public ayant pour but de soutenir la création d’un bien commun, qui profite à tous. Dans Bitcoin, il est possible d’exécuter cet accord par le biais de promesses de paiement résiliables qui ne sont pas soumises à l’arbitraire d’un tiers de confiance.</p>
 <p>D’un point de vue technique, il s’agit de créer une transaction dite <em>anyone-can-pay</em> («&nbsp;tout le monde peut payer&nbsp;») où la signature de chaque contributeur ne prend en compte que la sortie transactionnelle de la levée de fonds et l’entrée du contributeur en question, donnant la possibilité d’ajouter des entrées (voir figure&nbsp;<a href="#fig:sighash-anyonecanpay" data-reference-type="ref" data-reference="fig:sighash-anyonecanpay">13.2</a>). La transaction résultante n’est valide que si le montant en entrée atteint le montant indiqué en sortie, de sorte que les contributeurs conservent le contrôle de leurs fonds jusqu’à la réalisation du paiement total et peuvent se retirer à tout moment.</p>
-<div id="fig:sighash-anyonecanpay" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sighash-anyonecanpay.png" class="img-fluid figure-img"></p>
+<p><a href="img/sighash-anyonecanpay.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Transaction de financement participatif."><img src="img/sighash-anyonecanpay.png" class="img-fluid figure-img" alt="Transaction de financement participatif."></a></p>
 <figcaption>Transaction de financement participatif.</figcaption>
 </figure>
 </div>
@@ -383,9 +386,9 @@ window.Quarto = {
 <p>Considérons l’exemple d’un échange atomique entre Alice, qui possède du BTC, et Bob, qui possède du LTC. Alice (<em>maker</em>) propose d’échanger 0,03 BTC pour 10&nbsp;LTC, à un taux de change de 0,003&nbsp;LTC par BTC, et Bob (<em>taker</em>) accepte cet échange. Cette négociation peut avoir lieu par le biais d’un carnet d’ordres public ou privé. Alice choisit au hasard un secret (noté <span class="math inline">\(s\)</span>), qui est un nombre de 32 octets, dont elle fournit l’empreinte cryptographique <span class="math inline">\(H(s)\)</span> à Bob. Ils peuvent ainsi construire un contrat chacun de leur côté pour effectuer l’échange atomique. Son déroulé est décrit au sein de la figure&nbsp;<a href="#fig:atomic-swap-contract" data-reference-type="ref" data-reference="fig:atomic-swap-contract">13.3</a>.</p>
 <p>La première phase est la phase d’engagement. D’abord, Alice construit, signe et diffuse une transaction d’engagement envoyant 0,03 BTC vers le contrat d’échange atomique sur la chaîne de Bitcoin. Elle fournit son contenu et son adresse à Bob pour qu’il en vérifie la validité. Puis, elle construit et signe une transaction de remboursement dépensant les fonds de ce contrat qu’elle pourra diffuser après un délai prédéfini (ici 16 heures). Ensuite, une fois que la transaction d’engagement d’Alice a été confirmée, Bob fait de même de son côté&nbsp;: il crée un contrat équivalent sur la chaîne de Litecoin, où il envoie 10&nbsp;LTC, et en donne le contenu et l’adresse à Alice pour qu’elle s’assure que tout est en ordre. Enfin, il construit et signe une transaction qui le remboursera au bout d’un délai strictement inférieur à celui de la transaction d’Alice&nbsp;: ici 8 heures. Cette différence résulte du rapport déséquilibré qui existe entre Alice (qui connaît le secret de déverrouillage) et Bob (qui ne le connaît pas).</p>
 <p>Lorsque les transactions d’engagement ont toutes deux été confirmées sur leurs chaînes respectives, la seconde phase de l’échange atomique, la phase de collecte, peut commencer. Alice construit, signe et diffuse une transaction de collecte qui lui permet de récupérer les 10&nbsp;LTC de Bob. Pour cela, elle fournit le secret au sein de la transaction et, ce faisant, le révèle nécessairement à Bob. Finalement, Bob peut lui aussi construire, signer et diffuser une transaction qui lui octroie les 0,03 BTC sur son compte. De cette manière, l’échange est clos&nbsp;!</p>
-<div id="fig:atomic-swap-contract" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/atomic-swap-contract.png" class="img-fluid figure-img"></p>
+<p><a href="img/atomic-swap-contract.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Contrats et transactions dans un échange atomique."><img src="img/atomic-swap-contract.png" class="img-fluid figure-img" alt="Contrats et transactions dans un échange atomique."></a></p>
 <figcaption>Contrats et transactions dans un échange atomique.</figcaption>
 </figure>
 </div>
@@ -413,9 +416,9 @@ window.Quarto = {
 </ul>
 <p>Si un paiement a lieu d’Alice vers Bob, la mise à jour du canal se fait de la manière suivante. Alice construit et signe sa transaction d’engagement en utilisant la clé publique de révocation de Bob que ce dernier lui a transmise au préalable. Seul Bob peut finaliser la signature de cette transaction et la diffuser sur le réseau. Bob lui répond en lui envoyant sa clé privée de révocation, ce qui rend la dernière transaction d’engagement d’Alice inopérante. La même chose se produit ensuite de manière symétrique&nbsp;: Bob construit et signe sa transaction d’engagement qu’il transmet à Alice, et cette dernière lui révèle en échange sa clé privée de révocation, ce qui rend la transaction d’engagement de Bob impuissante<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt, «&nbsp;Payment Channels&nbsp;», in <em>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments</em>, O’Reilly Media, 2022, pp.&nbsp;149–184.</p></div></div><p>La révélation de la clé de révocation à chaque étape de mise à jour rend possible l’activation d’un mécanisme de punition à tout moment. Si l’une des deux parties diffuse une transaction d’engagement correspondant à un état antérieur du canal, alors l’autre peut récupérer <em>l’intégralité</em> des fonds du canal. Par exemple, Alice pourrait récupérer les fonds de Bob si ce dernier était amené à diffuser le précédent état du canal dans le but d’«&nbsp;annuler&nbsp;» le dernier paiement réalisé.</p>
-<div id="fig:poon-dryja-contracts" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/lightning-poon-dryja-channel-contracts.png" class="img-fluid figure-img"></p>
+<p><a href="img/lightning-poon-dryja-channel-contracts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Contrats et transactions dans un canal de paiement de Poon-Dryja&nbsp;: cas d’un paiement de Bob de 2&nbsp;mBTC à Alice."><img src="img/lightning-poon-dryja-channel-contracts.png" class="img-fluid figure-img" alt="Contrats et transactions dans un canal de paiement de Poon-Dryja&nbsp;: cas d’un paiement de Bob de 2&nbsp;mBTC à Alice."></a></p>
 <figcaption>Contrats et transactions dans un canal de paiement de Poon-Dryja&nbsp;: cas d’un paiement de Bob de 2&nbsp;mBTC à Alice.</figcaption>
 </figure>
 </div>
@@ -432,9 +435,9 @@ window.Quarto = {
 <li><p>La fermeture du canal peut se faire après un certain délai d’expiration par la diffusion de la dernière transaction de règlement (<span class="math inline">\(T_{s,i}\)</span>).</p></li>
 </ul>
 <p>Ici il n’y a plus besoin de recourir à des clés de révocation pour rendre les anciens états du canal inexploitables&nbsp;: ce sont les transactions elles-mêmes qui ont ce rôle. Eltoo fait intervenir ce qu’on appelle des transactions flottantes, qui peuvent dépenser les fonds issus de n’importe quelle transaction de mise à jour précédente. De cette manière, chaque transaction de mise à jour est flottante, ainsi que chaque transaction de règlement, ce qui permet d’omettre toutes les mises à jour précédentes. De plus, un numéro d’état est inscrit dans chaque transaction pour ordonner les transactions et ainsi éviter la diffusion d’un état antérieur.</p>
-<div id="fig:eltoo" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/eltoo-offchain-protocol.png" class="img-fluid figure-img"></p>
+<p><a href="img/eltoo-offchain-protocol.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Aperçu du protocole Eltoo."><img src="img/eltoo-offchain-protocol.png" class="img-fluid figure-img" alt="Aperçu du protocole Eltoo."></a></p>
 <figcaption>Aperçu du protocole Eltoo.</figcaption>
 </figure>
 </div>
@@ -492,9 +495,9 @@ Hommage à Len Sassaman (art ASCII).
 </figcaption>
 </figure>
 <p>Enfin, on peut inclure une image, qui peut être encodée dans de multiples formats, dont notamment en JPEG ou en PNG. Un logo Bitcoin inscrit le 13 mai 2011 peut par exemple être retrouvé. Un hommage à Nelson Mandela accompagné d’une photo a été publié le 7 décembre 2013, quelques jours après sa mort. En 2022, l’absence de restriction standarde sur la taille des scripts de Taproot a permis de réaliser des inscriptions volumineuses d’une manière bien plus transparente et directe. C’est ce qui a notamment permis d’inscrire l’image des Taproot Wizards qui pesait quasiment 4&nbsp;Mo (voir figure&nbsp;<a href="#fig:taproot-wizards" data-reference-type="ref" data-reference="fig:taproot-wizards">13.7</a>).</p>
-<div id="fig:taproot-wizards" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/taproot-wizards-small-0301e0480b374b32851a9462db29dc19fe830a7f7d7a88b81612b9d42099c0aei0.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/taproot-wizards-small-0301e0480b374b32851a9462db29dc19fe830a7f7d7a88b81612b9d42099c0aei0.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Image (réduite) des Taproot Wizards."><img src="img/taproot-wizards-small-0301e0480b374b32851a9462db29dc19fe830a7f7d7a88b81612b9d42099c0aei0.jpg" class="img-fluid figure-img" alt="Image (réduite) des Taproot Wizards."></a></p>
 <figcaption>Image (réduite) des Taproot Wizards.</figcaption>
 </figure>
 </div>
@@ -506,9 +509,9 @@ Hommage à Len Sassaman (art ASCII).
 <p>Les métaprotocoles sont des protocoles qui se servent du protocole de base pour fonctionner. Ils font usage de l’inscription de données arbitraires sur la chaîne pour inclure des instructions qui sont interprétées par des implémentations logicielles spécifiques. Ils ont pour particularité d’être plus extensifs que le protocole de base.</p>
 <p>Il ne s’agit pas d’une idée nouvelle. Dès les premières années d’existence de Bitcoin, certaines personnes ont souhaité l’exploiter plus en profondeur, en se servant de lui d’une autre manière que comme un instrument de transfert de valeur. Ce mouvement initial, visant à ajouter des fonctionnalités à Bitcoin de cette façon, était appelé «&nbsp;Bitcoin 2.0&nbsp;». Il a finalement mené à l’élaboration d’Ethereum à partir de 2013.</p>
 <p>Le premier type de métaprotocole qui a été élaboré est le procédé des <em>colored coins</em>, ou pièces colorées en français, qui consiste à marquer des pièces (UTXO) par l’inscription annexe de données, comme montré sur la figure&nbsp;<a href="#fig:colored-coin" data-reference-type="ref" data-reference="fig:colored-coin">13.8</a>. Chaque type de jeton créé est lié à un identifiant, que l’on peut assimiler à une couleur, d’où le nom de ce procédé. L’idée a été présentée en 2012 par Yoni Assia et Meni Rosenfeld<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;Yoni Assia, <em>bitcoin 2.X (aka Colored Bitcoin) – initial specs</em>, 27 mars 2012&nbsp;: <a href="https://yoniassia.com/coloredbitcoin/" class="uri">https://yoniassia.com/coloredbitcoin/</a>&nbsp;; Meni Rosenfeld, <em>Overview of Colored Coins</em>, 4 décembre 2012&nbsp;: <a href="https://bitcoil.co.il/BitcoinX.pdf" class="uri">https://bitcoil.co.il/BitcoinX.pdf</a>.</p></div></div><div id="fig:colored-coin" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;Yoni Assia, <em>bitcoin 2.X (aka Colored Bitcoin) – initial specs</em>, 27 mars 2012&nbsp;: <a href="https://yoniassia.com/coloredbitcoin/" class="uri">https://yoniassia.com/coloredbitcoin/</a>&nbsp;; Meni Rosenfeld, <em>Overview of Colored Coins</em>, 4 décembre 2012&nbsp;: <a href="https://bitcoil.co.il/BitcoinX.pdf" class="uri">https://bitcoil.co.il/BitcoinX.pdf</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/colored-coin.png" class="img-fluid figure-img"></p>
+<p><a href="img/colored-coin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Création et transfert d’un jeton émis sous la forme d’un colored coin."><img src="img/colored-coin.png" class="img-fluid figure-img" alt="Création et transfert d’un jeton émis sous la forme d’un colored coin."></a></p>
 <figcaption>Création et transfert d’un jeton émis sous la forme d’un colored coin.</figcaption>
 </figure>
 </div>
@@ -534,9 +537,9 @@ Hommage à Len Sassaman (art ASCII).
 <p>Le schéma de Schnorr autorise le déploiement de <em>Scriptless Scripts</em>, de contrats «&nbsp;sans script&nbsp;» qui sont exécutés en dehors de la chaîne et appliqués au sein des signatures. Le concept a été théorisé en 2017 par Andrew Poelstra<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>. Il se retrouve dans des exemples comme le schéma de signature multipartite MuSig2, les <em>Adaptor Signatures</em> ou encore les <em>Discreet Log Contracts</em>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn25"><p><sup>25</sup>&nbsp;Andrew Poelstra, <em>Using the Chain for what Chains are Good For</em> (vidéo), Scaling Bitcoin IV, 5 novembre 2017&nbsp;: <a href="https://www.youtube.com/watch?v=3pd6xHjLbhs&amp;t=5755s" class="uri">https://www.youtube.com/watch?v=3pd6xHjLbhs&amp;t=5755s</a>&nbsp;; Aaron van Wirdum, «&nbsp;<em>Scriptless Scripts: How Bitcoin Can Support Smart Contracts Without Smart Contracts</em>&nbsp;», <em>Bitcoin Magazine</em>, 27 novembre 2017&nbsp;: <a href="https://bitcoinmagazine.com/technical/scriptless-scripts-how-bitcoin-can-support-smart-contracts-without-smart-contracts" class="uri">https://bitcoinmagazine.com/technical/scriptless-scripts-how-bitcoin-can-support-smart-contracts-without-smart-contracts</a>.</p></div></div><p>Outre cela, le schéma de Schnorr facilite grandement l’implémentation de Taproot (BIP-341), qui a été intégré au protocole au même moment. Taproot (dont le nom signifie littéralement «&nbsp;racine pivot&nbsp;» en français) est un procédé de programmation de contrats autonomes qui ancre les clauses d’un contrat au sein d’un arbre de Merkle et qui cache cet arbre sous une clé publique agrégée appartenant à ses participants. Il permet de ne publier le contrat qu’en cas de litige, et même dans ce cas, de ne publier que les conditions exécutées. Les scripts utilisés dans Taproot utilisent un langage de programmation nommé Tapscript (BIP-342), basé sur le langage de script classique de Bitcoin.</p>
 <p>Taproot repose sur un arbre de hachage, appelé un MAST<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>, dont les feuilles sont les clauses du contrat, c’est-à-dire les conditions de dépense. Lors de l’exécution du MAST, les participants concernés ont seulement besoin de révéler la clause appliquée et de fournir les empreintes liées aux autres clauses (chemin de Merkle), comme montré sur la figure&nbsp;<a href="#fig:taproot-mast" data-reference-type="ref" data-reference="fig:taproot-mast">13.9</a>. Les autres conditions de dépense ne sont ainsi pas révélées.</p>
-<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;L’acronyme MAST signifie originellement <em>Merklized Abstract Syntax Trees</em>, ou «&nbsp;arbre syntaxique abstrait merkélisé&nbsp;» en français, et se réfère aux structures de données décrites par le BIP-114. Dans Taproot, ce ne sont pas vraiment des arbres syntaxiques abstraits qui interviennent, mais le terme reste utilisé. Les arbres de hachage de Taproot peuvent dans ce cas être appelés des <em>Merklized Alternative Script Trees</em>, par rétroacronymie. Voir Anthony Towns, <em>[bitcoin-dev] Safer sighashes and more granular SIGHASH_NOINPUT</em>, 23/11/2018 05:03:30 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html</a>.</p></div></div><div id="fig:taproot-mast" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;L’acronyme MAST signifie originellement <em>Merklized Abstract Syntax Trees</em>, ou «&nbsp;arbre syntaxique abstrait merkélisé&nbsp;» en français, et se réfère aux structures de données décrites par le BIP-114. Dans Taproot, ce ne sont pas vraiment des arbres syntaxiques abstraits qui interviennent, mais le terme reste utilisé. Les arbres de hachage de Taproot peuvent dans ce cas être appelés des <em>Merklized Alternative Script Trees</em>, par rétroacronymie. Voir Anthony Towns, <em>[bitcoin-dev] Safer sighashes and more granular SIGHASH_NOINPUT</em>, 23/11/2018 05:03:30 UTC&nbsp;: <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html" class="uri">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-November/016500.html</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/taproot-mast.png" class="img-fluid figure-img"></p>
+<p><a href="img/taproot-mast.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="MAST impliquant les clauses d’un contrat."><img src="img/taproot-mast.png" class="img-fluid figure-img" alt="MAST impliquant les clauses d’un contrat."></a></p>
 <figcaption>MAST impliquant les clauses d’un contrat.</figcaption>
 </figure>
 </div>
@@ -1007,7 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -1043,6 +1046,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -367,17 +370,17 @@ window.Quarto = {
 <p>Ce fonctionnement confère un rôle fondamental à la clé privée. Tout individu la connaissant peut accéder aux fonds qu’elle protège et s’en emparer. C’est pourquoi elle doit rester absolument secrète&nbsp;: car celui qui la connaît devient le propriétaire <em>de facto</em> des bitcoins concernés.</p>
 <p>L’algorithme principal utilisé dans Bitcoin est ECDSA (<em>Elliptic Curve Digital Signature Algorithm</em>), une variante de DSA utilisant la cryptographie sur courbes elliptiques. L’algorithme fait appel à des notions d’algèbre complexes, mais on peut tenter d’en expliquer brièvement le fonctionnement.</p>
 <p>La variante d’ECDSA utilisée dans Bitcoin se base sur la courbe elliptique secp256k1<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, qui sert à dériver la clé publique de la clé privée, à signer les transactions grâce à la clé privée et à vérifier les signatures à l’aide de la clé publique. L’équation mathématique de cette courbe est <span class="math inline">\(y^2 = x^3 + 7\)</span> dont les coordonnées <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> évoluent dans le corps fini des nombres entiers modulo <span class="math inline">\(p\)</span>, où <span class="math inline">\(p\)</span> est un nombre premier spécifique<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> inférieur à <span class="math inline">\(2^{256}\)</span>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Le nom secp256k1 est un peu barbare, mais chaque lettre à une importance. Le sigle SEC désigne <em>Standards for Efficient Cryptography</em>, l’ouvrage dont elle est issue (<a href="https://www.secg.org/SEC2-Ver-1.0.pdf" class="uri">https://www.secg.org/SEC2-Ver-1.0.pdf</a>). Le P-256 indique que le nombre premier <span class="math inline">\(p\)</span> utilisé est encodé sur 256 bits. Le k indique qu’il s’agit d’une courbe de Koblitz&nbsp;: les paramètres sont choisis pour rendre les opérations plus efficaces, et n’ont donc pas été sélectionnés aléatoirement (r). Le 1 désigne l’index de la courbe par rapport aux autres courbes similaires.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;Le nombre premier choisi pour secp256k1 est&nbsp;: <span class="math inline">\(p = 2^{256} - 2^{32} - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 1\)</span>.</p></div></div><div id="fig:secp256k1" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Le nom secp256k1 est un peu barbare, mais chaque lettre à une importance. Le sigle SEC désigne <em>Standards for Efficient Cryptography</em>, l’ouvrage dont elle est issue (<a href="https://www.secg.org/SEC2-Ver-1.0.pdf" class="uri">https://www.secg.org/SEC2-Ver-1.0.pdf</a>). Le P-256 indique que le nombre premier <span class="math inline">\(p\)</span> utilisé est encodé sur 256 bits. Le k indique qu’il s’agit d’une courbe de Koblitz&nbsp;: les paramètres sont choisis pour rendre les opérations plus efficaces, et n’ont donc pas été sélectionnés aléatoirement (r). Le 1 désigne l’index de la courbe par rapport aux autres courbes similaires.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;Le nombre premier choisi pour secp256k1 est&nbsp;: <span class="math inline">\(p = 2^{256} - 2^{32} - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 1\)</span>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/secp256k1-curve.png" class="img-fluid figure-img"></p>
+<p><a href="img/secp256k1-curve.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Représentation graphique de la courbe secp256k1 sur les nombres réels (source&nbsp;: Loïc Morel, Bitcoin démocratisé, 2022)."><img src="img/secp256k1-curve.png" class="img-fluid figure-img" alt="Représentation graphique de la courbe secp256k1 sur les nombres réels (source&nbsp;: Loïc Morel, Bitcoin démocratisé, 2022)."></a></p>
 <figcaption>Représentation graphique de la courbe secp256k1 sur les nombres réels (source&nbsp;: Loïc Morel, <em>Bitcoin démocratisé</em>, 2022).</figcaption>
 </figure>
 </div>
 <p>Une addition est définie sur cette courbe pour faire en sorte que la somme de deux points soit également un point de la courbe<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. La multiplication par un scalaire est définie comme étant le fait d’additionner le même point à plusieurs reprises&nbsp;: <span class="math inline">\(m~P = P + \ldots + P~(m~\mathrm{fois})\)</span>. En fixant un point sur la courbe, appelé point de base et noté <span class="math inline">\(G\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, on peut définir une opération transformant un entier <span class="math inline">\(d\)</span> en un point de la courbe&nbsp;: <span class="math inline">\(Q = d~G\)</span>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;L’addition est définie par <span class="math inline">\(P + Q = R\)</span> où <span class="math inline">\(x_R = \lambda_{P,Q}^2 - x_P - x_Q \pmod p\)</span> et <span class="math inline">\(y_R = \lambda_{P,Q}~( x_P - x_R ) - y_P \pmod p\)</span> avec <span class="math inline">\(\lambda_{P,Q} = \{ \frac{3 x_P^2}{2 y_P} \pmod p~\mathrm{si}~P = Q~;  \frac{y_Q - y_P}{x_Q - x_P} \pmod p~\mathrm{sinon} \}\)</span>.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;Le point de base de secp256k1 est&nbsp;: $$\begin{aligned}</p></div></div><p>Ces opérations peuvent être représentées géométriquement sur la courbe. Par exemple, l’équivalent géométrique du doublement du point <span class="math inline">\(G\)</span> (addition avec lui-même) consiste à tracer la tangente du point, à considérer l’intersection de cette tangente avec la courbe et à en prendre l’opposé, comme représenté sur la figure&nbsp;<a href="#fig:secp256k1-multiplication" data-reference-type="ref" data-reference="fig:secp256k1-multiplication">7.2</a>. Toutes ces opérations sont non réversibles.</p>
-<div id="fig:secp256k1-multiplication" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/secp256k1-multiplication.png" class="img-fluid figure-img"></p>
+<p><a href="img/secp256k1-multiplication.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Représentation géométrique du doublement du point G sur secp256k1 (source&nbsp;: Loïc Morel, Bitcoin démocratisé, 2022)."><img src="img/secp256k1-multiplication.png" class="img-fluid figure-img" alt="Représentation géométrique du doublement du point G sur secp256k1 (source&nbsp;: Loïc Morel, Bitcoin démocratisé, 2022)."></a></p>
 <figcaption>Représentation géométrique du doublement du point G sur secp256k1 (source&nbsp;: Loïc Morel, <em>Bitcoin démocratisé</em>, 2022).</figcaption>
 </figure>
 </div>
@@ -484,9 +487,9 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <pre data-fontsize="\footnotesize"><code>3JqPHkGuvW7nsUJDgm5CPSNUb47WczCC5e</code></pre>
 <p>Ce type d’adresse est appelé P2SH-P2WPKH (<em>P2SH-nested Pay to Witness Public Key Hash</em>). Nous aborderons plus en détail les différents schémas de script qui sous-tendent ces types d’adresse dans le chapitre&nbsp;<a href="les-rouages-de-la-machine.html" data-reference-type="ref" data-reference="ch:rouages">12</a>.</p>
 <p>Une fois qu’elles ont été encodées, les adresses peuvent être partagées facilement d’une personne à une autre. Grâce à la somme de contrôle, faire une faute de frappe ne crée théoriquement pas de risque, car le logiciel la détectera et refusera de procéder au paiement. Les adresses sont aussi souvent représentées par des codes QR (voir figure&nbsp;<a href="#fig:address-qr-codes" data-reference-type="ref" data-reference="fig:address-qr-codes">7.3</a>), plus adaptés pour l’interaction avec un téléphone multifonction.</p>
-<div id="fig:address-qr-codes" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/address-qr-codes.png" class="img-fluid figure-img"></p>
+<p><a href="img/address-qr-codes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Codes QR des adresses."><img src="img/address-qr-codes.png" class="img-fluid figure-img" alt="Codes QR des adresses."></a></p>
 <figcaption>Codes QR des adresses.</figcaption>
 </figure>
 </div>
@@ -523,9 +526,9 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <p>Ce type de portefeuille est parfois appelé HD wallet pour <em>Hierarchical Deterministic Wallet</em>&nbsp;: portefeuille déterministe hiérarchique. Le concept a été développé pour Bitcoin à partir de 2011. Il a été standardisé en 2012 au sein du BIP-32 écrit par Pieter Wuille, et des propositions BIP-39 et BIP-44 écrites par Marek Palatinus et Pavol Rusnak. Il a été élargi aux autres cryptomonnaies en 2014.</p>
 <p>En règle générale, la phrase secrète, ou phrase de récupération, est générée par l’appareil de l’utilisateur, qu’il s’agisse d’un téléphone mobile, d’un ordinateur ou d’un portefeuille matériel. Pour ce faire, une entropie est d’abord créée par l’appareil de manière pseudo-aléatoire. L’information, qui possède un nombre de bits précis, est ensuite enrichie d’une somme de contrôle de quelques bits, permettant de détecter les erreurs de saisie, et l’ensemble est divisé en segments de 11 bits. Enfin, chacun de ces segments est associé à un mot dans la liste standarde de 2048 mots, ce qui permet de former la phrase. Cette dérivation est représentée dans la figure&nbsp;<a href="#fig:from-entropy-to-mnemonic" data-reference-type="ref" data-reference="fig:from-entropy-to-mnemonic">7.4</a>.</p>
 <p>Le nombre de mots de la phrase dépend de la taille de l’entropie désirée. Ainsi une entropie de 128 bits est dotée d’une somme de contrôle de 4 bits, ce qui donne une phrase de 12 mots de 11 bits. Pour 256 bits, on a une somme de contrôle de 8 bits et donc une phrase de 24 mots.</p>
-<div id="fig:from-entropy-to-mnemonic" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/from-entropy-to-mnemonic.png" class="img-fluid figure-img"></p>
+<p><a href="img/from-entropy-to-mnemonic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="De l’entropie à la phrase secrète."><img src="img/from-entropy-to-mnemonic.png" class="img-fluid figure-img" alt="De l’entropie à la phrase secrète."></a></p>
 <figcaption>De l’entropie à la phrase secrète.</figcaption>
 </figure>
 </div>
@@ -533,9 +536,9 @@ K = &amp;~(~\mathtt{0xf6a6c7c39c88b767bfac4ac687c3ff32372e76c9fb633e2278e54472e3
 <p>Le premier est le code d’authentification de message HMAC-SHA512 (HMAC pour <em>Hash-Based Message Authentication Code</em>) qui calcule une empreinte en utilisant la fonction de hachage SHA-512 en combinaison avec une clé secrète. Le second est la fonction de dérivation de clé PBKDF2 (<em>Password-Based Key Derivation Function 2</em>) qui applique de manière répétée une fonction choisie par l’utilisateur à un message de taille arbitraire avec un sel cryptographique. L’intérêt est de nécessiter une quantité de calcul importante pour éviter un cassage par force brute de l’information supérieure.</p>
 <p>Dans Bitcoin, PBKDF2 est utilisée pour dériver une graine à partir de la phrase mnémotechnique, en appliquant la fonction HMAC-SHA512 à 2048 reprises. Le sel cryptographique est le terme <code>mnemonic</code> auquel on peut ajouter une phrase de passe (<em>passphrase</em>) pour renforcer la sécurité du procédé. La graine résultante est une information de 512 bits (64 octets), à partir de laquelle la clé maîtresse et les clés suivantes sont dérivées.</p>
 <p>La dérivation des clés se fait grâce à la fonction HMAC-SHA512. Tout d’abord, on procède à une première dérivation à partir de la graine. On applique le HMAC à la graine et au sel cryptographique <code>Bitcoin seed</code>, ce qui nous donne une clé maîtresse (premiers 256 bits du résultat) et un code de chaîne maître (derniers 256 bits du résultat). Le passage de la phrase secrète à la clé maîtresse et au code de chaîne maître est résumé dans la figure&nbsp;<a href="#fig:from-mnemonic-to-root" data-reference-type="ref" data-reference="fig:from-mnemonic-to-root">7.5</a>.</p>
-<div id="fig:from-mnemonic-to-root" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/from-mnemonic-to-root.png" class="img-fluid figure-img"></p>
+<p><a href="img/from-mnemonic-to-root.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="De la phrase secrète à la clé maîtresse."><img src="img/from-mnemonic-to-root.png" class="img-fluid figure-img" alt="De la phrase secrète à la clé maîtresse."></a></p>
 <figcaption>De la phrase secrète à la clé maîtresse.</figcaption>
 </figure>
 </div>
@@ -548,18 +551,18 @@ jaj8dKFT81GttcgPftdB4XhAzzQLXJEGDtFp35yssYnxDV3yVDEqv1b</code></pre>
 HP3cUapsPsqEd52TRk1vhkgkhtAReezgSBi4ELh3YoxjmZgKBk7U98h</code></pre>
 <p>La dérivation des clés (<em>child key derivation</em>) consiste à utiliser l’algorithme HMAC-SHA512 pour dériver des clés étendues «&nbsp;enfant&nbsp;» à partir d’une clé étendue «&nbsp;parent&nbsp;». Les codes de chaîne sont utilisés comme sel cryptographique. Deux types de dérivation existent&nbsp;: la dérivation normale et la dérivation endurcie.</p>
 <p>La dérivation normale fait intervenir la clé publique étendue dans le processus, ce qui rend possibles deux opérations&nbsp;: l’obtention de la clé publique (étendue) enfant à partir de la clé publique (étendue) parent, et l’obtention de la clé privée (étendue) enfant à partir de la clé privée (étendue) parent. Le fonctionnement de ce type de dérivation est schématisé par la figure&nbsp;<a href="#fig:normal-child-key-derivation" data-reference-type="ref" data-reference="fig:normal-child-key-derivation">7.6</a>.</p>
-<div id="fig:normal-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/normal-child-key-derivation.png" class="img-fluid figure-img"></p>
+<p><a href="img/normal-child-key-derivation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Dérivation normale des clés par HMAC-SHA512."><img src="img/normal-child-key-derivation.png" class="img-fluid figure-img" alt="Dérivation normale des clés par HMAC-SHA512."></a></p>
 <figcaption>Dérivation normale des clés par HMAC-SHA512.</figcaption>
 </figure>
 </div>
 <p>Cette particularité de la dérivation se révèle extrêmement utile pour générer de nouvelles adresses sans compromettre la clé privée racine. Un utilisateur peut ainsi importer la clé publique étendue dans un processeur de paiement afin de vérifier son solde et générer de nouvelles adresses sans avoir à fournir la clé privée. Cela permet aussi aux commerçants d’avoir des employés qui reçoivent des paiements à différentes adresses sans se soucier de la sécurité des fonds.</p>
 <p>Cependant, cette particularité comporte un risque potentiel&nbsp;: si une clé privée enfant est divulguée, alors la connaissance de la clé publique étendue parent (et donc du code de chaîne correspondant) permet d’obtenir toutes les clés privées enfant ainsi que la clé privée parent.</p>
 <p>C’est pour cela qu’il existe un deuxième type de dérivation, la dérivation endurcie (<em>hardened derivation</em>), qui, contrairement à la première, est restreinte au calcul de clés privées (étendues) enfant, ce qui assure une meilleure sécurité. Celle-ci est représentée dans la figure&nbsp;<a href="#fig:hardened-child-key-derivation" data-reference-type="ref" data-reference="fig:hardened-child-key-derivation">7.7</a>.</p>
-<div id="fig:hardened-child-key-derivation" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/hardened-child-key-derivation.png" class="img-fluid figure-img"></p>
+<p><a href="img/hardened-child-key-derivation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Dérivation endurcie des clés par HMAC-SHA512."><img src="img/hardened-child-key-derivation.png" class="img-fluid figure-img" alt="Dérivation endurcie des clés par HMAC-SHA512."></a></p>
 <figcaption>Dérivation endurcie des clés par HMAC-SHA512.</figcaption>
 </figure>
 </div>
@@ -1087,7 +1090,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -1123,6 +1126,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

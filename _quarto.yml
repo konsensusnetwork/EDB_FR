@@ -26,10 +26,10 @@ book:
     left:
       - icon: book
         text: "Lire en ligne"
-        href: index.qmd
+        href: chapters/les-debuts-de-bitcoin.qmd
         aria-label: Book
       - icon: shop
-        text: "Acheter ce livre!"
+        text: "Acheter ce livre !"
         href: https://bitcoinbook.shop/products/lelegance-de-bitcoin
         aria-label: Shop
   page-footer:
@@ -39,7 +39,7 @@ book:
       - text: "License"
         href: index.qmd
       - text: "Acheter"
-        href: presale.qmd
+        href: produit.qmd
     right:
       - icon: twitter
         href: https://twitter.com/konsensusn
@@ -91,6 +91,7 @@ format:
     toc: true
     toc-location: left
     reference-location: margin
+    lightbox: true
   epub:
     cover-image: cover.png
     cover-image-alt: |

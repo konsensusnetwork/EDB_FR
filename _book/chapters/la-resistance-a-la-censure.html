@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -370,9 +373,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Les mineurs peuvent dans un premier temps pratiquer une censure passive en refusant systématiquement de confirmer des transactions, pour des raisons économiquement irrationnelles, typiquement sous la pression du régulateur. Ce type de censure a notamment été envisagé par la coopérative du groupe Marathon, qui avait déclaré en 2021 vouloir pratiquer le «&nbsp;minage de blocs propres<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>&nbsp;», avant de se rétracter sous la pression populaire. Ce filtrage est mis en place sur Ethereum avec les validateurs qui utilisent des relais d’optimisation de MEV qui respectent les normes de l’OFAC et par conséquent n’incluent pas les transactions considérées comme sales<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. Les participants à ces relais étaient principalement des plateformes de change en 2023.</p>
 <div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;Communiqué de Marathon et de DMG Blockchain Solutions, <em>Marathon Patent Group and DMG Blockchain Solutions to Form the Digital Currency Miners of North America (DCMNA) and Launch North America’s First Cooperative Mining Pool</em>, 5 janvier 2021, archive&nbsp;: <a href="https://web.archive.org/web/20210128112455/https://www.marathonpg.com/news/press-releases/detail/1220/marathon-patent-group-and-dmg-blockchain-solutions-to-form" class="uri">https://web.archive.org/web/20210128112455/https://www.marathonpg.com/news/press-releases/detail/1220/marathon-patent-group-and-dmg-blockchain-solutions-to-form</a>.</p></div><div id="fn12"><p><sup>12</sup>&nbsp;La valeur extractible maximale (<em>maximal extractable value</em>), initialement appelée valeur extractible par les mineurs (<em>miner extractable value</em>), est la valeur maximale que le validateur peut générer en modifiant l’ordre ou en excluant des transactions au sein de son bloc, profitant des différentes irrégularités des contrats autonomes, notamment en ce qui concerne les places de marché décentralisées. En octobre 2022, la quantité de validation passant par des relais appliquant ce type d’optimisation a dépassé les 50&nbsp;%, indiquant la potentialité d’une attaque. – Voir MEV Watch&nbsp;: <a href="https://www.mevwatch.info/" class="uri">https://www.mevwatch.info/</a>.</p></div></div><p>Cette censure passive n’est pas très problématique car elle demande que 100&nbsp;% de la puissance de calcul s’y conforme pour être effective. Les mineurs dissidents, c’est-à-dire ceux qui ignorent délibérément les réglementations, débloquent la situation en validant les transactions ignorées par les autres. Seuls les délais de confirmation sont affectés.</p>
 <p>Cependant, cette situation peut devenir autrement plus grave si les mineurs conformistes, à savoir les mineurs suivant méticuleusement les réglementations, commencent à refuser les blocs contenant les transactions «&nbsp;sales&nbsp;». C’est ce que nous appelons ici la censure active, qui consiste à empêcher des transactions d’être confirmées en rendant orphelins tous les blocs qui les contiennent. Pour être maintenue dans le temps de manière certaine, elle nécessite de disposer de la majorité de la puissance de calcul du réseau&nbsp;: il s’agit donc d’une attaque des 51&nbsp;%. Les branches faibles formées par l’attaque de censure sont mises de côté en vertu du principe de la chaîne la plus longue, comme illustré sur la figure&nbsp;<a href="#fig:censorship-attack" data-reference-type="ref" data-reference="fig:censorship-attack">9.1</a>.</p>
-<div id="fig:censorship-attack" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/mining-attack-censorship.png" class="img-fluid figure-img"></p>
+<p><a href="img/mining-attack-censorship.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Attaque de censure active."><img src="img/mining-attack-censorship.png" class="img-fluid figure-img" alt="Attaque de censure active."></a></p>
 <figcaption>Attaque de censure active.</figcaption>
 </figure>
 </div>
@@ -936,7 +939,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -972,6 +975,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

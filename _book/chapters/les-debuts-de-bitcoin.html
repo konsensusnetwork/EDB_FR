@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -357,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;NewLibertyStandard, <em>Re: New Exchange Service: "BTC 2 PSC"</em>, 19/01/2010 08:06:15 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=15.msg111#msg111" class="uri">https://bitcointalk.org/index.php?topic=15.msg111#msg111</a>.</p></div><div id="fn28"><p><sup>28</sup>&nbsp;Satoshi Nakamoto, <em>New icon/logo</em>, 24/02/2010 21:24:23 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=64.msg504#msg504" class="uri">https://bitcointalk.org/index.php?topic=64.msg504#msg504</a>.</p></div></div><p>Dans les mois qui suivent, les services de change se développent, comme BitcoinFX ou Bitcoin Market. C’est pourquoi NLS propose que le bitcoin, à l’instar des monnaies échangées sur le marché des changes, adopte le sigle boursier BTC et le symbole du baht thaïlandais. L’utilisation du sigle BTC se normalise rapidement. Quant au symbole (le B majuscule traversé par deux barres verticales rappelant immanquablement le dollar), c’est Satoshi lui-même qui le conçoit, en s’inspirant de la proposition de NLS, lors de la création du premier véritable logo de Bitcoin<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bitcoin530.png" class="img-fluid figure-img"></p>
+<p><a href="img/bitcoin530.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Logo de Bitcoin conçu par Satoshi Nakamoto en février 2010."><img src="img/bitcoin530.png" class="img-fluid figure-img" alt="Logo de Bitcoin conçu par Satoshi Nakamoto en février 2010."></a></p>
 <figcaption>Logo de Bitcoin conçu par Satoshi Nakamoto en février 2010.</figcaption>
 </figure>
 </div>
@@ -906,7 +909,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -942,6 +945,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

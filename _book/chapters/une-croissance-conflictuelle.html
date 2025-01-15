@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -314,9 +317,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Contrairement aux cypherpunks et aux libertariens, les nouveaux investisseurs ne sont en effet pas vraiment des anarchistes, appartenant généralement au monde financier traditionnel très à cheval sur la réglementation. Pour eux, il est nécessaire que les usages les plus controversés disparaissent afin que Bitcoin se développe et s’étende au grand public et aux investisseurs institutionnels. Ils voient en particulier d’un mauvais œil la place de marché Silk Road, qui représente alors 10 à 20&nbsp;% de l’activité économique sur la chaîne de blocs et qui donne à Bitcoin sa réputation de monnaie de la drogue sur Internet<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. La tendance est donc à l’amélioration de l’image de la cryptomonnaie, une stratégie par ailleurs initiée en 2010 – 2011 par Satoshi Nakamoto lui-même, comme nous avons pu le constater dans le chapitre&nbsp;<a href="les-debuts-de-bitcoin.html" data-reference-type="ref" data-reference="ch:mythe">1</a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Cette animosité à l’égard de Silk Road s’est retrouvée dans les propos tenus par Tyler Winklevoss quelques semaines après la chute de la plateforme&nbsp;: «&nbsp;Les prix sont le double de ce qu’ils étaient avant la fermeture de Silk Road. La demande d’utilisation de bitcoins pour des activités illicites était donc clairement quasi nulle.&nbsp;» – Matthew J. Belvedere, «&nbsp;<em>Bitcoin is nearly halfway to the $400 billion value predicted by the Winklevoss twins four years ago</em>&nbsp;», <em>CNBC</em>, 12 novembre 2013&nbsp;: <a href="https://www.cnbc.com/2013/11/12/the-winklevoss-brothers-bitcoin-worth-100-times-more.html" class="uri">https://www.cnbc.com/2013/11/12/the-winklevoss-brothers-bitcoin-worth-100-times-more.html</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;Bitcoin Foundation, <em>Developing a More Open Economy</em>, archive de 2013&nbsp;: <a href="https://web.archive.org/web/20130702232207/https://bitcoinfoundation.org/about/" class="uri">https://web.archive.org/web/20130702232207/https://bitcoinfoundation.org/about/</a>.</p></div></div><p>C’est dans cette optique qu’est créée la Fondation Bitcoin en septembre 2012. Conformément au modèle de la Fondation Linux, il s’agit d’un consortium d’entreprises de l’écosystème dont le rôle est de financer l’infrastructure logicielle du protocole, de faire du lobbying auprès du régulateur et d’améliorer l’image publique de Bitcoin<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Elle est gérée par des acteurs importants dans l’écosystème&nbsp;: Peter Vessenes, le PDG de CoinLab, Gavin Andresen, le mainteneur principal du logiciel de Bitcoin, Mark Karpelès, le PDG de Mt.&nbsp;Gox, Jon Matonis, cryptographe et économiste, Patrick Murck, un juriste spécialisé dans les monnaies virtuelles, et Charlie Shrem, le PDG de BitInstant.</p>
 <p>Le 28 novembre 2012, le premier <em>halving</em> se produit&nbsp;: la création monétaire du protocole est réduite de moitié et passe de 50 bitcoins à 25 bitcoins par bloc, ce qui abaisse le taux annualisé d’émission à 12,5&nbsp;%. La transition se passe parfaitement bien. Quelques jours plus tard, un dénommé Matt Whitlock construit un graphique simple pour visualiser l’évolution de la création de bitcoins dans le temps<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> (voir figure&nbsp;<a href="#fig:bitcoin-inflation" data-reference-type="ref" data-reference="fig:bitcoin-inflation">2.1</a>). Cela confirme le changement de focalisation qui passe de son caractère incensurable à sa rareté.</p>
-<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Matt Whitlock, <em>[CHART] Bitcoin Inflation vs.&nbsp;Time</em>, 13/12/2012 15:08:08 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=130619.msg1397456#msg1397456" class="uri">https://bitcointalk.org/index.php?topic=130619.msg1397456#msg1397456</a>.</p></div></div><div id="fig:bitcoin-inflation" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Matt Whitlock, <em>[CHART] Bitcoin Inflation vs.&nbsp;Time</em>, 13/12/2012 15:08:08 UTC&nbsp;: <a href="https://bitcointalk.org/index.php?topic=130619.msg1397456#msg1397456" class="uri">https://bitcointalk.org/index.php?topic=130619.msg1397456#msg1397456</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/matt-whitlock-bitcoin-inflation-log.png" class="img-fluid figure-img"></p>
+<p><a href="img/matt-whitlock-bitcoin-inflation-log.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Graphique de Matt Whitlock comparant le taux d’émission et la base monétaire du bitcoin en fonction du temps (décembre 2012)."><img src="img/matt-whitlock-bitcoin-inflation-log.png" class="img-fluid figure-img" alt="Graphique de Matt Whitlock comparant le taux d’émission et la base monétaire du bitcoin en fonction du temps (décembre 2012)."></a></p>
 <figcaption>Graphique de Matt Whitlock comparant le taux d’émission et la base monétaire du bitcoin en fonction du temps (décembre 2012).</figcaption>
 </figure>
 </div>
@@ -422,9 +425,9 @@ ul.task-list li input[type="checkbox"] {
 <p>En 2020, la réaction mondiale à la pandémie de Covid-19 vient accélérer les choses. Les États occidentaux imposent des confinements durs à leurs populations et paralysent leurs économies, ce qui provoque le début d’une crise déflationniste. Les banques centrales réagissent en conséquence par une injection de liquidités record. Comme en 2008, le but est de sauver l’économie en créant de l’argent et en l’injectant sur le marché&nbsp;: 2&nbsp;300 milliards de dollars sont émis aux États-Unis et 1&nbsp;850 milliards d’euros dans l’Union Européenne<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>. De plus, les taux directeurs sont abaissés autour de zéro pour stimuler le crédit, ce qui contribue à accroître la masse de monnaie scripturale disponible.</p>
 <div class="no-row-height column-margin column-container"><div id="fn54"><p><sup>54</sup>&nbsp;Aux États-Unis, c’est le <em>Coronavirus Aid, Relief, and Economic Security Act</em> («&nbsp;CARES Act&nbsp;»), signé en mars 2020, qui a amené cette dépense supplémentaire. Il s’agissait d’un programme du Département du Trésor, mais on peut supposer qu’il a été financé essentiellement par les «&nbsp;emprunts&nbsp;» réalisés auprès de la Réserve Fédérale. Du côté de la Banque Centrale Européenne, l’injection de liquidités a été mise en place par le programme d’achats d’urgence face à la pandémie (PEPP), qui prévoyait 750 milliards d’euros en mars 2020, auxquels s’ajoutent 600 milliards en juin, puis 500 milliards supplémentaires en décembre.</p></div></div><p>À cause de cette création monétaire démesurée, la menace d’une inflation élevée reparaît en Occident, alors même qu’elle avait disparu depuis des décennies. Ce risque pousse les gens à acheter du bitcoin, qui, en tant qu’actif indépendant de la création monétaire, prend tout son sens. En particulier, de grandes sociétés cotées en bourse aux États-Unis, ayant des réserves non négligeables en dollars, entrent dans la danse. Le 11 août 2020, l’entreprise Microstrategy, dirigée par Michael Saylor, annonce ainsi adopter le bitcoin comme principal actif de réserve et s’être procuré 21&nbsp;454&nbsp;BTC, pour un montant d’achat total de 250 millions de dollars. En octobre, Square, une entreprise américaine spécialisée dans le paiement mobile cofondée par Jack Dorsey, suit le mouvement et acquiert 4&nbsp;709 bitcoins. En février 2021, le constructeur automobile de voitures électriques Tesla, dirigé par Elon Musk, annonce avoir acheté près de 43&nbsp;000&nbsp;BTC pour 1,5 milliards de dollars.</p>
 <p>De ce fait, un nouvel engouement spéculatif apparaît et le prix du bitcoin s’envole à nouveau. Alors qu’il oscillait autour des 10&nbsp;000&nbsp;$ depuis 2019, il monte rapidement à l’automne 2020, pour dépasser son ancien sommet en décembre et atteindre les 64&nbsp;000&nbsp;$ en avril 2021.</p>
-<div id="fig:btc-historical-price" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/btc-historical-price-20100719-20231130.png" class="img-fluid figure-img"></p>
+<p><a href="img/btc-historical-price-20100719-20231130.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source&nbsp;: buybitcoinworldwide.com)."><img src="img/btc-historical-price-20100719-20231130.png" class="img-fluid figure-img" alt="Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source&nbsp;: buybitcoinworldwide.com)."></a></p>
 <figcaption>Évolution du prix du BTC entre le 19 juillet 2010 et le 30 novembre 2023 (source&nbsp;: buybitcoinworldwide.com).</figcaption>
 </figure>
 </div>
@@ -901,7 +904,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -937,6 +940,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

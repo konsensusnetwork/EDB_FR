@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -380,9 +383,9 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="lémergence-dinternet-et-le-partage-de-données">L’émergence d’Internet et le partage de données</h2>
 <p>Avec l’émergence des ordinateurs est venue la volonté de les connecter en réseau. C’est ainsi que les premiers réseaux informatiques se sont formés dans les années 50. Mais ces réseaux n’étaient pas interconnectés. Pour cela, il a fallu attendre un effort public et ouvert, qui a été fait à partir des années 70, par l’intermédiaire du développement du réseau des réseaux international&nbsp;: Internet.</p>
 <p>L’idée derrière Internet était de transmettre des paquets de données (et plus spécifiquement des datagrammes) par le biais d’une technique nommée la commutation de paquets, initialement décrite en 1964 par l’informaticien polono-américain Paul Baran<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>. Cette technique consistait à indiquer la destination dans l’en-tête des paquets de sorte à ce qu’il puissent être relayés sur le réseau, notamment au moyen de routeurs. Elle s’opposait à la commutation de circuits, qui reposait sur une liaison déterminée entre l’expéditeur et le destinataire pour transmettre les données. À l’époque, les communications transitaient au travers des lignes téléphoniques au moyen d’un modem.</p>
-<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;Paul Baran, «&nbsp;<em>On Distributed Communications Networks</em>&nbsp;», in <em>IEEE Transactions on Communications Systems</em>, vol.&nbsp;12, no. 1, mars 1964, pp.&nbsp;1–9&nbsp;: <a href="https://web.cs.ucla.edu/classes/cs217/Baran64.pdf" class="uri">https://web.cs.ucla.edu/classes/cs217/Baran64.pdf</a>.</p></div></div><div id="fig:baran1964-networks" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;Paul Baran, «&nbsp;<em>On Distributed Communications Networks</em>&nbsp;», in <em>IEEE Transactions on Communications Systems</em>, vol.&nbsp;12, no. 1, mars 1964, pp.&nbsp;1–9&nbsp;: <a href="https://web.cs.ucla.edu/classes/cs217/Baran64.pdf" class="uri">https://web.cs.ucla.edu/classes/cs217/Baran64.pdf</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/baran1964-networks.png" class="img-fluid figure-img"></p>
+<p><a href="img/baran1964-networks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Réseaux&nbsp;: (a) centralisé&nbsp;; (b) décentralisé&nbsp;; (c) distribué. (Paul Baran, «&nbsp;On Distributed Communications Networks&nbsp;», 1964)"><img src="img/baran1964-networks.png" class="img-fluid figure-img" alt="Réseaux&nbsp;: (a) centralisé&nbsp;; (b) décentralisé&nbsp;; (c) distribué. (Paul Baran, «&nbsp;On Distributed Communications Networks&nbsp;», 1964)"></a></p>
 <figcaption>Réseaux&nbsp;: (a) centralisé&nbsp;; (b) décentralisé&nbsp;; (c) distribué. (Paul Baran, «&nbsp;<em>On Distributed Communications Networks</em>&nbsp;», 1964)</figcaption>
 </figure>
 </div>
@@ -435,7 +438,7 @@ window.Quarto = {
 <p>Les extropiens s’intéressaient enfin à la monnaie. Une monnaie solide était en effet nécessaire pour imaginer pouvoir conserver de la valeur à très long terme, par exemple dans le cas d’une cryogénisation. Le sujet était ainsi abordé dans le magazine Extropy. En 1993, Hal Finney a présenté le fonctionnement du système d’argent liquide électronique eCash<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>. En 1995, le numéro 15 de la revue a été ouvertement dédié à la monnaie électronique et à la concurrence des monnaies, comme l’attestait sa couverture illustrée par un billet de banque privée à l’effigie de Hayek<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;Hal Finney, <em>Protecting privacy with electronic cash</em>, <em>Extropy</em>, vol.&nbsp;10, 1993&nbsp;: <a href="https://github.com/Extropians/Extropy/blob/master/Extropy-10.pdf" class="uri">https://github.com/Extropians/Extropy/blob/master/Extropy-10.pdf</a>.</p></div><div id="fn30"><p><sup>30</sup>&nbsp;<em>Extropy</em>, vol.&nbsp;15, 1995&nbsp;: <a href="https://github.com/Extropians/Extropy/blob/master/ext15.pdf" class="uri">https://github.com/Extropians/Extropy/blob/master/ext15.pdf</a>.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/fifteen-hayeks-note-extropy-15.png" class="img-fluid figure-img"></p>
+<p><a href="img/fifteen-hayeks-note-extropy-15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Le billet fictif de 15 hayeks en couverture du magazine Extropy."><img src="img/fifteen-hayeks-note-extropy-15.png" class="img-fluid figure-img" alt="Le billet fictif de 15 hayeks en couverture du magazine Extropy."></a></p>
 <figcaption>Le billet fictif de 15 hayeks en couverture du magazine Extropy.</figcaption>
 </figure>
 </div>
@@ -950,7 +953,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -986,6 +989,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -127,14 +130,14 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
+    <a class="nav-link active" href="../chapters/les-debuts-de-bitcoin.html" aria-current="page"> <i class="bi bi-book" role="img" aria-label="Book">
 </i> 
 <span class="menu-text">Lire en ligne</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://bitcoinbook.shop/products/lelegance-de-bitcoin"> <i class="bi bi-shop" role="img" aria-label="Shop">
 </i> 
-<span class="menu-text">Acheter ce livre!</span></a>
+<span class="menu-text">Acheter ce livre !</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -341,9 +344,9 @@ window.Quarto = {
 <p>L’enjeu du consensus est illustré par le problème des généraux byzantins, qui est un problème d’informatique distribuée formalisé en 1982 par Leslie Lamport, Robert Shostak et Marshall Pease<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Ce problème traite de la remise en cause de la fiabilité des transmissions et de l’intégrité des participants dans les systèmes distribués, et il s’applique dans les cas où les composants d’un système informatique ont besoin d’être en accord.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Leslie Lamport, Robert Shostak, Marshall Pease, «&nbsp;<em>The Byzantine Generals Problem</em>&nbsp;», in <em>ACM Trans. Program. Lang. Syst.</em>, vol.&nbsp;4, no.&nbsp;3, 1982, pp.&nbsp;382—401&nbsp;: <a href="https://lamport.azurewebsites.net/pubs/byz.pdf" class="uri">https://lamport.azurewebsites.net/pubs/byz.pdf</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Selon Leslie Lamport, l’appellation byzantine a été choisie pour ne pas offenser le sentiment patriotique du lecteur (l’armée dans la métaphore comporte des traîtres), car cette appellation a été faite <em>a posteriori</em> par les historiens et les Byzantins eux-mêmes se considéraient comme romains. – Voir Leslie Lamport, <em>My Writings</em>&nbsp;: <a href="http://lamport.azurewebsites.net/pubs/pubs.html#byz" class="uri">http://lamport.azurewebsites.net/pubs/pubs.html#byz</a>.</p></div></div><p>Le problème est énoncé sous la forme d’une métaphore faisant intervenir des généraux de l’armée de l’Empire byzantin, l’Empire romain d’Orient qui a subsisté jusqu’en 1453 suite à la chute de la partie occidentale en 476<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Ces généraux assiègent une ville ennemie avec leurs troupes dans le but de l’attaquer. Ils ne peuvent communiquer qu’à l’aide de messages relayés oralement et ils doivent trouver un moyen d’établir un plan de bataille commun par ce moyen. Par exemple, les généraux peuvent chercher à coordonner une attaque à l’aube, et partagent leurs intentions entre eux en envoyant le message «&nbsp;attaque&nbsp;» par le biais d’un message pour confirmer l’assaut, et «&nbsp;retraite&nbsp;» pour l’annuler.</p>
 <p>Cependant, un petit nombre de ces généraux s’avèrent être des traîtres au service de l’ennemi qui essaient de semer la confusion au sein de l’armée. Ces traîtres envoient ainsi des messages contradictoires à leurs interlocuteurs, pour faire en sorte que certains généraux loyaux attaquent, et que d’autres battent en retraite au moment de l’assaut, causant par là une défaite certaine, comme illustré sur la figure&nbsp;<a href="#fig:byzantine-generals-attack" data-reference-type="ref" data-reference="fig:byzantine-generals-attack">8.1</a>.</p>
-<div id="fig:byzantine-generals-attack" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/byzantine-generals-attack.png" class="img-fluid figure-img"></p>
+<p><a href="img/byzantine-generals-attack.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Attaque des généraux byzantins contre la ville&nbsp;: succès et échec."><img src="img/byzantine-generals-attack.png" class="img-fluid figure-img" alt="Attaque des généraux byzantins contre la ville&nbsp;: succès et échec."></a></p>
 <figcaption>Attaque des généraux byzantins contre la ville&nbsp;: succès et échec.</figcaption>
 </figure>
 </div>
@@ -455,9 +458,9 @@ window.Quarto = {
 <p>La racine de Merkle du bloc 751&nbsp;005 est ainsi&nbsp;:</p>
 <pre data-fontsize="\footnotesize"><code>268a15b56fe847a067624bd0be186c375baccae9ac6db304438e9da657fe51d9</code></pre>
 <p>Le fait de placer la racine dans l’entête interdit à quiconque de modifier, d’ajouter ou de supprimer une transaction, sans modifier l’entête lui-même et devoir reproduire la preuve de travail. L’ensemble des transactions est ainsi attaché à l’entête, ce qui assure l’intégrité du bloc.</p>
-<div id="fig:merkle-tree" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/merkle-tree.png" class="img-fluid figure-img"></p>
+<p><a href="img/merkle-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Représentation d’un arbre de Merkle à six feuilles."><img src="img/merkle-tree.png" class="img-fluid figure-img" alt="Représentation d’un arbre de Merkle à six feuilles."></a></p>
 <figcaption>Représentation d’un arbre de Merkle à six feuilles.</figcaption>
 </figure>
 </div>
@@ -485,9 +488,9 @@ window.Quarto = {
 <p><span class="math display">\[\begin{aligned}
 \mathtt{0x000000000000000000065aebf106c8824f4b565d54d6d6df32498b2b041cfd07} &amp; \le \\ \mathtt{0x00000000000000000009ed880000000000000000000000000000000000000000} &amp; ~
 \end{aligned}\]</span></p>
-<div id="fig:bitcoin-segwit-block" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bitcoin-segwit-block.png" class="img-fluid figure-img"></p>
+<p><a href="img/bitcoin-segwit-block.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Schéma d’un bloc de Bitcoin (avec SegWit)."><img src="img/bitcoin-segwit-block.png" class="img-fluid figure-img" alt="Schéma d’un bloc de Bitcoin (avec SegWit)."></a></p>
 <figcaption>Schéma d’un bloc de Bitcoin (avec SegWit).</figcaption>
 </figure>
 </div>
@@ -542,9 +545,9 @@ etc...</p>
 <p>«&nbsp;Si deux nœuds transmettent simultanément des versions différentes du bloc suivant, certains nœuds peuvent recevoir l’une ou l’autre version en premier. Dans ce cas, ils travaillent sur la première version qu’ils ont reçue, mais conservent l’autre branche au cas où elle deviendrait plus longue. L’égalité est rompue lorsque la preuve de travail suivante est trouvée et qu’une branche devient plus longue&nbsp;; les nœuds qui travaillaient sur l’autre branche passent alors sur la chaîne la plus longue<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>.&nbsp;»</p>
 <div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;Satoshi Nakamoto, <em>Bitcoin: A Peer-to-Peer Electronic Cash System</em>, 31 octobre 2008.</p></div></div><p>Le réseau passe par trois étapes. Tout d’abord, il se comporte de manière attendue&nbsp;: les mineurs prolongent la chaîne la plus longue, sur laquelle le reste des nœuds se coordonnent. Puis, le conflit a lieu&nbsp;: deux branches correctes coexistent et les mineurs travaillent pour prolonger la chaîne à partir du bloc reçu en premier. Enfin, l’embranchement est résolu&nbsp;: un mineur trouve un nouveau bloc et sa chaîne, qui devient plus longue, est acceptée par le réseau.</p>
 <p>Il se produit alors ce qu’on appelle une recoordination (<em>reorganization</em>) qui réconcilie les nœuds du réseau entre eux. Le bloc de la branche faible est considéré comme incorrect et mis de côté. On dit que ce bloc est rendu orphelin (<em>orphaned</em>) car il perd son attachement à la chaîne mère<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. La branche forte (possédant le plus de travail accumulé) est considérée comme la version correcte de la chaîne.</p>
-<div class="no-row-height column-margin column-container"><div id="fn35"><p><sup>35</sup>&nbsp;L’appellation (quelque peu ambigüe) de «&nbsp;bloc orphelin&nbsp;» a été introduite par Satoshi Nakamoto au sein de la première version du logiciel. On parle aussi de «&nbsp;bloc oncle&nbsp;» (en référence au fait qu’il ne donne pas de descendance fertile) ou bien de «&nbsp;bloc périmé&nbsp;» (<em>stale block</em>).</p></div></div><div id="fig:blockchain-common-fork" class="quarto-figure quarto-figure-center anchored">
+<div class="no-row-height column-margin column-container"><div id="fn35"><p><sup>35</sup>&nbsp;L’appellation (quelque peu ambigüe) de «&nbsp;bloc orphelin&nbsp;» a été introduite par Satoshi Nakamoto au sein de la première version du logiciel. On parle aussi de «&nbsp;bloc oncle&nbsp;» (en référence au fait qu’il ne donne pas de descendance fertile) ou bien de «&nbsp;bloc périmé&nbsp;» (<em>stale block</em>).</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/blockchain-common-fork.png" class="img-fluid figure-img"></p>
+<p><a href="img/blockchain-common-fork.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Schéma d’un embranchement commun de la chaîne."><img src="img/blockchain-common-fork.png" class="img-fluid figure-img" alt="Schéma d’un embranchement commun de la chaîne."></a></p>
 <figcaption>Schéma d’un embranchement commun de la chaîne.</figcaption>
 </figure>
 </div>
@@ -567,9 +570,9 @@ etc...</p>
 <p>La première étape est l’achat d’un bien ou d’un service auprès d’un commerçant. L’attaquant procède à une transaction en bitcoins (dite «&nbsp;légitime&nbsp;») en l’échange de quoi le commerçant lui fournit une chose de même valeur. Typiquement, il s’agira d’une autre cryptomonnaie ou du dollar auprès d’une plateforme de change.</p>
 <p>La deuxième étape est le minage d’une chaîne parallèle. Une fois que la transaction légitime a été confirmée au sein d’un bloc, l’attaquant construit une chaîne parallèle en secret à partir du bloc précédent, qu’il prend soin de ne pas dévoiler au reste du réseau. Dans le même temps, il crée et signe une autre transaction (dite «&nbsp;frauduleuse&nbsp;») qui dépense les mêmes bitcoins que la première et qui les renvoie vers une adresse en son contrôle. Il inclut cette transaction frauduleuse dans sa chaîne parallèle. Puisque l’attaquant dispose de la majorité de la puissance de calcul du réseau, il est sûr qu’à un moment ou à un autre, cette chaîne sera plus longue que l’autre.</p>
 <p>La troisième étape est la recoordination de chaîne, représentée sur la figure&nbsp;<a href="#fig:doublespending-attack" data-reference-type="ref" data-reference="fig:doublespending-attack">8.5</a>. L’attaquant a continué de miner sa chaîne parallèle jusqu’à la livraison du bien économique acheté. À ce moment-là, il dévoile sa chaîne au reste du réseau, qui doit accepter celle-ci en vertu du principe de la chaîne la plus longue. Les nœuds procèdent alors à une recoordination&nbsp;: les blocs de l’ancienne chaîne sont écartés (rendus orphelins), leurs transactions sont remises dans la mempool et les nouveaux blocs sont vérifiés et ajoutés à la chaîne. Comme la transaction légitime dépense les mêmes fonds que la transaction frauduleuse, qui est incluse dans la nouvelle chaîne, cette transaction légitime est invalidée en tant que double dépense. Le commerçant ne possède plus les bitcoins, qui reviennent à l’attaquant.</p>
-<div id="fig:doublespending-attack" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/mining-attack-doublespending.png" class="img-fluid figure-img"></p>
+<p><a href="img/mining-attack-doublespending.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Attaque de double dépense par recoordination de chaîne."><img src="img/mining-attack-doublespending.png" class="img-fluid figure-img" alt="Attaque de double dépense par recoordination de chaîne."></a></p>
 <figcaption>Attaque de double dépense par recoordination de chaîne.</figcaption>
 </figure>
 </div>
@@ -595,9 +598,9 @@ etc...</p>
 <p>C’est pour corriger ce défaut de variance que sont nées les coopératives de minage (appelées <em>mining pools</em> en anglais). Ces dernières sont des regroupements de hacheurs qui délèguent leur pouvoir sur la sélection des transactions à un opérateur, afin de participer de manière commune à l’effort de calcul et de lisser leurs revenus. Le fonctionnement par coopératives se base sur la production de preuves de travail partielles (PPoW) mise en place par le protocole Stratum. Il s’agit pour le hacheur de produire une preuve de travail de degré moindre pour un bloc candidat donné, afin de prouver qu’il a dépensé de l’énergie et d’être rémunéré en conséquence par la coopérative. La coopérative reçoit la récompense de minage à chaque fois qu’une preuve de travail partielle produite par le hacheur s’avère être également une preuve de travail complète (FPoW).</p>
 <p>La première coopérative de minage a été lancée le 27 novembre 2010 par Marek Palatinus (aussi connu sous le pseudonyme de <em>slush</em>). Elle portait initialement le nom de Bitcoin.cz Mining avant d’être plus tard rebaptisée Slush Pool en hommage à son fondateur, puis de devenir Braiins Pool en septembre 2022. Aujourd’hui, les coopératives de minage sont nombreuses et concentrent l’essentiel de la puissance de calcul du réseau. Elles sont généralement basées dans les juridictions où le minage est très présent, comme la Chine (jusqu’en 2021) ou plus récemment les États-Unis.</p>
 <p>Les coopératives ont pour habitude de signaler les blocs qu’elles minent dans un souci de transparence. Par exemple, la transaction de récompense du bloc 751&nbsp;005 contient la chaîne de caractères poolin.com, ce qui indique que ce bloc a très probablement été validé par la coopérative chinoise Poolin. Ce signalement n’est pas obligatoire (le minage est anonyme par essence), mais permet d’avoir une idée de la répartition des différentes coopératives (comme on peut le voir sur la figure&nbsp;<a href="#fig:hashrate-distribution" data-reference-type="ref" data-reference="fig:hashrate-distribution">8.6</a>) et d’estimer par conséquent la centralisation de l’activité minière.</p>
-<div id="fig:hashrate-distribution" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/hashrate-distribution-coin-dance-week-20231012.png" class="img-fluid figure-img"></p>
+<p><a href="img/hashrate-distribution-coin-dance-week-20231012.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source&nbsp;: coin.dance)"><img src="img/hashrate-distribution-coin-dance-week-20231012.png" class="img-fluid figure-img" alt="Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source&nbsp;: coin.dance)"></a></p>
 <figcaption>Répartition du taux de hachage apparent entre les coopératives de minage de BTC, semaine du 5 au 12 octobre 2023. (source&nbsp;: coin.dance)</figcaption>
 </figure>
 </div>
@@ -1070,7 +1073,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../presale.html">
+    <a class="nav-link" href="../produit.html">
 <p>Acheter</p>
 </a>
   </li>  
@@ -1106,6 +1109,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
