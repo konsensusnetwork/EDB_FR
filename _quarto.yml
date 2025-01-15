@@ -79,7 +79,7 @@ book:
 
 format:
   html:
-    lang: fr
+    lang: en
     theme:
       light: [flatly, theme.scss, theme-light.scss]
     number-depth: 2
@@ -91,6 +91,17 @@ format:
     toc: true
     toc-location: left
     reference-location: margin
+  pdf:
+    lang: en
+    documentclass: memoir
+    classoption: smalldemyvopaper,10pt,twoside,onecolumn,openright,extrafontsizes,hidelinks
+    papersize: a5
+    toc-depth: 1
+    toc-title: Contents
+    keep-tex: true
+    colorlinks: false
+    include-in-header:
+      - preamble.tex
   epub:
     cover-image: cover.png
     cover-image-alt: |
@@ -98,7 +109,7 @@ format:
     creator: Konsensus Network
     toc: true
     toc-depth: 1
-    toc-title: Contenu
-    lang: "fr-FR"
+    toc-title: Contents
+    lang: "en-US"
     css: epub.css
     number-depth: 2
