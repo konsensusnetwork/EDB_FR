@@ -12,9 +12,9 @@ about:
       text: "Achat" 
       aria-label: "Achat"
     - icon: amazon
-      href: https://amzn.to/3P4R638
+      href: https://amzn.to/4hse9B0
       text: "Amazon"
-      aria-label: "Amazon"              
+      aria-label: "Amazon"          
 navbar: true
 lang: fr
 language:
@@ -51,9 +51,7 @@ Plongez dans cet ouvrage captivant où l'auteur propose un point de vue réalist
 
 Vous en ressortirez avec une compréhension de Bitcoin susceptible de transformer votre vision du monde.
 
-Préface de Jacques Favier
-
-## Avis {.unnumbered}
+v1.3.0
 
 ## Contenu
 ::: {#sample-listings}

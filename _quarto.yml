@@ -6,9 +6,10 @@ project:
 
 book:
   title: "L'Élégance de Bitcoin"
+  subtitle: "Histoire, Enjeux et Principes"
   output-file: main
   author: "Ludovic Lars"
-  date: "01/31/2024"
+  date: "01/31/2025"
   image: cover.png
   image-alt: "L'Élégance de Bitcoin"
   isbn: "978-9916-723-62-3"
@@ -93,6 +94,7 @@ format:
     reference-location: margin
     lightbox: true
   epub:
+    html-math-method: mathml
     cover-image: cover.png
     cover-image-alt: |
       Book Cover
